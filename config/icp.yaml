@@ -1,0 +1,42 @@
+# Who Alaska AI pursues, and how the routine scores fit. Tuned for a small
+# market with limited at-bats: few, high-fit, reachable, never generic.
+
+targeting:
+  geography: >
+    Alaska. Businesses operating in state, or Alaska Native corporations
+    headquartered in state even where revenue is earned Outside.
+  lead_segments:
+    - name: "Tourism and visitor industry"
+      why: >
+        Brutal seasonal labor scarcity, booking and front-desk load, multilingual
+        guests. Voice and content agents pay fast.
+      examples: "Lodges, tour and activity operators, guides, hospitality."
+    - name: "Independent healthcare and elder care"
+      why: >
+        Documentation, scheduling, intake, prior-auth. High ROI, strong ability
+        to pay. Target independent practices, not the big systems.
+    - name: "Alaska Native corporations and tribal enterprises"
+      why: >
+        Federal contracting and 8(a) volume means heavy proposals and compliance
+        drafting. Best ability to pay in the state. Anchor accounts.
+    - name: "Other labor-scarce or paperwork-heavy Alaska SMBs"
+      why: >
+        Logistics, professional services, contractors, utilities suppliers. If
+        labor is scarce or filings never stop, AI pays.
+
+scoring:
+  # Score each candidate 0 to 5 per criterion, pick the highest total. Ties break
+  # toward reachability and toward a segment we have proof in.
+  criteria:
+    ai_solvable_pain: "How clear and painful is a problem AI can actually carry."
+    ability_to_pay:   "Revenue and stability enough for a Field Study and a build."
+    reachability:     "Can we verify a real decision-maker and a real contact."
+    offer_fit:        "How well their pain maps to what we build and can prove."
+    alaska_signal:    "Genuinely Alaskan, where buy-local and being-here helps."
+
+exclusions:
+  - "Any company already in leadflow.leads or leadflow.suppressions."
+  - "Sole proprietors and micro-shops with no payroll and no budget."
+  - "Direct competitors (AI or automation agencies)."
+  - "Anyone we cannot reach with a verified, real contact."
+  - "Seafood processing while margins are in crisis, unless a clear payer."

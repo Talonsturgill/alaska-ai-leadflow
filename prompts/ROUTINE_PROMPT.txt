@@ -1,0 +1,18 @@
+Run the daily Alaska AI lead-flow routine exactly as documented in
+prompts/routine_instructions.md.
+
+In one line: find one high-fit Alaska business we have not contacted before, put
+the specialist room on it, and leave a deeply personalized outreach as a Gmail
+DRAFT (to the best contact you can verify, from docket@alaskaaihq.com) for Talon
+to review and send.
+
+Hard rules:
+- DRAFT ONLY. Never send anything. The deliverable is a Gmail draft.
+- One lead, gone deep. The research room and thinking room actually run.
+- Dedupe against Supabase. Never pick a company already in leadflow.leads or
+  leadflow.suppressions.
+- Every fact carries a source. Invent nothing, above all contact addresses.
+- Record the lead, dossier, and run in the Supabase leadflow schema.
+
+On any failure or uncertainty, leave a Gmail draft to Talon explaining what
+happened, and stop. Do not improvise around the rules above.
