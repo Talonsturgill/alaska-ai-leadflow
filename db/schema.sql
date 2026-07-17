@@ -37,6 +37,12 @@ create table if not exists leadflow.leads (
   ai_opportunities  jsonb,
   sources           jsonb,
   dossier_md        text,
+  -- The Field Study the room produced for this company.
+  outcome           text,        -- the business outcome the build moves
+  recommended_build text,        -- plain-language name of the one pick
+  roi_summary       text,        -- the honest ROI range, one line, never a hero number
+  study_json        jsonb,       -- the full study object (see FIELD_STUDY_SPEC.md)
+  study_path        text,        -- runs/<date>/<slug>/field-study.html in this repo
   draft_subject     text,
   draft_body        text,
   gmail_draft_id    text,
@@ -44,6 +50,13 @@ create table if not exists leadflow.leads (
   notes             text,
   run_id            uuid references leadflow.runs(id) on delete set null
 );
+
+-- Additive migration for an already-created leadflow.leads (safe to re-run).
+alter table leadflow.leads add column if not exists outcome           text;
+alter table leadflow.leads add column if not exists recommended_build text;
+alter table leadflow.leads add column if not exists roi_summary       text;
+alter table leadflow.leads add column if not exists study_json        jsonb;
+alter table leadflow.leads add column if not exists study_path        text;
 
 -- Hard dedupe: one company (by domain) can never be picked twice.
 create unique index if not exists leads_domain_unique

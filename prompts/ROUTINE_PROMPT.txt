@@ -1,18 +1,32 @@
 Run the daily Alaska AI lead-flow routine exactly as documented in
-prompts/routine_instructions.md.
+prompts/routine_instructions.md. Read it and all of knowledge/ first, then work
+Phase 0 through Phase 9 in order.
 
 In one line: find one high-fit Alaska business we have not contacted before, put
-the specialist room on it, and leave a deeply personalized outreach as a Gmail
-DRAFT (to the best contact you can verify, from docket@alaskaaihq.com) for Talon
-to review and send.
+the research room and the engineering room on it, produce a real personalized Field
+Study (the actual work a serious shop does before a first call, done for free), and
+leave a Gmail DRAFT that carries it, a short self-aware AI-agent-team email with the
+Field Study attached, to the best contact you can verify, from docket@alaskaaihq.com,
+for Talon to review and send.
 
 Hard rules:
-- DRAFT ONLY. Never send anything. The deliverable is a Gmail draft.
-- One lead, gone deep. The research room and thinking room actually run.
+- DRAFT ONLY. Never send anything. The deliverable is a Gmail draft with the study
+  attached.
+- LEGIT, NO HYPE. The engineering room runs a real discovery-to-delivery process.
+  The ai-feasibility-engineer may conclude AI is not needed, and the study-critic
+  kills hype. Honest beats impressive.
+- One lead, gone deep. Both rooms actually run. If the study could have been made
+  for any other company, it failed.
+- Honest ROI as a range with the conservative case clearing the bar, never a single
+  hero number.
 - Dedupe against Supabase. Never pick a company already in leadflow.leads or
-  leadflow.suppressions.
+  leadflow.suppressions, matched on normalized domain.
 - Every fact carries a source. Invent nothing, above all contact addresses.
-- Record the lead, dossier, and run in the Supabase leadflow schema.
+- Voice, the carrier email obeys knowledge/OUTREACH_CRAFT.md, no em or en dashes,
+  no colons, no semicolons, easy on commas, zero AI tells.
+- Record the lead, the study, and the run in the Supabase leadflow schema, and
+  archive the study under runs/<date>/ in this PRIVATE repo. Never write prospect
+  data into the public repo or site.
 
 On any failure or uncertainty, leave a Gmail draft to Talon explaining what
 happened, and stop. Do not improvise around the rules above.
