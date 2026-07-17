@@ -1,5 +1,5 @@
-# Who Alaska AI pursues, and how the routine scores fit. Tuned for a small
-# market with limited at-bats: few, high-fit, reachable, never generic.
+# Who Alaska AI pursues, and how the routine scores fit. Tuned for a small market
+# with limited at-bats. Few, high-fit, reachable, never generic.
 
 targeting:
   geography: >
@@ -10,33 +10,60 @@ targeting:
       why: >
         Brutal seasonal labor scarcity, booking and front-desk load, multilingual
         guests. Voice and content agents pay fast.
-      examples: "Lodges, tour and activity operators, guides, hospitality."
+      examples: "Lodges, tour and activity operators, guides, hospitality, charters."
+      signals: >
+        A four-month season, phone-based booking, seasonal hiring posts, a wall of
+        reviews mentioning wait times or missed calls.
     - name: "Independent healthcare and elder care"
       why: >
-        Documentation, scheduling, intake, prior-auth. High ROI, strong ability
-        to pay. Target independent practices, not the big systems.
+        Documentation, scheduling, intake, prior-auth. High ROI, strong ability to
+        pay. Target independent practices, not the big systems.
+      signals: >
+        Independent (not Providence or a tribal-health system), taking new
+        patients, a small front-desk team, paperwork-heavy.
     - name: "Alaska Native corporations and tribal enterprises"
       why: >
         Federal contracting and 8(a) volume means heavy proposals and compliance
         drafting. Best ability to pay in the state. Anchor accounts.
+      signals: >
+        Multiple subsidiaries, a federal-contracting or 8(a) footprint, a proposal
+        or capture team, government-services lines of business.
     - name: "Other labor-scarce or paperwork-heavy Alaska SMBs"
       why: >
         Logistics, professional services, contractors, utilities suppliers. If
         labor is scarce or filings never stop, AI pays.
+      signals: >
+        Chronic hiring posts, a permit or compliance load, a back office drowning
+        in repetitive work.
 
 scoring:
-  # Score each candidate 0 to 5 per criterion, pick the highest total. Ties break
-  # toward reachability and toward a segment we have proof in.
-  criteria:
-    ai_solvable_pain: "How clear and painful is a problem AI can actually carry."
-    ability_to_pay:   "Revenue and stability enough for a Field Study and a build."
-    reachability:     "Can we verify a real decision-maker and a real contact."
-    offer_fit:        "How well their pain maps to what we build and can prove."
-    alaska_signal:    "Genuinely Alaskan, where buy-local and being-here helps."
+  # Score each candidate 0 to 5 per criterion, total the five, pick the highest.
+  # Anchors so scouts score consistently, not optimistically.
+  ai_solvable_pain:
+    what: "How clear and painful is a problem AI can actually carry."
+    high: "A specific, repeating, expensive pain AI is proven to handle, missed calls, booking, intake, proposals."
+    low: "No visible pain, or a pain AI cannot honestly solve."
+  ability_to_pay:
+    what: "Revenue and stability enough for a Field Study and a build."
+    high: "Established, multi-location or multi-subsidiary, clearly funded."
+    low: "Micro shop with no payroll and no budget."
+  reachability:
+    what: "Can we verify a real decision-maker and a real contact."
+    high: "A named owner or lead with a public business email on the site."
+    low: "No named human and no contact anywhere findable."
+  offer_fit:
+    what: "How well their pain maps to what we build and can prove."
+    high: "Their top pain is exactly a voice agent, paperwork engine, or automation we ship."
+    low: "Their need is outside what we build."
+  alaska_signal:
+    what: "Genuinely Alaskan, where buy-local and being-here helps."
+    high: "Rooted in Alaska, community-embedded, values a local partner."
+    low: "A national chain with an Alaska pin on a map."
 
-exclusions:
-  - "Any company already in leadflow.leads or leadflow.suppressions."
+disqualifiers:
+  - "Already in leadflow.leads or leadflow.suppressions (dedupe by normalized domain)."
   - "Sole proprietors and micro-shops with no payroll and no budget."
-  - "Direct competitors (AI or automation agencies)."
-  - "Anyone we cannot reach with a verified, real contact."
+  - "Direct competitors, any AI or automation agency."
+  - "No verifiable, real contact anywhere findable."
   - "Seafood processing while margins are in crisis, unless a clear payer."
+  - "Anyone where all three thinking-room lenses honestly find AI would not pay."
