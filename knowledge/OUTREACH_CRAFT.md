@@ -49,8 +49,10 @@ Punctuation, strict.
   rewrite.
 - No colons. Restructure.
 - No semicolons. Two sentences.
-- Go easy on commas. More than one in a sentence and it is doing too much. Break
-  it up.
+- Cut commas hard. Aim for zero or one per sentence, and never two. If a sentence
+  needs a second comma it is really two sentences, so make it two. On the final
+  pass, delete about one comma in ten that a period could replace. Fewer commas
+  reads as spoken and sure, comma pileups read as written and as AI.
 - No emojis. Straight quotes only. No exclamation points.
 
 ## The CTA (small and reply-first)

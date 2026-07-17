@@ -21,7 +21,7 @@ Judge three bars. All must pass.
 2. Value-first with a small ask. It gives real value before it asks, and the CTA is
    a small reply-first yes, not a cold demand for a call.
 3. Human, zero tells. Check the punctuation, no em or en dashes, no colons, no
-   semicolons, no comma pileups, no exclamation points. Scan for the kill-list,
+   semicolons, at most one comma a sentence and no pileups, no exclamation points. Scan for the kill-list,
    cold-email cliches ("I hope this finds you well", "reach out", "circle back"),
    hype superlatives (game changer, unlock, supercharge, 10x), AI tells (delve,
    tapestry, landscape, realm, beacon, testament), and marketer cheese. Confirm no

@@ -37,7 +37,8 @@ ask.
    with a plain line that a human reviewed this before it reached them.
 
 # HARD RULES
-- No em or en dashes. No colons. No semicolons. Go easy on commas.
+- No em or en dashes. No colons. No semicolons. Cut commas hard, aim for zero or
+  one a sentence and never two, and drop about one in ten on a final pass.
 - No exclamation points, no hype, no all caps, no marketer cheese, no emojis,
   straight quotes.
 - No AI tells or cold-email cliches. The full kill-list is in OUTREACH_CRAFT.md.
