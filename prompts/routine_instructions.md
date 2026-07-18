@@ -49,8 +49,9 @@ the package files to, and send.
    only the planned set each phase names (up to 4 lead-scouts, then 3
    researchers, then 3 to 5 discovery engineers plus 2 industry scanners, then
    fact-checkers, then the documents room of field-study-writer,
-   solutions-architect, roadmap-pm, and demo-builder, then outreach-writer and
-   lead-critic in a bounded loop). A subagent is a leaf worker that NEVER spawns
+   solutions-architect, the roadmap team (roadmap-planner, roadmap-estimator,
+   roadmap-writer), and demo-builder, then outreach-writer and lead-critic in a
+   bounded loop). A subagent is a leaf worker that NEVER spawns
    its own subagents. Never exceed the planned set on your own initiative. A
    retry REPLACES a failed agent, it never adds one.
 8. FAIL LOUD, NEVER SILENT. If a phase fails, degrade honestly and draft Talon a
@@ -89,10 +90,11 @@ the package files to, and send.
 - knowledge/OUTREACH_CRAFT.md - the blunt, value-first voice and the kill-list.
 - knowledge/ALASKA_MARKET.md - the market context every dossier grounds in.
 - db/schema.sql - the shape of the memory (leadflow.leads, runs, suppressions).
+- knowledge/ROADMAP_CRAFT.md - how the roadmap team plans, estimates, and writes.
 - .claude/agents/ - the firm: lead-scout, company-analyst, people-finder,
   competitor-analyst, discovery-engineer, industry-scanner, fact-checker,
-  field-study-writer, solutions-architect, roadmap-pm, demo-builder,
-  outreach-writer, lead-critic.
+  field-study-writer, solutions-architect, roadmap-planner, roadmap-estimator,
+  roadmap-writer, demo-builder, outreach-writer, lead-critic.
 
 Tools. WebSearch and WebFetch for all research (they route through Anthropic and
 work on any network policy). The Supabase connector for every leadflow read and
@@ -275,10 +277,20 @@ much as the email does.
   requirements, data it touches, integration points, guardrails (drafts-only
   and human-on-the-trigger where that is the design), phased acceptance
   criteria, open questions for the owner.
-- roadmap-pm -> runs/<date>/<company>/roadmap.html. A phased plan that starts
-  with the flagship and carries the ENTIRE opportunity map in honest sequence,
-  with rough effort, dependency, and ROI per phase, so the owner sees the whole
-  arc, not one product.
+- THE ROADMAP TEAM -> runs/<date>/<company>/roadmap.html. The roadmap is a
+  PROJECT roadmap for the PROPOSED BUILD, what happens week by week if the owner
+  says yes, so they understand the process before they commit. It is built by a
+  three-agent pipeline that obeys knowledge/ROADMAP_CRAFT.md.
+  1. roadmap-planner turns the PRD into the delivery plan, phases, milestones,
+     decision gates, what we do versus what the owner provides, dependencies,
+     risks with mitigations, and a definition of done per phase.
+  2. roadmap-estimator adversarially calibrates every timeframe, splitting our
+     working days from owner-approval days from watch-it-run windows, cutting
+     padding (the house bias runs LONG, correct it), and labeling confidence.
+  3. roadmap-writer renders the final document.
+  The wider opportunity map appears ONLY as a short sidenote near the end
+  ("where this can go next"), a few lines, never the spine of the document. The
+  full map still lives in the field study appendix and in Supabase.
 - demo-builder -> runs/<date>/<company>/demo.html. A high-fidelity,
   self-contained interactive demo of the flagship (option-b fidelity, a scripted
   working demonstration, not a live system), so specific to this company that it
