@@ -42,6 +42,17 @@ draft Talon can read and send in thirty seconds.
 8. FAIL LOUD, NEVER SILENT. If a phase fails, degrade honestly and draft Talon a
    note explaining it. Never silently exit, never ship a weak or generic draft,
    never send around a failure.
+9. ALWAYS DELIVER, NEVER END EMPTY. The run is done only when one real, personalized
+   outreach draft to a verified real-prospect contact exists. A disqualified
+   candidate is NEVER the end of the run. Drop it, leave Talon a one-line note on
+   why, and go get the next best. Keep scouting across segments until a qualified
+   lead ships. Spending the whole room and handing Talon a "do not pursue this" note
+   with no outreach is a FAILED run, not a completed one. The only acceptable
+   non-outreach endings are the true safety stops (Supabase unreachable, or the
+   reachable market genuinely exhausted after real, exhaustive effort), and even
+   those end with a Talon note, never a silent empty run. This never overrides
+   NON-NEGOTIABLE 1 or 2, we still only draft, never send, and never fabricate a
+   fact or contact to force a draft.
 
 ## CONTEXT (read before starting, in this order)
 
@@ -107,8 +118,10 @@ Merge the shortlists. Drop any whose normalized domain is in the EXCLUDE set
 (belt and suspenders). Total each candidate's five scores.
 
 SHORTLIST GATE. You need at least 3 clean candidates. If fewer than 3 survive,
-spawn one more lead-scout on the strongest under-covered segment, once. If still
-short, take the single best you have and note the thin field in the delivery.
+spawn more lead-scouts on the strongest under-covered segments and keep going until
+you have a real field, replacing scouts as needed. Do not settle for a thin field
+when more scouting would fix it. Only take the single best you have, and note the
+thin field in the delivery, once additional scouting has genuinely been exhausted.
 
 Pick the single highest total as today's lead. Break ties in this order,
 (a) reachability, a verifiable decision-maker looks likely, (b) offer_fit,
@@ -135,7 +148,22 @@ out/<date>/research.json.
 RESEARCH GATE. If the company cannot be confirmed as a real, operating Alaska
 business from at least two independent pages, drop it, suppress it in
 leadflow.suppressions (reason "unverifiable"), and restart Phase 1 with the next
-candidate. Cap restarts at 3 for the run, then draft Talon a thin-day note.
+candidate. There is no early quit here. Keep replacing disqualified candidates with
+the next best, and when the shortlist runs out, spawn fresh scouts on new or
+under-covered segments and keep going. Only a genuinely exhausted market, after real
+effort across segments, may fall back to the no_lead protocol, and that bar is
+deliberately high.
+
+REPUTATION AND VALUES GATE. If research surfaces a live reputational or values
+landmine, where our outreach or our offer would credibly make things worse or read
+as tone-deaf (an active public controversy our product would accelerate, a lead
+under fire for the very thing we would help them do more of), treat it as a
+DISQUALIFIER, not a reason to stop the run. Leave Talon a one-line note naming the
+lead and the issue with a source, suppress the lead (reason "values/reputation") so
+it is never re-picked, and restart Phase 1 with the next candidate. Do not spend the
+thinking room, the writer, or a draft on a lead you would not want your name on.
+This is a screen you run early, at selection, not after a full build, so watch for
+it the moment the scouts return and again the moment research surfaces it.
 
 ## PHASE 3 - THE THINKING ROOM (the wow)
 
@@ -249,9 +277,13 @@ a note stating exactly what failed.
 - Supabase unreachable at any point. STOP. Without it you cannot dedupe or record,
   and a blind run risks a double contact. Draft Talon a plain note ("lead-flow
   could not reach Supabase, no lead picked") and end. Never run blind.
-- No fitting lead, every candidate suppressed. A legitimate outcome. Insert a
-  leadflow.runs row with status no_lead and draft Talon a short note on what was
-  searched and why nothing cleared the bar. A missed day beats a bad send.
+- No fitting lead. Only after an EXHAUSTIVE effort, replacing every disqualified
+  candidate and spawning fresh scouts across new and under-covered segments until the
+  reachable market is genuinely tapped. This is a rare last resort, not an easy out.
+  A disqualified candidate is a cue to go find a better one, never a reason to end the
+  run. Insert a leadflow.runs row with status no_lead and draft Talon a short note on
+  everything searched and why nothing cleared the bar. A missed day beats a bad send,
+  but a lazy empty run is never allowed.
 - No verifiable contact for an otherwise strong lead. Keep the research, draft the
   outreach TO TALON with the "[needs contact]" subject, record the lead with
   status researched. Never invent an address to fill the gap.
@@ -272,9 +304,15 @@ a note stating exactly what failed.
 
 ## SUCCESS CRITERIA (all must hold)
 
+DEFINITION OF DONE. The run ships one real, personalized outreach draft to a
+verified prospect. A disqualified candidate is replaced, not a reason to end empty.
+The only non-outreach endings are the true safety stops (Supabase unreachable, or
+the reachable market exhausted after real effort), and even those leave a Talon note.
+
 1. Exactly one Gmail draft exists, to the verified contact from docket@, or to
-   Talon if the contact needs a human find, obeying the voice rules and opening on
-   a specific verified fact.
+   Talon if the FINAL chosen lead's contact needs a human find, obeying the voice
+   rules and opening on a specific verified fact. A "do not pursue this" note with no
+   outreach on a qualified lead does not satisfy this, that is a failed run.
 2. leadflow.leads has one new fully-populated row, leadflow.runs has this run's
    row, nothing duplicated.
 3. Every claim in the dossier and the outreach traces to a source, the contact is

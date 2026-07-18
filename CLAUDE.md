@@ -34,6 +34,20 @@ Only the showrunner (the main run) touches Supabase and Gmail. The subagents
 research and think and hand back structured JSON. Spawning is bounded and
 showrunner-only, and a subagent never spawns its own subagents.
 
+## DEFINITION OF DONE (never end empty)
+
+Every run ends with one real, personalized outreach draft to a verified prospect
+contact. Finding a candidate you should not pursue is not a finish line, it is a cue
+to drop it, leave a one line note on why, and go get the next best. Disqualify and
+replace, never stop. Keep scouting across segments until a qualified lead ships.
+Spending the whole room and handing back a "do not pursue this" note with no outreach
+is a failed run, not a done one. The only non-outreach endings are the true safety
+stops, Supabase unreachable so we cannot dedupe or record, or a reachable market
+genuinely exhausted after real effort, and even those leave a note, never a silent
+empty run. This never overrides THE ONE LAW, we still only ever draft, never send,
+and we never fabricate a fact or a contact to force a draft. A missed day is only the
+last resort after real work, never a shortcut.
+
 ## HONESTY (non-negotiable)
 
 Every fact in a dossier or outreach traces to a page that was fetched. Never
