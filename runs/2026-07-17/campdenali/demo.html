@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Camp Denali After-Hours Backstop</title>
+<style>
+  :root {
+    --paper: #f5f0e5;
+    --card: #fffdf6;
+    --ink: #27302a;
+    --ink-soft: #4c554d;
+    --muted: #78806f;
+    --green: #2e4b3a;
+    --green-deep: #223a2d;
+    --green-wash: #e9efe6;
+    --slate: #46586a;
+    --line: #e0d8c4;
+    --line-soft: #eae3d1;
+    --agent-bubble: #eaf0e7;
+    --agent-edge: #cdd9cb;
+    --caller-bubble: #fffdf6;
+    --caller-edge: #e4dcc8;
+    --note-paper: #fbf7ec;
+    --shadow: 0 1px 2px rgba(39, 48, 42, 0.06), 0 8px 28px rgba(39, 48, 42, 0.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #191c18;
+      --card: #21251f;
+      --ink: #e8e2d2;
+      --ink-soft: #c2bcab;
+      --muted: #8f978a;
+      --green: #9dbfa8;
+      --green-deep: #b8d4c2;
+      --green-wash: #26352b;
+      --slate: #a3b3c2;
+      --line: #363b33;
+      --line-soft: #2d322b;
+      --agent-bubble: #263528;
+      --agent-edge: #35462f;
+      --caller-bubble: #262a23;
+      --caller-edge: #383d34;
+      --note-paper: #24281f;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 28px rgba(0,0,0,0.35);
+    }
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .serif { font-family: Georgia, "Iowan Old Style", "Times New Roman", serif; }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    padding: 72px 0 44px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .kicker {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(30px, 5.5vw, 44px);
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+  h1 .accent { color: var(--green); }
+  .subtitle {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin: 0 auto 22px;
+  }
+  .prepared {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .prepared strong { color: var(--ink-soft); font-weight: 600; }
+
+  /* ---------- Context strip ---------- */
+  .context {
+    padding: 34px 0 8px;
+  }
+  .context p {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+  }
+
+  /* ---------- Tabs ---------- */
+  .tabs-holder {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--paper);
+    padding: 18px 0 14px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .tabs {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .tab {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: var(--card);
+    color: var(--ink-soft);
+    font-family: inherit;
+    font-size: 13.5px;
+    padding: 9px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all .18s ease;
+    white-space: nowrap;
+  }
+  .tab:hover { border-color: var(--green); color: var(--ink); }
+  .tab.active {
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--paper);
+  }
+  @media (prefers-color-scheme: dark) {
+    .tab.active { color: #10140f; }
+  }
+
+  /* ---------- Panels ---------- */
+  .panel { display: none; padding: 40px 0 12px; }
+  .panel.active { display: block; }
+
+  .scene-intro {
+    max-width: 600px;
+    margin: 0 auto 28px;
+    text-align: center;
+  }
+  .scene-time {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 24px;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .scene-desc {
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  /* ---------- Phone frame ---------- */
+  .phone {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .phone-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--line-soft);
+    background: var(--green-wash);
+  }
+  .phone-top .line-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green-deep);
+    letter-spacing: 0.02em;
+  }
+  .phone-top .line-status {
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    display: inline-block;
+  }
+  .dot.pulse { animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
+
+  .transcript {
+    padding: 26px 22px 8px;
+    min-height: 220px;
+    cursor: pointer;
+  }
+  .sysline {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 4px 0 22px;
+  }
+
+  .msg {
+    display: flex;
+    margin-bottom: 14px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity .45s ease, transform .45s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .msg.shown {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 600px;
+    overflow: visible;
+  }
+  .msg.agent { justify-content: flex-start; }
+  .msg.caller { justify-content: flex-end; }
+
+  .bubble {
+    max-width: 76%;
+    padding: 12px 16px;
+    border-radius: 16px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .msg.agent .bubble {
+    background: var(--agent-bubble);
+    border: 1px solid var(--agent-edge);
+    border-bottom-left-radius: 5px;
+    color: var(--ink);
+  }
+  .msg.caller .bubble {
+    background: var(--caller-bubble);
+    border: 1px solid var(--caller-edge);
+    border-bottom-right-radius: 5px;
+    color: var(--ink-soft);
+  }
+  .who {
+    display: block;
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: var(--muted);
+  }
+  .msg.agent .who { color: var(--green); }
+
+  /* typing indicator */
+  .typing {
+    display: none;
+    padding: 0 22px 14px;
+  }
+  .typing.on { display: flex; justify-content: flex-start; }
+  .typing .bubble {
+    background: var(--agent-bubble);
+    border: 1px solid var(--agent-edge);
+    border-bottom-left-radius: 5px;
+    padding: 13px 16px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  .typing i {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--muted);
+    display: inline-block;
+    animation: blink 1.2s infinite;
+  }
+  .typing i:nth-child(2) { animation-delay: .2s; }
+  .typing i:nth-child(3) { animation-delay: .4s; }
+  @keyframes blink {
+    0%, 80%, 100% { opacity: .25; }
+    40% { opacity: 1; }
+  }
+
+  /* ---------- Controls ---------- */
+  .controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 20px 22px;
+    border-top: 1px solid var(--line-soft);
+    background: var(--card);
+  }
+  .btn {
+    appearance: none;
+    font-family: inherit;
+    font-size: 13.5px;
+    padding: 9px 20px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all .18s ease;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink-soft);
+    margin-top: 12px;
+  }
+  .btn:hover { border-color: var(--green); color: var(--ink); }
+  .btn.primary {
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--paper);
+  }
+  .btn.primary:hover { opacity: .9; }
+  @media (prefers-color-scheme: dark) {
+    .btn.primary { color: #10140f; }
+  }
+  .btn:disabled {
+    opacity: .35;
+    cursor: default;
+    pointer-events: none;
+  }
+  .hint {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    padding-bottom: 26px;
+    padding-top: 10px;
+  }
+
+  /* ---------- Frame paragraph for scenario 3 ---------- */
+  .frame-note {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 18px 22px;
+    background: var(--green-wash);
+    border: 1px solid var(--agent-edge);
+    border-radius: 12px;
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+  .frame-note strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Morning note ---------- */
+  .note-card {
+    background: var(--note-paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 36px 38px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .note-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 16px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+  }
+  .note-title {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 21px;
+    color: var(--ink);
+  }
+  .note-stamp {
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .note-grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    row-gap: 14px;
+    column-gap: 20px;
+    font-size: 15px;
+  }
+  .note-grid dt {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-top: 3px;
+  }
+  .note-grid dd { color: var(--ink); }
+  .note-grid dd .sub { color: var(--muted); font-size: 13.5px; }
+  .note-close {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 15px;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  }
+  @media (max-width: 540px) {
+    .note-card { padding: 26px 22px; }
+    .note-grid { grid-template-columns: 1fr; row-gap: 4px; }
+    .note-grid dt { margin-top: 12px; }
+  }
+
+  /* ---------- How it sits ---------- */
+  .how {
+    margin-top: 64px;
+    padding: 56px 0 20px;
+    border-top: 1px solid var(--line);
+  }
+  .how h2 {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .how .lede {
+    text-align: center;
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 520px;
+    margin: 0 auto 36px;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 680px) { .steps { grid-template-columns: 1fr; } }
+  .step {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px 22px;
+  }
+  .step .num {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 15px;
+    color: var(--green);
+    margin-bottom: 10px;
+  }
+  .step h3 {
+    font-size: 15.5px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  .step p { font-size: 14px; color: var(--ink-soft); }
+
+  .guardrail {
+    margin: 36px auto 0;
+    max-width: 620px;
+    text-align: center;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    background: var(--green-wash);
+    border: 1px solid var(--agent-edge);
+    border-radius: 12px;
+    padding: 18px 24px;
+  }
+  .guardrail strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: 56px;
+    border-top: 1px solid var(--line);
+    padding: 30px 0 48px;
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    :root {
+      --paper: #ffffff;
+      --card: #ffffff;
+      --ink: #1c221d;
+      --ink-soft: #3a423b;
+      --muted: #6a7166;
+      --green: #2e4b3a;
+      --green-deep: #223a2d;
+      --green-wash: #f0f3ee;
+      --line: #d8d8d0;
+      --line-soft: #e4e4dc;
+      --agent-bubble: #f0f3ee;
+      --agent-edge: #d5ddd2;
+      --caller-bubble: #fafaf6;
+      --caller-edge: #e2e2d8;
+      --note-paper: #fdfcf7;
+      --shadow: none;
+    }
+    body { font-size: 13px; }
+    header { padding: 24px 0 20px; }
+    .tabs-holder, .controls, .hint, .typing { display: none !important; }
+    .panel { display: block !important; padding: 20px 0; page-break-inside: avoid; }
+    .panel + .panel { page-break-before: always; }
+    .msg { opacity: 1 !important; transform: none !important; max-height: none !important; overflow: visible !important; }
+    .phone { box-shadow: none; }
+    .how { page-break-before: always; }
+    .dot.pulse { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">A working demo, not a slide</div>
+    <h1>Camp Denali <span class="accent">After&#8209;Hours Backstop</span></h1>
+    <p class="subtitle">A phone line that answers only the calls no one was there to catch, takes down what the caller needs, and hands you a clean note when the office opens. It never books, never sends, never replaces you.</p>
+    <p class="prepared">Prepared by <strong>Alaska AI</strong> for <strong>Simon and Jenna Hamm</strong></p>
+  </div>
+</header>
+
+<div class="context">
+  <div class="wrap">
+    <p>Reservations at Camp Denali happen one way. A phone call to 907&#8209;683&#8209;2290, Monday through Friday, 8:30 to noon and 1 to 4:30 Alaska time. That is the right way to book a stay like yours. The gap is everything outside those hours, plus the callers whose carriers cannot connect at all. Below are three calls the backstop would have caught, played out word for word.</p>
+  </div>
+</div>
+
+<div class="tabs-holder">
+  <div class="wrap">
+    <nav class="tabs" aria-label="Demo scenarios">
+      <button class="tab active" data-panel="p1">Tuesday, 9:41 pm</button>
+      <button class="tab" data-panel="p2">Saturday, 2:15 pm</button>
+      <button class="tab" data-panel="p3">The catch</button>
+      <button class="tab" data-panel="p4">7:58 the next morning</button>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- ================= Scenario 1 ================= -->
+  <section class="panel active" id="p1">
+    <div class="scene-intro">
+      <div class="scene-time serif">Tuesday, 9:41 pm Alaska time</div>
+      <p class="scene-desc">A couple in Boston, still up planning. The office closed five hours ago. Today this call rings out. Here it lands.</p>
+    </div>
+    <div class="phone" data-scenario="s1">
+      <div class="phone-top">
+        <span class="line-name">907&#8209;683&#8209;2290</span>
+        <span class="line-status"><span class="dot pulse"></span> office closed &middot; backstop on the line</span>
+      </div>
+      <div class="transcript">
+        <div class="sysline">Incoming call &middot; connected</div>
+        <div class="messages"></div>
+      </div>
+      <div class="typing"><div class="bubble"><i></i><i></i><i></i></div></div>
+      <div class="controls">
+        <button class="btn primary play">Play the call</button>
+        <button class="btn next">Next line</button>
+        <button class="btn restart">Restart</button>
+      </div>
+    </div>
+    <p class="hint">Click anywhere on the transcript to step through, or press play.</p>
+  </section>
+
+  <!-- ================= Scenario 2 ================= -->
+  <section class="panel" id="p2">
+    <div class="scene-intro">
+      <div class="scene-time serif">Saturday, 2:15 pm</div>
+      <p class="scene-desc">A guest already booked for August, with questions about the flight in. No one is in the office until Monday.</p>
+    </div>
+    <div class="phone" data-scenario="s2">
+      <div class="phone-top">
+        <span class="line-name">907&#8209;683&#8209;2290</span>
+        <span class="line-status"><span class="dot pulse"></span> weekend &middot; backstop on the line</span>
+      </div>
+      <div class="transcript">
+        <div class="sysline">Incoming call &middot; connected</div>
+        <div class="messages"></div>
+      </div>
+      <div class="typing"><div class="bubble"><i></i><i></i><i></i></div></div>
+      <div class="controls">
+        <button class="btn primary play">Play the call</button>
+        <button class="btn next">Next line</button>
+        <button class="btn restart">Restart</button>
+      </div>
+    </div>
+    <p class="hint">Every answer above comes from your own published information, nothing else.</p>
+  </section>
+
+  <!-- ================= Scenario 3 ================= -->
+  <section class="panel" id="p3">
+    <div class="scene-intro">
+      <div class="scene-time serif">The catch</div>
+    </div>
+    <div class="frame-note">
+      <strong>Your own contact page carries a warning.</strong> Some phone providers cannot connect to the lodge's line at all. The call fails before it ever reaches voicemail, the caller usually gives up, and no one at Camp Denali ever knows the phone rang. With the backstop sitting behind your number, that same dead call sounds like this.
+    </div>
+    <div class="phone" data-scenario="s3">
+      <div class="phone-top">
+        <span class="line-name">907&#8209;683&#8209;2290</span>
+        <span class="line-status"><span class="dot pulse"></span> carrier failure rerouted &middot; backstop on the line</span>
+      </div>
+      <div class="transcript">
+        <div class="sysline">Third attempt this week &middot; connected</div>
+        <div class="messages"></div>
+      </div>
+      <div class="typing"><div class="bubble"><i></i><i></i><i></i></div></div>
+      <div class="controls">
+        <button class="btn primary play">Play the call</button>
+        <button class="btn next">Next line</button>
+        <button class="btn restart">Restart</button>
+      </div>
+    </div>
+    <p class="hint">This caller was about to become someone else's guest. Now she is a morning note.</p>
+  </section>
+
+  <!-- ================= Morning note ================= -->
+  <section class="panel" id="p4">
+    <div class="scene-intro">
+      <div class="scene-time serif">7:58 the next morning</div>
+      <p class="scene-desc">Before the office opens, the Tuesday night call is already a note on your desk. Nothing to chase, nothing to decode.</p>
+    </div>
+    <div class="note-card">
+      <div class="note-head">
+        <div class="note-title serif">Overnight call for the morning desk</div>
+        <div class="note-stamp">Caught Tuesday, 9:41 pm AK</div>
+      </div>
+      <dl class="note-grid">
+        <dt>Caller</dt>
+        <dd>Claire Whitman, traveling with her husband Dan</dd>
+        <dt>Callback</dt>
+        <dd>617&#8209;555&#8209;0142 <span class="sub">&middot; clairewhitman617@gmail.com</span></dd>
+        <dt>Asking about</dt>
+        <dd>Mid July next year, flexible on exact dates</dd>
+        <dt>Party</dt>
+        <dd>2 guests</dd>
+        <dt>Stay length</dt>
+        <dd>Leaning 4 nights, the Monday to Thursday stay</dd>
+        <dt>Already covered</dt>
+        <dd>The fly&#8209;in, the 55 minute flight, the 25 pound soft bag limit, and the night before near the park entrance. She knows availability comes from you, not from me.</dd>
+        <dt>Callback window</dt>
+        <dd>She is in Boston, four hours ahead. Between 8:30 and 10:00 your time reaches her at midday.</dd>
+      </dl>
+      <p class="note-close">She was warm and unhurried, and she is waiting on one thing only, whether the week is open. Worth the first call of the day.</p>
+    </div>
+    <p class="hint">One note per catch. Weekend messages and rescued carrier calls arrive the same way.</p>
+  </section>
+
+  <!-- ================= How it sits ================= -->
+  <section class="how">
+    <h2 class="serif">How it sits behind your line</h2>
+    <p class="lede">Nothing about how Camp Denali books a guest changes. The backstop only exists where you already cannot be.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num serif">One</div>
+        <h3>The phone rings during office hours</h3>
+        <p>Nothing changes. You answer the way the family has since 1952. The backstop stays silent and out of the way.</p>
+      </div>
+      <div class="step">
+        <div class="num serif">Two</div>
+        <h3>No answer, closed, or the carrier fails</h3>
+        <p>The backstop picks up. It says plainly what it is, answers only from your published facts, and writes everything down.</p>
+      </div>
+      <div class="step">
+        <div class="num serif">Three</div>
+        <h3>Every catch becomes a morning note</h3>
+        <p>One clean summary waiting when the office opens at 8:30. You make the call, you hold the relationship, you take the booking.</p>
+      </div>
+    </div>
+    <div class="guardrail">
+      <strong>What it will never do.</strong> It never quotes availability, never takes a payment, never confirms a stay, and never pretends to be a person. It holds the door open until one of you gets there.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Prepared by Alaska AI for Camp Denali &middot; third generation family owned, guiding guests below the mountain since 1952<br>
+    Every detail in this demo comes from Camp Denali's own published information. Nothing here is live, and nothing answers your phone until you say so.
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var SCENARIOS = {
+    s1: [
+      { who: "agent",  text: "Good evening, you have reached Camp Denali. The office is closed for the night, and this is the lodge's after hours line. I am not a person, but I can take down what you need and make sure the family calls you back in the morning." },
+      { who: "caller", text: "Oh, okay. Sorry, we're in Boston and we lost track of the time difference. We're hoping to visit next July." },
+      { who: "agent",  text: "You are in the right place, and there is no bad time to reach this line. What dates in July were you thinking about?" },
+      { who: "caller", text: "Somewhere in the middle of the month. We're a little flexible. It would just be the two of us." },
+      { who: "agent",  text: "A party of two, mid July. Camp Denali books fixed length stays. Three nights over a weekend, Friday to Sunday. Four nights during the week, Monday to Thursday. Or a full seven nights. Do any of those fit what you had in mind?" },
+      { who: "caller", text: "The four nights, probably. Do you know if you have space that week?" },
+      { who: "agent",  text: "That is one thing I will not guess at. I cannot see the booking calendar from here. The family checks availability themselves, and they will have a real answer for you when they call. Can I take your names and a number they can reach you at?" },
+      { who: "caller", text: "Sure. Claire Whitman, and my husband is Dan. Best number is 617 555 0142." },
+      { who: "agent",  text: "Thank you, Claire. And an email, in case that is easier for the details?" },
+      { who: "caller", text: "clairewhitman617@gmail.com. Oh, one more thing. How do we actually get to the lodge? We read something about a flight." },
+      { who: "agent",  text: "You read right. While the park road is closed at mile 43, guests fly in on a small Cessna. The flight runs about 55 minutes. Bags need to be soft sided, 25 pounds per person. Flying depends on the weather, so the lodge recommends spending the night before near the park entrance. The family can walk you through the rest when they call." },
+      { who: "caller", text: "That sounds like an adventure. Okay, I think that's everything." },
+      { who: "agent",  text: "Then you are all set, Claire. I have mid July for two, with the four night stay in mind, and your number and email. The office opens at half past eight in the morning, Alaska time, and someone from the family will call you. It is late where you are. Sleep well." }
+    ],
+    s2: [
+      { who: "agent",  text: "Hello, you have reached Camp Denali. The office is closed for the weekend, and this is the lodge's after hours line. I can answer common questions, or take a message for Monday morning." },
+      { who: "caller", text: "Hi, we're already booked for August. Quick question about the flight in. How strict is the luggage rule, really?" },
+      { who: "agent",  text: "It is a real limit, not a suggestion. The plane is a small Cessna. Bags need to be soft sided, and 25 pounds per person is the cap." },
+      { who: "caller", text: "Good to know. And once we're there, is everything actually included?" },
+      { who: "agent",  text: "It is. Your stay is all inclusive, and that covers your whole time at the lodge. Meals, the guided days, the evening programs, the canoes and the bikes. The days are naturalist guided, and that is part of it too." },
+      { who: "caller", text: "One more. Do the cabins really look at the mountain, or just some of them?" },
+      { who: "agent",  text: "Every one of them. There are nineteen guest cabins, and each has a direct view of Denali. No one gets a bad one." },
+      { who: "caller", text: "Perfect. That's all I needed." },
+      { who: "agent",  text: "Glad it was easy. Would you like me to leave a note for the family on Monday, or are you all set?" },
+      { who: "caller", text: "All set, thanks." },
+      { who: "agent",  text: "Then enjoy the rest of your weekend. August is not far off now." }
+    ],
+    s3: [
+      { who: "caller", text: "Hello? Oh, wow, it actually went through. I've dialed this number three times this week and it just dies." },
+      { who: "agent",  text: "You have reached Camp Denali, and I hear you just fine. The office is closed right now, and this is the lodge's after hours line. I am glad the call made it through. What can I help with?" },
+      { who: "caller", text: "We've been trying to ask about a stay for my parents' fiftieth anniversary next summer. I was starting to think the number was wrong." },
+      { who: "agent",  text: "The number is right. Some phone carriers have trouble reaching the lodge, and this line exists so those calls do not get lost. Can I take your name and a number, so the family can call you back in the morning?" },
+      { who: "caller", text: "Rachel Ortiz, 503 555 0186. Mornings are best for me." },
+      { who: "agent",  text: "Thank you, Rachel. I have your number, and I have noted that mornings work best. Someone from the family will call you first thing. A fiftieth anniversary deserves a real conversation, and you will get one." }
+    ]
+  };
+
+  function forEachNode(list, fn) {
+    Array.prototype.forEach.call(list, fn);
+  }
+
+  /* ----- Tabs ----- */
+  var tabs = document.querySelectorAll(".tab");
+  var panels = document.querySelectorAll(".panel");
+  forEachNode(tabs, function (tab) {
+    tab.addEventListener("click", function () {
+      forEachNode(tabs, function (t) { t.classList.remove("active"); });
+      forEachNode(panels, function (p) { p.classList.remove("active"); });
+      tab.classList.add("active");
+      document.getElementById(tab.getAttribute("data-panel")).classList.add("active");
+    });
+  });
+
+  /* ----- Transcript engine ----- */
+  function Player(root) {
+    var key = root.getAttribute("data-scenario");
+    var turns = SCENARIOS[key];
+    var messagesEl = root.querySelector(".messages");
+    var typingEl = root.querySelector(".typing");
+    var playBtn = root.querySelector(".play");
+    var nextBtn = root.querySelector(".next");
+    var restartBtn = root.querySelector(".restart");
+    var transcriptEl = root.querySelector(".transcript");
+    var index = 0;
+    var playing = false;
+    var timer = null;
+
+    // Render all bubbles up front, hidden.
+    turns.forEach(function (t) {
+      var msg = document.createElement("div");
+      msg.className = "msg " + t.who;
+      var bubble = document.createElement("div");
+      bubble.className = "bubble";
+      var who = document.createElement("span");
+      who.className = "who";
+      who.textContent = t.who === "agent" ? "After hours line" : "Caller";
+      bubble.appendChild(who);
+      bubble.appendChild(document.createTextNode(t.text));
+      msg.appendChild(bubble);
+      messagesEl.appendChild(msg);
+    });
+    var nodes = messagesEl.querySelectorAll(".msg");
+
+    function syncButtons() {
+      var done = index >= turns.length;
+      nextBtn.disabled = done || playing;
+      playBtn.disabled = done || playing;
+      playBtn.textContent = index === 0 ? "Play the call" : "Play the rest";
+      if (done) playBtn.textContent = "Call complete";
+    }
+
+    function reveal() {
+      if (index >= turns.length) return false;
+      nodes[index].classList.add("shown");
+      index += 1;
+      syncButtons();
+      return true;
+    }
+
+    function stop() {
+      playing = false;
+      if (timer) { clearTimeout(timer); timer = null; }
+      typingEl.classList.remove("on");
+      syncButtons();
+    }
+
+    function delayFor(turn) {
+      var words = turn.text.split(/\s+/).length;
+      return Math.min(650 + words * 62, 3400);
+    }
+
+    function playStep() {
+      if (!playing) return;
+      if (index >= turns.length) { stop(); return; }
+      var turn = turns[index];
+      if (turn.who === "agent") {
+        typingEl.classList.add("on");
+        timer = setTimeout(function () {
+          typingEl.classList.remove("on");
+          reveal();
+          timer = setTimeout(playStep, delayFor(turn));
+        }, 750);
+      } else {
+        reveal();
+        timer = setTimeout(playStep, delayFor(turn));
+      }
+    }
+
+    playBtn.addEventListener("click", function () {
+      if (playing || index >= turns.length) return;
+      playing = true;
+      syncButtons();
+      playStep();
+    });
+
+    nextBtn.addEventListener("click", function () {
+      if (playing) return;
+      reveal();
+    });
+
+    transcriptEl.addEventListener("click", function () {
+      if (playing) return;
+      reveal();
+    });
+
+    restartBtn.addEventListener("click", function () {
+      stop();
+      index = 0;
+      forEachNode(nodes, function (n) { n.classList.remove("shown"); });
+      syncButtons();
+    });
+
+    // Open each call with its first line already on screen.
+    reveal();
+    syncButtons();
+  }
+
+  forEachNode(document.querySelectorAll(".phone"), function (el) { Player(el); });
+})();
+</script>
+
+</body>
+</html>
