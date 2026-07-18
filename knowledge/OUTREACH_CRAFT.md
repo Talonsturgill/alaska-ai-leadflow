@@ -1,23 +1,28 @@
 # Outreach Craft
 
-The outreach is the product in miniature. It should feel like the first two
-minutes of a Field Study someone did for them, for free. If it reads like a
-template, a chatbot, or a hype marketer, it failed and it does not ship.
+The email is not the product. The attached Field Study is. The email is the short,
+self-aware note that carries it and gets it opened. The whole value, the real
+research, the recommended build, the honest ROI, is already done and attached. If
+the email reads like a template, a chatbot, or a hype marketer, it failed and does
+not ship.
 
-## The model (why this works)
+## The angle (why this works)
 
-This is jab, jab, jab, right hook, compressed into one email. The free slice of
-real analysis IS the value you give before you ask for anything. That earns the
-right to ask. Gary Vee's own line, "just because you jab and jab and jab, doesn't
-mean you automatically get to land the right hook, it just allows you to have the
-audacity to ask." So the email gives first, then asks small.
+We eat our own dog food, and saying so is disarming. The opener is honest, Alaska
+AI's AI agent team was told to find the standout businesses in a place and, instead
+of pitching them, to actually do the work, so it did, and a human checked it before
+it reached them. That is true, a little funny, and it flips a cold email into a gift
+that is already in their hands. The email gives the whole study first, then asks
+small. Gary Vee's line still holds, the jab earns the audacity to ask, and here the
+jab is a finished Field Study, not a teaser.
 
-The skeleton underneath (Billy Gene, grounded, stripped of theater).
-1. Name them by exact identity, and the specific thing you found.
-2. State the real problem flat, no windup.
-3. Take the blame off them, the tool or the situation, not them.
-4. Show the fix as real value already done, proof not adjectives.
-5. One small, honest ask.
+The skeleton (Billy Gene, grounded, stripped of theater).
+1. The self-aware agent-team opener, honest, a little funny, never cute.
+2. Name them by exact identity, and the one specific true thing we found.
+3. Tease the study, the one build worth doing first and the honest ROI as a range,
+   and say the honest part (what could go wrong) is in there too.
+4. Point to the attached study as work already done, proof not adjectives.
+5. One small, honest, reply-first ask.
 
 ## Voice, bold and blunt (grounded for Alaska)
 
@@ -27,8 +32,8 @@ distrust Outside slickness, so slickness gets deleted.
   mail merge. Direct is honest, not rude.
 - Call them out by exact identity, never a segment. "You run the lodge on the
   Nushagak that books twelve weeks a season" beats "as a tourism business owner".
-- Lead with value delivered, not promised. Put a real slice of the analysis in
-  the email. Give before you ask.
+- Lead with value delivered, not promised. The value is the attached study, so
+  point at it plainly and tease only the sharpest finding. Give before you ask.
 - Demonstrate, never claim. Zero adjectives about us. Show the finding, the
   number, the specific fix. Marketing is math, not mystique.
 - Confidence as calm certainty. Short spoken sentences. Fragments for emphasis
@@ -44,8 +49,10 @@ Punctuation, strict.
   rewrite.
 - No colons. Restructure.
 - No semicolons. Two sentences.
-- Go easy on commas. More than one in a sentence and it is doing too much. Break
-  it up.
+- Cut commas hard. Aim for zero or one per sentence, and never two. If a sentence
+  needs a second comma it is really two sentences, so make it two. On the final
+  pass, delete about one comma in ten that a period could replace. Fewer commas
+  reads as spoken and sure, comma pileups read as written and as AI.
 - No emojis. Straight quotes only. No exclamation points.
 
 ## The CTA (small and reply-first)
@@ -99,9 +106,14 @@ sentence that could have been sent to any business is a sentence that reads as
 slick or as AI and gets deleted. Specificity is the whole defense.
 
 ## Shape to aim for
-1. The call-out, and the specific true thing you found.
-2. The problem, flat, and the blame lifted off them.
-3. One or two AI plays, shown as real value, tied to their operation.
-4. One line on who we are, the desk behind Alaska AI, we build what we write
-   about.
-5. One small reply-first ask. Sign off as Talon.
+1. The self-aware opener, we are Alaska AI's agent team, told to find the standout
+   businesses here and to do the work instead of pitching, so we did, it is
+   attached, a human checked it first.
+2. The call-out, and the one specific true thing we found about them.
+3. The tease, the single build worth doing first and the honest ROI as a range,
+   and that the honest part is in the study too.
+4. Point to the attached Field Study as work already done for them, free.
+5. One small reply-first ask. Sign off as Talon at Alaska AI.
+
+Keep it to five to eight sentences. The study carries the weight, the email just
+opens the door.
