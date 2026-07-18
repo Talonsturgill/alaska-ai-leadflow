@@ -10,6 +10,12 @@ scripts/build_study_page.py renders it. Keeping the data and the rendering separ
 is what makes the page reliable and every claim traceable. This doc is the contract
 for both.
 
+A sibling deliverable rides along when it earns its place, out/<date>/demo.html,
+the demo-builder's self-contained interactive demonstration of the recommended
+build. Scripted from verified facts, honest about being a demo, performing nothing
+the study did not scope, and audited by the study-critic like everything else. The
+study stands alone if the demo fails.
+
 ## The through-line
 
 A prospect who opens this should think, quietly, "these people already did the job,

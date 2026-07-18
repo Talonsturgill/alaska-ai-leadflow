@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The After-Hours Backstop, Product Requirements</title>
+<style>
+  :root {
+    --paper: #faf7f1;
+    --card: #ffffff;
+    --ink: #2b2a26;
+    --ink-soft: #4a4a43;
+    --slate: #5b6770;
+    --green: #2e4b3f;
+    --green-wash: #ecf1ed;
+    --clay: #b0653a;
+    --clay-wash: #f7ede4;
+    --line: #e3ddd0;
+    --line-soft: #ece7db;
+    --shadow: 0 1px 2px rgba(43, 42, 38, 0.05), 0 8px 26px rgba(43, 42, 38, 0.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1a1c19;
+      --card: #22251f;
+      --ink: #e9e4d6;
+      --ink-soft: #c4bfb0;
+      --slate: #9aa7ae;
+      --green: #a3c2ae;
+      --green-wash: #263329;
+      --clay: #d99668;
+      --clay-wash: #33281f;
+      --line: #383b33;
+      --line-soft: #2e312a;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 26px rgba(0,0,0,0.3);
+    }
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .serif { font-family: Georgia, "Iowan Old Style", "Times New Roman", serif; }
+
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- Header ---------- */
+  header {
+    padding: 72px 0 40px;
+    border-bottom: 3px solid var(--green);
+  }
+  .kicker {
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--clay);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(32px, 5.5vw, 48px);
+    line-height: 1.12;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+  h1 .accent { color: var(--green); }
+  .prepared { font-size: 14.5px; color: var(--slate); }
+  .prepared strong { color: var(--ink-soft); font-weight: 600; }
+  .doc-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    margin-top: 22px;
+    font-size: 13px;
+    color: var(--slate);
+  }
+  .doc-meta span strong {
+    color: var(--ink-soft);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-right: 7px;
+  }
+
+  /* ---------- One-liner ---------- */
+  .oneliner {
+    margin: 40px 0 8px;
+    padding: 24px 28px;
+    background: var(--green-wash);
+    border-left: 4px solid var(--green);
+    border-radius: 0 12px 12px 0;
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 18.5px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+
+  /* ---------- Sections ---------- */
+  section { padding: 44px 0 8px; }
+  section + section { border-top: 1px solid var(--line-soft); margin-top: 36px; }
+  h2 {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 27px;
+    color: var(--green);
+    margin-bottom: 20px;
+    line-height: 1.25;
+  }
+  h2 .num {
+    color: var(--clay);
+    margin-right: 12px;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 26px 0 10px;
+    letter-spacing: 0.01em;
+  }
+  p { margin-bottom: 14px; color: var(--ink-soft); max-width: 74ch; }
+  p strong { color: var(--ink); font-weight: 600; }
+  ul, ol { margin: 0 0 16px 22px; color: var(--ink-soft); }
+  li { margin-bottom: 9px; max-width: 72ch; }
+  li strong { color: var(--ink); font-weight: 600; }
+
+  .source {
+    font-size: 12.5px;
+    color: var(--slate);
+    margin-top: -6px;
+    margin-bottom: 16px;
+  }
+  .source a { color: var(--slate); }
+
+  blockquote {
+    margin: 18px 0 6px;
+    padding: 16px 22px;
+    background: var(--card);
+    border-left: 3px solid var(--clay);
+    border-radius: 0 10px 10px 0;
+    box-shadow: var(--shadow);
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 16.5px;
+    color: var(--ink);
+    max-width: 68ch;
+  }
+
+  /* ---------- Cards and tables ---------- */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 24px 26px;
+    margin: 18px 0 22px;
+  }
+  .card h3 { margin-top: 0; }
+
+  .table-scroll { overflow-x: auto; margin: 18px 0 22px; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 14.5px;
+  }
+  th {
+    text-align: left;
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--slate);
+    background: var(--green-wash);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: top;
+    color: var(--ink-soft);
+  }
+  tr:last-child td { border-bottom: none; }
+  td.id {
+    font-weight: 700;
+    color: var(--clay);
+    white-space: nowrap;
+    font-size: 13px;
+  }
+  td strong { color: var(--ink); }
+
+  /* ---------- Non-goals ---------- */
+  .nongoals {
+    background: var(--clay-wash);
+    border: 1px solid var(--clay);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin: 20px 0 22px;
+  }
+  .nongoals h3 {
+    margin-top: 0;
+    color: var(--clay);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12.5px;
+  }
+  .nongoals ul { margin-bottom: 0; }
+
+  /* ---------- Guardrail rows ---------- */
+  .guard {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 8px 22px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 22px 26px;
+    margin: 18px 0 22px;
+    font-size: 15px;
+  }
+  .guard dt {
+    font-weight: 600;
+    color: var(--green);
+    padding: 8px 0;
+  }
+  .guard dd {
+    color: var(--ink-soft);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .guard dt { border-bottom: 1px solid var(--line-soft); }
+  .guard dt:nth-last-of-type(1), .guard dd:last-of-type { border-bottom: none; }
+  @media (max-width: 620px) {
+    .guard { grid-template-columns: 1fr; gap: 2px; }
+    .guard dt { border-bottom: none; padding-bottom: 0; }
+  }
+
+  /* ---------- Phases ---------- */
+  .phase {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 24px 28px;
+    margin-bottom: 18px;
+  }
+  .phase .phase-name {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 20px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .phase .phase-name .pnum { color: var(--clay); margin-right: 10px; }
+  .phase .phase-scope { font-size: 13.5px; color: var(--slate); margin-bottom: 14px; }
+  .phase h3 { margin-top: 14px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); }
+  .phase ul { margin-bottom: 4px; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: 64px;
+    border-top: 1px solid var(--line);
+    padding: 30px 0 52px;
+    font-size: 12.5px;
+    color: var(--slate);
+    line-height: 1.8;
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    :root {
+      --paper: #ffffff;
+      --card: #ffffff;
+      --ink: #1f1e1a;
+      --ink-soft: #3c3b35;
+      --slate: #5b6770;
+      --green: #2e4b3f;
+      --green-wash: #f0f3f0;
+      --clay: #b0653a;
+      --clay-wash: #f9f1ea;
+      --line: #d8d4c8;
+      --line-soft: #e6e2d6;
+      --shadow: none;
+    }
+    body { font-size: 12.5px; }
+    header { padding: 20px 0 18px; }
+    section { padding: 22px 0 4px; page-break-inside: avoid; }
+    .card, .phase, .nongoals, .guard, table { box-shadow: none; page-break-inside: avoid; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">Product Requirements</div>
+    <h1>The <span class="accent">After&#8209;Hours Backstop</span></h1>
+    <p class="prepared">Prepared by <strong>Alaska AI</strong> for <strong>Camp Denali</strong>, July 2026</p>
+    <div class="doc-meta">
+      <span><strong>Status</strong> Draft for owner review</span>
+      <span><strong>Owners</strong> Simon and Jenna Hamm</span>
+      <span><strong>Companion</strong> Working demo, same package</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="oneliner">
+    A phone agent that answers only the calls no human was there to catch, says plainly what it is, answers common questions from Camp Denali's own published facts, writes down who called and what they wanted, and hands the family a complete note before the office opens. The human booking conversation stays exactly as it is.
+  </div>
+
+  <!-- ================= 1 ================= -->
+  <section id="s1">
+    <h2 class="serif"><span class="num">1.</span>Problem statement</h2>
+    <p>Camp Denali takes every reservation by phone. Their contact page says so in their own warm words.</p>
+    <blockquote>"We enjoy corresponding with you directly and take all reservations by phone at 907&#8209;683&#8209;2290."</blockquote>
+    <p class="source">Source, campdenali.com/contact/</p>
+    <p>That phone is answered Monday through Friday, 8:30 to noon and 1 to 4:30 Alaska time. Roughly thirty weekday hours a week, with a midday closure, four or more time zones behind most of the guests doing the calling. An evening planner in Boston, a weekend caller anywhere, or anyone who dials during the lunch hour reaches nothing.</p>
+    <p class="source">Source, campdenali.com/contact/, "Monday-Friday, 8:30am-12pm and 1pm-4:30pm Alaska Time"</p>
+    <p>And some callers reach nothing even during those hours. The same contact page carries this warning, verbatim.</p>
+    <blockquote>"On rare occasions certain phone providers are not successfully connecting calls to us. If you cannot reach us (or our voicemail), be sure to send us an email with your inquiry or question."</blockquote>
+    <p class="source">Source, campdenali.com/contact/</p>
+    <p>The stakes on each of those silent failures are unusually high. The lodge has 19 guest cabins and sells fixed stays of 3, 4, or 7 nights at 2026 rates of $1,475 per person per night plus tax, in a season that runs June 5 through September 11, 2026. At those rates a 4 night stay for a party of two is roughly $11,800 before tax. One caller who gives up and books elsewhere can cost more than this entire build. Nothing about the phone-first way this family works is the problem. The problem is the hours when nobody, human or machine, is on the line at all.</p>
+    <p class="source">Sources, campdenali.com/accommodations/ (19 cabins), campdenali.com/reservations (2026 rates and season), campdenali.com/rates-reservations/ (fixed 3, 4, and 7 night stays)</p>
+  </section>
+
+  <!-- ================= 2 ================= -->
+  <section id="s2">
+    <h2 class="serif"><span class="num">2.</span>Users and stakeholders</h2>
+
+    <h3>Simon and Jenna Hamm, and the office staff</h3>
+    <p>The owners of the lodge, third generation, full owners since 2009, and the year-round crew who work the phone. They are the readers of the morning note. They get every after-hours caller delivered as one clean summary before the office opens at 8:30, with nothing to decode and nothing to chase. They keep full control. They approve every fact the agent may state, they approve the greeting word for word, and they make every callback themselves. The booking conversation, the part of the work this family openly enjoys, does not change by one syllable.</p>
+
+    <h3>Prospective guests calling outside office hours</h3>
+    <p>The Boston couple at 9:41 pm, the weekend caller, the person whose carrier cannot connect at all. Instead of a dead line they get a voice that answers honestly, explains what it is, answers the common questions the lodge has already answered on its own pages, and takes down their dates, party size, and stay-length preference so the family can call them back with a real answer. What they do not get is a fake yes. The agent never quotes availability, because it cannot know it.</p>
+
+    <h3>Booked guests with logistics questions</h3>
+    <p>Guests already confirmed for the season who call on a Saturday about the flight in, the 25 pound soft-sided luggage limit, or what the all-inclusive stay covers. They get accurate answers on the spot from published facts, and the option of leaving a note for Monday. Fewer of these calls stack up for the office to return.</p>
+  </section>
+
+  <!-- ================= 3 ================= -->
+  <section id="s3">
+    <h2 class="serif"><span class="num">3.</span>Scope and non-goals</h2>
+    <p><strong>In scope.</strong> One phone agent behind the existing 907&#8209;683&#8209;2290 line that engages only when no human was there to catch the call. It greets honestly, answers a family-approved question set drawn from Camp Denali's published pages, captures the caller's details, and produces one morning note per call plus a full transcript. That is the whole product.</p>
+
+    <div class="nongoals">
+      <h3>Non-goals, explicit</h3>
+      <ul>
+        <li><strong>Replacing the daytime human phone line.</strong> During office hours when a person picks up, the agent does not exist.</li>
+        <li><strong>Online booking.</strong> No booking engine, no calendar, no checkout. Reservations stay a human phone conversation.</li>
+        <li><strong>Availability answers.</strong> The agent has no view of the booking book and never guesses at one.</li>
+        <li><strong>Payment capture.</strong> It never takes a card number, a deposit, or any payment detail, even when offered.</li>
+        <li><strong>Outbound calling.</strong> It only answers. It never dials anyone, ever.</li>
+        <li><strong>Pretending to be human.</strong> It names itself as the lodge's after-hours line in its first breath, every call.</li>
+        <li><strong>Anything autonomous.</strong> It commits the lodge to nothing. Every decision that matters lands on a human desk first.</li>
+        <li><strong>Adjacent builds.</strong> The correspondence assistant, the waitlist, the travel-file chase, and the rest of the opportunity map are real but out of scope here. The roadmap document carries them.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 4 ================= -->
+  <section id="s4">
+    <h2 class="serif"><span class="num">4.</span>Functional requirements</h2>
+    <p>Each requirement is written to be testable with a phone and a stopwatch.</p>
+
+    <h3>Call routing</h3>
+    <div class="table-scroll">
+    <table>
+      <tr><th>ID</th><th>Requirement</th></tr>
+      <tr><td class="id">FR&#8209;1</td><td>The agent engages only in these conditions. Outside office hours (before 8:30 am, from noon to 1 pm, and after 4:30 pm Alaska time on weekdays, plus all weekend hours). On overflow, when a call during open hours rings unanswered past the agreed ring count. And on carrier-failure routing, where a call that cannot reach the lodge's line is forwarded to the agent instead of dying.</td></tr>
+      <tr><td class="id">FR&#8209;2</td><td>During office hours, a call a human answers is never touched, intercepted, recorded, or joined by the agent in any way.</td></tr>
+      <tr><td class="id">FR&#8209;3</td><td>The published number does not change. Routing is implemented as forwarding rules behind 907&#8209;683&#8209;2290, and removing those rules restores today's behavior completely.</td></tr>
+    </table>
+    </div>
+
+    <h3>Greeting and identity</h3>
+    <div class="table-scroll">
+    <table>
+      <tr><th>ID</th><th>Requirement</th></tr>
+      <tr><td class="id">FR&#8209;4</td><td>The first utterance of every call identifies the lodge, states that the office is closed or unavailable, names the agent as the lodge's after-hours line, and states plainly that it is not a person. The exact wording is signed off by the family before launch and never varies from the approved script.</td></tr>
+      <tr><td class="id">FR&#8209;5</td><td>If a caller asks whether they are speaking to a person at any point, the agent answers no immediately and without hedging.</td></tr>
+    </table>
+    </div>
+
+    <h3>What it may answer</h3>
+    <div class="table-scroll">
+    <table>
+      <tr><th>ID</th><th>Requirement</th></tr>
+      <tr><td class="id">FR&#8209;6</td><td>The agent answers only from a family-approved fact base built from Camp Denali's own published pages. The launch set covers the fixed 3, 4, and 7 night stay structure, the fly-in on a small Cessna while the park road is closed at mile 43, the roughly 55 minute flight, the 25 pound soft-sided luggage limit, the all-inclusive nature of a stay, the 19 cabins with direct Denali views, the absence of cell service and internet at the lodge, office hours, and the recommendation to overnight near the park entrance before flying. Every answer must trace to a specific fact-base entry.</td></tr>
+      <tr><td class="id">FR&#8209;7</td><td>Rates are stated only if the family opts in, and then always labeled by year. $1,475 per person per night plus tax for 2026 and $1,200 per person per night plus tax for 2027, never blended and never unlabeled. Default at launch is to defer rate questions to the callback.</td></tr>
+      <tr><td class="id">FR&#8209;8</td><td>Any question outside the fact base gets one honest sentence saying the agent will not guess, followed by message capture (FR&#8209;9). This includes availability, weather, and anything about a caller's existing reservation.</td></tr>
+    </table>
+    </div>
+
+    <h3>Capture and handoff</h3>
+    <div class="table-scroll">
+    <table>
+      <tr><th>ID</th><th>Requirement</th></tr>
+      <tr><td class="id">FR&#8209;9</td><td>For every caller who is willing, the agent captures name, phone number, email address, requested dates, party size, and 3, 4, or 7 night preference, and reads the phone number and email back for confirmation before ending the call.</td></tr>
+      <tr><td class="id">FR&#8209;10</td><td>A caller may decline any field. The morning note then records what was given and marks the rest as declined, never invented and never left ambiguous.</td></tr>
+      <tr><td class="id">FR&#8209;11</td><td>Every engaged call produces exactly one morning note containing the capture fields, the questions asked and the answers given, a one-paragraph plain-language summary, and a suggested callback window with the caller's time zone worked out when the caller volunteers where they are.</td></tr>
+      <tr><td class="id">FR&#8209;12</td><td>All notes from the prior evening, night, and weekend are delivered before the office opens at 8:30 am Alaska time, through the channel the family chooses (open question 3).</td></tr>
+      <tr><td class="id">FR&#8209;13</td><td>When a caller says they only want a person, the agent does not persist. It states the office hours, offers to take a message once, accepts the answer, and closes warmly. No loops, no second pitch.</td></tr>
+      <tr><td class="id">FR&#8209;14</td><td>If a caller offers payment details, the agent declines them, states that the family handles all payment on the callback, and excludes any spoken digits from the note and stored transcript.</td></tr>
+      <tr><td class="id">FR&#8209;15</td><td>Quiet hours change tone, not availability. A 2 am call is answered the same as a 9 pm call, with a greeting suited to the hour, and nothing about a late call triggers any outbound action.</td></tr>
+      <tr><td class="id">FR&#8209;16</td><td>Callers who are not comfortable in English are a future consideration only. At launch the agent may say, in plain English, that the family will call back, and it never claims a language ability it does not have.</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <!-- ================= 5 ================= -->
+  <section id="s5">
+    <h2 class="serif"><span class="num">5.</span>Non-functional requirements</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><th>ID</th><th>Requirement</th></tr>
+      <tr><td class="id">NFR&#8209;1</td><td>When engaged, the agent answers within three rings.</td></tr>
+      <tr><td class="id">NFR&#8209;2</td><td>The voice is the lodge's own register, warm, plain, and unhurried. Scripts and generated speech follow the house writing rules. No em or en dashes, no colons or semicolons in spoken prose, easy on commas, no exclamation of any kind, and nothing that sounds like marketing.</td></tr>
+      <tr><td class="id">NFR&#8209;3</td><td>If the conversational agent fails mid-call or cannot start, the call degrades gracefully to a plain recorded-message capture, a simple honest greeting and a beep, and that recording still becomes a morning note. The caller never hears an error and never hits a dead line because of us.</td></tr>
+      <tr><td class="id">NFR&#8209;4</td><td>Every engaged call is stored as a full transcript, kept for the family, retrievable by date and caller, for as long as the family wants and not a day longer.</td></tr>
+      <tr><td class="id">NFR&#8209;5</td><td>No caller data is shared with, sold to, or used to train anything for any third party. Caller details exist for one purpose, the family's callback.</td></tr>
+      <tr><td class="id">NFR&#8209;6</td><td>The service holds through the whole season, including the peak weeks in July, and its health is monitored so a silent outage cannot run for days unnoticed.</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <!-- ================= 6 ================= -->
+  <section id="s6">
+    <h2 class="serif"><span class="num">6.</span>Data and integration</h2>
+
+    <h3>What it reads</h3>
+    <p>A curated fact base assembled from Camp Denali's own published pages, the contact page, the rates and reservations pages, the travel logistics and flight pages, the FAQ, and the accommodations pages. Alaska AI drafts the fact base as a short plain document. The family reads it, strikes anything they would not say themselves, and signs off. The agent can state nothing that is not in that approved document. When a page changes, the fact base is updated and re-approved before the agent's answers change.</p>
+
+    <h3>What it writes</h3>
+    <p>Two things only. Morning notes, one per engaged call. And full transcripts, stored privately for the family. It writes to no booking system, no calendar, and no third-party database.</p>
+
+    <h3>Where it sits</h3>
+    <p>Behind the existing 907&#8209;683&#8209;2290 number, as conditional forwarding rules with the lodge's phone carrier. Closed-hours calls, unanswered overflow calls, and calls rerouted around carrier failures forward to the agent's line. The published number never changes, no guest learns a new number, and removing the forwarding rules returns the phone to exactly today's behavior in minutes.</p>
+
+    <h3>What we need from the owners to start</h3>
+    <ol>
+      <li>Approval of the fact base, line by line.</li>
+      <li>Access to set up conditional forwarding on the office line, or a short call with their carrier alongside us.</li>
+      <li>Sign-off on the greeting script, word for word, in their voice.</li>
+    </ol>
+    <p>That is the whole list. No website changes, no new software for staff to learn, no change to how a booking is made.</p>
+  </section>
+
+  <!-- ================= 7 ================= -->
+  <section id="s7">
+    <h2 class="serif"><span class="num">7.</span>Guardrails and failure behavior</h2>
+    <dl class="guard">
+      <dt>Unsure</dt>
+      <dd>The agent says it will not guess, captures a message, and moves on. Uncertainty always resolves to a note for a human, never to an improvised answer.</dd>
+      <dt>Beyond the fact base</dt>
+      <dd>The agent makes no claims about availability, weather, road or flight conditions on a given day, or anything else not in the approved fact base. There is no fallback general knowledge. Off the fact base, it captures.</dd>
+      <dt>Agent down</dt>
+      <dd>If the backstop's own service is unreachable, the forwarding simply fails through and the phone behaves exactly as it does today. The worst case of this product is the current state, never worse than it.</dd>
+      <dt>Degraded mode</dt>
+      <dd>If conversation fails but the line is up, the call falls back to plain recorded-message capture per NFR&#8209;3.</dd>
+      <dt>Kill switch</dt>
+      <dd>The family can turn the backstop off at any hour with one message to us, and the line reverts to today's behavior. No lock-in, contractual or technical.</dd>
+      <dt>Identity</dt>
+      <dd>It never pretends to be a person, never books, never confirms, never charges, and never calls anyone. These are not settings. They are absences. The capabilities do not exist in the product.</dd>
+    </dl>
+  </section>
+
+  <!-- ================= 8 ================= -->
+  <section id="s8">
+    <h2 class="serif"><span class="num">8.</span>Phased acceptance criteria</h2>
+    <p>Each phase must fully pass before the next begins, and the family can stop at any phase and keep what works.</p>
+
+    <div class="phase">
+      <div class="phase-name serif"><span class="pnum">Phase 1</span>After hours only</div>
+      <div class="phase-scope">Nights, weekends, and the carrier-failure route. No daytime involvement of any kind.</div>
+      <h3>Exit criteria</h3>
+      <ul>
+        <li>At least 20 scripted test calls before launch, then two full weeks live, with every engaged call producing a complete morning note. Complete means all six capture fields present or explicitly marked declined by the caller.</li>
+        <li>Zero invented facts across an audit of every transcript in the period, checked line by line against the approved fact base.</li>
+        <li>Every scripted answer in live use reviewed and approved by the family, and every answer they amend corrected before the phase closes.</li>
+        <li>Every morning note delivered before 8:30 am Alaska time on every business day of the period.</li>
+        <li>No caller complaint that the agent misrepresented what it was.</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <div class="phase-name serif"><span class="pnum">Phase 2</span>The lunch hour</div>
+      <div class="phase-scope">Adds the weekday noon to 1 pm closure. First contact with the working day.</div>
+      <h3>Exit criteria</h3>
+      <ul>
+        <li>All Phase 1 criteria sustained across two more weeks including the lunch window.</li>
+        <li>Zero instances of the agent engaging a call outside its window, verified against the office's own answered-call log.</li>
+        <li>Lunch-hour notes waiting when staff return at 1 pm, or folded into the next morning's delivery, whichever the family chose.</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <div class="phase-name serif"><span class="pnum">Phase 3</span>Overflow</div>
+      <div class="phase-scope">During open hours, the agent picks up only after the agreed ring count with no human answer.</div>
+      <h3>Exit criteria</h3>
+      <ul>
+        <li>Zero calls intercepted that a staff member was in the act of answering, verified over two weeks against the office's experience of the line.</li>
+        <li>The ring threshold reviewed with the family after week one and adjusted to their comfort, then stable for a full week.</li>
+        <li>All prior criteria still holding across the combined routing.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 9 ================= -->
+  <section id="s9">
+    <h2 class="serif"><span class="num">9.</span>Open questions for the owners</h2>
+    <p>Honest unknowns. We would rather ask than assume.</p>
+    <ol>
+      <li><strong>Actual after-hours volume.</strong> Your pages prove calls are missed and sometimes fail entirely, but only you know roughly how often the phone rings nights and weekends. Even a gut estimate shapes how much this is worth and how we size the pilot.</li>
+      <li><strong>The waitlist question.</strong> When a caller asks about a week you both know tends to sell out, may the agent say the family keeps interested callers in mind and capture their flexibility, or should it stay silent on the subject entirely? We build it either way. It changes one script.</li>
+      <li><strong>How the morning note lands.</strong> An email waiting at 8:30, a printed page on the desk, or both. Your office, your call.</li>
+      <li><strong>Rates on the phone.</strong> Comfortable with the agent stating published rates with the year labeled, or should every rate question go to the callback? Launch default is the callback.</li>
+      <li><strong>The overflow ring count.</strong> When Phase 3 arrives, how many rings should a caller hear before the backstop steps in? We propose starting long and shortening only if you ask.</li>
+      <li><strong>Whose name is on the greeting.</strong> "Camp Denali's after-hours line" alone, or a mention that the family will personally return the call? Both are true. You choose the words.</li>
+    </ol>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    Prepared by Alaska AI for Camp Denali, founded in 1951 and family run across three generations.<br>
+    Every factual claim in this document traces to Camp Denali's published pages or the National Park Service, as cited inline. Nothing here is live, and nothing answers the lodge's phone until the family says so.
+  </div>
+</footer>
+
+</body>
+</html>

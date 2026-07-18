@@ -28,7 +28,8 @@ ask.
    for them and no one else.
 3. Tease the study, the one build worth doing first, and the honest ROI as a range,
    never a hero number. Make clear the honest part is in there too, what could go
-   wrong, because that is why they should read it.
+   wrong, because that is why they should read it. When a demo shipped, one plain
+   line says a clickable demonstration of the build is attached too.
 4. One small reply-first ask, a yes, not a call. A human, Talon, reads their reply
    and takes it from there. The intro call
    (https://calendly.com/talon-sturgill-ixzj/30min) is the step AFTER they reply,

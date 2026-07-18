@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Study. Camp Denali. Alaska AI, July 2026</title>
+<style>
+  :root {
+    --paper: #faf7f1;
+    --ink: #2b2a26;
+    --green: #2e4b3f;
+    --slate: #5b6770;
+    --clay: #b0653a;
+    --rule: #e3ddd0;
+    --card: #ffffff;
+    --quote-bg: #f2eee4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1d1c19;
+      --ink: #e8e4da;
+      --green: #9dbfae;
+      --slate: #a3adb5;
+      --clay: #d99268;
+      --rule: #3a3833;
+      --card: #262521;
+      --quote-bg: #2a2925;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { background: var(--paper); }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 28px 80px;
+  }
+  header.masthead {
+    border-bottom: 3px solid var(--green);
+    padding-bottom: 28px;
+    margin-bottom: 44px;
+  }
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--clay);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 44px;
+    line-height: 1.1;
+    font-weight: 400;
+    color: var(--green);
+    margin-bottom: 12px;
+  }
+  .byline {
+    color: var(--slate);
+    font-size: 15px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--green);
+    margin: 52px 0 6px;
+    line-height: 1.25;
+  }
+  .kicker {
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--slate);
+    font-weight: 600;
+    margin-top: 48px;
+  }
+  .kicker + h2 { margin-top: 4px; }
+  h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--ink);
+    margin: 30px 0 8px;
+  }
+  p { margin: 14px 0; }
+  sup {
+    font-size: 11px;
+    color: var(--clay);
+    font-weight: 600;
+    line-height: 0;
+  }
+  blockquote {
+    background: var(--quote-bg);
+    border-left: 3px solid var(--clay);
+    padding: 14px 20px;
+    margin: 20px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  blockquote .attr {
+    display: block;
+    margin-top: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 13px;
+    color: var(--slate);
+  }
+  .fact-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin: 26px 0;
+  }
+  .fact {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .fact .num {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    color: var(--green);
+    display: block;
+    line-height: 1.2;
+  }
+  .fact .lbl {
+    font-size: 12.5px;
+    color: var(--slate);
+    display: block;
+    margin-top: 3px;
+    line-height: 1.4;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 22px 0;
+    font-size: 14.5px;
+  }
+  th {
+    text-align: left;
+    font-size: 12.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--slate);
+    border-bottom: 2px solid var(--green);
+    padding: 8px 10px 8px 0;
+    font-weight: 600;
+  }
+  td {
+    vertical-align: top;
+    border-bottom: 1px solid var(--rule);
+    padding: 12px 14px 12px 0;
+    line-height: 1.55;
+  }
+  td.rowlabel {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15.5px;
+    color: var(--green);
+    width: 22%;
+  }
+  .stays {
+    color: var(--slate);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .estimate {
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--clay);
+    border: 1px solid var(--clay);
+    border-radius: 3px;
+    padding: 0 6px;
+    margin-right: 6px;
+    vertical-align: 1px;
+  }
+  .math-card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin: 18px 0;
+  }
+  .math-card .headline {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    color: var(--green);
+    margin-bottom: 6px;
+  }
+  .rightbox {
+    border: 1px solid var(--green);
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin: 26px 0;
+  }
+  .rightbox h3 { margin-top: 0; color: var(--green); }
+  ol.sources {
+    margin: 18px 0 0 20px;
+    font-size: 13.5px;
+    color: var(--slate);
+    line-height: 1.9;
+  }
+  ol.sources a { color: var(--slate); word-break: break-all; }
+  footer {
+    margin-top: 56px;
+    border-top: 3px solid var(--green);
+    padding-top: 24px;
+  }
+  .closing {
+    color: var(--slate);
+    font-size: 14px;
+    margin-top: 28px;
+  }
+  @media print {
+    :root {
+      --paper: #ffffff;
+      --ink: #1a1a18;
+      --green: #2e4b3f;
+      --slate: #5b6770;
+      --clay: #b0653a;
+      --rule: #d8d3c8;
+      --card: #ffffff;
+      --quote-bg: #f4f1e9;
+    }
+    body { font-size: 12.5pt; }
+    .page { max-width: 100%; padding: 0; }
+    h2, h3, .math-card, .rightbox, blockquote, tr { break-inside: avoid; }
+    a { text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <div class="eyebrow">Field Study</div>
+  <h1>Camp Denali</h1>
+  <div class="byline">Prepared by Alaska AI. July 2026.<br>Every fact in this study traces to a page we fetched and re-checked. Sources are numbered at the end. Every estimate is labeled as an estimate.</div>
+</header>
+
+<div class="kicker">Part One</div>
+<h2>The operation as it runs today</h2>
+
+<p>Camp Denali is a family-owned wilderness lodge in Kantishna, deep inside Denali National Park near the far end of the park road. It was founded in 1951, which puts the 75th anniversary inside the current window.<sup>2</sup> The lodge is in its third generation of family ownership. Simon and Jenna Hamm have been the full owners since 2009.<sup>2</sup></p>
+
+<p>The physical plant is 19 guest cabins, every one with a direct view of Denali.<sup>6</sup> The product is an all-inclusive multi-day stay with guided hiking, evening programs, and full-service dining. Stays come in fixed blocks of 3, 4, or 7 nights.<sup>5</sup> The 2026 season runs June 5 through September 11 at $1,475 per person per night plus tax.<sup>4</sup> The published 2027 rate is $1,200 per person per night plus tax, for a season of June 4 through September 10.<sup>5</sup> They publish their prices up to two seasons ahead and hold them fixed. A deposit of 40% is due within 14 days of booking and the balance is due 60 days before arrival.<sup>5</sup></p>
+
+<p>Since the park road closed at Mile 43 after the Pretty Rocks landslide, a closure the Park Service expects to hold through the summer of 2026, guests reach the lodge by small aircraft.<sup>10</sup> They fly in aboard Cessna 206 planes, and the lodge handles the air side itself.<sup>7</sup></p>
+
+<blockquote>"Round-trip flights will be secured for you by our reservations team."<span class="attr">campdenali.com, travel and flight page<sup>7</sup></span></blockquote>
+
+<p>The lodge itself is deliberately off the grid. Their own FAQ says it plainly.</p>
+
+<blockquote>"We do not have cell service or internet access. Camp Denali has a courtesy telephone for outgoing calls."<span class="attr">campdenali.com, FAQ<sup>8</sup></span></blockquote>
+
+<p>Mail moves on Mondays and Fridays.<sup>8</sup> The connected part of the operation is the year-round office, which answers the phone at 907-683-2290. The people side is a summer staff of 30 plus a year-round crew of 5.<sup>3</sup> Booking runs one way, and it is their stated preference.</p>
+
+<blockquote>"We enjoy corresponding with you directly and take all reservations by phone at 907-683-2290."<span class="attr">campdenali.com, contact page<sup>1</sup></span></blockquote>
+
+<p>The business is working. Simon Hamm wrote this in the lodge's own newsletter.</p>
+
+<blockquote>"Camp's fly-in era has seen unprecedented numbers of returnees, extended stays (up to two weeks!), and guests who come into the office during this year's visit, seeking to reserve next year's return."<span class="attr">Simon Hamm, Ptarmigan Tracks Vol. L, 2025 online edition<sup>9</sup></span></blockquote>
+
+<div class="fact-strip">
+  <div class="fact"><span class="num">1951</span><span class="lbl">Founded, third generation of family ownership<sup>2</sup></span></div>
+  <div class="fact"><span class="num">19</span><span class="lbl">Guest cabins, all with a direct view of Denali<sup>6</sup></span></div>
+  <div class="fact"><span class="num">$1,475</span><span class="lbl">Per person per night plus tax, 2026 season<sup>4</sup></span></div>
+  <div class="fact"><span class="num">$1,200</span><span class="lbl">Per person per night plus tax, published 2027 season<sup>5</sup></span></div>
+  <div class="fact"><span class="num">30 + 5</span><span class="lbl">Summer staff plus year-round crew<sup>3</sup></span></div>
+  <div class="fact"><span class="num">~14 weeks</span><span class="lbl">Season, June 5 to September 11, 2026<sup>4</sup></span></div>
+</div>
+
+<div class="kicker">Part Two</div>
+<h2>Where the season leaks</h2>
+
+<p>None of what follows is a criticism of the people. A five-person year-round crew running a fly-in lodge 90 miles inside a national park is doing hard work well. The leaks below come from the tools and the situation, and every one of them is visible on the lodge's own published pages.</p>
+
+<h3>The phone is the whole front door, and it is open about 35 hours a week</h3>
+<p>Every reservation for a product that costs $1,475 per person per night in 2026 comes in through one phone line.<sup>1</sup> That line is answered on this schedule.</p>
+<blockquote>"Monday-Friday, 8:30am-12pm and 1pm-4:30pm Alaska Time"<span class="attr">campdenali.com, contact page<sup>1</sup></span></blockquote>
+<p>That is roughly 30 to 35 staffed hours out of the 168 hours in a week, on Alaska time, which sits an hour behind the West Coast and four behind the East. A guest planning from New York after dinner is calling a closed office. And the lodge's own contact page carries this admission.</p>
+<blockquote>"On rare occasions certain phone providers are not successfully connecting calls to us. If you cannot reach us (or our voicemail), be sure to send us an email with your inquiry or question."<span class="attr">campdenali.com, contact page<sup>1</sup></span></blockquote>
+<p>In their own words, some calls never connect and never even reach voicemail. Nobody knows how many, including them. That is the nature of a silent failure.</p>
+
+<h3>The correspondence load</h3>
+<p>Personal correspondence is the brand, and the office answers it by hand. Most inbound questions repeat answers that already sit on their own pages, packing, flights, weather, what a day looks like. <span class="estimate">Estimate</span>We did not count their inbox. We read the public pages a guest must digest and the volume of questions those pages invite, and the read is several staff hours a day in season spent restating published facts one letter at a time.</p>
+
+<h3>The travel file every booking carries</h3>
+<p>A Camp Denali booking is not one transaction. It is a file. The flight side requires body weights for every member of the party at the time of booking, and luggage is capped at 25 pounds per person in soft-sided bags.<sup>7</sup></p>
+<blockquote>"Accurate weights of all members of your party are needed at the time of booking for flight planning purposes." "Luggage is limited to 25 pounds per passenger, and must be packed in soft-sided luggage."<span class="attr">campdenali.com, travel and flight page<sup>7</sup></span></blockquote>
+<p>Behind each party sits the lodge stay, the flights the reservations team secures, and the guest's own travel to the park entrance, separate pieces that all have to line up. Add the money schedule, 40% down in 14 days and the balance at 60 days out.<sup>5</sup> Every one of those milestones is watched by hand today.</p>
+
+<h3>Perishable inventory in fixed blocks</h3>
+<p>The 19 cabins sell in rigid 3, 4, and 7-night blocks. The cancellation policy is published and tiered.</p>
+<blockquote>"60 or more days prior to arrival, $100/person." "59-31 days prior to arrival, forfeiture of deposit." "Within 30 days of arrival, forfeiture of full payment."<span class="attr">campdenali.com, rates and reservations pages<sup>4,5</sup></span></blockquote>
+<p>When a party cancels inside the season, a fixed block opens that cannot be split or shifted, and it has to be refilled fast or it expires worthless. Nowhere on the site did we find a waitlist a hopeful guest can join. The people who called on full dates and were turned away are exactly the buyers for that opened block, and today there is no visible system that keeps them.</p>
+
+<h3>Changeover days are a flight puzzle</h3>
+<p>Fixed blocks concentrate arrivals and departures onto set changeover days, and each direction moves by Cessna 206 in mountain weather.<sup>7</sup> <span class="estimate">Estimate</span>We did not observe a changeover. But the arithmetic of 19 cabins moving in four or five-seat loads means many flights sequenced by hand against collected weights and bags, and re-sequenced whenever weather takes a slot away.</p>
+
+<h3>The memory lives in two people</h3>
+<p>Simon's newsletter line above is the happy version of a structural risk. Returnees at unprecedented numbers, rebooking in person for next year, are relationships held in the owners' heads and in years of correspondence.<sup>9</sup> The lodge is offline by design, the summer staff of 30 turns over, and the year-round crew is 5.<sup>3,8</sup> Seventy-plus years of guest memory and operating knowledge concentrate in two owner-operators. Nothing is wrong today. That is precisely when concentration risk is cheapest to address.</p>
+
+<div class="rightbox">
+<h3>What they are right to protect</h3>
+<p>Three choices under this roof look old-fashioned and are in fact the moat. The personal correspondence is the product, a guest is welcomed by a person before they ever board a plane. The fixed published pricing is fair dealing, rates set up to two seasons ahead and held, and the published 2027 rate is lower than 2026. And the offline lodge is the point of the place. A study that proposed to modernize any of those would have misread the business. Everything in this study leaves all three exactly alone.</p>
+</div>
+
+<div class="kicker">Part Three</div>
+<h2>Current state and future state</h2>
+
+<p>The shape of the proposal is simple. The tools live at the connected year-round office, never at the lodge. Every outbound word is a draft that a human reads, edits, and sends. And it is one foundation, the booking ledger plus their own correspondence, worn many ways, not a shelf of separate products.</p>
+
+<table>
+<tr><th>Where</th><th>Today</th><th>Proposed</th></tr>
+<tr>
+  <td class="rowlabel">The phone</td>
+  <td>Answered by a person about 35 weekday hours. Nights, weekends, the lunch hour, and carrier failures go unanswered, and some callers cannot even reach voicemail.<sup>1</sup></td>
+  <td>A person still answers every call the office can take. <strong>Nothing about staffed hours changes.</strong> An after-hours backstop catches only the calls no human was there for, answers logistics questions from their own published facts, takes dates and party size and stay length in the lodge's tone, and hands the family a complete morning note.</td>
+</tr>
+<tr>
+  <td class="rowlabel">Correspondence</td>
+  <td>Every reply written from scratch by the office crew.</td>
+  <td>Replies arrive pre-drafted in the house voice from their own pages and past letters. A person edits and sends every one. <span class="stays">Nothing auto-sends, ever.</span></td>
+</tr>
+<tr>
+  <td class="rowlabel">Travel files</td>
+  <td>Weights, bags, dietary needs, deposits, and balances tracked by hand per party.<sup>5,7</sup></td>
+  <td>A per-party checklist with warm drafted chase letters at each milestone, reviewed and sent by staff. The same information, gathered the same friendly way, with nothing falling through.</td>
+</tr>
+<tr>
+  <td class="rowlabel">Cancelled blocks</td>
+  <td>Published forfeiture tiers, no visible waitlist. A cancellation is revenue lost unless the office rebuilds the block by hand.<sup>4,5</sup></td>
+  <td>Turned-away inquiries are kept as a real waitlist. When a block opens the match is found and a personal offer letter is drafted for staff to review and send. No guest ever touches software.</td>
+</tr>
+<tr>
+  <td class="rowlabel">Changeover days</td>
+  <td>Flight loads sequenced by hand against weights and bags, redone when weather moves.</td>
+  <td>A planning aid that regroups parties and reprints the manifest packet in seconds when a flight drops. The carrier's own weight-and-balance authority stays exactly where it is.</td>
+</tr>
+<tr>
+  <td class="rowlabel">The lodge</td>
+  <td>No cell service, no internet, a courtesy phone, mail on Mondays and Fridays.<sup>8</sup></td>
+  <td><span class="stays">Stays exactly as it is.</span> Every tool in this study lives at the connected office.</td>
+</tr>
+<tr>
+  <td class="rowlabel">Pricing</td>
+  <td>Fixed rates published up to two seasons ahead.<sup>4,5</sup></td>
+  <td><span class="stays">Stays exactly as it is.</span> We considered dynamic pricing and rejected it. It is wrong for this brand.</td>
+</tr>
+</table>
+
+<div class="kicker">Part Four</div>
+<h2>The arithmetic</h2>
+
+<p>We would rather show the math than assert a return. Every figure below uses the lodge's own published 2026 rates, and every assumption is labeled.</p>
+
+<div class="math-card">
+  <div class="headline">One caught call</div>
+  <p>A 4-night stay for a party of two at the 2026 rate is 4 nights at $1,475 per person, times two people. That is <strong>$11,800 before tax</strong>, plus round-trip air at $800 per person.<sup>4</sup> The math is exact. <span class="estimate">Estimate</span>What we cannot know is how many bookable callers hit the closed or failed line each season. Their own page says some calls never connect at all.<sup>1</sup> If the backstop catches one such party in a whole summer, it has paid for itself several times over. Everything past one is margin.</p>
+</div>
+
+<div class="math-card">
+  <div class="headline">One refilled block</div>
+  <p>The same $11,800 figure applies to a cancelled 4-night block refilled from a kept waitlist. <span class="estimate">Estimate</span>We do not know their cancellation count. If a season produces even two or three refillable openings across 19 cabins and 14 weeks, a working waitlist is worth roughly $25,000 to $45,000 a season at 2026 rates.</p>
+</div>
+
+<div class="math-card">
+  <div class="headline">The hours</div>
+  <p><span class="estimate">Estimate</span>Drafted correspondence is worth about 4 to 7 staff hours a week in season. The travel-file chase, weights and bags and deposits and balances, is worth about 4 to 8 more. Changeover planning is worth tens of hours across a season. These are reads from their published workload, not measurements from their inbox, and we say so plainly. At a five-person year-round office, hours are the scarcest thing the business owns.</p>
+</div>
+
+<div class="kicker">Part Five</div>
+<h2>What we did not find</h2>
+
+<p>A study is only as trustworthy as its stated blind spots. Here are ours.</p>
+
+<p>We have no visibility into the lodge's booking records, call logs, or internal systems. Every operational claim here rests on their published pages and on Park Service pages, not on their books. Call volume, missed-call counts, and cancellation counts are inferred and labeled as estimates. Their real numbers may be better or worse than our read, and their real numbers should govern.</p>
+
+<p>We built the arithmetic on published rates and the stated deposit schedule. We do not know their occupancy, and we have not assumed a number for it anywhere.</p>
+
+<p>Hiring is already complete for 2026, and 2027 applications open in November 2026.<sup>11</sup> Anything staffing-related in a first conversation would be planning for next season, not a change to this one.</p>
+
+<p>We do not know how much after-hours demand already routes itself to email, as their contact page suggests it should when calls fail.<sup>1</sup> If most of it does, the caught-call math shrinks and the correspondence math grows. Either way the leak is real, but its shape is theirs to confirm.</p>
+
+<p class="closing">This study was prepared without the lodge's participation, from public pages, as a demonstration of the work. If any fact above is wrong we want to know, and we will correct it in writing.</p>
+
+<footer>
+  <div class="eyebrow">Sources</div>
+  <ol class="sources">
+    <li><a href="https://campdenali.com/contact/">https://campdenali.com/contact/</a></li>
+    <li><a href="https://campdenali.com/about/history">https://campdenali.com/about/history</a></li>
+    <li><a href="https://campdenali.com/about/">https://campdenali.com/about/</a></li>
+    <li><a href="https://www.campdenali.com/reservations">https://www.campdenali.com/reservations</a></li>
+    <li><a href="https://campdenali.com/rates-reservations">https://campdenali.com/rates-reservations</a></li>
+    <li><a href="https://campdenali.com/accommodations/">https://campdenali.com/accommodations/</a></li>
+    <li><a href="https://campdenali.com/activities/bus-ride">https://campdenali.com/activities/bus-ride</a></li>
+    <li><a href="https://campdenali.com/reservations/faq">https://campdenali.com/reservations/faq</a></li>
+    <li><a href="https://www.campdenali.com/online-newsletter">https://www.campdenali.com/online-newsletter</a></li>
+    <li><a href="https://www.nps.gov/dena/planyourvisit/conditions.htm">https://www.nps.gov/dena/planyourvisit/conditions.htm</a></li>
+    <li><a href="https://campdenalijobs.com/work/apply">https://campdenalijobs.com/work/apply</a></li>
+  </ol>
+  <div class="byline" style="margin-top:24px;">Field Study. Camp Denali. Prepared by Alaska AI, July 2026.</div>
+</footer>
+
+</div>
+</body>
+</html>

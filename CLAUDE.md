@@ -46,9 +46,41 @@ a real Field Study, not a teaser.
 - outreach-writer writes the short self-aware agent-team email that carries it, and
   lead-critic kills anything generic or AI-sounding.
 
+- demo-builder makes a high-fidelity, self-contained interactive demo of the
+  recommended build, scripted from verified facts and honest about being a
+  demonstration. It rides the draft alongside the study.
+
 Only the showrunner (the main run) touches Supabase, Python, and Gmail. The
 subagents research and think and hand back structured JSON. Spawning is bounded and
 showrunner-only, and a subagent never spawns its own subagents.
+
+## THE ANCHORING LAW (protect the room's independence)
+
+The rooms exist so no single idea pigeonholes the analysis. The showrunner hands
+every room FACTS, never conclusions. A brief that names a preferred problem, a
+preferred build, or "the angle we are exploring" is a violation, it collapses the
+whole room into an echo. The discovery room maps the WHOLE business first, every
+place AI could genuinely change it, before any single build is chosen. The pick is
+made by synthesis after the map exists, and the roadmap's Later lane carries the
+rest of the map so nothing found is wasted. Watch for over-indexing on any one
+product (voice agents especially), the offer is whatever the business genuinely
+needs that we can build.
+
+## DEFINITION OF DONE (never end empty)
+
+Every run ends with one real, personalized Field Study drafted to a verified
+prospect contact. A disqualified candidate is never the end of the run. Drop it,
+leave a one-line note on why, suppress it, and go get the next best, across
+segments, until a qualified lead ships. Spending the whole room and handing back a
+"do not pursue" note with no outreach is a failed run, not a done one. The only
+non-outreach endings are the true safety stops, Supabase unreachable so we cannot
+dedupe or record, a study the critics killed that honesty will not let ship, or a
+reachable market genuinely exhausted after real effort, and even those end with a
+note to Talon, never a silent empty run. This never overrides THE ONE LAW or
+HONESTY, we still only draft, we never send, and we never fabricate a fact or a
+contact or ship hype to force a finish. Reputation counts as qualification, work
+that would embarrass the brand or cut against its public voice is a disqualifier
+like any other, drop and replace.
 
 ## HONESTY (non-negotiable)
 
@@ -73,8 +105,12 @@ unreachable, the routine stops rather than risk a repeat.
 ## PRIVATE DATA
 
 This repo is PRIVATE and the leadflow schema holds real prospect information.
-Never publish either, never expose a contact or a dossier, and never write
-prospect data into the public alaskaaicarousels repo or the public site.
+Never publish either, never expose the pipeline or another prospect's dossier, and
+never write prospect data into the public alaskaaicarousels repo or the public
+site. The Field Study package (the study page, the PDF, the demo) is the designed
+exception, it is built to be handed to its own prospect by Talon and contains only
+that prospect's own public facts and our proposal. A package never references
+another lead, the pipeline, or anything from the database beyond its own company.
 
 ## VOICE
 
@@ -104,14 +140,14 @@ reachable only through the privileged connector the routine uses.
   short trigger text for the routine UI).
 - config/ - icp.yaml.
 - knowledge/ - LEAD_RESEARCH and ALASKA_MARKET (research), ENGINEERING_METHOD,
-  AI_SCOPING, and ROI_METHOD (the engineering room's grounded, sourced process),
-  FIELD_STUDY_SPEC (the deliverable contract and study.json shape), OUTREACH_CRAFT
-  (the carrier-email voice and kill-list).
+  AI_SCOPING, ROI_METHOD, and ROADMAP_CRAFT (the engineering room's grounded,
+  sourced process), FIELD_STUDY_SPEC (the deliverable contract and study.json
+  shape), OUTREACH_CRAFT (the carrier-email voice and kill-list).
 - .claude/agents/ - the two rooms, research (lead-scout, company-analyst,
   people-finder, competitor-analyst, industry-analyst, fact-checker), engineering
   (product-strategist, ai-feasibility-engineer, staff-engineer, product-manager,
-  roi-analyst, delivery-lead), critique (study-critic, lead-critic), and the
-  outreach-writer.
+  roi-analyst, delivery-lead), the demo-builder, critique (study-critic,
+  lead-critic), and the outreach-writer.
 - scripts/ - build_study_page.py, renders study.json into the self-contained Field
   Study HTML (and a PDF).
 - db/ - schema.sql (leadflow.leads now also holds the study, study_json and

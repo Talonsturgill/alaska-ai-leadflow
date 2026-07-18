@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadmap. The After-Hours Backstop. Camp Denali. Alaska AI, July 2026</title>
+<style>
+  :root {
+    --paper: #faf7f1;
+    --ink: #2b2a26;
+    --green: #2e4b3f;
+    --slate: #5b6770;
+    --clay: #b0653a;
+    --rule: #e3ddd0;
+    --card: #ffffff;
+    --quote-bg: #f2eee4;
+    --lane-our: #eef2ec;
+    --lane-you: #f6ece3;
+    --lane-watch: #ecedef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1d1c19;
+      --ink: #e8e4da;
+      --green: #9dbfae;
+      --slate: #a3adb5;
+      --clay: #d99268;
+      --rule: #3a3833;
+      --card: #262521;
+      --quote-bg: #2a2925;
+      --lane-our: #24302a;
+      --lane-you: #32271f;
+      --lane-watch: #262a2e;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { background: var(--paper); }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 28px 80px;
+  }
+  header.masthead {
+    border-bottom: 3px solid var(--green);
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+  }
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--clay);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 40px;
+    line-height: 1.12;
+    font-weight: 400;
+    color: var(--green);
+    margin-bottom: 12px;
+  }
+  .byline {
+    color: var(--slate);
+    font-size: 15px;
+  }
+  .opener {
+    font-size: 16.5px;
+    margin: 6px 0 8px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 27px;
+    color: var(--green);
+    margin: 48px 0 6px;
+    line-height: 1.25;
+  }
+  .kicker {
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--slate);
+    font-weight: 600;
+    margin-top: 46px;
+  }
+  p { margin: 14px 0; }
+
+  /* Phase card */
+  .phase {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 24px 26px 26px;
+    margin: 26px 0;
+  }
+  .phase-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    border-bottom: 2px solid var(--green);
+    padding-bottom: 12px;
+    margin-bottom: 6px;
+  }
+  .phase-num {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--paper);
+    background: var(--green);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+  .phase-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    color: var(--green);
+    font-weight: 400;
+  }
+  .phase-range {
+    margin-left: auto;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--clay);
+    border: 1px solid var(--clay);
+    border-radius: 3px;
+    padding: 3px 8px;
+    white-space: nowrap;
+    align-self: center;
+  }
+  .rowlabel {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--slate);
+    font-weight: 600;
+    margin-top: 18px;
+    margin-bottom: 2px;
+  }
+  .purpose { margin-top: 10px; }
+
+  /* Lanes */
+  .lanes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 12px 0 4px;
+  }
+  .lane {
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+  .lane .lane-title {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .lane .lane-range {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 5px;
+    line-height: 1.35;
+  }
+  .lane .lane-note { color: var(--slate); font-size: 12.5px; }
+  .lane.our {
+    background: var(--lane-our);
+    border-left: 4px solid var(--green);
+  }
+  .lane.our .lane-title { color: var(--green); }
+  .lane.you {
+    background: var(--lane-you);
+    border-left: 4px solid var(--clay);
+  }
+  .lane.you .lane-title { color: var(--clay); }
+  .lane.watch {
+    background: var(--lane-watch);
+    border-left: 4px solid var(--slate);
+  }
+  .lane.watch .lane-title { color: var(--slate); }
+  .conf {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+    vertical-align: 1px;
+    border: 1px solid currentColor;
+  }
+  .trigger-line {
+    font-size: 13px;
+    color: var(--slate);
+    margin-top: 4px;
+  }
+  .gate {
+    background: var(--quote-bg);
+    border-left: 3px solid var(--clay);
+    padding: 12px 16px;
+    margin: 16px 0 4px;
+    font-size: 14.5px;
+    border-radius: 0 5px 5px 0;
+  }
+  .gate .gate-title {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--clay);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+  }
+  ul.provide {
+    margin: 4px 0 0 18px;
+    font-size: 14.5px;
+  }
+  ul.provide li { margin: 5px 0; }
+  .risk {
+    font-size: 14.5px;
+    margin-top: 6px;
+  }
+  .risk .rlabel { color: var(--clay); font-weight: 600; }
+
+  /* Summary */
+  .summary {
+    border: 1px solid var(--green);
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin: 26px 0;
+  }
+  .summary h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--green);
+    margin-bottom: 6px;
+  }
+  .totals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin: 18px 0 8px;
+  }
+  .total {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .total .num {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    color: var(--green);
+    display: block;
+    line-height: 1.2;
+  }
+  .total .lbl {
+    font-size: 12.5px;
+    color: var(--slate);
+    display: block;
+    margin-top: 3px;
+    line-height: 1.4;
+  }
+  .sidenote {
+    background: var(--quote-bg);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 30px 0 0;
+  }
+  .sidenote h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 19px;
+    color: var(--green);
+    margin-bottom: 6px;
+  }
+  .sidenote p { font-size: 14.5px; color: var(--ink); }
+  footer {
+    margin-top: 52px;
+    border-top: 3px solid var(--green);
+    padding-top: 22px;
+  }
+  @media (max-width: 640px) {
+    .lanes { grid-template-columns: 1fr; }
+    .phase-range { margin-left: 0; }
+    .phase-head { flex-wrap: wrap; }
+  }
+  @media print {
+    :root {
+      --paper: #ffffff;
+      --ink: #1a1a18;
+      --green: #2e4b3f;
+      --slate: #5b6770;
+      --clay: #b0653a;
+      --rule: #d8d3c8;
+      --card: #ffffff;
+      --quote-bg: #f4f1e9;
+      --lane-our: #eef2ec;
+      --lane-you: #f7ede4;
+      --lane-watch: #eceef0;
+    }
+    body { font-size: 12pt; }
+    .page { max-width: 100%; padding: 0; }
+    .phase, .summary, .sidenote, .gate, .lanes { break-inside: avoid; }
+    a { text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <div class="eyebrow">Roadmap</div>
+  <h1>The After-Hours Backstop</h1>
+  <div class="byline">Prepared by Alaska AI for Camp Denali. July 2026.<br>What saying yes sets in motion, in order, with the gate where you stay in control at every step.</div>
+</header>
+
+<p class="opener">This is the plan for one build. A phone agent that sits quietly behind your existing 907-683-2290 line and wakes only when no person catches the call, the closed hours, the noon to one lunch closure, the unanswered overflow, and the carrier failures your own contact page warns about. It answers common questions from a fact base your family approves word for word, it says plainly that it is the after-hours line, it takes the caller's name, phone, email, dates, party size, and three, four, or seven night preference, and it leaves one clean morning note per call on your desk before the office opens. The sequencing is built so you carry no risk you did not choose. Each phase is short and honest, each ends at a gate that is your off-ramp, and the worst case of the finished product is the phone you have today, because pulling the forwarding rules restores it in minutes. You own the whole system at the end.</p>
+
+<div class="kicker">The phases, in order</div>
+
+<!-- PHASE 1 -->
+<div class="phase">
+  <div class="phase-head">
+    <span class="phase-num">1</span>
+    <span class="phase-name">Kickoff and alignment</span>
+    <span class="phase-range">1 to 4 business days</span>
+  </div>
+  <p class="purpose">We confirm Simon and Jenna as the two person decision seat, lock what a good morning note looks like, and settle the six open questions from the PRD that shape every later phase. Nothing on your phone is touched.</p>
+
+  <div class="rowlabel">Deliverable</div>
+  <p style="margin-top:2px">A one page alignment note that records your answers to the six questions, the pilot success measure, and the exact list of what you will provide and when.</p>
+
+  <div class="rowlabel">Done when</div>
+  <p style="margin-top:2px">All six questions have a written answer or an on purpose defer to go live, and both owners have confirmed the pilot success measure in writing.</p>
+
+  <div class="gate">
+    <span class="gate-title">Your off-ramp</span>
+    You can stop here having committed nothing beyond a short conversation. No line is touched, no forwarding exists, no fact is loaded. You keep a written map of your own after-hours gap and six decisions already thought through, yours to act on with anyone or no one.
+  </div>
+
+  <div class="rowlabel">Timeframe</div>
+  <div class="lanes">
+    <div class="lane our">
+      <span class="lane-title">Our work</span>
+      <span class="lane-range">0.5 to 1 day</span>
+      <span class="lane-note">One short call plus the alignment note with six recommended defaults pre-drafted.<span class="conf">High confidence</span></span>
+    </div>
+    <div class="lane you">
+      <span class="lane-title">Waiting on you</span>
+      <span class="lane-range">Same call to 4 business days</span>
+      <span class="lane-note">Your answers to the six questions and the success measure. Clock starts when you receive the note.</span>
+    </div>
+    <div class="lane watch">
+      <span class="lane-title">Watch it run</span>
+      <span class="lane-range">None yet</span>
+      <span class="lane-note">Nothing is live in this phase.</span>
+    </div>
+  </div>
+  <p class="trigger-line">Fast end if you confirm the defaults on the kickoff call and name the success measure there. Slow end if peak season pushes your review into a later free evening.</p>
+
+  <div class="rowlabel">What you provide</div>
+  <ul class="provide">
+    <li>A rough estimate of after-hours and weekend call volume, which sizes the pilot.</li>
+    <li>Both owners for one short kickoff call.</li>
+    <li>Your choice on the four launch shaping questions (note channel, whether rates are said on the phone or deferred to callback, the waitlist script, and whose name is on the greeting).</li>
+  </ul>
+
+  <p class="risk"><span class="rlabel">Top risk.</span> You are slammed in peak season, so your review time is the scarce resource and the decisions slip. We bring a safe default for every question so the meeting is confirm or adjust, not compose from scratch, and we hold it to one short call. Every default is a safe launch choice, so silence still ships.</p>
+</div>
+
+<!-- PHASE 2 -->
+<div class="phase">
+  <div class="phase-head">
+    <span class="phase-num">2</span>
+    <span class="phase-name">Build and load the backstop</span>
+    <span class="phase-range">1 to 2 weeks</span>
+  </div>
+  <p class="purpose">We build the after-hours agent and load it on your real, family approved facts, greeting, capture flow, and morning-note format, with every PRD guardrail wired in before it ever touches the live line.</p>
+
+  <div class="rowlabel">Deliverable</div>
+  <p style="margin-top:2px">A working backstop you can call on a test number. It greets as the after-hours line, answers only from the approved facts, captures the six fields with a read-back confirmation, declines payment and availability questions, and produces a real morning note per call.</p>
+
+  <div class="rowlabel">Done when</div>
+  <p style="margin-top:2px">At least twenty scripted test calls pass with every engaged call producing a complete morning note, zero invented facts across an audit of every transcript against the approved fact base, and your greeting spoken word for word on every call.</p>
+
+  <div class="gate">
+    <span class="gate-title">Your off-ramp</span>
+    You can stop after seeing the built agent on a test line, before any call to your real number is ever routed to it. Nothing about your live phone has changed. You keep the approved fact base as a clean plain-language record of what your own pages say, plus a working demonstration of your own after-hours agent you can return to.
+  </div>
+
+  <div class="rowlabel">Timeframe</div>
+  <div class="lanes">
+    <div class="lane our">
+      <span class="lane-title">Our work</span>
+      <span class="lane-range">3 to 5 days</span>
+      <span class="lane-note">Fact-base draft about a day, agent and capture flow one to two, morning note about a half to a day, degraded recorded fallback a half, twenty plus test calls about a day.<span class="conf">High confidence</span></span>
+    </div>
+    <div class="lane you">
+      <span class="lane-title">Waiting on you</span>
+      <span class="lane-range">1 to 5 business days</span>
+      <span class="lane-note">Fact-base approval and greeting sign-off, the true critical path. Clock starts when we send the draft.</span>
+    </div>
+    <div class="lane watch">
+      <span class="lane-title">Watch it run</span>
+      <span class="lane-range">None yet</span>
+      <span class="lane-note">Still on a test line only.</span>
+    </div>
+  </div>
+  <p class="trigger-line">Our build starts the moment kickoff defaults are confirmed. Fast end if you approve the fact base and greeting within a day or two of receiving them. Slow end if the sign-off sits in your peak-season review queue while our finished build waits on the one content decision only you can make.</p>
+
+  <div class="rowlabel">What you provide</div>
+  <ul class="provide">
+    <li>Line by line approval of the fact base. Strike anything you would not say yourself.</li>
+    <li>Word for word sign-off on the greeting in your voice.</li>
+    <li>Confirmation of the morning-note format on a sample note.</li>
+  </ul>
+
+  <p class="risk"><span class="rlabel">Top risk.</span> Sign-off stalls because you cannot free the review time in season, and this is the real critical path, not the engineering. We deliver the fact base as a short strike-through document so review is reading not writing, we chunk it so partial approval unblocks a partial launch set, and we default the rate questions to the callback so no rate line needs sign-off to ship.</p>
+</div>
+
+<!-- PHASE 3 -->
+<div class="phase">
+  <div class="phase-head">
+    <span class="phase-num">3</span>
+    <span class="phase-name">Wire the line</span>
+    <span class="phase-range">3 business days to 2 weeks</span>
+  </div>
+  <p class="purpose">We route only the calls no human caught to the backstop, through conditional forwarding behind your existing 907-683-2290 number, without changing the published number and without ever touching a call a person answers.</p>
+
+  <div class="rowlabel">Deliverable</div>
+  <p style="margin-top:2px">Live conditional forwarding on the office line that sends closed-hours and carrier-failure calls to the agent, leaves every human-answered call alone, and reverts to today the moment the rules come off.</p>
+
+  <div class="rowlabel">Done when</div>
+  <p style="margin-top:2px">A test call inside the closed window reaches the agent, a test call during staffed hours is answered by a person and never touched, and pulling the rules restores the phone to today's exact behavior, all three verified live.</p>
+
+  <div class="gate">
+    <span class="gate-title">Your off-ramp</span>
+    You can stop after seeing the routing tested and keep the backstop on the shelf. Removing the forwarding rules returns the line to today in minutes, with no lock-in. You keep your phone exactly as it was, plus a documented, ready-to-activate forwarding configuration you can switch on any later season with one message.
+  </div>
+
+  <div class="rowlabel">Timeframe</div>
+  <div class="lanes">
+    <div class="lane our">
+      <span class="lane-title">Our work</span>
+      <span class="lane-range">About 1 day</span>
+      <span class="lane-note">Specify the rules, sit on the carrier call, verify routing against every trigger and confirm the clean revert.<span class="conf">Medium confidence</span></span>
+    </div>
+    <div class="lane you">
+      <span class="lane-title">Waiting on you</span>
+      <span class="lane-range">2 to 7 business days</span>
+      <span class="lane-note">Carrier access or a scheduled three-way carrier call. The one step we cannot do alone.</span>
+    </div>
+    <div class="lane watch">
+      <span class="lane-title">Watch it run</span>
+      <span class="lane-range">None yet</span>
+      <span class="lane-note">Live calls begin in the pilot next.</span>
+    </div>
+  </div>
+  <p class="trigger-line">Clock starts when the carrier call is scheduled or forwarding access is granted on the existing line. Fast end if the carrier supports conditional forwarding out of the box and we get on a three-way call within a couple of days. Slow end if a carrier support-queue wait or authorization back-and-forth on the account holder's side drags.</p>
+
+  <div class="rowlabel">What you provide</div>
+  <ul class="provide">
+    <li>Access to set conditional forwarding on the office line, or a short scheduled call with your phone carrier alongside us.</li>
+    <li>Confirmation of the account holder and any carrier login or authorization the carrier requires.</li>
+  </ul>
+
+  <p class="risk"><span class="rlabel">Top risk.</span> The carrier is a third party outside anyone's direct control, and support for conditional forwarding, account authorization, or a support-queue wait can stall the only step we cannot do alone. We confirm the carrier and the exact forwarding capability before this phase starts, we book the carrier call early, and if conditional forwarding is not on your plan we fall back to a documented alternate routing path so a carrier limit delays rather than blocks. The published number never changes regardless of path.</p>
+</div>
+
+<!-- PHASE 4 -->
+<div class="phase">
+  <div class="phase-head">
+    <span class="phase-num">4</span>
+    <span class="phase-name">After-hours pilot</span>
+    <span class="phase-range">About 2 to 3 weeks</span>
+  </div>
+  <p class="purpose">We run the backstop live on real calls in the lowest-risk window only, nights, weekends, and the carrier-failure route, watched, with one tuning pass, so you judge it on your own real callers before it touches any part of the working day.</p>
+
+  <div class="rowlabel">Deliverable</div>
+  <p style="margin-top:2px">Two weeks of live after-hours operation with every engaged call audited, a morning note delivered before 8:30 am on every business day, and one tuning pass applied to any answer you amend.</p>
+
+  <div class="rowlabel">Done when</div>
+  <p style="margin-top:2px">Enough real after-hours calls reviewed to see every common case, zero invented facts across an audit of every transcript, every amended answer corrected before close, every note delivered before 8:30 am Alaska time, and no caller complaint that the agent misrepresented what it was.</p>
+
+  <div class="gate">
+    <span class="gate-title">Your off-ramp</span>
+    You can stop after the pilot and keep the after-hours backstop running exactly as piloted, without ever expanding into the lunch hour or overflow. After-hours alone is a complete, ownable product. You keep a live, proven after-hours and carrier-failure backstop on your own line, the daytime phone entirely untouched, plus every transcript and note from the pilot.
+  </div>
+
+  <div class="rowlabel">Timeframe</div>
+  <div class="lanes">
+    <div class="lane our">
+      <span class="lane-title">Our work</span>
+      <span class="lane-range">1 to 2 days</span>
+      <span class="lane-note">Spread across the window. Live monitoring plus one tuning pass on flagged answers.<span class="conf">Medium confidence</span></span>
+    </div>
+    <div class="lane you">
+      <span class="lane-title">Waiting on you</span>
+      <span class="lane-range">A few minutes a day</span>
+      <span class="lane-note">Daily note review and amendment flags, then the go, hold, or stop decision at the gate.</span>
+    </div>
+    <div class="lane watch">
+      <span class="lane-title">Watch it run</span>
+      <span class="lane-range">About 2 weeks</span>
+      <span class="lane-note">Live calls until we have reviewed about 15 to 25 real ones. Ends on calls reviewed, not a fixed clock.</span>
+    </div>
+  </div>
+  <p class="trigger-line">Clock starts when the line is wired and the after-hours window is switched on. Fast end if peak season concentrates enough real calls to surface every common case in under two weeks. Slow end if genuine after-hours volume runs below your estimate, so accumulating enough real calls takes longer.</p>
+
+  <div class="rowlabel">What you provide</div>
+  <ul class="provide">
+    <li>Daily reading of the morning notes and flags on any answer to amend.</li>
+    <li>Your real after-hours call volume, simply by operating as normal.</li>
+    <li>A go, hold, or stop decision at the pilot gate.</li>
+  </ul>
+
+  <p class="risk"><span class="rlabel">Top risk.</span> Genuine after-hours volume is lower than a round week assumes, so a fixed two-week clock might not surface enough real calls to judge it fairly. We size the pilot by calls reviewed, not the calendar, and state the target count up front so the window visibly ends on evidence. Running through peak July concentrates the real calls, and the pre-launch scripted calls already cover the common cases if live volume is thin.</p>
+</div>
+
+<!-- PHASE 5 -->
+<div class="phase">
+  <div class="phase-head">
+    <span class="phase-num">5</span>
+    <span class="phase-name">Go-live, lunch hour and overflow</span>
+    <span class="phase-range">About 2 to 3 weeks</span>
+  </div>
+  <p class="purpose">We switch the backstop fully on against a readiness checklist, expanding from after-hours only to also cover the weekday noon to one lunch closure and, last, open-hours overflow after the agreed ring count with no human answer.</p>
+
+  <div class="rowlabel">Deliverable</div>
+  <p style="margin-top:2px">The backstop live across all three catch windows, with the lunch extension proven not to engage outside its window and the overflow ring threshold tuned to your comfort and stable.</p>
+
+  <div class="rowlabel">Done when</div>
+  <p style="margin-top:2px">Lunch coverage holds all pilot criteria with zero calls engaged outside its window, and overflow shows zero calls intercepted that a staff member was answering, with the ring threshold reviewed after week one, adjusted to your comfort, then stable for a full week.</p>
+
+  <div class="gate">
+    <span class="gate-title">Your off-ramp</span>
+    You can stop the expansion at either sub-step, keeping after-hours plus lunch but declining overflow, or after-hours alone. Each window is switched on only after its own readiness check passes, and any can be pulled without affecting the others. You keep whichever windows you approved, running live and independently, with the daytime human answer always taking precedence over the agent.
+  </div>
+
+  <div class="rowlabel">Timeframe</div>
+  <div class="lanes">
+    <div class="lane our">
+      <span class="lane-title">Our work</span>
+      <span class="lane-range">About 1 day</span>
+      <span class="lane-note">Total across the two sub-steps. Enable the lunch window, then set the overflow ring threshold.<span class="conf">Lower confidence</span></span>
+    </div>
+    <div class="lane you">
+      <span class="lane-title">Waiting on you</span>
+      <span class="lane-range">Week-one feedback</span>
+      <span class="lane-note">Ring-count decision and comfort feedback, plus sign-off to enable lunch then overflow in sequence.</span>
+    </div>
+    <div class="lane watch">
+      <span class="lane-title">Watch it run</span>
+      <span class="lane-range">About 2 to 3 weeks</span>
+      <span class="lane-note">Lunch watched, then overflow watched separately and held longest because it shares hours with live staff.</span>
+    </div>
+  </div>
+  <p class="trigger-line">Clock starts when the after-hours pilot gate passes with a go decision. Fast end if week-one comfort feedback is clean and the ring count needs no adjustment. Slow end if the overflow ring threshold needs a change after week one and a second settle week to confirm it does not grab calls staff were about to answer.</p>
+
+  <div class="rowlabel">What you provide</div>
+  <ul class="provide">
+    <li>The office's answered-call experience during the lunch and overflow watch windows.</li>
+    <li>The chosen overflow ring count and comfort feedback after week one.</li>
+    <li>Sign-off to enable each window.</li>
+  </ul>
+
+  <p class="risk"><span class="rlabel">Top risk.</span> Overflow shares hours with working staff, so a mis-set ring count could let the agent grab a call a person was about to answer, the one way this build could intrude on the daytime conversation it exists to protect. We enable overflow last and only after lunch is proven, we start the ring count deliberately long and shorten only if you ask, and we verify zero interception against the office's own experience before calling it stable. If in doubt the window stays off and the other two run without it.</p>
+</div>
+
+<!-- PHASE 6 -->
+<div class="phase">
+  <div class="phase-head">
+    <span class="phase-num">6</span>
+    <span class="phase-name">Handoff and ownership</span>
+    <span class="phase-range">1 to 3 business days once scheduled</span>
+  </div>
+  <p class="purpose">We hand you a backstop you fully own and control, with the knobs, the kill switch, and the maintenance routine documented so running it without us is obvious.</p>
+
+  <div class="rowlabel">Deliverable</div>
+  <p style="margin-top:2px">A short plain-language ownership guide covering how to turn the backstop off in one message, how to update the fact base when a page changes, where transcripts and notes live and how long they are kept, and how the health monitoring surfaces an outage, plus a walkthrough with both owners.</p>
+
+  <div class="rowlabel">Done when</div>
+  <p style="margin-top:2px">Both owners can, unaided, describe how to kill the backstop and revert the line, know how to request a fact-base change, and confirm they understand note delivery and transcript retention, verified in the walkthrough.</p>
+
+  <div class="gate">
+    <span class="gate-title">Your off-ramp</span>
+    You own the system outright with no lock-in. You can keep us on for monitoring and fact-base upkeep or run it yourselves and call only when a page changes. Stopping the relationship does not stop the backstop. You keep the full working system on your own line, the guide, every transcript and note, the one-message kill switch, and a fact base anyone can update.
+  </div>
+
+  <div class="rowlabel">Timeframe</div>
+  <div class="lanes">
+    <div class="lane our">
+      <span class="lane-title">Our work</span>
+      <span class="lane-range">About 1 day</span>
+      <span class="lane-note">One-page ownership guide plus one short walkthrough where you run the kill-and-revert yourselves.<span class="conf">Medium confidence</span></span>
+    </div>
+    <div class="lane you">
+      <span class="lane-title">Waiting on you</span>
+      <span class="lane-range">1 short session</span>
+      <span class="lane-note">Both owners for the walkthrough, plus retention and ongoing-support decisions.</span>
+    </div>
+    <div class="lane watch">
+      <span class="lane-title">Watch it run</span>
+      <span class="lane-range">Yours from here</span>
+      <span class="lane-note">The monitoring safety net stays on by default.</span>
+    </div>
+  </div>
+  <p class="trigger-line">Clock starts when the overflow window is stable and both owners are available. Fast end if you sit for the short walkthrough promptly and run the kill switch yourselves in one session. Slow end if handoff slips in peak season and the walkthrough gets rescheduled.</p>
+
+  <div class="rowlabel">What you provide</div>
+  <ul class="provide">
+    <li>Both owners' time for one short handoff walkthrough.</li>
+    <li>Your chosen transcript retention span.</li>
+    <li>Your decision on ongoing monitoring versus self-run.</li>
+  </ul>
+
+  <p class="risk"><span class="rlabel">Top risk.</span> Handoff gets treated as a formality in peak season and you never internalize the kill switch or the update routine, so control feels theoretical rather than real. We keep the guide to one page in plain language, we have both owners perform the kill-and-revert once themselves rather than just hear it described, and we leave the monitoring safety net on by default so a missed maintenance step never becomes a silent outage.</p>
+</div>
+
+<h2>The whole engagement, honestly</h2>
+
+<p>End to end, from kickoff to a system you fully own, this runs about four to eight weeks. The fast end assumes prompt sign-offs and a cooperative carrier. The slow end is driven almost entirely by peak-season review turnaround and the carrier's forwarding queue, not by our engineering. Our actual hands-on build time inside that span is under one week, about six to eight working days. The rest is your sign-off, carrier provisioning, and evidence-driven pilot windows.</p>
+
+<div class="totals">
+  <div class="total"><span class="num">4 to 8 weeks</span><span class="lbl">Kickoff to a fully owned system</span></div>
+  <div class="total"><span class="num">6 to 8 days</span><span class="lbl">Our hands-on build work, under one week total</span></div>
+  <div class="total"><span class="num">1 message</span><span class="lbl">Restores today's phone, at any point, with no lock-in</span></div>
+</div>
+
+<div class="summary">
+  <h3>The single biggest schedule risk</h3>
+  <p>It lives on your side, not ours, and we would rather say so plainly than pretend otherwise. Your scarce peak-season review time on the two critical-path content sign-offs, the fact base and the greeting, is the thing most likely to stretch the calendar. The third-party carrier's conditional-forwarding provisioning is a close second. Both are client-side dependencies. Neither is our build. That is the honest shape of this. Our engineering is fast, and the calendar is your sign-off and the carrier. We have pre-drafted every default so that even a silent, slammed peak season still ships a safe launch.</p>
+</div>
+
+<div class="sidenote">
+  <h3>Where this can go next</h3>
+  <p>This roadmap is the backstop and only the backstop. The Field Study maps a wider set of AI opportunities that the same approved fact base and honest-capture pattern would extend into later, a daytime correspondence assistant, a sell-out-week waitlist, a returning-guest travel-file chase, and flight-weight and logistics collection. Each is a separate future build for a separate conversation, not part of this plan. We start with the one that pays for itself on a single caught call and go no further until you say so.</p>
+</div>
+
+<footer>
+  <div class="eyebrow">Roadmap</div>
+  <div class="byline">The After-Hours Backstop. Prepared by Alaska AI for Camp Denali, July 2026. Every phase ends at a gate that is yours.</div>
+</footer>
+
+</div>
+</body>
+</html>

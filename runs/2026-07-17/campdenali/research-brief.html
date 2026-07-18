@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Brief. What businesses like yours are already doing with AI</title>
+<style>
+  :root {
+    --paper: #faf7f1;
+    --green: #2e4b3f;
+    --ink: #2b2a26;
+    --slate: #5b6770;
+    --clay: #b0653a;
+    --card: #ffffff;
+    --line: #e4ddd0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1d1b17;
+      --green: #9dbfae;
+      --ink: #e9e4da;
+      --slate: #a5aeb6;
+      --clay: #d98d5f;
+      --card: #26231e;
+      --line: #3a362e;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .page { max-width: 860px; margin: 0 auto; padding: 48px 28px 64px; }
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+  .eyebrow {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--clay); font-weight: 600; margin-bottom: 14px;
+  }
+  header { border-bottom: 3px solid var(--green); padding-bottom: 28px; margin-bottom: 36px; }
+  header h1 { font-size: 34px; line-height: 1.2; color: var(--green); max-width: 640px; }
+  .byline { margin-top: 14px; color: var(--slate); font-size: 14px; }
+  .intro { max-width: 720px; margin-bottom: 18px; }
+  .intro p { margin-bottom: 14px; }
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center;
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 14px 18px; margin: 22px 0 40px; font-size: 13px; color: var(--slate);
+  }
+  .legend strong { color: var(--ink); font-weight: 600; }
+  .badge {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 999px; white-space: nowrap;
+  }
+  .badge.named { background: rgba(46,75,63,0.12); color: var(--green); border: 1px solid var(--green); }
+  .badge.vendor { background: rgba(176,101,58,0.12); color: var(--clay); border: 1px solid var(--clay); }
+  .badge.industry { background: rgba(91,103,112,0.12); color: var(--slate); border: 1px solid var(--slate); }
+  section { margin-bottom: 44px; }
+  section > h2 {
+    font-size: 24px; color: var(--green); margin-bottom: 6px;
+  }
+  .section-note { color: var(--slate); font-size: 14px; margin-bottom: 18px; max-width: 700px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 22px 24px; margin-bottom: 18px;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .card-top { display: flex; justify-content: space-between; gap: 14px; align-items: baseline; flex-wrap: wrap; }
+  .card h3 { font-size: 18px; color: var(--ink); line-height: 1.35; max-width: 560px; }
+  .row { margin-top: 12px; }
+  .label {
+    display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--slate); margin-bottom: 2px;
+  }
+  .row p { max-width: 700px; }
+  .source a { color: var(--clay); word-break: break-all; text-decoration: underline; text-underline-offset: 2px; font-size: 13px; }
+  .atcamp {
+    margin-top: 14px; border-left: 3px solid var(--green);
+    padding: 8px 14px; background: rgba(46,75,63,0.05); border-radius: 0 8px 8px 0;
+  }
+  .atcamp .label { color: var(--green); }
+  .flag {
+    margin-top: 14px; border-left: 3px solid var(--clay);
+    padding: 8px 14px; background: rgba(176,101,58,0.07); border-radius: 0 8px 8px 0;
+  }
+  .flag .label { color: var(--clay); }
+  .close {
+    border-top: 3px solid var(--green); padding-top: 26px; margin-top: 8px; max-width: 720px;
+  }
+  .close h2 { font-size: 22px; color: var(--green); margin-bottom: 10px; }
+  footer { margin-top: 40px; color: var(--slate); font-size: 12px; }
+  @media print {
+    body { background: #ffffff; font-size: 12px; }
+    .page { padding: 0; max-width: none; }
+    .card { border-color: #ccc; }
+    a { color: inherit; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="eyebrow">Research Brief</div>
+  <h1>What businesses like yours are already doing with AI</h1>
+  <div class="byline">Prepared by Alaska AI for Camp Denali &middot; July 2026</div>
+</header>
+
+<div class="intro">
+  <p>Every example in this brief is real. We fetched each source page and checked the numbers against it before anything went in. Where a claim did not hold up on the page it was cut, and one widely repeated hiring statistic was cut for exactly that reason.</p>
+  <p>We also grade each item by who is making the claim. A named case means a real business put its name and its numbers on the record. Vendor claimed means the software company published the figure, and vendor numbers are best-case selections, so read them as a ceiling rather than an average. Industry reported means a trade publication covered it. We say which is which on every card.</p>
+  <p>Nothing here is a promise about Camp Denali. It is a picture of what is already working at other small hospitality operations, so you can see the whole field and judge for yourselves. Under each example we add a line on what the same play would look like at a 19 cabin fly in lodge run by a 5 person year round crew.</p>
+</div>
+
+<div class="legend">
+  <strong>How to read the grades</strong>
+  <span><span class="badge named">Named case</span>&nbsp; a named business, on the record</span>
+  <span><span class="badge vendor">Vendor claimed</span>&nbsp; the software company's own figure</span>
+  <span><span class="badge industry">Industry reported</span>&nbsp; trade press coverage</span>
+</div>
+
+<!-- ============ GUEST COMMUNICATION ============ -->
+<section>
+  <h2>Guest communication and after hours coverage</h2>
+  <p class="section-note">The biggest cluster in the field. Small teams drowning in the same trip questions, answered by software that drafts and a human who signs.</p>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>AI webchat and guest messaging at a family owned heritage resort</h3>
+      <span class="badge named">Named case</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>Trapp Family Lodge in Stowe Vermont. 96 rooms, still owned by von Trapp descendants, using Canary Technologies.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>Call volume fell 30 percent. Around 500 messages a week are handled by the system. Response time went from 9 minutes to under 30 seconds. Monica Daubenspeck, their Revenue and Reservations Manager, is quoted on the record.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://www.canarytechnologies.com/customers/trapp-family-lodge">canarytechnologies.com/customers/trapp-family-lodge</a></div>
+    <div class="atcamp"><span class="label">At Camp Denali</span>
+      <p>This is the closest analog in the set. A storied family owned resort with a personal touch brand cut its phone load by nearly a third without losing warmth. For your office that means the routine trip questions get a drafted answer in seconds and your crew reads and sends every one.</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>AI booking assistant for outdoor and wilderness hospitality</h3>
+      <span class="badge named">Named case</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>AutoCamp, the US outdoor hospitality group with locations at Yosemite and Zion and other parks, using HiJiffy.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>$1.63 million in direct bookings attributed to the assistant. An 88 percent automation rate. More than 10,000 call center hours saved between January 2021 and September 2024.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://www.hijiffy.com/success-stories/autocamp">hijiffy.com/success-stories/autocamp</a></div>
+    <div class="atcamp"><span class="label">At Camp Denali</span>
+      <p>National park adjacent hospitality carries your exact question load. Weather windows, access, packing, what the rate includes. Your flight weights and the 25 pound soft luggage rule are the kind of answers a system like this repeats perfectly every time.</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>AI answering booking inquiries on email and messaging</h3>
+      <span class="badge named">Named case</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>ATKV Resorts, a group of seven nature destination resorts in South Africa, using Asksuite.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>$150,000 in new business in 9 months against an $8,000 investment.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://asksuite.com/blog/atkv-resorts-success-case/">asksuite.com/blog/atkv-resorts-success-case</a></div>
+    <div class="atcamp"><span class="label">At Camp Denali</span>
+      <p>Your inquiries come from the Lower 48 and overseas, often written while your office is closed. After hours coverage means a guest gets a useful first reply overnight and your team confirms in the morning.</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>AI guest messaging killing the repeat question load</h3>
+      <span class="badge named">Named case</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>Holiday Inn Express and Suites at Orlando's SeaWorld, under GM Mason Caracciolo, using Canary.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>82 percent of guest communication automated within 4 months. $1,700 a month in incremental upsell revenue. Service scores up 3 to 5 points.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://www.canarytechnologies.com/customers/holiday-inn-express-suites-at-orlandos-seaworld">canarytechnologies.com/customers/holiday-inn-express-suites-at-orlandos-seaworld</a></div>
+    <div class="atcamp"><span class="label">At Camp Denali</span>
+      <p>A franchise property is a different culture from yours, and we include it for the mechanic, not the brand. The mechanic is simple. Stop typing the same answer 52 times a season and spend that time on the guests standing in front of you.</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>AI reads inbound booking email and drafts the itinerary work</h3>
+      <span class="badge named">Named case</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>Across Australia, a destination management company in the Goway Group, using TourConnect AI. GM Kathy Turner is quoted on the record.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>The majority of manual booking data entry was eliminated. Consultants stay on every reply and nothing goes out without a human.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://www.tourconnect.ai/resources/case-study-across-australia-amp-itinerary-assist-ai">tourconnect.ai/resources/case-study-across-australia-amp-itinerary-assist-ai</a></div>
+    <div class="atcamp"><span class="label">At Camp Denali</span>
+      <p>This is the closest proven pattern to your correspondence spine. Your reservations team secures flights, collects party weights, and shepherds every booking by email. Software that structures the inbound message and drafts the reply, with a person sending every one, fits that spine exactly.</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>AI guest communication at small independent scenic properties</h3>
+      <span class="badge vendor">Vendor claimed</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>Entourage sur le Lac in Quebec and Lake District Hotels, a family run group in the UK, both listed in HiJiffy's success index.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>Entourage reports 94 percent of inquiries automated and 440 staff hours saved. Lake District reports a 70 percent reduction in inquiry calls. Both figures are published by the vendor, so treat them as best case.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://www.hijiffy.com/success-stories">hijiffy.com/success-stories</a></div>
+    <div class="atcamp"><span class="label">At Camp Denali</span>
+      <p>These two match your size and ownership shape better than anything else on the list. Independent, scenic destination, small team. Even at half the claimed numbers the hours returned to a 5 person crew would be real.</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>AI voice answering front desk phones</h3>
+      <span class="badge industry">Industry reported</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>Deployments under Marriott, Wyndham, and Choice flags, per Hotel Dive trade reporting.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>Canary claims 40 percent of front desk calls go unanswered industry wide. The press coverage is candid that the technology is early and depends heavily on integration.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://www.hoteldive.com/news/hotel-tech-ai-voice-front-desk-calls/740672/">hoteldive.com/news/hotel-tech-ai-voice-front-desk-calls/740672</a></div>
+    <div class="atcamp"><span class="label">At Camp Denali</span>
+      <p>This is the category our flagship proposal lives in, so we owe you the honest framing. Real deployments exist and the technology is the least mature play on this list. That is exactly why it would start as an after hours safety net, never a replacement for the voice guests know.</p></div>
+  </div>
+</section>
+
+<!-- ============ REPUTATION ============ -->
+<section>
+  <h2>Reputation</h2>
+  <p class="section-note">Review responses in the owner's voice, drafted by software, edited and signed by a person.</p>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>AI review response in the house voice</h3>
+      <span class="badge named">Named case</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>Edwardian Hotels London, using MARA, published on Hospitality Net.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>Around 50,000 reviews answered over two years at a near 100 percent response rate. Per review time went from 5 to 7 minutes down to seconds. A human edits every draft before it posts.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://www.hospitalitynet.org/casestudy/4123659/how-edwardian-hotels-london-saved-thousands-of-hours-using-ai-in-reputation-management">hospitalitynet.org/casestudy/4123659</a></div>
+    <div class="atcamp"><span class="label">At Camp Denali</span>
+      <p>At your rates every public reply carries weight. An owner voice response to every review, drafted for you and signed by you, is a small standing habit that software makes cheap to keep.</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>AI review replies for a small multi brand operator</h3>
+      <span class="badge named">Named case</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>DQuadrat Living GmbH in Germany, using MARA.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>Monthly review response time fell from 33 hours to 6, a 79 percent cut, worth roughly 1,100 euros a month in staff time.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://www.mara-solutions.com/post/mara-success-story-dquadrat-living-time-saving-with-ai-review-replies">mara-solutions.com/post/mara-success-story-dquadrat-living-time-saving-with-ai-review-replies</a></div>
+    <div class="atcamp"><span class="label">At Camp Denali</span>
+      <p>This is reputation work at tiny team scale, which is your scale. The hours saved are modest in absolute terms and they come out of the same five people who do everything else, which is what makes them matter.</p></div>
+  </div>
+</section>
+
+<!-- ============ REVENUE AND PRICING ============ -->
+<section>
+  <h2>Revenue and pricing</h2>
+  <p class="section-note">The most crowded corner of the field, and the one where our advice for you diverges from what peers are doing. Each pricing card says so plainly.</p>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>In conversation timed offers</h3>
+      <span class="badge named">Named case</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>The LINE SF, a 236 room San Francisco hotel, using Canary.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>Offers timed by AI inside the guest conversation convert 4 times better than blasted links, and drive 65 percent of early check in revenue.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://www.canarytechnologies.com/customers/the-line-sf">canarytechnologies.com/customers/the-line-sf</a></div>
+    <div class="atcamp"><span class="label">At Camp Denali</span>
+      <p>Your all inclusive rate rules out the classic upsell menu, and that is fine. The pattern that transfers is timing. The right moment to mention an extra night or next season's dates is inside the conversation a guest already started, not in a broadcast.</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>Automated dynamic pricing for very small independents</h3>
+      <span class="badge vendor">Vendor claimed</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>567 small hotels and guesthouses on RoomPriceGenie AutoPilot, aggregated by the vendor.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>Average revenue up 19 percent, average daily rate up 4 percent, occupancy up 14 percent, with gains reported as independent of property size. This is the vendor's own aggregate of its own customers.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://roompricegenie.com/the-real-impact-of-revenue-management-insights-from-567-hotels-using-roompricegenie/">roompricegenie.com/the-real-impact-of-revenue-management-insights-from-567-hotels-using-roompricegenie</a></div>
+    <div class="flag"><span class="label">Our honest note</span>
+      <p>We do not recommend algorithmic pricing for Camp Denali. Your fixed published rates are part of the brand, and guests who plan a year ahead trust a number that holds. This item is here so you see the whole field honestly, not because we propose it.</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>Dynamic pricing for a family run rental operator</h3>
+      <span class="badge named">Named case</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>O'Neal Vacation Rentals, 37 properties, owner Shane O'Neal, using PriceLabs.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>Revenue up 60 percent on some of their houses, which is their own qualifier and we keep it. Daily pricing work cut by roughly 90 percent.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://hello.pricelabs.co/customer-story/oneal-vacation-rentals-increased-their-revenue-with-pricelabs-dynamic-pricing/">hello.pricelabs.co/customer-story/oneal-vacation-rentals-increased-their-revenue-with-pricelabs-dynamic-pricing</a></div>
+    <div class="flag"><span class="label">Our honest note</span>
+      <p>Same recommendation as above. We would not put an algorithm on your rates. What this case does prove at owner operator scale is that software beats gut feel on scarce inventory, a lesson worth keeping even where the pricing tool itself is wrong for you.</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>Revenue management at a 33 room five star boutique</h3>
+      <span class="badge named">Named case</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>Heure Bleue Palais in Essaouira Morocco, using Duetto. GM Eric Molle is quoted on the record.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>Average daily rate up 37 percent. Revenue per available room up 115 percent. Occupancy up 29 percent year over year.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://www.duettocloud.com/library/how-boutique-independent-hotels-drive-revenue-with-dynamic-pricing">duettocloud.com/library/how-boutique-independent-hotels-drive-revenue-with-dynamic-pricing</a></div>
+    <div class="flag"><span class="label">Our honest note</span>
+      <p>At 33 keys against your 19 cabins this is the nearest scale match in the whole set, and the numbers are striking. Our advice still stands. Your published rate is a promise your guests plan around, and we would not trade that for algorithmic pricing. Included so you see what premium boutiques your size are doing.</p></div>
+  </div>
+</section>
+
+<!-- ============ SEASONAL HIRING ============ -->
+<section>
+  <h2>Seasonal hiring</h2>
+  <p class="section-note">Rebuilding a crew every spring is its own repeat question load.</p>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>Conversational AI for high volume seasonal hospitality hiring</h3>
+      <span class="badge named">Named case</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>Great Wolf Lodge, the Great Wolf Resorts group, using Paradox and its assistant Emma.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>$700,000 saved on job advertising in 2024. About 90 percent of the hiring process automated. Scheduled interviews up 423 percent, with show rates up to 75 percent. A time to hire figure circulating elsewhere does not appear on the source page, so we exclude it.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://www.paradox.ai/case-studies/great-wolf-lodge">paradox.ai/case-studies/great-wolf-lodge</a></div>
+    <div class="atcamp"><span class="label">At Camp Denali</span>
+      <p>You rebuild a roughly 30 person seasonal crew every spring on a 5 person core, which is the same mechanic at lodge scale. Screening questions, scheduling, and applicant follow up are the parts software absorbs while your people still make every hire. With 2027 applications opening in November this is a play with a natural start date.</p></div>
+  </div>
+</section>
+
+<!-- ============ BACK OFFICE ============ -->
+<section>
+  <h2>Back office and seasonal paperwork</h2>
+  <p class="section-note">The unglamorous wins. Paper that piles up in a compressed season.</p>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>Invoice and document automation at a seasonal peak small business</h3>
+      <span class="badge named">Named case</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>Tavezio, formerly H&amp;H Purchasing, a Florida business serving schools and summer camps, using Zenphi.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>Invoice throughput up 6 times. More than $85,000 saved in a single 3 month seasonal peak. Nine planned temp hires eliminated.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://zenphi.com/case-study-invoice-processing-automation/">zenphi.com/case-study-invoice-processing-automation</a></div>
+    <div class="atcamp"><span class="label">At Camp Denali</span>
+      <p>A business whose whole problem is a compressed season is your shape exactly. Vendor invoices, provisioning paperwork, and flight manifests all spike in the same 14 weeks your crew is busiest. Software that reads and files the paper gives those weeks back.</p></div>
+  </div>
+</section>
+
+<!-- ============ STAFF KNOWLEDGE ============ -->
+<section>
+  <h2>Staff knowledge</h2>
+  <p class="section-note">An assistant that answers only from the company's own documents.</p>
+
+  <div class="card">
+    <div class="card-top">
+      <h3>An assistant answering staff questions from the company's own handbook</h3>
+      <span class="badge vendor">Vendor claimed</span>
+    </div>
+    <div class="row"><span class="label">Who runs it</span>
+      <p>hotelkit Knowledge AI. The platform's customers include Radisson Hotel Group, Ruby Group, and The Mandala, though no customer is named for this specific feature.</p></div>
+    <div class="row"><span class="label">What happened</span>
+      <p>The feature is live across a large named customer base. There is no verified feature specific metric yet, and we will not invent one.</p></div>
+    <div class="row source"><span class="label">Source</span>
+      <a href="https://hotelkit.net/products/knowledge-ai/">hotelkit.net/products/knowledge-ai</a></div>
+    <div class="atcamp"><span class="label">At Camp Denali</span>
+      <p>This is the camp operations brain pattern. Your manuals, your trail notes, your kitchen and generator procedures, answered instantly for a brand new seasonal hire in June. It answers only from your own documents and it can be built independently of any vendor.</p></div>
+  </div>
+</section>
+
+<div class="close">
+  <h2>The pattern underneath all of it</h2>
+  <p>Read across every verified case above and one shape repeats. A small team keeps its voice while software absorbs the repetitive load. The Trapp family still sounds like the Trapp family. Kathy Turner's consultants still send every reply. Edwardian's managers still sign every review response. The machine drafts, sorts, schedules, and suggests, and a human signs everything that reaches a guest. That is the only version of this we would ever put in front of Camp Denali, because the voice you have kept for 75 years is the asset, and the software exists to protect the time that voice needs.</p>
+</div>
+
+<footer>
+  Alaska AI &middot; Research brief for Camp Denali &middot; July 2026 &middot; Every source above was fetched and checked before inclusion.
+</footer>
+
+</div>
+</body>
+</html>
