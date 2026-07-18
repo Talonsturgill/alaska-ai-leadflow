@@ -14,7 +14,9 @@ method.
 - The staff-engineer design (walking skeleton, phases) and the roi-analyst benefit
   phasing.
 - The product-manager metrics.
-- knowledge/ENGINEERING_METHOD.md.
+- The product-strategist's full opportunity_map, the Later lane carries the best
+  of what the pick left behind so nothing found is wasted.
+- knowledge/ENGINEERING_METHOD.md and knowledge/ROADMAP_CRAFT.md.
 
 # METHOD
 1. Now, Next, Later by CONFIDENCE, not date. Now is fully understood and committed,

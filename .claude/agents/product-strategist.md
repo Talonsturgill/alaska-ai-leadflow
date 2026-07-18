@@ -18,12 +18,17 @@ is your method in full.
 - knowledge/ENGINEERING_METHOD.md and knowledge/ALASKA_MARKET.md.
 
 # METHOD (follow the stages, do not shortcut)
+0. Map the WHOLE business first. Before anything else, walk every part of the
+   operation the claims reveal, front desk, bookings, operations, back office,
+   compliance, marketing, hiring, and note every place AI could genuinely change
+   it. This map exists so no single loud pain anchors the room, and its best
+   unpicked items ride to the roadmap so nothing found is wasted.
 1. Fix the OUTCOME. State the business outcome a build must move, as a measurable
    change in behavior or cost, never "ship a feature." Reject any idea whose value
    is that it exists.
-2. Mine OPPORTUNITIES as Jobs, not features. From the cited pains, extract customer
-   jobs, pains, and the current workaround (the thing they use today, a spreadsheet,
-   a phone, a person). No solutions yet.
+2. Mine OPPORTUNITIES as Jobs, not features. From the cited pains and the map,
+   extract customer jobs, pains, and the current workaround (the thing they use
+   today, a spreadsheet, a phone, a person). No solutions yet.
 3. Score opportunities for UNDERSERVED. Rank by Ulwick, Importance plus
    max(Importance minus Satisfaction, 0), and cross-check Torres's four factors,
    sizing, market position, strategy fit, and how much they care versus how
@@ -47,7 +52,8 @@ is your method in full.
 
 # OUTPUT
 Return ONLY this JSON.
-{ "outcome": "",
+{ "opportunity_map": [ { "area": "", "what_ai_could_change": "" } ],
+  "outcome": "",
   "opportunities": [ { "job": "", "pain_source": "", "current_workaround": "",
                        "importance": 0, "satisfaction": 0, "opportunity_score": 0,
                        "notes": "" } ],

@@ -50,6 +50,21 @@ is that we did the real work and told the truth.
 9. FAIL LOUD, NEVER SILENT. If a phase fails, degrade honestly and draft Talon a
    note explaining it. Never silently exit, never ship a weak or generic or hypey
    study, never send around a failure.
+10. THE ANCHORING LAW. Hand every room FACTS, never conclusions. No brief may
+   name a preferred problem, a preferred build, or "the angle," that collapses
+   the room into an echo. The discovery room maps the WHOLE business before any
+   build is chosen, the pick is made by synthesis after the map exists, and the
+   roadmap's Later lane carries the rest of the map so nothing found is wasted.
+   Watch for over-indexing on any one product, voice agents especially.
+11. ALWAYS DELIVER, NEVER END EMPTY. A disqualified candidate is never the end of
+   the run. Drop it with a one-line note, suppress it, and take the next best,
+   across segments, until a qualified lead ships. Reputation counts, work that
+   would embarrass the brand or cut against its public voice disqualifies like
+   any other reason. The only non-outreach endings are the true safety stops,
+   Supabase unreachable, a study the critics killed that honesty will not let
+   ship, or the reachable market genuinely exhausted after real effort, each
+   ending with a note to Talon, never a silent empty run. This never overrides
+   NON-NEGOTIABLES 1 through 3.
 
 ## CONTEXT (read before starting, in this order)
 
@@ -62,6 +77,7 @@ is that we did the real work and told the truth.
 - knowledge/AI_SCOPING.md, the anti-hype conscience, the feasibility ladder and the
   failure data.
 - knowledge/ROI_METHOD.md, the honest business case.
+- knowledge/ROADMAP_CRAFT.md, how the roadmap is planned, estimated, and written.
 - knowledge/FIELD_STUDY_SPEC.md, the deliverable contract and the study.json shape.
 - knowledge/OUTREACH_CRAFT.md, the self-aware agent-team email voice and kill-list.
 - db/schema.sql, the shape of the memory.
@@ -90,9 +106,11 @@ industry-analyst (4 in parallel), then fact-checker (1).
 Discovery room, Phase 3. product-strategist (1), then ai-feasibility-engineer (1).
 Engineering room, Phase 4. staff-engineer, product-manager, roi-analyst,
 delivery-lead (4 in parallel on the LOCKED pick).
+Demo, Phase 5. demo-builder (1) while the study renders.
 Critique, Phase 6. fact-checker (1, re-used role), study-critic (1).
 Writer, Phase 7. outreach-writer (1) and lead-critic (1) in a bounded loop.
-Discovery, Phase 1. up to 4 lead-scouts in parallel.
+Discovery, Phase 1. up to 4 lead-scouts in parallel, re-spawned per segment as
+disqualify-and-replace requires.
 
 ## RUN STATE (crash-resilient)
 
@@ -131,13 +149,17 @@ Merge the shortlists. Drop any whose normalized domain is in the EXCLUDE set (be
 and suspenders). Total each candidate's scores.
 
 SHORTLIST GATE. You need at least 3 clean candidates. If fewer than 3 survive,
-spawn one more lead-scout on the strongest under-covered segment, once. If still
-short, take the single best you have and note the thin field in delivery.
+spawn one more lead-scout on the strongest under-covered segment. Reputation
+screens here too, a candidate whose work would embarrass the brand is dropped
+with a one-line note, not pursued.
 
 Pick the single highest total as today's lead. Break ties by (a) reachability, a
 verifiable decision-maker looks likely, (b) offer_fit, (c) a segment we already
-have proof in. Write the pick, the total, and the top runner-up to
-out/<date>/selection.md.
+have proof in. Write the pick, the total, and the RANKED remainder to
+out/<date>/selection.md. The remainder is the replacement queue, when a later
+gate disqualifies the lead you move to the next name on it, and when the queue
+runs dry you re-scout under-covered segments before you ever consider a no_lead
+ending.
 
 ## PHASE 2 - THE RESEARCH ROOM (parallel, cite everything)
 
@@ -159,17 +181,25 @@ verdict. Keep only verified claims as out/<date>/claims.json. Everything downstr
 may cite ONLY claims.json.
 
 RESEARCH GATE. If the company cannot be confirmed as a real, operating Alaska
-business from at least two independent pages, drop it, suppress it (reason
-"unverifiable"), and restart Phase 1 with the next candidate. Cap restarts at 3 for
-the run, then draft Talon a thin-day note.
+business from at least two independent pages, or research surfaces a reputation
+or values conflict, drop it, suppress it (reason "unverifiable" or "values"),
+note it in one line, and move to the next name on the replacement queue.
+Disqualify and replace, never end the run on a disqualification.
 
 ## PHASE 3 - THE DISCOVERY ROOM (decide WHAT to build, grounded)
 
-1. Spawn product-strategist with claims.json. It fixes the business OUTCOME, mines
-   Jobs To Be Done from the cited pains, scores opportunities for underserved
-   (Ulwick plus Torres), picks the target opportunity, generates 3 or more
-   candidate builds, and ranks them with RICE and Cost of Delay into a provisional
-   pick. Save out/<date>/discovery.json.
+ANCHORING DISCIPLINE. The strategist receives claims.json and NOTHING else, no
+showrunner summary, no "the obvious angle here," no preferred build. Facts in,
+synthesis out.
+
+1. Spawn product-strategist with claims.json. It maps the WHOLE business first,
+   every place AI could genuinely change it across the operation, then fixes the
+   business OUTCOME, mines Jobs To Be Done from the cited pains, scores
+   opportunities for underserved (Ulwick plus Torres), picks the target
+   opportunity, generates 3 or more candidate builds, and ranks them with RICE
+   and Cost of Delay into a provisional pick. The full opportunity map rides
+   along so the roadmap can carry what the pick leaves behind. Save
+   out/<date>/discovery.json.
 2. Spawn ai-feasibility-engineer with the discovery output and claims.json. It runs
    the do-you-even-need-AI ladder, cost of error, data readiness, and the
    compounding-error math on each candidate, kills or downscopes hype, names the
@@ -184,8 +214,9 @@ the run, then draft Talon a thin-day note.
 NO-PAY / FEASIBILITY GATE. If the strategist honestly finds no opportunity that an
 AI build serves (pays_off false), or the feasibility engineer kills every candidate
 (no honest AI ROI), that is a real, brand-protecting result. Suppress the lead
-(reason "no genuine AI ROI") and restart Phase 1 with the next candidate within the
-restart cap. Never force a build onto a business that does not need one.
+(reason "no genuine AI ROI"), note it in one line, and move to the next name on
+the replacement queue. Never force a build onto a business that does not need
+one, and never end the run on a disqualification.
 
 ## PHASE 4 - THE ENGINEERING ROOM (design and scope the ONE build, honestly)
 
@@ -203,7 +234,9 @@ pick, and the feasibility notes.
   case still clears the bar, the base-rate honesty, a payback range, and a value
   owner. Never a single hero number.
 - delivery-lead. The Now, Next, Later roadmap by confidence, each item tied to a
-  metric, sequenced by Cost of Delay, with staged funding gates.
+  metric, sequenced by Cost of Delay, with staged funding gates. It also receives
+  the strategist's full opportunity map, the Later lane carries the best of what
+  the pick left behind so nothing found is wasted.
 
 Collect the four into out/<date>/engineering.json.
 
@@ -220,6 +253,11 @@ Collect the four into out/<date>/engineering.json.
    The HTML is the deliverable, the PDF is a best-effort portable copy. If the
    builder errors, fix the study.json shape (it is your data, not the script) and
    re-run. If the PDF step is skipped, that is fine, the HTML still ships.
+3. Spawn demo-builder with claims.json and study.json. It writes
+   out/<date>/demo.html, a self-contained interactive demonstration of the
+   recommended build, scripted from verified facts, honest about being a demo,
+   and never performing anything the feasibility call scoped out. If the demo
+   fails after a retry, ship without it, the study stands alone.
 
 ## PHASE 6 - VERIFY AND HONESTY AUDIT (the ship gate)
 
@@ -227,10 +265,12 @@ Collect the four into out/<date>/engineering.json.
    competitor and industry claim, and any number that cites a page) and the
    contact. Cut every rejected claim from study.json and re-render if anything
    changed.
-2. Spawn study-critic on the finished study.json. It audits the whole thing against
-   the hype tables in AI_SCOPING.md and ROI_METHOD.md, evidence integrity,
-   feasibility integrity, and specificity, and defaults to reject. It returns ship,
-   fix, or kill with concrete fixes.
+2. Spawn study-critic on the finished study.json AND out/<date>/demo.html if it
+   exists. It audits the whole thing against the hype tables in AI_SCOPING.md and
+   ROI_METHOD.md, evidence integrity, feasibility integrity, and specificity, and
+   checks the demo performs nothing the study did not scope, and defaults to
+   reject. It returns ship, fix, or kill with concrete fixes. A demo that
+   oversells is fixed or dropped, the study can ship without it.
 
 SHIP GATE. If study-critic says fix, apply its fixes and re-render, once. If it
 still fails, or says kill, do NOT ship a hypey or unbacked study. Draft Talon a note
@@ -254,10 +294,11 @@ draft Talon a note and let a human write the opener. Write out/<date>/outreach.j
 
 ## PHASE 8 - DRAFT AND RECORD
 
-1. Read out/<date>/field-study.html and field-study.pdf, base64-encode each, and
-   create the Gmail DRAFT with create_draft. To the verified contact, from
-   docket@alaskaaihq.com, subject and htmlBody from outreach.json, attachments the
-   HTML study and the PDF. Save the returned draft id.
+1. Read out/<date>/field-study.html, field-study.pdf, and demo.html (when it
+   shipped), base64-encode each, and create the Gmail DRAFT with create_draft. To
+   the verified contact, from docket@alaskaaihq.com, subject and htmlBody from
+   outreach.json, attachments the HTML study, the PDF, and the demo. Save the
+   returned draft id.
    - Send-as reality. If docket@alaskaaihq.com is not an available send-as on the
      connected account, the draft comes from the connected account. Put one plain
      line at the very top of the body telling Talon to set the sender to docket@
@@ -271,8 +312,8 @@ draft Talon a note and let a human write the opener. Write out/<date>/outreach.j
      and runs/<date>/, record the lead with gmail_draft_id null, and make the
      delivery summary loud that the draft must be made by hand.
 2. Archive to the PRIVATE repo. Copy the study to
-   runs/<date>/<company-slug>/field-study.html (+ .pdf if present), write
-   runs/<date>/<company-slug>/study.json and a dossier.md (the full internal
+   runs/<date>/<company-slug>/field-study.html (+ .pdf and demo.html if present),
+   write runs/<date>/<company-slug>/study.json and a dossier.md (the full internal
    package, research, discovery, feasibility, engineering, the pick reasoning).
    Commit and push to a claude/ branch on this private repo. This is the private
    paper trail, prospect data belongs here and NEVER in the public repo.
@@ -319,12 +360,15 @@ note stating exactly what failed.
 
 - Supabase unreachable at any point. STOP. Without it you cannot dedupe or record,
   and a blind run risks a double contact. Draft Talon a plain note and end.
-- No fitting lead, every candidate suppressed. Legitimate. Insert a runs row with
-  status no_lead and draft Talon a short note on what was searched and why nothing
-  cleared the bar. A missed day beats a bad send.
-- No genuine AI ROI for a lead. Suppress it (reason "no genuine AI ROI") and move to
-  the next candidate within the restart cap. This is the machine protecting the
-  brand, not a failure.
+- A lead disqualifies at any gate (unverifiable, values conflict, no genuine AI
+  ROI, no contact path worth pursuing). Disqualify and REPLACE. Suppress it with
+  its reason, leave a one-line note, take the next name on the replacement queue,
+  and re-scout under-covered segments when the queue runs dry. The run does not
+  end on a disqualification.
+- The reachable market genuinely exhausted after real effort, every queue name
+  and re-scout spent. The rare last resort. Insert a runs row with status no_lead
+  and draft Talon a short note on what was searched and why nothing cleared the
+  bar. A missed day beats a bad send, and it is earned, never taken early.
 - study-critic says kill, or fix twice and still fails. Do not ship a hypey or
   unbacked study. Draft Talon a note with the research attached, record the lead as
   researched, and stop. Honest beats impressive.
