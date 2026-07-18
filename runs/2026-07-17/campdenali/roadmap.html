@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadmap. Camp Denali. Alaska AI, July 2026</title>
+<style>
+  :root {
+    --paper: #faf7f1;
+    --ink: #2b2a26;
+    --green: #2e4b3f;
+    --slate: #5b6770;
+    --clay: #b0653a;
+    --rule: #e3ddd0;
+    --card: #ffffff;
+    --quote-bg: #f2eee4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1d1c19;
+      --ink: #e8e4da;
+      --green: #9dbfae;
+      --slate: #a3adb5;
+      --clay: #d99268;
+      --rule: #3a3833;
+      --card: #262521;
+      --quote-bg: #2a2925;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { background: var(--paper); }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 28px 80px;
+  }
+  header.masthead {
+    border-bottom: 3px solid var(--green);
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+  }
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--clay);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 44px;
+    line-height: 1.1;
+    font-weight: 400;
+    color: var(--green);
+    margin-bottom: 12px;
+  }
+  .byline { color: var(--slate); font-size: 15px; }
+  p { margin: 14px 0; }
+  .lede {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  table.arc {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0 10px;
+    font-size: 14px;
+  }
+  table.arc th {
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--slate);
+    border-bottom: 2px solid var(--green);
+    padding: 8px 10px 8px 0;
+    font-weight: 600;
+  }
+  table.arc td {
+    vertical-align: top;
+    border-bottom: 1px solid var(--rule);
+    padding: 9px 12px 9px 0;
+    line-height: 1.5;
+  }
+  table.arc td.pnum {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--clay);
+    width: 8%;
+  }
+  table.arc td.pname {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--green);
+    font-size: 15px;
+    width: 34%;
+  }
+  section.phase {
+    margin-top: 54px;
+    padding-top: 6px;
+    break-inside: avoid-page;
+  }
+  .kicker {
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--clay);
+    font-weight: 600;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--green);
+    margin: 4px 0 6px;
+    line-height: 1.25;
+  }
+  .meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    margin: 16px 0 6px;
+  }
+  .meta .cell {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 10px 14px;
+  }
+  .meta .lbl {
+    display: block;
+    font-size: 11.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--slate);
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .meta .val {
+    display: block;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  strong.lead {
+    font-weight: 650;
+    color: var(--green);
+  }
+  .src { color: var(--slate); font-size: 13.5px; }
+  aside.proof {
+    background: var(--quote-bg);
+    border-left: 3px solid var(--clay);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+  aside.proof .tag {
+    display: block;
+    font-size: 11.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--clay);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .decide {
+    margin: 16px 0 0;
+    padding: 0 0 0 2px;
+    list-style: none;
+  }
+  .decide li {
+    padding-left: 18px;
+    position: relative;
+    margin: 6px 0;
+    font-size: 15px;
+  }
+  .decide li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+  }
+  .decide-head {
+    font-size: 12.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--slate);
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  section.killed {
+    margin-top: 60px;
+    border-top: 3px solid var(--green);
+    padding-top: 12px;
+  }
+  .killed-item {
+    border-bottom: 1px solid var(--rule);
+    padding: 12px 0;
+  }
+  .killed-item .k-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    color: var(--green);
+    display: block;
+  }
+  .killed-item .k-why { font-size: 14.5px; color: var(--ink); }
+  section.closing {
+    margin-top: 56px;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 24px 28px;
+  }
+  section.closing h2 { margin-top: 0; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    color: var(--slate);
+    font-size: 13px;
+  }
+  @media print {
+    :root {
+      --paper: #ffffff;
+      --ink: #2b2a26;
+      --green: #2e4b3f;
+      --slate: #5b6770;
+      --clay: #b0653a;
+      --rule: #ddd6c8;
+      --card: #ffffff;
+      --quote-bg: #f2eee4;
+    }
+    body { font-size: 13px; }
+    .page { padding: 24px 0; max-width: 100%; }
+    section.phase { margin-top: 34px; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <div class="eyebrow">Roadmap</div>
+  <h1>Camp Denali</h1>
+  <div class="byline">Prepared by Alaska AI &middot; July 2026</div>
+</header>
+
+<p class="lede">Fourteen good ideas came out of the discovery room. Fourteen products is not the proposal. This page is the order, and the order follows fixed rules. Everything drafts and nothing sends, so a person signs every word that reaches a guest. Every build is documented and handed over, owned by your family rather than rented from anyone. And nearly all of it stands on one shared substrate, the bookings ledger plus your own correspondence, so each phase makes the next one cheaper and smarter. Small proofs come first. The compounding core comes next. The ambitious work waits until the foundation has earned it.</p>
+
+<table class="arc">
+  <tr><th>Phase</th><th>Name</th><th>Window</th><th>Effort</th></tr>
+  <tr><td class="pnum">1</td><td class="pname">The After-Hours Backstop</td><td>Now, season 2026</td><td>Small, demo built</td></tr>
+  <tr><td class="pnum">2</td><td class="pname">The Ledger and the Hiring Desk</td><td>Fall 2026</td><td>Small to medium</td></tr>
+  <tr><td class="pnum">3</td><td class="pname">The Correspondence Spine</td><td>Winter 2026-27</td><td>Medium</td></tr>
+  <tr><td class="pnum">4</td><td class="pname">Revenue Recovery</td><td>Late winter through September 2027</td><td>Small to medium</td></tr>
+  <tr><td class="pnum">5</td><td class="pname">The Season Machine</td><td>Built by June 2027</td><td>Season-long as a set</td></tr>
+  <tr><td class="pnum">6</td><td class="pname">The Memory Layer</td><td>Season 2027 into winter 2027-28</td><td>Medium, owner time is the cost</td></tr>
+</table>
+
+<section class="phase">
+  <div class="kicker">Phase 1 &middot; Now</div>
+  <h2>The After-Hours Backstop</h2>
+  <div class="meta">
+    <div class="cell"><span class="lbl">Effort</span><span class="val">Small. The demo already runs.</span></div>
+    <div class="cell"><span class="lbl">Builds on</span><span class="val">Nothing. It sits beside the phone line.</span></div>
+    <div class="cell"><span class="lbl">Rough return</span><span class="val">One caught call covers the build many times over. Estimate.</span></div>
+  </div>
+  <p><strong class="lead">Why it goes first.</strong> Your own contact page admits that some phone providers fail to connect calls and cannot even reach voicemail. Booking is phone only. The office answers about 35 weekday hours a week while the season runs 14 weeks at $1,475 a person a night (2026). One caught Saturday call pays for this many times over. The demo exists, so phase 1 is mostly a decision rather than a project. <span class="src">(campdenali.com/contact)</span></p>
+  <p><strong class="lead">What it retires.</strong> The dead line at night, on weekends, and over the office lunch hour. The agent answers logistics questions from your published facts. It captures dates and party size and stay length in the lodge's tone. Each morning the family gets a complete note of who called and what they wanted. It never books a stay and it never replaces the person on the phone.</p>
+  <p><strong class="lead">The honest caveat.</strong> Phone agents are the youngest technology on this page. Real deployments run under major hotel flags, yet the trade press still calls the category early and integration dependent. So it stays a backstop. It gets judged by its morning notes, and it is small enough to switch off without regret.</p>
+  <aside class="proof"><span class="tag">Proven nearby</span>The closest proven neighbors work in chat rather than voice. AutoCamp, the outdoor hospitality operator at Yosemite and Zion, credits its booking assistant with $1.63 million in direct bookings and more than 10,000 call center hours saved.</aside>
+  <div class="decide-head">You decide or provide</div>
+  <ul class="decide">
+    <li>The fact sheet it is allowed to speak from.</li>
+    <li>The questions it must always hand to a person.</li>
+    <li>A first month of reading its morning notes and grading them.</li>
+  </ul>
+</section>
+
+<section class="phase">
+  <div class="kicker">Phase 2 &middot; Fall 2026</div>
+  <h2>The Ledger and the Hiring Desk</h2>
+  <div class="meta">
+    <div class="cell"><span class="lbl">Effort</span><span class="val">Small to medium.</span></div>
+    <div class="cell"><span class="lbl">Builds on</span><span class="val">Your current records. Nothing else.</span></div>
+    <div class="cell"><span class="lbl">Rough return</span><span class="val">30 to 60 office hours per hiring season, plus a ledger that pays through every later phase. Estimate.</span></div>
+  </div>
+  <p><strong class="lead">What it is.</strong> Two builds that earn trust before anything touches a guest. The first is the payment milestone ledger, one structured record per party. Deposits due at 40 percent within 14 days. Balances due at 60 days. Forfeiture tiers, collected weights, dietary notes, all in one place instead of a watched calendar and a good memory. It sounds boring. It is the substrate almost every later phase stands on.</p>
+  <p>The second is the hiring pipeline. About 30 seasonal hires run through a five person office every year, and 2027 applications open in November 2026, the same months as peak booking. The assistant screens each application against your own posting. It drafts reference letters and scheduling notes. It assembles onboarding and travel packets from materials you already have, and its rejections come out kind, drafted for a person to review. It supports decisions and never makes them. Nobody gets rejected by software.</p>
+  <p><strong class="lead">The pain it retires.</strong> Hiring season and booking season are the same season for the same five people, and the money schedule is watched by hand against published forfeiture tiers. <span class="src">(campdenalijobs.com/work/apply, campdenali.com rate pages)</span></p>
+  <aside class="proof"><span class="tag">Proven nearby</span>Great Wolf Resorts rebuilds a seasonal workforce through a conversational hiring assistant. Its published 2024 numbers include $700,000 saved on job advertising, about 90 percent of the hiring process automated, and interview show rates up to 75 percent.</aside>
+  <div class="decide-head">You decide or provide</div>
+  <ul class="decide">
+    <li>One agreed place where bookings and money milestones get recorded.</li>
+    <li>Current booking records and the hiring materials you already use.</li>
+    <li>The standing rule that every yes and every no stays human.</li>
+  </ul>
+</section>
+
+<section class="phase">
+  <div class="kicker">Phase 3 &middot; Winter 2026-27</div>
+  <h2>The Correspondence Spine</h2>
+  <div class="meta">
+    <div class="cell"><span class="lbl">Effort</span><span class="val">Medium. Trust is earned draft by draft.</span></div>
+    <div class="cell"><span class="lbl">Builds on</span><span class="val">Your sent mail archive. The phase 2 ledger makes it smarter but is not required on day one.</span></div>
+    <div class="cell"><span class="lbl">Rough return</span><span class="val">4 to 7 staff hours a week in season and faster answers in a compressed selling window. Estimate.</span></div>
+  </div>
+  <p><strong class="lead">What it is.</strong> The compounding core, and the one build three discovery engineers landed on independently. An assistant grounded in your own pages and your own sent mail. Site, FAQ, packing guides, policies, past letters. It drafts each reply in the house letter voice and a person edits and sends every one. Nothing auto sends, ever. It serves travel professional inquiries the same way. Winter is the right window because winter is the booking season, when the inbox is heaviest and the office window is half a day.</p>
+  <p>Pre-arrival briefing packets ride the same foundation. One tailored letter per party, built from your existing materials and matched to the month and the party's makeup, with a flag list of the parties likely to need a proactive call before the airstrip.</p>
+  <p><strong class="lead">The pain it retires.</strong> Most inbound mail repeats questions your own pages already answer, inside a weekday office window with a lunch closure. <span class="src">(campdenali.com/contact)</span></p>
+  <aside class="proof"><span class="tag">Proven nearby</span>Trapp Family Lodge in Vermont, family owned and fiercely personal, cut call volume 30 percent with drafted guest messaging and lost none of its warmth.</aside>
+  <div class="decide-head">You decide or provide</div>
+  <ul class="decide">
+    <li>Which mail threads it learns from and which stay private.</li>
+    <li>Which formulaic inquiry types it starts on before it earns more.</li>
+    <li>Whether a drafted then edited letter still counts as yours. Only the family can answer that, and the answer governs half this roadmap.</li>
+  </ul>
+</section>
+
+<section class="phase">
+  <div class="kicker">Phase 4 &middot; Late winter through September 2027</div>
+  <h2>Revenue Recovery</h2>
+  <div class="meta">
+    <div class="cell"><span class="lbl">Effort</span><span class="val">Small to medium. The readout is nearly free once the ledger exists.</span></div>
+    <div class="cell"><span class="lbl">Builds on</span><span class="val">The ledger and the correspondence spine.</span></div>
+    <div class="cell"><span class="lbl">Rough return</span><span class="val">$25,000 to $45,000 a season from backfills, plus a better informed rate calendar. Estimate.</span></div>
+  </div>
+  <p><strong class="lead">What it is.</strong> The first phase aimed at revenue rather than hours. Two builds and a rider.</p>
+  <p>The waitlist. You already turn away good parties in writing. The spine starts logging them, with dates and party size and flexibility. When a fixed block opens, the system matches the list and drafts a personal offer letter for staff review. No guest ever touches software and no offer sends itself. One refilled four night party of two is roughly $11,800 before tax at 2026 rates.</p>
+  <p>The season readout. The evening the 2027 season closes, one report off the ledger. Occupancy by block, lead times, conversion, cancellation and backfill rates. You commit published rates two seasons ahead, and that decision deserves better than memory and scattered records on a revenue base in the low millions.</p>
+  <p>The rider. A compliance binder assistant comes nearly free once the ledger exists, a deadline calendar plus pre-drafted recurring NPS concession paperwork. It is weak as a standalone, so we build it only after verifying the actual report list with you.</p>
+  <p><strong class="lead">The pain it retires.</strong> Nineteen cabins in fixed 3, 4, and 7 night blocks with published forfeiture tiers and no waitlist, where a cancelled block is perishable five figure revenue. <span class="src">(campdenali.com rate pages, campdenali.com/accommodations)</span></p>
+  <aside class="proof"><span class="tag">Proven nearby</span>O'Neal Vacation Rentals, a family operator with 37 houses, reports revenue up 60 percent on some of its houses once software informed pricing on scarce inventory. We are not proposing algorithmic pricing here. The lesson is narrower. A clear readout beats memory when scarce inventory gets priced.</aside>
+  <div class="decide-head">You decide or provide</div>
+  <ul class="decide">
+    <li>The office habit of logging every turn away, consistently.</li>
+    <li>The rules for who gets first offer when a block opens.</li>
+    <li>The questions the readout must answer before the next published year is set.</li>
+  </ul>
+</section>
+
+<section class="phase">
+  <div class="kicker">Phase 5 &middot; Built by June 2027</div>
+  <h2>The Season Machine</h2>
+  <div class="meta">
+    <div class="cell"><span class="lbl">Effort</span><span class="val">Season-long as a set, landed in strict order.</span></div>
+    <div class="cell"><span class="lbl">Builds on</span><span class="val">The ledger and the spine. The cascade needs the chase engine and the manifests proven first.</span></div>
+    <div class="cell"><span class="lbl">Rough return</span><span class="val">4 to 8 office hours weekly, 50 to 80 hours a season on manifests, and calm on the worst days. Estimates.</span></div>
+  </div>
+  <p><strong class="lead">What it is.</strong> Four builds that make changeover days and the kitchen calmer, sharing the ledger as their substrate.</p>
+  <p>The travel file chase. Every booking carries collected body weights for flight planning, a 25 pound soft sided luggage rule, dietary needs, and three separate bookings to confirm. The engine keeps a per party checklist pulled from correspondence. At each money and paperwork milestone it drafts a warm chase letter for a person to send, and it removes the flight day failure of a missing weight or an unconfirmed leg. <span class="src">(campdenali.com/activities/bus-ride)</span></p>
+  <p>The manifest builder. Fixed blocks concentrate eight to ten Cessna loads each way into Fridays and Mondays, sequenced today by hand. The builder turns the confirmed list and collected weights into per plane groupings and a printable packet, re-solved in seconds when weather drops a flight. It is a planning aid only. Weight and balance of record stays with the air carrier.</p>
+  <p>The weather cascade. Your own policy advises guests to keep a spare night near the park entrance because scrubs happen, and today a scrub ripples across guests and meals and lodging at the worst possible moment. Once the chase engine and manifests are proven, one input drafts every downstream artifact at once. Guest notices in your voice, revised manifests, lodge head counts, partner lodging notes, every one reviewed by a person before it moves. A chaotic half day becomes under an hour, several times a season.</p>
+  <p>The provisioning engine. An all inclusive scratch kitchen 90 miles inside the park cannot run to the store. The engine turns the booking calendar into meal counts and per supplier order lists with lead times, checked against par levels and past seasons. It needs the old orders digitized first, so it may honestly land for the 2028 season, and that is fine.</p>
+  <aside class="proof"><span class="tag">Proven nearby</span>Tavezio, the purchasing office serving schools and summer camps, absorbed its seasonal invoice peak with document automation. Six times the throughput and more than $85,000 saved in one three month peak.</aside>
+  <div class="decide-head">You decide or provide</div>
+  <ul class="decide">
+    <li>A conversation with the air carrier about exactly where the boundary sits.</li>
+    <li>Your weather playbook, written down in your own words for the first time.</li>
+    <li>The kitchen's past order records, handed over for digitizing.</li>
+  </ul>
+</section>
+
+<section class="phase">
+  <div class="kicker">Phase 6 &middot; Season 2027 into winter 2027-28</div>
+  <h2>The Memory Layer</h2>
+  <div class="meta">
+    <div class="cell"><span class="lbl">Effort</span><span class="val">Medium to season-long. Owner interview time is the real cost.</span></div>
+    <div class="cell"><span class="lbl">Builds on</span><span class="val">Everything before it. One item jumps the queue.</span></div>
+    <div class="cell"><span class="lbl">Rough return</span><span class="val">Compounding and defensive. It protects the repeat guest engine and de-risks the business itself. Estimate, indirect.</span></div>
+  </div>
+  <p><strong class="lead">What it is.</strong> The long game. Four builds that protect what three generations have learned.</p>
+  <p>Returning guest briefings. Simon's own newsletter reports unprecedented numbers of returnees and guests walking into the office mid stay to book next year. That memory lives in heads and old threads today. A one page briefing per returning party, drafted from your own records, plus an annual return date letter, compounds your strongest revenue channel on a minimum stay that runs past $4,400 a person at 2026 rates. <span class="src">(campdenali.com/online-newsletter)</span></p>
+  <p>Post stay letters. Departure day thank yous that weave in the week's actual logged sightings. The Special Sightings section of Ptarmigan Tracks proves the log exists. Staff edit and send every one, forty letters a week that could never happen by hand. And if the family decides a drafted letter is not a real letter, this one dies, and that is a legitimate answer.</p>
+  <p>The operations brain. The lodge has no cell service or internet by design, seventy years of how-to lives in binders and two owners' heads, and a 30 person crew turns over every June. A searchable assistant built from your SOPs, manuals, and naturalist materials runs offline on a laptop at the lodge and syncs when it reaches coverage. Capture interviews with Simon and Jenna are most of the project. This is insurance more than hours. <span class="src">(campdenali.com/reservations/faq)</span></p>
+  <p>The archive, which jumps the queue. Camp Denali was founded in 1951, so the 75th anniversary falls in the 2026-27 window. Scanning fifty volumes of Ptarmigan Tracks and the photo archive is low tech background work that can start in winter 2026-27 while phases 2 and 3 build, so the collection is searchable in time for the moment. AI organizes and retrieves. People author everything public. <span class="src">(campdenali.com/about/history)</span></p>
+  <aside class="proof"><span class="tag">Proven nearby</span>Edwardian Hotels London answered roughly 50,000 reviews in the house voice over two years with a person editing every draft. The drafted then edited letter can stay personal at volume.</aside>
+  <div class="decide-head">You decide or provide</div>
+  <ul class="decide">
+    <li>Interview hours across a winter, the one input nobody else can give.</li>
+    <li>An answer on where guest history actually lives today.</li>
+    <li>The family verdict on post stay letters, and the boxes of archive.</li>
+  </ul>
+</section>
+
+<section class="killed">
+  <div class="kicker">For the record</div>
+  <h2>What we are not proposing</h2>
+  <div class="killed-item"><span class="k-name">Dynamic pricing</span><span class="k-why">You publish fixed rates up to two seasons ahead, and algorithmic pricing runs against the fairness culture of the brand. Two engineers killed it independently.</span></div>
+  <div class="killed-item"><span class="k-name">A guest facing chatbot on the site</span><span class="k-why">A chain hotel move this family would rightly refuse. Correspondence is the product.</span></div>
+  <div class="killed-item"><span class="k-name">AI authored blog and social content</span><span class="k-why">The entire value of your writing is that a person at the lodge wrote it.</span></div>
+  <div class="killed-item"><span class="k-name">Guide and activity scheduling</span><span class="k-why">With a handful of guides and fixed blocks, a whiteboard genuinely wins.</span></div>
+</section>
+
+<section class="closing">
+  <div class="kicker">A closing note</div>
+  <h2>The plan is yours</h2>
+  <p>Nothing on this page acts on its own. Every letter is signed by a person, every decision stays with the family, and the lodge stays offline by design. The AI lives at the connected office, in the pre-season and pre-arrival work, which is where the burden already sits.</p>
+  <p>The order above is our argument, built from dependency, trust, and your calendar. It is not a contract. Reorder it, cut from it, or stop after phase 1. Each phase stands on the ones before it, so the sequence matters more than the speed, and there is no clock on any of it except the ones your season already keeps.</p>
+</section>
+
+<footer>Prepared by Alaska AI for Camp Denali &middot; July 2026 &middot; Every figure above is an estimate drawn from the accompanying opportunity map, and every fact traces to a cited page.</footer>
+
+</div>
+</body>
+</html>
