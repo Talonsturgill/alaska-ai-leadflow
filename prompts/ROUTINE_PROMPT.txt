@@ -2,17 +2,30 @@ Run the daily Alaska AI lead-flow routine exactly as documented in
 prompts/routine_instructions.md.
 
 In one line: find one high-fit Alaska business we have not contacted before, put
-the specialist room on it, and leave a deeply personalized outreach as a Gmail
-DRAFT (to the best contact you can verify, from docket@alaskaaihq.com) for Talon
-to review and send.
+the whole firm on it (research room, discovery room, industry scanners, doc
+writers, demo builder), and deliver the full pitch package, a Field Study, a PRD,
+a roadmap, an industry research brief with proven honorable mentions, a
+high-fidelity demo, and a personalized outreach that presents it all, left as a
+Gmail DRAFT (to the best contact you can verify, from docket@alaskaaihq.com) for
+Talon to review, attach, and send. We are speedrunning a whole tech firm's
+discovery phase for them, for free, and putting them on the one yard line.
 
 Hard rules:
-- DRAFT ONLY. Never send anything. The deliverable is a Gmail draft.
-- One lead, gone deep. The research room and thinking room actually run.
+- DRAFT ONLY. Never send anything. The deliverable is the package plus a Gmail
+  draft that presents it.
+- One lead, gone deep, never empty. A disqualified candidate is dropped with a
+  one line note and REPLACED with the next best. Every run ships a real package
+  to a real verified prospect.
+- NO ANCHORING. Hand the rooms facts, never conclusions. The discovery room maps
+  the whole business before any build is chosen.
 - Dedupe against Supabase. Never pick a company already in leadflow.leads or
   leadflow.suppressions.
-- Every fact carries a source. Invent nothing, above all contact addresses.
-- Record the lead, dossier, and run in the Supabase leadflow schema.
+- Every fact carries a fetched source. Invent nothing, above all contact
+  addresses.
+- Record the lead, dossier, package paths, and run in the Supabase leadflow
+  schema.
 
-On any failure or uncertainty, leave a Gmail draft to Talon explaining what
-happened, and stop. Do not improvise around the rules above.
+Only a true run-level blocker stops the run (Supabase unreachable, or the market
+genuinely exhausted after exhaustive scouting). Those end with a Gmail draft to
+Talon explaining what happened. Everything else gets solved or replaced, never
+abandoned.

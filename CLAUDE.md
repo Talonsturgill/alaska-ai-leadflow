@@ -1,9 +1,14 @@
 # Alaska AI - Lead Flow (private routine)
 
 Private automation for Alaska AI's outbound. A daily Claude Code Routine that
-finds one high-fit Alaska business, runs a room of specialist agents on it, and
-leaves a deeply personalized, blunt, honest outreach as a Gmail DRAFT from
-docket@alaskaaihq.com for Talon to review and send.
+finds one high-fit Alaska business, puts a whole firm of specialist agents on it,
+and delivers the full pitch package, a Field Study, a PRD, a roadmap, an industry
+research brief with proven honorable mentions, a high-fidelity demo, and a blunt,
+honest outreach that presents it all, left as a Gmail DRAFT from
+docket@alaskaaihq.com for Talon to review, attach, and send. We are speedrunning
+a tech firm's whole discovery phase for the prospect, for free, so they start on
+the one yard line. Most owners do not know what they do not know, the package is
+how they find out.
 
 `prompts/routine_instructions.md` is the master run contract. Read it. This file
 is the law that sits above it and never bends.
@@ -20,15 +25,47 @@ bulk message, this law wins.
 ## THE METHOD (why the output is good)
 
 Depth is the entire point. A generic touch is worse than no touch. Every run puts
-a room of specialists on ONE company.
+a whole firm on ONE company, and compute is spent freely as long as it is
+building. Weeks of a tech firm's discovery work, compressed into one run.
 - Parallel scouts find the day's best-fit business, one per ICP segment.
 - A research room learns it cold, company-analyst, people-finder,
   competitor-analyst.
-- A thinking room of three strategists argues three lenses to find the angle that
-  makes the owner lean in.
-- A skeptic (fact-checker) re-verifies every claim and the contact before a word
-  ships.
-- A writer gives it Talon's blunt voice, and a critic kills anything generic.
+- A discovery room of engineer-strategists maps EVERYWHERE AI could genuinely
+  change this business, whole-business first, before any single build is chosen.
+- Industry scanners find proven AI plays working at real companies in their
+  world, with fetched proof, the honorable mentions.
+- A skeptic (fact-checker) re-verifies every claim, every honorable mention, and
+  the contact before a word ships.
+- A documents room writes the Field Study, the PRD for the flagship build, and
+  the phased roadmap. A demo builder makes a high-fidelity demo of the flagship.
+- A writer gives the outreach Talon's blunt voice and it presents the package,
+  and a critic kills anything generic.
+
+## THE ANCHORING LAW (protect the room's independence)
+
+The rooms exist so no single idea pigeonholes the analysis. The showrunner hands
+every room FACTS, never conclusions. A brief that names a preferred problem, a
+preferred build, or "the angle we are exploring" is a violation, it collapses the
+whole room into an echo. The discovery room maps the full business first. The
+flagship is chosen by synthesis AFTER the map exists, and the roadmap carries the
+rest of the map so nothing found is wasted. Watch for over-indexing on any one
+product (voice agents especially), the offer is whatever the business genuinely
+needs that we can build.
+
+## THE PACKAGE (the deliverable, every run)
+
+One email alone is not the product. Every run ships a package to
+runs/<date>/<company>/ and a Gmail draft that presents it.
+- field-study.html - the operation, the pains with sources, current versus future
+  state, quantified honestly.
+- prd.html - the flagship build specified like a real PM wrote it.
+- roadmap.html - phased plan with honest ROI, carrying the full opportunity map.
+- research-brief.html - proven AI plays in their industry with fetched proof, the
+  honorable mentions, so they see backups if the flagship is not the one.
+- demo.html - a high-fidelity interactive demo of the flagship.
+- The outreach draft, which opens on the sharpest verified fact and offers the
+  package. Gmail drafts cannot carry attachments from the connector, so the draft
+  tells Talon what to attach from runs/<date>/<company>/ before sending.
 
 Only the showrunner (the main run) touches Supabase and Gmail. The subagents
 research and think and hand back structured JSON. Spawning is bounded and
@@ -36,8 +73,8 @@ showrunner-only, and a subagent never spawns its own subagents.
 
 ## DEFINITION OF DONE (never end empty)
 
-Every run ends with one real, personalized outreach draft to a verified prospect
-contact. Finding a candidate you should not pursue is not a finish line, it is a cue
+Every run ends with the full package built and one real, personalized outreach
+draft to a verified prospect contact. Finding a candidate you should not pursue is not a finish line, it is a cue
 to drop it, leave a one line note on why, and go get the next best. Disqualify and
 replace, never stop. Keep scouting across segments until a qualified lead ships.
 Spending the whole room and handing back a "do not pursue this" note with no outreach
@@ -67,8 +104,12 @@ unreachable, the routine stops rather than risk a repeat.
 ## PRIVATE DATA
 
 This repo is PRIVATE and the leadflow schema holds real prospect information.
-Never publish either, never expose a contact or a dossier, and never write
-prospect data into the public alaskaaicarousels repo or the public site.
+Never publish either, never expose the pipeline or another prospect's dossier,
+and never write prospect data into the public alaskaaicarousels repo or the
+public site. The PITCH PACKAGE is the exception by design, it is built to be
+given to its own prospect, it contains only that prospect's own public facts and
+our proposal, and Talon sends it by hand. A package never references another
+lead, the pipeline, or anything from the database beyond its own company.
 
 ## VOICE
 
@@ -90,7 +131,9 @@ reachable only through the privileged connector the routine uses.
 - knowledge/OUTREACH_CRAFT.md - how it writes, the strict rules and the kill-list.
 - knowledge/LEAD_RESEARCH.md - how it researches.
 - knowledge/ALASKA_MARKET.md - the market context it grounds in.
-- .claude/agents/ - the specialists, each with its own inputs, method, and bar.
+- .claude/agents/ - the firm: scouts, research room, discovery room, industry
+  scanners, fact-checker, field-study-writer, solutions-architect, roadmap-pm,
+  demo-builder, outreach-writer, lead-critic.
 
 ## LAYOUT
 
