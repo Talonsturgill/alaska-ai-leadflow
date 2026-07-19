@@ -2,31 +2,46 @@ Run the daily Alaska AI lead-flow routine exactly as documented in
 prompts/routine_instructions.md. Read it and all of knowledge/ first, then work
 Phase 0 through Phase 9 in order.
 
-In one line: find one high-fit Alaska business we have not contacted before, put
-the research room and the engineering room on it, produce a real personalized Field
-Study (the actual work a serious shop does before a first call, done for free), and
-leave a Gmail DRAFT that carries it, a short self-aware AI-agent-team email with the
-Field Study attached, to the best contact you can verify, from docket@alaskaaihq.com,
-for Talon to review and send.
+WHERE YOU START. Your home is the alaska-ai-leadflow repo (PRIVATE). Start there,
+read your config, knowledge, and prompts there, and do ALL of your work there,
+research, the study build, Supabase, Gmail, and the private run archive. A second
+repo, alaskaaicarousels (PUBLIC, it serves alaskaaihq.com), is connected for ONE
+narrow purpose only, in Phase 8 you publish the finished prospect package into
+alaskaaicarousels/docs/proposal/<company-slug>/ and nowhere else, then you return
+home. Never run the routine from the carousel repo, and never touch anything in it
+outside docs/proposal/.
+
+In one line: find one high-fit Alaska business we have not contacted before, put the
+research room and the engineering room on it, produce a real personalized Field
+Study (the actual work a serious shop does before a first call, done for free),
+publish it as its own page on the site, and leave a Gmail DRAFT that carries the
+link, a short self-aware AI-agent-team email, to the best contact you can verify,
+from docket@alaskaaihq.com, for Talon to review and send.
 
 Hard rules:
-- DRAFT ONLY. Never send anything. The deliverable is a Gmail draft with the study
-  attached.
+- DRAFT ONLY. Never send anything. The deliverable is a Gmail draft carrying the
+  hosted study link.
+- NEVER END EMPTY. A per-company failure (disqualify, a critic kill, a failed email)
+  is always drop and replace, take the next candidate on the queue, re-scout when it
+  runs dry. The run ends in exactly one of two states, an outreach draft carrying a
+  real Field Study, or a true safety stop (Supabase unreachable, or market genuinely
+  exhausted). A note that only explains why a lead was not a fit is a FAILED run.
 - LEGIT, NO HYPE. The engineering room runs a real discovery-to-delivery process.
   The ai-feasibility-engineer may conclude AI is not needed, and the study-critic
   kills hype. Honest beats impressive.
-- One lead, gone deep. Both rooms actually run. If the study could have been made
-  for any other company, it failed.
-- Honest ROI as a range with the conservative case clearing the bar, never a single
-  hero number.
+- One lead, gone deep. Both rooms actually run. If the study could have been made for
+  any other company, it failed.
+- Honest ROI as a range. If the conservative case does not clear, say so plainly and
+  recommend the smaller first step, never a single hero number, never a forced pass.
 - Dedupe against Supabase. Never pick a company already in leadflow.leads or
   leadflow.suppressions, matched on normalized domain.
 - Every fact carries a source. Invent nothing, above all contact addresses.
-- Voice, the carrier email obeys knowledge/OUTREACH_CRAFT.md, no em or en dashes,
-  no colons, no semicolons, easy on commas, zero AI tells.
+- Voice, the carrier email obeys knowledge/OUTREACH_CRAFT.md, no em or en dashes, no
+  colons, no semicolons, easy on commas, zero AI tells.
 - Record the lead, the study, and the run in the Supabase leadflow schema, and
-  archive the study under runs/<date>/ in this PRIVATE repo. Never write prospect
-  data into the public repo or site.
+  archive the study under runs/<date>/ in the PRIVATE leadflow repo. The single
+  prospect's own package is published to the public site at docs/proposal/<slug>/,
+  the pipeline, the dossier, the ROI internals, and every other lead stay private.
 
-On any failure or uncertainty, leave a Gmail draft to Talon explaining what
-happened, and stop. Do not improvise around the rules above.
+On a per-company gate failure, drop and replace, never stop. Only a true safety stop
+ends the run, and even then leave Talon a note. Do not improvise around these rules.

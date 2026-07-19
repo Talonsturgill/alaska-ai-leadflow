@@ -113,6 +113,21 @@ a leading www., drop any path and trailing slash, keep the registrable host. So
 https://www.Denali-Lodge.com/about becomes denali-lodge.com. Two records match when
 their normalized domains match.
 
+## THE TWO REPOS (where you start, where you publish)
+
+Two repos are connected. Do not confuse them.
+- HOME, alaska-ai-leadflow (PRIVATE). This is where you start and where you do ALL
+  your work, config, knowledge, prompts, research, the study build, out/, Supabase,
+  Gmail, and the private run archive under runs/. Everything sensitive lives here and
+  stays here.
+- PUBLISH TARGET, alaskaaicarousels (PUBLIC, it serves alaskaaihq.com). Connected for
+  ONE narrow job only. In Phase 8 you write the finished prospect package into
+  alaskaaicarousels/docs/proposal/<company-slug>/ and NOTHING else, so it serves at
+  alaskaaihq.com/proposal/<company-slug>/, then you return home. Never start the run
+  there, never touch a file outside docs/proposal/, never put the pipeline, a
+  dossier, ROI internals, or another lead there. Only the one prospect's own
+  self-contained package, which is built to be handed to them.
+
 ## THE ROOMS (the fixed spawn plan)
 
 Research room, Phase 2. company-analyst, people-finder, competitor-analyst,
@@ -320,43 +335,72 @@ draft. That still ends in a real personalized Field Study going out, which satis
 the delivery law. A failed email is never a reason to end the run empty or to send
 Talon a bare note with no study attached. Write out/<date>/outreach.json.
 
-## PHASE 8 - DRAFT AND RECORD
+## PHASE 8 - PUBLISH, DRAFT, AND RECORD
 
-1. Read out/<date>/field-study.html, field-study.pdf, and demo.html (when it
-   shipped), base64-encode each, and create the Gmail DRAFT with create_draft. To
-   the verified contact, from docket@alaskaaihq.com, subject and htmlBody from
-   outreach.json, attachments the HTML study, the PDF, and the demo. Save the
-   returned draft id.
+The prospect never receives raw HTML. The study and demo are published as their own
+pages on the site, and the email carries the links. See THE TWO REPOS above for the
+home-versus-publish rule.
+
+1. PUBLISH the package to the site. Work in the connected alaskaaicarousels repo
+   (PUBLIC, it serves alaskaaihq.com) and touch NOTHING outside docs/proposal/.
+   - Slug the company from its display name, lowercase with hyphens, e.g.
+     big-dans-fishing-charters.
+   - git pull the carousel repo's main first, so you are not stale against the daily
+     carousel commit.
+   - Copy the finished study to docs/proposal/<slug>/index.html and the demo to
+     docs/proposal/<slug>/demo/index.html. These are the self-contained standalone
+     HTML files from Phase 5, all CSS, JS, and SVG inlined, so a proposal page cannot
+     affect any other page on the site.
+   - Stage ONLY docs/proposal/<slug>/, confirm git diff shows nothing else changed,
+     commit, and push to main. A push under docs/** triggers the existing Pages
+     deploy and the URLs go live within a couple of minutes. NEVER edit index.html,
+     the docket, the sitemap, the ledgers, the engine, or anything else in that repo.
+     Additive, narrow, reversible. The carousel routine and this one share main and
+     never collide because you only ever add files under docs/proposal/.
+   - The live URLs are https://alaskaaihq.com/proposal/<slug>/ (study) and
+     https://alaskaaihq.com/proposal/<slug>/demo/ (demo).
+   - GUARDRAIL. Only the single prospect's own package goes public. The pipeline, the
+     dossier, the ROI internals, and every other lead stay in the PRIVATE leadflow
+     repo, always. A package never references another lead.
+   - Publish fails, or the carousel repo is not writable this run. Do not lose the
+     work. Host the study and demo as shareable links another reachable way and use
+     those, or note in the draft that the branded links go live on the next run, and
+     proceed. A publish hiccup is never a reason to end the run.
+
+2. Create the Gmail DRAFT with create_draft. To the verified contact, from
+   docket@alaskaaihq.com, subject and body from outreach.json, with the branded study
+   and demo URLs in the body as clickable links, NO attachments. Save the draft id.
    - Send-as reality. If docket@alaskaaihq.com is not an available send-as on the
      connected account, the draft comes from the connected account. Put one plain
      line at the very top of the body telling Talon to set the sender to docket@
      before he sends, then let him.
    - No verified contact. Address the draft to Talon instead, subject prefixed
      "[needs contact] <Company>", body the email plus a note on where the
-     decision-maker is likely reachable. The study still attaches.
-   - Attachment too big (over ~24MB combined, it never should be). Attach the HTML
-     only, and note the PDF is in runs/<date>/.
+     decision-maker is likely reachable. The study link still rides along.
    - Gmail connector down. Do not lose the work. Persist everything to out/<date>/
      and runs/<date>/, record the lead with gmail_draft_id null, and make the
      delivery summary loud that the draft must be made by hand.
-2. Archive to the PRIVATE repo. Copy the study to
+
+3. Archive to the PRIVATE leadflow repo. Copy the study to
    runs/<date>/<company-slug>/field-study.html (+ .pdf and demo.html if present),
    write runs/<date>/<company-slug>/study.json and a dossier.md (the full internal
    package, research, discovery, feasibility, engineering, the pick reasoning).
-   Commit and push to a claude/ branch on this private repo. This is the private
-   paper trail, prospect data belongs here and NEVER in the public repo.
-3. Write the lead to leadflow.leads with ONE upsert, every column populated,
+   Commit and push to your working branch on the PRIVATE leadflow repo. This is the
+   private paper trail. The dossier and the pipeline belong here and NEVER on the
+   public site, only the prospect-facing package from step 1 goes public.
+
+4. Write the lead to leadflow.leads with ONE upsert, every column populated,
    company, normalized domain, segment, location, status (drafted if a real-contact
    draft was created, else researched), fit_score, why_picked, contact_name,
    contact_role, contact_email, contact_source, competitors (jsonb),
    ai_opportunities (jsonb), sources (jsonb), dossier_md, outcome,
-   recommended_build, roi_summary, study_json (jsonb), study_path, draft_subject,
-   draft_body, gmail_draft_id, run_id.
+   recommended_build, roi_summary, study_json (jsonb), study_path (the branded
+   proposal URL), draft_subject, draft_body, gmail_draft_id, run_id.
    IDEMPOTENCY. The unique index on lower(domain) is the safety net. If the insert
    conflicts, a prior partial run recorded this company, so update the existing row
    instead of creating a second draft. The whole run is safe to retry.
-4. Insert the leadflow.runs row, run_date, shortlist_count, and status success (or
-   no_lead if every candidate got suppressed or a protocol stop fired).
+5. Insert the leadflow.runs row, run_date, shortlist_count, and status success (or
+   no_lead ONLY if a true safety stop fired, never for a per-company drop).
 
 ## PHASE 9 - DELIVER AND SELF-CHECK
 
@@ -367,7 +411,7 @@ on, the honest ROI range, the contact used, and the draft id.
 COMPLETION GATE, verify before you finish.
 - ENDING IS VALID. The run ends in one of exactly two permitted states, an outreach
   Gmail draft carrying a real personalized Field Study (to a verified contact, or to
-  Talon with "[needs contact]" or "[needs opener]" and the study still attached), OR
+  Talon with "[needs contact]" or "[needs opener]" and the study link still carried), OR
   a true safety stop (Supabase unreachable, or market genuinely exhausted after the
   full queue and re-scouts). If the run is about to end any other way, above all with
   a note that merely explains why a lead was not a fit, it has FAILED the delivery
@@ -377,13 +421,14 @@ COMPLETION GATE, verify before you finish.
 - Depth. Both rooms actually ran (research.json, claims.json, discovery.json,
   feasibility.json, engineering.json, study.json all exist and are substantial).
 - Legit. study-critic passed the study, the feasibility ladder was walked, and the
-  ROI is a range with the conservative case clearing the bar.
+  ROI is an honest range. Where the conservative case does not clear on cash, the
+  study says so plainly and recommends the smaller first step, it never forces a pass.
 - Personal. The email names a specific, verified, this-company-only fact and trips
   no kill-list term. The study could not have been produced for anyone else.
 - Honest. Every claim in the study has a source. The contact is real and verified,
   or the draft went to Talon.
-- Delivered. The Gmail draft carries the study attachment. The study is archived to
-  runs/<date>/ in this private repo.
+- Delivered. The Gmail draft carries the branded study link. The study is published
+  at alaskaaihq.com/proposal/<slug>/ and archived to runs/<date>/ in the private repo.
 - Recorded. leadflow.leads has the row and leadflow.runs has this run's row,
   nothing duplicated.
 - Draft only. Nothing was sent.
@@ -436,12 +481,12 @@ note stating exactly what failed.
 ## SUCCESS CRITERIA (all must hold)
 
 1. Exactly one Gmail draft exists, to the verified contact from docket@, or to Talon
-   if the contact needs a human find, with the Field Study attached (HTML, plus PDF
-   when it rendered), and a short self-aware email obeying the voice rules and
-   opening on a specific verified fact.
+   if the contact needs a human find, carrying a clickable link to the published Field
+   Study (at alaskaaihq.com/proposal/<slug>/), and a short self-aware email obeying the
+   voice rules and opening on a specific verified fact.
 2. The Field Study passed the study-critic and the fact-checker, follows the real
-   engineering process, and its ROI is an honest range with the conservative case
-   clearing the bar.
+   engineering process, and its ROI is an honest range. Where the conservative case
+   does not clear, the study discloses it and recommends the smaller first step.
 3. leadflow.leads has one new fully-populated row, leadflow.runs has this run's row,
    nothing duplicated, and the study is archived under runs/<date>/ in this private
    repo.

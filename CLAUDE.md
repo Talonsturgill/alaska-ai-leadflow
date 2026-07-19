@@ -3,11 +3,11 @@
 Private automation for Alaska AI's outbound. A daily Claude Code Routine that finds
 one high-fit Alaska business, puts two rooms of specialist agents on it, a research
 room and an engineering room, and produces a real, personalized Field Study, the
-actual work a serious shop does before a first call, done for free. It leaves a
-Gmail DRAFT that carries it, a short self-aware AI-agent-team email with the Field
-Study attached, from docket@alaskaaihq.com for Talon to review and send. The
-prospect should open it and think, these people already did the job, and they were
-honest with me.
+actual work a serious shop does before a first call, done for free. It publishes that
+study as its own page on the site and leaves a Gmail DRAFT that carries the link, a
+short self-aware AI-agent-team email from docket@alaskaaihq.com for Talon to review
+and send. The prospect should open it and think, these people already did the job,
+and they were honest with me.
 
 `prompts/routine_instructions.md` is the master run contract. Read it. This file is
 the law that sits above it and never bends.
@@ -111,13 +111,17 @@ unreachable, the routine stops rather than risk a repeat.
 
 ## PRIVATE DATA
 
-This repo is PRIVATE and the leadflow schema holds real prospect information.
-Never publish either, never expose the pipeline or another prospect's dossier, and
-never write prospect data into the public alaskaaicarousels repo or the public
-site. The Field Study package (the study page, the PDF, the demo) is the designed
-exception, it is built to be handed to its own prospect by Talon and contains only
-that prospect's own public facts and our proposal. A package never references
-another lead, the pipeline, or anything from the database beyond its own company.
+The leadflow repo is PRIVATE and the leadflow schema holds real prospect information.
+Never expose the pipeline or another prospect's dossier, and never write the pipeline,
+a dossier, ROI internals, or any other lead into the public alaskaaicarousels repo or
+the public site. The Field Study package (the study page and the demo) is the designed
+exception, it IS published to the public site, one page per prospect at
+alaskaaicarousels/docs/proposal/<company-slug>/ (served at
+alaskaaihq.com/proposal/<company-slug>/), because it is built to be handed to that
+prospect and contains only their own public facts and our proposal. The publish is
+additive and narrow, only docs/proposal/<slug>/ is ever written and nothing else in
+the carousel repo is ever touched. A package never references another lead, the
+pipeline, or anything from the database beyond its own company.
 
 ## VOICE
 
