@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "company": "Big Dan's Fishing Charters",
+    "domain": "bigdansfishing.com",
+    "segment": "tourism",
+    "place": "Homer, Seward & Soldotna, AK",
+    "date": "2026-07-19",
+    "prepared_for_first": null
+  },
+  "thesis": "Every booking your online calendar can't answer sends someone straight to Sarah's cell phone, and an AI front desk could answer most of those instantly, day or night, without touching anything Sarah and Dan don't already review.",
+  "finding": "Big Dan's own site tells guests exactly what to do when a date doesn't show as available online, call Sarah at 907-598-3391. That single line is doing the work of a whole reservations desk across three towns, four boats, five cabins, river trips, and hunting transport, during the four months a year when the business itself says trips fill up fast. No competitor in Homer, Seward, or Soldotna runs anything AI-driven today, so closing this gap is not catching up, it's leading.",
+  "homework": {
+    "business": "Big Dan's Fishing Charters & Lodge is a family-owned saltwater and freshwater fishing operator on the Kenai Peninsula, run by owners Dan and Sarah Spies. Four vessels (the 50-ft Double Down and 42-ft Game Changer catamarans, plus the smaller Wanka and Blackjack) work out of Homer and Seward, guided trips run the Kenai and Kasilof Rivers, five riverfront cabins operate in Soldotna, and the business also runs vessel-based transport for spring black bear and fall Sitka blacktail deer hunts. Bookings run through FareHarbor online, or by calling Sarah directly for anything the calendar can't resolve.",
+    "pain": {
+      "quote": "For dates not showing availability online, your best bet is to call Sarah at 907-598-3391.",
+      "context": "Sarah Spies, office manager and co-owner, is the named single point of contact for any booking the FareHarbor calendar can't resolve, across three locations, four boats, five cabins, river trips, and hunting transport, during a compressed four-month season.",
+      "source": "https://bigdansfishing.com/availability/"
+    },
+    "competitors": [
+      { "name": "O'Fish'ial Charters", "what_ai": "none found, FareHarbor online booking only", "source": "https://bighalibut.com/" },
+      { "name": "Inlet Charters", "what_ai": "none found, FareHarbor online booking only", "source": "https://halibutcharters.com/" },
+      { "name": "Homer Halibut Hunters", "what_ai": "a human-staffed live chat tool that routes directly to staff and boat captains, not AI", "source": "https://homerhalibuthunters.com/" },
+      { "name": "Crazy Rays Charters", "what_ai": "none found, no online booking system at all, phone-only reservations", "source": "https://crazyraysak.com/locations/seward-fishing-charters/" },
+      { "name": "Alaska Kenai Fishing for Fun", "what_ai": "none found, standard online booking button", "source": "https://www.akkenaifff.com/" }
+    ],
+    "industry_ai": [
+      { "point": "A named fishing-charter operator (Destin Party Boat Fishing) running an AI chatbot on its existing FareHarbor booking system saw online conversion rise 33.67 percent, phone call volume fall 26 percent, and its toll-free bill fall 68 percent, in the first four months. Vendor-reported case study.", "source": "https://www.yonderhq.com/case-study/destin-party-boat-sailing-to-success-with-yonders-tourism-ai-chatbot-and-reviews-platform" },
+      { "point": "A small two-location cruise operator (Black Cat Cruises) runs an AI chatbot handling around 500 conversations a month, resolving around 60 percent without staff and saving about 10 staff hours a month. Vendor-reported case study.", "source": "https://www.yonderhq.com/case-study/black-cat-cruises-chatbot-answers-immediately-24-7" },
+      { "point": "Federal Reserve data (April 2026) puts AI adoption in accommodation and food services at about 8 percent, versus roughly 33 percent in professional services, the lowest of any sector compared.", "source": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html" }
+    ]
+  },
+  "opportunity": {
+    "job": "Get a fast, reliable answer to any booking question the online calendar can't resolve, or that arrives outside business hours, without waiting on a single person's callback, across all three locations and both trip families.",
+    "why": "This is the highest-cited, best-evidenced opportunity in the research, directly quoted on Big Dan's own site as the fallback instruction for exactly the busiest part of the business. No competitor in the Homer, Seward, or Soldotna market has moved on it yet, and accommodation and food service businesses overall show the lowest AI adoption of any sector measured, so this is a genuinely early move, not a crowded one.",
+    "current_workaround": "A phone call or email directly to Sarah Spies, who manually checks cross-location and cross-boat availability herself.",
+    "forces": "Push is real, a named single point of contact across a structurally complex, three-location, two-trip-type operation during a season where demand already outstrips supply. Pull is concrete, two named small operators in adjacent trades show real gains from exactly this pattern, and it plugs into a system Big Dan's already runs. Anxiety is real too, for a five-star, review-driven brand worried about a wrong answer on a weather-sensitive booking, which is exactly why the human escalation path stays mandatory, not optional."
+  },
+  "build": {
+    "name": "AI front-desk chat and phone-answering agent, FareHarbor-integrated, chat-first",
+    "what_it_does": "Answers guest questions and books whatever FareHarbor already shows as open, 24/7, across all three locations. Anything off-calendar, cross-location, weather-sensitive, or safety-adjacent goes straight to Dan and Sarah with a clean written summary instead of a cold callback, the same handoff that happens today, just with fewer routine calls reaching them first.",
+    "feasibility": "The availability check and the book-or-route decision are deterministic lookups against FareHarbor, not model guesses, so the AI's job is narrowed to understanding the question and writing the reply, which keeps this at a workflow tier rather than an open-ended agent. Where we would NOT use AI, the FAQ layer over Big Dan's own three static pages (a rewritten FAQ section does that job with zero hallucination risk), the go or no-go booking decision once FareHarbor's calendar already shows a slot open or closed (a straight data read, never a model call), and any weather-related rescheduling or hunting-transport safety decision, which stays a hard rule that always escalates to Dan and Sarah.",
+    "build_vs_buy": "We buy the commodity underneath it, the language model, the database, email and text delivery, and telephony if the phone channel is ever added, and we build only the part that is genuinely Big Dan's, the specific booking rules, the escalation logic, and the FareHarbor wiring.",
+    "architecture": {
+      "nodes": [
+        { "id": "guest", "label": "Prospective Charter Guest", "kind": "user" },
+        { "id": "chat_widget", "label": "Chat Widget on bigdansfishing.com", "kind": "system" },
+        { "id": "orchestrator", "label": "Front-Desk Agent", "kind": "ai" },
+        { "id": "llm_api", "label": "Language Model (hosted)", "kind": "ai" },
+        { "id": "fareharbor", "label": "FareHarbor (your booking system)", "kind": "external" },
+        { "id": "rules_config", "label": "Your Business Rules (hours, pricing, policy)", "kind": "data" },
+        { "id": "escalation_router", "label": "Escalation Router (hard rule)", "kind": "system" },
+        { "id": "notify_service", "label": "Notification (email/text)", "kind": "system" },
+        { "id": "dan_sarah", "label": "Dan & Sarah Spies", "kind": "user" }
+      ],
+      "edges": [
+        { "from": "guest", "to": "chat_widget", "label": "asks a question" },
+        { "from": "chat_widget", "to": "orchestrator", "label": "forwards it" },
+        { "from": "orchestrator", "to": "llm_api", "label": "understands and replies" },
+        { "from": "orchestrator", "to": "fareharbor", "label": "checks and books exact matches" },
+        { "from": "orchestrator", "to": "rules_config", "label": "reads hours, pricing, policy" },
+        { "from": "orchestrator", "to": "escalation_router", "label": "routes anything off-calendar or unusual" },
+        { "from": "escalation_router", "to": "notify_service", "label": "sends a clean summary" },
+        { "from": "notify_service", "to": "dan_sarah", "label": "reviews and follows up, same as today" }
+      ],
+      "caption": "Chat-first MVP. The AI only handles understanding the question and writing the reply, every availability check, booking decision, and escalation is a deterministic rule against FareHarbor and your own settings. Anything unusual goes straight to Dan and Sarah, exactly as it does now."
+    }
+  },
+  "plan": {
+    "problem": "Anyone who wants a trip or cabin not already open on the FareHarbor calendar has exactly one path forward, call Sarah, across four boats, three towns, five cabins, and two hunting seasons, during the four months a year the business tells guests trips fill up fast.",
+    "goals": [
+      "Answer availability and booking questions instantly through a chat widget, tied live to the real FareHarbor calendar.",
+      "Resolve the calendar's known quirk conversationally, surfacing true availability across all four boats and both trip types on request.",
+      "Cut routine, answerable-by-calendar phone and message traffic reaching Sarah's cell.",
+      "Escalate cleanly to Dan and Sarah, by name, with full context, for anything off-calendar, cross-location, weather-sensitive, or safety-adjacent."
+    ],
+    "non_goals": [
+      { "item": "Phone-answering AI in Phase 1", "reason": "Telephony integration on your existing line is unconfirmed, we will not promise it before we've verified it." },
+      { "item": "Autonomous booking or payment execution off the standard calendar", "reason": "Unattended, safety-adjacent multi-step booking checks out at roughly a coin flip end to end, not a bet worth your reputation." },
+      { "item": "Weather-driven rescheduling automation", "reason": "High cost of error, no small operator anywhere runs this today, held out entirely." },
+      { "item": "Cabin-specific guest messaging for the Soldotna cabins", "reason": "No cited pain there yet, we would not invent one." },
+      { "item": "A general FAQ chatbot", "reason": "It would answer questions your site already answers and never touch the actual bottleneck." }
+    ],
+    "metrics": [
+      { "metric": "Phone calls to Sarah for routine availability/booking questions", "baseline": "Not currently logged, we'd establish it with a two-week manual call-log spot check before launch", "target": "30 percent reduction in routine calls reaching Sarah directly", "timeframe": "60 days after launch" },
+      { "metric": "Chat-to-booking or chat-to-clean-handoff conversion", "baseline": "0, no chat channel exists today", "target": "At least 15 percent of chat sessions end in a completed booking or a clean handoff", "timeframe": "45 days after launch" },
+      { "metric": "After-hours inquiries answered instead of going unanswered", "baseline": "Assumed near-zero outside business hours today", "target": "At least 50 percent of after-hours chat volume resolved or captured", "timeframe": "60 days after launch" },
+      { "metric": "Escalation accuracy, correctly routed versus resolved", "baseline": "New metric, target set from the reliability band this design supports", "target": "85 percent or better correctly self-resolved or escalated", "timeframe": "30 days after launch, re-checked at 90 days" }
+    ],
+    "phase1_must": [
+      "Chat widget wired live to FareHarbor for real-time, cross-boat, cross-location availability",
+      "Deterministic book-or-route logic",
+      "A structured escalation summary to Sarah and Dan for anything off-calendar, cross-location, weather-related, or safety-adjacent",
+      "Handling for the calendar's known quirk",
+      "Honest disclosure that it's an AI assistant, with a clear path to reach a person",
+      "Confirming FareHarbor API access before build starts"
+    ],
+    "phase1_later": [
+      "Phone-answering, gated on a confirmed telephony feasibility check",
+      "Conversational fix for the calendar's cross-trip-type display quirk",
+      "Cabin-specific guest communication, if evidence shows up",
+      "Weather-driven rescheduling automation"
+    ],
+    "need_from_you": [
+      "FareHarbor account access, or a willingness to confirm what it exposes for integration",
+      "A decision on how escalations should reach you, text, email, or a shared inbox",
+      "Your rough sense of current call volume and common off-calendar requests",
+      "Sign-off and access to place a chat widget on your site",
+      "Your current phone setup, only if we move to the phone phase",
+      "Someone willing to spot-check a sample of chat transcripts in the first few weeks"
+    ],
+    "risks": [
+      { "risk": "FareHarbor may not expose the access this design assumes.", "mitigation": "We confirm this before any build work starts, and downscope honestly if it's not available." },
+      { "risk": "A wrong answer on a weather-sensitive or safety-adjacent question.", "mitigation": "The escalation guardrail is not optional, by design." },
+      { "risk": "Guests keep calling out of habit.", "mitigation": "We'd treat that as a signal to improve visibility, checked against a real logged baseline, not assumed away." },
+      { "risk": "If it underperforms after 60 to 90 days.", "mitigation": "The cost of the chat-only version is small and easy to walk back, checked at 30, 45, and 90 days." }
+    ],
+    "open_questions": [
+      { "q": "Does your FareHarbor plan expose API access, and at what cost?", "owner": "Alaska AI, confirming with FareHarbor alongside you" },
+      { "q": "What's the real current call volume and off-calendar request pattern?", "owner": "Sarah" },
+      { "q": "Is a phone integration even feasible on your current line?", "owner": "Dan, then Alaska AI" },
+      { "q": "Who should escalations route to in practice?", "owner": "Dan and Sarah" },
+      { "q": "Who controls the website to add the widget?", "owner": "Dan and Sarah" }
+    ]
+  },
+  "roi": {
+    "cost_note": "We're deliberately not quoting a five-year commitment today. Step one, a two-to-four-week baseline check, costs no new dollars, just Sarah logging real call and contact volume before anything is built. Step two, if that check and confirmed FareHarbor access clear, is the actual near-term ask, the chat-first walking skeleton plus a chat-only MVP for one peak season, no phone channel. That prices at roughly 8,000 to 14,000 dollars, implementation, training, one season of run cost, and contingency included. Continuing past that first measured season would add a recurring 1,500 to 2,800 dollars a year, a separate renewal decision made only after real results are in, never bundled into today's number.",
+    "benefits": [
+      { "benefit": "Sarah's reclaimed time triaging off-calendar inquiries in peak season", "kind": "capacity", "note": "No call-volume baseline exists yet, so this is a planning assumption, not a measured number, and it only becomes cash if a specific deferred hire or redeployment is confirmed." },
+      { "benefit": "Recovered peak-season bookings that would otherwise lapse", "kind": "cash", "note": "The most speculative line, and the one the baseline check is meant to calibrate before real money moves. If the baseline comes in at or below the conservative assumption, this line shrinks or drops, it does not get defended." }
+    ],
+    "scenarios": {
+      "conservative": "Lower deflection and conversion assumptions. Cash benefit in the first season is around 700 dollars. Even projected across three renewed seasons, cumulative cash lands around 4,300 to 4,700 dollars against a cumulative cost of roughly 11,000 to 19,600 dollars. On cash alone, this does not clear at any horizon modeled here.",
+      "most_likely": "Middle assumptions. Cash benefit around 2,600 dollars the first season, ramping toward 6,200 to 6,900 dollars a season if renewed. Payback in roughly 20 to 30 months.",
+      "aggressive": "Higher assumptions, plus the edge of being the only AI-driven contact channel in the market. First-season cash benefit alone can cover the near-term ask, payback in roughly 10 to 14 months. This is the upside case, not the planning case."
+    },
+    "conservative_clears": false,
+    "payback_range": "Roughly 10 to 14 months under aggressive assumptions, 20 to 30 months most likely, measured against the honest near-term ask of 8,000 to 14,000 dollars, not a five-year total nothing has been asked to fund. Stated plainly, the conservative case does not recover cost on cash alone at any horizon modeled here. That is a real finding, not a rounding error, and it is exactly why we'd start with the no-cost baseline check rather than a build commitment.",
+    "base_rate_note": "Most AI pilots show no real financial impact, roughly 95 percent by MIT's 2025 State of AI in Business research (source 15 below), and AI projects fail at roughly 80 percent by RAND's analysis of root causes (source 16 below). This build is designed to sit in the minority that pays, it lives inside the FareHarbor calendar already in use, it routes to the same person who already handles this today, and it's scoped to a reliability band we can stand behind, not an autonomous system making judgment calls. But that design edge doesn't exempt this case from the base rate's real lesson, most pilots fail because they're funded on assumption rather than measured baseline, which is exactly why the no-cost check comes before the dollar ask, not after. Honestly, the accommodation and tourism sector overall has the lowest AI adoption of any sector measured (source 13), so this isn't chasing a crowded trend, it's an early, deliberate move in a segment that hasn't made it yet.",
+    "value_owner": "Sarah Spies would own running the baseline check and, if it proceeds, tracking chat-handled versus escalated volume against it. Dan Spies would own the go or no-go call on the build itself, and separately on any renewal after the first season is measured."
+  },
+  "roadmap": {
+    "now": [
+      { "item": "Confirm FareHarbor access and telephony feasibility, and spot-check a real call-volume baseline", "metric": "A real baseline for missed or delayed off-calendar inquiries, established in days not weeks" },
+      { "item": "Ship the chat-first front-desk agent", "metric": "Share of off-calendar and after-hours inquiries answered immediately or cleanly handed off, and how many convert to a booking" }
+    ],
+    "next": [
+      { "item": "Add the phone channel, gated on the Now-phase results and a confirmed telephony check", "metric": "Share of after-hours calls answered or cleanly escalated instead of going unanswered" }
+    ],
+    "later": [
+      { "item": "A conversational fix for the calendar's own display quirk", "metric": "Fewer guests silently giving up when one trip type shows as unavailable" },
+      { "item": "Cabin-specific guest communication for the Soldotna cabins, if evidence shows up", "metric": "No metric yet, watching for real evidence first" }
+    ],
+    "gates": "Each phase is earned by the last one's real results, not funded up front. You can stop after the chat-only version and keep everything it already delivered."
+  },
+  "honest_part": [
+    "We have not yet confirmed FareHarbor grants the API access this build needs, that gets checked before anything is built, not assumed.",
+    "The phone channel, the highest-cited pain, depends on confirming your telephony setup can support it, which is why it's a later phase, not part of the first build.",
+    "There is no existing baseline for how many calls or missed inquiries you actually get today, so every ROI number here is a planning assumption, not a measurement, until we run a real spot check.",
+    "The conservative version of the ROI case does not pay back in cash alone at any horizon we modeled, honestly. It clears faster only under more optimistic, but still realistic, assumptions, which is exactly why we'd start with a no-cost baseline check before any build dollars move.",
+    "The two industry examples we cite (a Florida charter fleet, a New Zealand cruise operator) are vendor-reported case studies, not independently audited, and we're not presenting them as guarantees for your business.",
+    "Voice response times in production systems are generally a beat slower than a person, callers notice the pause. This build doesn't include phone answering yet for exactly that reason, we'd rather confirm it works well before promising it."
+  ],
+  "next_step": "This is the free version of how we work, a real Field Study, done. If it's useful, the next step is small, reply and say so, no call and no pitch attached to that reply.",
+  "sources": [
+    { "n": 1, "claim": "For dates not showing availability online, your best bet is to call Sarah at 907-598-3391.", "url": "https://bigdansfishing.com/availability/" },
+    { "n": 2, "claim": "Once a trip has been selected for a certain day, the other varieties will not show as available.", "url": "https://bigdansfishing.com/availability/" },
+    { "n": 3, "claim": "Fleet, locations, cabins, and business description (Homer, Seward, Soldotna; four vessels; five cabins; hunting transport).", "url": "https://bigdansfishing.com/" },
+    { "n": 4, "claim": "Dan Spies is Owner and Captain, Sarah Spies is Office Manager and Co-Owner; contact email bigdansfishing@gmail.com.", "url": "https://bigdansfishing.com/big-dans-crew/" },
+    { "n": 5, "claim": "Book your trip well in advance as Big Dan's Fishing Charters is highly recommended and tends to fill up quickly.", "url": "https://wanderlog.com/place/details/6809116/big-dans-fishing-charters" },
+    { "n": 6, "claim": "O'Fish'ial Charters runs FareHarbor online booking only, no AI found.", "url": "https://bighalibut.com/" },
+    { "n": 7, "claim": "Inlet Charters runs FareHarbor online booking only, no AI found.", "url": "https://halibutcharters.com/" },
+    { "n": 8, "claim": "Homer Halibut Hunters runs a human-staffed live chat tool connecting to staff and boat captains, not AI.", "url": "https://homerhalibuthunters.com/" },
+    { "n": 9, "claim": "Crazy Rays Charters has no online booking system at all, phone-only reservations.", "url": "https://crazyraysak.com/locations/seward-fishing-charters/" },
+    { "n": 10, "claim": "Alaska Kenai Fishing for Fun runs a standard online booking button, no AI found.", "url": "https://www.akkenaifff.com/" },
+    { "n": 11, "claim": "Destin Party Boat Fishing's AI chatbot case study, online conversion up 33.67 percent, phone calls down 26 percent, toll-free bill down 68 percent.", "url": "https://www.yonderhq.com/case-study/destin-party-boat-sailing-to-success-with-yonders-tourism-ai-chatbot-and-reviews-platform" },
+    { "n": 12, "claim": "Black Cat Cruises' AI chatbot case study, around 500 conversations a month, around 60 percent resolved without staff.", "url": "https://www.yonderhq.com/case-study/black-cat-cruises-chatbot-answers-immediately-24-7" },
+    { "n": 13, "claim": "Federal Reserve data on AI adoption by sector, accommodation and food services at about 8 percent versus roughly 33 percent for professional services.", "url": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html" },
+    { "n": 14, "claim": "US Census Bureau data on AI adoption by firm size, firms under 5 employees adopt far less than firms over 250.", "url": "https://www.census.gov/library/stories/2026/05/ai-use-businesses.html" },
+    { "n": 15, "claim": "MIT Project NANDA, State of AI in Business 2025, about 95 percent of enterprise generative-AI pilots produce no measurable P&L impact.", "url": "https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/" },
+    { "n": 16, "claim": "RAND, The Root Causes of Failure for AI Projects, more than 80 percent of AI projects fail, about twice the rate of non-AI IT.", "url": "https://www.rand.org/pubs/research_reports/RRA2680-1.html" }
+  ]
+}
