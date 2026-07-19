@@ -325,12 +325,15 @@ When the study passes, continue.
 ## PHASE 7 - WRITE THE CARRIER EMAIL (the voice, then the critic)
 
 1. Spawn outreach-writer with the verified study.json (it carries only the thesis,
-   the one-line build, and the honest ROI range) and the verified contact. It writes
-   the short, self-aware AI-agent-team email per OUTREACH_CRAFT.md. The study is
-   attached and does the heavy lifting, the email just gets it opened.
-2. Spawn lead-critic to judge it on specific, value-first with a small ask, and
-   human with zero tells. If it does not ship, apply its one fix, re-run the writer
-   once, and re-critic. Cap at 2 rounds.
+   the one-line build, and the honest ROI range), the verified contact, and the
+   published study URL (alaskaaihq.com/awesomeproposal/<slug>/, deterministic from the
+   slug). It writes the short, warm, human email per OUTREACH_CRAFT.md, five or six
+   sentences, with ONE hyperlink on a couple of natural words to the study URL, never a
+   bare link. It returns html_body and text_body. The study does the heavy lifting, the
+   email just gets it opened.
+2. Spawn lead-critic to judge it on warm and short, specific and value-first with a
+   small ask, and human with zero tells. If it does not ship, apply its one fix, re-run
+   the writer once, and re-critic. Cap at 2 rounds.
 
 PERSONALIZATION GATE. The final email must name at least one specific, verified,
 this-company-only fact, carry the honest ROI as a range not a hero number, and trip
@@ -374,10 +377,11 @@ home-versus-publish rule.
      proceed. A publish hiccup is never a reason to end the run.
 
 2. Create the Gmail DRAFT with create_draft. To the verified contact, from
-   docket@alaskaaihq.com, subject and body from outreach.json, with ONE clickable link
-   in the body, the study page URL, NO attachments and NO second link. The demo is
-   embedded inside that page, so a cold prospect has exactly one thing to click. Save
-   the draft id.
+   docket@alaskaaihq.com, subject from outreach.json, htmlBody the html_body (the warm
+   note with ONE word-anchored hyperlink to the study page), and body the text_body
+   (the plain-text fallback with the URL in parentheses). NO attachments, no bare URL
+   on screen, no second link, the demo is embedded inside that one page. Save the draft
+   id.
    - Send-as reality. If docket@alaskaaihq.com is not an available send-as on the
      connected account, the draft comes from the connected account. Put one plain
      line at the very top of the body telling Talon to set the sender to docket@

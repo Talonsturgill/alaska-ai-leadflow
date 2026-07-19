@@ -1,119 +1,121 @@
 # Outreach Craft
 
-The email is not the product. The attached Field Study is. The email is the short,
-self-aware note that carries it and gets it opened. The whole value, the real
-research, the recommended build, the honest ROI, is already done and attached. If
-the email reads like a template, a chatbot, or a hype marketer, it failed and does
-not ship.
+The email is not the product. The Field Study behind the link is. The email is the
+short, warm note that makes them want to open it. The whole value, the real research
+and the honest recommendation, is already done and one click away. If the email reads
+like a template, a pitch, or a hype marketer, it failed and does not ship.
 
-## The angle (why this works)
+## The feel we want
 
-We eat our own dog food, and saying so is disarming. The opener is honest, Alaska
-AI's AI agent team was told to find the standout businesses in a place and, instead
-of pitching them, to actually do the work, so it did, and a human checked it before
-it reached them. That is true, a little funny, and it flips a cold email into a gift
-that is already in their hands. The email gives the whole study first, then asks
-small. Gary Vee's line still holds, the jab earns the audacity to ask, and here the
-jab is a finished Field Study, not a teaser.
+Warm, brief, and human, like people who have actually been paying attention to their
+business and got a little curious about it. Not blunt, not salesy, not clever. The
+vibe is, hey, we have been learning about your shop and thought you would want to see
+what we found. Familiar, easy, a little understated. We did the work because we found
+them genuinely interesting, and it should read that way.
 
-The skeleton (Billy Gene, grounded, stripped of theater).
-1. The self-aware agent-team opener, honest, a little funny, never cute.
-2. Name them by exact identity, and the one specific true thing we found.
-3. Tease the study, the one build worth doing first and the honest ROI as a range,
-   and say the honest part (what could go wrong) is in there too.
-4. Point to the attached study as work already done, proof not adjectives.
-5. One small, honest, reply-first ask.
+## The template (a shape, not a script)
 
-## Voice, bold and blunt (grounded for Alaska)
+Five or six short sentences, no more. Keep the beats, change the words every time so
+it could only have been written to them. This is a frame with wiggle room, not a mail
+merge, the wording is always yours.
 
-Steal the strength of bold marketers, drop the hype. Practical Alaska operators
-distrust Outside slickness, so slickness gets deleted.
-- Blunt and specific. Take a real position on THEIR situation. Mush reads as a
-  mail merge. Direct is honest, not rude.
-- Call them out by exact identity, never a segment. "You run the lodge on the
-  Nushagak that books twelve weeks a season" beats "as a tourism business owner".
-- Lead with value delivered, not promised. The value is the attached study, so
-  point at it plainly and tease only the sharpest finding. Give before you ask.
-- Demonstrate, never claim. Zero adjectives about us. Show the finding, the
-  number, the specific fix. Marketing is math, not mystique.
-- Confidence as calm certainty. Short spoken sentences. Fragments for emphasis
-  are fine. No exclamation points, no hustle energy, no all caps. In print, hype
-  reads as cheese, and cheese reads as AI.
-- Be honest about why you are writing. "I want your business so I did the work
-  first" beats a hidden agenda.
+1. A warm, specific hello that shows we know who they are. Name the real thing about
+   their business we have been looking at.
+2. The one true thing we kept coming back to. Said like we noticed it, not like we
+   scraped it.
+3. So we did the actual work and wrote it up, free. Hyperlink a couple of natural
+   words to the study (see Hyperlink below) and say plainly it is honest about the
+   hard parts too.
+4. Optional, one light human line. That we are Alaska AI and this was built by our
+   agent team then checked by a person before it reached them, kept short and a little
+   disarming, only if it fits and does not bloat the note.
+5. A soft reply-first ask. A yes, not a call.
+6. Sign off as Talon, Alaska AI.
 
-## Hard rules on the writing (never break these)
+Wiggle room is the whole point. The beats are fixed, the wording is tuned to this one
+company. If two prospects could receive the same sentence, rewrite it.
 
-Punctuation, strict.
+## Example (Big Dan's, for calibration only, never reuse verbatim)
+
+Subject: A little research we did on Big Dan's
+
+Hi Dan and Sarah,
+We spent this week getting to know Big Dan's and kept landing on one thing. Every
+booking your online calendar cannot answer ends up on Sarah's phone, across three
+ports and four boats. It made us curious enough to just do the work, so we put
+together a short read on what we found and the one idea we would try first. It is free
+and it is <the write-up>, honest about the parts that are hard too. If it is useful
+just reply and I will send you more.
+Talon, Alaska AI
+
+Here <the write-up> is a hyperlink on those three words, not a visible URL.
+
+## Hyperlink, never a raw URL
+
+Do not drop a bare https link in the body. Hyperlink two or three natural words to the
+study so the reader sees a phrase, not a URL. Good anchors, "the write-up", "what we
+found", "the short read", "our research". The draft is created with an HTML body so
+the link is live, plus a plain-text version underneath that carries the same words
+with the URL in parentheses for clients that strip HTML. One link only, the study
+page, because the demo lives inside it now.
+
+## Voice rules (still strict where it counts)
+
 - No em dashes and no en dashes, ever. Use a period, a comma, or parentheses, or
   rewrite.
-- No colons. Restructure.
-- No semicolons. Two sentences.
-- Cut commas hard. Aim for zero or one per sentence, and never two. If a sentence
-  needs a second comma it is really two sentences, so make it two. On the final
-  pass, delete about one comma in ten that a period could replace. Fewer commas
-  reads as spoken and sure, comma pileups read as written and as AI.
-- No emojis. Straight quotes only. No exclamation points.
+- No colons. No semicolons. Two sentences instead.
+- Warm can breathe, but do not pile up commas. One or two per sentence at most, and
+  never a comma list that runs on. Comma pileups read as written, and written reads as
+  AI.
+- No emojis, straight quotes only, no exclamation points, no all caps.
+- Short spoken sentences. A fragment for warmth is fine.
 
 ## The CTA (small and reply-first)
 
-A first touch does NOT ask for a call. Too much for a cold open. Ask for a
-one-word reply that unlocks the rest.
-- "I already wrote the full read. Want it. Reply yes and it is in your inbox
-  today."
-- "No call, no pitch. If the analysis is useful we talk. If not you keep it."
-- "Say the word and I send the whole thing over."
-The intro call (https://calendly.com/talon-sturgill-ixzj/30min) is the natural
-step AFTER they reply, not the cold ask. Include it only if it fits, never as the
-opener's demand.
+A first touch never asks for a call, too much for a cold open. Ask for a one-word
+reply that opens the door. "If it is useful just reply." "Say the word and I will send
+more." The intro call (https://calendly.com/talon-sturgill-ixzj/30min) is the natural
+step AFTER they reply, never the opener's demand.
 
 ## Subject line
-Describe, do not tease. Plain and specific beats clever and vague. The first
-sentence of the body doubles as the preview text, so make it land on its own.
+
+Plain, warm, specific. It reads like a note from someone who did their homework, not a
+campaign. Describe, do not tease. The first sentence of the body doubles as the preview
+text, so make it land on its own.
 
 ## The kill-list (find and delete before it ships)
 
 Most of these are AI tells too. Any one of them can sink the whole email.
 
-Cold-email cliches. "I hope this email finds you well", "I wanted to reach out",
-"I'm reaching out because", "just following up", "circling back", "touch base",
-"hop on a quick call", "allow me to introduce myself", "my name is X and I work
-with", "I came across your", "quick question", "I know you're busy".
+Cold-email cliches. "I hope this email finds you well", "I wanted to reach out", "I'm
+reaching out because", "just following up", "circling back", "touch base", "hop on a
+quick call", "allow me to introduce myself", "my name is X and I work with", "I came
+across your", "quick question", "I know you're busy". Note, our warm opener is close
+to this cliff, so keep it specific and grounded (we have been learning about THEIR
+named business and the real thing we saw), never a generic "I came across your page".
 
-Hype and empty superlatives. Revolutionary, game changer, cutting-edge, next
-level, best in class, world class, amazing, incredible, unlock, unleash,
-supercharge, skyrocket, 10x, crush it, dominate, explode your X.
+Hype and empty superlatives. Revolutionary, game changer, cutting-edge, next level,
+best in class, world class, amazing, incredible, unlock, unleash, supercharge,
+skyrocket, 10x, crush it, dominate, explode your X.
 
-Corporate jargon. Move the needle, low-hanging fruit, synergy, leverage as a
-verb, deep dive, drive results, at the end of the day.
+Corporate jargon. Move the needle, low-hanging fruit, synergy, leverage as a verb,
+deep dive, drive results, at the end of the day.
 
 AI-writing tells. Delve, tapestry, landscape (as in "the landscape of"), realm,
 beacon, testament, showcase, underscores, noteworthy, pivotal, multifaceted,
-meticulous, intricate, commendable, paramount, commence, utilize, facilitate,
-"in today's fast-paced world", "in the ever-evolving", "now more than ever". And
-the structural tell, three list items of the same length and rhythm.
+meticulous, intricate, commendable, paramount, commence, utilize, facilitate, "in
+today's fast-paced world", "in the ever-evolving", "now more than ever". And the
+structural tell, three list items of the same length and rhythm.
 
-Spam and pressure words. FREE in caps, guaranteed, act now, limited time, click
-here, risk-free, "you won't believe", "100 percent".
+Spam and pressure words. FREE in caps, guaranteed, act now, limited time, click here,
+risk-free, "you won't believe", "100 percent".
 
-Shock theater and hype-in-print. Profanity, crude analogies, manufactured
-outrage, fear deadlines ("this will put you out of business"), the word guru,
-exclamation points, hustle and grind talk, motivational-poster lines.
+Shock theater and hype-in-print. Profanity, crude analogies, manufactured outrage,
+fear deadlines ("this will put you out of business"), the word guru, exclamation
+points, hustle and grind talk, motivational-poster lines.
 
 ## The meta-rule
-Specific and proof-driven wins. Generic and adjective-driven loses. Every
-sentence that could have been sent to any business is a sentence that reads as
-slick or as AI and gets deleted. Specificity is the whole defense.
 
-## Shape to aim for
-1. The self-aware opener, we are Alaska AI's agent team, told to find the standout
-   businesses here and to do the work instead of pitching, so we did, it is
-   attached, a human checked it first.
-2. The call-out, and the one specific true thing we found about them.
-3. The tease, the single build worth doing first and the honest ROI as a range,
-   and that the honest part is in the study too.
-4. Point to the attached Field Study as work already done for them, free.
-5. One small reply-first ask. Sign off as Talon at Alaska AI.
-
-Keep it to five to eight sentences. The study carries the weight, the email just
-opens the door.
+Specific and warm wins. Generic and adjective-driven loses. Every sentence that could
+have been sent to any business gets deleted. Specificity plus warmth is the whole
+thing, and the study does the rest.
