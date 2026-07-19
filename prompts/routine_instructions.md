@@ -379,9 +379,11 @@ home-versus-publish rule.
 2. Create the Gmail DRAFT with create_draft. To the verified contact, from
    docket@alaskaaihq.com, subject from outreach.json, htmlBody the html_body (the warm
    note with ONE word-anchored hyperlink to the study page), and body the text_body
-   (the plain-text fallback with the URL in parentheses). NO attachments, no bare URL
-   on screen, no second link, the demo is embedded inside that one page. Save the draft
-   id.
+   (the plain-text fallback with the URL in parentheses). Before creating the draft,
+   append the branded signature, config/signature.html onto the htmlBody and
+   config/signature.txt onto the text_body, so every email signs off the same
+   professional way. NO attachments, no bare URL on screen, no second link, the demo is
+   embedded inside that one page. Save the draft id.
    - Send-as reality. If docket@alaskaaihq.com is not an available send-as on the
      connected account, the draft comes from the connected account. Put one plain
      line at the very top of the body telling Talon to set the sender to docket@

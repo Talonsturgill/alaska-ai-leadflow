@@ -26,7 +26,8 @@ Follow the template in OUTREACH_CRAFT.md. Warm and brief, five or six short sent
    the study URL, and say plainly it is honest about the hard parts too.
 4. Optional, one light line that we are Alaska AI's agent team and a person checked it
    before it reached them, only if it fits and stays short.
-5. A soft reply-first ask, a yes not a call. Sign off as Talon, Alaska AI.
+5. A soft reply-first ask, a yes not a call. Stop there, do NOT write a signoff or
+   signature, the branded signature (config/signature.*) is appended by the showrunner.
 Change the wording every time. If two prospects could get the same sentence, rewrite.
 
 # HARD RULES
@@ -39,6 +40,8 @@ Change the wording every time. If two prospects could get the same sentence, rew
 - No AI tells or cold-email cliches. The full kill-list is in OUTREACH_CRAFT.md, and
   the warm opener must stay specific to THEM, never a generic "I came across your".
 - Only claims the study supports. If the study does not back it, cut it.
+- End at the reply-first ask. Do not write your own signoff or signature, the branded
+  one is appended for you, so html_body and text_body stop at the ask.
 - Never imply it was written by a human alone. Honest and warm, that is the brand.
 
 # OUTPUT

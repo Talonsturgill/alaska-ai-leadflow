@@ -3,13 +3,14 @@
   "to_source": "https://bigdansfishing.com/big-dans-crew/",
   "from_intended": "docket@alaskaaihq.com",
   "addressee": "Dan and Sarah Spies",
-  "delivery": "ONE word-anchored hyperlink in an HTML body, plus a plain-text fallback. The study page (demo embedded inside it) is the only link.",
+  "gmail_draft_id": "r-1471126463601649721",
+  "delivery": "warm short body, ONE word-anchored hyperlink, plus the fixed branded signature (config/signature.*). HTML body with plain-text fallback.",
   "study_url": "https://alaskaaihq.com/awesomeproposal/big-dans-fishing-charters/",
   "anchor": "the write-up",
   "subject": "A little research we did on Big Dan's",
-  "html_body": "<p>[Talon before you send, set the sender to docket@alaskaaihq.com, then delete this line]</p>\n<p>Hi Dan and Sarah,</p>\n<p>We spent this week getting to know Big Dan's and kept landing on one thing. Every booking your online calendar can't answer ends up on Sarah's phone, across three ports and four boats. It made us curious enough to just do the work, so we put together a short read on what we found and the one idea we'd try first. It's free and it's <a href=\"https://alaskaaihq.com/awesomeproposal/big-dans-fishing-charters/\">the write-up</a>, honest about the parts that are hard too. If it's useful just reply and I'll send you more.</p>\n<p>Talon, Alaska AI<br>(built by our agent team, checked by a human before it reached you)</p>",
-  "text_body": "[Talon before you send, set the sender to docket@alaskaaihq.com, then delete this line]\n\nHi Dan and Sarah,\n\nWe spent this week getting to know Big Dan's and kept landing on one thing. Every booking your online calendar can't answer ends up on Sarah's phone, across three ports and four boats. It made us curious enough to just do the work, so we put together a short read on what we found and the one idea we'd try first. It's free and it's the write-up (https://alaskaaihq.com/awesomeproposal/big-dans-fishing-charters/), honest about the parts that are hard too. If it's useful just reply and I'll send you more.\n\nTalon, Alaska AI\n(built by our agent team, checked by a human before it reached you)",
+  "message_text": "Hi Dan and Sarah,\n\nWe've spent the week digging into how Big Dan's runs, right down to your availability page. It tells folks that any date not showing online means a call to Sarah. So every booking the calendar can't handle lands on one phone, across three ports and four boats. We did the actual work on it, a short read on what we found and the one fix we'd start with. It's free and it's the write-up (https://alaskaaihq.com/awesomeproposal/big-dans-fishing-charters/), and we were honest about the parts that are hard too. If it's useful just reply and I'll send more.",
+  "signature": "appended from config/signature.html (HTML) and config/signature.txt (plain): Talk soon, / Talon Sturgill / Alaska AI, in-state and building / alaskaaihq.com | docket@alaskaaihq.com | book a call",
   "opens_on": "Big Dan's own availability page instruction to call Sarah at 907-598-3391 for anything the FareHarbor calendar can't answer.",
-  "style": "warm short template with a single word-anchored hyperlink, per the rewritten OUTREACH_CRAFT.md",
-  "note": "Supersedes the longer body. The live draft from the publish session can be refreshed to this warm one-link version (create new, verify, trash old), Gmail has no in-place edit."
+  "style": "warm short template, one hyperlink, branded signature, per OUTREACH_CRAFT.md",
+  "note": "Live branded draft is r-1471126463601649721. Trash the three earlier Big Dan's drafts (r-7973169061408695746, r-2246071020174168078, r-1608404883784757473) so only this one remains. Removed the generic 'kept landing on one thing' and the 'built by agent team' line per Talon."
 }

@@ -30,7 +30,9 @@ merge, the wording is always yours.
    agent team then checked by a person before it reached them, kept short and a little
    disarming, only if it fits and does not bloat the note.
 5. A soft reply-first ask. A yes, not a call.
-6. Sign off as Talon, Alaska AI.
+6. Stop at the ask. Do NOT write your own signoff or signature, the branded signature
+   (config/signature.html and config/signature.txt) is appended for you, the same on
+   every email.
 
 Wiggle room is the whole point. The beats are fixed, the wording is tuned to this one
 company. If two prospects could receive the same sentence, rewrite it.
@@ -46,9 +48,9 @@ ports and four boats. It made us curious enough to just do the work, so we put
 together a short read on what we found and the one idea we would try first. It is free
 and it is <the write-up>, honest about the parts that are hard too. If it is useful
 just reply and I will send you more.
-Talon, Alaska AI
 
-Here <the write-up> is a hyperlink on those three words, not a visible URL.
+Here <the write-up> is a hyperlink on those three words, not a visible URL. The email
+stops at the ask, the branded signature is appended after it (see The signature).
 
 ## Hyperlink, never a raw URL
 
@@ -58,6 +60,15 @@ found", "the short read", "our research". The draft is created with an HTML body
 the link is live, plus a plain-text version underneath that carries the same words
 with the URL in parentheses for clients that strip HTML. One link only, the study
 page, because the demo lives inside it now.
+
+## The signature (fixed and branded, appended for you)
+
+Every email ends with the same branded signature, appended by the showrunner from
+config/signature.html (into the HTML body) and config/signature.txt (into the
+plain-text body), so the writer stops at the reply-first ask and never writes its own
+signoff. It is a thin divider, a warm closer, Talon's name, the aurora dot mark, the
+tagline, and the links in the brand teal. This is the ONE consistent, non-personalized
+part, it stays the same for trust and legitimacy. To rebrand, edit those two files.
 
 ## Voice rules (still strict where it counts)
 
