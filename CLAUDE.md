@@ -69,16 +69,23 @@ needs that we can build.
 ## DEFINITION OF DONE (never end empty)
 
 Every run ends with one real, personalized Field Study drafted to a verified
-prospect contact. A disqualified candidate is never the end of the run. Drop it,
-leave a one-line note on why, suppress it, and go get the next best, across
-segments, until a qualified lead ships. Spending the whole room and handing back a
-"do not pursue" note with no outreach is a failed run, not a done one. The only
-non-outreach endings are the true safety stops, Supabase unreachable so we cannot
-dedupe or record, a study the critics killed that honesty will not let ship, or a
-reachable market genuinely exhausted after real effort, and even those end with a
-note to Talon, never a silent empty run. This never overrides THE ONE LAW or
-HONESTY, we still only draft, we never send, and we never fabricate a fact or a
-contact or ship hype to force a finish. Reputation counts as qualification, work
+prospect contact. A per-company failure is never the end of the run, it is always a
+drop and replace. A disqualified candidate, a study a critic kills, an email that
+will not pass the personalization gate, all of them mean drop THIS company, leave a
+one-line note on why, suppress it, and go get the next best, across segments,
+re-scouting under-covered segments when the queue runs dry, until a qualified lead
+ships. Spending the whole room and handing back a "do not pursue" note with no
+outreach is a failed run, not a done one, and so is any email whose purpose is to
+explain why a lead was not a fit. There are exactly two permitted endings, an
+outreach draft carrying a real Field Study (to a verified contact, or to Talon with
+a "[needs contact]" flag and the study still attached), or a true safety stop,
+which is ONLY Supabase unreachable so we cannot dedupe or record, or a reachable
+market genuinely exhausted after real effort across the full queue and re-scouts.
+A study the critics killed is NOT a safety stop, it is a drop and replace, we go
+find the next company that ships. Even a true safety stop ends with a note to Talon,
+never a silent empty run. This never overrides THE ONE LAW or HONESTY, we still only
+draft, we never send, and we never fabricate a fact or a contact or ship hype to
+force a finish, we just keep working the queue until an honest one ships. Reputation counts as qualification, work
 that would embarrass the brand or cut against its public voice is a disqualifier
 like any other, drop and replace.
 

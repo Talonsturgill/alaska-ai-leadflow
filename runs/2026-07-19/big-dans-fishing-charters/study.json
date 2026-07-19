@@ -8,12 +8,12 @@
     "prepared_for_first": null
   },
   "thesis": "Every booking your online calendar can't answer sends someone straight to Sarah's cell phone, and an AI front desk could answer most of those instantly, day or night, without touching anything Sarah and Dan don't already review.",
-  "finding": "Big Dan's own site tells guests exactly what to do when a date doesn't show as available online, call Sarah at 907-598-3391. That single line is doing the work of a whole reservations desk across three towns, four boats, five cabins, river trips, and hunting transport, during the four months a year when the business itself says trips fill up fast. No competitor in Homer, Seward, or Soldotna runs anything AI-driven today, so closing this gap is not catching up, it's leading.",
+  "finding": "Big Dan's own site tells guests exactly what to do when a date doesn't show as available online, call Sarah at 907-598-3391. That single line is doing the work of a whole reservations desk across three towns, four boats, five cabins, river trips, and hunting transport, through a short summer season the business itself says fills up fast. No competitor in Homer, Seward, or Soldotna runs anything AI-driven today, so closing this gap is not catching up, it's leading.",
   "homework": {
     "business": "Big Dan's Fishing Charters & Lodge is a family-owned saltwater and freshwater fishing operator on the Kenai Peninsula, run by owners Dan and Sarah Spies. Four vessels (the 50-ft Double Down and 42-ft Game Changer catamarans, plus the smaller Wanka and Blackjack) work out of Homer and Seward, guided trips run the Kenai and Kasilof Rivers, five riverfront cabins operate in Soldotna, and the business also runs vessel-based transport for spring black bear and fall Sitka blacktail deer hunts. Bookings run through FareHarbor online, or by calling Sarah directly for anything the calendar can't resolve.",
     "pain": {
       "quote": "For dates not showing availability online, your best bet is to call Sarah at 907-598-3391.",
-      "context": "Sarah Spies, office manager and co-owner, is the named single point of contact for any booking the FareHarbor calendar can't resolve, across three locations, four boats, five cabins, river trips, and hunting transport, during a compressed four-month season.",
+      "context": "Sarah Spies, office manager and co-owner, is the named single point of contact for any booking the FareHarbor calendar can't resolve, across three locations, four boats, five cabins, river trips, and hunting transport, through a compressed summer season.",
       "source": "https://bigdansfishing.com/availability/"
     },
     "competitors": [
@@ -36,7 +36,7 @@
     "forces": "Push is real, a named single point of contact across a structurally complex, three-location, two-trip-type operation during a season where demand already outstrips supply. Pull is concrete, two named small operators in adjacent trades show real gains from exactly this pattern, and it plugs into a system Big Dan's already runs. Anxiety is real too, for a five-star, review-driven brand worried about a wrong answer on a weather-sensitive booking, which is exactly why the human escalation path stays mandatory, not optional."
   },
   "build": {
-    "name": "AI front-desk chat and phone-answering agent, FareHarbor-integrated, chat-first",
+    "name": "AI front-desk chat agent, FareHarbor-integrated, chat-first",
     "what_it_does": "Answers guest questions and books whatever FareHarbor already shows as open, 24/7, across all three locations. Anything off-calendar, cross-location, weather-sensitive, or safety-adjacent goes straight to Dan and Sarah with a clean written summary instead of a cold callback, the same handoff that happens today, just with fewer routine calls reaching them first.",
     "feasibility": "The availability check and the book-or-route decision are deterministic lookups against FareHarbor, not model guesses, so the AI's job is narrowed to understanding the question and writing the reply, which keeps this at a workflow tier rather than an open-ended agent. Where we would NOT use AI, the FAQ layer over Big Dan's own three static pages (a rewritten FAQ section does that job with zero hallucination risk), the go or no-go booking decision once FareHarbor's calendar already shows a slot open or closed (a straight data read, never a model call), and any weather-related rescheduling or hunting-transport safety decision, which stays a hard rule that always escalates to Dan and Sarah.",
     "build_vs_buy": "We buy the commodity underneath it, the language model, the database, email and text delivery, and telephony if the phone channel is ever added, and we build only the part that is genuinely Big Dan's, the specific booking rules, the escalation logic, and the FareHarbor wiring.",
@@ -66,7 +66,7 @@
     }
   },
   "plan": {
-    "problem": "Anyone who wants a trip or cabin not already open on the FareHarbor calendar has exactly one path forward, call Sarah, across four boats, three towns, five cabins, and two hunting seasons, during the four months a year the business tells guests trips fill up fast.",
+    "problem": "Anyone who wants a trip or cabin not already open on the FareHarbor calendar has exactly one path forward, call Sarah, across four boats, three towns, five cabins, and two hunting seasons, through the short summer season the business tells guests fills up fast.",
     "goals": [
       "Answer availability and booking questions instantly through a chat widget, tied live to the real FareHarbor calendar.",
       "Resolve the calendar's known quirk conversationally, surfacing true availability across all four boats and both trip types on request.",
@@ -75,7 +75,7 @@
     ],
     "non_goals": [
       { "item": "Phone-answering AI in Phase 1", "reason": "Telephony integration on your existing line is unconfirmed, we will not promise it before we've verified it." },
-      { "item": "Autonomous booking or payment execution off the standard calendar", "reason": "Unattended, safety-adjacent multi-step booking checks out at roughly a coin flip end to end, not a bet worth your reputation." },
+      { "item": "Autonomous booking or payment execution off the standard calendar", "reason": "Unattended booking gets unreliable fast once it has to chain several judgment steps together, not a bet worth your reputation." },
       { "item": "Weather-driven rescheduling automation", "reason": "High cost of error, no small operator anywhere runs this today, held out entirely." },
       { "item": "Cabin-specific guest messaging for the Soldotna cabins", "reason": "No cited pain there yet, we would not invent one." },
       { "item": "A general FAQ chatbot", "reason": "It would answer questions your site already answers and never touch the actual bottleneck." }
@@ -123,7 +123,7 @@
     ]
   },
   "roi": {
-    "cost_note": "We're deliberately not quoting a five-year commitment today. Step one, a two-to-four-week baseline check, costs no new dollars, just Sarah logging real call and contact volume before anything is built. Step two, if that check and confirmed FareHarbor access clear, is the actual near-term ask, the chat-first walking skeleton plus a chat-only MVP for one peak season, no phone channel. That prices at roughly 8,000 to 14,000 dollars, implementation, training, one season of run cost, and contingency included. Continuing past that first measured season would add a recurring 1,500 to 2,800 dollars a year, a separate renewal decision made only after real results are in, never bundled into today's number.",
+    "cost_note": "We're deliberately not quoting a five-year commitment today. Step one, a two-to-four-week baseline check, costs no new dollars, just Sarah logging real call and contact volume before anything is built. And the decision rule is explicit, if that check shows off-calendar inquiry volume at or below the conservative assumption (roughly five a day), our honest recommendation is to stop there and not build, because the math does not clear at that volume. Step two, only if the baseline clears and FareHarbor access is confirmed, is the actual near-term ask, the chat-first walking skeleton plus a chat-only MVP for one peak season, no phone channel. That prices at roughly 8,000 to 14,000 dollars, implementation, training, one season of run cost, and contingency included. Continuing past that first measured season would add a recurring 1,500 to 2,800 dollars a year, a separate renewal decision made only after real results are in, never bundled into today's number.",
     "benefits": [
       { "benefit": "Sarah's reclaimed time triaging off-calendar inquiries in peak season", "kind": "capacity", "note": "No call-volume baseline exists yet, so this is a planning assumption, not a measured number, and it only becomes cash if a specific deferred hire or redeployment is confirmed." },
       { "benefit": "Recovered peak-season bookings that would otherwise lapse", "kind": "cash", "note": "The most speculative line, and the one the baseline check is meant to calibrate before real money moves. If the baseline comes in at or below the conservative assumption, this line shrinks or drops, it does not get defended." }

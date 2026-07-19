@@ -56,15 +56,29 @@ is that we did the real work and told the truth.
    build is chosen, the pick is made by synthesis after the map exists, and the
    roadmap's Later lane carries the rest of the map so nothing found is wasted.
    Watch for over-indexing on any one product, voice agents especially.
-11. ALWAYS DELIVER, NEVER END EMPTY. A disqualified candidate is never the end of
-   the run. Drop it with a one-line note, suppress it, and take the next best,
-   across segments, until a qualified lead ships. Reputation counts, work that
-   would embarrass the brand or cut against its public voice disqualifies like
-   any other reason. The only non-outreach endings are the true safety stops,
-   Supabase unreachable, a study the critics killed that honesty will not let
-   ship, or the reachable market genuinely exhausted after real effort, each
-   ending with a note to Talon, never a silent empty run. This never overrides
-   NON-NEGOTIABLES 1 through 3.
+11. ALWAYS DELIVER, NEVER END EMPTY. This is the delivery law and it is absolute.
+   A per-company failure is NEVER the end of the run, it is always a drop and
+   replace. A candidate that disqualifies, a study a critic kills, an email that
+   will not pass the personalization gate, a contact that cannot be verified, ALL
+   of these mean drop THIS company and take the next best on the replacement
+   queue, across segments, re-scouting under-covered segments when the queue runs
+   dry, until a real personalized Field Study ships. Reputation counts, work that
+   would embarrass the brand disqualifies like any other reason, and it too means
+   replace, not stop.
+   THE RUN HAS EXACTLY TWO PERMITTED ENDINGS. Either (A) a Gmail draft carrying a
+   real personalized Field Study, addressed to a verified prospect contact, or
+   addressed to Talon with a "[needs contact]" subject when the study is strong
+   but no contact could be verified (the study still ships), or (B) a TRUE SAFETY
+   STOP, which is only Supabase unreachable (cannot dedupe or record) or the
+   reachable market genuinely exhausted after the full queue and real re-scouting,
+   reported to Talon. There is no third ending. An email whose purpose is to
+   explain why some lead was not a fit, with no outreach drafted, is a FAILED run,
+   not a valid ending. A critic killing one study is not a safety stop, it is a
+   drop and replace. If you ever find yourself composing a note that explains a
+   non-fit, STOP, that is the signal to pick up the next candidate, not to end.
+   This never overrides NON-NEGOTIABLES 1 through 3, we still only draft, never
+   send, never fabricate, never ship hype, we just keep going until an honest one
+   ships.
 
 ## CONTEXT (read before starting, in this order)
 
@@ -272,10 +286,20 @@ Collect the four into out/<date>/engineering.json.
    reject. It returns ship, fix, or kill with concrete fixes. A demo that
    oversells is fixed or dropped, the study can ship without it.
 
-SHIP GATE. If study-critic says fix, apply its fixes and re-render, once. If it
-still fails, or says kill, do NOT ship a hypey or unbacked study. Draft Talon a note
-with what failed and the research attached, and record the lead as researched. If
-the study passes, continue.
+SHIP GATE. A "fix" verdict is a to-do list, not a stop. The critic's fixes are
+usually small and the showrunner applies them DIRECTLY to study.json, most are
+one-line edits to wording, sourcing, or scope, not a reason to rebuild. Apply every
+named fix and re-render, and repeat this apply-and-re-render loop until the study is
+clean, a fix verdict never ends anything. Only a "kill" is terminal, and only for a
+study that cannot be made honest, real hype or an unbacked claim that cannot be
+sourced or cut. Note the difference plainly, an honest ROI where the conservative
+case does not clear is NOT a kill, it ships with that fact disclosed and a smaller
+first step recommended, exactly the honesty that earns trust. If the critic truly
+kills the study (genuine unfixable hype or fabrication), do NOT ship it, DROP THIS
+COMPANY, suppress it with reason "study unshippable", leave a one-line note, and take
+the next name on the replacement queue, this is a drop and replace, never a run
+ending. A killed study for one company must never end the run, see NON-NEGOTIABLE 11.
+When the study passes, continue.
 
 ## PHASE 7 - WRITE THE CARRIER EMAIL (the voice, then the critic)
 
@@ -290,7 +314,11 @@ the study passes, continue.
 PERSONALIZATION GATE. The final email must name at least one specific, verified,
 this-company-only fact, carry the honest ROI as a range not a hero number, and trip
 none of the kill-list. If after two rounds it still reads generic or trips a tell,
-draft Talon a note and let a human write the opener. Write out/<date>/outreach.json.
+the study is done and real, so it still ships, draft it TO TALON with a "[needs
+opener]" subject and the study attached so a human can write the opener over your
+draft. That still ends in a real personalized Field Study going out, which satisfies
+the delivery law. A failed email is never a reason to end the run empty or to send
+Talon a bare note with no study attached. Write out/<date>/outreach.json.
 
 ## PHASE 8 - DRAFT AND RECORD
 
@@ -337,6 +365,14 @@ the outcome and the one build we recommend, the one specific hook the email open
 on, the honest ROI range, the contact used, and the draft id.
 
 COMPLETION GATE, verify before you finish.
+- ENDING IS VALID. The run ends in one of exactly two permitted states, an outreach
+  Gmail draft carrying a real personalized Field Study (to a verified contact, or to
+  Talon with "[needs contact]" or "[needs opener]" and the study still attached), OR
+  a true safety stop (Supabase unreachable, or market genuinely exhausted after the
+  full queue and re-scouts). If the run is about to end any other way, above all with
+  a note that merely explains why a lead was not a fit, it has FAILED the delivery
+  law, go back to the replacement queue and take the next candidate. A per-company
+  disqualification or a killed study is NEVER a valid ending.
 - Dedupe held. The picked domain was not in the EXCLUDE set.
 - Depth. Both rooms actually ran (research.json, claims.json, discovery.json,
   feasibility.json, engineering.json, study.json all exist and are substantial).
@@ -369,9 +405,15 @@ note stating exactly what failed.
   and re-scout spent. The rare last resort. Insert a runs row with status no_lead
   and draft Talon a short note on what was searched and why nothing cleared the
   bar. A missed day beats a bad send, and it is earned, never taken early.
-- study-critic says kill, or fix twice and still fails. Do not ship a hypey or
-  unbacked study. Draft Talon a note with the research attached, record the lead as
-  researched, and stop. Honest beats impressive.
+- study-critic says fix. NOT a failure and NOT a stop. Apply the named fixes to
+  study.json directly, re-render, and repeat until clean. A fix verdict never ends
+  the run.
+- study-critic says kill (genuine unfixable hype or fabrication). Do not ship that
+  study. DROP THIS COMPANY, suppress it (reason "study unshippable"), leave a
+  one-line note, and take the next name on the replacement queue. This is a drop and
+  replace, never a stop. Honest beats impressive, and the honest move is to go find
+  the next company that ships, not to end the run. A killed study is a per-company
+  event, never a run ending.
 - Page builder errors. It is almost always a study.json shape problem, fix the data
   and re-run. If the HTML truly cannot build, draft Talon the outreach with the
   dossier and note the study needs a hand render.
