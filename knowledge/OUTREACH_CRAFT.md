@@ -66,8 +66,8 @@ page, because the demo lives inside it now.
 Every email ends with the same branded signature, appended by the showrunner from
 config/signature.html (into the HTML body) and config/signature.txt (into the
 plain-text body), so the writer stops at the reply-first ask and never writes its own
-signoff. It is a thin divider, a warm closer, Talon's name, the aurora dot mark, the
-tagline, and the links in the brand teal. This is the ONE consistent, non-personalized
+signoff. It is a thin divider, a warm closer, Talon's name, the aurora dot mark, and
+the links in the brand teal. This is the ONE consistent, non-personalized
 part, it stays the same for trust and legitimacy. To rebrand, edit those two files.
 
 ## Voice rules (still strict where it counts)

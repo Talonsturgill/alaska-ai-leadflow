@@ -579,7 +579,7 @@ def render(study, demo_embed=None):
             out.append(f'<li>{claim}<a href="{esc(s["url"])}">{esc(s["url"])}</a></li>')
         out.append("</ol></section>")
 
-    out.append('<footer>Alaska AI, in-state and building. This study was prepared for '
+    out.append('<footer>Alaska AI. This study was prepared for '
                f'{company} and is not for redistribution.</footer>')
     out.append("</div>")  # wrap
     return "\n".join(out)

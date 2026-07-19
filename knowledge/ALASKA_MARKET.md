@@ -11,10 +11,14 @@ years of net out-migration plus extreme seasonality. Roughly a quarter of the
 workforce is nonresident. The line that lands, AI is how an Alaska business does
 more with the workers it can actually get.
 
-## Buy-local is real
-Alaskans, and especially Alaska Native corporations, prefer to work with someone
-who is here. Being genuinely in-state, understanding freeze-up and the season and
-the flights, is an edge no Lower 48 shop can fake. Lean on it, honestly.
+## Know Alaska, never fake being there
+Alaskans, and especially Alaska Native corporations, prefer a partner who genuinely
+understands their world, the season, freeze-up, the flights, the market. That
+understanding is our edge, and we earn it in the research, not by claiming a location
+we do not have. We are Alaska AI, focused on this market, but we are NOT physically
+in-state, so never write "we are here", "buy local from us", "in-state", or anything
+that implies a local storefront. Honesty is the whole brand. Show we know Alaska by
+being specific and right about their business, that is the only local proof we offer.
 
 ## Where the money and pain concentrate
 - Tourism and visitor industry. Seasonal labor crunch, booking and front-desk

@@ -3,14 +3,14 @@
   "to_source": "https://bigdansfishing.com/big-dans-crew/",
   "from_intended": "docket@alaskaaihq.com",
   "addressee": "Dan and Sarah Spies",
-  "gmail_draft_id": "r-1471126463601649721",
+  "gmail_draft_id": "r-8807614413480364979",
   "delivery": "warm short body, ONE word-anchored hyperlink, plus the fixed branded signature (config/signature.*). HTML body with plain-text fallback.",
   "study_url": "https://alaskaaihq.com/awesomeproposal/big-dans-fishing-charters/",
   "anchor": "the write-up",
   "subject": "A little research we did on Big Dan's",
   "message_text": "Hi Dan and Sarah,\n\nWe've spent the week digging into how Big Dan's runs, right down to your availability page. It tells folks that any date not showing online means a call to Sarah. So every booking the calendar can't handle lands on one phone, across three ports and four boats. We did the actual work on it, a short read on what we found and the one fix we'd start with. It's free and it's the write-up (https://alaskaaihq.com/awesomeproposal/big-dans-fishing-charters/), and we were honest about the parts that are hard too. If it's useful just reply and I'll send more.",
-  "signature": "appended from config/signature.html (HTML) and config/signature.txt (plain): Talk soon, / Talon Sturgill / Alaska AI, in-state and building / alaskaaihq.com | docket@alaskaaihq.com | book a call",
+  "signature": "appended from config/signature.html + config/signature.txt: Talk soon, / Talon Sturgill / Alaska AI / alaskaaihq.com | docket@alaskaaihq.com | book a call. No locality claim.",
   "opens_on": "Big Dan's own availability page instruction to call Sarah at 907-598-3391 for anything the FareHarbor calendar can't answer.",
-  "style": "warm short template, one hyperlink, branded signature, per OUTREACH_CRAFT.md",
-  "note": "Live branded draft is r-1471126463601649721. Trash the three earlier Big Dan's drafts (r-7973169061408695746, r-2246071020174168078, r-1608404883784757473) so only this one remains. Removed the generic 'kept landing on one thing' and the 'built by agent team' line per Talon."
+  "style": "warm short template, one hyperlink, branded signature, no in-state claim, per OUTREACH_CRAFT.md",
+  "note": "KEEPER draft is r-8807614413480364979. Trash all earlier Big Dan's drafts: r-7973169061408695746, r-2246071020174168078, r-1608404883784757473, r-1471126463601649721. Cut the generic 'kept landing on one thing', the 'built by agent team' line, and the false 'in-state' claim (Talon is not in Alaska)."
 }
