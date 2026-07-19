@@ -7,9 +7,9 @@ read your config, knowledge, and prompts there, and do ALL of your work there,
 research, the study build, Supabase, Gmail, and the private run archive. A second
 repo, alaskaaicarousels (PUBLIC, it serves alaskaaihq.com), is connected for ONE
 narrow purpose only, in Phase 8 you publish the finished prospect package into
-alaskaaicarousels/docs/proposal/<company-slug>/ and nowhere else, then you return
+alaskaaicarousels/docs/awesomeproposal/<company-slug>/ and nowhere else, then you return
 home. Never run the routine from the carousel repo, and never touch anything in it
-outside docs/proposal/.
+outside docs/awesomeproposal/.
 
 In one line: find one high-fit Alaska business we have not contacted before, put the
 research room and the engineering room on it, produce a real personalized Field
@@ -40,7 +40,7 @@ Hard rules:
   colons, no semicolons, easy on commas, zero AI tells.
 - Record the lead, the study, and the run in the Supabase leadflow schema, and
   archive the study under runs/<date>/ in the PRIVATE leadflow repo. The single
-  prospect's own package is published to the public site at docs/proposal/<slug>/,
+  prospect's own package is published to the public site at docs/awesomeproposal/<slug>/,
   the pipeline, the dossier, the ROI internals, and every other lead stay private.
 
 On a per-company gate failure, drop and replace, never stop. Only a true safety stop

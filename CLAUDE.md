@@ -116,10 +116,10 @@ Never expose the pipeline or another prospect's dossier, and never write the pip
 a dossier, ROI internals, or any other lead into the public alaskaaicarousels repo or
 the public site. The Field Study package (the study page and the demo) is the designed
 exception, it IS published to the public site, one page per prospect at
-alaskaaicarousels/docs/proposal/<company-slug>/ (served at
-alaskaaihq.com/proposal/<company-slug>/), because it is built to be handed to that
+alaskaaicarousels/docs/awesomeproposal/<company-slug>/ (served at
+alaskaaihq.com/awesomeproposal/<company-slug>/), because it is built to be handed to that
 prospect and contains only their own public facts and our proposal. The publish is
-additive and narrow, only docs/proposal/<slug>/ is ever written and nothing else in
+additive and narrow, only docs/awesomeproposal/<slug>/ is ever written and nothing else in
 the carousel repo is ever touched. A package never references another lead, the
 pipeline, or anything from the database beyond its own company.
 

@@ -122,9 +122,9 @@ Two repos are connected. Do not confuse them.
   stays here.
 - PUBLISH TARGET, alaskaaicarousels (PUBLIC, it serves alaskaaihq.com). Connected for
   ONE narrow job only. In Phase 8 you write the finished prospect package into
-  alaskaaicarousels/docs/proposal/<company-slug>/ and NOTHING else, so it serves at
-  alaskaaihq.com/proposal/<company-slug>/, then you return home. Never start the run
-  there, never touch a file outside docs/proposal/, never put the pipeline, a
+  alaskaaicarousels/docs/awesomeproposal/<company-slug>/ and NOTHING else, so it serves at
+  alaskaaihq.com/awesomeproposal/<company-slug>/, then you return home. Never start the run
+  there, never touch a file outside docs/awesomeproposal/, never put the pipeline, a
   dossier, ROI internals, or another lead there. Only the one prospect's own
   self-contained package, which is built to be handed to them.
 
@@ -342,23 +342,23 @@ pages on the site, and the email carries the links. See THE TWO REPOS above for 
 home-versus-publish rule.
 
 1. PUBLISH the package to the site. Work in the connected alaskaaicarousels repo
-   (PUBLIC, it serves alaskaaihq.com) and touch NOTHING outside docs/proposal/.
+   (PUBLIC, it serves alaskaaihq.com) and touch NOTHING outside docs/awesomeproposal/.
    - Slug the company from its display name, lowercase with hyphens, e.g.
      big-dans-fishing-charters.
    - git pull the carousel repo's main first, so you are not stale against the daily
      carousel commit.
-   - Copy the finished study to docs/proposal/<slug>/index.html and the demo to
-     docs/proposal/<slug>/demo/index.html. These are the self-contained standalone
+   - Copy the finished study to docs/awesomeproposal/<slug>/index.html and the demo to
+     docs/awesomeproposal/<slug>/demo/index.html. These are the self-contained standalone
      HTML files from Phase 5, all CSS, JS, and SVG inlined, so a proposal page cannot
      affect any other page on the site.
-   - Stage ONLY docs/proposal/<slug>/, confirm git diff shows nothing else changed,
+   - Stage ONLY docs/awesomeproposal/<slug>/, confirm git diff shows nothing else changed,
      commit, and push to main. A push under docs/** triggers the existing Pages
      deploy and the URLs go live within a couple of minutes. NEVER edit index.html,
      the docket, the sitemap, the ledgers, the engine, or anything else in that repo.
      Additive, narrow, reversible. The carousel routine and this one share main and
-     never collide because you only ever add files under docs/proposal/.
-   - The live URLs are https://alaskaaihq.com/proposal/<slug>/ (study) and
-     https://alaskaaihq.com/proposal/<slug>/demo/ (demo).
+     never collide because you only ever add files under docs/awesomeproposal/.
+   - The live URLs are https://alaskaaihq.com/awesomeproposal/<slug>/ (study) and
+     https://alaskaaihq.com/awesomeproposal/<slug>/demo/ (demo).
    - GUARDRAIL. Only the single prospect's own package goes public. The pipeline, the
      dossier, the ROI internals, and every other lead stay in the PRIVATE leadflow
      repo, always. A package never references another lead.
@@ -428,7 +428,7 @@ COMPLETION GATE, verify before you finish.
 - Honest. Every claim in the study has a source. The contact is real and verified,
   or the draft went to Talon.
 - Delivered. The Gmail draft carries the branded study link. The study is published
-  at alaskaaihq.com/proposal/<slug>/ and archived to runs/<date>/ in the private repo.
+  at alaskaaihq.com/awesomeproposal/<slug>/ and archived to runs/<date>/ in the private repo.
 - Recorded. leadflow.leads has the row and leadflow.runs has this run's row,
   nothing duplicated.
 - Draft only. Nothing was sent.
@@ -482,7 +482,7 @@ note stating exactly what failed.
 
 1. Exactly one Gmail draft exists, to the verified contact from docket@, or to Talon
    if the contact needs a human find, carrying a clickable link to the published Field
-   Study (at alaskaaihq.com/proposal/<slug>/), and a short self-aware email obeying the
+   Study (at alaskaaihq.com/awesomeproposal/<slug>/), and a short self-aware email obeying the
    voice rules and opening on a specific verified fact.
 2. The Field Study passed the study-critic and the fact-checker, follows the real
    engineering process, and its ROI is an honest range. Where the conservative case
