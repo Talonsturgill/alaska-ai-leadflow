@@ -1,20 +1,23 @@
 # The Field Study, deliverable contract
 
 What the room actually ships. The Field Study is a real, free, personalized piece
-of work we already did FOR the prospect, delivered as a single self-contained HTML
-page (plus a PDF render) attached to a Gmail draft, carried by a short, self-aware
-email. It is the whole pitch, because it is the work, not a description of the work.
+of work we already did FOR the prospect, published as its own page on the site (at
+alaskaaihq.com/awesomeproposal/<slug>/) and carried by a short, self-aware email that
+holds ONE link to it. It is the whole pitch, because it is the work, not a
+description of the work.
 
 The room fills a strict JSON object, out/<date>/study.json, and
 scripts/build_study_page.py renders it. Keeping the data and the rendering separate
 is what makes the page reliable and every claim traceable. This doc is the contract
 for both.
 
-A sibling deliverable rides along when it earns its place, out/<date>/demo.html,
-the demo-builder's self-contained interactive demonstration of the recommended
-build. Scripted from verified facts, honest about being a demo, performing nothing
-the study did not scope, and audited by the study-critic like everything else. The
-study stands alone if the demo fails.
+A sibling deliverable embeds into the study page when it earns its place,
+out/<date>/demo.html, the demo-builder's self-contained interactive demonstration of
+the recommended build. It is published at <slug>/demo/index.html and folded into the
+study page as a "See it working" section (build_study_page.py --demo-embed), so the
+prospect still has just one link to click. Scripted from verified facts, honest about
+being a demo, performing nothing the study did not scope, and audited by the
+study-critic like everything else. The study stands alone if the demo fails.
 
 ## The through-line
 
@@ -106,9 +109,11 @@ doing first. Not a brochure. A study.
 
 ## Design and build rules
 
-- One file, fully self-contained. All CSS inline, the diagram inline SVG, any image
-  a data URI. ZERO external calls, no CDN, no web fonts fetched, no analytics. It
-  must render perfectly offline from an email attachment, and it must leak nothing.
+- Self-contained, no third parties. All CSS inline, the diagram inline SVG, any image
+  a data URI. ZERO third-party calls, no CDN, no web fonts fetched, no analytics. The
+  ONLY permitted load is the same-site demo iframe (demo/index.html) when a demo
+  embeds, and the demo file is itself fully self-contained. The page renders on its
+  own and leaks nothing to anyone but the prospect.
 - On brand with the public site, dark, restrained, confident. A constellation or
   aurora accent is fine, subtle. It should look like alaskaaihq.com made it. Match
   the palette and type feel of the public site, do not invent a loud new theme.
@@ -125,9 +130,10 @@ doing first. Not a brochure. A study.
 
 Short. The self-aware AI-agent-team opener, honest and a little funny, we are
 Alaska AI's agent team, our job was to find standout {segment} companies in {place}
-and actually do the work instead of pitching, so we did, it is attached. Carry only
-the headline finding, the one-line recommended build, and the honest ROI range as a
-teaser, then point at the attached study. One small reply-first ask. It obeys every
+and actually do the work instead of pitching, so we did, it is one link away. Carry
+only the headline finding, the one-line recommended build, and the honest ROI range
+as a teaser, then point at the one link to the study, the demo is embedded inside it.
+One small reply-first ask. It obeys every
 punctuation and AI-tell rule. The study does the heavy lifting, the email just gets
 it opened.
 

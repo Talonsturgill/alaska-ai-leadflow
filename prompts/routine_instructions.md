@@ -278,15 +278,21 @@ Collect the four into out/<date>/engineering.json.
    claims.json. Leave any unverified field null so the builder drops that section.
 2. Render it. Run
    python scripts/build_study_page.py --study out/<date>/study.json
-     --out out/<date>/field-study.html --pdf
-   The HTML is the deliverable, the PDF is a best-effort portable copy. If the
-   builder errors, fix the study.json shape (it is your data, not the script) and
-   re-run. If the PDF step is skipped, that is fine, the HTML still ships.
-3. Spawn demo-builder with claims.json and study.json. It writes
-   out/<date>/demo.html, a self-contained interactive demonstration of the
-   recommended build, scripted from verified facts, honest about being a demo,
-   and never performing anything the feasibility call scoped out. If the demo
-   fails after a retry, ship without it, the study stands alone.
+     --out out/<date>/field-study.html --pdf --demo-embed demo/index.html
+   The --demo-embed folds the interactive demo into the study page as a "See it
+   working" section, so the whole package is ONE page at ONE URL, and the email needs
+   only one link. Pass --demo-embed only when a demo ships, drop it if the demo
+   failed. This is the render command everywhere, including the Phase 6 re-renders.
+   The HTML is the deliverable, the PDF a best-effort portable copy (the embedded demo
+   is hidden in the PDF, it is interactive). If the builder errors, fix the study.json
+   shape (it is your data, not the script) and re-run.
+3. Spawn demo-builder with claims.json and study.json. It writes out/<date>/demo.html,
+   a self-contained interactive demonstration of the recommended build, scripted from
+   verified facts, honest about being a demo, and never performing anything the
+   feasibility call scoped out. In Phase 8 it is published at <slug>/demo/index.html
+   and embedded inline in the study page, so the prospect still gets a single link. If
+   the demo fails after a retry, render the study without --demo-embed and ship, the
+   study stands alone.
 
 ## PHASE 6 - VERIFY AND HONESTY AUDIT (the ship gate)
 
@@ -368,8 +374,10 @@ home-versus-publish rule.
      proceed. A publish hiccup is never a reason to end the run.
 
 2. Create the Gmail DRAFT with create_draft. To the verified contact, from
-   docket@alaskaaihq.com, subject and body from outreach.json, with the branded study
-   and demo URLs in the body as clickable links, NO attachments. Save the draft id.
+   docket@alaskaaihq.com, subject and body from outreach.json, with ONE clickable link
+   in the body, the study page URL, NO attachments and NO second link. The demo is
+   embedded inside that page, so a cold prospect has exactly one thing to click. Save
+   the draft id.
    - Send-as reality. If docket@alaskaaihq.com is not an available send-as on the
      connected account, the draft comes from the connected account. Put one plain
      line at the very top of the body telling Talon to set the sender to docket@

@@ -1,0 +1,13 @@
+{
+  "to": "bigdansfishing@gmail.com",
+  "to_source": "https://bigdansfishing.com/big-dans-crew/",
+  "from_intended": "docket@alaskaaihq.com",
+  "addressee": "Dan and Sarah Spies",
+  "delivery": "ONE hosted link in the body, the study page, with the interactive demo embedded inside it as a See it working section",
+  "study_url": "https://alaskaaihq.com/awesomeproposal/big-dans-fishing-charters/",
+  "subject": "A Field Study we built for Big Dan's Fishing Charters, done and yours to read",
+  "body": "[Talon before you send, set the sender to docket@alaskaaihq.com, then delete this line]\n\nDan and Sarah,\n\nWe are Alaska AI's AI agent team. Our job this week was to find the standout charter operations on the Kenai Peninsula and instead of pitching we did the actual work, so we built Big Dan's a study and here it is.\n\nhttps://alaskaaihq.com/awesomeproposal/big-dans-fishing-charters/\n\nYour own availability page tells guests that for any date not showing online their best bet is to call Sarah at 907-598-3391, so every booking FareHarbor can't answer lands on one phone across three towns and four boats.\n\nThe study names the one build worth doing first, an AI front desk that answers those calendar questions and hands anything off-calendar or weather-sensitive straight to you two with a clean summary. The honest finding is that on the most cautious assumptions it does not pay for itself, which is why we recommend a free two-week baseline check before you spend a dollar. Payback runs from about 10 months at the best end to 20 or 30 months in the likely case. A clickable demo running on your own boats is built right into the page.\n\nReply yes if it was useful and I take it from there, no call and no pitch attached to that.\n\nTalon\nAlaska AI\n\nA person reviewed this before it reached you.",
+  "opens_on": "Big Dan's own availability page instruction to call Sarah at 907-598-3391 for anything the FareHarbor calendar can't answer.",
+  "lead_critic_verdict": "ship, clean, no fixes (judged on the earlier body; the only change since is collapsing two links to one, no new claims)",
+  "note": "The currently-live Gmail draft (r-7973169061408695746) still has two links, it was created before the one-page embed existed. It becomes this single-link version when Big Dan's is republished with the embedded-demo study, see runs/2026-07-19/big-dans-fishing-charters/PUBLISH_BIG_DANS.md."
+}
