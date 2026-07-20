@@ -60,11 +60,23 @@ is that we did the real work and told the truth.
    the run. Drop it with a one-line note, suppress it, and take the next best,
    across segments, until a qualified lead ships. Reputation counts, work that
    would embarrass the brand or cut against its public voice disqualifies like
-   any other reason. The only non-outreach endings are the true safety stops,
-   Supabase unreachable, a study the critics killed that honesty will not let
-   ship, or the reachable market genuinely exhausted after real effort, each
-   ending with a note to Talon, never a silent empty run. This never overrides
+   any other reason. There are exactly TWO non-outreach endings, Supabase
+   unreachable, or the reachable market genuinely exhausted after every queue
+   name and re-scout is spent. A critic FIX verdict is a work item you loop on
+   until it ships, never an ending. A critic KILL verdict disqualifies the
+   COMPANY, suppress and replace, it never ends the run. A note to Talon about
+   why something failed is never the deliverable. This never overrides
    NON-NEGOTIABLES 1 through 3.
+12. THE ITERATION LAW. Every artifact that passes through a critic loops,
+   produce, critique, apply the fixes, re-critique, until it MEETS THE STANDARD.
+   No round caps anywhere, and no "stop and draft a note" exits from any quality
+   gate. The gates are filters that force another iteration, never doors out of
+   the run. Many rounds is not a failure mode, it is the machine working, a run
+   that looped eight times and shipped clean beat a run that stopped early to
+   explain itself. The standards never bend to make a loop converge, the
+   artifact bends. The only thing that breaks a loop is ship (the standard is
+   met) or kill (this company cannot be served honestly, replace it and start
+   the loop on the next one).
 
 ## CONTEXT (read before starting, in this order)
 
@@ -210,6 +222,15 @@ synthesis out.
    did this), value, usability, and business viability for THIS owner. If viability
    is weak (they cannot sell, afford, or adopt it), drop to the next surviving
    candidate. Write the locked pick and the reasoning to out/<date>/pick.md.
+4. ECONOMICS PRE-CHECK (before the engineering room burns). Back-of-envelope the
+   conservative case for the SMALLEST honest ask this build supports, a Phase-1
+   pilot counts, and a pilot whose honest return is decision data (measured
+   baselines that gate a bigger spend) counts too. If no ask shape, at any size,
+   can honestly clear its own conservative bar, that is the no-pay gate firing
+   late, drop to the next surviving candidate or the next lead NOW, before Phase
+   4 spends the room. The ask the study will make must be sized here, and the
+   roi-analyst builds the case for THAT ask, not for the biggest build we can
+   imagine.
 
 NO-PAY / FEASIBILITY GATE. If the strategist honestly finds no opportunity that an
 AI build serves (pays_off false), or the feasibility engineer kills every candidate
@@ -230,9 +251,16 @@ pick, and the feasibility notes.
   non-goals with reasons, falsifiable metrics (baseline, target, timeframe),
   Phase-1 scope, what we need from them, risks, and open questions.
 - roi-analyst. The honest business case, TCO with contingency and run cost, at most
-  five benefits labeled capacity or cash, three scenarios where the conservative
-  case still clears the bar, the base-rate honesty, a payback range, and a value
-  owner. Never a single hero number.
+  five benefits labeled capacity or cash, three scenarios, the base-rate honesty,
+  a payback range, and a value owner. Never a single hero number. The case is
+  built for the ask SIZED AT THE PHASE-3 PRE-CHECK, so its conservative case
+  clears by construction (a pilot priced as decision data counts, stated in those
+  terms). The analyst returns every driver as an explicit NUMBER (volumes, hours,
+  rates, cut percentages, ramp), and the SHOWRUNNER computes every derived figure
+  (per-scenario run-rates, cumulative benefits, recovery percentages, payback)
+  with scripts/roi_math.py, never by narration. The study prints the computed
+  numbers and states the ramp. An LLM never does arithmetic the reader could
+  redo with a calculator.
 - delivery-lead. The Now, Next, Later roadmap by confidence, each item tied to a
   metric, sequenced by Cost of Delay, with staged funding gates. It also receives
   the strategist's full opportunity map, the Later lane carries the best of what
@@ -272,10 +300,22 @@ Collect the four into out/<date>/engineering.json.
    reject. It returns ship, fix, or kill with concrete fixes. A demo that
    oversells is fixed or dropped, the study can ship without it.
 
-SHIP GATE. If study-critic says fix, apply its fixes and re-render, once. If it
-still fails, or says kill, do NOT ship a hypey or unbacked study. Draft Talon a note
-with what failed and the research attached, and record the lead as researched. If
-the study passes, continue.
+SHIP GATE. Two verdicts, two routes, and neither ends the run.
+- FIX is a work item, loop until it ships. Apply every fix, re-render, and
+  re-spawn the critic. Mechanical fixes (arithmetic, citations, missing stated
+  assumptions, ask resizing) are the showrunner's to make directly, recompute any
+  number with scripts/roi_math.py rather than re-asking an agent to narrate it.
+  There is no round cap on fixes, a critic that keeps returning concrete fixes is
+  improving the study, keep going until the verdict is ship. If the SAME fix
+  bounces twice without progress, the showrunner is misapplying it, stop and
+  re-read the fix before the next round.
+- KILL means the study cannot be made honest for THIS company (fabrication risk,
+  hype with no honest core, no genuine value at any ask size). That disqualifies
+  the COMPANY, not the run. Suppress it (reason "study killed, <one line>"),
+  record the lead as researched, take the next name on the replacement queue, and
+  re-enter at Phase 2 on the replacement. Never ship a killed study, and never
+  end the run on one.
+If the study passes, continue.
 
 ## PHASE 7 - WRITE THE CARRIER EMAIL (the voice, then the critic)
 
@@ -284,13 +324,16 @@ the study passes, continue.
    the short, self-aware AI-agent-team email per OUTREACH_CRAFT.md. The study is
    attached and does the heavy lifting, the email just gets it opened.
 2. Spawn lead-critic to judge it on specific, value-first with a small ask, and
-   human with zero tells. If it does not ship, apply its one fix, re-run the writer
-   once, and re-critic. Cap at 2 rounds.
+   human with zero tells. If it does not ship, apply its fix, re-run the writer,
+   and re-critic. Loop until it ships, no round cap, per the ITERATION LAW. If
+   the same fix bounces twice without progress, the brief to the writer is the
+   problem, sharpen it (name the specific fact to open on, the exact kill-list
+   term to remove) before the next round.
 
 PERSONALIZATION GATE. The final email must name at least one specific, verified,
 this-company-only fact, carry the honest ROI as a range not a hero number, and trip
-none of the kill-list. If after two rounds it still reads generic or trips a tell,
-draft Talon a note and let a human write the opener. Write out/<date>/outreach.json.
+none of the kill-list. This gate does not open until the email passes, iterate
+until it does. Write out/<date>/outreach.json.
 
 ## PHASE 8 - DRAFT AND RECORD
 
@@ -369,9 +412,13 @@ note stating exactly what failed.
   and re-scout spent. The rare last resort. Insert a runs row with status no_lead
   and draft Talon a short note on what was searched and why nothing cleared the
   bar. A missed day beats a bad send, and it is earned, never taken early.
-- study-critic says kill, or fix twice and still fails. Do not ship a hypey or
-  unbacked study. Draft Talon a note with the research attached, record the lead as
-  researched, and stop. Honest beats impressive.
+- study-critic says fix. Never a stop, at any round count. Apply the fixes
+  (compute numbers in code, resize the ask, correct the citation), re-render,
+  re-critic, repeat until ship. Honest beats impressive, and fixed beats both.
+- study-critic says kill. Do not ship it, and do not stop. The kill disqualifies
+  the company. Suppress with reason, record the lead as researched with the
+  research archived, take the next replacement-queue name, and re-enter at
+  Phase 2. The run still ends with a real draft to a real prospect.
 - Page builder errors. It is almost always a study.json shape problem, fix the data
   and re-run. If the HTML truly cannot build, draft Talon the outreach with the
   dossier and note the study needs a hand render.

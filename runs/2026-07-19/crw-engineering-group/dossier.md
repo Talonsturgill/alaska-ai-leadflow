@@ -113,3 +113,50 @@ the above and pointing at these files. Nothing was sent or drafted to CRW.
 Everything else (hype tables, agent-washing, hero-number pattern, feasibility ladder,
 non-goals, metrics, base-rate honesty, demo honesty and scope, specificity) passed
 clean on both reads.
+
+
+---
+
+## ADDENDUM, SAME DAY, THE RUN WAS COMPLETED
+
+The hold above was overturned the same day, correctly, by the maintainer. The
+two-round fix cap that stopped the run was identified as a machine defect, not an
+honesty safeguard, and the contract was rewritten (see the ITERATION LAW in
+CLAUDE.md and NON-NEGOTIABLE 12): fix verdicts now loop until ship, mechanical
+arithmetic is computed in code (scripts/roi_math.py), the ask is sized so its
+conservative case clears at the Phase-3 economics pre-check, and a critic kill
+disqualifies the company (suppress and replace), never the run.
+
+Under the corrected process the study was finished in two more critic rounds:
+
+- Round 3 fixes: all ROI figures recomputed deterministically from stated drivers
+  ($15,340 / $41,724 / $90,120 run-rates, $65,962 / $179,413 / $387,516 cumulative,
+  22% / 76% / 220% of TCO, month-24 aggressive breakeven, drivers archived in
+  roi_drivers.json), the pilot got its own standalone case (a $20,000-$30,000
+  spend whose return is the measured baseline and a go or no-go answer, decision
+  data, stated in those terms), conservative_clears is true for the actual ask
+  while the full build's failure to clear under conservative and most-likely
+  assumptions stays stated plainly.
+- Round 3 verdict was fix on one item: the MIT 95% and RAND 80% base-rate figures
+  had no sources[] entries. Both were verified on fetched pages and added as
+  sources 11 and 12. The demo's unverified "headquarters" wording was softened.
+- Round 4 verdict: SHIP. The critic recomputed every figure by hand, confirmed it
+  reproduces, and closed with "I would defend this study line by line."
+
+The carrier email passed lead-critic on the first pass, zero kill-list hits, zero
+punctuation violations. The Gmail draft to the verified contact was created:
+
+- To: info@crweng.com (verified on https://www.crweng.com/about/leadership/)
+- Draft id: r-4599854732324211607
+- Sender: connected account, with a top-of-body block telling Talon to set the
+  sender to docket@alaskaaihq.com, ATTACH the three files in this folder
+  (field-study.html, field-study.pdf, demo.html), and delete the block before
+  sending. The Gmail connector could not carry the attachments programmatically
+  this run, so attaching them is a REQUIRED manual step, the email body promises
+  both the study and the demo.
+- The earlier note-to-Talon draft (r-8145550678405048292) is SUPERSEDED by this
+  outcome and can be discarded.
+
+leadflow.leads updated to status drafted with the new draft id. Final state:
+one real, personalized Field Study, drafted to a verified prospect contact,
+nothing sent.
