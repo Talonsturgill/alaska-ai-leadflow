@@ -60,11 +60,23 @@ is that we did the real work and told the truth.
    the run. Drop it with a one-line note, suppress it, and take the next best,
    across segments, until a qualified lead ships. Reputation counts, work that
    would embarrass the brand or cut against its public voice disqualifies like
-   any other reason. The only non-outreach endings are the true safety stops,
-   Supabase unreachable, a study the critics killed that honesty will not let
-   ship, or the reachable market genuinely exhausted after real effort, each
-   ending with a note to Talon, never a silent empty run. This never overrides
+   any other reason. There are exactly TWO non-outreach endings, Supabase
+   unreachable, or the reachable market genuinely exhausted after every queue
+   name and re-scout is spent. A critic FIX verdict is a work item you loop on
+   until it ships, never an ending. A critic KILL verdict disqualifies the
+   COMPANY, suppress and replace, it never ends the run. A note to Talon about
+   why something failed is never the deliverable. This never overrides
    NON-NEGOTIABLES 1 through 3.
+12. THE ITERATION LAW. Every artifact that passes through a critic loops,
+   produce, critique, apply the fixes, re-critique, until it MEETS THE STANDARD.
+   No round caps anywhere, and no "stop and draft a note" exits from any quality
+   gate. The gates are filters that force another iteration, never doors out of
+   the run. Many rounds is not a failure mode, it is the machine working, a run
+   that looped eight times and shipped clean beat a run that stopped early to
+   explain itself. The standards never bend to make a loop converge, the
+   artifact bends. The only thing that breaks a loop is ship (the standard is
+   met) or kill (this company cannot be served honestly, replace it and start
+   the loop on the next one).
 
 ## CONTEXT (read before starting, in this order)
 
@@ -87,9 +99,14 @@ Tools. WebSearch and WebFetch for all research (they route through Anthropic and
 work on any network policy). The Supabase connector for every leadflow read and
 write (project alaska-ai-dashboard, schema leadflow). Python for
 scripts/build_study_page.py to render the study. The Gmail connector create_draft
-for delivery, WITH attachments (it supports base64 attachments up to 25MB). ONLY
-the showrunner touches Supabase, Python, and Gmail. The subagents research and
-think and hand you structured JSON.
+for delivery. It CANNOT ATTACH FILES, its attachments parameter does not work, and
+no run may attempt it, past runs that tried produced unreadable garbage drafts.
+Deliverables travel as verified, commit-pinned GitHub links (Phase 8), and Talon
+attaches the files by hand at send time. Every draft is created with BOTH a
+plaintext body and an htmlBody (simple p tags and real links), and every draft is
+READ BACK and verified before the run counts it delivered. ONLY the showrunner
+touches Supabase, Python, and Gmail. The subagents research and think and hand
+you structured JSON.
 
 Date is America/Anchorage. Scratch lives in out/<date>/ during the run. The shipped
 study is archived under runs/<date>/<company-slug>/ in THIS private repo.
@@ -210,6 +227,15 @@ synthesis out.
    did this), value, usability, and business viability for THIS owner. If viability
    is weak (they cannot sell, afford, or adopt it), drop to the next surviving
    candidate. Write the locked pick and the reasoning to out/<date>/pick.md.
+4. ECONOMICS PRE-CHECK (before the engineering room burns). Back-of-envelope the
+   conservative case for the SMALLEST honest ask this build supports, a Phase-1
+   pilot counts, and a pilot whose honest return is decision data (measured
+   baselines that gate a bigger spend) counts too. If no ask shape, at any size,
+   can honestly clear its own conservative bar, that is the no-pay gate firing
+   late, drop to the next surviving candidate or the next lead NOW, before Phase
+   4 spends the room. The ask the study will make must be sized here, and the
+   roi-analyst builds the case for THAT ask, not for the biggest build we can
+   imagine.
 
 NO-PAY / FEASIBILITY GATE. If the strategist honestly finds no opportunity that an
 AI build serves (pays_off false), or the feasibility engineer kills every candidate
@@ -230,9 +256,16 @@ pick, and the feasibility notes.
   non-goals with reasons, falsifiable metrics (baseline, target, timeframe),
   Phase-1 scope, what we need from them, risks, and open questions.
 - roi-analyst. The honest business case, TCO with contingency and run cost, at most
-  five benefits labeled capacity or cash, three scenarios where the conservative
-  case still clears the bar, the base-rate honesty, a payback range, and a value
-  owner. Never a single hero number.
+  five benefits labeled capacity or cash, three scenarios, the base-rate honesty,
+  a payback range, and a value owner. Never a single hero number. The case is
+  built for the ask SIZED AT THE PHASE-3 PRE-CHECK, so its conservative case
+  clears by construction (a pilot priced as decision data counts, stated in those
+  terms). The analyst returns every driver as an explicit NUMBER (volumes, hours,
+  rates, cut percentages, ramp), and the SHOWRUNNER computes every derived figure
+  (per-scenario run-rates, cumulative benefits, recovery percentages, payback)
+  with scripts/roi_math.py, never by narration. The study prints the computed
+  numbers and states the ramp. An LLM never does arithmetic the reader could
+  redo with a calculator.
 - delivery-lead. The Now, Next, Later roadmap by confidence, each item tied to a
   metric, sequenced by Cost of Delay, with staged funding gates. It also receives
   the strategist's full opportunity map, the Later lane carries the best of what
@@ -272,10 +305,22 @@ Collect the four into out/<date>/engineering.json.
    reject. It returns ship, fix, or kill with concrete fixes. A demo that
    oversells is fixed or dropped, the study can ship without it.
 
-SHIP GATE. If study-critic says fix, apply its fixes and re-render, once. If it
-still fails, or says kill, do NOT ship a hypey or unbacked study. Draft Talon a note
-with what failed and the research attached, and record the lead as researched. If
-the study passes, continue.
+SHIP GATE. Two verdicts, two routes, and neither ends the run.
+- FIX is a work item, loop until it ships. Apply every fix, re-render, and
+  re-spawn the critic. Mechanical fixes (arithmetic, citations, missing stated
+  assumptions, ask resizing) are the showrunner's to make directly, recompute any
+  number with scripts/roi_math.py rather than re-asking an agent to narrate it.
+  There is no round cap on fixes, a critic that keeps returning concrete fixes is
+  improving the study, keep going until the verdict is ship. If the SAME fix
+  bounces twice without progress, the showrunner is misapplying it, stop and
+  re-read the fix before the next round.
+- KILL means the study cannot be made honest for THIS company (fabrication risk,
+  hype with no honest core, no genuine value at any ask size). That disqualifies
+  the COMPANY, not the run. Suppress it (reason "study killed, <one line>"),
+  record the lead as researched, take the next name on the replacement queue, and
+  re-enter at Phase 2 on the replacement. Never ship a killed study, and never
+  end the run on one.
+If the study passes, continue.
 
 ## PHASE 7 - WRITE THE CARRIER EMAIL (the voice, then the critic)
 
@@ -284,40 +329,56 @@ the study passes, continue.
    the short, self-aware AI-agent-team email per OUTREACH_CRAFT.md. The study is
    attached and does the heavy lifting, the email just gets it opened.
 2. Spawn lead-critic to judge it on specific, value-first with a small ask, and
-   human with zero tells. If it does not ship, apply its one fix, re-run the writer
-   once, and re-critic. Cap at 2 rounds.
+   human with zero tells. If it does not ship, apply its fix, re-run the writer,
+   and re-critic. Loop until it ships, no round cap, per the ITERATION LAW. If
+   the same fix bounces twice without progress, the brief to the writer is the
+   problem, sharpen it (name the specific fact to open on, the exact kill-list
+   term to remove) before the next round.
 
 PERSONALIZATION GATE. The final email must name at least one specific, verified,
 this-company-only fact, carry the honest ROI as a range not a hero number, and trip
-none of the kill-list. If after two rounds it still reads generic or trips a tell,
-draft Talon a note and let a human write the opener. Write out/<date>/outreach.json.
+none of the kill-list. This gate does not open until the email passes, iterate
+until it does. Write out/<date>/outreach.json.
 
 ## PHASE 8 - DRAFT AND RECORD
 
-1. Read out/<date>/field-study.html, field-study.pdf, and demo.html (when it
-   shipped), base64-encode each, and create the Gmail DRAFT with create_draft. To
-   the verified contact, from docket@alaskaaihq.com, subject and htmlBody from
-   outreach.json, attachments the HTML study, the PDF, and the demo. Save the
-   returned draft id.
-   - Send-as reality. If docket@alaskaaihq.com is not an available send-as on the
-     connected account, the draft comes from the connected account. Put one plain
-     line at the very top of the body telling Talon to set the sender to docket@
-     before he sends, then let him.
-   - No verified contact. Address the draft to Talon instead, subject prefixed
-     "[needs contact] <Company>", body the email plus a note on where the
-     decision-maker is likely reachable. The study still attaches.
-   - Attachment too big (over ~24MB combined, it never should be). Attach the HTML
-     only, and note the PDF is in runs/<date>/.
-   - Gmail connector down. Do not lose the work. Persist everything to out/<date>/
-     and runs/<date>/, record the lead with gmail_draft_id null, and make the
-     delivery summary loud that the draft must be made by hand.
-2. Archive to the PRIVATE repo. Copy the study to
+1. ARCHIVE FIRST, the links depend on it. Copy the study to
    runs/<date>/<company-slug>/field-study.html (+ .pdf and demo.html if present),
    write runs/<date>/<company-slug>/study.json and a dossier.md (the full internal
    package, research, discovery, feasibility, engineering, the pick reasoning).
-   Commit and push to a claude/ branch on this private repo. This is the private
-   paper trail, prospect data belongs here and NEVER in the public repo.
-3. Write the lead to leadflow.leads with ONE upsert, every column populated,
+   Commit and PUSH to this private repo, then record the pushed commit SHA. This
+   is the private paper trail, prospect data belongs here and NEVER in the public
+   repo.
+2. BUILD THE DRAFT, links, never attachments. The connector cannot attach files,
+   do not try. Construct a commit-pinned GitHub link for each artifact,
+   https://github.com/<owner>/<repo>/blob/<pushed-sha>/<path> (and a /tree/ link
+   for the whole folder, the one-click everything link), and VERIFY each path
+   exists at that SHA (git cat-file -e <sha>:<path>) before it enters a draft.
+   Then create the Gmail DRAFT with create_draft, to the verified contact, subject
+   from outreach.json, and BOTH bodies, a plaintext body with blank lines between
+   paragraphs, and an htmlBody with the same text in simple p tags. At the top of
+   a prospect draft sits a visually distinct action box for Talon (in HTML a
+   bordered div, in plaintext a short numbered block): download and attach the
+   three linked files (study, PDF, demo), set the sender to docket@alaskaaihq.com,
+   delete the box, then send. The email body promises attachments, so the box says
+   plainly, do not send without them. Save the returned draft id.
+   - No verified contact. Address the draft to Talon instead, subject prefixed
+     "[needs contact] <Company>", body carries the folder link, every file link,
+     where the decision-maker is likely reachable, and the ready-to-send email
+     below it for reference.
+   - Gmail connector down. Do not lose the work. Persist everything to out/<date>/
+     and runs/<date>/, record the lead with gmail_draft_id null, and make the
+     delivery summary loud that the draft must be made by hand.
+3. DELIVERY GATE, read the draft back before it counts. Fetch the draft you just
+   created (list_drafts with DRAFT_VIEW_FULL) and verify: the plaintext body came
+   back non-empty with its paragraph breaks intact, every link is present, the
+   subject and recipients are right, and nothing reads as raw markup or code.
+   Gmail rewrapping links through google.com/url is normal and passes. If the
+   draft is malformed, create a corrected draft, verify THAT one, record its id as
+   the draft of record, and say in its first line that it supersedes the broken
+   one. This gate loops until the draft reads clean, per the ITERATION LAW, an
+   unverified draft is an undelivered draft.
+4. Write the lead to leadflow.leads with ONE upsert, every column populated,
    company, normalized domain, segment, location, status (drafted if a real-contact
    draft was created, else researched), fit_score, why_picked, contact_name,
    contact_role, contact_email, contact_source, competitors (jsonb),
@@ -327,14 +388,16 @@ draft Talon a note and let a human write the opener. Write out/<date>/outreach.j
    IDEMPOTENCY. The unique index on lower(domain) is the safety net. If the insert
    conflicts, a prior partial run recorded this company, so update the existing row
    instead of creating a second draft. The whole run is safe to retry.
-4. Insert the leadflow.runs row, run_date, shortlist_count, and status success (or
+5. Insert the leadflow.runs row, run_date, shortlist_count, and status success (or
    no_lead if every candidate got suppressed or a protocol stop fired).
 
 ## PHASE 9 - DELIVER AND SELF-CHECK
 
 End with a short delivery summary in the run log, the company, why it was picked,
 the outcome and the one build we recommend, the one specific hook the email opens
-on, the honest ROI range, the contact used, and the draft id.
+on, the honest ROI range, the contact used, the draft id, and the one-click
+package folder link (the /tree/ link from Phase 8), so everything the run made is
+one click away from the summary alone.
 
 COMPLETION GATE, verify before you finish.
 - Dedupe held. The picked domain was not in the EXCLUDE set.
@@ -346,8 +409,11 @@ COMPLETION GATE, verify before you finish.
   no kill-list term. The study could not have been produced for anyone else.
 - Honest. Every claim in the study has a source. The contact is real and verified,
   or the draft went to Talon.
-- Delivered. The Gmail draft carries the study attachment. The study is archived to
-  runs/<date>/ in this private repo.
+- Delivered. The Gmail draft was READ BACK and renders clean (paragraphs intact,
+  no raw code), and every artifact (study, PDF, demo, dossier) is one click away
+  through commit-pinned links verified against the pushed SHA. No attachment was
+  attempted through the connector. The study is archived to runs/<date>/ in this
+  private repo and the delivery summary carries the package folder link.
 - Recorded. leadflow.leads has the row and leadflow.runs has this run's row,
   nothing duplicated.
 - Draft only. Nothing was sent.
@@ -369,9 +435,13 @@ note stating exactly what failed.
   and re-scout spent. The rare last resort. Insert a runs row with status no_lead
   and draft Talon a short note on what was searched and why nothing cleared the
   bar. A missed day beats a bad send, and it is earned, never taken early.
-- study-critic says kill, or fix twice and still fails. Do not ship a hypey or
-  unbacked study. Draft Talon a note with the research attached, record the lead as
-  researched, and stop. Honest beats impressive.
+- study-critic says fix. Never a stop, at any round count. Apply the fixes
+  (compute numbers in code, resize the ask, correct the citation), re-render,
+  re-critic, repeat until ship. Honest beats impressive, and fixed beats both.
+- study-critic says kill. Do not ship it, and do not stop. The kill disqualifies
+  the company. Suppress with reason, record the lead as researched with the
+  research archived, take the next replacement-queue name, and re-enter at
+  Phase 2. The run still ends with a real draft to a real prospect.
 - Page builder errors. It is almost always a study.json shape problem, fix the data
   and re-run. If the HTML truly cannot build, draft Talon the outreach with the
   dossier and note the study needs a hand render.
@@ -393,13 +463,16 @@ note stating exactly what failed.
 
 ## SUCCESS CRITERIA (all must hold)
 
-1. Exactly one Gmail draft exists, to the verified contact from docket@, or to Talon
-   if the contact needs a human find, with the Field Study attached (HTML, plus PDF
-   when it rendered), and a short self-aware email obeying the voice rules and
-   opening on a specific verified fact.
+1. Exactly one clean, read-back-verified Gmail draft of record exists, to the
+   verified contact from docket@, or to Talon if the contact needs a human find,
+   with every artifact (study HTML, PDF, demo) one click away through verified
+   commit-pinned links and the Talon action box telling him to attach the files
+   at send time, and a short self-aware email obeying the voice rules and opening
+   on a specific verified fact. The prospect receives real attachments when Talon
+   sends, the routine itself never attempts one through the connector.
 2. The Field Study passed the study-critic and the fact-checker, follows the real
-   engineering process, and its ROI is an honest range with the conservative case
-   clearing the bar.
+   engineering process, and its ROI is an honest range whose ACTUAL ASK clears
+   the conservative bar.
 3. leadflow.leads has one new fully-populated row, leadflow.runs has this run's row,
    nothing duplicated, and the study is archived under runs/<date>/ in this private
    repo.

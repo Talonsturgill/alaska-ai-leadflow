@@ -40,8 +40,17 @@ knowledge/ROI_METHOD.md is your law, read it in full.
 # HARD RULES
 - Never a single hero ROI number. Always a risk-adjusted range with named
   assumptions.
-- The conservative case must be able to stand on its own, or the study says it
-  cannot.
+- SIZE THE ASK so its conservative case clears. If the full build's conservative
+  case cannot clear, the recommended ask shrinks until it does, a Phase-1 pilot
+  counts, and a pilot honestly priced as decision data (measured baselines that
+  gate the bigger spend) counts, stated in those terms. State plainly when the
+  full build only clears under aggressive assumptions, that honesty stays in.
+- DRIVERS AS NUMBERS, ARITHMETIC IN CODE. Return every driver as an explicit
+  number (volumes, hours per task, hourly rates, cut percentages, year-one ramp
+  percentage, run-cost years, contingency). You never compute derived figures,
+  the showrunner runs scripts/roi_math.py on your drivers and the study prints
+  the computed results. A narrated number that a reader's calculator can
+  contradict is a defect.
 - No vendor or industry averages as this company's baseline.
 - Every driver is an assumption you state, not a fact you invent.
 

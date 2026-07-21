@@ -1,0 +1,43 @@
+{
+  "scenarios": {
+    "conservative": {
+      "pursuits_per_year": 24,
+      "benefit_lines": [
+        {"label": "PE/PM drafting", "hours_per_pursuit": 15, "rate": 90, "cut": 0.25},
+        {"label": "BD compliance", "hours_per_pursuit": 6, "rate": 45, "cut": 0.50}
+      ],
+      "avoided_cost_lines": [
+        {"label": "disqualification risk", "events_per_year": 1, "cost_per_event": 8000, "reduction": 0.5}
+      ],
+      "implementation": 95000, "training": 18000,
+      "run_cost_per_year": 30000, "run_cost_years": 4.5,
+      "contingency": 0.20, "year1_ramp": 0.30, "years": 5
+    },
+    "most_likely": {
+      "pursuits_per_year": 36,
+      "benefit_lines": [
+        {"label": "PE/PM drafting", "hours_per_pursuit": 20, "rate": 105, "cut": 0.30},
+        {"label": "BD compliance", "hours_per_pursuit": 8, "rate": 52.5, "cut": 0.575}
+      ],
+      "avoided_cost_lines": [
+        {"label": "disqualification risk", "events_per_year": 1.5, "cost_per_event": 11500, "reduction": 0.6}
+      ],
+      "implementation": 80000, "training": 12600,
+      "run_cost_per_year": 24000, "run_cost_years": 4.5,
+      "contingency": 0.175, "year1_ramp": 0.30, "years": 5
+    },
+    "aggressive": {
+      "pursuits_per_year": 48,
+      "benefit_lines": [
+        {"label": "PE/PM drafting", "hours_per_pursuit": 25, "rate": 120, "cut": 0.35},
+        {"label": "BD compliance", "hours_per_pursuit": 10, "rate": 60, "cut": 0.65}
+      ],
+      "avoided_cost_lines": [
+        {"label": "disqualification risk", "events_per_year": 2, "cost_per_event": 15000, "reduction": 0.7}
+      ],
+      "implementation": 65000, "training": 7200,
+      "run_cost_per_year": 18000, "run_cost_years": 4.5,
+      "contingency": 0.15, "year1_ramp": 0.30, "years": 5
+    }
+  }
+}
