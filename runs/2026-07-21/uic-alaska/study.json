@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "company": "UIC Government Services (Ukpeagvik Inupiat Corporation / Bowhead Family of Companies)",
+    "domain": "uicalaska.com",
+    "segment": "anc",
+    "place": "Utqiagvik and Anchorage, Alaska",
+    "date": "2026-07-21",
+    "prepared_for_first": "Lori"
+  },
+  "thesis": "UIC Government Services runs a lean shared proposal team across 300 plus federal contracts and 30 plus 8(a) subsidiaries while two direct Alaska Native corporation peers, Koniag Government Services and ASRC Federal, already advertise shipped AI capability that UIC's own public materials do not answer.",
+  "finding": "Bowhead, the federal-services arm of Ukpeagvik Inupiat Corporation, supports more than 3,000 employees across over 300 prime and subcontracts through a family of mostly 8(a)-certified subsidiaries. Industry-wide, government contractors report spending an average of 84 hours on a single proposal, and margins have compressed from 20 percent to 17 percent in the last year (Deltek's 2026 Clarity study). Two of UIC's closest structural peers in the same 8(a) lane, Koniag Government Services and ASRC Federal, have already shipped and are marketing named AI platforms with published results. UIC's public materials show no equivalent capability story yet, a real, closeable gap rather than a hard one.",
+  "homework": {
+    "business": "Ukpeagvik Inupiat Corporation is the Alaska Native Village Corporation for Utqiagvik. It runs as a diversified holding company, North Slope municipal services and resource operations, commercial and civil construction, government construction, and UIC Government Services, which operates nationally as the Bowhead Family of Companies, doing advanced technology, engineering, logistics, manufacturing, and IT and defense work through 30 plus mostly 8(a)-certified subsidiaries. UIC itself reports over 4,700 employees, and Bowhead alone runs more than 3,000 employees supporting over 300 prime and subcontracts.",
+    "pain": {
+      "quote": "more than 3,000 employees supporting over 300 prime and subcontracts",
+      "context": "That volume, spread across 30 plus legally distinct 8(a) subsidiaries with a shared BD and proposal staff, is the same lean-team, high-volume profile that comparable federal contractors describe as their hardest bottleneck, turning a solicitation into a compliant, submittable proposal fast enough to actually bid it.",
+      "source": "https://www.bowhead.com/about/"
+    },
+    "competitors": [
+      {"name": "ASRC Federal", "what_ai": "A public AI and ML practice page describing five named competencies, plus named federal deployments for NOAA and USGS EROS.", "source": "https://www.asrcfederal.com/ai/"},
+      {"name": "Koniag Government Services", "what_ai": "Built and markets CASPER, a proprietary LLM platform, publishing a 75 percent reduction in contract requirements analysis time and 29.3 million dollars in procurement savings, plus a new dedicated AI subsidiary.", "source": "https://www.koniag-gs.com/ai-investments-deliver-powerful-results-for-koniag-government-services-and-federal-customers/"},
+      {"name": "Akima", "what_ai": "Advertises Artificial Intelligence and Machine Learning directly as an IT capability service line.", "source": "https://www.akima.com/our-capabilities/information-technology/"},
+      {"name": "Chenega Corporation", "what_ai": "No public AI or ML capability page found, the only verified AI-adjacent item is an internal recruiting-software case study, not a marketed federal offering.", "source": "https://hireez.com/resources/case-studies/chenega-case-study/"},
+      {"name": "Doyon Government Group", "what_ai": "No AI or automation capability found anywhere on their site.", "source": "https://www.doyongovgrp.com/"}
+    ],
+    "industry_ai": [
+      {"point": "A comparably-profiled 8(a) contractor with a lean proposal team, Spathe Systems, cut proposal draft turnaround from 2.5 to 3 weeks down to 24 hours after adopting an AI shredding and drafting tool, scaling monthly task-order responses from about 2 to 7 or 8 without adding staff.", "source": "https://www.govdash.com/blog/from-3-weeks-to-24-hours-how-spathe-systems-4x-d-rfp-output-with-govdash"},
+      {"point": "Another lean-staffed federal IT contractor, Initiate Government Solutions, reports saving 10 to 20 hours per month per business-development employee and cutting bid or no-bid analysis from days to hours with a similar tool.", "source": "https://www.goveagle.com/case-study/faster-higher-quality-rfps-for-a-growing-federal-it-provider"},
+      {"point": "Federal agencies themselves more than doubled their own AI use from 2023 to 2024, per GAO's review of federal agency AI acquisitions, so the buy side is moving in the same direction.", "source": "https://www.gao.gov/products/gao-26-107859"},
+      {"point": "Industry-wide, 90 percent of government contractors now report some AI use, up from 45 percent a year earlier, yet only 5 percent call their AI maturity fully developed, adoption is real but still shallow across the field.", "source": "https://www.govconwire.com/articles/clarity-report-2026-deltek-govcon-kevin-plexico"}
+    ]
+  },
+  "opportunity": {
+    "job": "When a no-notice or surge federal RFP or IDIQ task order drops, help the shared BD and proposal staff produce a compliant first draft fast enough to actually bid it, instead of losing the pursuit to the clock.",
+    "why": "Highest-scoring opportunity across the whole business map, tied to two hard industry numbers (84 hours average per proposal, margin compression from 20 to 17 percent) and to two directly comparable peers, Spathe Systems and Initiate Government Solutions, who report exactly this kind of turnaround gain on the same bottleneck. It also closes the visible AI-capability gap against Koniag and ASRC Federal as a natural byproduct, a real shipped tool is a legitimate capability story, a marketing page alone is not.",
+    "current_workaround": "Manual reading of solicitations by a shared BD and proposal staff, a boilerplate document library, and spreadsheet-based compliance tracking, spread thin across 30 plus subsidiaries and 300 plus contracts.",
+    "forces": "Push comes from industry-wide margin compression and two peers already shipping AI capability UIC cannot currently answer. Pull comes from a narrow, already-proven slice, shredding a solicitation into a compliance matrix and a first draft. The honest anxiety is real too, federal data-handling rules (CUI, FedRAMP, CMMC) limit what may touch AI at all, which is exactly why the build below is scoped to stay inside the safe part of that line, not around it."
+  },
+  "build": {
+    "name": "RFP Shredder and Compliance Matrix, with a first-draft assembly assistant",
+    "what_it_does": "Reads an incoming solicitation and auto-extracts its requirements into a structured compliance matrix. A proposal manager reviews and signs off on that matrix before anything else happens. Only after sign-off does the assistant assemble a first-pass response draft, pulled from Bowhead's own boilerplate and past-proposal library, so a subject matter expert starts from an edit instead of a blank page. Every draft is clearly labeled not for submission, a human artifact, not a shortcut around one.",
+    "feasibility": "This is scoped as a fixed, checkpointed workflow, never an autonomous agent, because a missed or misread requirement in the compliance matrix can disqualify a federal bid outright, that is not a redo, it is a lost pursuit. The mandatory human sign-off on the matrix is what keeps that risk honest. We would NOT use AI for the deadline and filing-tracking side of this business, that is a deterministic calendar and reminder problem that a rule solves exhaustively and safely, and we would not use AI anywhere near DCAA-sensitive pricing narratives or the technical volume, those stay entirely human-authored, always.",
+    "build_vs_buy": "We buy the commodity layer, the base language model, the embedding and retrieval store, and the identity provider you already run, and we build only the two things that are actually yours, the classification of your own boilerplate library and the extraction logic tuned to your own proposal format.",
+    "architecture": {
+      "nodes": [
+        {"id": "user_bd_staff", "label": "Shared BD and Proposal Staff", "kind": "user"},
+        {"id": "sys_intake", "label": "Solicitation Intake", "kind": "system"},
+        {"id": "sys_classification", "label": "Boilerplate Classification and CUI Tagging", "kind": "system"},
+        {"id": "data_corpus", "label": "Non-CUI Boilerplate and Past-Proposal Corpus", "kind": "data"},
+        {"id": "ai_shredder", "label": "RFP Shredder", "kind": "ai"},
+        {"id": "sys_matrix_builder", "label": "Compliance Matrix Builder", "kind": "system"},
+        {"id": "data_matrix", "label": "Compliance Matrix", "kind": "data"},
+        {"id": "user_signoff", "label": "Proposal Manager Sign-off", "kind": "user"},
+        {"id": "ai_draft_assembly", "label": "First-Draft Assembly Assistant", "kind": "ai"},
+        {"id": "data_draft_output", "label": "Draft Output, labeled non-submittable", "kind": "data"},
+        {"id": "user_human_process", "label": "Existing human process, technical volume and pricing", "kind": "user"}
+      ],
+      "edges": [
+        {"from": "user_bd_staff", "to": "sys_intake", "label": "uploads a chosen solicitation"},
+        {"from": "sys_classification", "to": "data_corpus", "label": "writes CUI status and access tags on cleared documents only"},
+        {"from": "sys_intake", "to": "ai_shredder", "label": "passes solicitation text for extraction"},
+        {"from": "ai_shredder", "to": "sys_matrix_builder", "label": "writes extracted candidate requirements"},
+        {"from": "sys_matrix_builder", "to": "data_matrix", "label": "writes structured matrix rows"},
+        {"from": "data_matrix", "to": "user_signoff", "label": "presented for human review"},
+        {"from": "user_signoff", "to": "data_matrix", "label": "approve, reject, or edit, a blocking gate"},
+        {"from": "data_matrix", "to": "ai_draft_assembly", "label": "only approved rows released to drafting"},
+        {"from": "ai_draft_assembly", "to": "data_corpus", "label": "retrieves matching boilerplate passages"},
+        {"from": "ai_draft_assembly", "to": "data_draft_output", "label": "writes a cited first-pass draft"},
+        {"from": "data_draft_output", "to": "user_human_process", "label": "handed off for technical volume and pricing, entirely human"}
+      ],
+      "caption": "A checkpointed workflow, not an agent. A solicitation is shredded into a compliance matrix a human must approve before any drafting occurs, drafting draws only from a classified, non-CUI corpus, and pricing and the technical volume never enter the system at all."
+    }
+  },
+  "plan": {
+    "problem": "A lean shared BD and proposal staff supports 300 plus prime and subcontracts across 30 plus 8(a) subsidiaries. Industry-wide, contractors spend an average of 84 hours per proposal and margins have compressed from 20 to 17 percent in the last year, and two direct 8(a) peers already market shipped AI capability UIC cannot currently answer.",
+    "goals": [
+      "Cut the manual time spent shredding a solicitation into a compliance matrix.",
+      "Give the team a first-pass response draft so subject matter experts edit instead of draft from scratch.",
+      "Hold or improve compliance-matrix accuracy versus today's manual process, never trade speed for a missed requirement.",
+      "Give UIC a genuine, honestly-scoped AI capability story for 8(a) evaluations."
+    ],
+    "non_goals": [
+      {"item": "Automating DCAA-sensitive pricing narratives.", "reason": "Stays entirely human-authored, the cost of a wrong pricing narrative is high and unforgiving."},
+      {"item": "Automating the technical volume.", "reason": "Judgment-heavy content that stays human-owned."},
+      {"item": "Touching CUI-classified content at launch.", "reason": "Federal data-handling rules for this are unresolved industry-wide and unconfirmed for your own library, so launch content is limited to what is confirmed public and non-CUI."},
+      {"item": "A full end-to-end capture-to-submission system.", "reason": "Chaining that many steps with minimal human review compounds error risk well past what a federal proposal can tolerate, not on this roadmap at any near phase."},
+      {"item": "Rolling out to all 30 plus subsidiaries at once.", "reason": "Launch is scoped to one pilot subsidiary to prove the corpus, the workflow, and adoption first."}
+    ],
+    "metrics": [
+      {"metric": "Proposal-manager hours per proposal on requirement shredding and first-draft assembly", "baseline": "Assumed, no confirmed baseline exists yet, to be measured during discovery. Industry average is 84 hours per proposal, used only as directional context.", "target": "50 percent reduction versus the measured baseline", "timeframe": "Within 90 days of production launch"},
+      {"metric": "Requirement-miss rate in the compliance matrix", "baseline": "Assumed, not currently tracked, to be measured via a baseline logging period", "target": "No increase versus the measured manual-process baseline", "timeframe": "Ongoing, reviewed at 6 months"},
+      {"metric": "Qualified live pursuits per month at current staffing", "baseline": "Assumed, current volume not established, to be measured from the pilot subsidiary's pursuit log", "target": "1 to 2 additional qualified pursuits per month versus the measured baseline", "timeframe": "6 months post-launch"},
+      {"metric": "Adoption, share of eligible proposals routed through the tool", "baseline": "0 percent, new tool", "target": "70 percent or more", "timeframe": "Within 90 days of launch"}
+    ],
+    "phase1_must": [
+      "A discovery pass that classifies your boilerplate and past-proposal library for CUI status and per-entity access rights, before any corpus is built.",
+      "A corpus built only from content confirmed non-CUI and public, scoped to one pilot subsidiary.",
+      "A requirements shredder producing a structured compliance matrix.",
+      "A mandatory human sign-off checkpoint before any draft assembly proceeds.",
+      "First-pass draft assembly from the approved corpus, clearly labeled non-submittable.",
+      "A baseline measurement of your current manual cycle time and requirement-miss rate."
+    ],
+    "phase1_later": [
+      "Expansion beyond the pilot subsidiary.",
+      "Any handling of CUI-classified content, only once compliant infrastructure is in place.",
+      "A rules-based bid or no-bid triage workflow, a separate, lower-stakes opportunity.",
+      "A cross-subsidiary compliance and filing assistant, pending a confirmed document corpus."
+    ],
+    "need_from_you": [
+      "A designated pilot subsidiary and its BD and proposal lead.",
+      "Access to that subsidiary's existing boilerplate and past-proposal archive, whatever form it exists in today.",
+      "Legal or compliance sign-off on which content is cleared for the launch corpus.",
+      "Cooperation logging a short baseline period of current cycle time and requirement misses.",
+      "A small sample of recent won and lost solicitations with their matching responses, to test extraction and drafting quality against real outcomes.",
+      "IT and security sign-off on where the tool and the extracted corpus will live."
+    ],
+    "risks": [
+      {"risk": "Your boilerplate and past-proposal library may not be digitized or centralized across subsidiaries.", "mitigation": "The discovery phase tests this before any corpus is built, if the library is not usable as-is, scope narrows to whichever subsidiary has the most workable content, or the timeline honestly extends."},
+      {"risk": "The library may carry more CUI-classified content than expected.", "mitigation": "The classification pass is a hard gate, launch scope narrows to whatever is confirmed non-CUI."},
+      {"risk": "A missed requirement reaching a real proposal is high-stakes.", "mitigation": "The mandatory human sign-off checkpoint before drafting proceeds."},
+      {"risk": "Draft quality could create more correction work than it saves if the boilerplate corpus is thin.", "mitigation": "Pilot on one subsidiary first and track SME editing time directly as a go or no-go signal."},
+      {"risk": "The peer outcomes cited here are self-reported by other companies, not independently audited.", "mitigation": "Used only as directional context, phase 1 measures your own before-and-after numbers as the real evidence."}
+    ],
+    "open_questions": [
+      {"q": "Is the existing boilerplate and past-proposal library digitized and centrally accessible today?", "owner": "UIC BD and proposal leadership, during discovery"},
+      {"q": "What proportion of the library is CUI versus non-CUI, and does access control already exist?", "owner": "UIC legal or compliance, during discovery"},
+      {"q": "Which subsidiary should be the pilot?", "owner": "UIC leadership, before build starts"}
+    ]
+  },
+  "roi": {
+    "cost_note": "Five-year total cost of ownership, three scenarios, each carrying a 15 to 20 percent contingency. Aggressive about 329,000 dollars, most-likely about 481,000 dollars, conservative about 657,000 dollars. The single biggest and least certain line is a CUI-classification discovery phase, 45,000 to 90,000 dollars, this is currently unscoped, if your library turns out to be more CUI-tagged than assumed, real cost and timeline could run above even the conservative band.",
+    "benefits": [
+      {"benefit": "Draft-cycle time reduction on non-CUI requirement shredding and first-draft assembly", "kind": "capacity", "note": "Assumed 25 percent (conservative) to 55 percent (aggressive) reduction on the AI-addressable slice of proposal work, anchored only to the industry-wide 84 hours per proposal average, not a confirmed baseline for your own team. Converts to cash only if headcount stays flat while pursuing more pursuits, capacity created, not automatically dollars saved."},
+      {"benefit": "Additional pursuit throughput at current staffing", "kind": "capacity", "note": "Peer companies report scaling monthly proposal responses without adding staff, but these are their numbers, not yours, and are kept out of the dollar total entirely, presented here only as directional upside."},
+      {"benefit": "Avoided rework from a compliance gap caught before submission", "kind": "cash", "note": "Assumed 1 (conservative) to 3 (aggressive) near-miss incidents avoided per year, no confirmed error-rate baseline exists for your team, this reflects what the mandatory human sign-off gate is actually protecting against."}
+    ],
+    "scenarios": {
+      "conservative": "Cash benefit run-rate about 30,100 dollars a year against a five-year cost of about 657,000 dollars. Cumulative five-year benefit is about 141,000 dollars against 657,000 dollars of cost, a shortfall of roughly 516,000 dollars. Ongoing run cost alone exceeds the modeled benefit even at full adoption.",
+      "most_likely": "Cash benefit run-rate about 84,800 dollars a year against a five-year cost of about 481,000 dollars. Cumulative five-year benefit is about 398,600 dollars against 481,000 dollars, a shortfall of about 82,000 dollars at year five, with payback projected 6 to 7 years out, beyond this study's window.",
+      "aggressive": "Cash benefit run-rate about 241,350 dollars a year against a five-year cost of about 329,000 dollars, the only scenario that pays back inside a normal window, roughly 18 to 24 months."
+    },
+    "conservative_clears": false,
+    "payback_range": "Only the aggressive scenario clears within a normal payback window, roughly 18 to 24 months. The most-likely scenario does not clear inside five years as modeled, and the conservative scenario does not pay back at all on these assumptions. We are telling you this plainly rather than picking a friendlier number, the single biggest unscoped driver is the CUI-classification discovery phase, which is exactly why phase 1 is a small, staged, gated pilot and not a full commitment.",
+    "base_rate_note": "Most enterprise AI pilots do not pay off, roughly 95 percent show no measured profit and loss impact by one widely cited estimate, and roughly 80 percent of AI projects fail by another. This build is designed to sit in the smaller share that works, workflow-embedded, a checkpointed process rather than an open-ended agent, and owned by the staff who feel the time savings directly. Told honestly, this specific case is still fragile on the numbers as scoped today, which is exactly why we recommend proving it on one subsidiary before committing further.",
+    "value_owner": "The UIC Government Services executive who owns the shared BD and proposal function's cycle time and win rate. Lori Schendel's own verified title, Senior Director of Sole Source Contracts, UIC Government Services, places her inside that same entity, which makes her a reasonable point of contact for a go or no-go conversation, though her specific day-to-day authority over BD tooling and budget is not confirmed from a public page and should be established at kickoff along with naming the actual working metric owner."
+  },
+  "roadmap": {
+    "now": [
+      {"item": "A CUI-classification discovery pass over your existing boilerplate and past-proposal library, before any corpus is built.", "metric": "100 percent of the target library classified, with a clear go or no-go on how much non-CUI content is usable at launch."},
+      {"item": "A walking-skeleton pilot of the RFP Shredder and Compliance Matrix on a single real solicitation, with a mandatory human sign-off checkpoint.", "metric": "Compliance-matrix extraction accuracy against a human-produced baseline, and elapsed time to a signed-off matrix."},
+      {"item": "First-draft assembly from the cleared non-CUI corpus, gated behind the signed-off matrix.", "metric": "Draft turnaround time versus baseline, and SME editing hours per draft versus today."}
+    ],
+    "next": [
+      {"item": "A rules-based bid or no-bid triage workflow.", "metric": "Additional viable pursuits screened per month without added headcount."},
+      {"item": "Expand the shredder and drafting workflow beyond the pilot, still confined to the validated non-CUI corpus.", "metric": "Proposal draft cycle time reduction across a wider sample, and staff adoption rate."}
+    ],
+    "later": [
+      {"item": "A cross-subsidiary compliance and filing assistant, only once a real, centralized document corpus and a confirmed pain are independently established.", "metric": "Hours of duplicated per-entity compliance administration avoided."},
+      {"item": "Any move toward a fuller, more automated capture-to-proposal system, only after this workflow has a real production track record.", "metric": "End-to-end reliability against a human-audited baseline."}
+    ],
+    "gates": "The next phase is funded only when the last phase's actual, measured results clear a stated bar, discovery must confirm a usable non-CUI corpus before the pilot starts, and the pilot must match or beat human-baseline accuracy with a measured cycle-time reduction before anything expands beyond one subsidiary."
+  },
+  "honest_part": [
+    "We do not know yet whether your boilerplate and past-proposal library is digitized and centrally accessible, that is the first thing this build tests, not an assumption baked into the estimate.",
+    "The conservative financial case, as scoped today, does not clear on its own, only the aggressive case pays back inside a normal window, which is exactly why phase 1 is a small, staged pilot with a stated go or no-go bar rather than a full commitment.",
+    "The peer outcomes we cite (Spathe Systems, Initiate Government Solutions) are their self-reported numbers, not independently audited, and not a promise about what happens at UIC.",
+    "A missed or misread requirement in a federal proposal is a real, unforgiving cost, which is why the compliance matrix always gets a mandatory human sign-off before anything downstream runs.",
+    "This tool never touches DCAA-sensitive pricing or the technical volume, and never touches CUI-classified content until your own compliance team clears an infrastructure path for that, both stay entirely in your existing human process."
+  ],
+  "next_step": "If this is worth a real look, reply and tell us which subsidiary to start with. No commitment, just a conversation about whether the discovery pass is worth running.",
+  "sources": [
+    {"n": 1, "claim": "UIC's mission statement and growth vision", "url": "https://uicalaska.com/about-uic/mission-vision-values/"},
+    {"n": 2, "claim": "UIC reports over 4,700 employees, with offices in Utqiagvik, Anchorage, and across the country", "url": "https://uicalaska.com/about-uic/"},
+    {"n": 3, "claim": "Bowhead employee count and contract volume", "url": "https://www.bowhead.com/about/"},
+    {"n": 4, "claim": "Lori Schendel, Senior Director of Sole Source Contracts, named contact", "url": "https://uicalaska.com/our-companies/uic-commercial-services/anc-sole-source-contracting/"},
+    {"n": 5, "claim": "ASRC Federal's public AI and ML practice", "url": "https://www.asrcfederal.com/ai/"},
+    {"n": 6, "claim": "Koniag Government Services' CASPER platform and published results", "url": "https://www.koniag-gs.com/ai-investments-deliver-powerful-results-for-koniag-government-services-and-federal-customers/"},
+    {"n": 7, "claim": "Akima's AI and ML capability line", "url": "https://www.akima.com/our-capabilities/information-technology/"},
+    {"n": 8, "claim": "Chenega Corporation has no public AI capability page", "url": "https://hireez.com/resources/case-studies/chenega-case-study/"},
+    {"n": 9, "claim": "Doyon Government Group has no AI or automation capability found", "url": "https://www.doyongovgrp.com/"},
+    {"n": 10, "claim": "Spathe Systems' proposal turnaround improvement", "url": "https://www.govdash.com/blog/from-3-weeks-to-24-hours-how-spathe-systems-4x-d-rfp-output-with-govdash"},
+    {"n": 11, "claim": "Initiate Government Solutions' time savings", "url": "https://www.goveagle.com/case-study/faster-higher-quality-rfps-for-a-growing-federal-it-provider"},
+    {"n": 12, "claim": "Federal agency AI use more than doubled 2023 to 2024", "url": "https://www.gao.gov/products/gao-26-107859"},
+    {"n": 13, "claim": "90 percent of government contractors report some AI use, only 5 percent fully developed, and contractors average 84 hours per proposal with margins compressed from 20 to 17 percent", "url": "https://www.govconwire.com/articles/clarity-report-2026-deltek-govcon-kevin-plexico"}
+  ]
+}
