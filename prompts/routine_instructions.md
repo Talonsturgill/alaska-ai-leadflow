@@ -369,15 +369,22 @@ until it does. Write out/<date>/outreach.json.
    - Gmail connector down. Do not lose the work. Persist everything to out/<date>/
      and runs/<date>/, record the lead with gmail_draft_id null, and make the
      delivery summary loud that the draft must be made by hand.
-3. DELIVERY GATE, read the draft back before it counts. Fetch the draft you just
-   created (list_drafts with DRAFT_VIEW_FULL) and verify: the plaintext body came
-   back non-empty with its paragraph breaks intact, every link is present, the
-   subject and recipients are right, and nothing reads as raw markup or code.
-   Gmail rewrapping links through google.com/url is normal and passes. If the
-   draft is malformed, create a corrected draft, verify THAT one, record its id as
-   the draft of record, and say in its first line that it supersedes the broken
-   one. This gate loops until the draft reads clean, per the ITERATION LAW, an
-   unverified draft is an undelivered draft.
+3. DELIVERY GATE, read the draft back and let the code judge it. Fetch the draft
+   you just created (list_drafts with DRAFT_VIEW_FULL), save the response JSON to
+   out/<date>/draft_readback.json, and run
+   python scripts/delivery_check.py --readback out/<date>/draft_readback.json
+     --draft-id <the id> --link <folder /tree/ link> --link <each file link>
+   The gate passes ONLY on exit 0. The script verifies mechanically what the
+   prose requires: body present with paragraph breaks intact, no raw markup or
+   base64 blobs, subject and recipients set, every link present in the body
+   (Gmail's google.com/url rewrapping is unwrapped and passes), every link
+   commit-pinned to a 40-hex SHA, every path alive at that SHA, and the SHA
+   reachable from a pushed remote ref. If it fails, create a corrected draft,
+   re-fetch, re-run the check, and record the passing draft's id as the draft of
+   record, saying in its first line that it supersedes the broken one. This gate
+   loops until the check exits 0, per the ITERATION LAW. An unverified draft is
+   an undelivered draft, and a run may not record itself delivered while this
+   check fails.
 4. Write the lead to leadflow.leads with ONE upsert, every column populated,
    company, normalized domain, segment, location, status (drafted if a real-contact
    draft was created, else researched), fit_score, why_picked, contact_name,
@@ -409,11 +416,12 @@ COMPLETION GATE, verify before you finish.
   no kill-list term. The study could not have been produced for anyone else.
 - Honest. Every claim in the study has a source. The contact is real and verified,
   or the draft went to Talon.
-- Delivered. The Gmail draft was READ BACK and renders clean (paragraphs intact,
-  no raw code), and every artifact (study, PDF, demo, dossier) is one click away
-  through commit-pinned links verified against the pushed SHA. No attachment was
-  attempted through the connector. The study is archived to runs/<date>/ in this
-  private repo and the delivery summary carries the package folder link.
+- Delivered. scripts/delivery_check.py exited 0 against the draft of record's
+  read-back, proving the draft renders clean (paragraphs intact, no raw code)
+  and every artifact (study, PDF, demo, dossier) is one click away through
+  commit-pinned links alive at the pushed SHA. No attachment was attempted
+  through the connector. The study is archived to runs/<date>/ in this private
+  repo and the delivery summary carries the package folder link.
 - Recorded. leadflow.leads has the row and leadflow.runs has this run's row,
   nothing duplicated.
 - Draft only. Nothing was sent.
