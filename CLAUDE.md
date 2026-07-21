@@ -97,14 +97,16 @@ it never becomes an excuse for shipping nothing. Reputation counts as
 qualification, work that would embarrass the brand or cut against its public
 voice is a disqualifier like any other, drop and replace.
 
-DELIVERED has a quality bar of its own. The Gmail connector cannot attach files,
-no run attempts it, ever. Every artifact reaches Talon as a commit-pinned GitHub
-link verified against the pushed SHA, with the whole package one click away, and
-every draft is built with both a plaintext and an HTML body and then READ BACK
-and verified to render clean (paragraphs intact, links present, no raw code)
-before the run may count it delivered. An unread draft is an undelivered draft.
-A run whose deliverable Talon cannot read or click has not delivered, whatever
-else it did right.
+DELIVERED has a quality bar of its own, and it is enforced in code. The Gmail
+connector cannot attach files, no run attempts it, ever. Every artifact reaches
+Talon as a commit-pinned GitHub link verified against the pushed SHA, with the
+whole package one click away, and every draft is built with both a plaintext and
+an HTML body and then READ BACK, with scripts/delivery_check.py run against the
+read-back. The run may not count itself delivered until that check exits 0, it
+verifies the body renders clean (paragraphs intact, no raw code or base64), the
+links are pinned to a real pushed commit, and every linked path is alive at that
+SHA. An unread draft is an undelivered draft. A run whose deliverable Talon
+cannot read or click has not delivered, whatever else it did right.
 
 ## THE ITERATION LAW (loops are the machine working)
 
