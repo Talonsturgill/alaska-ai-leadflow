@@ -99,9 +99,14 @@ Tools. WebSearch and WebFetch for all research (they route through Anthropic and
 work on any network policy). The Supabase connector for every leadflow read and
 write (project alaska-ai-dashboard, schema leadflow). Python for
 scripts/build_study_page.py to render the study. The Gmail connector create_draft
-for delivery, WITH attachments (it supports base64 attachments up to 25MB). ONLY
-the showrunner touches Supabase, Python, and Gmail. The subagents research and
-think and hand you structured JSON.
+for delivery. It CANNOT ATTACH FILES, its attachments parameter does not work, and
+no run may attempt it, past runs that tried produced unreadable garbage drafts.
+Deliverables travel as verified, commit-pinned GitHub links (Phase 8), and Talon
+attaches the files by hand at send time. Every draft is created with BOTH a
+plaintext body and an htmlBody (simple p tags and real links), and every draft is
+READ BACK and verified before the run counts it delivered. ONLY the showrunner
+touches Supabase, Python, and Gmail. The subagents research and think and hand
+you structured JSON.
 
 Date is America/Anchorage. Scratch lives in out/<date>/ during the run. The shipped
 study is archived under runs/<date>/<company-slug>/ in THIS private repo.
@@ -337,30 +342,43 @@ until it does. Write out/<date>/outreach.json.
 
 ## PHASE 8 - DRAFT AND RECORD
 
-1. Read out/<date>/field-study.html, field-study.pdf, and demo.html (when it
-   shipped), base64-encode each, and create the Gmail DRAFT with create_draft. To
-   the verified contact, from docket@alaskaaihq.com, subject and htmlBody from
-   outreach.json, attachments the HTML study, the PDF, and the demo. Save the
-   returned draft id.
-   - Send-as reality. If docket@alaskaaihq.com is not an available send-as on the
-     connected account, the draft comes from the connected account. Put one plain
-     line at the very top of the body telling Talon to set the sender to docket@
-     before he sends, then let him.
-   - No verified contact. Address the draft to Talon instead, subject prefixed
-     "[needs contact] <Company>", body the email plus a note on where the
-     decision-maker is likely reachable. The study still attaches.
-   - Attachment too big (over ~24MB combined, it never should be). Attach the HTML
-     only, and note the PDF is in runs/<date>/.
-   - Gmail connector down. Do not lose the work. Persist everything to out/<date>/
-     and runs/<date>/, record the lead with gmail_draft_id null, and make the
-     delivery summary loud that the draft must be made by hand.
-2. Archive to the PRIVATE repo. Copy the study to
+1. ARCHIVE FIRST, the links depend on it. Copy the study to
    runs/<date>/<company-slug>/field-study.html (+ .pdf and demo.html if present),
    write runs/<date>/<company-slug>/study.json and a dossier.md (the full internal
    package, research, discovery, feasibility, engineering, the pick reasoning).
-   Commit and push to a claude/ branch on this private repo. This is the private
-   paper trail, prospect data belongs here and NEVER in the public repo.
-3. Write the lead to leadflow.leads with ONE upsert, every column populated,
+   Commit and PUSH to this private repo, then record the pushed commit SHA. This
+   is the private paper trail, prospect data belongs here and NEVER in the public
+   repo.
+2. BUILD THE DRAFT, links, never attachments. The connector cannot attach files,
+   do not try. Construct a commit-pinned GitHub link for each artifact,
+   https://github.com/<owner>/<repo>/blob/<pushed-sha>/<path> (and a /tree/ link
+   for the whole folder, the one-click everything link), and VERIFY each path
+   exists at that SHA (git cat-file -e <sha>:<path>) before it enters a draft.
+   Then create the Gmail DRAFT with create_draft, to the verified contact, subject
+   from outreach.json, and BOTH bodies, a plaintext body with blank lines between
+   paragraphs, and an htmlBody with the same text in simple p tags. At the top of
+   a prospect draft sits a visually distinct action box for Talon (in HTML a
+   bordered div, in plaintext a short numbered block): download and attach the
+   three linked files (study, PDF, demo), set the sender to docket@alaskaaihq.com,
+   delete the box, then send. The email body promises attachments, so the box says
+   plainly, do not send without them. Save the returned draft id.
+   - No verified contact. Address the draft to Talon instead, subject prefixed
+     "[needs contact] <Company>", body carries the folder link, every file link,
+     where the decision-maker is likely reachable, and the ready-to-send email
+     below it for reference.
+   - Gmail connector down. Do not lose the work. Persist everything to out/<date>/
+     and runs/<date>/, record the lead with gmail_draft_id null, and make the
+     delivery summary loud that the draft must be made by hand.
+3. DELIVERY GATE, read the draft back before it counts. Fetch the draft you just
+   created (list_drafts with DRAFT_VIEW_FULL) and verify: the plaintext body came
+   back non-empty with its paragraph breaks intact, every link is present, the
+   subject and recipients are right, and nothing reads as raw markup or code.
+   Gmail rewrapping links through google.com/url is normal and passes. If the
+   draft is malformed, create a corrected draft, verify THAT one, record its id as
+   the draft of record, and say in its first line that it supersedes the broken
+   one. This gate loops until the draft reads clean, per the ITERATION LAW, an
+   unverified draft is an undelivered draft.
+4. Write the lead to leadflow.leads with ONE upsert, every column populated,
    company, normalized domain, segment, location, status (drafted if a real-contact
    draft was created, else researched), fit_score, why_picked, contact_name,
    contact_role, contact_email, contact_source, competitors (jsonb),
@@ -370,14 +388,16 @@ until it does. Write out/<date>/outreach.json.
    IDEMPOTENCY. The unique index on lower(domain) is the safety net. If the insert
    conflicts, a prior partial run recorded this company, so update the existing row
    instead of creating a second draft. The whole run is safe to retry.
-4. Insert the leadflow.runs row, run_date, shortlist_count, and status success (or
+5. Insert the leadflow.runs row, run_date, shortlist_count, and status success (or
    no_lead if every candidate got suppressed or a protocol stop fired).
 
 ## PHASE 9 - DELIVER AND SELF-CHECK
 
 End with a short delivery summary in the run log, the company, why it was picked,
 the outcome and the one build we recommend, the one specific hook the email opens
-on, the honest ROI range, the contact used, and the draft id.
+on, the honest ROI range, the contact used, the draft id, and the one-click
+package folder link (the /tree/ link from Phase 8), so everything the run made is
+one click away from the summary alone.
 
 COMPLETION GATE, verify before you finish.
 - Dedupe held. The picked domain was not in the EXCLUDE set.
@@ -389,8 +409,11 @@ COMPLETION GATE, verify before you finish.
   no kill-list term. The study could not have been produced for anyone else.
 - Honest. Every claim in the study has a source. The contact is real and verified,
   or the draft went to Talon.
-- Delivered. The Gmail draft carries the study attachment. The study is archived to
-  runs/<date>/ in this private repo.
+- Delivered. The Gmail draft was READ BACK and renders clean (paragraphs intact,
+  no raw code), and every artifact (study, PDF, demo, dossier) is one click away
+  through commit-pinned links verified against the pushed SHA. No attachment was
+  attempted through the connector. The study is archived to runs/<date>/ in this
+  private repo and the delivery summary carries the package folder link.
 - Recorded. leadflow.leads has the row and leadflow.runs has this run's row,
   nothing duplicated.
 - Draft only. Nothing was sent.
@@ -440,13 +463,16 @@ note stating exactly what failed.
 
 ## SUCCESS CRITERIA (all must hold)
 
-1. Exactly one Gmail draft exists, to the verified contact from docket@, or to Talon
-   if the contact needs a human find, with the Field Study attached (HTML, plus PDF
-   when it rendered), and a short self-aware email obeying the voice rules and
-   opening on a specific verified fact.
+1. Exactly one clean, read-back-verified Gmail draft of record exists, to the
+   verified contact from docket@, or to Talon if the contact needs a human find,
+   with every artifact (study HTML, PDF, demo) one click away through verified
+   commit-pinned links and the Talon action box telling him to attach the files
+   at send time, and a short self-aware email obeying the voice rules and opening
+   on a specific verified fact. The prospect receives real attachments when Talon
+   sends, the routine itself never attempts one through the connector.
 2. The Field Study passed the study-critic and the fact-checker, follows the real
-   engineering process, and its ROI is an honest range with the conservative case
-   clearing the bar.
+   engineering process, and its ROI is an honest range whose ACTUAL ASK clears
+   the conservative bar.
 3. leadflow.leads has one new fully-populated row, leadflow.runs has this run's row,
    nothing duplicated, and the study is archived under runs/<date>/ in this private
    repo.

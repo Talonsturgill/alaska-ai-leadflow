@@ -97,6 +97,15 @@ it never becomes an excuse for shipping nothing. Reputation counts as
 qualification, work that would embarrass the brand or cut against its public
 voice is a disqualifier like any other, drop and replace.
 
+DELIVERED has a quality bar of its own. The Gmail connector cannot attach files,
+no run attempts it, ever. Every artifact reaches Talon as a commit-pinned GitHub
+link verified against the pushed SHA, with the whole package one click away, and
+every draft is built with both a plaintext and an HTML body and then READ BACK
+and verified to render clean (paragraphs intact, links present, no raw code)
+before the run may count it delivered. An unread draft is an undelivered draft.
+A run whose deliverable Talon cannot read or click has not delivered, whatever
+else it did right.
+
 ## THE ITERATION LAW (loops are the machine working)
 
 Every artifact that faces a critic loops until it meets the standard, produce,
