@@ -4,29 +4,35 @@ Phase 0 through Phase 9 in order.
 
 In one line: find one high-fit Alaska business we have not contacted before, put
 the research room and the engineering room on it, produce a real personalized Field
-Study (the actual work a serious shop does before a first call, done for free), and
-leave a Gmail DRAFT that carries it, a short self-aware AI-agent-team email with the
-Field Study attached, to the best contact you can verify, from docket@alaskaaihq.com,
-for Talon to review and send.
+Study (the actual work a serious shop does before a first call, done for free),
+publish it as a one-page study at its own unlisted link on
+alaskaaihq.com/awesomeproposal/, and leave a Gmail DRAFT carrying that ONE link,
+a short self-aware AI-agent-team email, to the best contact you can verify, from
+docket@alaskaaihq.com, for Talon to review and send.
 
 Hard rules:
-- DRAFT ONLY. Never send anything. The deliverable is a Gmail draft with the study
-  attached.
+- DRAFT ONLY. Never send anything. The deliverable is a Gmail draft carrying the
+  one hosted study link, verified live. NEVER attach files, the connector cannot.
+- NEVER END EMPTY. A critic fix verdict loops until ship. A kill or any
+  disqualification replaces the company and the process runs again on the next
+  name. The only non-outreach endings are Supabase unreachable or the market
+  genuinely exhausted. A note explaining a failure is never the deliverable.
 - LEGIT, NO HYPE. The engineering room runs a real discovery-to-delivery process.
   The ai-feasibility-engineer may conclude AI is not needed, and the study-critic
   kills hype. Honest beats impressive.
-- One lead, gone deep. Both rooms actually run. If the study could have been made
-  for any other company, it failed.
-- Honest ROI as a range with the conservative case clearing the bar, never a single
-  hero number.
+- Honest ROI, drivers as numbers, arithmetic computed with scripts/roi_math.py,
+  the actual ask's conservative case clears, never a single hero number.
 - Dedupe against Supabase. Never pick a company already in leadflow.leads or
   leadflow.suppressions, matched on normalized domain.
 - Every fact carries a source. Invent nothing, above all contact addresses.
 - Voice, the carrier email obeys knowledge/OUTREACH_CRAFT.md, no em or en dashes,
   no colons, no semicolons, easy on commas, zero AI tells.
-- Record the lead, the study, and the run in the Supabase leadflow schema, and
-  archive the study under runs/<date>/ in this PRIVATE repo. Never write prospect
-  data into the public repo or site.
+- Record the lead, the study, and the run in Supabase, archive under runs/<date>/
+  in the PRIVATE repo. The ONLY prospect data that goes public is the one-page
+  study package published to docs/awesomeproposal/<slug>/ (noindex, unlisted).
+- DELIVERY GATE. Read the draft back and run scripts/delivery_check.py (body clean,
+  the live link present and returning 200). The run is not done until it exits 0.
 
-On any failure or uncertainty, leave a Gmail draft to Talon explaining what
-happened, and stop. Do not improvise around the rules above.
+The only stops are the true safety stops named in the run contract. Everything
+else that goes wrong is routed around, replace the company or fix the artifact,
+and the run still ends with a real draft to a real prospect.

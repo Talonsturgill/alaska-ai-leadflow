@@ -166,6 +166,11 @@ td .k{color:#fff;font-weight:560}
 .next{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
   border-radius:16px;padding:22px 22px;margin-top:8px}
 
+/* embedded demo */
+.demoembed{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel);margin:6px 0 0}
+.demoembed iframe{display:block;width:100%;height:660px;border:0;background:var(--bg)}
+@media print{.demoembed{display:none}}
+
 /* sources */
 ol.src-list{font-size:12.5px;color:var(--faint);padding-left:20px;margin:6px 0 0}
 ol.src-list li{margin:0 0 6px;word-break:break-word}
@@ -321,7 +326,7 @@ def sec_open(h2, h3=None):
     return s
 
 
-def render(study):
+def render(study, demo_embed=None):
     m = study.get("meta", {})
     company = esc(m.get("company") or "your company")
     out = []
@@ -424,6 +429,18 @@ def render(study):
             cards.append(f'<div class="card"><h4>Build vs buy</h4><p>{esc(b["build_vs_buy"])}</p></div>')
         if cards:
             out.append(f'<div class="grid c2" style="margin-top:6px">{"".join(cards)}</div>')
+        out.append("</section>")
+
+    # ---- see it working (embedded demo) ----
+    if demo_embed:
+        src = esc(demo_embed)
+        out.append(sec_open("See it working", "A live demo, built on your own facts"))
+        out.append('<p>This is a scripted demonstration of the build above, running on your own '
+                   'operation. It is honest about being a demo, and it does nothing the study did not '
+                   f'scope. Click through it right here, or <a href="{src}" target="_blank" '
+                   'rel="noopener">open it full screen</a>.</p>')
+        out.append(f'<div class="demoembed"><iframe src="{src}" '
+                   'title="Interactive demo of the recommended build" loading="lazy"></iframe></div>')
         out.append("</section>")
 
     # ---- the plan ----
@@ -562,15 +579,15 @@ def render(study):
             out.append(f'<li>{claim}<a href="{esc(s["url"])}">{esc(s["url"])}</a></li>')
         out.append("</ol></section>")
 
-    out.append('<footer>Alaska AI, in-state and building. This study was prepared for '
+    out.append('<footer>Alaska AI. This study was prepared for '
                f'{company} and is not for redistribution.</footer>')
     out.append("</div>")  # wrap
     return "\n".join(out)
 
 
-def build_html(study):
+def build_html(study, demo_embed=None):
     title = esc((study.get("meta") or {}).get("company") or "Alaska AI")
-    body = render(study)
+    body = render(study, demo_embed)
     return (
         "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\">"
         "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">"
@@ -616,12 +633,14 @@ def main():
     ap.add_argument("--study", required=True, help="path to study.json")
     ap.add_argument("--out", required=True, help="output .html path")
     ap.add_argument("--pdf", action="store_true", help="also render a PDF (best effort)")
+    ap.add_argument("--demo-embed", default=None,
+                    help="relative src of the demo to embed inline as a section, e.g. demo/index.html")
     args = ap.parse_args()
 
     with open(args.study, encoding="utf-8") as fh:
         study = json.load(fh)
 
-    html_str = build_html(study)
+    html_str = build_html(study, args.demo_embed)
     os.makedirs(os.path.dirname(os.path.abspath(args.out)) or ".", exist_ok=True)
     with open(args.out, "w", encoding="utf-8") as fh:
         fh.write(html_str)

@@ -1,8 +1,8 @@
 # Outreach Craft
 
-The email is not the product. The attached Field Study is. The email is the short,
+The email is not the product. The linked Field Study is. The email is the short,
 self-aware note that carries it and gets it opened. The whole value, the real
-research, the recommended build, the honest ROI, is already done and attached. If
+research, the recommended build, the honest ROI, is already done and one click away. If
 the email reads like a template, a chatbot, or a hype marketer, it failed and does
 not ship.
 
@@ -21,7 +21,7 @@ The skeleton (Billy Gene, grounded, stripped of theater).
 2. Name them by exact identity, and the one specific true thing we found.
 3. Tease the study, the one build worth doing first and the honest ROI as a range,
    and say the honest part (what could go wrong) is in there too.
-4. Point to the attached study as work already done, proof not adjectives.
+4. Point to the linked study as work already done, proof not adjectives.
 5. One small, honest, reply-first ask.
 
 ## Voice, bold and blunt (grounded for Alaska)
@@ -32,7 +32,7 @@ distrust Outside slickness, so slickness gets deleted.
   mail merge. Direct is honest, not rude.
 - Call them out by exact identity, never a segment. "You run the lodge on the
   Nushagak that books twelve weeks a season" beats "as a tourism business owner".
-- Lead with value delivered, not promised. The value is the attached study, so
+- Lead with value delivered, not promised. The value is the linked study, so
   point at it plainly and tease only the sharpest finding. Give before you ask.
 - Demonstrate, never claim. Zero adjectives about us. Show the finding, the
   number, the specific fix. Marketing is math, not mystique.
@@ -108,11 +108,11 @@ slick or as AI and gets deleted. Specificity is the whole defense.
 ## Shape to aim for
 1. The self-aware opener, we are Alaska AI's agent team, told to find the standout
    businesses here and to do the work instead of pitching, so we did, it is
-   attached, a human checked it first.
+   at the link, a human checked it first.
 2. The call-out, and the one specific true thing we found about them.
 3. The tease, the single build worth doing first and the honest ROI as a range,
    and that the honest part is in the study too.
-4. Point to the attached Field Study as work already done for them, free.
+4. Point to the linked Field Study as work already done for them, free.
 5. One small reply-first ask. Sign off as Talon at Alaska AI.
 
 Keep it to five to eight sentences. The study carries the weight, the email just

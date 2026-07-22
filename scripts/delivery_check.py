@@ -31,7 +31,9 @@ import json
 import re
 import subprocess
 import sys
+import time
 import urllib.parse
+import urllib.request
 
 GH_LINK = re.compile(
     r"https://github\.com/([^/\s]+)/([^/\s]+)/(blob|tree)/([^/\s]+)(?:/([^\s?#]*))?"
@@ -69,11 +71,30 @@ def check_github_link(url, repo_dir, failures):
         failures.append(f"pinned sha not reachable from any pushed remote ref: {ref}")
 
 
+def check_live_link(url, failures, tries=6, wait=20):
+    """The hosted study must actually serve. Retries absorb Pages deploy lag."""
+    last = None
+    for attempt in range(tries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "alaska-ai-delivery-check"})
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                body = resp.read(4096).decode("utf-8", "replace")
+                if resp.status == 200 and len(body) > 500:
+                    return
+                last = f"status {resp.status}, {len(body)} bytes"
+        except Exception as e:  # noqa: BLE001
+            last = str(e)
+        if attempt < tries - 1:
+            time.sleep(wait)
+    failures.append(f"live link not serving after {tries} tries ({last}): {url}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--readback", required=True)
     ap.add_argument("--draft-id")
     ap.add_argument("--link", action="append", default=[])
+    ap.add_argument("--live-link", action="append", default=[])
     ap.add_argument("--repo-dir", default=".")
     ap.add_argument("--min-paragraphs", type=int, default=2)
     args = ap.parse_args()
@@ -118,6 +139,9 @@ def main():
 
     for link in args.link:
         check_github_link(link, args.repo_dir, failures)
+
+    for link in args.live_link:
+        check_live_link(link, failures)
 
     if failures:
         print("DELIVERY CHECK FAILED")
