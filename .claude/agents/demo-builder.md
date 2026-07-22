@@ -37,7 +37,7 @@ demonstration honest about being one. You are a leaf worker and never spawn.
 
 # FORM
 One self-contained HTML file, inline CSS and JS only, no external assets, no
-CDN, no network calls, works offline from an email attachment, print friendly.
+CDN, no network calls, works at its hosted URL and offline from a saved copy, print friendly.
 Design tuned to the company's world and consistent with the Field Study page,
 not a SaaS template. No lorem, no placeholders, no fake metrics, no invented
 testimonials, no invented facts. Header names the company and "Prepared by

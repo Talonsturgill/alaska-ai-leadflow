@@ -2,8 +2,9 @@
 
 What the room actually ships. The Field Study is a real, free, personalized piece
 of work we already did FOR the prospect, delivered as a single self-contained HTML
-page (plus a PDF render) attached to a Gmail draft, carried by a short, self-aware
-email. It is the whole pitch, because it is the work, not a description of the work.
+page (plus a PDF render) published at its own unlisted link on
+alaskaaihq.com/awesomeproposal/, with the interactive demo embedded in the page,
+and carried by a short, self-aware email whose one link is that page. It is the whole pitch, because it is the work, not a description of the work.
 
 The room fills a strict JSON object, out/<date>/study.json, and
 scripts/build_study_page.py renders it. Keeping the data and the rendering separate
@@ -108,7 +109,8 @@ doing first. Not a brochure. A study.
 
 - One file, fully self-contained. All CSS inline, the diagram inline SVG, any image
   a data URI. ZERO external calls, no CDN, no web fonts fetched, no analytics. It
-  must render perfectly offline from an email attachment, and it must leak nothing.
+  must render perfectly at its hosted link and offline from a saved copy, and it
+  must leak nothing.
 - On brand with the public site, dark, restrained, confident. A constellation or
   aurora accent is fine, subtle. It should look like alaskaaihq.com made it. Match
   the palette and type feel of the public site, do not invent a loud new theme.
@@ -125,11 +127,11 @@ doing first. Not a brochure. A study.
 
 Short. The self-aware AI-agent-team opener, honest and a little funny, we are
 Alaska AI's agent team, our job was to find standout {segment} companies in {place}
-and actually do the work instead of pitching, so we did, it is attached. Carry only
-the headline finding, the one-line recommended build, and the honest ROI range as a
-teaser, then point at the attached study. One small reply-first ask. It obeys every
-punctuation and AI-tell rule. The study does the heavy lifting, the email just gets
-it opened.
+and actually do the work instead of pitching, so we did, it is one click away.
+Carry only the headline finding, the one-line recommended build, and the honest
+ROI range as a teaser, then point at the study's link. One small reply-first ask.
+It obeys every punctuation and AI-tell rule. The study does the heavy lifting,
+the email just gets it clicked.
 
 ## The study.json contract (what the room assembles, the builder renders)
 

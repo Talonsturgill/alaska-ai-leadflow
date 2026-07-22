@@ -98,15 +98,19 @@ qualification, work that would embarrass the brand or cut against its public
 voice is a disqualifier like any other, drop and replace.
 
 DELIVERED has a quality bar of its own, and it is enforced in code. The Gmail
-connector cannot attach files, no run attempts it, ever. Every artifact reaches
-Talon as a commit-pinned GitHub link verified against the pushed SHA, with the
-whole package one click away, and every draft is built with both a plaintext and
-an HTML body and then READ BACK, with scripts/delivery_check.py run against the
-read-back. The run may not count itself delivered until that check exits 0, it
-verifies the body renders clean (paragraphs intact, no raw code or base64), the
-links are pinned to a real pushed commit, and every linked path is alive at that
-SHA. An unread draft is an undelivered draft. A run whose deliverable Talon
-cannot read or click has not delivered, whatever else it did right.
+connector cannot attach files, no run attempts it, ever, and nothing is ever
+left for Talon to download. The study ships as ONE live link, the one-page
+study with the demo embedded, published to
+alaskaaihq.com/awesomeproposal/<slug>/ (unlisted, noindex, the PRIVATE DATA
+law's designed exception), and the draft carries that link and nothing else.
+Every draft is built with both a plaintext and an HTML body and then READ BACK,
+with scripts/delivery_check.py run against the read-back. The run may not count
+itself delivered until that check exits 0, it verifies the body renders clean
+(paragraphs intact, no raw code or base64), the link is in the body, and the
+live URL returns HTTP 200 with real content. Talon's only steps are set the
+sender to docket@ and send. An unread draft is an undelivered draft. A run
+whose deliverable Talon cannot read or click has not delivered, whatever else
+it did right.
 
 ## THE ITERATION LAW (loops are the machine working)
 
@@ -146,10 +150,14 @@ unreachable, the routine stops rather than risk a repeat.
 This repo is PRIVATE and the leadflow schema holds real prospect information.
 Never publish either, never expose the pipeline or another prospect's dossier, and
 never write prospect data into the public alaskaaicarousels repo or the public
-site. The Field Study package (the study page, the PDF, the demo) is the designed
-exception, it is built to be handed to its own prospect by Talon and contains only
-that prospect's own public facts and our proposal. A package never references
-another lead, the pipeline, or anything from the database beyond its own company.
+site. The Field Study package (the study page with the demo embedded, plus the
+PDF) is the designed exception, published to
+docs/awesomeproposal/<slug>/ in the public repo so it serves at its own unlisted
+alaskaaihq.com link, noindex and linked from nowhere on the site, because it
+contains only that prospect's own public facts and our proposal. That one folder
+is the ONLY thing the routine ever writes in the public repo. A package never
+references another lead, the pipeline, or anything from the database beyond its
+own company.
 
 ## VOICE
 
