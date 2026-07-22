@@ -151,13 +151,49 @@ the durable record that a run completed for this date.
    select company, domain from leadflow.suppressions.
    Normalize every domain and hold the union as the run's EXCLUDE set. If Supabase
    is unreachable, STOP and go to FAILURE PROTOCOL. Never run blind.
-3. Guard against a double fire. If leadflow.runs already has a success row for
+3. INBOUND FIRST. Before any scouting, check for a consented Bottleneck Scanner
+   opt-in that has not been served,
+   select id, company, domain, notes, status, created_at from leadflow.leads
+   where (why_picked = 'inbound scan opt-in' or notes ilike '%inbound scan opt-in%')
+     and study_json is null
+   order by created_at asc;
+   Drop any whose normalized domain sits in leadflow.suppressions (leave the row,
+   note it in one line for the delivery summary). If any survive, the OLDEST is
+   today's company. SKIP PHASE 1 ENTIRELY, no scouts, and go straight to Phase 2
+   on it. Inbound outranks outbound, always, someone who asked for the study is
+   worth more than anyone we could find cold. Serve one per run, the rest wait in
+   age order for the following days.
+   Rules for an inbound lead:
+   - THE GIVEN CONTACT. The opt-in stamp in notes carries the requester's email,
+     "inbound scan opt-in YYYY-MM-DD (email)", and scanner.scans.consent_email
+     for the domain is the backup copy of the same address. It was GIVEN by the
+     prospect, not found, so it is the send-to and it outranks anything
+     people-finder surfaces. The fact-checker records it contact_ok true with
+     contact_source "inbound scan opt-in", it will not appear on any fetched page
+     and that is expected, provenance is the verification. people-finder still
+     runs, to learn who the address likely belongs to and the decision-maker
+     picture, never to replace it.
+   - ANCHORING STILL HOLDS. Do not read the scan's observations, tags, or
+     headline into any room, and do not fetch the scan result page for them. The
+     rooms get claims.json and nothing else, and they map the whole business
+     fresh. The shallow scan is marketing, the study is the real work, and the
+     study must never echo the scan.
+   - The carrier email MAY say plainly that this study exists because they asked
+     for it after their scan. That is the hook, and it is true.
+   - A KILL verdict on an inbound company suppresses and replaces like any other,
+     the replacement path is the normal scout flow, resume at Phase 1. Phase 8's
+     upsert updates the existing row, keep why_picked "inbound scan opt-in".
+4. Guard against a double fire. If leadflow.runs already has a success row for
    today, a run already shipped. Exit without picking a second lead.
-4. Set today's date (America/Anchorage), create out/<date>/, write run_state.json.
-5. Note timely Alaska context (fishing openers, freeze-up, tourist season, PFD
+5. Set today's date (America/Anchorage), create out/<date>/, write run_state.json.
+6. Note timely Alaska context (fishing openers, freeze-up, tourist season, PFD
    timing, Iditarod, a live legislative session) so the scouts do not miss an angle.
 
 ## PHASE 1 - DISCOVER (the scouts, parallel)
+
+SKIPPED ENTIRELY when Phase 0 INBOUND FIRST picked an inbound lead, the scouts
+stand down that day and the run resumes at Phase 2. This phase runs only for
+cold discovery, or as the replacement path when an inbound company is killed.
 
 Spawn up to FOUR lead-scout agents in parallel, one per ICP segment (tourism,
 healthcare, Alaska Native corporations, other labor-scarce or paperwork-heavy).

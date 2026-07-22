@@ -26,6 +26,10 @@ bulk message, this law wins.
 Depth is the entire point. A generic touch is worse than no touch, and a hypey one
 is worse still. Every run puts two rooms of specialists on ONE company and produces
 a real Field Study, not a teaser.
+- INBOUND OUTRANKS OUTBOUND. A consented Bottleneck Scanner opt-in that has no
+  study yet is served before any cold scouting, the scouts stand down that day
+  (Phase 0, INBOUND FIRST). Their given email is the contact, and the rooms still
+  work blind, the study never echoes the scan.
 - Parallel scouts find the day's best-fit business, one per ICP segment.
 - A research room learns it cold, company-analyst, people-finder,
   competitor-analyst, and industry-analyst (what AI actually does in their
