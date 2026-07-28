@@ -111,8 +111,10 @@ Every draft is built with both a plaintext and an HTML body and then READ BACK,
 with scripts/delivery_check.py run against the read-back. The run may not count
 itself delivered until that check exits 0, it verifies the body renders clean
 (paragraphs intact, no raw code or base64), the link is in the body, and the
-live URL returns HTTP 200 with real content. Talon's only steps are set the
-sender to docket@ and send. An unread draft is an undelivered draft. A run
+live URL returns HTTP 200 with real content. The Gmail connector is
+authenticated as the docket@alaskaaihq.com mailbox, so every draft is already
+from the right address and Talon's only step is to read it and send. An
+unread draft is an undelivered draft. A run
 whose deliverable Talon cannot read or click has not delivered, whatever else
 it did right.
 

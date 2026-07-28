@@ -411,9 +411,9 @@ until it does. Write out/<date>/outreach.json.
    plaintext body with blank lines between paragraphs, and an htmlBody with the
    same text in simple p tags with the study link as a real anchor. The email
    carries exactly one link, the live hosted study, phrased as a link, never as
-   an attachment. At the top sits a two-line action note for Talon (in HTML a
-   bordered div, in plaintext a short block): set the sender to
-   docket@alaskaaihq.com, delete this note, send. Save the returned draft id.
+   an attachment. The Gmail connector is authenticated as the docket@alaskaaihq.com
+   mailbox, so the draft is ALREADY from the right address. It carries no action
+   note and no sender step, Talon reads it and sends it. Save the returned draft id.
    - No verified contact. Address the draft to Talon instead, subject prefixed
      "[needs contact] <Company>", body carries the live study link, where the
      decision-maker is likely reachable, and the ready-to-send email below it
@@ -529,7 +529,7 @@ note stating exactly what failed.
    carrying ONE live hosted link (the one-page study with the demo embedded,
    verified HTTP 200) and a short self-aware email obeying the voice rules and
    opening on a specific verified fact. Nothing is attached, nothing is left for
-   Talon to download, his only steps are set the sender and send.
+   Talon to download, his only step is to read it and send.
 2. The Field Study passed the study-critic and the fact-checker, follows the real
    engineering process, and its ROI is an honest range whose ACTUAL ASK clears
    the conservative bar.
