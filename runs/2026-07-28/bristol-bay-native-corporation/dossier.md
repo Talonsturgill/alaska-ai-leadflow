@@ -1,4 +1,4 @@
-# Internal Dossier, Bristol Bay Native Corporation, 2026-07-23
+# Internal Dossier, Bristol Bay Native Corporation, 2026-07-28
 
 PRIVATE. This is the full internal paper trail for the run. Prospect data lives here,
 never in the public repo. The public package is only the study page and demo.
@@ -79,6 +79,6 @@ never in the public repo. The public package is only the study page and demo.
 - Lead-critic: (see outreach.json).
 
 ## Deliverable
-- Study: runs/2026-07-23/bristol-bay-native-corporation/field-study.html (+ .pdf, demo.html).
+- Study: runs/2026-07-28/bristol-bay-native-corporation/field-study.html (+ .pdf, demo.html).
 - Published (public, unlisted, noindex): alaskaaihq.com/awesomeproposal/bristol-bay-native-corporation/
 - Draft to: Celeste Hunt, chunt@bbch-llc.com, from docket@ (Talon sets sender and sends).
