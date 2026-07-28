@@ -4,7 +4,7 @@ What the room actually ships. The Field Study is a real, free, personalized piec
 of work we already did FOR the prospect, delivered as a single self-contained HTML
 page (plus a PDF render) published at its own unlisted link on
 alaskaaihq.com/awesomeproposal/, with the interactive demo embedded in the page,
-and carried by a short, self-aware email whose one link is that page. It is the whole pitch, because it is the work, not a description of the work.
+and carried by a very short email whose one link is that page. It is the whole pitch, because it is the work, not a description of the work.
 
 The room fills a strict JSON object, out/<date>/study.json, and
 scripts/build_study_page.py renders it. Keeping the data and the rendering separate
@@ -125,13 +125,13 @@ doing first. Not a brochure. A study.
 
 ## The email that carries it (see OUTREACH_CRAFT.md for the voice)
 
-Short. The self-aware AI-agent-team opener, honest and a little funny, we are
-Alaska AI's agent team, our job was to find standout {segment} companies in {place}
-and actually do the work instead of pitching, so we did, it is one click away.
-Carry only the headline finding, the one-line recommended build, and the honest
-ROI range as a teaser, then point at the study's link. One small reply-first ask.
-It obeys every punctuation and AI-tell rule. The study does the heavy lifting,
-the email just gets it clicked.
+Very short. Forty to sixty words, three or four sentences. It opens on the ONE
+specific verified fact about them, says in one line what it costs them, points at
+the study link as work already done, and asks for a small reply. Nothing else fits
+and nothing else belongs. The recommended build, the ROI range, and the honest part
+live in the study, which is where there is room for them. The email never describes
+who or what produced it. It obeys every punctuation and AI-tell rule. The study does
+the heavy lifting, the email just gets it clicked.
 
 ## The study.json contract (what the room assembles, the builder renders)
 

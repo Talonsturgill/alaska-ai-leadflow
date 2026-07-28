@@ -4,8 +4,8 @@ Private automation for Alaska AI's outbound. A daily Claude Code Routine that fi
 one high-fit Alaska business, puts two rooms of specialist agents on it, a research
 room and an engineering room, and produces a real, personalized Field Study, the
 actual work a serious shop does before a first call, done for free. It leaves a
-Gmail DRAFT that carries it, a short self-aware AI-agent-team email with the Field
-Study attached, from docket@alaskaaihq.com for Talon to review and send. The
+Gmail DRAFT that carries it, a very short email carrying the Field Study as one
+live link, from docket@alaskaaihq.com for Talon to review and send. The
 prospect should open it and think, these people already did the job, and they were
 honest with me.
 
@@ -47,7 +47,7 @@ a real Field Study, not a teaser.
   tables and defaults to reject.
 - scripts/build_study_page.py renders the study into a single self-contained,
   on-brand HTML page (with an inline architecture diagram) plus a PDF.
-- outreach-writer writes the short self-aware agent-team email that carries it, and
+- outreach-writer writes the very short email that carries it, and
   lead-critic kills anything generic or AI-sounding.
 
 - demo-builder makes a high-fidelity, self-contained interactive demo of the

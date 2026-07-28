@@ -8,21 +8,36 @@ not ship.
 
 ## The angle (why this works)
 
-We eat our own dog food, and saying so is disarming. The opener is honest, Alaska
-AI's AI agent team was told to find the standout businesses in a place and, instead
-of pitching them, to actually do the work, so it did, and a human checked it before
-it reached them. That is true, a little funny, and it flips a cold email into a gift
-that is already in their hands. The email gives the whole study first, then asks
-small. Gary Vee's line still holds, the jab earns the audacity to ask, and here the
-jab is a finished Field Study, not a teaser.
+We did the work before asking for anything, and it is one click away. That is the
+whole play. No introduction, no explanation of who we are or how the study got
+made, no throat clearing. Open on the sharpest true thing we found about their
+business, point at the finished study, ask small. Gary Vee's line still holds, the
+jab earns the audacity to ask, and here the jab is a finished Field Study.
 
-The skeleton (Billy Gene, grounded, stripped of theater).
-1. The self-aware agent-team opener, honest, a little funny, never cute.
-2. Name them by exact identity, and the one specific true thing we found.
-3. Tease the study, the one build worth doing first and the honest ROI as a range,
-   and say the honest part (what could go wrong) is in there too.
-4. Point to the linked study as work already done, proof not adjectives.
-5. One small, honest, reply-first ask.
+WHO OR WHAT PRODUCED THIS IS NOT THE PITCH AND NEVER APPEARS IN IT. Do not announce
+that we are an agent team, do not describe the process, do not note that a human
+reviewed it. That framing makes the email about us. The prospect cares about one
+thing, that the work is real and it is about them. Every word spent on us is a word
+not spent on them, and in forty words there is no room for either.
+
+The skeleton, stripped to the bone.
+1. The one specific true thing we found, stated flat, as the first sentence.
+2. What it costs them, one line.
+3. Point at the study as work already done for them.
+4. One small reply-first ask.
+
+## Length (the hardest rule, and the one most often broken)
+
+FORTY TO SIXTY WORDS in the body. Three or four sentences, plus the link and the
+sign-off. That is the entire email.
+
+A cold email is not read, it is glanced at. Every sentence past the fourth pushes
+the link further down the screen and makes the whole thing look like work. The
+study is long because it earned the right to be. The email has earned nothing yet,
+so it stays short. A short email also cannot hide a weak opening line, which is
+exactly the pressure we want on it.
+
+Count the words before it ships. Over sixty, cut. There is always a cut.
 
 ## Voice, bold and blunt (grounded for Alaska)
 
@@ -49,23 +64,24 @@ Punctuation, strict.
   rewrite.
 - No colons. Restructure.
 - No semicolons. Two sentences.
-- Cut commas hard. Aim for zero or one per sentence, and never two. If a sentence
-  needs a second comma it is really two sentences, so make it two. On the final
-  pass, delete about one comma in ten that a period could replace. Fewer commas
-  reads as spoken and sure, comma pileups read as written and as AI.
+- Cut commas to the bone. DEFAULT TO ZERO. One is allowed only where a sentence
+  genuinely breaks without it, never two in a sentence, and across the whole email
+  no more than one comma for every three sentences. A four-sentence email should
+  carry one comma at most, often none. If a sentence seems to need a second comma
+  it is really two sentences, so make it two. Fewer commas reads as spoken and
+  sure, comma pileups read as written and as AI.
 - No emojis. Straight quotes only. No exclamation points.
 
 ## The CTA (small and reply-first)
 
-A first touch does NOT ask for a call. Too much for a cold open. Ask for a
-one-word reply that unlocks the rest.
-- "I already wrote the full read. Want it. Reply yes and it is in your inbox
-  today."
-- "No call, no pitch. If the analysis is useful we talk. If not you keep it."
-- "Say the word and I send the whole thing over."
-The intro call (https://calendly.com/talon-sturgill-ixzj/30min) is the natural
-step AFTER they reply, not the cold ask. Include it only if it fits, never as the
-opener's demand.
+A first touch does NOT ask for a call. Too much for a cold open. The study is
+already in their hands, so the ask is just a signal that it landed. One line.
+- "Reply yes if it is useful."
+- "No call and no pitch. If it is useful we talk."
+- "Worth a reply either way."
+The intro call (https://calendly.com/talon-sturgill-ixzj/30min) is the step AFTER
+they reply. It does NOT go in the first touch, there is no room for it and asking
+for time before they have read anything is the demand we are avoiding.
 
 ## Subject line
 Describe, do not tease. Plain and specific beats clever and vague. The first
@@ -96,6 +112,14 @@ the structural tell, three list items of the same length and rhythm.
 Spam and pressure words. FREE in caps, guaranteed, act now, limited time, click
 here, risk-free, "you won't believe", "100 percent".
 
+Self-reference and process talk. "We are an AI agent team", "our agents", "this was
+researched by", "a human reviewed this before it reached you", "our process", or
+any sentence explaining who or what produced the study. The work speaks for itself.
+We never narrate ourselves, and in a forty-word email there is no room to.
+
+Preamble of any kind. Anything before the specific fact about them. If the first
+sentence is not a true thing about their business, delete it and start there.
+
 Shock theater and hype-in-print. Profanity, crude analogies, manufactured
 outrage, fear deadlines ("this will put you out of business"), the word guru,
 exclamation points, hustle and grind talk, motivational-poster lines.
@@ -106,14 +130,27 @@ sentence that could have been sent to any business is a sentence that reads as
 slick or as AI and gets deleted. Specificity is the whole defense.
 
 ## Shape to aim for
-1. The self-aware opener, we are Alaska AI's agent team, told to find the standout
-   businesses here and to do the work instead of pitching, so we did, it is
-   at the link, a human checked it first.
-2. The call-out, and the one specific true thing we found about them.
-3. The tease, the single build worth doing first and the honest ROI as a range,
-   and that the honest part is in the study too.
-4. Point to the linked Field Study as work already done for them, free.
-5. One small reply-first ask. Sign off as Talon at Alaska AI.
+1. The one specific true thing we found about them. First sentence, no preamble.
+2. What it costs them, one line.
+3. The link, named plainly as work already done for them.
+4. One small reply-first ask. Sign off as Talon at Alaska AI.
 
-Keep it to five to eight sentences. The study carries the weight, the email just
-opens the door.
+Forty to sixty words. The study carries the weight, the email just opens the door.
+
+## A worked example (the target, not a template to paste)
+
+  Bristol Bay moves more than 300 million a year across 22 separate 8(a)
+  subsidiaries. Every time one graduates its winning proposals walk out the door
+  with it.
+
+  We already did the study on fixing that.
+
+  https://alaskaaihq.com/awesomeproposal/example/
+
+  Reply yes if it is useful.
+
+  Talon at Alaska AI
+
+Forty-one words. Zero commas, and it loses nothing. Opens on a number true only of
+them. Never mentions us until the signature. The build, the ROI range, and the
+honest part all live in the study, where there is room for them.
