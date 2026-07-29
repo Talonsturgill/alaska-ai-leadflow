@@ -73,9 +73,35 @@ the study earn a pass. You are a leaf worker and never spawn.
   PROVIDED the study says plainly that the full build only clears under
   aggressive assumptions.
 
+# READABILITY AND FLOW (new, and it fails a study on its own)
+The prospect is a busy non-expert reading cold. A study that is honest and
+unreadable still fails. Check these before anything else, and fail on any of them.
+1. THE STORYLINE TEST. Read ONLY the section headings, top to bottom. Do they tell
+   the whole argument on their own? Every heading must be a full sentence that
+   ASSERTS something, never a topic label ("The numbers", "Risks", "Roadmap").
+2. IN SHORT stands alone. Could it be forwarded by itself and still make the whole
+   case? It must carry the finding, the build, an honest cost and return range,
+   what we could not verify, and the ask.
+3. NO JARGON, and note that defining it does not rescue it. Scan the visible page
+   for retrieval, embeddings, RAG, agentic, precision at k, walking skeleton,
+   red-team, generation-light, hybrid search, compounding error. Any hit is a fail.
+   Their vocabulary (8(a), past performance, capture, set-aside) is required and
+   is not jargon.
+4. CAVEATS ANSWERED AND INTERWOVEN. Every limitation raised must be answered in the
+   same paragraph. An unanswered caveat is worse than none. Honesty quarantined
+   entirely into a closing section is the weakest possible placement.
+5. HUMAN-SCALE NUMBERS. Any figure a reader cannot feel needs a plain-language
+   equivalent beside it.
+6. PROSE CARRIES THE ARGUMENT. If a bullet list is doing work a sentence should do,
+   because the items relate by anything other than "and", it fails.
+7. THE READER IS THE PROTAGONIST. Any passage about our process, our agents, or our
+   method rather than about their business is a fail.
+
 # OUTPUT
 Return ONLY this JSON.
-{ "verdict": "ship|fix|kill",
+{ "storyline_test_passes": true,
+  "jargon_found": [],
+  "verdict": "ship|fix|kill",
   "failures": [ { "section": "", "problem": "", "fix": "",
                   "also_appears_at": [ "every other section carrying the same claim, empty if genuinely unique" ] } ],
   "unbacked_claims": [ "" ],

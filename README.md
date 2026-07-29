@@ -3,8 +3,8 @@
 Private. A daily Claude Code Routine that finds one high-fit Alaska business, puts
 two rooms of specialist agents on it, and produces a real, personalized Field
 Study, the actual work a serious shop does before a first call, done for free. It
-leaves a Gmail DRAFT that carries it, a short self-aware AI-agent-team email with
-the study attached, for Talon to review and send. It never sends anything itself.
+leaves a Gmail DRAFT that carries it, a very short email carrying the study as one
+live link, for Talon to review and send. It never sends anything itself.
 
 ## The law
 Draft only. A human reads and sends every message. Legit process, no AI hype. See
@@ -22,9 +22,10 @@ CLAUDE.md.
    - Paste prompts/ROUTINE_PROMPT.txt as the prompt.
    - Include the Gmail and Supabase connectors, and only what it needs.
    - Set a weekday or daily schedule and a strong model.
-   - The Gmail connector authenticates as docket@alaskaaihq.com, so drafts are
-     already from that address and DKIM signed by the domain. There is no send-as
-     alias to add and no sender to set at send time.
+   - Connect Gmail AS docket@alaskaaihq.com (the Google Workspace mailbox on the
+     domain). Drafts then land in that mailbox already from the right address, so
+     you just read and send. Connecting a different account instead means drafts
+     come from that account and you set the sender by hand every time.
 4. Test. Click Run now, then read the transcript, open the Gmail draft, and open the
    attached Field Study before trusting it on a schedule.
 
@@ -41,7 +42,7 @@ The showrunner run orchestrates two rooms of agents in .claude/agents.
 - A study-critic audits the finished study for hype and defaults to reject.
 - scripts/build_study_page.py renders it into a single self-contained HTML page
   with an inline architecture diagram, plus a PDF, and outreach-writer writes the
-  short agent-team email that carries it.
+  very short email that carries it.
 
 Only the showrunner touches Supabase, Python, and Gmail. The method the room runs
 is documented and sourced in knowledge/ENGINEERING_METHOD.md, AI_SCOPING.md, and

@@ -1,35 +1,49 @@
 # Outreach Craft
 
-The email is not the product. The linked Field Study is. The email is the short,
-self-aware note that carries it and gets it opened. The whole value, the real
-research, the recommended build, the honest ROI, is already done and one click away. If
-the email reads like a template, a chatbot, or a hype marketer, it failed and does
-not ship.
+The email is not the product. The linked Field Study is. The email is a very short
+note that carries it and gets it opened, forty to sixty words, and it never talks
+about us. The whole value, the real research, the recommended build, the honest
+ROI, is already done and one click away. If the email reads like a template, a
+chatbot, or a hype marketer, it failed and does not ship.
 
 ## The angle (why this works)
 
-We eat our own dog food, and saying so is disarming. The opener is honest, we were
-told to find the standout businesses in a place and, instead of pitching them, to
-actually do the work, so we did. That is true, a little funny, and it flips a cold
-email into a gift that is already in their hands.
+We did the work before asking for anything, and it is one click away. That is the
+whole play. No introduction, no explanation of who we are or how the study got
+made, no throat clearing. Open on the sharpest true thing we found about their
+business, point at the finished study, ask small. Gary Vee's line still holds, the
+jab earns the audacity to ask, and here the jab is a finished Field Study.
 
-SAY IT ONCE AND MOVE ON. The angle is the FACT that we did the work instead of
-pitching, not a description of ourselves doing it. Write "We're Alaska AI and we
-spent the week on X instead of pitching you." Do NOT write "Alaska AI's AI agent
-team," which stacks the word AI twice before the prospect has read anything, and do
-NOT tag the sign-off with "a person read this before it reached you." Both were cut
-by hand on the first real send. The self-awareness lands in one clause or it reads
-as throat clearing. The email gives the whole study first, then asks
-small. Gary Vee's line still holds, the jab earns the audacity to ask, and here the
-jab is a finished Field Study, not a teaser.
+Three phrasings have been cut by hand on real sends and none of them come back.
+"Alaska AI's AI agent team" stacks the word AI twice before the prospect has read
+a single fact. "A person read this before it reached you" protests the point and
+undercuts it. "The voice agent you probably expected from us" tells a stranger
+what he was thinking, which is a small arrogance and spends words on us.
 
-The skeleton (Billy Gene, grounded, stripped of theater).
-1. The self-aware agent-team opener, honest, a little funny, never cute.
-2. Name them by exact identity, and the one specific true thing we found.
-3. Tease the study, the one build worth doing first and the honest ROI as a range,
-   and say the honest part (what could go wrong) is in there too.
-4. Point to the linked study as work already done, proof not adjectives.
-5. One small, honest, reply-first ask.
+WHO OR WHAT PRODUCED THIS IS NOT THE PITCH AND NEVER APPEARS IN IT. Do not announce
+that we are an agent team, do not describe the process, do not note that a human
+reviewed it. That framing makes the email about us. The prospect cares about one
+thing, that the work is real and it is about them. Every word spent on us is a word
+not spent on them, and in forty words there is no room for either.
+
+The skeleton, stripped to the bone.
+1. The one specific true thing we found, stated flat, as the first sentence.
+2. What it costs them, one line.
+3. Point at the study as work already done for them.
+4. One small reply-first ask.
+
+## Length (the hardest rule, and the one most often broken)
+
+FORTY TO SIXTY WORDS in the body. Three or four sentences, plus the link and the
+sign-off. That is the entire email.
+
+A cold email is not read, it is glanced at. Every sentence past the fourth pushes
+the link further down the screen and makes the whole thing look like work. The
+study is long because it earned the right to be. The email has earned nothing yet,
+so it stays short. A short email also cannot hide a weak opening line, which is
+exactly the pressure we want on it.
+
+Count the words before it ships. Over sixty, cut. There is always a cut.
 
 ## Voice, bold and blunt (grounded for Alaska)
 
@@ -56,10 +70,12 @@ Punctuation, strict.
   rewrite.
 - No colons. Restructure.
 - No semicolons. Two sentences.
-- Cut commas hard. Aim for zero or one per sentence, and never two. If a sentence
-  needs a second comma it is really two sentences, so make it two. On the final
-  pass, delete about one comma in ten that a period could replace. Fewer commas
-  reads as spoken and sure, comma pileups read as written and as AI.
+- Cut commas to the bone. DEFAULT TO ZERO. One is allowed only where a sentence
+  genuinely breaks without it, never two in a sentence, and across the whole email
+  no more than one comma for every three sentences. A four-sentence email should
+  carry one comma at most, often none. If a sentence seems to need a second comma
+  it is really two sentences, so make it two. Fewer commas reads as spoken and
+  sure, comma pileups read as written and as AI.
 - No emojis. Straight quotes only. No exclamation points.
 
 USE CONTRACTIONS. We're, isn't, we'd, it's, you'd. This is the single most common
@@ -70,25 +86,23 @@ AI. The punctuation rules above are strict precisely so the prose can be loose.
 
 ## The CTA (small and reply-first)
 
-A first touch does NOT ask for a call. Too much for a cold open.
+A first touch does NOT ask for a call. Too much for a cold open. The study is
+already in their hands, so the ask is just a signal that it landed. One line.
+- "No call and no pitch. If it is useful we talk."
+- "Worth a reply either way."
+- "Tell us if it is useful."
 
-INVITE, DO NOT INSTRUCT. The study is already sitting at the link, so the ask is
-not a transaction, it is permission to look. Point at the link and leave the door
-open. "Click the link to see our full review and let us know what you think if
-you'd like" is the shape, and the trailing "if you'd like" is doing real work, it
-hands them the exit and that is why it does not feel like pressure.
-- Avoid "reply yes and I will take it from there." It reads as a funnel step, and
-  it was rewritten by hand on the first real send. Nothing is gated behind their
-  reply, the study is already theirs, so do not imply we are holding something
-  back.
-- "No call, no pitch. If the analysis is useful we talk. If not you keep it."
-  still works, because it gives rather than asks.
+NOTHING IS GATED, so do not write as though it is. This is the one place the old
+spec quietly went wrong. "Reply yes" made sense when the study arrived only after
+they answered, and it is a leftover from that. The study now sits at the link
+before they reply to anything, so "reply yes" is an ask with nothing behind it,
+and the longer form, "reply yes and I will take it from there", was rewritten by
+hand on a real send for exactly that reason. It reads as a funnel step. Every
+option above asks without implying we are holding something back.
 
-SIGN OFF as "- Talon" and then "Alaska AI" on its own line. Leading dash, no title,
-no tagline.
-The intro call (https://calendly.com/talon-sturgill-ixzj/30min) is the natural
-step AFTER they reply, not the cold ask. Include it only if it fits, never as the
-opener's demand.
+The intro call (https://calendly.com/talon-sturgill-ixzj/30min) is the step AFTER
+they reply. It does NOT go in the first touch, there is no room for it and asking
+for time before they have read anything is the demand we are avoiding.
 
 ## Subject line
 Describe, do not tease. Plain and specific beats clever and vague. The first
@@ -119,6 +133,14 @@ the structural tell, three list items of the same length and rhythm.
 Spam and pressure words. FREE in caps, guaranteed, act now, limited time, click
 here, risk-free, "you won't believe", "100 percent".
 
+Self-reference and process talk. "We are an AI agent team", "our agents", "this was
+researched by", "a human reviewed this before it reached you", "our process", or
+any sentence explaining who or what produced the study. The work speaks for itself.
+We never narrate ourselves, and in a forty-word email there is no room to.
+
+Preamble of any kind. Anything before the specific fact about them. If the first
+sentence is not a true thing about their business, delete it and start there.
+
 Shock theater and hype-in-print. Profanity, crude analogies, manufactured
 outrage, fear deadlines ("this will put you out of business"), the word guru,
 exclamation points, hustle and grind talk, motivational-poster lines.
@@ -129,18 +151,12 @@ sentence that could have been sent to any business is a sentence that reads as
 slick or as AI and gets deleted. Specificity is the whole defense.
 
 ## Shape to aim for
-1. Open ON THEM, with the one specific true thing we found. Not on us. The first
-   sentence should be impossible to send to any other company.
-2. The self-aware line, in ONE clause. We're Alaska AI and we spent the week on
-   this instead of pitching you.
-3. The link, on its own line.
-4. The tease, the single build worth doing first and the honest number, plus the
-   fact that what could go wrong is in there too.
-5. A pass-it-along line when it is going to a general inbox, then an invitation to
-   look. Sign off "- Talon" then "Alaska AI".
+1. The one specific true thing we found about them. First sentence, no preamble.
+2. What it costs them, one line.
+3. The link, named plainly as work already done for them.
+4. One small ask that does not imply a gate. Sign off as Talon at Alaska AI.
 
-Keep it to five to eight sentences. The study carries the weight, the email just
-opens the door.
+Forty to sixty words. The study carries the weight, the email just opens the door.
 
 ## Read the observed deltas too
 
@@ -154,51 +170,45 @@ keeps producing something that keeps getting undone by hand. Promoting it into
 this file is a human decision and never automatic, because a run that could
 rewrite its own rules is a run that grades its own homework.
 
-## The reference send, 2026-07-29, Allen Marine Tours
+## A worked example (the target, not a template to paste)
 
-This actually went out, after Talon edited the draft by hand. Match this register.
-The deltas between what was drafted and what he sent ARE the house voice, and they
-are why the rules above changed.
+  Bristol Bay moves more than 300 million a year across 22 separate 8(a)
+  subsidiaries. Every time one graduates its winning proposals walk out the door
+  with it.
 
-  Your Juneau Operations Specialist posting asks one seat to monitor passenger
-  counts and modify vessel schedules and reassign crew and be the point of contact
-  for motorcoach companies and caterers and other tour operators.
+  We already did the study on fixing that.
 
-  We're Alaska AI and we spent the week on that one seat instead of pitching you.
+  https://alaskaaihq.com/awesomeproposal/example/
 
-  https://alaskaaihq.com/awesomeproposal/allen-marine-tours/
+  Worth a reply either way.
 
-  All six builds we ran down a do-you-even-need-AI ladder bottomed out at plain
-  rules. So the first thing we'd build you has no AI in it.
+  Talon at Alaska AI
 
-  What we recommend instead is an Operating Day Ledger, one screen where a change
-  to a Juneau day gets written down once and everyone downstream sees it. It's two
-  to three weeks of work. Our conservative case recovers 105 percent of that cost
-  at month 12 and the study calls that break even in those words, next to a plain
-  list of what could sink it.
+Forty-one words. Zero commas, and it loses nothing. Opens on a number true only of
+them. Never mentions us until the signature. The build, the ROI range, and the
+honest part all live in the study, where there is room for them.
 
-  If this isn't your desk, the useful thing is passing it to whoever owns the
-  Juneau operating day. If it is yours, click the link to see our full review and
-  let us know what you think if you'd like.
+## What a real send taught us, 2026-07-29
 
-  - Talon
-  Alaska AI
+One email has actually gone out under the OLD five-to-eight-sentence spec, to
+Allen Marine Tours. Talon edited it by hand before sending. Read this section for
+the EDITS, not for the length. It ran to about 180 words, roughly three times the
+budget above, and the current law replaces that, it does not preserve it.
 
-WHAT THE HAND EDITS REMOVED, do not put these back.
-- "Alaska AI's AI agent team" became "Alaska AI". Two AIs before the first fact.
-- "A person read this before it reached you" was deleted. It protests too much.
+What he changed, and every one of these is now a rule.
+- Every long verb form became a contraction. We're, we'd, it's, isn't.
+- "Alaska AI's AI agent team" became "Alaska AI", and then the length law removed
+  even that.
+- "A person read this before it reached you" was deleted from the sign-off.
 - "and we are declining to sell you the guest facing voice agent you probably
-  expected from us" was cut. The restraint is real and it belongs in the STUDY,
-  but telling a prospect what he expected is presuming on him, and the sentence
-  was doing a victory lap. Let the study make that argument at length. The email
-  only needs "the first thing we'd build you has no AI in it," which is stronger
-  for being shorter.
-- Every long verb form became a contraction.
+  expected from us" was cut. The restraint was real and it belonged in the study.
+  In the email it was a victory lap, and it told him what he had been thinking.
+- "reply yes and I will take it from there" became an invitation with an exit.
+  Nothing was gated, so implying it was read as a funnel step.
 
-WHAT SURVIVED UNTOUCHED, so these are load bearing.
-- The opener quoting their own live job posting, run-on and all. The repeated
-  "and" enacts the overload it describes, and it was the one thing not edited.
-- The number stated plainly with its own caveat attached, break even called break
-  even.
-- The pass-it-along line, because it went to a general office inbox.
-- Zero em dashes, zero colons, zero semicolons, no sentence with two commas.
+What he did NOT touch, which is the more useful half.
+- The opening sentence, a long run-on quoting their own live job posting. He cut
+  the middle of the email and left the hook alone. Specificity earns its length
+  where nothing else does.
+- The number stated with its own caveat attached, break even called break even.
+- Zero em dashes, zero colons, zero semicolons, no sentence carrying two commas.
