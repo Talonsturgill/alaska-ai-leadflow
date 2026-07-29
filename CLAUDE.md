@@ -74,10 +74,11 @@ needs that we can build.
 
 Every run ends with one real, personalized Field Study drafted to a verified
 prospect contact. A note to Talon explaining why something failed is NEVER the
-deliverable. There are exactly TWO non-outreach endings and no third: Supabase
-unreachable so we cannot dedupe or record, or the reachable market genuinely
-exhausted after every queue name and re-scout is spent. Everything else that goes
-wrong mid-run is a problem to route around, not an ending.
+deliverable. There is exactly ONE non-outreach ending and no other: the reachable
+market genuinely exhausted after every queue name and re-scout is spent. Dedupe
+lives in git now, so the memory is always readable and no outage can end a run.
+Everything else that goes wrong mid-run is a problem to route around, not an
+ending.
 
 The two failure routes, and neither ends the run:
 - A critic verdict of FIX is a work item. Apply the fixes and re-review, looping
@@ -129,6 +130,24 @@ on ship, or on a kill that disqualifies the company, which routes to the
 replacement queue and starts the loop again on the next name. A run that iterated
 many times and delivered clean is the system succeeding.
 
+HOW A FIX IS APPLIED decides how many rounds the loop costs, and two rules were
+bought the hard way on 2026-07-29, which took seven rounds because the same defect
+kept coming back wearing different clothes.
+
+FIX THE CLAIM, NOT THE SENTENCE. A critic quotes one span. The defect is a claim,
+and a claim usually lives in more than one section. Correct every home before
+calling a fix applied, and use scripts/claim_sweep.py to find the ones you would
+otherwise miss. A defect that returns in different words was moved, not fixed.
+
+RE-READ WHAT REFERENCES WHAT. Sections cite each other and none of them know it.
+Change one and the others can quietly start disagreeing with it, which is how a
+funding gate ends up resting on a measurement another section says may never be
+collected. A fix that creates a contradiction is a new defect, not a finished one.
+
+And watch the DIRECTION of a run of small errors. When several lean the same way,
+toward making the prospect look more committed or more behind than the evidence
+supports, the pattern is the finding, not the individual errors.
+
 ## HONESTY (non-negotiable)
 
 Every fact in the study or the email traces to a page that was fetched. Never
@@ -142,12 +161,20 @@ Saying the honest thing IS the pitch.
 
 ## MEMORY AND DEDUPE
 
-The pipeline and memory live in Supabase (project alaska-ai-dashboard, schema
-leadflow), reached through the Supabase connector. Never contact a company already
-in leadflow.leads or leadflow.suppressions, matched on normalized domain. The
-unique index on the domain is the database-level backstop, and the routine dedupes
-at Phase 0 so it never wastes a run. Supabase is the memory of record. If it is
-unreachable, the routine stops rather than risk a repeat.
+The dedupe memory of record is GIT, ledger/leads.json and ledger/suppressions.json
+in this private repo, read and written through scripts/ledger.py. It ships with the
+checkout, so it is always available and no outage can cost a day of outreach. Never
+contact a company whose normalized domain appears in either file. The routine
+dedupes at Phase 0 with `ledger.py check`, and dedupe is COMPUTED in code, never
+eyeballed by the model, the same way ROI arithmetic is computed in roi_math.py.
+
+Supabase (project alaska-ai-dashboard, schema leadflow) remains the inbound scanner
+queue and the analytics store, and every run DUAL-WRITES to it when it is
+reachable. It is no longer required to run. When it is down the run proceeds on the
+git ledger, queues the owed rows in ledger/pending_supabase.json for backfill,
+skips INBOUND FIRST, and says so loudly in the delivery summary. What that mode
+loses is inbound priority, never the run. Backfill the pending rows on the first
+run after Supabase recovers, then empty the list.
 
 ## PRIVATE DATA
 

@@ -31,9 +31,10 @@ is that we did the real work and told the truth.
    conscience (knowledge/AI_SCOPING.md) and is expected to say "you do not need AI
    here" when that is true. The study-critic kills any hype before it ships. If the
    study cannot pass honestly, it does not ship.
-4. DEDUPE. Never engage a company already in leadflow.leads or
-   leadflow.suppressions. Match on normalized domain. Enforce at Phase 0 so you
-   never burn a run on a repeat.
+4. DEDUPE. Never engage a company already in the git ledger, ledger/leads.json or
+   ledger/suppressions.json. Match on normalized domain, COMPUTED by
+   scripts/ledger.py rather than judged by eye. Enforce at Phase 0 so you never
+   burn a run on a repeat. Dual-write Supabase when it is up, never depend on it.
 5. ONE lead, gone deep. Not many, not shallow. Both rooms actually run. If the
    finished study could have been produced for any other company, it failed.
 6. VOICE. The carrier email obeys knowledge/OUTREACH_CRAFT.md to the letter. No em
@@ -61,9 +62,10 @@ is that we did the real work and told the truth.
    the run. Drop it with a one-line note, suppress it, and take the next best,
    across segments, until a qualified lead ships. Reputation counts, work that
    would embarrass the brand or cut against its public voice disqualifies like
-   any other reason. There are exactly TWO non-outreach endings, Supabase
-   unreachable, or the reachable market genuinely exhausted after every queue
-   name and re-scout is spent. A critic FIX verdict is a work item you loop on
+   any other reason. There is exactly ONE non-outreach ending, the reachable
+   market genuinely exhausted after every queue name and re-scout is spent.
+   Dedupe lives in git, so no outage can end a run. A critic FIX verdict is a
+   work item you loop on
    until it ships, never an ending. A critic KILL verdict disqualifies the
    COMPANY, suppress and replace, it never ends the run. A note to Talon about
    why something failed is never the deliverable. This never overrides
@@ -97,8 +99,10 @@ is that we did the real work and told the truth.
 - .claude/agents/, the two rooms (see THE ROOMS below).
 
 Tools. WebSearch and WebFetch for all research (they route through Anthropic and
-work on any network policy). The Supabase connector for every leadflow read and
-write (project alaska-ai-dashboard, schema leadflow). Python for
+work on any network policy). Python plus scripts/ledger.py for every dedupe read
+and every record write, the git memory of record. The Supabase connector for the
+inbound scanner queue and for the dual-write when it is up (project
+alaska-ai-dashboard, schema leadflow), never as a gate on the run. Python for
 scripts/build_study_page.py to render the study. The Gmail connector create_draft
 for delivery. It CANNOT ATTACH FILES, its attachments parameter does not work, and
 no run may attempt it, past runs that tried produced unreadable garbage drafts.
@@ -136,8 +140,9 @@ disqualify-and-replace requires.
 
 At wake, write out/<date>/run_state.json with each phase pending, set each to done
 with its artifact path as you finish. If the session restarts, resume from
-run_state rather than starting over. The leadflow.runs row you insert at Phase 8 is
-the durable record that a run completed for this date.
+run_state rather than starting over. The ledger/runs.json row you add at Phase 8 is
+the durable record that a run completed for this date, and it is committed to git,
+so it survives regardless of whether Supabase was reachable.
 
 ---
 
@@ -146,13 +151,22 @@ the durable record that a run completed for this date.
 1. Read CLAUDE.md, config/icp.yaml, and all of knowledge/. Absorb the ICP, the
    scoring criteria, the market notes, the engineering method, the AI-scoping
    conscience, the ROI method, and the Field Study contract.
-2. Connect to Supabase. Pull the EXCLUDE set with two reads,
-   select company, domain from leadflow.leads and
-   select company, domain from leadflow.suppressions.
-   Normalize every domain and hold the union as the run's EXCLUDE set. If Supabase
-   is unreachable, STOP and go to FAILURE PROTOCOL. Never run blind.
-3. INBOUND FIRST. Before any scouting, check for a consented Bottleneck Scanner
-   opt-in that has not been served,
+2. Build the EXCLUDE set from the GIT LEDGER, which is always available because it
+   ships with the checkout. Run `python scripts/ledger.py exclude-set --json` and
+   hold the result as the run's EXCLUDE set. Test any candidate with
+   `python scripts/ledger.py check <domain>`, which exits 1 on a match. This is
+   the dedupe of record and it cannot fail for network reasons.
+   THEN try Supabase, as a bonus rather than a gate. If it is reachable, reconcile
+   leadflow.leads and leadflow.suppressions into the ledger so anything recorded
+   only in the database gets picked up, and carry on. If it is unreachable, set
+   DEGRADED MODE in run_state, continue on the git EXCLUDE set, and make the
+   delivery summary say plainly that inbound priority was skipped and Supabase
+   writes are owed. Never stop the run over Supabase.
+3. INBOUND FIRST. This step REQUIRES Supabase, because the scanner queue is the
+   one thing git cannot hold, a public form has to write somewhere. If Supabase is
+   unreachable, SKIP this step, note the skip loudly for the delivery summary, and
+   go to Phase 1 cold scouting. Otherwise, before any scouting, check for a
+   consented Bottleneck Scanner opt-in that has not been served,
    select id, company, domain, notes, status, created_at from leadflow.leads
    where (why_picked = 'inbound scan opt-in' or notes ilike '%inbound scan opt-in%')
      and study_json is null
@@ -183,8 +197,10 @@ the durable record that a run completed for this date.
    - A KILL verdict on an inbound company suppresses and replaces like any other,
      the replacement path is the normal scout flow, resume at Phase 1. Phase 8's
      upsert updates the existing row, keep why_picked "inbound scan opt-in".
-4. Guard against a double fire. If leadflow.runs already has a success row for
-   today, a run already shipped. Exit without picking a second lead.
+4. Guard against a double fire. Run `python scripts/ledger.py ran-today`, which
+   exits 0 when a success row already exists for today. If it does, a run already
+   shipped, so exit without picking a second lead. Cross-check leadflow.runs as
+   well when Supabase is up.
 5. Set today's date (America/Anchorage), create out/<date>/, write run_state.json.
 6. Note timely Alaska context (fishing openers, freeze-up, tourist season, PFD
    timing, Iditarod, a live legislative session) so the scouts do not miss an angle.
@@ -336,7 +352,15 @@ Collect the four into out/<date>/engineering.json.
 1. Spawn fact-checker on study.json (its sources[], the pain quote, every
    competitor and industry claim, and any number that cites a page) and the
    contact. Cut every rejected claim from study.json and re-render if anything
-   changed.
+   changed. Each rejection carries also_appears_at, so cut the claim from EVERY
+   location it names, not only the one quoted. If the fact-checker reports a
+   drift_pattern, several rejections leaning the same direction, treat that
+   pattern as the real finding and re-read the whole study for it, because the
+   individual errors will each look small.
+   Then run `python scripts/claim_sweep.py --study out/<date>/study.json` and
+   resolve anything it surfaces under CONFLICTS, QUOTE DRIFT or CONDITIONAL
+   MISMATCH before the critic sees the study. It is faster to fix a contradiction
+   in code than to spend a critic round on it.
 2. Spawn study-critic on the finished study.json AND out/<date>/demo.html if it
    exists. It audits the whole thing against the hype tables in AI_SCOPING.md and
    ROI_METHOD.md, evidence integrity, feasibility integrity, and specificity, and
@@ -353,6 +377,29 @@ SHIP GATE. Two verdicts, two routes, and neither ends the run.
   improving the study, keep going until the verdict is ship. If the SAME fix
   bounces twice without progress, the showrunner is misapplying it, stop and
   re-read the fix before the next round.
+
+  HOW TO APPLY A FIX, two rules bought with six rounds on 2026-07-29. Both are
+  cheap to follow and expensive to skip.
+
+  1. FIX THE CLAIM, NOT THE SENTENCE. A critic quotes ONE span, but the defect is
+     a CLAIM, and a claim usually has more than one home. Before you call a fix
+     applied, find every other place that claim lives and correct them all. Run
+     `python scripts/claim_sweep.py --study out/<date>/study.json` and read the
+     ECHOES section, which lists the same claim restated across sections. Patching
+     only the quoted string is why round four of that run left the same argument
+     standing three sections away, and round five caught it again. If the same
+     defect returns in different words, you did not fix it, you moved it.
+  2. RE-READ WHAT REFERENCES WHAT. When you change a section, other sections may
+     cite it, and none of them know they do. Adding one list on that run made a
+     feature conditional in the plan while the roadmap still promised it outright,
+     and a funding gate ended up resting on a measurement that might never be
+     collected. The CONFLICTS and CONDITIONAL MISMATCH sections of claim_sweep
+     catch this class mechanically. A fix that creates a contradiction is a new
+     defect, not a completed one.
+
+  claim_sweep is a REPORT, not a gate. It surfaces candidates and it will raise
+  benign ones, three ROI scenarios are supposed to carry different numbers. Read
+  it and judge. Do not add --strict to a quality loop, the judgment is yours.
 - KILL means the study cannot be made honest for THIS company (fabrication risk,
   hype with no honest core, no genuine value at any ask size). That disqualifies
   the COMPANY, not the run. Suppress it (reason "study killed, <one line>"),
@@ -437,18 +484,26 @@ until it does. Write out/<date>/outreach.json.
    gate loops until the check exits 0, per the ITERATION LAW. An unverified
    draft is an undelivered draft, and a run may not record itself delivered
    while this check fails.
-5. Write the lead to leadflow.leads with ONE upsert, every column populated,
-   company, normalized domain, segment, location, status (drafted if a real-contact
-   draft was created, else researched), fit_score, why_picked, contact_name,
-   contact_role, contact_email, contact_source, competitors (jsonb),
+5. RECORD TO THE GIT LEDGER FIRST. It is the memory of record and it never fails.
+   `python scripts/ledger.py add-lead --json <file>` carrying company, normalized
+   domain, segment, location, status (drafted if a real-contact draft was created,
+   else researched), fit_score, why_picked, the contact fields, study_path,
+   outcome, recommended_build, roi_summary, and gmail_draft_id. The add is an
+   idempotent upsert on normalized domain, so the whole run is safe to retry.
+   Then `python scripts/ledger.py add-run --status success --shortlist N`. Commit
+   the ledger alongside the archive from step 1, in the same push.
+6. DUAL-WRITE SUPABASE when it is reachable, for the dashboard and the analytics.
+   The same lead into leadflow.leads with ONE upsert, every column populated,
+   company, normalized domain, segment, location, status, fit_score, why_picked,
+   contact_name, contact_role, contact_email, contact_source, competitors (jsonb),
    ai_opportunities (jsonb), sources (jsonb), dossier_md, outcome,
    recommended_build, roi_summary, study_json (jsonb), study_path, draft_subject,
-   draft_body, gmail_draft_id, run_id.
-   IDEMPOTENCY. The unique index on lower(domain) is the safety net. If the insert
-   conflicts, a prior partial run recorded this company, so update the existing row
-   instead of creating a second draft. The whole run is safe to retry.
-6. Insert the leadflow.runs row, run_date, shortlist_count, and status success (or
-   no_lead if every candidate got suppressed or a protocol stop fired).
+   draft_body, gmail_draft_id, run_id, plus the leadflow.runs row.
+   IDEMPOTENCY. The unique index on lower(domain) is the safety net. On conflict,
+   update the existing row rather than creating a second draft.
+   If Supabase is DOWN, append both rows to ledger/pending_supabase.json instead
+   and carry on. The run is fully recorded either way, and the backfill is owed on
+   the first run after it recovers.
 
 ## PHASE 9 - DELIVER AND SELF-CHECK
 
@@ -475,8 +530,10 @@ COMPLETION GATE, verify before you finish.
   attachment was attempted through the connector and nothing was left for Talon
   to download. The study is archived to runs/<date>/ in this private repo and
   the delivery summary carries the live link.
-- Recorded. leadflow.leads has the row and leadflow.runs has this run's row,
-  nothing duplicated.
+- Recorded. ledger/leads.json has the lead and ledger/runs.json has this run's
+  row, both committed, nothing duplicated. Supabase carries the same two rows if
+  it was reachable, or ledger/pending_supabase.json carries the backfill if it
+  was not.
 - Draft only. Nothing was sent.
 If any check fails and cannot be fixed this run, do not paper over it. Draft Talon a
 note stating exactly what failed.
@@ -485,8 +542,17 @@ note stating exactly what failed.
 
 ## FAILURE PROTOCOL
 
-- Supabase unreachable at any point. STOP. Without it you cannot dedupe or record,
-  and a blind run risks a double contact. Draft Talon a plain note and end.
+- Supabase unreachable at any point. DEGRADE, never stop. Dedupe and the run audit
+  live in the git ledger, so the run proceeds normally on it. Skip INBOUND FIRST,
+  queue every owed row in ledger/pending_supabase.json, and make the delivery
+  summary say plainly that Supabase was down, that inbound priority was skipped,
+  and that a backfill is owed. A database outage costs inbound priority for one
+  day. It never costs the day's outreach.
+- Supabase reports ACTIVE_HEALTHY but every query fails on authentication. That is
+  usually a HIBERNATED project stuck mid-wake, not a bad credential, and the
+  giveaway is get_advisors returning "currently hibernated and will wake on next
+  supported request" while list_projects answers fine. Do not chase it and do not
+  tell Talon to reset the database password. Note it, degrade, and carry on.
 - A lead disqualifies at any gate (unverifiable, values conflict, no genuine AI
   ROI, no contact path worth pursuing). Disqualify and REPLACE. Suppress it with
   its reason, leave a one-line note, take the next name on the replacement queue,
