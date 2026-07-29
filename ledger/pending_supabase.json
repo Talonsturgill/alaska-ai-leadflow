@@ -6,7 +6,7 @@
     {
       "queued_on": "2026-07-29",
       "kind": "leadflow.leads upsert",
-      "summary": "Allen Marine Tours / allenmarinetours.com, full row including study_json, dossier_md, draft fields. Source of truth is ledger/leads.json plus runs/2026-07-29/allen-marine-tours/.",
+      "summary": "Allen Marine Tours / allenmarinetours.com, full row including study_json, dossier_md, draft fields. STATUS IS sent, outreach_sent_at 2026-07-29T13:15:40Z, sent by hand from docket@. Source of truth is ledger/leads.json plus runs/2026-07-29/allen-marine-tours/.",
       "reason": "Supabase project hibernated and stuck mid-wake, every query failed 28P01 all run."
     },
     {
