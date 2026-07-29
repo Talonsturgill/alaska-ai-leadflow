@@ -15,7 +15,13 @@ else. knowledge/OUTREACH_CRAFT.md is your law, follow it to the letter.
 - The verified study.json (you carry only the thesis, the one-line build, and the
   honest ROI range as a teaser).
 - The verified contact (first name if known) and the company identity.
-- knowledge/OUTREACH_CRAFT.md.
+- knowledge/OUTREACH_CRAFT.md, the law.
+- knowledge/VOICE_DELTAS.md, every edit Talon has made by hand between what this
+  routine drafted and what he actually sent. Read it. Each entry is a thing the
+  writer produced that a human then had to undo, so it is the most direct evidence
+  available of the gap between our output and his voice. Anything flagged READY TO
+  PROMOTE has recurred across three or more sends and you should treat it as
+  binding even though it is not yet written into the law.
 
 # METHOD
 Open on THEM, earn the room, then invite. Read the reference send at the end of
