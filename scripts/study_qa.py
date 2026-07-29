@@ -143,8 +143,15 @@ def main():
     check(total_h <= 18, "total headings", total_h, "<= 18")
 
     # --- lists / prose balance ---
-    nli = len(re.findall(r"<li[\s>]", body))
+    # The budget exists because bullets delete the relationships between ideas.
+    # A figure whose whole point is parallel rows (the before/after ledger) is
+    # not that failure mode, so its items are reported but not charged.
+    fig = re.findall(r'<section class="ba-c">.*?</section>', body, flags=re.S)
+    nfig = sum(len(re.findall(r"<li[\s>]", f)) for f in fig)
+    nli = len(re.findall(r"<li[\s>]", body)) - nfig
     npara = len(re.findall(r"<p[\s>]", body))
+    if nfig:
+        note("figure rows (not charged)", nfig, "before/after ledger")
     check(nli <= 25, "bullet items", nli, "<= 25")
     check(nli <= npara, "bullets vs paragraphs", f"{nli} li / {npara} p",
           "bullets <= paragraphs")
@@ -214,18 +221,29 @@ def main():
             check(r >= 1.25, "surface vs background",
                   f"{r:.2f}:1 ({panel} on {bg})", ">= 1.25:1 to read without a border")
 
+    # --- crawler directive ---
+    # The page is one prospect's name plus our proposal, on a public host.
+    # It has shipped without this once, so it is a hard gate now.
+    rb = re.search(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\']([^"\']+)',
+                   doc, flags=re.I)
+    val = (rb.group(1) if rb else "").lower()
+    check("noindex" in val, "robots noindex", val or "no robots meta",
+          "noindex (unlisted prospect page)")
+
     # --- print ---
+    # Every @media print block, not just the first: a stylesheet may carry
+    # several, and only one of them redefines --bg.
     has_print = bool(re.search(r"@media\s+print", css))
     light_print = False
-    mp = re.search(r"@media\s+print[^{]*\{", css)
-    if mp:                                   # walk braces to find the real block end
-        i, depth = mp.end(), 1
+    for mp in re.finditer(r"@media\s+print[^{]*\{", css):
+        i, depth = mp.end(), 1              # walk braces to find the real block end
         while i < len(css) and depth:
             depth += 1 if css[i] == "{" else (-1 if css[i] == "}" else 0)
             i += 1
-        block = css[mp.end():i]
-        m = re.search(r"--bg\s*:\s*(#[0-9a-f]{3,6})", block, flags=re.I)
-        light_print = bool(m) and wcag_luminance(m.group(1)) > 0.5
+        m = re.search(r"--bg\s*:\s*(#[0-9a-f]{3,6})", css[mp.end():i], flags=re.I)
+        if m and wcag_luminance(m.group(1)) > 0.5:
+            light_print = True
+            break
     check(has_print and light_print, "print stylesheet",
           "light" if light_print else ("dark only" if has_print else "none"),
           "light theme for the PDF")

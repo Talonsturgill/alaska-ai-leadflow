@@ -24,8 +24,43 @@
   "opportunity": {
     "title": "The goal is not writing faster, it is not writing the same thing twice",
     "lede": "What actually changes for a proposal manager on the Tuesday after this goes live.",
-    "outcome_body": "A solicitation lands. Before anyone starts writing, the proposal manager asks who in the family has done this work for this agency before. Within about a minute they have the actual paragraphs from the actual winning bids, with the entity and contract attached. They read them, decide what still applies, and start from proven text instead of a blank page.\n\nThe sections that get reused are the ones nobody enjoys writing and reviewers scrutinise least: past performance, resumes, standing compliance answers. The time that frees goes to the parts that actually win, which are technical approach and price. That is the whole point. This does not make anyone a faster writer. It stops the family paying twice for the same paragraph.",
-    "current_workaround": "Today the workaround is a person emailing around the family asking whether anyone has something similar, then digging through old files if they get a helpful reply. It works when the writer happens to know who to ask, which is exactly the knowledge that walks out when a subsidiary graduates."
+    "outcome_body": "A solicitation lands on a Tuesday. Here is that same Tuesday before and after, step by step.",
+    "before_after": {
+      "headline": "The same proposal, before and after, step by step",
+      "before_title": "Today",
+      "after_title": "After the pilot",
+      "rows": [
+        {
+          "today": "Solicitation lands. The writer tries to remember which of the 22 entities has bid this agency before.",
+          "after": "Solicitation lands. The writer asks the question in plain language."
+        },
+        {
+          "today": "Emails around the family asking whether anyone has something similar, then waits on replies.",
+          "after": "Nothing to wait on. The question is answered in about a minute.",
+          "gone": true
+        },
+        {
+          "today": "Digs through shared drives and old submissions for the file, if a helpful reply ever comes.",
+          "after": "Passages come back with the entity and the contract they came from attached.",
+          "gone": true
+        },
+        {
+          "today": "Rewrites past performance, resumes and standing compliance answers close to from scratch.",
+          "after": "Starts from proven winning text and edits down to what still applies."
+        },
+        {
+          "today": "Chases down which contract each reused claim actually came from before it can be cited.",
+          "after": "The citation is already attached to the passage.",
+          "gone": true
+        },
+        {
+          "today": "A cleared person reviews the draft for controlled and export-restricted content.",
+          "after": "A cleared person reviews the draft for controlled and export-restricted content."
+        }
+      ],
+      "note": "The last row is deliberately identical. Compliance review is the one step we would not touch, because a human owning that call is the control, and moving it into software is the change that eventually costs you a contract."
+    },
+    "after_body": "The sections that get reused are the ones nobody enjoys writing and reviewers scrutinise least: past performance, resumes, standing compliance answers. The time that frees goes to technical approach and price, which are the parts that actually win. This does not make anyone a faster writer. It stops the family paying twice for the same paragraph, and it stops the knowledge walking out the door when a subsidiary graduates."
   },
   "build": {
     "title": "A searchable memory of your own winning proposals",
@@ -101,7 +136,8 @@
           "20",
           "30",
           "45"
-        ]
+        ],
+        "mark": "assumed"
       },
       {
         "label": "Share of prep hours recovered",
@@ -109,7 +145,8 @@
           "8%",
           "12%",
           "18%"
-        ]
+        ],
+        "mark": "assumed"
       },
       {
         "label": "Capacity returned per year",
@@ -117,7 +154,8 @@
           "$11,800",
           "$26,600",
           "$59,900"
-        ]
+        ],
+        "mark": "modelled"
       },
       {
         "label": "Five year cost, all in",
@@ -125,7 +163,8 @@
           "$133,200",
           "$100,300",
           "$80,500"
-        ]
+        ],
+        "mark": "modelled"
       },
       {
         "label": "Share of that cost recovered",
@@ -134,7 +173,8 @@
           "119%",
           "342%"
         ],
-        "emphasis": true
+        "emphasis": true,
+        "mark": "modelled"
       },
       {
         "label": "Cash payback",
@@ -142,7 +182,8 @@
           "not within five years",
           "about month 45",
           "about month 14"
-        ]
+        ],
+        "mark": "modelled"
       }
     ],
     "table_note": "Recovered hours are capacity, not cash. They become money only if the freed time defers a hire, and we have not assumed it does. Earlier discovery of missed bids is deliberately left out of these figures, because win rate is the number most easily inflated and we did not want it carrying the case.",

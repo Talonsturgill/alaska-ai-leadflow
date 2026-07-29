@@ -233,6 +233,53 @@ th.num{font-family:var(--ui);font-size:15px}
 tr.total td{border-top:2px solid var(--gold);color:var(--ink);font-weight:650;padding-top:14px}
 tfoot td{color:var(--cap);font-size:15px;border-top:1px solid var(--rule);padding-top:12px}
 
+/* ---------- provenance mark ----------
+   The signature device. It encodes something true rather than decorating:
+   every number carries whether it was verified against a source, modelled from
+   stated drivers, or assumed. One 12px box, three states, no other size. This
+   is the document's honesty thesis rendered as a visual system. */
+/* The mark LEADS the label, so every mark in the table stacks on one x and
+   reads as a rail. Trailing it let the glyph wrap onto a line of its own. */
+.pm{display:inline-block;width:12px;height:12px;vertical-align:-1px;margin-right:8px}
+td.pml{padding-left:20px;text-indent:-20px}
+.pm-v{color:var(--accent)}
+.pm-m{color:var(--cap)}
+.pm-a{color:var(--warn)}
+.pmkey{font:400 13px/1.6 var(--mono);color:var(--cap);letter-spacing:.02em;
+  margin:0 0 var(--u);display:flex;flex-wrap:wrap;gap:6px 22px;max-width:var(--prose)}
+.pmkey span{display:flex;align-items:center;gap:2px}
+
+/* ---------- before / after ----------
+   The executive's actual question is what work goes away, which a system
+   diagram does not answer. Text in a grid, so it reflows, prints, and is
+   selectable, with no viewBox to shrink the type. */
+.ba{margin:calc(var(--u)*1.2) 0;max-width:var(--wide)}
+.ba-h{font-family:var(--display);font-size:22px;font-weight:400;color:var(--ink);
+  margin:0 0 calc(var(--u)*.7);max-width:var(--prose)}
+/* One grid, cells paired row by row, so step N on the left sits level with
+   step N on the right. Two independent lists drifted out of alignment as soon
+   as one side wrapped, which is the one thing a before/after must not do. */
+.ba-g{display:grid;grid-template-columns:1fr 1fr;column-gap:calc(var(--u)*.8);
+  background:var(--surface);border-radius:10px;padding:4px 20px 18px}
+.ba-g h4{margin:0;padding:16px 0 10px;font:400 11px/1 var(--mono);
+  letter-spacing:.16em;text-transform:uppercase;color:var(--cap)}
+.ba-l,.ba-r{padding:11px 0 11px 26px;border-top:1px solid var(--rule);
+  color:var(--sub);font-size:16px;line-height:1.45;position:relative}
+.ba-n{position:absolute;left:0;top:14px;font:400 12px/1 var(--mono);color:var(--cap)}
+/* The struck step is the one that leaves the writer's Tuesday. It is struck on
+   the TODAY side only: a strike under AFTER would read as something lost. */
+.ba-gone .ba-t{color:var(--cap);text-decoration:line-through;
+  text-decoration-color:var(--accent);text-decoration-thickness:2px}
+@media (max-width:640px){
+  .ba-g{grid-template-columns:1fr;padding:4px 16px 16px}
+  .ba-g h4{display:none}
+  .ba-r{border-top:0}          /* keep the 26px indent so both cells share an edge */
+  .ba-l::before,.ba-r::before{content:var(--lbl);display:block;
+    font:400 10px/1 var(--mono);letter-spacing:.16em;color:var(--cap);
+    text-transform:uppercase;margin-bottom:5px}
+}
+.ba-note{font-size:15px;color:var(--cap);margin-top:12px;max-width:var(--prose)}
+
 /* ---------- diagram ----------
    All SVG paint comes from CSS, never hardcoded hex, so the print theme
    re-colours the figure instead of leaving dark boxes on a light page.
@@ -287,7 +334,8 @@ hr.div{border:0;border-top:1px solid var(--rule);margin:calc(var(--u)*2.5) 0 0}
   .page{max-width:none;padding:0}
   .sec{break-inside:auto}
   h1,h2,h3{break-after:avoid}
-  .figure,.tw,.callout{break-inside:avoid}
+  .figure,.tw,.callout,.ba{break-inside:avoid}
+  .ba-c{background:transparent;border:1px solid var(--rule)}
   .demoembed{display:none}
   a{border-bottom:0}
 }
@@ -446,6 +494,61 @@ def section(num, title, lede=None, body=""):
             f'<h2 class="prose">{esc(title)}</h2>{l}{body}</section>')
 
 
+PM = {
+    "verified": ("pm-v", "M2 6.4 L5 9.4 L10.4 3.2", "verified against a source"),
+    # An approximation squiggle, not a diagonal: a slash through a box reads
+    # as "excluded", which is the opposite of what a modelled figure is.
+    "modelled": ("pm-m", "M3 7.2 C4 4.9 5.3 4.9 6 6.1 C6.7 7.3 8 7.3 9 5",
+                 "modelled from stated drivers"),
+    "assumed":  ("pm-a", "M6 2.6 L6 7.4 M6 9.2 L6 10", "assumed, and named as such"),
+}
+
+
+def pmark(kind):
+    """One 12px box, three states, no other size."""
+    if kind not in PM:
+        return ""
+    cls, path, title = PM[kind]
+    return (f'<svg class="pm {cls}" viewBox="0 0 12 12" aria-label="{esc(title)}">'
+            f'<title>{esc(title)}</title>'
+            f'<rect x="1" y="1" width="10" height="10" rx="2" fill="none" '
+            f'stroke="currentColor" stroke-width="1"/>'
+            f'<path d="{path}" fill="none" stroke="currentColor" stroke-width="1.5" '
+            f'stroke-linecap="round"/></svg>')
+
+
+def pmark_key(used=None):
+    """Explain only the states that actually appear, so the key never
+    advertises a rigour the table did not earn."""
+    keys = [k for k in PM if used is None or k in used]
+    if not keys:
+        return ""
+    bits = "".join(f'<span>{pmark(k)} {PM[k][2]}</span>' for k in keys)
+    return f'<p class="pmkey">{bits}</p>'
+
+
+def before_after(ba):
+    """Paired grid. Row N left is level with row N right, and a step marked
+    gone is struck on the TODAY side, because that is the side losing it."""
+    rows = ba.get("rows") or []
+    if not rows:
+        return ""
+    lt = ba.get("before_title", "Today")
+    rt = ba.get("after_title", "After")
+    g = [f"<h4>{esc(lt)}</h4><h4>{esc(rt)}</h4>"]
+    for i, r in enumerate(rows, 1):
+        gone = " ba-gone" if r.get("gone") else ""
+        g.append(
+            '<div class="ba-l%s" style="--lbl:\'%s\'">'
+            '<span class="ba-n">%d</span><span class="ba-t">%s</span></div>'
+            '<div class="ba-r" style="--lbl:\'%s\'">%s</div>'
+            % (gone, esc(lt), i, esc(r.get("today", "")), esc(rt),
+               esc(r.get("after", ""))))
+    h = f'<p class="ba-h">{esc(ba["headline"])}</p>' if has(ba.get("headline")) else ""
+    n = f'<p class="ba-note">{esc(ba["note"])}</p>' if has(ba.get("note")) else ""
+    return f'<div class="ba">{h}<div class="ba-g">{"".join(g)}</div>{n}</div>'
+
+
 def callout(big, note=None):
     n = f"<p>{esc(note)}</p>" if has(note) else ""
     return f'<div class="callout"><span class="big">{esc(big)}</span>{n}</div>'
@@ -510,6 +613,10 @@ def render(study, demo_embed=None):
     opp = study.get("opportunity") or {}
     if has(opp.get("outcome_body")) or has(opp.get("why")):
         b = para(opp.get("outcome_body") or opp.get("why"), "prose")
+        if has(opp.get("before_after")):
+            b += before_after(opp["before_after"])
+        if has(opp.get("after_body")):
+            b += para(opp["after_body"], "prose")
         if has(opp.get("current_workaround")):
             b += para(opp["current_workaround"], "prose")
         out.append(section(nxt(), opp.get("title") or "What would change",
@@ -564,13 +671,19 @@ def render(study, demo_embed=None):
             for r in rows:
                 cls = ' class="total"' if r.get("emphasis") else ""
                 cells = "".join(f'<td class="num">{esc(c)}</td>' for c in r.get("cells", []))
-                t.append(f'<tr{cls}><td>{esc(r.get("label",""))}</td>{cells}</tr>')
+                mk = pmark(r.get("mark"))
+                lab = f'<td class="pml">{mk}{esc(r.get("label",""))}</td>' if mk \
+                    else f'<td>{esc(r.get("label",""))}</td>'
+                t.append(f"<tr{cls}>{lab}{cells}</tr>")
             t.append("</tbody>")
             if has(roi.get("table_note")):
                 t.append(f'<tfoot><tr><td colspan="{len(heads)}">'
                          f'{esc(roi["table_note"])}</td></tr></tfoot>')
             t.append("</table></div>")
             b += "".join(t)
+            used = {r.get("mark") for r in rows if r.get("mark")}
+            if used:
+                b += pmark_key(used)
         if has(roi.get("payback_range")):
             b += callout(roi.get("payback_big") or "Payback", roi["payback_range"])
         if has(roi.get("base_rate_note")):
@@ -667,8 +780,14 @@ def audit(study, rendered):
 
 def build_html(study, demo_embed=None):
     title = esc((study.get("meta") or {}).get("company") or "Alaska AI")
+    # noindex is emitted HERE, unconditionally, and is not a flag. The page
+    # carries one prospect's name and our proposal to them, published to an
+    # unlisted path on a public site, so the crawler directive has to be a
+    # property of the artifact rather than a step in a publish routine that
+    # someone can forget. A previous rebuild dropped it exactly that way.
     return ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            '<meta name="robots" content="noindex,nofollow,noarchive">'
             f'<title>Field Study, {title}</title>'
             f'<style>{embedded_fonts()}{CSS}</style></head><body><div class="page">'
             f'{render(study, demo_embed)}</div></body></html>')

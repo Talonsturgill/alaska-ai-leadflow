@@ -51,7 +51,20 @@ own credentials instead: "death moves."
    proposal" beats "84 hours." Where the number is an industry average rather than
    theirs, say so in the same breath and say how we would replace it.
 5. **WHAT WOULD CHANGE.** Their future state, in their terms, BEFORE we name the
-   build. Describe the Tuesday after it is live. Name the current workaround.
+   build, and the section that carries the document's PRIMARY VISUAL. An
+   executive's real question is not how it is wired, it is what work goes away,
+   so the before/after ledger outranks the architecture diagram and comes
+   earlier. Walk one real task step by step in two columns, Today and After,
+   paired row by row. Mark `"gone": true` on the Today steps that disappear;
+   those are struck on the TODAY side only, because a strike under After reads
+   as something lost. Every After cell must carry real content, never
+   commentary on itself. At least one row should be DELIBERATELY IDENTICAL,
+   the step we chose not to automate, and the note says why. That row is the
+   most persuasive thing in the figure.
+
+   The figure REPLACES prose, it never sits on top of it. Prose that walks the
+   same steps is deleted when the figure lands; what survives is what the
+   columns cannot carry.
 6. **WHAT WE WOULD BUILD.** Opens with `plain_parts`, about 60 words naming the
    moving pieces in plain nouns before any explanation (pre-training, d around
    0.75 to 1.0). Then what it does, the diagram, where AI genuinely fits and where
@@ -59,6 +72,17 @@ own credentials instead: "death moves."
 7. **WHAT IT COSTS AND RETURNS.** One table, scenario columns and driver rows,
    assumptions in the footer. Never a hero number. If the conservative case does
    not clear, say so in the section heading, not in a footnote.
+
+   Every row carries a PROVENANCE MARK, a 12px glyph LEADING the row label so
+   the marks stack into a rail: `verified` (checked against a fetched source),
+   `modelled` (computed from stated drivers), `assumed` (a number we chose, and
+   named). This is the honesty law rendered as a visual system rather than
+   asserted in a sentence, and it is the page's signature device. The key
+   explains only the states actually used, so it can never advertise a rigour
+   the table did not earn. A table with no `verified` row is a fine and honest
+   outcome; it tells the reader plainly that nothing in it is yet a fact about
+   their business, which is exactly what a pilot is for. Never mark a row
+   `verified` unless the fact-checker verified that specific figure.
 8. **HOW WE WOULD START.** Now, Next, Later with a metric each, and what we need
    from them. Staged gates earned by measured results.
 9. **WHAT WOULD MAKE US WRONG.** Three or four, each ANSWERED in the same
@@ -74,7 +98,7 @@ own credentials instead: "death moves."
 |---|---|---|
 | Words | **2,000 to 3,000** | 4,500 earns ~20 percent read; proposal data shows no evidence longer wins |
 | Headings | **12 to 18**, max 3 levels | Butterick; NN/g at most 3 sizes |
-| Bullets | **<= 25, never more than paragraphs** | Bullets delete the relationships between ideas |
+| Bullets | **<= 25, never more than paragraphs** | Bullets delete the relationships between ideas. Rows of the before/after figure are parallel by design, so they are reported but not charged |
 | Bold | **<= 30 percent** | Bold everywhere is bold nowhere |
 | Pull quotes | **zero** | NN/g eyetracking: readers hit one and drop into light scanning |
 | Containers | **<= 3 bordered styles** | Everything-is-a-card is why the old one read as a dashboard |
@@ -153,7 +177,15 @@ pipeline has.
   "brief": "",                   // IN SHORT, 350-450 words, stands alone, \n\n between paragraphs
   "found":   { "title","lede","body","callout_big","callout_note","body_2" },
   "costing": { "title","lede","body","callout_big","callout_note","body_2" },
-  "opportunity": { "title","lede","outcome_body","current_workaround" },
+  "opportunity": {
+    "title","lede",
+    "outcome_body",              // short, leads INTO the figure
+    "before_after": {            // the primary visual, see section 5
+      "headline","before_title","after_title","note",
+      "rows":[{ "today","after","gone" }]   // gone strikes the TODAY cell
+    },
+    "after_body"                 // what the columns cannot carry
+  },
   "build": {
     "title","lede",
     "plain_parts",               // ~60 words, plain nouns, BEFORE any explanation
@@ -163,7 +195,8 @@ pipeline has.
   "roi": {
     "title","lede","lede_body",
     "table_caption", "table_head": ["","Conservative","Most likely","Aggressive"],
-    "table": [ { "label","cells":["","",""],"emphasis":false } ],
+    "table": [ { "label","cells":["","",""],"emphasis":false,
+                 "mark":"verified|modelled|assumed" } ],
     "table_note",                // assumptions live here, in the table
     "payback_big","payback_range","base_rate_note","value_owner"
   },
