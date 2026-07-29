@@ -7,11 +7,8 @@
     "date": "2026-07-28",
     "prepared_for_first": null
   },
-
   "thesis": "Every time an 8(a) subsidiary graduates, Bristol Bay loses the proposals that won its work.",
-
   "brief": "Bristol Bay's government services group runs more than 300 million dollars a year in federal contracts across 22 separate 8(a) subsidiaries. Because 8(a) status lasts only nine years, those subsidiaries are always aging out and being replaced. That churn is the model working as designed. What is not by design is that each departure takes proven, winning proposal text with it, because that text lives on the drives of the entity that wrote it and nowhere else.\n\nWe looked at how the group wins federal work and where the same effort gets spent twice. The finding is narrow. Across 917 government contractors surveyed this year, a single proposal takes an average of 84 hours, which is two full work weeks. A large share of that goes into past performance, resumes, and compliance answers that a sister company in the same family already wrote and already won on. Nobody can find them, so they get written again.\n\nWhat we would build is a searchable memory of Bristol Bay's own winning proposals. A writer asks in plain language for what a sister company has already done, and gets back the actual paragraph with the entity and the contract it won attached. They check it and reuse it. Nothing is written for them and nothing is submitted automatically. The rules about who may see which document stay ordinary software rules, tested and auditable, because a permission boundary is not something to hand to a language model.\n\nWe would start with one subsidiary, not all 22. That pilot costs roughly 80,000 to 133,000 dollars over five years, and the conservative case does not pay that back in cash on recovered hours alone. What it does return, inside six to nine months, is a number nobody has today: what a proposal actually costs Bristol Bay. That number decides whether the larger build is worth funding.\n\nOne caveat worth reading before the rest. We could not verify your real proposal hours or win rate, because they are not public. Everything modeled here uses an industry average and an assumed 88 dollar hourly rate, both stated plainly so you can correct them. If those assumptions are wrong the numbers move, and we would rather you check them than take them.",
-
   "found": {
     "title": "The library that would make the next bid faster already exists inside the family",
     "lede": "It is just scattered across 22 companies that cannot search each other.",
@@ -19,20 +16,17 @@
     "callout_big": "22 companies, one family, no shared memory",
     "callout_note": "The work is already done and already proven. It is only unfindable."
   },
-
   "costing": {
     "title": "The repeated work runs to roughly two work weeks a proposal",
     "lede": "We cannot see your real number from outside, so here is the industry's and what we would do about that.",
     "body": "Deltek's 2026 study of 917 government contractors found that developing a single proposal still takes an average of 84 hours. That is two full weeks of one person's time, per bid. The same study found 83 percent of contractors missed opportunities last year simply because they learned about them too late.\n\nThat 84 hours is an industry average and not Bristol Bay's number, and we have no way to see yours from the outside. Your group may well be under it. Measuring that is the first thing we would do and it matters more than any projection in this study, which is why the pilot is built to produce it rather than assume it.\n\nWhat we can say from outside is where repetition is structurally guaranteed rather than merely likely. Past performance narratives, key personnel resumes, and standard compliance answers get written fresh in each entity because there is no shared place to look. Those are the sections that change least between bids and that a sister company is most likely to have already written well."
   },
-
   "opportunity": {
     "title": "The goal is not writing faster, it is not writing the same thing twice",
     "lede": "What actually changes for a proposal manager on the Tuesday after this goes live.",
     "outcome_body": "A solicitation lands. Before anyone starts writing, the proposal manager asks who in the family has done this work for this agency before. Within about a minute they have the actual paragraphs from the actual winning bids, with the entity and contract attached. They read them, decide what still applies, and start from proven text instead of a blank page.\n\nThe sections that get reused are the ones nobody enjoys writing and reviewers scrutinise least: past performance, resumes, standing compliance answers. The time that frees goes to the parts that actually win, which are technical approach and price. That is the whole point. This does not make anyone a faster writer. It stops the family paying twice for the same paragraph.",
     "current_workaround": "Today the workaround is a person emailing around the family asking whether anyone has something similar, then digging through old files if they get a helpful reply. It works when the writer happens to know who to ask, which is exactly the knowledge that walks out when a subsidiary graduates."
   },
-
   "build": {
     "title": "A searchable memory of your own winning proposals",
     "lede": "Four moving parts, three of which are ordinary software.",
@@ -42,39 +36,114 @@
     "build_vs_buy": "Most of this is bought rather than built. The secure environment, the search infrastructure, and the identity system are established products and we would use them rather than reinvent them. What is worth building is the part nobody sells you: the rules encoding which of 22 entities may see what, the proof that every answer traces to a real document, and the unglamorous work of getting scattered archives into one place.",
     "architecture": {
       "nodes": [
-        {"id": "subs", "label": "22 subsidiary archives", "kind": "external"},
-        {"id": "ingest", "label": "Collector and librarian", "kind": "system"},
-        {"id": "corpus", "label": "Marked proposal library", "kind": "data"},
-        {"id": "idp", "label": "Your identity system", "kind": "external"},
-        {"id": "acl", "label": "Permission rules", "kind": "system"},
-        {"id": "search", "label": "Search and source check", "kind": "ai"},
-        {"id": "writer", "label": "Proposal writer", "kind": "user"}
+        {
+          "id": "subs",
+          "label": "Your 22 archives",
+          "kind": "external"
+        },
+        {
+          "id": "ingest",
+          "label": "Collected and marked",
+          "kind": "system"
+        },
+        {
+          "id": "acl",
+          "label": "Permission rules",
+          "kind": "system"
+        },
+        {
+          "id": "search",
+          "label": "Search and source check",
+          "kind": "ai"
+        },
+        {
+          "id": "writer",
+          "label": "Proposal writer",
+          "kind": "user"
+        }
       ],
       "edges": [
-        {"from": "subs", "to": "ingest"},
-        {"from": "ingest", "to": "corpus"},
-        {"from": "idp", "to": "acl"},
-        {"from": "corpus", "to": "acl"},
-        {"from": "acl", "to": "search"},
-        {"from": "search", "to": "writer"}
+        {
+          "from": "subs",
+          "to": "ingest"
+        },
+        {
+          "from": "ingest",
+          "to": "acl"
+        },
+        {
+          "from": "acl",
+          "to": "search"
+        },
+        {
+          "from": "search",
+          "to": "writer"
+        }
       ],
-      "caption": "The permission rules sit between the library and the search rather than inside it. The search only ever sees documents this particular person is already cleared to open, so a mistake in the search cannot become a disclosure."
+      "caption": "Read it left to right. Nothing reaches the search until the permission rules have already removed every document this particular person is not cleared to open, so a mistake in the search cannot become a disclosure."
     }
   },
-
   "roi": {
     "title": "What it costs, and what it honestly returns",
     "lede": "One subsidiary, five years, and a conservative case that does not clear on cash alone.",
     "lede_body": "This prices a pilot on one subsidiary's archive, not a rollout across all 22. The largest cost is not software. It is the unglamorous work of collecting scattered documents and having a cleared person mark what is controlled, and that is also the part we cannot size accurately from outside.\n\nEvery figure below assumes a fully loaded proposal writer at 88 dollars an hour and the industry's 84 hours per proposal. Both are stated so you can replace them with your own.",
     "table_caption": "Modeled over five years for a single subsidiary pilot",
-    "table_head": ["", "Conservative", "Most likely", "Aggressive"],
+    "table_head": [
+      "",
+      "Conservative",
+      "Most likely",
+      "Aggressive"
+    ],
     "table": [
-      {"label": "Proposals in the pilot slice, per year", "cells": ["20", "30", "45"]},
-      {"label": "Share of prep hours recovered", "cells": ["8%", "12%", "18%"]},
-      {"label": "Capacity returned per year", "cells": ["$11,800", "$26,600", "$59,900"]},
-      {"label": "Five year cost, all in", "cells": ["$133,200", "$100,300", "$80,500"]},
-      {"label": "Share of that cost recovered", "cells": ["39%", "119%", "342%"], "emphasis": true},
-      {"label": "Cash payback", "cells": ["not within five years", "about month 45", "about month 14"]}
+      {
+        "label": "Proposals in the pilot slice, per year",
+        "cells": [
+          "20",
+          "30",
+          "45"
+        ]
+      },
+      {
+        "label": "Share of prep hours recovered",
+        "cells": [
+          "8%",
+          "12%",
+          "18%"
+        ]
+      },
+      {
+        "label": "Capacity returned per year",
+        "cells": [
+          "$11,800",
+          "$26,600",
+          "$59,900"
+        ]
+      },
+      {
+        "label": "Five year cost, all in",
+        "cells": [
+          "$133,200",
+          "$100,300",
+          "$80,500"
+        ]
+      },
+      {
+        "label": "Share of that cost recovered",
+        "cells": [
+          "39%",
+          "119%",
+          "342%"
+        ],
+        "emphasis": true
+      },
+      {
+        "label": "Cash payback",
+        "cells": [
+          "not within five years",
+          "about month 45",
+          "about month 14"
+        ]
+      }
     ],
     "table_note": "Recovered hours are capacity, not cash. They become money only if the freed time defers a hire, and we have not assumed it does. Earlier discovery of missed bids is deliberately left out of these figures, because win rate is the number most easily inflated and we did not want it carrying the case.",
     "payback_big": "The conservative case does not pay back in cash",
@@ -82,49 +151,102 @@
     "base_rate_note": "The honest backdrop is that most of this fails. MIT's work puts about 95 percent of enterprise AI pilots at no measurable profit impact, and RAND finds more than 80 percent of AI projects fail outright. Government contracting looks the same. Adoption jumped from 45 to about 90 percent this year while average margins fell from 20 to 17 percent, and only around 5 percent of contractors describe their capability as fully developed. Adoption is plainly not the differentiator. What separates the few that work is that they are narrow, they run on the company's own material, a person stays accountable for the output, and somebody measures the result. That is the shape of this one, and it is why we scoped it to one subsidiary and one job rather than something more impressive.",
     "value_owner": "For any of this to mean anything, one person has to own the number. We would want a named proposal manager in the government services group who signs off the baseline at the start and reviews actual against baseline each quarter. That review is the gate. If the numbers do not move, the honest answer is to stop, and we would say so."
   },
-
   "roadmap": {
     "title": "How we would start, and what would stop us",
     "lede": "Nothing funds the next phase except measured results from the last one.",
     "body": "The first two to four weeks are not a build at all. They are a survey of one subsidiary's archive, answering the question that actually determines cost: how much of this material is machine readable, how much is duplicated, and how long it takes a cleared person to mark a single document. That produces a per document number, and that number is what a rollout across 22 entities should be priced against. If it comes back ugly, you have spent very little to find that out.",
     "now": [
-      {"item": "Survey one subsidiary's proposal archive and measure the real cost to onboard a document", "metric": "A per document cost, and a clear answer on whether a wider rollout is weeks or quarters of work"},
-      {"item": "Build the search over that one archive, with the permission rules in front of it", "metric": "Writers find a usable prior passage for most real questions, and controlled documents never surface to anyone not cleared for them"},
-      {"item": "Measure what a proposal actually costs you today", "metric": "A real baseline for hours per proposal and reuse rate, replacing the industry averages used in this study"}
+      {
+        "item": "Survey one subsidiary's proposal archive and measure the real cost to onboard a document",
+        "metric": "A per document cost, and a clear answer on whether a wider rollout is weeks or quarters of work"
+      },
+      {
+        "item": "Build the search over that one archive, with the permission rules in front of it",
+        "metric": "Writers find a usable prior passage for most real questions, and controlled documents never surface to anyone not cleared for them"
+      },
+      {
+        "item": "Measure what a proposal actually costs you today",
+        "metric": "A real baseline for hours per proposal and reuse rate, replacing the industry averages used in this study"
+      }
     ],
     "next": [
-      {"item": "Extend to the rest of the government services family", "metric": "The same accuracy and permission results hold on a larger and messier archive"},
-      {"item": "Draft help for the compliance matrix, with a person signing every section", "metric": "Turnaround improves against the baseline, with no unreviewed text reaching a proposal"}
+      {
+        "item": "Extend to the rest of the government services family",
+        "metric": "The same accuracy and permission results hold on a larger and messier archive"
+      },
+      {
+        "item": "Draft help for the compliance matrix, with a person signing every section",
+        "metric": "Turnaround improves against the baseline, with no unreviewed text reaching a proposal"
+      }
     ],
     "later": [
-      {"item": "The same library for the construction group's bids", "metric": "Reuse rate on construction proposals, measured the same way"}
+      {
+        "item": "The same library for the construction group's bids",
+        "metric": "Reuse rate on construction proposals, measured the same way"
+      }
     ],
     "gates": "Each phase is released by the previous phase's measured numbers rather than by a projection. If the survey says the archive is not ready, the right decision is to fix that first, or to stop.",
     "need_from_you": "What we would need from you is modest, but it is not nothing. Access to one subsidiary's proposal archive in an environment your security people approve. A proposal manager for a few hours to tell us what a good answer looks like. And a decision from whoever owns compliance about which documents are controlled, because that classification does not exist yet and it determines what the library may hold."
   },
-
   "honest": {
     "title": "What would make us wrong",
     "lede": "The three most likely ways this disappoints you, and what we would do about each.",
     "body": "The archive turns out to be the whole project. If those 22 archives are mostly scanned images, heavily duplicated, and unclassified for control purposes, then collecting and marking them is the real cost and the search is a footnote. This is the single most likely way our numbers are wrong. It is also why the first step is a survey rather than a build, so you learn it in a few weeks rather than a year.\n\nPeople may not use it. This is the most common reason pilots like this show nothing, and better technology does not fix it. A writer who does not trust the tool goes back to emailing colleagues, and the recovered hours never appear. We would instrument use from the first day and treat low use as a result worth reporting rather than a problem to hide.\n\nSearch quality degrades as an archive grows. More documents makes retrieval harder rather than easier, and keeping it accurate is ongoing work rather than a one time setup. We would rather say that now than discover it with you in month eight.\n\nAnd the one already said plainly above. On recovered hours alone the conservative case does not pay back inside five years. It is honest as a pilot that buys you a measured number. If what you need is a build that pays for itself on hours saved, this is not that one, and you should not fund it on that basis."
   },
-
   "next_step_title": "The next step is small",
   "next_step": "This study is the free version of how we work. There is nothing attached to it and no follow up sequence behind it.\n\nIf it is useful, the next step is a reply rather than a commitment. The most valuable thing we could do together is the archive survey, because it turns the largest unknown in this document into a number you own. And if we have read something wrong about how your group actually operates, that is worth ten minutes too. We would genuinely want to know.",
-
   "sources": [
-    {"claim": "Government services group scale, 22 subsidiaries, over 2,500 personnel, more than 300 million dollars in contracts a year, and the agencies served", "url": "https://eiservices-llc.com/about/"},
-    {"claim": "Deltek Clarity 2026, 917 contractors surveyed, 84 hours per proposal, 83 percent missed opportunities, adoption 45 to 90 percent, margins 20 to 17 percent, about 5 percent fully developed", "url": "https://www.govconwire.com/articles/clarity-report-2026-deltek-govcon-kevin-plexico"},
-    {"claim": "Bristol Bay Native Corporation, ANCSA regional corporation incorporated June 13 1972, about 9,900 shareholders as of 2015", "url": "https://en.wikipedia.org/wiki/Bristol_Bay_Native_Corporation"},
-    {"claim": "Strongest operating year in company history, 3.2 billion dollars revenue, 202 million earnings, 84 million net income", "url": "https://www.akbizmag.com/industry/alaska-native/regionalroundup2025/"},
-    {"claim": "Bristol Bay Construction Holdings and its five construction brands", "url": "https://www.bbnc.net/business/bristol-bay-construction-holdings/"},
-    {"claim": "Koniag Government Services, the CASPER platform and Koniag AI Solutions, with vendor published figures including a 75 percent reduction in contract requirements analysis time and 29.3 million dollars in savings", "url": "https://www.koniag-gs.com/ai-investments-deliver-powerful-results-for-koniag-government-services-and-federal-customers/"},
-    {"claim": "Alutiiq bid and capture automation on Salesforce Government Cloud, reported at 100 percent adoption after one year", "url": "https://www.salesforce.com/customer-success-stories/alutiiq/"},
-    {"claim": "ASRC Federal named AI and machine learning deployments", "url": "https://www.asrcfederal.com/ai/"},
-    {"claim": "Compliance limits on AI touching controlled unclassified information, covering CMMC, NIST 800-171, FedRAMP, export control, and False Claims Act exposure", "url": "https://www.kiteworks.com/regulatory-compliance/ai-compliance-federal-contractors/"},
-    {"claim": "SPATHE Systems, a comparable 8(a) contractor, vendor published proposal turnaround results", "url": "https://www.govdash.com/blog/from-3-weeks-to-24-hours-how-spathe-systems-4x-d-rfp-output-with-govdash"},
-    {"claim": "MIT Project NANDA, about 95 percent of enterprise generative AI pilots show no measurable profit impact", "url": "https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/"},
-    {"claim": "RAND report RRA2680-1, more than 80 percent of AI projects fail", "url": "https://www.rand.org/pubs/research_reports/RRA2680-1.html"},
-    {"claim": "Bristol Bay Services, the government services group and its leadership", "url": "https://www.bbnc.net/business/bristol-bay-services/"}
+    {
+      "claim": "Government services group scale, 22 subsidiaries, over 2,500 personnel, more than 300 million dollars in contracts a year, and the agencies served",
+      "url": "https://eiservices-llc.com/about/"
+    },
+    {
+      "claim": "Deltek Clarity 2026, 917 contractors surveyed, 84 hours per proposal, 83 percent missed opportunities, adoption 45 to 90 percent, margins 20 to 17 percent, about 5 percent fully developed",
+      "url": "https://www.govconwire.com/articles/clarity-report-2026-deltek-govcon-kevin-plexico"
+    },
+    {
+      "claim": "Bristol Bay Native Corporation, ANCSA regional corporation incorporated June 13 1972, about 9,900 shareholders as of 2015",
+      "url": "https://en.wikipedia.org/wiki/Bristol_Bay_Native_Corporation"
+    },
+    {
+      "claim": "Strongest operating year in company history, 3.2 billion dollars revenue, 202 million earnings, 84 million net income",
+      "url": "https://www.akbizmag.com/industry/alaska-native/regionalroundup2025/"
+    },
+    {
+      "claim": "Bristol Bay Construction Holdings and its five construction brands",
+      "url": "https://www.bbnc.net/business/bristol-bay-construction-holdings/"
+    },
+    {
+      "claim": "Koniag Government Services, the CASPER platform and Koniag AI Solutions, with vendor published figures including a 75 percent reduction in contract requirements analysis time and 29.3 million dollars in savings",
+      "url": "https://www.koniag-gs.com/ai-investments-deliver-powerful-results-for-koniag-government-services-and-federal-customers/"
+    },
+    {
+      "claim": "Alutiiq bid and capture automation on Salesforce Government Cloud, reported at 100 percent adoption after one year",
+      "url": "https://www.salesforce.com/customer-success-stories/alutiiq/"
+    },
+    {
+      "claim": "ASRC Federal named AI and machine learning deployments",
+      "url": "https://www.asrcfederal.com/ai/"
+    },
+    {
+      "claim": "Compliance limits on AI touching controlled unclassified information, covering CMMC, NIST 800-171, FedRAMP, export control, and False Claims Act exposure",
+      "url": "https://www.kiteworks.com/regulatory-compliance/ai-compliance-federal-contractors/"
+    },
+    {
+      "claim": "SPATHE Systems, a comparable 8(a) contractor, vendor published proposal turnaround results",
+      "url": "https://www.govdash.com/blog/from-3-weeks-to-24-hours-how-spathe-systems-4x-d-rfp-output-with-govdash"
+    },
+    {
+      "claim": "MIT Project NANDA, about 95 percent of enterprise generative AI pilots show no measurable profit impact",
+      "url": "https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/"
+    },
+    {
+      "claim": "RAND report RRA2680-1, more than 80 percent of AI projects fail",
+      "url": "https://www.rand.org/pubs/research_reports/RRA2680-1.html"
+    },
+    {
+      "claim": "Bristol Bay Services, the government services group and its leadership",
+      "url": "https://www.bbnc.net/business/bristol-bay-services/"
+    }
   ]
 }

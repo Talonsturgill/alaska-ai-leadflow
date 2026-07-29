@@ -72,6 +72,33 @@ def para(text, cls=""):
     return "".join(f"<p{c}>{esc(b)}</p>" for b in blocks)
 
 
+# ---------- embedded brand type ----------
+# The site runs Fraunces (display), Manrope (body) and JetBrains Mono (data).
+# The study has to look like alaskaaihq.com made it, and it must stay a single
+# offline file, so the subsetted woff2 rides inline as base64. Subset to the
+# glyphs a study can emit: ~99 KB raw, ~133 KB encoded.
+FONT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "fonts")
+
+
+def font_face(family, filename, weights, style="normal"):
+    path = os.path.join(FONT_DIR, filename)
+    if not os.path.exists(path):
+        return ""
+    import base64
+    b64 = base64.b64encode(open(path, "rb").read()).decode("ascii")
+    return (f"@font-face{{font-family:'{family}';"
+            f"src:url(data:font/woff2;base64,{b64}) format('woff2');"
+            f"font-weight:{weights};font-style:{style};font-display:block}}")
+
+
+def embedded_fonts():
+    return "".join([
+        font_face("Fraunces", "fraunces.woff2", "100 900"),
+        font_face("Manrope", "manrope.woff2", "200 800"),
+        font_face("JBMono", "jbmono.woff2", "400"),
+    ])
+
+
 # ---------- brand css ----------
 # Colour ladder is APCA-verified against --bg. Lc 90+ body, 75+ secondary,
 # 60+ captions. WCAG 2.x ratios overstate contrast on dark backgrounds, which is
@@ -84,24 +111,35 @@ CSS = """
   --prose:37rem;                /* ~65 characters at 17px */
   --wide:56rem;                 /* tables, diagram, demo only */
 
-  --bg:#0b1017;
-  --surface:#222d3d;            /* 1.37:1 over bg, reads as a surface without a border */
-  --rule:#2b3646;
+  /* alaskaaihq.com's own tokens. The study should look like the site made it. */
+  --bg:#02060f;                 /* --night, the site's true ground */
+  --surface:#122a46;            /* --panel2 lifted to 1.40:1, reads without a border */
+  --rule:#1c3350;               /* --line */
 
-  --ink:#e8eef7;                /* APCA Lc -95, body */
-  --sub:#c3cfdd;                /* Lc -76, secondary body */
-  --cap:#aab7c8;                /* Lc -62, captions, min 15px */
+  --ink:#e2eaf6;                /* APCA Lc -86. Capped near 85, above that dark
+                                   mode halates (APCA author's own guidance) */
+  --sub:#c3d2e6;                /* --body */
+  --cap:#a6b9d1;                /* --mute lifted to APCA Lc 63. The site's own
+                                   #8da2be measures Lc 51 here, below the 60 floor
+                                   for caption-size text on this ground */
 
-  --accent:#57e0c8;             /* the only accent */
-  --link:#8ab8f0;
-  --good:#5fd0a6;
-  --warn:#ffd18c;
+  --ui:Manrope,ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --display:Fraunces,Georgia,"Times New Roman",serif;
+  --mono:JBMono,ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --accent:#3ce6b4;             /* --green, the structural accent */
+  --gold:#ffc72c;               /* Alaska flag gold, the signature. Budgeted:
+                                   it appears on the mark, the one hero number,
+                                   and the row that carries the argument. */
+  --link:#5ac8f0;               /* --blue */
+  --warn:#f2a43a;               /* --amber */
 }
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0;background:var(--bg);color:var(--ink);
-  font:17px/1.6 ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
-  letter-spacing:0;
+  font:17px/1.62 var(--ui);
+  letter-spacing:.005em;        /* light-on-dark counters close up slightly */
+  font-variant-numeric:oldstyle-nums proportional-nums;
   -webkit-font-smoothing:antialiased;
 }
 .page{max-width:var(--wide);margin:0 auto;padding:0 24px calc(var(--u)*3)}
@@ -113,43 +151,56 @@ em{font-style:normal;color:var(--sub)}
 a{color:var(--link);text-decoration:none;border-bottom:1px solid rgba(138,184,240,.35)}
 a:hover{border-bottom-color:var(--link)}
 
-h1,h2,h3{line-height:1.22;font-weight:640;letter-spacing:-.01em;margin:0}
-h1{font-size:clamp(30px,4.6vw,42px)}
-h2{font-size:clamp(23px,3vw,27px);margin:0 0 calc(var(--u)*.5)}
-h3{font-size:21px;margin:calc(var(--u)*1.5) 0 calc(var(--u)*.5)}
+h1,h2,h3{margin:0;text-wrap:balance}
+h1{font-family:var(--display);font-size:clamp(38px,6.6vw,64px);font-weight:360;
+  line-height:.98;letter-spacing:-.022em;font-variation-settings:"opsz" 96;
+  margin-left:-.045em}
+h2{font-family:var(--display);font-size:clamp(24px,3.2vw,30px);font-weight:420;
+  line-height:1.18;letter-spacing:-.012em;margin:0 0 calc(var(--u)*.5)}
+h3{font-size:20px;font-weight:700;line-height:1.3;
+  margin:calc(var(--u)*1.5) 0 calc(var(--u)*.5)}
+p,li{text-wrap:pretty}
 
 /* ---------- cover ---------- */
 .cover{padding:calc(var(--u)*2) 0 calc(var(--u)*.5)}
-.mark{display:flex;align-items:center;gap:9px;font-weight:640;font-size:15px;
-  letter-spacing:.01em;margin-bottom:calc(var(--u)*2)}
-.mark i{width:9px;height:9px;border-radius:50%;background:var(--accent);display:block}
-.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--accent);margin:0 0 12px;font-weight:600}
+.mark{display:flex;align-items:center;gap:10px;font:600 13px/1 var(--mono);
+  letter-spacing:.18em;margin-bottom:calc(var(--u)*2.5);color:var(--ink)}
+/* Polaris, the constellation mark the brand system already uses. Arms have to
+   be thin and the glyph big enough or a 4-point star reads as a plus sign. */
+.mark i{width:14px;height:14px;display:block;background:var(--gold);
+  clip-path:polygon(50% 0,55.5% 44.5%,100% 50%,55.5% 55.5%,50% 100%,
+                    44.5% 55.5%,0 50%,44.5% 44.5%)}
+.eyebrow{font:600 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;
+  color:var(--cap);margin:0 0 18px}
 .cover h1{max-width:27ch}
-.covermeta{margin-top:calc(var(--u)*1.2);font-size:15px;color:var(--cap)}
-.covermeta span+span::before{content:"  ·  ";color:var(--rule)}
+.covermeta{margin-top:calc(var(--u)*1.6);padding-top:14px;
+  border-top:1px solid var(--rule);font:500 12px/1.5 var(--mono);
+  letter-spacing:.1em;text-transform:uppercase;color:var(--cap);
+  display:flex;flex-wrap:wrap;gap:10px 28px;max-width:var(--prose)}
+.covermeta span{font-variant-numeric:tabular-nums}
 
 /* ---------- the standalone summary ---------- */
-.brief{border-left:3px solid var(--accent);padding:0 0 0 calc(var(--u)*.85);
+.brief{border-left:2px solid var(--gold);padding:0 0 0 calc(var(--u)*.85);
   margin:calc(var(--u)*1.5) 0 calc(var(--u)*2);max-width:var(--prose)}
-.brief h2{font-size:19px;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--accent);margin-bottom:calc(var(--u)*.6);font-size:13px}
+.brief h2{font:600 12px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:calc(var(--u)*.7)}
 .brief p{color:var(--sub)}
 .brief p strong{color:var(--ink)}
 .brief p:last-child{margin-bottom:0}
 
 /* ---------- sections ---------- */
 .sec{padding:0;margin:calc(var(--u)*3) 0 0}
-.sec-n{font:600 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
-  color:var(--accent);letter-spacing:.16em;display:block;margin-bottom:12px}
-.sec-lede{font-size:20px;line-height:1.5;color:var(--sub);
+.sec-n{font:600 12px/1 var(--mono);color:var(--gold);letter-spacing:.18em;
+  display:block;margin-bottom:14px;font-variant-numeric:tabular-nums}
+.sec-lede{font-size:19px;line-height:1.55;color:var(--sub);
   max-width:34rem;margin:0 0 calc(var(--u)*1.2)}
 
 /* ---------- callout: carries NEW information, never a repeated quote ---------- */
-.callout{border-left:3px solid var(--accent);padding:2px 0 2px calc(var(--u)*.85);
+.callout{border-left:2px solid var(--gold);padding:2px 0 2px calc(var(--u)*.85);
   margin:calc(var(--u)*1.2) 0;max-width:var(--prose)}
-.callout .big{display:block;font-size:clamp(26px,3.4vw,34px);font-weight:640;
-  line-height:1.15;letter-spacing:-.02em;margin-bottom:8px}
+.callout .big{display:block;font-family:var(--display);font-weight:380;
+  font-size:clamp(30px,4.6vw,46px);line-height:1.02;letter-spacing:-.02em;
+  margin-bottom:12px;color:var(--ink);font-variant-numeric:lining-nums tabular-nums}
 .callout p{color:var(--sub);margin:0}
 
 /* ---------- lists: rare, short, never nested ---------- */
@@ -163,17 +214,33 @@ ul.clean li strong{color:var(--ink)}
 /* ---------- tables ---------- */
 .tw{overflow-x:auto;margin:0 0 var(--u);max-width:var(--wide)}
 table{border-collapse:collapse;width:100%;font-size:16px}
-caption{text-align:left;font-size:15px;color:var(--cap);margin-bottom:10px}
-th,td{padding:10px 16px 10px 0;text-align:left;vertical-align:baseline}
+caption{text-align:left;font-size:16px;color:var(--sub);margin-bottom:14px;max-width:var(--prose)}
+th,td{padding:11px 18px 11px 0;text-align:left;vertical-align:baseline}
 th{color:var(--sub);font-weight:640;font-size:15px;border-bottom:1px solid var(--rule)}
-tbody tr+tr td{border-top:1px solid rgba(43,54,70,.55)}
+
 td{color:var(--sub)}
 td:first-child{color:var(--ink)}
-.num{text-align:right;font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
-tr.total td{border-top:1px solid var(--rule);color:var(--ink);font-weight:640}
+.num{text-align:right;font-variant-numeric:lining-nums tabular-nums;font-family:var(--mono);font-size:15px}
+th.num{font-family:var(--ui);font-size:15px}
+tr.total td{border-top:2px solid var(--gold);color:var(--ink);font-weight:700;padding-top:14px}
 tfoot td{color:var(--cap);font-size:15px;border-top:1px solid var(--rule);padding-top:12px}
 
-/* ---------- diagram ---------- */
+/* ---------- diagram ----------
+   All SVG paint comes from CSS, never hardcoded hex, so the print theme
+   re-colours the figure instead of leaving dark boxes on a light page.
+   Edge stroke is full-opacity --cap = 4.6:1 on the surface; the previous
+   #54627a at .7 alpha composited to 1.76:1 and failed WCAG 1.4.11 (3:1). */
+.dg-e{stroke:var(--cap)}
+.dg-n{fill:var(--ink);font:640 15px/1.25 var(--ui);letter-spacing:-.005em}
+.dg-k{fill:var(--cap);font:600 11px/1 var(--mono);letter-spacing:.1em}
+.dg-n-bar{fill:var(--cap);opacity:.55}
+.dg-build{fill:var(--accent)}
+.dg-build-bar{fill:var(--accent)}
+@media (max-width:640px){
+  /* never let the viewBox scale type below legibility, stack instead */
+  .figure svg{min-width:600px}
+  .figure{overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
 .figure{margin:calc(var(--u)*1.2) 0;max-width:var(--wide)}
 .figure svg{display:block;width:100%;height:auto;background:var(--surface);border-radius:10px}
 .figcap{font-size:15px;color:var(--cap);margin-top:12px;max-width:var(--prose)}
@@ -223,12 +290,15 @@ hr.div{border:0;border-top:1px solid var(--rule);margin:calc(var(--u)*2.5) 0 0}
 # crossing edges and colliding labels. Edge labels are dropped entirely: at this
 # size they were unreadable and they are what made the figure look like spaghetti.
 
-KIND_FILL = {"user": "#20293a", "external": "#20293a", "system": "#1c2636",
-             "ai": "#153b34", "data": "#2a2140"}
-KIND_STROKE = {"user": "#8ab8f0", "external": "#8ab8f0", "system": "#6f8bb0",
-               "ai": "#57e0c8", "data": "#a897ff"}
-KIND_LABEL = {"user": "Person", "external": "Outside system", "system": "Their system",
-              "ai": "What we build", "data": "Their data"}
+# One accent plus ink weight, not five hues. The old palette had two identical
+# swatches, fills at 1.05-1.13:1 (invisible), and violet/blue only 9.8 dE apart,
+# below the threshold where full-colour-vision readers separate them reliably.
+# Encoding now rides on weight and a sublabel, which survive greyscale print and
+# colour-vision deficiency.
+KIND_LABEL = {"user": "Person", "external": "Theirs today", "system": "Theirs today",
+              "ai": "We build", "data": "Their data"}
+NODE_INK = "#aab7c8"        # 4.6:1 on the surface, clears WCAG 1.4.11
+NODE_ACCENT = "#57e0c8"     # 8.5:1, spent only on what we build
 
 
 def _depth(nodes, edges):
@@ -262,80 +332,101 @@ def render_diagram(arch):
         return ""
 
     depth = _depth(nodes, edges)
+    # Cap the flow at MAXCOL bands. Column count, not node count, is what drives
+    # the viewBox wider than the render box and shrinks the type. Merging
+    # adjacent depths also cuts the routing paths a reader must follow (7PMG G2).
+    MAXCOL = 5
+    raw = sorted({depth.get(n["id"], 0) for n in nodes})
+    if len(raw) > MAXCOL:
+        per = (len(raw) + MAXCOL - 1) // MAXCOL
+        band = {d: i // per for i, d in enumerate(raw)}
+    else:
+        band = {d: i for i, d in enumerate(raw)}
     cols = {}
     for n in nodes:
-        cols.setdefault(depth.get(n["id"], 0), []).append(n)
+        cols.setdefault(band[depth.get(n["id"], 0)], []).append(n)
     order = sorted(cols)
 
-    BW, BH = 150, 66          # box
-    GX, GY = 44, 20           # gaps
-    PAD = 22
+    # Pin the viewBox to the actual render width so one unit is one CSS pixel and
+    # labels can never shrink below legibility. Previously a 7-column flow scaled
+    # to 0.62 on desktop and 0.29 on a phone, rendering 15px type at 9.4 and 3.9px.
+    CANVAS = 848
+    BH, GY, PAD = 62, 18, 14
     rows = max(len(v) for v in cols.values())
-    W = PAD * 2 + len(order) * BW + (len(order) - 1) * GX
-    H = PAD * 2 + rows * BH + (rows - 1) * GY
+    ncol = len(order)
+    GX = 34 if ncol > 4 else 44
+    BW = int((CANVAS - PAD * 2 - (ncol - 1) * GX) / ncol)
+    W = CANVAS
+    H = PAD * 2 + rows * (BH + 16) + (rows - 1) * GY
 
     pos = {}
     for ci, c in enumerate(order):
         group = cols[c]
-        span = len(group) * BH + (len(group) - 1) * GY
+        span = len(group) * (BH + 16) + (len(group) - 1) * GY
         y0 = (H - span) / 2
         for ri, n in enumerate(group):
-            pos[n["id"]] = (PAD + ci * (BW + GX), y0 + ri * (BH + GY))
+            pos[n["id"]] = (PAD + ci * (BW + GX), y0 + ri * (BH + 16 + GY))
 
-    out = [f'<svg viewBox="0 0 {W:.0f} {H:.0f}" role="img" '
-           f'aria-label="Architecture of the recommended build" '
+    out = [f'<svg class="dg" viewBox="0 0 {W:.0f} {H:.0f}" role="img" '
+           f'aria-label="How the pieces fit together" '
            f'xmlns="http://www.w3.org/2000/svg">']
+    # marker inherits the path stroke, so one def serves every edge and it
+    # re-colours for print along with everything else
     out.append('<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" '
-               'markerWidth="6" markerHeight="6" orient="auto-start-reverse">'
-               '<path d="M0,1 L9,5 L0,9 z" fill="#54627a"/></marker></defs>')
+               'markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" '
+               'orient="auto-start-reverse">'
+               '<path d="M0,1.5 L9,5 L0,8.5 z" fill="context-stroke"/></marker></defs>')
 
-    # edges first, orthogonal, behind boxes
+    R = 12          # corner radius, the single biggest lift in perceived quality
     for e in edges:
         a, b = pos.get(e["from"]), pos.get(e["to"])
         if not a or not b:
             continue
         x1, y1 = a[0] + BW, a[1] + BH / 2
         x2, y2 = b[0], b[1] + BH / 2
-        if x2 < x1:                     # feedback edge, route under
-            out.append(f'<path d="M{a[0]:.0f},{a[1]+BH:.0f} V{H-10:.0f} H{b[0]+BW/2:.0f} '
-                       f'V{b[1]+BH:.0f}" fill="none" stroke="#54627a" stroke-width="1.2" '
-                       f'opacity=".55" marker-end="url(#ah)"/>')
-            continue
-        mid = x1 + (x2 - x1) / 2
-        out.append(f'<path d="M{x1:.0f},{y1:.0f} H{mid:.0f} V{y2:.0f} H{x2:.0f}" '
-                   f'fill="none" stroke="#54627a" stroke-width="1.2" opacity=".7" '
+        if x2 < x1:
+            continue                     # backward edges add crossings, not meaning
+        if abs(y2 - y1) < 2:
+            d = f"M{x1:.0f},{y1:.0f} H{x2:.0f}"
+        else:
+            mid = x1 + (x2 - x1) / 2
+            down = 1 if y2 > y1 else -1
+            d = (f"M{x1:.0f},{y1:.0f} H{mid-R:.0f} "
+                 f"Q{mid:.0f},{y1:.0f} {mid:.0f},{y1+R*down:.0f} "
+                 f"V{y2-R*down:.0f} Q{mid:.0f},{y2:.0f} {mid+R:.0f},{y2:.0f} "
+                 f"H{x2:.0f}")
+        out.append(f'<path class="dg-e" d="{d}" fill="none" stroke-width="1.75" '
+                   f'stroke-linecap="round" stroke-linejoin="round" '
                    f'marker-end="url(#ah)"/>')
 
-    # boxes
+    # Nodes: no box. The label IS the node, sitting on a rule. The old rects
+    # measured 1.05-1.13:1 against the surface, so they were ink encoding nothing.
     for n in nodes:
         x, y = pos[n["id"]]
-        k = n.get("kind") if n.get("kind") in KIND_FILL else "system"
-        out.append(f'<rect x="{x:.0f}" y="{y:.0f}" width="{BW}" height="{BH}" rx="8" '
-                   f'fill="{KIND_FILL[k]}" stroke="{KIND_STROKE[k]}" stroke-width="1.2"/>')
+        k = n.get("kind") if n.get("kind") in KIND_LABEL else "system"
+        build = k == "ai"
+        cls = "dg-n dg-build" if build else "dg-n"
+        out.append(f'<rect class="{cls}-bar" x="{x:.0f}" y="{y:.0f}" '
+                   f'width="{BW}" height="2.5" rx="1.25"/>')
+        # the kind rides ON the node, not in a legend (spatial contiguity, d=1.10)
+        out.append(f'<text class="dg-k" x="{x:.0f}" y="{y+20:.0f}">'
+                   f'{esc(KIND_LABEL[k].upper())}</text>')
         label = str(n["label"])
         words, lines, cur = label.split(), [], ""
+        limit = max(12, int(BW / 7.4))
         for w in words:
-            if len(cur + " " + w) > 17 and cur:
+            if len(cur + " " + w) > limit and cur:
                 lines.append(cur)
                 cur = w
             else:
                 cur = (cur + " " + w).strip()
         if cur:
             lines.append(cur)
-        lines = lines[:2]
-        ty = y + BH / 2 - (len(lines) - 1) * 9 + 6
-        for i, ln in enumerate(lines):
-            out.append(f'<text x="{x+BW/2:.0f}" y="{ty+i*18:.0f}" text-anchor="middle" '
-                       f'fill="#e8eef7" font-size="15" font-weight="600" '
-                       f'font-family="ui-sans-serif,system-ui,sans-serif">{esc(ln)}</text>')
+        for i, ln in enumerate(lines[:3]):
+            out.append(f'<text class="{cls}" x="{x:.0f}" y="{y+41+i*17:.0f}">'
+                       f'{esc(ln)}</text>')
     out.append("</svg>")
-
-    kinds = []
-    for k in ("user", "external", "system", "ai", "data"):
-        if any((n.get("kind") or "system") == k for n in nodes):
-            kinds.append(f'<span><i style="background:{KIND_STROKE[k]}"></i>{KIND_LABEL[k]}</span>')
-    legend = f'<div class="legend">{"".join(kinds)}</div>' if kinds else ""
-    return "".join(out) + legend
+    return "".join(out)
 
 
 # ---------- document ----------
@@ -571,7 +662,7 @@ def build_html(study, demo_embed=None):
     return ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<title>Field Study, {title}</title>'
-            f'<style>{CSS}</style></head><body><div class="page">'
+            f'<style>{embedded_fonts()}{CSS}</style></head><body><div class="page">'
             f'{render(study, demo_embed)}</div></body></html>')
 
 
