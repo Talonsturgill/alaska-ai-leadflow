@@ -325,6 +325,16 @@ Collect the four into out/<date>/engineering.json.
    The HTML is the deliverable, the PDF is a best-effort portable copy. If the
    builder errors, fix the study.json shape (it is your data, not the script) and
    re-run. If the PDF step is skipped, that is fine, the HTML still ships.
+   The builder WARNS when any content in study.json never reached the page. Treat
+   that warning as a defect and fix it, a renamed key silently dropping a whole
+   section is how a study ships without its numbers.
+2b. READABILITY GATE, in code, before any critic sees it. Run
+   python scripts/study_qa.py --html out/<date>/field-study.html
+   It checks the rendered page against every budget in FIELD_STUDY_SPEC (length,
+   heading count and levels, bullets vs paragraphs, bold share, pull quotes,
+   container styles, measure, body size, APCA contrast, print theme). It must
+   EXIT 0. If it fails, fix the study.json content or the shape and re-render.
+   This is a loop like any other gate, not a note to pass along.
 3. Spawn demo-builder with claims.json and study.json. It writes
    out/<date>/demo.html, a self-contained interactive demonstration of the
    recommended build, scripted from verified facts, honest about being a demo,
