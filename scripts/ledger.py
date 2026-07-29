@@ -184,6 +184,58 @@ def cmd_add_run(args):
     return 0
 
 
+INBOUND = os.path.join(LEDGER_DIR, "inbound_watch.json")
+
+
+def _inbound():
+    if not os.path.exists(INBOUND):
+        return {"version": 1,
+                "note": "Consecutive runs that could not check INBOUND FIRST. The scanner opt-in queue lives only in Supabase, so an outage makes consented inbound leads invisible and a cold lead ships in their place. This counter makes that cost visible instead of silent.",
+                "consecutive_skips": 0, "first_skipped": None, "last_checked": None}
+    return json.load(open(INBOUND))
+
+
+def cmd_inbound_skipped(args):
+    """Record that INBOUND FIRST could not run. Escalates as it repeats."""
+    d = _inbound()
+    d["consecutive_skips"] += 1
+    d["first_skipped"] = d["first_skipped"] or today()
+    d["last_skipped"] = today()
+    d["reason"] = args.reason
+    _save(INBOUND, d)
+    n = d["consecutive_skips"]
+    print("INBOUND FIRST skipped {} run(s) in a row, since {}.".format(n, d["first_skipped"]))
+    if n >= 3:
+        print("ESCALATE. Consented opt-ins have now been outranked by cold leads {} runs "
+              "running. Someone asked for a study and has not been served. Say this "
+              "LOUDLY at the top of the delivery summary, not in a footnote.".format(n))
+    return 0
+
+
+def cmd_inbound_ok(args):
+    """INBOUND FIRST ran. Clear the counter and report what the outage cost."""
+    d = _inbound()
+    was, since = d["consecutive_skips"], d.get("first_skipped")
+    d.update({"consecutive_skips": 0, "first_skipped": None, "last_checked": today(),
+              "reason": None})
+    _save(INBOUND, d)
+    if was:
+        print("INBOUND FIRST is readable again after {} skipped run(s) since {}.".format(was, since))
+        print("DRAIN THE BACKLOG. Serve inbound every run until the queue is empty, "
+              "before ANY cold scouting resumes. Cold leads shipped during the outage "
+              "took their place, and that debt is paid oldest first.")
+    else:
+        print("INBOUND FIRST checked cleanly.")
+    return 0
+
+
+def cmd_inbound_status(args):
+    d = _inbound()
+    n = d["consecutive_skips"]
+    print(json.dumps(d, indent=2))
+    return 1 if n >= 3 else 0
+
+
 def cmd_pending(args):
     data = _load(PENDING, "pending")
     if args.json:
@@ -229,6 +281,16 @@ def main():
 
     s = sub.add_parser("pending"); s.add_argument("--json", action="store_true")
     s.set_defaults(fn=cmd_pending)
+
+    s = sub.add_parser("inbound-skipped", help="INBOUND FIRST could not run this run")
+    s.add_argument("--reason", default="Supabase unreachable")
+    s.set_defaults(fn=cmd_inbound_skipped)
+
+    s = sub.add_parser("inbound-ok", help="INBOUND FIRST ran, clear the counter")
+    s.set_defaults(fn=cmd_inbound_ok)
+
+    s = sub.add_parser("inbound-status", help="exit 1 when the skip streak has hit escalation")
+    s.set_defaults(fn=cmd_inbound_status)
 
     args = p.parse_args()
     sys.exit(args.fn(args))

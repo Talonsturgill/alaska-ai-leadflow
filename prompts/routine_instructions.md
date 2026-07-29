@@ -162,11 +162,33 @@ so it survives regardless of whether Supabase was reachable.
    DEGRADED MODE in run_state, continue on the git EXCLUDE set, and make the
    delivery summary say plainly that inbound priority was skipped and Supabase
    writes are owed. Never stop the run over Supabase.
-3. INBOUND FIRST. This step REQUIRES Supabase, because the scanner queue is the
-   one thing git cannot hold, a public form has to write somewhere. If Supabase is
-   unreachable, SKIP this step, note the skip loudly for the delivery summary, and
-   go to Phase 1 cold scouting. Otherwise, before any scouting, check for a
-   consented Bottleneck Scanner opt-in that has not been served,
+3. INBOUND FIRST. Inbound ALWAYS outranks cold scouting. Someone who asked for a
+   study beats anyone we could find, without exception, and the rest of this step
+   exists to make sure an outage cannot quietly reverse that.
+
+   This step REQUIRES Supabase, because the scanner queue is the one thing git
+   cannot hold, a public form has to write somewhere. So Supabase gets its HARDEST
+   retry here, harder than anywhere else in the run, because this is the only thing
+   that actually depends on it. Try the query, and on failure retry with backoff at
+   roughly 15s, 30s, 60s and 120s before giving up. Losing a day of inbound
+   priority is worth four minutes of waiting.
+
+   If it is reachable, run `python scripts/ledger.py inbound-ok`. If that reports a
+   BACKLOG from previous skipped runs, DRAIN IT. Serve inbound every run, oldest
+   first, until the queue is empty, and do not resume cold scouting until it is.
+   Cold leads shipped during the outage took those people's place and that debt is
+   paid before anything else.
+
+   If it is unreachable after the full retry, run
+   `python scripts/ledger.py inbound-skipped --reason "<what failed>"`, then go to
+   Phase 1 cold scouting. The counter tracks consecutive skips, and at three or
+   more it tells you to ESCALATE. When it does, the delivery summary leads with it,
+   at the top and in plain words, not buried in a footnote. A consented opt-in
+   sitting unserved for three days while we cold-mail strangers is the single worst
+   thing this routine can quietly do, and the only defence is saying it loudly.
+
+   Otherwise, before any scouting, check for a consented Bottleneck Scanner opt-in
+   that has not been served,
    select id, company, domain, notes, status, created_at from leadflow.leads
    where (why_picked = 'inbound scan opt-in' or notes ilike '%inbound scan opt-in%')
      and study_json is null
