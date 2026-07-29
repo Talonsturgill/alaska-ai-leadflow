@@ -92,9 +92,14 @@ def font_face(family, filename, weights, style="normal"):
 
 
 def embedded_fonts():
+    # Static instances, not variable. Chromium cannot embed a variable instance
+    # into a PDF: it falls back to Type 3 glyph procedures with no outlines,
+    # which measured 19 Type 3 objects and a 2.6x larger file. Instanced cuts
+    # give real /FontFile2 outlines and a smaller PDF.
     return "".join([
-        font_face("Fraunces", "fraunces.woff2", "100 900"),
-        font_face("Manrope", "manrope.woff2", "200 800"),
+        font_face("Fraunces", "fraunces.woff2", "400"),
+        font_face("Manrope", "manrope.woff2", "400"),
+        font_face("Manrope", "manrope-sb.woff2", "650"),
         font_face("JBMono", "jbmono.woff2", "400"),
     ])
 
@@ -134,7 +139,10 @@ CSS = """
   --link:#5ac8f0;               /* --blue */
   --warn:#f2a43a;               /* --amber */
 }
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;
+  /* never let the browser fake a weight or an italic we did not embed. A
+     synthesised face survives into the PDF and looks smeared. */
+  font-synthesis:none}
 body{
   margin:0;background:var(--bg);color:var(--ink);
   font:17px/1.62 var(--ui);
@@ -146,35 +154,35 @@ body{
 .prose{max-width:var(--prose)}
 
 p{margin:0 0 var(--u)}
-strong{color:var(--ink);font-weight:640}
+strong{color:var(--ink);font-weight:650}
 em{font-style:normal;color:var(--sub)}
 a{color:var(--link);text-decoration:none;border-bottom:1px solid rgba(138,184,240,.35)}
 a:hover{border-bottom-color:var(--link)}
 
 h1,h2,h3{margin:0;text-wrap:balance}
-h1{font-family:var(--display);font-size:clamp(38px,6.6vw,64px);font-weight:360;
+h1{font-family:var(--display);font-size:clamp(38px,6.6vw,64px);font-weight:400;
   line-height:.98;letter-spacing:-.022em;font-variation-settings:"opsz" 96;
   margin-left:-.045em}
-h2{font-family:var(--display);font-size:clamp(24px,3.2vw,30px);font-weight:420;
+h2{font-family:var(--display);font-size:clamp(24px,3.2vw,30px);font-weight:400;
   line-height:1.18;letter-spacing:-.012em;margin:0 0 calc(var(--u)*.5)}
-h3{font-size:20px;font-weight:700;line-height:1.3;
+h3{font-size:20px;font-weight:650;line-height:1.3;
   margin:calc(var(--u)*1.5) 0 calc(var(--u)*.5)}
 p,li{text-wrap:pretty}
 
 /* ---------- cover ---------- */
 .cover{padding:calc(var(--u)*2) 0 calc(var(--u)*.5)}
-.mark{display:flex;align-items:center;gap:10px;font:600 13px/1 var(--mono);
+.mark{display:flex;align-items:center;gap:10px;font:400 13px/1 var(--mono);
   letter-spacing:.18em;margin-bottom:calc(var(--u)*2.5);color:var(--ink)}
 /* Polaris, the constellation mark the brand system already uses. Arms have to
    be thin and the glyph big enough or a 4-point star reads as a plus sign. */
 .mark i{width:14px;height:14px;display:block;background:var(--gold);
   clip-path:polygon(50% 0,55.5% 44.5%,100% 50%,55.5% 55.5%,50% 100%,
                     44.5% 55.5%,0 50%,44.5% 44.5%)}
-.eyebrow{font:600 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;
+.eyebrow{font:400 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;
   color:var(--cap);margin:0 0 18px}
 .cover h1{max-width:27ch}
 .covermeta{margin-top:calc(var(--u)*1.6);padding-top:14px;
-  border-top:1px solid var(--rule);font:500 12px/1.5 var(--mono);
+  border-top:1px solid var(--rule);font:400 12px/1.5 var(--mono);
   letter-spacing:.1em;text-transform:uppercase;color:var(--cap);
   display:flex;flex-wrap:wrap;gap:10px 28px;max-width:var(--prose)}
 .covermeta span{font-variant-numeric:tabular-nums}
@@ -182,7 +190,7 @@ p,li{text-wrap:pretty}
 /* ---------- the standalone summary ---------- */
 .brief{border-left:2px solid var(--gold);padding:0 0 0 calc(var(--u)*.85);
   margin:calc(var(--u)*1.5) 0 calc(var(--u)*2);max-width:var(--prose)}
-.brief h2{font:600 12px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;
+.brief h2{font:400 12px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;
   color:var(--gold);margin-bottom:calc(var(--u)*.7)}
 .brief p{color:var(--sub)}
 .brief p strong{color:var(--ink)}
@@ -190,7 +198,7 @@ p,li{text-wrap:pretty}
 
 /* ---------- sections ---------- */
 .sec{padding:0;margin:calc(var(--u)*3) 0 0}
-.sec-n{font:600 12px/1 var(--mono);color:var(--gold);letter-spacing:.18em;
+.sec-n{font:400 12px/1 var(--mono);color:var(--gold);letter-spacing:.18em;
   display:block;margin-bottom:14px;font-variant-numeric:tabular-nums}
 .sec-lede{font-size:19px;line-height:1.55;color:var(--sub);
   max-width:34rem;margin:0 0 calc(var(--u)*1.2)}
@@ -198,7 +206,7 @@ p,li{text-wrap:pretty}
 /* ---------- callout: carries NEW information, never a repeated quote ---------- */
 .callout{border-left:2px solid var(--gold);padding:2px 0 2px calc(var(--u)*.85);
   margin:calc(var(--u)*1.2) 0;max-width:var(--prose)}
-.callout .big{display:block;font-family:var(--display);font-weight:380;
+.callout .big{display:block;font-family:var(--display);font-weight:400;
   font-size:clamp(30px,4.6vw,46px);line-height:1.02;letter-spacing:-.02em;
   margin-bottom:12px;color:var(--ink);font-variant-numeric:lining-nums tabular-nums}
 .callout p{color:var(--sub);margin:0}
@@ -216,13 +224,13 @@ ul.clean li strong{color:var(--ink)}
 table{border-collapse:collapse;width:100%;font-size:16px}
 caption{text-align:left;font-size:16px;color:var(--sub);margin-bottom:14px;max-width:var(--prose)}
 th,td{padding:11px 18px 11px 0;text-align:left;vertical-align:baseline}
-th{color:var(--sub);font-weight:640;font-size:15px;border-bottom:1px solid var(--rule)}
+th{color:var(--sub);font-weight:650;font-size:15px;border-bottom:1px solid var(--rule)}
 
 td{color:var(--sub)}
 td:first-child{color:var(--ink)}
 .num{text-align:right;font-variant-numeric:lining-nums tabular-nums;font-family:var(--mono);font-size:15px}
 th.num{font-family:var(--ui);font-size:15px}
-tr.total td{border-top:2px solid var(--gold);color:var(--ink);font-weight:700;padding-top:14px}
+tr.total td{border-top:2px solid var(--gold);color:var(--ink);font-weight:650;padding-top:14px}
 tfoot td{color:var(--cap);font-size:15px;border-top:1px solid var(--rule);padding-top:12px}
 
 /* ---------- diagram ----------
@@ -232,7 +240,7 @@ tfoot td{color:var(--cap);font-size:15px;border-top:1px solid var(--rule);paddin
    #54627a at .7 alpha composited to 1.76:1 and failed WCAG 1.4.11 (3:1). */
 .dg-e{stroke:var(--cap)}
 .dg-n{fill:var(--ink);font:640 15px/1.25 var(--ui);letter-spacing:-.005em}
-.dg-k{fill:var(--cap);font:600 11px/1 var(--mono);letter-spacing:.1em}
+.dg-k{fill:var(--cap);font:400 11px/1 var(--mono);letter-spacing:.1em}
 .dg-n-bar{fill:var(--cap);opacity:.55}
 .dg-build{fill:var(--accent)}
 .dg-build-bar{fill:var(--accent)}
