@@ -2,24 +2,7 @@
   "version": 1,
   "note": "Writes owed to Supabase because it was unreachable when the run shipped. Backfill these when it recovers, then empty the list.",
   "updated": "2026-07-29",
-  "pending": [
-    {
-      "queued_on": "2026-07-29",
-      "kind": "leadflow.leads upsert",
-      "summary": "Allen Marine Tours / allenmarinetours.com, full row including study_json, dossier_md, draft fields. STATUS IS sent, outreach_sent_at 2026-07-29T13:15:40Z, sent by hand from docket@. Source of truth is ledger/leads.json plus runs/2026-07-29/allen-marine-tours/.",
-      "reason": "Supabase project hibernated and stuck mid-wake, every query failed 28P01 all run."
-    },
-    {
-      "queued_on": "2026-07-29",
-      "kind": "leadflow.runs insert",
-      "summary": "run_date 2026-07-29, shortlist_count 22, status success.",
-      "reason": "Same outage."
-    },
-    {
-      "queued_on": "2026-07-29",
-      "kind": "INBOUND FIRST not checked",
-      "summary": "Could not query for unserved Bottleneck Scanner opt-ins. If one was waiting it outranked this cold lead and was NOT served. Check on the first run after recovery.",
-      "reason": "Same outage. This is the one thing the git ledger cannot replace."
-    }
-  ]
+  "pending": [],
+  "last_backfill": "2026-07-29",
+  "backfill_note": "All owed writes landed after Supabase recovered at ~13:45 UTC. leadflow.runs row and leadflow.leads row for Allen Marine both written, status sent. study_json was NOT backfilled, the full study lives in git at runs/2026-07-29/allen-marine-tours/ which is the record of authority. INBOUND FIRST checked on recovery, one consented opt-in ever (Paychex 2026-07-23) and it was already suppressed, so nothing was owed to anyone."
 }

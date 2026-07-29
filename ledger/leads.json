@@ -97,6 +97,23 @@
       "outreach_sent_at": "2026-07-29T13:15:40Z",
       "sent_from": "docket@alaskaaihq.com",
       "sent_note": "Sent by Talon by hand after review, with light edits to voice and the closing ask. The routine drafted only."
+    },
+    {
+      "company": "Bering Straits Native Corporation",
+      "domain": "beringstraits.com",
+      "segment": "anc",
+      "status": "suppressed",
+      "run_date": "2026-07-18",
+      "source": "reconciled from Supabase 2026-07-29"
+    },
+    {
+      "company": "Paychex, Inc.",
+      "domain": "paychex.com",
+      "segment": "other",
+      "status": "suppressed",
+      "run_date": "2026-07-23",
+      "why_picked": "inbound scan opt-in",
+      "source": "reconciled from Supabase 2026-07-29"
     }
   ]
 }
