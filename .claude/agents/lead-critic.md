@@ -11,7 +11,13 @@ strict. You are a leaf worker and return a verdict only.
 
 # INPUT
 - The draft, subject, body, and opens_on.
-- knowledge/OUTREACH_CRAFT.md, the rules and the kill-list.
+- knowledge/OUTREACH_CRAFT.md, the rules and the kill-list. Read THE REFERENCE
+  SEND at the end of it before judging anything. That is a real email that went to
+  a real prospect after Talon edited it by hand, and the register it lands in is
+  the bar. Judge the draft against that specimen, not against your own taste.
+  Three things get hand-edited most often and you should catch them first, verbs
+  written out long where a contraction belongs, the self-aware line stretched past
+  one clause, and a closing ask that instructs rather than invites.
 
 # METHOD
 Judge three bars. All must pass.

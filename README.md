@@ -22,9 +22,9 @@ CLAUDE.md.
    - Paste prompts/ROUTINE_PROMPT.txt as the prompt.
    - Include the Gmail and Supabase connectors, and only what it needs.
    - Set a weekday or daily schedule and a strong model.
-   - For the from-address to read docket@alaskaaihq.com, add docket@ as a send-as
-     alias in the connected Gmail account. Otherwise it drafts from the connected
-     account and you set the sender when you send.
+   - The Gmail connector authenticates as docket@alaskaaihq.com, so drafts are
+     already from that address and DKIM signed by the domain. There is no send-as
+     alias to add and no sender to set at send time.
 4. Test. Click Run now, then read the transcript, open the Gmail draft, and open the
    attached Field Study before trusting it on a schedule.
 

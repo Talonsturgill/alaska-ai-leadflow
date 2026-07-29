@@ -78,7 +78,7 @@
       "domain": "allenmarinetours.com",
       "segment": "tourism",
       "location": "Sitka, with operations in Juneau and Ketchikan",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 24,
       "why_picked": "Highest fit total across all four scout segments. The operational pain is published in their own live job posting, the contact is verifiable on their own domain, and they publicly recommitted to day tours after closing their overnight line for overhead reasons.",
       "contact_name": "Jamey Cagle",
@@ -91,10 +91,12 @@
       "study_path": "runs/2026-07-29/allen-marine-tours/field-study.html",
       "run_date": "2026-07-29",
       "source": "live run, degraded mode (Supabase unreachable)",
-      "gmail_draft_id": "r4784481185643001860",
       "draft_subject": "Allen Marine field study, free, and the build we recommend has no AI in it",
       "live_link": "https://alaskaaihq.com/awesomeproposal/allen-marine-tours/",
-      "delivery_check": "passed, exit 0"
+      "delivery_check": "passed, exit 0",
+      "outreach_sent_at": "2026-07-29T13:15:40Z",
+      "sent_from": "docket@alaskaaihq.com",
+      "sent_note": "Sent by Talon by hand after review, with light edits to voice and the closing ask. The routine drafted only."
     }
   ]
 }
