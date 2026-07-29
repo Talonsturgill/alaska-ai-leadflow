@@ -204,6 +204,28 @@ so it survives regardless of whether Supabase was reachable.
 5. Set today's date (America/Anchorage), create out/<date>/, write run_state.json.
 6. Note timely Alaska context (fishing openers, freeze-up, tourist season, PFD
    timing, Iditarod, a live legislative session) so the scouts do not miss an angle.
+7. LEARN FROM THE LAST SEND. Do this before any writing happens, because it changes
+   how this run writes.
+   Take the most recent runs/<date>/<slug>/outreach.json, which is what the routine
+   drafted last time. Search Gmail for that exact subject in SENT mail. Three
+   outcomes.
+   - It was sent and differs from what we drafted. Talon edited it on the way out,
+     and every one of those edits is a correction to our voice model. Save the sent
+     plaintext body to out/<date>/last_sent.json and run
+     `python scripts/voice_diff.py --drafted <that outreach.json>
+      --sent out/<date>/last_sent.json --company "<name>" --run-date <that date>
+      --record`
+     That appends to ledger/voice_deltas.json and re-renders
+     knowledge/VOICE_DELTAS.md, which the outreach-writer reads this run.
+   - It was sent unchanged. Say so in one line. That is the strongest signal
+     available, the voice landed, so change nothing.
+   - It is still an unsent draft. Skip, and say so. An unsent draft carries no
+     signal, and diffing against it would teach the writer nothing.
+   If voice_diff reports a pattern READY TO PROMOTE, that means the writer keeps
+   making the same edit-bait across three or more separate sends. Say so loudly in
+   the delivery summary so a human can decide whether to promote it into
+   OUTREACH_CRAFT.md. NEVER edit OUTREACH_CRAFT.md automatically. It is the
+   hand-authored law and a run does not get to rewrite the rules it is judged by.
 
 ## PHASE 1 - DISCOVER (the scouts, parallel)
 
@@ -433,6 +455,9 @@ until it does. Write out/<date>/outreach.json.
    runs/<date>/<company-slug>/field-study.html (+ .pdf and demo.html if present),
    write runs/<date>/<company-slug>/study.json and a dossier.md (the full internal
    package, research, discovery, feasibility, engineering, the pick reasoning).
+   Copy out/<date>/outreach.json in there too. That is what the routine DRAFTED,
+   and the next run diffs it against what Talon actually sent to learn the voice
+   (Phase 0 step 7). Without it archived, that signal is lost when out/ is cleared.
    Commit and PUSH to this private repo, then record the pushed commit SHA. This
    is the private paper trail, prospect data belongs here and NEVER in the public
    repo.

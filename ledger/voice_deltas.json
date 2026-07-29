@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "note": "Observed hand edits between the drafted email and what was actually sent. Evidence, not law. OUTREACH_CRAFT.md stays hand-authored.",
+  "entries": [
+    {
+      "run_date": "2026-07-29",
+      "company": "Allen Marine Tours",
+      "deltas": [
+        {
+          "kinds": [
+            "contraction",
+            "agent-team framing cut"
+          ],
+          "before": "We are Alaska AI's AI agent team and we spent the week on that one seat instead of pitching you.",
+          "after": "We're Alaska AI and we spent the week on that one seat instead of pitching you.",
+          "dropped": [
+            "agent",
+            "ai's",
+            "are",
+            "team"
+          ],
+          "added": [
+            "we're"
+          ]
+        },
+        {
+          "kinds": [
+            "contraction",
+            "shortened",
+            "agent-team framing cut",
+            "presumption cut"
+          ],
+          "before": "So the first thing we would build you has no AI in it and we are declining to sell you the guest facing voice agent you probably expected from us.",
+          "after": "So the first thing we'd build you has no AI in it.",
+          "dropped": [
+            "agent",
+            "and",
+            "are",
+            "declining",
+            "expected",
+            "facing",
+            "from",
+            "guest"
+          ],
+          "added": [
+            "we'd"
+          ]
+        },
+        {
+          "kinds": [
+            "contraction"
+          ],
+          "before": "It is two to three weeks of work.",
+          "after": "It's two to three weeks of work.",
+          "dropped": [
+            "is",
+            "it"
+          ],
+          "added": [
+            "it's"
+          ]
+        },
+        {
+          "kinds": [
+            "contraction"
+          ],
+          "before": "If this is not your desk, the useful thing is passing it to whoever owns the Juneau operating day.",
+          "after": "If this isn't your desk, the useful thing is passing it to whoever owns the Juneau operating day.",
+          "dropped": [
+            "not"
+          ],
+          "added": [
+            "isn't"
+          ]
+        },
+        {
+          "kinds": [
+            "lengthened",
+            "cta softened"
+          ],
+          "before": "If it is yours, reply yes and I will take it from there.",
+          "after": "If it is yours, click the link to see our full review and let us know what you think if you'd like.",
+          "dropped": [
+            "from",
+            "i",
+            "reply",
+            "take",
+            "there",
+            "will",
+            "yes"
+          ],
+          "added": [
+            "click",
+            "full",
+            "know",
+            "let",
+            "like",
+            "link",
+            "our",
+            "review"
+          ]
+        },
+        {
+          "kinds": [
+            "lengthened"
+          ],
+          "before": "Talon",
+          "after": "- Talon",
+          "dropped": [],
+          "added": []
+        },
+        {
+          "kinds": [
+            "deleted"
+          ],
+          "before": "A person read this before it reached you.",
+          "after": null,
+          "dropped": [],
+          "added": []
+        }
+      ]
+    }
+  ]
+}

@@ -142,6 +142,18 @@ slick or as AI and gets deleted. Specificity is the whole defense.
 Keep it to five to eight sentences. The study carries the weight, the email just
 opens the door.
 
+## Read the observed deltas too
+
+knowledge/VOICE_DELTAS.md carries every edit Talon has made between what the
+routine drafted and what he actually sent, written automatically at the start of
+each run by scripts/voice_diff.py. It is EVIDENCE. This file is the LAW.
+
+Read the deltas before writing. If a pattern there has recurred across three or
+more separate sends it will be flagged READY TO PROMOTE, which means the writer
+keeps producing something that keeps getting undone by hand. Promoting it into
+this file is a human decision and never automatic, because a run that could
+rewrite its own rules is a run that grades its own homework.
+
 ## The reference send, 2026-07-29, Allen Marine Tours
 
 This actually went out, after Talon edited the draft by hand. Match this register.
