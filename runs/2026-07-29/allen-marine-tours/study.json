@@ -1,0 +1,753 @@
+{
+  "meta": {
+    "company": "Allen Marine Tours",
+    "domain": "allenmarinetours.com",
+    "segment": "tourism",
+    "place": "Juneau, Sitka and Ketchikan",
+    "date": "2026-07-29",
+    "prepared_for_first": "Jamey"
+  },
+  "thesis": "You closed the overnight line in February and said you were refocusing on day tours and the shipyard. The coordination load did not leave with it. It is still in the day tour business, sitting in a seat you are hiring for right now, and nothing public shows anyone has ever counted it.",
+  "finding": "In February you closed Alaskan Dream Cruises after fifteen years. Your spokesman described the small ship overnight industry as carrying particularly high overhead and complex logistics, and pointed to an expansion in cruise capacity including the niche expedition market. Your CEO framed the decision as a move to responsibly focus resources where they will have the greatest impact, on the day tour excursions and the shipyard operations and marine services. Here is what caught our attention. You are hiring an Operations Specialist in Juneau, and the posting lists, among eleven Essential Duties and in a separate section, the work of monitoring updates to passenger counts and modifying vessel tour schedules, making changes to crew schedules and assigning relief crew, functioning as communication liaison between many key positions, and acting as point of contact for motorcoach companies, caterers, vessels and other tour operators. Reading those as four faces of one event, a passenger count moving, is our inference, set out in full below. What we can say is narrower. Nothing public shows this counted anywhere, not how often a Juneau sailing changes after the day is set, not how many outside parties each change reaches, not what any of it costs. You may track it internally, and if you do, tell us on the first call and the engagement gets shorter. And 2026 is the first year Juneau caps daily cruise passengers, at 16,000 on most days against prior peaks of up to 21,000, so growth in Juneau has to come out of share, mix or price rather than out of more visitors. Operating cleanly is one of the levers that is still fully yours.",
+  "homework": {
+    "business": "Family and Alaska Native owned, founded in Sitka in 1970 by Bob and Betty Allen, now owned and operated by their grandson Jamey Cagle. Thirty day tour vessels across Juneau, Sitka and Ketchikan, with 305 seasonal and 100 year-round workers on a season that runs 1 April to 1 October. The fleet is custom built in your own Sitka shipyard. Four stacked lines, cruise line contracted shore excursions, a direct to consumer channel under True Alaskan Tours, charters and lodge catering, and the shipyard itself.",
+    "pain": {
+      "quote": "Monitor updates to passenger counts and modify vessel tour schedules as needed. Make changes to crew schedules and assign relief crew as needed.",
+      "context": "Those two lines sit together in the Summary section of your Juneau Operations Specialist posting, which opens by describing the role as overseeing and coordinating, via radio and phones, the movement of vessels, motorcoaches, other vehicles and passengers to and from your private dock facility at Auke Bay. Separately, inside an eleven item Essential Duties list, the same role is asked to function as communication liaison between many key positions within the organization, and to act as point of contact for motorcoach companies, caterers, vessels and other tour operators. Reading all four as faces of one event, a passenger count moving, is our inference. The posting does not group them or name a common trigger. The posting also asks, in Minimum Qualifications, for the ability to work under high levels of stress, and states in Physical Demands that the holder must be physically able to work about 10 to 14 hours a day, 5 to 7 days a week. Those cover the whole role, which also includes dock traffic monitoring and passenger movement, so we are not presenting them as the price of the four duties above.",
+      "source": "https://jobs.rwfm.tamu.edu/view-job/?id=112698"
+    },
+    "competitors": [
+      {
+        "name": "Huna Totem Corporation, Icy Strait Point",
+        "what_ai": "Not an AI move and not a day tour competitor of yours. We include it because it shows what long horizon certainty with a cruise line looks like when it is written down. Huna Totem signed a fifteen year preferential berthing agreement with Disney Cruise Line at Icy Strait Point running through 2041, covering preferential docking for one vessel each week plus a minimum annual passenger guarantee. Another Alaska Native owned operator in the same cruise economy, buying a decade and a half of predictability by contract.",
+        "source": "https://www.akbizmag.com/industry/alaska-native/disney-cruise-line-commits-to-fifteen-more-years-at-icy-strait-point/"
+      }
+    ],
+    "industry_ai": [
+      {
+        "point": "A useful indication of magnitude for guest facing chat at a smaller operator. Yonder, a chatbot vendor, publishes a case study on its own customer Black Cat Cruises, a New Zealand dolphin cruise and ferry operator, claiming roughly 500 conversations a month, about 60 percent of questions answered, about 10 staff hours saved a month and about 15 potential bookings. That is a vendor marketing its own product about a different company in another country, and potential bookings is not booked revenue. We cite it as an indication of magnitude, not as proof and not as an upper bound.",
+        "source": "https://www.yonderhq.com/case-study/black-cat-cruises-chatbot-answers-immediately-24-7"
+      },
+      {
+        "point": "An ROI case built on cutting staff argues against the best available evidence. Gartner surveyed 321 customer service leaders in October 2025 and found only about 20 percent had reduced agent headcount because of AI, and predicts that by 2027, 50 percent of companies that attributed headcount reduction to AI will rehire staff to perform similar functions under different job titles.",
+        "source": "https://www.techrepublic.com/article/gartner-ai-customer-service-rehire-2027/"
+      },
+      {
+        "point": "There is a real liability edge on anything that answers for you. In Moffatt v. Air Canada the British Columbia Civil Resolution Tribunal held the airline liable for misleading information its website chatbot gave a customer, holding that it makes no difference whether the information comes from a static page or a chatbot.",
+        "source": "https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot"
+      },
+      {
+        "point": "Adoption in your industry is broad, and measured as using or testing rather than as running in production. Arival's Global Operator Landscape, based on 5,664 qualified responses collected August to November 2025, found half of all operators now actively using or testing AI tools, up from one third in 2024. The prior edition, surveying more than 7,000 operators, found almost 2 in 5 operators globally still do not have a reservation system at all. You are well past that first bar.",
+        "source": "https://travelprofessionalnews.com/ota-bookings-hit-surge-direct-sales-slide-across-global-experiences-industry/"
+      },
+      {
+        "point": "Your own booking vendor is already moving on the guest facing surface. FareHarbor announced FareHarbor Agent on 27 April 2026, an AI assistant handling guest communication across phone, email, chat, SMS and social. It is rolling out to a select group of operators and the announcement publishes no pilot results or performance metrics. We are flagging that as a reason to wait, not as a reason to buy.",
+        "source": "https://fareharbor.com/blog/meet-fareharbor-agent-ai-powered-guest-communication-for-tour-operators/"
+      }
+    ]
+  },
+  "opportunity": {
+    "job": "When passenger counts move during the operating day, re-cut the vessel plan and get every party onto the same version fast, so no vessel sails badly matched to its manifest and no vendor is committed to the wrong number.",
+    "why": "This is the one place where the day to day work is described on a page you published rather than in something we guessed about you. The posting says the role oversees and coordinates, via radio and phones, the movement of vessels, motorcoaches, other vehicles and passengers to and from your private dock facility at Auke Bay. That is one Juneau seat, not the whole company, and we are scoping to it deliberately rather than borrowing three ports and a thirty vessel fleet to make it look bigger. What we cannot see from outside is how often that coordination has to be redone after a day is set, or what a redo costs. Nothing public shows it counted. If you already track it, say so on the first call and this gets shorter and cheaper. If you do not, that measurement is the whole of what we are proposing, and everything after it stays unsold until the number justifies it.",
+    "current_workaround": "A person. You are hiring for the seat right now, and the posting is the specification.",
+    "forces": "Push is visible in the posting itself, which describes coordinating vessels, motorcoaches and passengers by radio and phone across a single dock. Pull is legible, one shared plan with confirmed fan out is something an operator can picture in a sentence. Anxiety is real, crew and capacity work is regulated and a wrong automated decision is an incident rather than an inconvenience. Habit is the strongest force against us. Whoever runs this today runs it on channels that already work, and any tool that demands attention during the busy hour dies in week one. That balance is why the first version proposes nothing at all."
+  },
+  "build": {
+    "name": "The Operating Day Ledger",
+    "what_it_does": "One read only screen for a single Juneau operating day, showing every sailing, its current head count, its assigned vessel and its committed vendors. A typed form captures every change to that day as a structured event. An identical templated notice goes to every party the change touches, with a one tap acknowledgement so you can see who has read it without chasing anyone. Underneath sits an append only log that can replay any past day exactly as it happened, including the corrections. Its first job is not to optimize anything. Its first job is to count the churn, which nothing public shows anyone has counted, so the decision about whether to build anything larger gets made on your numbers instead of on anyone's opinion.",
+    "feasibility": "We are an AI shop, and we ran six candidate builds for you down the do you even need AI ladder, two of which had a plausible AI component. Every single one bottomed out at plain rules. So there is no AI in this build at all, and that is the recommendation rather than an omission. We would not use AI to write the change notices, because a notice committing a caterer to a head count should be byte identical every time so a dock reads it in two seconds, and a template can be tested exhaustively in a way a model cannot. We would not let software assign crew, because that work sits under Coast Guard manning, credentialing and rest rules we could not source from public pages, so it is outside what this study can honestly establish. If a crew feature is ever built its only job is to refuse a combination that breaks a hard rule, and a refusal is a rule check rather than a recommendation. We are also declining to sell you the guest facing voice agent you probably expected us to pitch, for four separate reasons set out in the plan below. One more thing we would rather say than hide. Of everything we looked at, settlement and commission reconciliation looks like the surest return, and it contains no AI either. We are not putting it first for one reason only, which is perishability. An operating day can only be watched while the season is running, and your season closes 1 October. Reconciliation can be built in any month of the year. So the thing that expires goes first, and if you would rather start with reconciliation, say so and we will.",
+    "build_vs_buy": "We buy the commodity substrate, email delivery, SMS escalation, identity, managed Postgres, write once storage and monitoring, and we build the ledger core, the structured change capture, the byte identical notice templates and the no login acknowledgement tracker. On the build side, we looked for something off the shelf that models a day tour operating day and did not find one, and we did not run an exhaustive procurement scan. If you are already looking at a tool that does this, name it on the call and we will tell you straight whether it does, including if the answer makes this engagement smaller.",
+    "architecture": {
+      "nodes": [
+        {
+          "id": "u_ops",
+          "label": "Juneau Operations Specialist",
+          "kind": "user"
+        },
+        {
+          "id": "u_dock",
+          "label": "Auke Bay Dock Representatives",
+          "kind": "user"
+        },
+        {
+          "id": "u_office",
+          "label": "Juneau Office Manager",
+          "kind": "user"
+        },
+        {
+          "id": "u_vendor",
+          "label": "Motorcoach companies, caterers, vessel crews",
+          "kind": "user"
+        },
+        {
+          "id": "s_board",
+          "label": "Sailing Board, read-only day view, proposes nothing",
+          "kind": "system"
+        },
+        {
+          "id": "s_changedesk",
+          "label": "Change Desk, structured change capture",
+          "kind": "system"
+        },
+        {
+          "id": "s_dockform",
+          "label": "Dock Count Entry, offline-capable",
+          "kind": "system"
+        },
+        {
+          "id": "s_intake",
+          "label": "Manifest Intake Adapter, pluggable",
+          "kind": "system"
+        },
+        {
+          "id": "s_core",
+          "label": "Day Ledger Core, deterministic state machine",
+          "kind": "system"
+        },
+        {
+          "id": "s_composer",
+          "label": "Notice Composer, fixed templates, byte-identical",
+          "kind": "system"
+        },
+        {
+          "id": "s_dispatch",
+          "label": "Fan-Out Dispatcher, durable retries",
+          "kind": "system"
+        },
+        {
+          "id": "s_ack",
+          "label": "Ack Tracker, confirm / cannot do / a number",
+          "kind": "system"
+        },
+        {
+          "id": "s_replay",
+          "label": "Day Replay and Churn Metrics",
+          "kind": "system"
+        },
+        {
+          "id": "d_ledger",
+          "label": "Postgres, operating_day / sailing / change_event / notice",
+          "kind": "data"
+        },
+        {
+          "id": "d_log",
+          "label": "Append-only Event Log, hash-chained",
+          "kind": "data"
+        },
+        {
+          "id": "d_worm",
+          "label": "Sealed nightly digests, write-once storage",
+          "kind": "data"
+        },
+        {
+          "id": "d_registry",
+          "label": "Vessel and Capacity Registry, hand-entered",
+          "kind": "data"
+        },
+        {
+          "id": "d_vendors",
+          "label": "Juneau Vendor Directory",
+          "kind": "data"
+        },
+        {
+          "id": "d_queue",
+          "label": "Notice Queue",
+          "kind": "data"
+        },
+        {
+          "id": "x_manifest",
+          "label": "Cruise-line contracted manifest source, SYSTEM UNKNOWN",
+          "kind": "external"
+        },
+        {
+          "id": "x_fareharbor",
+          "label": "FareHarbor (True Alaskan Tours sister brand)",
+          "kind": "external"
+        },
+        {
+          "id": "x_viator",
+          "label": "Viator",
+          "kind": "external"
+        },
+        {
+          "id": "x_email",
+          "label": "Postmark, transactional email",
+          "kind": "external"
+        },
+        {
+          "id": "x_sms",
+          "label": "Twilio SMS, escalation only",
+          "kind": "external"
+        },
+        {
+          "id": "x_auth",
+          "label": "Hosted identity provider",
+          "kind": "external"
+        },
+        {
+          "id": "x_obs",
+          "label": "Sentry plus uptime and synthetic notice check",
+          "kind": "external"
+        },
+        {
+          "id": "x_voice",
+          "label": "Phone and vessel radio, deliberately NOT replaced",
+          "kind": "external"
+        }
+      ],
+      "edges": [
+        {
+          "from": "x_manifest",
+          "to": "s_intake",
+          "label": "count changes, format unknown until the spike"
+        },
+        {
+          "from": "u_dock",
+          "to": "s_dockform",
+          "label": "types the revised head count at the dock"
+        },
+        {
+          "from": "s_dockform",
+          "to": "s_intake",
+          "label": "count observation, queued if the dock drops signal, a design assumption"
+        },
+        {
+          "from": "x_fareharbor",
+          "to": "s_intake",
+          "label": "direct-to-consumer counts, read-only pull"
+        },
+        {
+          "from": "x_viator",
+          "to": "s_intake",
+          "label": "distribution counts, read-only pull"
+        },
+        {
+          "from": "s_intake",
+          "to": "s_core",
+          "label": "typed observation with source and timestamp, never merged silently"
+        },
+        {
+          "from": "u_ops",
+          "to": "s_changedesk",
+          "label": "records the change she already decided, typed fields only"
+        },
+        {
+          "from": "s_changedesk",
+          "to": "s_core",
+          "label": "change_event, the only human write path"
+        },
+        {
+          "from": "d_registry",
+          "to": "s_core",
+          "label": "hull capacity reference"
+        },
+        {
+          "from": "s_core",
+          "to": "d_ledger",
+          "label": "current operating-day state"
+        },
+        {
+          "from": "s_core",
+          "to": "d_log",
+          "label": "appends immutable event, corrections are compensating events"
+        },
+        {
+          "from": "d_log",
+          "to": "d_worm",
+          "label": "nightly hash-chained seal"
+        },
+        {
+          "from": "s_core",
+          "to": "s_composer",
+          "label": "change payload, numbers only"
+        },
+        {
+          "from": "d_vendors",
+          "to": "s_composer",
+          "label": "who this change touches, on which channel"
+        },
+        {
+          "from": "s_composer",
+          "to": "d_queue",
+          "label": "rendered notice, golden-file tested"
+        },
+        {
+          "from": "d_queue",
+          "to": "s_dispatch",
+          "label": "one job per recipient per channel"
+        },
+        {
+          "from": "s_dispatch",
+          "to": "x_email",
+          "label": "notice plus signed single-use ack link"
+        },
+        {
+          "from": "s_dispatch",
+          "to": "x_sms",
+          "label": "escalation on bounce or no acknowledgement"
+        },
+        {
+          "from": "x_email",
+          "to": "u_vendor",
+          "label": "the same five lines in the same order, every time"
+        },
+        {
+          "from": "u_vendor",
+          "to": "s_ack",
+          "label": "confirm, cannot do, or a number, no login"
+        },
+        {
+          "from": "s_ack",
+          "to": "s_core",
+          "label": "acknowledgement event"
+        },
+        {
+          "from": "s_core",
+          "to": "s_board",
+          "label": "read-only day state, zero recommendations"
+        },
+        {
+          "from": "s_board",
+          "to": "u_ops",
+          "label": "one screen, red chip on anything unacknowledged"
+        },
+        {
+          "from": "s_board",
+          "to": "u_dock",
+          "label": "the same screen at the dock"
+        },
+        {
+          "from": "s_board",
+          "to": "u_office",
+          "label": "the same screen in the office"
+        },
+        {
+          "from": "u_ops",
+          "to": "x_voice",
+          "label": "escalation of last resort stays the telephone, logged as manual ack"
+        },
+        {
+          "from": "d_log",
+          "to": "s_replay",
+          "label": "replays any past day exactly as it happened"
+        },
+        {
+          "from": "s_replay",
+          "to": "u_ops",
+          "label": "end-of-day digest and the season churn baseline"
+        },
+        {
+          "from": "x_auth",
+          "to": "s_board",
+          "label": "staff identity, scoped to the Juneau port"
+        },
+        {
+          "from": "s_dispatch",
+          "to": "x_obs",
+          "label": "errors, delivery rate, unacknowledged alarms"
+        }
+      ],
+      "caption": "Sailing Day Control v1, the Operating Day Ledger, Juneau only. There is no ai node on this diagram. Every box is a rule, a template, a form, or a log, which is why every one of them can be tested exhaustively. The only box we cannot name is the cruise-line manifest source on the far left, because nothing public tells us what carries the contracted manifests for the contracted cruise line business. Finding out what fills that unnamed box is the first thing we would get paid to do."
+    }
+  },
+  "plan": {
+    "problem": "You are hiring an Operations Specialist in Juneau. The posting asks that role to monitor updates to passenger counts and modify vessel tour schedules, to make changes to crew schedules and assign relief crew, to function as communication liaison between many key positions, and to act as point of contact for motorcoach companies, caterers, vessels and other tour operators. Those duties appear in different parts of the posting, which does not group them or name a common trigger. Reading them as one is ours to defend. Separately, the posting asks in Minimum Qualifications for the ability to work under high levels of stress, and states in Physical Demands that the holder must be physically able to work about 10 to 14 hours a day, 5 to 7 days a week. In February you closed Alaskan Dream Cruises after fifteen years, with your spokesman describing the small ship overnight industry as carrying particularly high overhead and complex logistics alongside an expansion in cruise capacity, and the stated plan was to refocus 100 percent of resources on the day tour excursions and the shipyard operations and marine services. The day is also getting tighter. 2026 is the first year Juneau caps daily cruise passengers, at 16,000 most days and 12,000 on Saturdays, against prior busiest days of up to 21,000. When the port's top line is capped by ordinance, growth in Juneau comes out of share, mix or price rather than out of more visitors, and how cleanly each day runs is one lever that stays fully yours. And here is the part worth pressing on. Nothing public shows this measured, not how often a Juneau sailing changes after the day is set, not how much notice there is, not how many outside parties each change reaches. If you already hold those numbers internally, this proposal shrinks to a conversation. If you do not, they are the first thing worth having.",
+    "after_state": "On a morning in Juneau next season, one screen shows every sailing, its current head count, its assigned vessel and its committed vendors, and when a number moves, the coach company, the caterer and the vessel all get the same five lines in the same order within a minute, you can see who has read them, and at the end of the season the day is a queryable record instead of a memory.",
+    "goals": [
+      "Produce the first measured baseline of operating-day change in Juneau, how often counts and vessels and times change after a day is set, how much notice there is, how many outside parties each change touches, and how long a change takes to settle.",
+      "Put one shared read-only view of the operating day in front of the ops desk, the dock representatives and the port office, so the current state is looked up instead of asked for.",
+      "Turn every change into a structured event with a timestamp, an author, a reason and the affected parties, so one season produces an asset instead of nothing.",
+      "Reduce the fan-out on a change to a single action, with acknowledgement visible without a follow-up call.",
+      "Give you the decision data to fund or refuse a winter build on numbers rather than on either side's opinion, including the case where the honest answer is do not build."
+    ],
+    "non_goals": [
+      {
+        "item": "No AI anywhere in version 1. None.",
+        "reason": "We are an AI shop and we walked the ladder on six candidates for you, two of which had a plausible AI component, and both of those failed the gate. Change notices should be a template with your numbers merged in, so every caterer and coach company reads the same five lines in the same order every time and we can test it exhaustively before it ever goes out. In Moffatt v. Air Canada the tribunal held Air Canada liable for what its chatbot told a customer, and said it makes no difference whether the information comes from a static page or a chatbot. Read that carefully, because it cuts both ways. You own the notice either way. That is precisely why we want text we can test exhaustively in advance rather than text generated at the moment it is needed."
+      },
+      {
+        "item": "The software never assigns or proposes crew.",
+        "reason": "Crew work sits under USCG manning, credentialing and rest rules we could not source from public pages, so it is outside what this study can honestly establish. If a crew feature is ever built, its only job is to display credentials and availability and refuse a combination that breaks a hard rule. A refusal is a rule check, not a recommendation."
+      },
+      {
+        "item": "Nothing guest-facing. No chatbot, no guest messaging, no booking-flow changes.",
+        "reason": "Two reasons and both are honest. We have zero guest-side evidence, every review source we tried was unreachable, so we will not build against a pain we cannot show you. And you already tell guests that booking through the cruise line is the fastest and most secure way to reserve, so much of that surface is not yours to change. This is the build you probably expected an AI shop to pitch you. We are declining to."
+      },
+      {
+        "item": "No scheduling solver, optimizer or re-cut recommender in version 1.",
+        "reason": "Gated on evidence we do not have. If the log shows your dispatcher solves a re-cut in her head in thirty seconds, a solver is decoration and we will say so in writing rather than sell it."
+      },
+      {
+        "item": "One port only. Sitka and Ketchikan are out of version 1.",
+        "reason": "Juneau is where the Operations Specialist role sits and where the daily cap sits. Prove it on one port through one season before anyone pays to generalize it across three."
+      },
+      {
+        "item": "We do not replace FareHarbor, Viator, or whatever carries your contracted manifests.",
+        "reason": "Version 1 reads and records. Changing a booking stack mid-season is a way to lose a season, and we do not even know yet what system carries the cruise-line contracted business, which looks from outside like your largest line, though we could not verify that."
+      },
+      {
+        "item": "We are not selling you a head-count reduction.",
+        "reason": "There is no AI in version 1, so there is no automation story to attach one to. Gartner surveyed 321 support leaders in October 2025, found roughly 20 percent had cut agent head count because of AI, and predicts half of those rehire by 2027. The goal here is capacity in a capped market, not payroll."
+      }
+    ],
+    "metrics": [
+      {
+        "metric": "Operating-day change events captured in Juneau, each with a timestamp, an author, the affected sailing, the size of the head-count delta, and the outside parties touched.",
+        "baseline": "ZERO, and this is the honest center of the whole proposal. No count of any kind exists today. We are not going to invent a baseline so the math looks better, because the entire first engagement exists to establish this one.",
+        "target": "Every Juneau operating day inside the slice window logged, ending in a published distribution you keep whatever you decide next.",
+        "timeframe": "The two to three week instrumentation slice, inside the remaining 2026 season, which ends 1 October 2026."
+      },
+      {
+        "metric": "Share of Juneau sailings whose final as-sailed head count and assigned vessel are in the ledger and agree with the ops desk's own end-of-day record.",
+        "baseline": "ASSUMED zero, because no shared record exists today to compare against. We establish the real baseline by hand-reconciling the first three operating days, and we publish that number even if it is embarrassing to us.",
+        "target": "95 percent or better agreement across the final three operating days of the slice. Below 90 percent we tell you the capture design is wrong and fix it before anything else is discussed.",
+        "timeframe": "Within the slice window."
+      },
+      {
+        "metric": "Number of separate ops-desk actions required to notify every affected outside party of one change.",
+        "baseline": "ASSUMED one contact per party per change, by phone, marine radio or email, because the posting names the holder as point of contact for those parties and no shared channel appears anywhere in evidence. ASSUMED, not known.",
+        "target": "One action, with acknowledgement state visible for every notified party without a follow-up call, on at least 80 percent of logged changes.",
+        "timeframe": "First 30 operating days of the 2027 season, after the winter build, and only if the gate opens."
+      },
+      {
+        "metric": "A written go or no-go on the winter build, made against a threshold both sides agreed before the slice started.",
+        "baseline": "No decision framework exists. Anything priced as a build today would be selling you a return that has not been counted, including by us.",
+        "target": "A signed decision. GATE 1, the winter build, is funded only if the slice shows ALL THREE of these. Head count changes on a majority of instrumented Juneau operating days. A median of two or more outside parties touched per change. And a measured exposure that, once you tell us what fraction of exposure turns into real cost, clears three times the winter build cost. At our assumed 56,000 dollars that is roughly 168,000 dollars of realised cost across a season. Under that bar we tell you to stop, in writing, and you still own the ledger, the event log and the first real baselines this business has had. The threshold is open to your revision before we start and locked once we do.",
+        "timeframe": "Within two weeks of the slice ending, before any winter build work is scheduled or invoiced."
+      }
+    ],
+    "phase1_must": [
+      "Juneau only. The operating-day record, every sailing, its scheduled time, its assigned vessel, its contracted head count and its current head count.",
+      "One read-only shared view, phone-first, the same version for ops, dock and office. It proposes nothing and recommends nothing, deliberately.",
+      "Structured change capture, entered once as an event with a timestamp, an author, a reason and the affected parties, instead of only being spoken.",
+      "An immutable append-only event log. Corrections are new events. This log is the asset the winter decision rests on, and it is yours whatever you decide.",
+      "A manual-entry path that works with zero integrations on day one, because we genuinely do not know what system carries your cruise-line contracted manifests.",
+      "The measurement report itself, with raw distributions attached, ending in a plain build or do-not-build recommendation against the agreed threshold."
+    ],
+    "need_from_you": [
+      "Two to four hours a week of the Juneau Operations Specialist's time during the slice, at times she picks. If that time cannot genuinely be protected, tell us now and we will change the plan rather than pretend the plan works.",
+      "A straight answer on how a contracted manifest and a same-day head-count change actually reach the Juneau desk today. This single answer is the biggest swing in the entire estimate.",
+      "Read-only access, or one sample export, of whatever system holds the cruise-line contracted sailings.",
+      "A per-hull capacity table for the Juneau fleet. This does not exist anywhere public.",
+      "Names and current contact methods for the Juneau motorcoach companies, caterers and vessel contacts, plus your call on whether they receive anything at all during the slice.",
+      "One named decision owner who can say yes or no to the winter build, and who agrees the threshold before the slice begins rather than after the numbers are in.",
+      "A sign-off on where this data lives and who can see it. The operating day includes cruise-line contracted head counts likely covered by your agreements with those lines, and that is your call.",
+      "Three shadow days on the Juneau dock during operating hours, so we design from a real day instead of from a job posting.",
+      "A decision by roughly 10 September, which is the latest start that lets a three week slice close before your season does. Miss the 1 October close and the next chance to observe a real operating day is late April 2027, a gap of about seven months."
+    ],
+    "risks": [
+      {
+        "risk": "The data does not exist in machine-readable form. All four datasets are inferred from your own job postings. The data layer is not a phase of this project, it IS this project.",
+        "mitigation": "Precisely why the first engagement is instrumentation and not a build. Version 1 works with a person typing the number, so it produces the measurement even if every integration turns out to be a phone call. If we find nothing machine-readable, the winter estimate goes up and you hear that before you fund anything."
+      },
+      {
+        "risk": "The churn may turn out to be small. If Juneau sailings rarely change after a day is set, the premise of this whole study is wrong.",
+        "mitigation": "Then the slice tells you that for the price of a slice, and we recommend you do not build. That is a successful engagement, not a failed one. The threshold is agreed before we start so neither side can quietly move it afterward."
+      },
+      {
+        "risk": "Adoption. The person who most needs this has the least slack in the company.",
+        "mitigation": "Version 1 is read-only and proposes nothing, so on day one it costs her nothing to look at it. We count opens from week one, and if she is not opening it, that is our problem to fix in week two, not a number we hide in the report."
+      },
+      {
+        "risk": "Human in the loop is a weak control here. A reviewer in a role your own posting says must be physically able to work 10 to 14 hours a day rubber-stamps.",
+        "mitigation": "A direct reason version 1 makes no recommendations at all. There is nothing to rubber-stamp. We designed around this control being weak instead of assuming it is strong."
+      },
+      {
+        "risk": "It underperforms. The ledger runs, the day becomes visible, and nothing measurably improves.",
+        "mitigation": "Then you own a complete event log of one Juneau operating season, a genuine asset for the capacity questions the daily cap makes unavoidable, and you stop. We would rather sell you a small thing that ends cleanly than a large thing that limps."
+      }
+    ],
+    "open_questions": [
+      {
+        "q": "How does a contracted manifest, and a same-day head-count change, actually reach the Juneau desk today? This is the single largest unknown in the estimate and every other number moves with it.",
+        "owner": "Allen Marine Juneau operations, on the first call. Not resolvable from any public page, we tried."
+      },
+      {
+        "q": "What system carries the contracted cruise line business? FareHarbor and Viator are verified only for the direct-to-consumer sister brand.",
+        "owner": "Whoever administers the booking stack."
+      },
+      {
+        "q": "What is the actual per-hull capacity of the Juneau fleet? We will not model against a marketing range.",
+        "owner": "Allen Marine, most likely the Sitka shipyard."
+      },
+      {
+        "q": "Is the Juneau Operations Specialist seat currently filled? If it is open, the problem is worse than the posting implies and the sequencing should change.",
+        "owner": "Allen Marine hiring."
+      },
+      {
+        "q": "What does a late re-cut actually cost you, a repositioned coach, an over-catered sailing, a crew member called in short? We have no dollar figure and we are not going to manufacture one.",
+        "owner": "Allen Marine finance, with the slice supplying the frequencies to multiply against. Neither half works without the other."
+      },
+      {
+        "q": "Do you want outside vendors receiving notices from a system rather than a person this season, or is that strictly a 2027 change?",
+        "owner": "Jamey Cagle or whoever owns those vendor relationships. A relationship judgment, not a technical one."
+      }
+    ],
+    "phase1_later": [
+      "The manifest integration, scoped honestly once the spike tells us what format the contracted sailings actually arrive in.",
+      "Templated fan out to outside parties, motorcoach companies and caterers, only if you decide they should hear from a system rather than a person this season.",
+      "Acknowledgement tracking across those outside parties.",
+      "The season extrapolation report, stated separately from the observed slice with its seasonality assumption named.",
+      "SMS escalation and the unacknowledged alarm.",
+      "The hash chained nightly seal and write once digests."
+    ]
+  },
+  "roi": {
+    "cost_note": "Read the cash lines with one condition attached, and we would rather you see it now than argue it in month twelve. Both cash benefits below are money you do not spend with us later, calculated against our own assumed winter price of 56,000 dollars, not against any baseline of yours. If you would not have funded a winter build in any case, the cash return on this slice is zero, and what you are buying is the measurement and an event log you keep. That is still worth something to us to say plainly. This prices one thing, a two to three week instrumentation slice on the Juneau port. It does not price the winter build. We compressed the horizon to one year rather than the usual five, because a decision data engagement should pay back inside the decision cycle it informs. So you can rebuild the cost spread yourself, here are the drivers. Our fee is a RANGE, 10,000 dollars conservative, 9,000 most likely, 7,500 aggressive. Your internal change management hours are 50, 35 and 25 across the three, costed at an assumed 55 dollars fully loaded, which is our assumption and not your number, so overwrite it. Run cost through season close is 6,000, 5,000 and 4,000 per year taken over a quarter year. Contingency is 20, 18 and 15 percent. The conservative case carries the top of the cost range and the bottom of the benefit range, which is why it lands at break even. On timing, the avoided winter spend is recognised in one lump at the go or no-go decision, and the rework line accrues across the winter build window, so neither benefit accrues evenly from month one. Inference and token cost is zero in every scenario because there is no model in this build. On the benefit side, so you can rebuild that column too. The winter spend removed is 30, 45 and 60 percent of the assumed 56,000 dollars across the three scenarios. The rework line is 40, 55 and 70 percent applied to a 11,000 dollar exposure set on whatever build REMAINS after that first reduction, which is why the two lines cannot double count each other. A year one realisation ramp of 0.85, 0.9 and 0.95 is then applied, so none of the three books its full modelled value inside twelve months. Those percentages are our judgment against our own price, not a measurement of your business, and they are the softest numbers on this page. Every figure above was computed in code from exactly these drivers.",
+    "benefits": [
+      {
+        "benefit": "Winter build spend removed, deferred or re-specified by what the log actually measures",
+        "kind": "cash",
+        "note": "This is us arguing against our own next invoice, which is why it is the only kind of line we let carry the arithmetic. All four datasets the larger build would need are currently inferred from your job postings, with no evidence any of them exists in machine readable form, so the odds that measurement changes the scope are not small. The 56,000 dollar winter build figure is our own pricing assumption, not a fact about your business, and you can check it against whatever we quote."
+      },
+      {
+        "benefit": "Rework avoided inside the portion of the winter build that still proceeds",
+        "kind": "cash",
+        "note": "Set deliberately on the post reduction remainder rather than on the full build cost, so this line and the one above cannot double count. If the first fires hard, there is less build left for this one to act on."
+      },
+      {
+        "benefit": "A counted baseline of change events per operating day, and what each one costs in re-notification and re-confirmation",
+        "kind": "capacity",
+        "note": "Carries zero dollars in the model, on purpose. This is the deliverable, not a saving. Nobody has counted this, including us, and a case that asserted a savings number here would be inventing it."
+      },
+      {
+        "benefit": "Operating day time returned to the Juneau operations lead",
+        "kind": "capacity",
+        "note": "Capacity only, and it stays capacity. Zero dollars in all three scenarios. We will not build a case on cutting your 305 seasonal or 100 year-round staff, and the Gartner evidence above is why. There is plausibly real capacity here given a 10 to 14 hour day. Plausibly is not a number."
+      }
+    ],
+    "scenarios": {
+      "conservative": "Benefit 18,020 dollars against a one year total cost of 17,100. The bar we set for a decision data engagement is that it recovers its own cost inside twelve months. This recovers 105 percent of it at month 12, which is break even, and we are calling it break even rather than dressing it up. It clears on the stated condition that a winter build was otherwise on your table. If it was not, the cash line is zero and what you keep is the measurement and the log.",
+      "most_likely": "Benefit 28,125 dollars against a one year total cost of 14,366. That recovers 196 percent of cost, with payback at month 6, inside the same winter the decision is made.",
+      "aggressive": "Benefit 39,235 dollars against a one year total cost of 11,356. That recovers 345 percent of cost, with payback at month 4. This assumes the manifest integration is clean and the log tells us something decisive quickly. Do not plan on it."
+    },
+    "conservative_clears": true,
+    "payback_range": "Four to twelve months across the three scenarios, with the conservative case at the far end, at break even. The low end should never be quoted on its own, and none of it holds if a winter build was never on your table.",
+    "base_rate_note": "The outside view first, and it applies to us. MIT's 2025 work found about 95 percent of enterprise generative AI pilots showed no measurable profit impact, a figure its own authors call directional with a debated denominator, and RAND puts AI project failure above 80 percent, roughly twice the rate of ordinary IT projects. Now the part most vendors skip. That research does not blame model quality. RAND's root causes are a misunderstood problem, missing or inadequate data, chasing technology rather than solving a problem, weak infrastructure, and problems too hard for current AI. This engagement carries several of those. Our own biggest risk, that the four datasets we would need are inferred from your job postings and may not exist in readable form, is squarely RAND's second cause. So we are not claiming that taking the model out buys us a discount on that base rate, because it does not. What removing the model does remove is narrower and real. No inference cost, no evaluation harness we would have to build and you would have to trust, no non-determinism, and no liability for a confident wrong answer sent to a caterer. Those are worth having. They are not the base rate. Second, the measurement happens either way, which is what we mean by decision data, though the dollar case still depends on the condition named above. Third, it is designed to sit beside the channels your operations lead already uses rather than replace them, and whether that lands is the adoption risk we name below, not something we can claim in advance. And the honesty that has to stay in, the full winter build's conservative case does not clear today and cannot, because the number it would rest on has never been counted. If anyone hands you a savings figure for the full build right now, including us, they made it up.",
+    "value_owner": "One person owns this number, and it is deliberately not the Operations Specialist, because loading a variance check onto a role your posting describes that way is how numbers stop getting tracked. Day to day custody sits with whoever holds the Juneau operations lead, and the accountable signer is Jamey Cagle, because the winter gate is his spend decision. Here is the part that makes the case checkable rather than decorative. Before day one of the slice, the owner writes down, sealed, their own estimate of two numbers, how many change events hit a normal Juneau operating day and how many downstream parties each one has to reach. At the readout we open it against the counted log. If the guess and the count match, your instincts were already calibrated and the winter build can be scoped on them. If they diverge, you just found out the thing everyone was estimating in their head was wrong, and by how much. Either result is a result."
+  },
+  "roadmap": {
+    "now": [
+      {
+        "item": "Data reality check on the Juneau operating day. Name the system, format and owner for each of the four datasets the ledger needs, and find out what actually carries the contracted cruise line manifests.",
+        "metric": "Four of four datasets carry a named source system, a stated format, and a machine readable yes or no. Today that count is zero of four."
+      },
+      {
+        "item": "The walking skeleton. One read only shared version of today for Juneau, structured change capture, and an immutable event log. It proposes nothing, decides nothing, assigns nobody.",
+        "metric": "Head count change events per Juneau operating day, and minutes from a count moving to the last affected in house party holding the new number, plus any telephone acknowledgement logged. Both unmeasured today, the baseline is blank."
+      },
+      {
+        "item": "CONDITIONAL, and your call. Templated fan out and acknowledgement tracking to motorcoach companies, caterers, vessels and other tour operators, only if you decide they should hear from a system rather than a person this season. If you would rather outside parties heard nothing from us in 2026, the slice still runs and the notices still get built and tested in house.",
+        "metric": "For the parties the slice can definitely measure, vessel crew, dock representatives and the port office, elapsed time from a count moving to every in house party holding the new number, and coordination touches per change event. The outside party confirmation figure only exists if you opt into vendor notices this season."
+      },
+      {
+        "item": "The exposure counter. Every commitment made against a head count that later moved, tagged at the moment it moves. We measure GROSS VALUE AT RISK, which is not the same as money lost. A caterer committed to 104 covers on a sailing that drops to 71 does not cost you 104 covers, it costs at most the difference, and possibly nothing if the commitment is still revisable at that hour.",
+        "metric": "Gross exposure per Juneau operating day, reported as exposure and never as loss. We do not yet know what fraction of exposure becomes real cost. That fraction comes from your finance side, not from us, and the funding gate is not meaningful until both numbers exist."
+      }
+    ],
+    "next": [
+      {
+        "item": "Winter v1. The full Operating Day Ledger hardened for a live season on Juneau, built October through March, still with zero AI in it.",
+        "metric": "Minutes from a count change to the change being recorded and every IN HOUSE party holding it, down against the 2026 tail baseline, measured on live 2027 operating days. That baseline is one the slice is guaranteed to produce whatever you decide about vendor notices."
+      },
+      {
+        "item": "Extend the ledger to Sitka and Ketchikan so one operating day covers all three ports.",
+        "metric": "Coordination labor hours per operating day per port across three ports, against the Juneau baseline."
+      },
+      {
+        "item": "The capacity picture as an OUTPUT, not a build. One season of event log turned into a report that falls out of data already captured.",
+        "metric": "Average seats sailed against seats carried per departure, treated as a hypothesis to test. Building a real per hull capacity table is part of this work."
+      },
+      {
+        "item": "CONDITIONAL. A deterministic constraint solver for re-cutting the vessel and crew plan. Arrives ONLY if the v1 log proves re-cuts are frequent AND non-obvious. It never proposes crew.",
+        "metric": "Share of proposed re-cuts where a hard rule violation is caught before commit, and zero crew assignments made by software, by design. If the median re-cut is something a dispatcher solves in her head in thirty seconds, a solver adds nothing and we say so."
+      },
+      {
+        "item": "CONDITIONAL. One LLM node, and one only, reading out-of-band free text replies into structured confirmations. It never drafts a commitment and never writes a notice.",
+        "metric": "Measured share of replies arriving as free text outside the structured path, then parse accuracy against a human labeled hold out set, then labeling hours consumed, tracked openly."
+      }
+    ],
+    "later": [
+      {
+        "item": "Settlement and commission reconciliation, built as per-template parsers with NO AI in it at all.",
+        "metric": "Share of settlement lines auto matched, and exception review hours for the Office Manager. Said out loud, this is the highest certainty return in the entire set and it contains no AI whatsoever."
+      },
+      {
+        "item": "Dock and gangway settlement capture as structured data at the point it happens.",
+        "metric": "Share of settlement transactions and daily passenger counts captured structured at the gangway rather than re-keyed later."
+      },
+      {
+        "item": "Vessel to manifest matching and fleet allocation. Instrument first, optimize second.",
+        "metric": "Seats sailed against seats carried per departure, per hull. Blocked until a real per hull capacity table exists."
+      },
+      {
+        "item": "Crew scheduling and relief assignment support. Software refuses, a person assigns, always.",
+        "metric": "Hours spent rebuilding a crew schedule after a change. Any rule set is authored and signed by their licensed people, because USCG manning and rest rules sit outside what this study established."
+      },
+      {
+        "item": "Lodge and catering demand planning.",
+        "metric": "Covers ordered against covers served per event."
+      },
+      {
+        "item": "Guest policy consistency across tour pages and the terms page.",
+        "metric": "Count of tours whose cancellation policy disagrees with the terms page. This is a human rewrite and an afternoon of editing, not an AI build, and we would not charge to point a model at it."
+      },
+      {
+        "item": "Seasonal recruiting for the 305 seasonal roles. Our advice is BUY, not build.",
+        "metric": "Time to fill per role and share filled before the 1 April start. A scoring model over hiring decisions carries adverse impact exposure we are not willing to put on you."
+      },
+      {
+        "item": "Seasonal onboarding and frontline knowledge for the 305 people arriving each April.",
+        "metric": "Questions per new hire per week that have to go to a captain, counted for one season before anything gets built. Largest inference in the set, measuring comes before proposing."
+      },
+      {
+        "item": "Guest facing answering across the three port lines and the direct site. The thing you probably expected an AI shop to pitch. We are declining to sell it.",
+        "metric": "Watch, do not build. Trigger to reopen is independently verifiable FareHarbor Agent results. Cost of delay is negative, waiting is correct."
+      },
+      {
+        "item": "Capacity strategy under the Juneau daily caps.",
+        "metric": "Seat utilization on capped days against uncapped days, once one full season of event log exists. Nobody holds that comparison yet, us included."
+      },
+      {
+        "item": "Map only, carried so nothing found gets dropped. Sitka shipyard and drydock sequencing, cruise line account performance reporting, weather aided sailing decisions.",
+        "metric": "None of these earns a build metric yet, none has a cited pain behind it. On weather, ECMWF describes its system as the first fully operational open machine learning weather model with the widest range of parameters, and it runs on a 28 km grid, which is coarse for the channels you actually sail."
+      }
+    ],
+    "gates": "GATE 1, the winter build, is funded only if the slice shows ALL THREE of these. Head count changes on a majority of instrumented Juneau operating days. A median of two or more outside parties touched per change. And a measured exposure that, once you tell us what fraction of exposure turns into real cost, clears three times the winter build cost. At our assumed 56,000 dollars that is roughly 168,000 dollars of realised cost across a season. Under that bar we tell you to stop, in writing, and you still own the ledger, the event log and the first real baselines this business has had. GATE 2, ports two and three, earned by one full 2027 Juneau season showing elapsed time from a count moving to every in house party holding it, down against the 2026 baseline. We measure GATE 2 on the in house figure deliberately, because that baseline exists whatever you decide about vendor notices. If you did opt into outside party notices in 2026, we report the confirmation figure alongside it. If Juneau does not move, Sitka and Ketchikan do not get sold. GATE 3, the solver, arrives only if re-cuts are frequent AND non-obvious, measured not argued, and it never proposes crew. GATE 4, the one LLM node, arrives only on measured free-text volume, and the labeling cost is named and funded rather than buried. Every one of these gates is your off ramp, not ours. You can stop at any of the four and keep everything built up to that point."
+  },
+  "honest_part": [
+    "We do not know what system carries your cruise line contracted manifests. Your own Juneau Office Manager posting names FareHarbor and Viator as systems that role manages, and True Alaskan Tours books on FareHarbor, but nothing public tells us whether the contracted cruise line sailings run through either of them. If those manifests arrive by phone, radio and email, the integration work is larger than anything in our estimate, and you would hear that before you funded it.",
+    "We have no guest side evidence whatsoever. Every review source we tried was unreachable, so we have asserted nothing about guest complaints, hold times or refunds anywhere in this study, and we have not built against a pain we cannot show you.",
+    "Our read that contracted business limits your pricing lever is an inference from public pages, not a fact. It goes on the call as a question. If we are wrong, the opportunity is larger than we scoped it.",
+    "The calendar is genuinely tight and we are not going to pretend otherwise. Your season ends 1 October. About nine operating weeks remain. Miss that window and the next chance to observe a real operating day is late April 2027, a gap of about seven months that would force this whole case onto assumption instead of your own data.",
+    "A late season slice measures late season. We do not know where a late September slice sits against the season's peak, and we will not assume it is average. Any extrapolation across a season inherits that uncertainty. We will report the slice as the slice, state any extrapolation separately with its assumption named, and if it lands in shoulder season we will say so in the readout rather than annualise it quietly. The gate is measured on the slice as observed, not on the extrapolation."
+  ],
+  "next_step": "This study is the free version of how we work. If the premise is wrong, tell us and we will say so in writing and stop. If it is right, the next step is small, a reply and one conversation about how a same day head count change actually reaches your Juneau desk today. That single answer is the biggest swing in everything above, and it is the one thing no public page could tell us.",
+  "sources": [
+    {
+      "n": 1,
+      "claim": "Alaskan Dream Cruises shut down February 2026, spokesman naming particularly high overhead and complex logistics",
+      "url": "https://www.juneauempire.com/2026/02/16/alaskan-dream-cruises-announces-shutdown-after-15-years/"
+    },
+    {
+      "n": 2,
+      "claim": "The stated plan to refocus 100 percent of resources on day tour excursions and the shipyard",
+      "url": "https://www.kcaw.org/2026/02/05/alaskan-dream-cruises-shuts-down-after-15-years-of-overnight-cruises-in-southeast/"
+    },
+    {
+      "n": 3,
+      "claim": "The Operations Specialist posting, the four duties quoted verbatim",
+      "url": "https://jobs.rwfm.tamu.edu/view-job/?id=112698"
+    },
+    {
+      "n": 4,
+      "claim": "The same posting, high levels of stress and 10 to 14 hour days, 5 to 7 days a week",
+      "url": "https://jobs.rwfm.tamu.edu/view-job/?id=112698"
+    },
+    {
+      "n": 5,
+      "claim": "Juneau's first year of daily cruise passenger caps, 16,000 most days and 12,000 Saturdays against prior peaks up to 21,000",
+      "url": "https://www.ktoo.org/2026/04/27/juneaus-first-cruise-ship-of-2026-kicks-off-first-year-of-daily-passenger-limits/"
+    },
+    {
+      "n": 6,
+      "claim": "Family and Alaska Native owned, founded 1970 in Sitka, now owned and operated by Jamey Cagle",
+      "url": "https://allenmarinetours.com/about-us/"
+    },
+    {
+      "n": 7,
+      "claim": "Thirty day tour vessels, 305 seasonal and 100 year-round workers",
+      "url": "https://www.juneauempire.com/2026/02/16/alaskan-dream-cruises-announces-shutdown-after-15-years/"
+    },
+    {
+      "n": 8,
+      "claim": "The 2026 season running 1 April to 1 October, with a travel and housing stipend offered",
+      "url": "https://www.coolworks.com/allen-marine-tours/profile"
+    },
+    {
+      "n": 9,
+      "claim": "The fleet custom built in the Sitka shipyard",
+      "url": "https://allenmarinetours.com/about-us/"
+    },
+    {
+      "n": 10,
+      "claim": "The Office Manager posting, managing FareHarbor and Viator and reconciling partner fees and commissions",
+      "url": "https://www.alaskatia.org/member-tools/job-opportunities/20471"
+    },
+    {
+      "n": 11,
+      "claim": "The Dock Representative posting, settlement transactions with cruise line representatives",
+      "url": "https://jobs.rwfm.tamu.edu/view-job/?id=112694"
+    },
+    {
+      "n": 12,
+      "claim": "Huna Totem's fifteen year Disney berthing agreement at Icy Strait Point through 2041",
+      "url": "https://www.akbizmag.com/industry/alaska-native/disney-cruise-line-commits-to-fifteen-more-years-at-icy-strait-point/"
+    },
+    {
+      "n": 13,
+      "claim": "Yonder's vendor published case study on Black Cat Cruises",
+      "url": "https://www.yonderhq.com/case-study/black-cat-cruises-chatbot-answers-immediately-24-7"
+    },
+    {
+      "n": 14,
+      "claim": "Gartner, 321 customer service leaders, October 2025, on AI and headcount",
+      "url": "https://www.techrepublic.com/article/gartner-ai-customer-service-rehire-2027/"
+    },
+    {
+      "n": 15,
+      "claim": "Moffatt v. Air Canada, 2024 BCCRT 149",
+      "url": "https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot"
+    },
+    {
+      "n": 16,
+      "claim": "Arival Global Operator Landscape 4th Edition, 5,664 qualified responses",
+      "url": "https://travelprofessionalnews.com/ota-bookings-hit-surge-direct-sales-slide-across-global-experiences-industry/"
+    },
+    {
+      "n": 17,
+      "claim": "The prior Arival study, more than 7,000 operators, on reservation systems",
+      "url": "https://www.travolution.com/news/travel-sectors/tours-and-activities/arival-unveils-largest-ever-study-on-the-state-of-the-global-experiences-industry/"
+    },
+    {
+      "n": 18,
+      "claim": "FareHarbor Agent announcement, 27 April 2026, no published pilot results",
+      "url": "https://fareharbor.com/blog/meet-fareharbor-agent-ai-powered-guest-communication-for-tour-operators/"
+    },
+    {
+      "n": 19,
+      "claim": "The True Alaskan Tours cancellation policy chain",
+      "url": "https://truealaskantours.com/frequently-asked-questions/"
+    },
+    {
+      "n": 20,
+      "claim": "Allen Marine recommending guests book through the cruise line",
+      "url": "https://allenmarinetours.com/tour/waterfront-shuttle-ward-cove-to-downtown-ketchikan/"
+    },
+    {
+      "n": 21,
+      "claim": "Vessel size varying by departure, 24 to 140 passengers",
+      "url": "https://allenmarinetours.com/tour/waterfront-shuttle-ward-cove-to-downtown-ketchikan/"
+    },
+    {
+      "n": 22,
+      "claim": "Three port offices with separate phones and inboxes",
+      "url": "https://allenmarinetours.com/contact-us/"
+    },
+    {
+      "n": 23,
+      "claim": "Captains coming through the ranks, and several with 15 to 20 years",
+      "url": "https://allenmarinetours.com/about-us-2/"
+    },
+    {
+      "n": 24,
+      "claim": "Adventure Green Alaska, Whale SENSE, Tourism Best Management Practices and AIANTA participation",
+      "url": "https://allenmarinetours.com/sustainability/"
+    },
+    {
+      "n": 25,
+      "claim": "ECMWF's AI Forecasting System in operations",
+      "url": "https://www.ecmwf.int/en/about/media-centre/news/2025/ecmwfs-ai-forecasts-become-operational"
+    }
+  ]
+}

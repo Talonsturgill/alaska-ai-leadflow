@@ -3,10 +3,41 @@
   "note": "Per-run audit and the double-fire guard. Reconstructed rows before 2026-07-29 are inferred from archived artifacts, not from the database.",
   "updated": "2026-07-29",
   "runs": [
-    { "run_date": "2026-07-16", "status": "success", "shortlist_count": null, "notes": "reconstructed" },
-    { "run_date": "2026-07-17", "status": "success", "shortlist_count": null, "notes": "reconstructed" },
-    { "run_date": "2026-07-19", "status": "success", "shortlist_count": null, "notes": "reconstructed, two companies archived this date" },
-    { "run_date": "2026-07-21", "status": "success", "shortlist_count": null, "notes": "reconstructed" },
-    { "run_date": "2026-07-22", "status": "success", "shortlist_count": null, "notes": "reconstructed" }
+    {
+      "run_date": "2026-07-16",
+      "status": "success",
+      "shortlist_count": null,
+      "notes": "reconstructed"
+    },
+    {
+      "run_date": "2026-07-17",
+      "status": "success",
+      "shortlist_count": null,
+      "notes": "reconstructed"
+    },
+    {
+      "run_date": "2026-07-19",
+      "status": "success",
+      "shortlist_count": null,
+      "notes": "reconstructed, two companies archived this date"
+    },
+    {
+      "run_date": "2026-07-21",
+      "status": "success",
+      "shortlist_count": null,
+      "notes": "reconstructed"
+    },
+    {
+      "run_date": "2026-07-22",
+      "status": "success",
+      "shortlist_count": null,
+      "notes": "reconstructed"
+    },
+    {
+      "run_date": "2026-07-29",
+      "status": "success",
+      "shortlist_count": 22,
+      "notes": "Allen Marine Tours. DEGRADED MODE, Supabase hibernated all run, dedupe served from the git ledger, INBOUND FIRST not checked. Owner authorised proceeding and excluded Bristol Bay Native Corporation. Seven critic rounds to ship."
+    }
   ]
 }

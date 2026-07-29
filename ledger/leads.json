@@ -3,12 +3,94 @@
   "note": "Memory of record for dedupe. Authoritative, git-backed, always available. Supabase leadflow.leads is dual-written when reachable but is no longer required to run.",
   "updated": "2026-07-29",
   "leads": [
-    { "company": "Goldbelt, Incorporated", "domain": "goldbelt.com", "segment": "anc", "location": "Juneau", "run_date": "2026-07-16", "status": "drafted", "study_path": "runs/2026-07-16/", "source": "reconstructed from runs/ archive" },
-    { "company": "Camp Denali", "domain": "campdenali.com", "segment": "tourism", "location": "Denali", "run_date": "2026-07-17", "status": "drafted", "study_path": "runs/2026-07-17/campdenali/", "source": "reconstructed from runs/ archive" },
-    { "company": "Big Dan's Fishing Charters", "domain": "bigdansfishing.com", "segment": "tourism", "location": "Alaska", "run_date": "2026-07-19", "status": "drafted", "study_path": "runs/2026-07-19/big-dans-fishing-charters/", "source": "reconstructed from runs/ archive + publish history" },
-    { "company": "CRW Engineering Group, Inc.", "domain": "crweng.com", "segment": "other", "location": "Anchorage", "run_date": "2026-07-19", "status": "drafted", "study_path": "runs/2026-07-19/crw-engineering-group/", "source": "reconstructed from runs/ archive + publish history" },
-    { "company": "UIC Government Services (Ukpeagvik Inupiat Corporation)", "domain": "uicalaska.com", "segment": "anc", "location": "Utqiagvik / Anchorage", "run_date": "2026-07-21", "status": "drafted", "study_path": "runs/2026-07-21/uic-alaska/", "source": "reconstructed from runs/ archive + publish history" },
-    { "company": "Alaska Wildland Adventures", "domain": "alaskawildland.com", "segment": "tourism", "location": "Cooper Landing", "run_date": "2026-07-22", "status": "drafted", "study_path": "runs/2026-07-22/alaska-wildland-adventures/", "source": "reconstructed from runs/ archive + publish history" },
-    { "company": "Bristol Bay Native Corporation", "domain": "bbnc.net", "segment": "anc", "location": "Anchorage", "run_date": null, "status": "drafted", "study_path": null, "source": "reconstructed from publish history + explicit owner exclusion 2026-07-29" }
+    {
+      "company": "Goldbelt, Incorporated",
+      "domain": "goldbelt.com",
+      "segment": "anc",
+      "location": "Juneau",
+      "run_date": "2026-07-16",
+      "status": "drafted",
+      "study_path": "runs/2026-07-16/",
+      "source": "reconstructed from runs/ archive"
+    },
+    {
+      "company": "Camp Denali",
+      "domain": "campdenali.com",
+      "segment": "tourism",
+      "location": "Denali",
+      "run_date": "2026-07-17",
+      "status": "drafted",
+      "study_path": "runs/2026-07-17/campdenali/",
+      "source": "reconstructed from runs/ archive"
+    },
+    {
+      "company": "Big Dan's Fishing Charters",
+      "domain": "bigdansfishing.com",
+      "segment": "tourism",
+      "location": "Alaska",
+      "run_date": "2026-07-19",
+      "status": "drafted",
+      "study_path": "runs/2026-07-19/big-dans-fishing-charters/",
+      "source": "reconstructed from runs/ archive + publish history"
+    },
+    {
+      "company": "CRW Engineering Group, Inc.",
+      "domain": "crweng.com",
+      "segment": "other",
+      "location": "Anchorage",
+      "run_date": "2026-07-19",
+      "status": "drafted",
+      "study_path": "runs/2026-07-19/crw-engineering-group/",
+      "source": "reconstructed from runs/ archive + publish history"
+    },
+    {
+      "company": "UIC Government Services (Ukpeagvik Inupiat Corporation)",
+      "domain": "uicalaska.com",
+      "segment": "anc",
+      "location": "Utqiagvik / Anchorage",
+      "run_date": "2026-07-21",
+      "status": "drafted",
+      "study_path": "runs/2026-07-21/uic-alaska/",
+      "source": "reconstructed from runs/ archive + publish history"
+    },
+    {
+      "company": "Alaska Wildland Adventures",
+      "domain": "alaskawildland.com",
+      "segment": "tourism",
+      "location": "Cooper Landing",
+      "run_date": "2026-07-22",
+      "status": "drafted",
+      "study_path": "runs/2026-07-22/alaska-wildland-adventures/",
+      "source": "reconstructed from runs/ archive + publish history"
+    },
+    {
+      "company": "Bristol Bay Native Corporation",
+      "domain": "bbnc.net",
+      "segment": "anc",
+      "location": "Anchorage",
+      "run_date": null,
+      "status": "drafted",
+      "study_path": null,
+      "source": "reconstructed from publish history + explicit owner exclusion 2026-07-29"
+    },
+    {
+      "company": "Allen Marine Tours",
+      "domain": "allenmarinetours.com",
+      "segment": "tourism",
+      "location": "Sitka, with operations in Juneau and Ketchikan",
+      "status": "researched",
+      "fit_score": 24,
+      "why_picked": "Highest fit total across all four scout segments. The operational pain is published in their own live job posting, the contact is verifiable on their own domain, and they publicly recommitted to day tours after closing their overnight line for overhead reasons.",
+      "contact_name": "Jamey Cagle",
+      "contact_role": "Owner, President and CEO",
+      "contact_email": "Sitkainfo@allenmarine.com",
+      "contact_source": "https://allenmarinetours.com/contact-us/ (general Sitka office inbox, verified live three times, no personal address is published anywhere)",
+      "outcome": "Reduce the cost and recovery time of a changed sailing day, and make that cost visible for the first time.",
+      "recommended_build": "Sailing Day Control, v1 downscoped to the Operating Day Ledger. One port, read-only shared state, structured change capture, templated fan out, acknowledgement tracking, immutable event log. ZERO AI in v1.",
+      "roi_summary": "Two to three week instrumentation slice priced as decision data. Conservative recovers 105 percent of cost at month 12 (break even), most likely 196 percent at month 6, aggressive 345 percent at month 4. Payback four to twelve months. Both cash lines are spend avoided with us, conditional on a winter build being on their table.",
+      "study_path": "runs/2026-07-29/allen-marine-tours/field-study.html",
+      "run_date": "2026-07-29",
+      "source": "live run, degraded mode (Supabase unreachable)"
+    }
   ]
 }
