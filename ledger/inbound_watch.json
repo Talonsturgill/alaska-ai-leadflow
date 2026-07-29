@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "note": "Consecutive runs that could not check INBOUND FIRST. The scanner opt-in queue lives only in Supabase, so an outage makes consented inbound leads invisible and a cold lead ships in their place. This counter makes that cost visible instead of silent.",
+  "consecutive_skips": 1,
+  "first_skipped": "2026-07-29",
+  "last_skipped": "2026-07-29",
+  "last_checked": null,
+  "reason": "Supabase project hibernated and stuck mid-wake, 28P01 on every query, 3h and counting. Free-tier auto-pause is the root cause.",
+  "updated": "2026-07-29"
+}
