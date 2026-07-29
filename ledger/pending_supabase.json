@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "note": "Writes owed to Supabase because it was unreachable when the run shipped. Backfill these when it recovers, then empty the list.",
+  "updated": "2026-07-29",
+  "pending": []
+}

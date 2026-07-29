@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "note": "Memory of record for dedupe. Authoritative, git-backed, always available. Supabase leadflow.leads is dual-written when reachable but is no longer required to run.",
+  "updated": "2026-07-29",
+  "leads": [
+    { "company": "Goldbelt, Incorporated", "domain": "goldbelt.com", "segment": "anc", "location": "Juneau", "run_date": "2026-07-16", "status": "drafted", "study_path": "runs/2026-07-16/", "source": "reconstructed from runs/ archive" },
+    { "company": "Camp Denali", "domain": "campdenali.com", "segment": "tourism", "location": "Denali", "run_date": "2026-07-17", "status": "drafted", "study_path": "runs/2026-07-17/campdenali/", "source": "reconstructed from runs/ archive" },
+    { "company": "Big Dan's Fishing Charters", "domain": "bigdansfishing.com", "segment": "tourism", "location": "Alaska", "run_date": "2026-07-19", "status": "drafted", "study_path": "runs/2026-07-19/big-dans-fishing-charters/", "source": "reconstructed from runs/ archive + publish history" },
+    { "company": "CRW Engineering Group, Inc.", "domain": "crweng.com", "segment": "other", "location": "Anchorage", "run_date": "2026-07-19", "status": "drafted", "study_path": "runs/2026-07-19/crw-engineering-group/", "source": "reconstructed from runs/ archive + publish history" },
+    { "company": "UIC Government Services (Ukpeagvik Inupiat Corporation)", "domain": "uicalaska.com", "segment": "anc", "location": "Utqiagvik / Anchorage", "run_date": "2026-07-21", "status": "drafted", "study_path": "runs/2026-07-21/uic-alaska/", "source": "reconstructed from runs/ archive + publish history" },
+    { "company": "Alaska Wildland Adventures", "domain": "alaskawildland.com", "segment": "tourism", "location": "Cooper Landing", "run_date": "2026-07-22", "status": "drafted", "study_path": "runs/2026-07-22/alaska-wildland-adventures/", "source": "reconstructed from runs/ archive + publish history" },
+    { "company": "Bristol Bay Native Corporation", "domain": "bbnc.net", "segment": "anc", "location": "Anchorage", "run_date": null, "status": "drafted", "study_path": null, "source": "reconstructed from publish history + explicit owner exclusion 2026-07-29" }
+  ]
+}

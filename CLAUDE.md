@@ -74,10 +74,11 @@ needs that we can build.
 
 Every run ends with one real, personalized Field Study drafted to a verified
 prospect contact. A note to Talon explaining why something failed is NEVER the
-deliverable. There are exactly TWO non-outreach endings and no third: Supabase
-unreachable so we cannot dedupe or record, or the reachable market genuinely
-exhausted after every queue name and re-scout is spent. Everything else that goes
-wrong mid-run is a problem to route around, not an ending.
+deliverable. There is exactly ONE non-outreach ending and no other: the reachable
+market genuinely exhausted after every queue name and re-scout is spent. Dedupe
+lives in git now, so the memory is always readable and no outage can end a run.
+Everything else that goes wrong mid-run is a problem to route around, not an
+ending.
 
 The two failure routes, and neither ends the run:
 - A critic verdict of FIX is a work item. Apply the fixes and re-review, looping
@@ -142,12 +143,20 @@ Saying the honest thing IS the pitch.
 
 ## MEMORY AND DEDUPE
 
-The pipeline and memory live in Supabase (project alaska-ai-dashboard, schema
-leadflow), reached through the Supabase connector. Never contact a company already
-in leadflow.leads or leadflow.suppressions, matched on normalized domain. The
-unique index on the domain is the database-level backstop, and the routine dedupes
-at Phase 0 so it never wastes a run. Supabase is the memory of record. If it is
-unreachable, the routine stops rather than risk a repeat.
+The dedupe memory of record is GIT, ledger/leads.json and ledger/suppressions.json
+in this private repo, read and written through scripts/ledger.py. It ships with the
+checkout, so it is always available and no outage can cost a day of outreach. Never
+contact a company whose normalized domain appears in either file. The routine
+dedupes at Phase 0 with `ledger.py check`, and dedupe is COMPUTED in code, never
+eyeballed by the model, the same way ROI arithmetic is computed in roi_math.py.
+
+Supabase (project alaska-ai-dashboard, schema leadflow) remains the inbound scanner
+queue and the analytics store, and every run DUAL-WRITES to it when it is
+reachable. It is no longer required to run. When it is down the run proceeds on the
+git ledger, queues the owed rows in ledger/pending_supabase.json for backfill,
+skips INBOUND FIRST, and says so loudly in the delivery summary. What that mode
+loses is inbound priority, never the run. Backfill the pending rows on the first
+run after Supabase recovers, then empty the list.
 
 ## PRIVATE DATA
 
