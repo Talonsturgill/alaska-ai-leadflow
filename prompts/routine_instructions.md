@@ -352,7 +352,15 @@ Collect the four into out/<date>/engineering.json.
 1. Spawn fact-checker on study.json (its sources[], the pain quote, every
    competitor and industry claim, and any number that cites a page) and the
    contact. Cut every rejected claim from study.json and re-render if anything
-   changed.
+   changed. Each rejection carries also_appears_at, so cut the claim from EVERY
+   location it names, not only the one quoted. If the fact-checker reports a
+   drift_pattern, several rejections leaning the same direction, treat that
+   pattern as the real finding and re-read the whole study for it, because the
+   individual errors will each look small.
+   Then run `python scripts/claim_sweep.py --study out/<date>/study.json` and
+   resolve anything it surfaces under CONFLICTS, QUOTE DRIFT or CONDITIONAL
+   MISMATCH before the critic sees the study. It is faster to fix a contradiction
+   in code than to spend a critic round on it.
 2. Spawn study-critic on the finished study.json AND out/<date>/demo.html if it
    exists. It audits the whole thing against the hype tables in AI_SCOPING.md and
    ROI_METHOD.md, evidence integrity, feasibility integrity, and specificity, and
@@ -369,6 +377,29 @@ SHIP GATE. Two verdicts, two routes, and neither ends the run.
   improving the study, keep going until the verdict is ship. If the SAME fix
   bounces twice without progress, the showrunner is misapplying it, stop and
   re-read the fix before the next round.
+
+  HOW TO APPLY A FIX, two rules bought with six rounds on 2026-07-29. Both are
+  cheap to follow and expensive to skip.
+
+  1. FIX THE CLAIM, NOT THE SENTENCE. A critic quotes ONE span, but the defect is
+     a CLAIM, and a claim usually has more than one home. Before you call a fix
+     applied, find every other place that claim lives and correct them all. Run
+     `python scripts/claim_sweep.py --study out/<date>/study.json` and read the
+     ECHOES section, which lists the same claim restated across sections. Patching
+     only the quoted string is why round four of that run left the same argument
+     standing three sections away, and round five caught it again. If the same
+     defect returns in different words, you did not fix it, you moved it.
+  2. RE-READ WHAT REFERENCES WHAT. When you change a section, other sections may
+     cite it, and none of them know they do. Adding one list on that run made a
+     feature conditional in the plan while the roadmap still promised it outright,
+     and a funding gate ended up resting on a measurement that might never be
+     collected. The CONFLICTS and CONDITIONAL MISMATCH sections of claim_sweep
+     catch this class mechanically. A fix that creates a contradiction is a new
+     defect, not a completed one.
+
+  claim_sweep is a REPORT, not a gate. It surfaces candidates and it will raise
+  benign ones, three ROI scenarios are supposed to carry different numbers. Read
+  it and judge. Do not add --strict to a quality loop, the judgment is yours.
 - KILL means the study cannot be made honest for THIS company (fabrication risk,
   hype with no honest core, no genuine value at any ask size). That disqualifies
   the COMPANY, not the run. Suppress it (reason "study killed, <one line>"),

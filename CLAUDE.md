@@ -130,6 +130,24 @@ on ship, or on a kill that disqualifies the company, which routes to the
 replacement queue and starts the loop again on the next name. A run that iterated
 many times and delivered clean is the system succeeding.
 
+HOW A FIX IS APPLIED decides how many rounds the loop costs, and two rules were
+bought the hard way on 2026-07-29, which took seven rounds because the same defect
+kept coming back wearing different clothes.
+
+FIX THE CLAIM, NOT THE SENTENCE. A critic quotes one span. The defect is a claim,
+and a claim usually lives in more than one section. Correct every home before
+calling a fix applied, and use scripts/claim_sweep.py to find the ones you would
+otherwise miss. A defect that returns in different words was moved, not fixed.
+
+RE-READ WHAT REFERENCES WHAT. Sections cite each other and none of them know it.
+Change one and the others can quietly start disagreeing with it, which is how a
+funding gate ends up resting on a measurement another section says may never be
+collected. A fix that creates a contradiction is a new defect, not a finished one.
+
+And watch the DIRECTION of a run of small errors. When several lean the same way,
+toward making the prospect look more committed or more behind than the evidence
+supports, the pattern is the finding, not the individual errors.
+
 ## HONESTY (non-negotiable)
 
 Every fact in the study or the email traces to a page that was fetched. Never
