@@ -609,11 +609,25 @@ note stating exactly what failed.
   summary say plainly that Supabase was down, that inbound priority was skipped,
   and that a backfill is owed. A database outage costs inbound priority for one
   day. It never costs the day's outreach.
-- Supabase reports ACTIVE_HEALTHY but every query fails on authentication. That is
-  usually a HIBERNATED project stuck mid-wake, not a bad credential, and the
-  giveaway is get_advisors returning "currently hibernated and will wake on next
-  supported request" while list_projects answers fine. Do not chase it and do not
-  tell Talon to reset the database password. Note it, degrade, and carry on.
+- Supabase reports ACTIVE_HEALTHY but every query fails with 28P01, password
+  authentication failed. This happened on 2026-07-29 for about three hours and
+  then cleared on its own. Report the OBSERVABLES and take the action, do not
+  narrate a root cause you cannot prove.
+  What to record. Which Postgres roles were rejected (it hit both postgres and
+  supabase_read_only_user), and whether the NON-database paths still answer. Try
+  an edge function endpoint and the REST gateway. If those serve normally, as they
+  did that day, the project itself is up and the failure is between the connector
+  and the database, not the project being unavailable.
+  What NOT to conclude. get_advisors may return "currently hibernated and will
+  wake on next supported request". That message is not reliable evidence on its
+  own, and on 2026-07-29 it was misleading. A project in daily use does not idle
+  pause, so do not reach for that explanation, and do not recommend a plan change
+  or a support ticket off one API string. The repeated 28P01 across two roles is
+  the stronger signal and it points at credentials.
+  What to do. Have Talon re-authorize the Supabase connector. It may also clear by
+  itself as tokens refresh. Either way DEGRADE and carry on, the git ledger covers
+  the run, and note in the summary that Supabase was unreachable and what the
+  observables were.
 - A lead disqualifies at any gate (unverifiable, values conflict, no genuine AI
   ROI, no contact path worth pursuing). Disqualify and REPLACE. Suppress it with
   its reason, leave a one-line note, take the next name on the replacement queue,
