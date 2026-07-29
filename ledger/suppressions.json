@@ -2,5 +2,24 @@
   "version": 1,
   "note": "Never-contact list. Companies disqualified at a gate, competitors, and anyone who said no.",
   "updated": "2026-07-29",
-  "suppressions": []
+  "suppressions": [
+    {
+      "company": "Bering Straits Native Corporation",
+      "domain": "beringstraits.com",
+      "reason": "values/reputation: heavy ICE/DHS detention contracting; Jan 2026 shareholders publicly asked BSNC to divest. Our AI capture offer would accelerate exactly that. Held for human call, not pursued.",
+      "date": "2026-07-29"
+    },
+    {
+      "company": "Alutiiq, LLC",
+      "domain": "alutiiq.com",
+      "reason": "values: documented federal-contracting fraud history directly on point with the proposed build (compliance/proposal AI). 2019 FCA settlement over alleged sham 8(a) subsidiaries, plus a 2020 non-prosecution agreement and 1.26M payment by a subsidiary over a kickback scheme. Dropped at the Phase 2 research gate.",
+      "date": "2026-07-29"
+    },
+    {
+      "company": "Paychex, Inc.",
+      "domain": "paychex.com",
+      "reason": "values/fit: national payroll and HR-automation corporation, not an Alaska SMB and an adjacent automation vendor; inbound opt-in came from a personal address, not a genuine decision-maker.",
+      "date": "2026-07-29"
+    }
+  ]
 }
