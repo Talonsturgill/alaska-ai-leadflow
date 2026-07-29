@@ -78,7 +78,7 @@
       "domain": "allenmarinetours.com",
       "segment": "tourism",
       "location": "Sitka, with operations in Juneau and Ketchikan",
-      "status": "researched",
+      "status": "drafted",
       "fit_score": 24,
       "why_picked": "Highest fit total across all four scout segments. The operational pain is published in their own live job posting, the contact is verifiable on their own domain, and they publicly recommitted to day tours after closing their overnight line for overhead reasons.",
       "contact_name": "Jamey Cagle",
@@ -90,7 +90,11 @@
       "roi_summary": "Two to three week instrumentation slice priced as decision data. Conservative recovers 105 percent of cost at month 12 (break even), most likely 196 percent at month 6, aggressive 345 percent at month 4. Payback four to twelve months. Both cash lines are spend avoided with us, conditional on a winter build being on their table.",
       "study_path": "runs/2026-07-29/allen-marine-tours/field-study.html",
       "run_date": "2026-07-29",
-      "source": "live run, degraded mode (Supabase unreachable)"
+      "source": "live run, degraded mode (Supabase unreachable)",
+      "gmail_draft_id": "r4784481185643001860",
+      "draft_subject": "Allen Marine field study, free, and the build we recommend has no AI in it",
+      "live_link": "https://alaskaaihq.com/awesomeproposal/allen-marine-tours/",
+      "delivery_check": "passed, exit 0"
     }
   ]
 }
