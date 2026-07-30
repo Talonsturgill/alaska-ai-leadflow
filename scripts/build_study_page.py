@@ -352,7 +352,7 @@ hr.div{border:0;border-top:1px solid var(--rule);margin:calc(var(--u)*2.5) 0 0}
 # Encoding now rides on weight and a sublabel, which survive greyscale print and
 # colour-vision deficiency.
 KIND_LABEL = {"user": "Person", "external": "Theirs today", "system": "Theirs today",
-              "ai": "We build", "data": "Their data"}
+              "build": "We build", "ai": "Model, gated", "data": "Their data"}
 NODE_INK = "#aab7c8"        # 4.6:1 on the surface, clears WCAG 1.4.11
 NODE_ACCENT = "#57e0c8"     # 8.5:1, spent only on what we build
 
@@ -460,7 +460,7 @@ def render_diagram(arch):
     for n in nodes:
         x, y = pos[n["id"]]
         k = n.get("kind") if n.get("kind") in KIND_LABEL else "system"
-        build = k == "ai"
+        build = k == "build"
         cls = "dg-n dg-build" if build else "dg-n"
         out.append(f'<rect class="{cls}-bar" x="{x:.0f}" y="{y:.0f}" '
                    f'width="{BW}" height="2.5" rx="1.25"/>')
