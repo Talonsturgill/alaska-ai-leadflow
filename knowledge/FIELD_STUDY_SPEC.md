@@ -191,7 +191,10 @@ pipeline has.
     "plain_parts",               // ~60 words, plain nouns, BEFORE any explanation
     "what_it_does","feasibility","build_vs_buy",
     "architecture": { "nodes":[{id,label,kind}], "edges":[{from,to}], "caption" }
-  },                             // kind: user|external|system|ai|data
+  },              // kind: user|external|system|build|ai|data
+                               // build = work WE would do, ai = a gated model layer.
+                               // The single accent is spent on build, never on ai, so the
+                               // figure cannot imply we are selling a model that is switched off.
   "roi": {
     "title","lede","lede_body",
     "table_caption", "table_head": ["","Conservative","Most likely","Aggressive"],
