@@ -1,0 +1,401 @@
+{
+  "meta": {
+    "company": "ABR, Inc.",
+    "domain": "abrinc.com",
+    "segment": "Environmental research and consulting",
+    "place": "Fairbanks and Anchorage, Alaska",
+    "date": "July 30, 2026",
+    "prepared_for_first": "Adrian"
+  },
+  "thesis": "ABR names machine learning on two of its own service pages. The homepage we read does not.",
+  "brief": "We spent this week on ABR from the outside, reading your service pages, staff directory, careers page, project write ups and federal contract vehicles. We didn't contact anyone. Everything below traces to a page we fetched, and the sources are numbered at the end.\n\nThe first thing we found wasn't a problem. Your Remote Sensing page lists machine learning modeling of vegetation abundance and types. Your Biostatistics page lists machine learning analyses. You build databases, mobile field apps and web applications in house, and you host software written for the USGS Alaska Science Center. Your homepage describes all of that as \"leading edge technologies\" and nothing more specific. That is a positioning gap, not a capability gap. We've drafted the replacement paragraph for you in the roadmap, along with a rule list for your post season data checking, and there is no charge attached to either.\n\nThe second thing is structural. Your directory lists 36 named people. You have a Director of Business Development and one proposal coordinator, and your Senior NEPA Specialist posting, open as of the end of July, asks that hire to contribute to proposal preparation and expand the client base. You hold four live federal vehicles running to 2028 and 2029, and every submission needs the same material found again out of two decades of prior work.\n\nSo we designed the obvious thing, a search over your own already approved proposal text that returns the actual paragraph with its source, its date and whether ABR was prime or sub. It finds and cites. It never writes, and it never touches a determination.\n\nThen we costed it. It lands between about $24,000 and $37,000 over five years, counting your own people's time at cost. It needs about 31 submissions a year carrying a past performance section to break even, which is one every 1.7 weeks, and we genuinely don't know whether that is a lot or a little for you. Our middle case pays back in month 57 of 60, and what it recovers is hours, not cash, unless those hours go back onto billable work.\n\nSo we're not asking you to buy it. We couldn't verify how many task orders you receive, whether your archive is indexable, or whether any of this irritates you.\n\nThe ask is that you count. Below about 25 a year, don't build this, from us or from anyone.",
+  "found": {
+    "title": "You are already doing this and the page a new client meets first doesn't say so.",
+    "lede": "The most useful finding is one you can act on this week without spending anything.",
+    "body": "Your Remote Sensing and GIS Mapping page lists \"Machine learning modeling of vegetation abundance and types\", alongside imagery processing from Landsat, WorldView, Sentinel, lidar, and aerial and UAV photography. Your Biostatistics page lists \"Machine Learning analyses\" among your telemetry methods. Your Data Management page offers database design, mobile data collection apps, custom web applications, and Access, SQL Server and PostgreSQL expertise. You host software written for the U.S. Geological Survey Alaska Science Center.\n\nYour homepage says \"We incorporate leading edge technologies into every project we undertake.\" That is the whole technology claim on the page a prime, a teaming partner or a new client meets first.",
+    "callout_big": "36 named people, two of them in capture",
+    "callout_note": "Your public staff directory lists 36 people across Management, Senior Scientists, Research Biologists, Field Technicians and Project Support. Management holds a Director of Business Development and Project Support holds one Proposal and Marketing Coordinator, so capture is staffed. What the open posting shows is that proposal preparation reaches into a third job description as well. That 36 is a floor for permanent staff rather than a headcount, because seasonal crew aren't listed.",
+    "body_2": "For contrast, SWCA markets \"Deep Learning and GeoAI\" as a named capability, and 61 North Environmental, another Alaska shop, markets a cloud hosted project database more concretely than your site markets any of the above. Neither is a measured outcome. Both are marketing copy, which is the point. You're doing the work and describing it less specifically than firms describing more than they show."
+  },
+  "costing": {
+    "title": "Proposal work sits with a very small number of people",
+    "lede": "This section is our reading of your structure, and we want to be precise about what is evidence and what is inference.",
+    "body": "Your Senior NEPA Specialist posting asks the hire to \"Contribute to the preparation of proposals for environmental assessment work and expand our client base by keeping informed on new projects in Alaska.\" It is open until filled and accepts Anchorage, Fairbanks or remote. Your careers page says you do most of your ecological research in house, including permit applications and environmental assessments.\n\nWhat the posting shows is that proposal preparation reaches past your capture staff into a senior technical role as well. You hold four live federal vehicles running to June 2029, November 2029, April 2029 and July 2028, and every task order needs past performance narratives, project descriptions and resumes assembled again.",
+    "callout_big": "This part is inference, not your complaint",
+    "callout_note": "Nothing we read verifies that ABR experiences proposal assembly as a problem. What we verified is that proposal duty sits inside a senior technical job description alongside a staffed capture function. That is structural evidence and it is still our reading, not your words.",
+    "body_2": "There is a second cost that exists whether or not anyone builds anything. Our reading is that past performance in a federal submission functions as a representation to the government, so a narrative describing a closed contract, a departed person, or subcontract work described as prime is a different kind of problem from a stale paragraph. We aren't your counsel and you shouldn't take our word for how serious it is. Your earliest vehicle comes up in July 2028, and a recompete is argued from narratives assembled out of work happening now."
+  },
+  "opportunity": {
+    "title": "One search box removes four steps from a submission and leaves the fifth alone.",
+    "lede": "Before any architecture, here is the actual change to an actual afternoon.",
+    "outcome_body": "Walk the past performance section of one task order. The Today column is how we would assume it runs, not something we watched, and it is the first thing an audit would correct.",
+    "before_after": {
+      "headline": "Assembling the past performance section of one task order",
+      "before_title": "Today, as we would assume it",
+      "after_title": "After",
+      "note": "The Today column is our assumed baseline rather than an observed one. The last row is identical on purpose. The technical approach is the part a client is buying and the part your name is signed to, so nothing in this design goes near it. A tool that offered to write it would be a tool we would not ship.",
+      "rows": [
+        {
+          "today": "Search email and the file share for the last submission that covered similar work.",
+          "after": "Type the scope into one search box and read what comes back.",
+          "gone": true
+        },
+        {
+          "today": "Open several near identical drafts to work out which one was actually submitted.",
+          "after": "Only the canonical as submitted version is returned, because the duplicates were resolved once during the audit.",
+          "gone": true
+        },
+        {
+          "today": "Check by memory whether that contract is still live and whether the write up is still current.",
+          "after": "Every result carries its date, its source document and whether ABR was prime or sub, and a stale one is flagged before it can be copied.",
+          "gone": true
+        },
+        {
+          "today": "Retype the contract number from a prior cover page.",
+          "after": "The contract number comes from a table that was entered once and tested, so 140F0S23A0028 keeps its letter S.",
+          "gone": true
+        },
+        {
+          "today": "A senior scientist writes the technical approach.",
+          "after": "A senior scientist writes the technical approach.",
+          "gone": false
+        }
+      ]
+    },
+    "after_body": "Nothing in that column is generated text. The tool finds, cites and flags. A person writes every word that goes to a contracting officer, and every determination keeps the signature it carries today."
+  },
+  "build": {
+    "title": "The build is a search box over your own text, and phase one has no model in it.",
+    "lede": "Small, boring, and sitting on infrastructure you already have the skills for.",
+    "plain_parts": "A copy of your own past proposals. A duplicate finder that groups the near identical drafts so one pass through the audit can mark which one actually went out. A tag on every piece saying where it came from, when, and whether you were prime or sub. A table holding 140L0624A0027, 47QRAA20D0010, 1305M424D0030 and 140F0S23A0028 with their dates. A search box. A test set of real past solicitations, so we can prove whether the search is any good.",
+    "what_it_does": "If nothing genuinely matches, it says no close match found and returns nothing. It never offers the nearest wrong answer, and that behaviour is a test rather than a promise. It can run on PostgreSQL, which your Data Management page lists as in-house expertise, and phase one contains no model at all.",
+    "feasibility": "For every idea we asked the cheapest question first. Can a plain rule do this, and if not can a plain search over your own text do it. Three ideas died, and only one of them at the model question.\n\nHaving a machine draft the assessment sections was the biggest prize and we're declining to sell it, because we can't state a bar it would have to clear. A federal NEPA search tool launched in late 2024 is in beta with over 500 users and the page describing it publishes no performance number. A federal benchmark of machine drafting, reported by Tech Xplore, describes promising results with no score and says the systems still need human oversight. If those two won't put a number in print with federal budgets behind them, we're not going to invent one for you.\n\nA validation pipeline for your post season data crunch needs no AI whatsoever. Those are plain rules, you have the bench, and the list is in the roadmap at no charge.\n\nAn autonomous agent owning the proposal pipeline dies on arithmetic. Fifteen to twenty steps at 90 percent per step lands near 12 to 21 percent end to end unattended.\n\nTwo places AI doesn't belong in what remains. Not on any determination or species conclusion. A peer reviewed test of the three classifiers the Fish and Wildlife Service approves used hand picked calls to give a deliberate best case, and still found all three \"struggled with accuracy for some species, obtaining metrics well below what is advertised\". Sensitivity on the common, acoustically distinct species ran 0.88 to 0.97 in the two programs we checked, and as low as 0.01 for northern long eared bat across all three. They are weakest exactly where the regulatory stakes are highest, which is why no determination goes near this build. And not on contract numbers, because a model that is 99 percent right on a contract number is 100 percent wrong on the proposal it lands in.",
+    "build_vs_buy": "Buy the database, the text extraction and the duplicate detection maths, because all three are commodities and PostgreSQL is already in your skill set. We didn't survey the proposal content products your capture staff may already know, so read this as our reading rather than a market search. The piece we would expect a general product to carry least well is your role on each contract, prime or sub, because that is specific to your history rather than to proposals in general. The application is deliberately thin, in the same idiom your bench already writes, and the source is yours.",
+    "architecture": {
+      "nodes": [
+        {
+          "id": "user",
+          "label": "Proposal coordinator and Management",
+          "kind": "user"
+        },
+        {
+          "id": "archive",
+          "label": "Your proposal archive",
+          "kind": "external"
+        },
+        {
+          "id": "ingest",
+          "label": "Audit and tagging",
+          "kind": "build"
+        },
+        {
+          "id": "corpus",
+          "label": "Your text, in one database",
+          "kind": "data"
+        },
+        {
+          "id": "register",
+          "label": "Contract number table",
+          "kind": "data"
+        },
+        {
+          "id": "finder",
+          "label": "Cited search",
+          "kind": "build"
+        },
+        {
+          "id": "rerank",
+          "label": "Model layer, gated",
+          "kind": "ai"
+        }
+      ],
+      "edges": [
+        {
+          "from": "archive",
+          "to": "ingest"
+        },
+        {
+          "from": "ingest",
+          "to": "corpus"
+        },
+        {
+          "from": "corpus",
+          "to": "finder"
+        },
+        {
+          "from": "corpus",
+          "to": "rerank"
+        },
+        {
+          "from": "register",
+          "to": "finder"
+        },
+        {
+          "from": "finder",
+          "to": "user"
+        }
+      ],
+      "caption": "Read left to right. Two boxes are new work, the audit and the search. The rest is yours already. The model sits beside the search rather than inside it, switched off, and only switches on if it beats the plain search on a test set your own coordinator labels."
+    }
+  },
+  "roi": {
+    "title": "The conservative case does not clear, so we are not asking you to fund this",
+    "lede": "Every number below is computed from the drivers in the table and the inputs in the note under it. All of them are assumptions, not measurements.",
+    "lede_body": "We modelled three cases over five years, counting your own staff hours as a real cost. Holding every conservative assumption fixed and varying only the submission count, it breaks even at about 31 a year, one every 1.7 weeks. We genuinely don't know whether that is a lot or a little for you, which is the entire reason the ask is a count.\n\nWhat the model recovers is hours, not cash. Hours become money only if the time goes back onto billable work or lets you take a task order you would otherwise pass. For a firm that bills its scientists that conversion is available, but it is yours to make and we're not going to assume it. If the hours disappear into the week, the return is zero at every column.\n\nOur middle case recovers its cost at 106 percent but pays back in month 57 of 60. A payback past two years usually means the tool isn't the right answer, and this one is past two years even in the middle case.",
+    "table_caption": "Five year model, computed from the drivers below.",
+    "table_head": [
+      "",
+      "Conservative",
+      "Most likely",
+      "Aggressive"
+    ],
+    "table": [
+      {
+        "label": "Past performance bearing submissions a year",
+        "cells": [
+          "6",
+          "10",
+          "16"
+        ],
+        "mark": "assumed"
+      },
+      {
+        "label": "Senior and coordinator hours per submission spent finding",
+        "cells": [
+          "6.0",
+          "10.0",
+          "14.0"
+        ],
+        "mark": "assumed"
+      },
+      {
+        "label": "Share of that finding time removed",
+        "cells": [
+          "40%",
+          "55%",
+          "70%"
+        ],
+        "mark": "assumed"
+      },
+      {
+        "label": "Rework hours per submission from working off a superseded version",
+        "cells": [
+          "1.0",
+          "1.5",
+          "2.0"
+        ],
+        "mark": "assumed"
+      },
+      {
+        "label": "Cost avoided per stale past performance event, and how often",
+        "cells": [
+          "$6,000 at one in four years",
+          "$9,000 at one in three years",
+          "$14,000 at one in two years"
+        ],
+        "mark": "assumed"
+      },
+      {
+        "label": "Five year cost, including your own hours",
+        "cells": [
+          "$36,600",
+          "$29,820",
+          "$23,575"
+        ],
+        "mark": "modelled"
+      },
+      {
+        "label": "Five year return",
+        "cells": [
+          "$8,861",
+          "$31,696",
+          "$91,661"
+        ],
+        "mark": "modelled"
+      },
+      {
+        "label": "Share of cost recovered",
+        "cells": [
+          "24%",
+          "106%",
+          "389%"
+        ],
+        "emphasis": true,
+        "mark": "modelled"
+      },
+      {
+        "label": "Payback",
+        "cells": [
+          "none in five years",
+          "month 57",
+          "month 19"
+        ],
+        "emphasis": true,
+        "mark": "modelled"
+      }
+    ],
+    "table_note": "Marks: assumed is a number we chose and named, modelled is computed from those drivers. No row is verified, which is the honest state of a business nobody has measured yet. The remaining inputs, so the figures rebuild. The finding hours split evenly between senior and coordinator, costed at $110 senior, $75 coordinator and $95 for rework, all fully loaded cost rather than billable rates. The removal share applies to the rework hours as well as the finding hours. The stale event line credits 35, 50 and 60 percent of that exposure as avoided rather than all of it. The build is priced at $18,000, $16,000 and $14,000, with $5,300, $3,900 and $2,900 of your own people's time on top and a run cost of $1,600, $1,100 and $800 a year across 4.5 of the five years, then 20, 20 and 15 percent contingency on the whole stack. Year one is discounted to a 25, 30 and 40 percent adoption ramp. For the payback row, the contingency rides on whatever line it covers, so the build cost, your own hours and the contingency on those land up front, while the run cost and the contingency on it accrue monthly from month seven, matching a mid year go live. Two things when reading across. The conservative column counts task orders against your four vehicles only, the low end on purpose. Cost falls rightward because each column pairs a different volume with a different build price, so these are three whole scenarios rather than one at three volumes, and the 31 break even holds the conservative column's cost fixed and varies volume alone.",
+    "payback_big": "31 a year",
+    "payback_range": "the yearly submission count at which this would break even under the conservative column",
+    "base_rate_note": "RAND cites estimates that more than 80 percent of AI projects fail, and the MIT NANDA survey put about 95 percent of enterprise pilots at no measurable profit and loss impact. Both are directional with denominators that are argued over, so we treat them as a prior rather than a statistic. Four things would put this build in the minority that pays: it sits inside a submission someone is already assembling, a plain search ships first and any model layer has to beat it, the bar is written before anything is built, and a wrong answer costs a click rather than a finding. None of those matter if the volume isn't there.",
+    "value_owner": "If this were built, the number would belong to you as President, and the day to day measurement to whoever holds the proposal coordinator role, because that is the only person who can report actual hours per submission. Ninety days after go live we would put actual hours next to the six the break even rests on, and if it is lower, the case is smaller and we would say so. That also names the risk. Adoption would rest on one person, which is the most likely quiet way a tool like this returns nothing."
+  },
+  "roadmap": {
+    "title": "The first three steps cost you nothing and two of them are written below.",
+    "lede": "Ordered by what costs least and settles most. The first three need nothing from us.",
+    "body": "The first two items are yours to take now at no cost. The third is the count. Everything after it waits on what the count says.",
+    "now": [
+      {
+        "item": "Replace the technology paragraph on your homepage. Here is a draft built only from things you already publish, yours to use or ignore. \"ABR pairs Alaska field science with an in house technical bench. We build our own databases, mobile field collection apps and web applications, we process satellite, lidar and UAV imagery, we apply machine learning to vegetation mapping and animal telemetry, and we have written software for the U.S. Geological Survey Alaska Science Center with support from the National Park Service and the Fish and Wildlife Service.\"",
+        "metric": "Ten minutes to paste it in. The page a prime or a new client meets first then names what you actually do."
+      },
+      {
+        "item": "Count every submission over the last 24 months that carried a past performance section, of any kind, and note how each one arrived. Then halve it. That is your yearly rate. While you are counting, note roughly how long the finding took on the last two, because two rough numbers replace the biggest assumption in our table.",
+        "metric": "Under 25 a year, put this in a drawer. Between 25 and 31, it turns on how long finding really takes, because 31 is the break even if it takes six hours a submission and 25 is the break even if it takes about eight. Over 31 and it is worth a conversation. Our conservative column counted only task orders against your four vehicles, which is the low end on purpose."
+      },
+      {
+        "item": "Give this rule list to your own bench for the post season crunch. Range checks, every numeric field inside biologically plausible bounds and every date inside the field season. Taxonomy validation, every species code against the current agency list with retired codes rejected rather than warned. Coordinate bounds, every point inside the project polygon and inside Alaska. Standard conformance, required fields present and file and column naming checked against the agency's published schema before anything leaves. No AI in any of it, and no charge.",
+        "metric": "Records failing agency conformance at delivery, against a baseline you take yourself."
+      }
+    ],
+    "next": [
+      {
+        "item": "Only if the count clears, a two week audit of the proposal archive, deduplicated to one canonical version, access controlled on rate and teaming material, and tagged with where each piece came from. It is allowed to conclude the archive is already tidy.",
+        "metric": "Every narrative carrying a source, a date and a prime or sub role, and zero rate or teaming documents in the general index."
+      },
+      {
+        "item": "Only after that, the plain search, with the test set built before it rather than after.",
+        "metric": "Of the solicitations your coordinator labels, the paragraph a person would actually have used shows up in the first ten results on at least eight in ten, plus zero wrong answers offered when nothing matches. Your coordinator sets that eight before the test runs, not us."
+      }
+    ],
+    "later": [
+      {
+        "item": "A model layer over the same text, only if it beats the plain search on the same test set. A tie counts as a loss.",
+        "metric": "The same first ten results measure, beating the plain search by a margin agreed before the test runs."
+      },
+      {
+        "item": "Having a machine draft assessment sections. Reopened only when a published performance number exists somewhere in this field, or when you have measured your own drafting baseline.",
+        "metric": "The reopen condition is the metric. We won't invent a target in its place."
+      },
+      {
+        "item": "Automated detection on survey imagery. Not now, because nothing tells us you experience reviewing imagery as a problem. The strongest work we found is a preprint rather than a peer reviewed paper, and it ran over an Alaska Department of Fish and Game caribou census. Fish and Game is already your client on the telemetry database.",
+        "metric": "A statement from you that it is worth spending on, before any target is set."
+      },
+      {
+        "item": "Four smaller ones we're not proposing: search across your own publications, templating for maps and figures, validation at the point of field capture, and editorial consistency checking. None needs AI and all sit on your own bench.",
+        "metric": "Each against a baseline you take first."
+      }
+    ],
+    "gates": "The first gate can end this and it is meant to. Below the drawer line above, the build doesn't pay and nobody should build it, us included. If the archive turns out already organised, the scope collapses and we would say so the moment we found it. The audit is priced before it starts, and a stop finding in the first week halves it. Your November post said the team would perform rigorous data QA and deliver datasets that fall, and nothing here should run across that window.",
+    "need_from_you": "For the ask on this page, the count and two rough timings, both out of your own records. If it went further, the hardest dependency is your coordinator labelling 30 to 50 past solicitations, roughly 6 to 10 hours, and there is no substitute for it."
+  },
+  "honest": {
+    "title": "Four things could make us wrong, and the volume one decides everything.",
+    "lede": "Four things, and we would rather raise them than have you find them.",
+    "body": "We couldn't verify your task order volume, and it is the single number that decides whether any of this pays. Four live vehicles proves standing, not throughput. That is why the ask is a count rather than a contract.\n\nWe couldn't verify that your proposal archive exists in a form anything could index. If it is a decade of scanned image PDFs the build has no smaller version. If it is already organised, the work collapses to nearly nothing. The audit that would find out is paid work whose first possible finding is that we should stop, and a stop in week one halves it.\n\nWe couldn't verify that any of this irritates you. We inferred the shape from a job posting and a staff directory, and a study written from outside can't see what already works. Which is why nothing here asks you to spend anything, and why the one question we're asking is one you can answer out of your own records without us in the room.\n\nAnd you could build this yourselves. You list PostgreSQL expertise, you build custom web applications, you ship software to federal agencies, and the senior scientist whose address is on the USGS software you host is on your own staff list. We won't argue capability, because we would lose. The only honest argument for outside hands is if your internal software time is already committed, to client work and to standing obligations like the caribou telemetry database you update daily for Fish and Game, and you are the only one who knows whether it is. One caution if you go that way, and it argues against us as much as for us. The same MIT survey behind the 95 percent above also reports that buying from specialist vendors or partnering succeeds about 67 percent of the time, well ahead of building inside. Same caveat as before, it is a prior and not a statistic. So buy the boring parts anyway, the database, the text extraction, the duplicate detection. Build only the audit and the roles, because that is specific to your history rather than to proposals in general. And if you already run a proposal content tool, the audit may be the whole job and the search box is moot, which is the same drawer line the rest of this applies to us."
+  },
+  "next_step_title": "The next step is a number, not a meeting",
+  "next_step": "Count every submission over the last 24 months that carried a past performance section, then halve it for your yearly rate, and compare it against the bands in the roadmap. Under the drawer line, take the two free items and put the rest away. Above it we would be glad to talk about the audit. Either way we would like to know what the number turned out to be.",
+  "sources": [
+    {
+      "claim": "Adrian Gall, President and Director of Research",
+      "url": "https://www.abrinc.com/about/offices/fairbanks/adrian_gall/"
+    },
+    {
+      "claim": "ABR leadership",
+      "url": "https://www.abrinc.com/about/leadership/"
+    },
+    {
+      "claim": "Senior NEPA Specialist posting",
+      "url": "https://www.abrinc.com/careers/nepa-specialist"
+    },
+    {
+      "claim": "Four federal contract vehicles and expiry dates",
+      "url": "https://www.abrinc.com/clients/government-agencies"
+    },
+    {
+      "claim": "Staff directory, 36 named people",
+      "url": "https://www.abrinc.com/about/staff"
+    },
+    {
+      "claim": "Machine learning vegetation modeling, UAV imagery",
+      "url": "https://www.abrinc.com/services/remote-sensing-and-gis-mapping"
+    },
+    {
+      "claim": "Machine Learning analyses in telemetry",
+      "url": "https://www.abrinc.com/services/biostatistics-and-modeling"
+    },
+    {
+      "claim": "Homepage technology sentence and mission",
+      "url": "https://www.abrinc.com/"
+    },
+    {
+      "claim": "In house databases, mobile apps, PostgreSQL",
+      "url": "https://www.abrinc.com/services/data-management-and-programming"
+    },
+    {
+      "claim": "Software written for the USGS Alaska Science Center",
+      "url": "https://sealog.abrinc.com/"
+    },
+    {
+      "claim": "Research done in house",
+      "url": "https://www.abrinc.com/careers"
+    },
+    {
+      "claim": "Post season data QA and season volume",
+      "url": "https://www.abrinc.com/post/alaska-aim"
+    },
+    {
+      "claim": "Caribou telemetry managed daily, four herds",
+      "url": "https://www.abrinc.com/experience/projects/management-of-caribou-collar-telemetry-data"
+    },
+    {
+      "claim": "USFWS approved bat ID software and its failure mode",
+      "url": "https://www.fws.gov/media/automated-acoustic-bat-id-software-programs"
+    },
+    {
+      "claim": "Peer reviewed evaluation of those classifiers",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11146688/"
+    },
+    {
+      "claim": "PNNL PermitAI, 500 users, no metrics",
+      "url": "https://www.pnnl.gov/projects/permitai/ai-applications"
+    },
+    {
+      "claim": "Federal benchmark of AI drafting",
+      "url": "https://techxplore.com/news/2026-06-machine-readable-dataset-environmental-tasks.html"
+    },
+    {
+      "claim": "SWCA Deep Learning and GeoAI",
+      "url": "https://www.swca.com/services/technology"
+    },
+    {
+      "claim": "61 North project database",
+      "url": "https://www.61northalaska.com/services"
+    },
+    {
+      "claim": "RAND, root causes of failure for AI projects",
+      "url": "https://www.rand.org/pubs/research_reports/RRA2680-1.html"
+    },
+    {
+      "claim": "Arctic Village wetlands post, undated",
+      "url": "https://www.abrinc.com/post/arctic-village-wetlands"
+    },
+    {
+      "claim": "Third party job board posting, March 2021, used only as the demonstration's stale example",
+      "url": "https://pacificseabirdgroup.org/news/job-opening-field-technician-wildlife-ak/"
+    },
+    {
+      "claim": "MIT NANDA survey of enterprise AI pilots, as reported",
+      "url": "https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/"
+    },
+    {
+      "claim": "Wildlife detection over an Alaska caribou census, arXiv preprint",
+      "url": "https://arxiv.org/html/2606.13911"
+    },
+    {
+      "claim": "Publications listed from 2000 to 2026, older ones by request",
+      "url": "https://www.abrinc.com/about/publications"
+    }
+  ]
+}
