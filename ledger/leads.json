@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Memory of record for dedupe. Authoritative, git-backed, always available. Supabase leadflow.leads is dual-written when reachable but is no longer required to run.",
-  "updated": "2026-07-29",
+  "updated": "2026-07-30",
   "leads": [
     {
       "company": "Goldbelt, Incorporated",
@@ -114,6 +114,27 @@
       "run_date": "2026-07-23",
       "why_picked": "inbound scan opt-in",
       "source": "reconciled from Supabase 2026-07-29"
+    },
+    {
+      "company": "ABR, Inc.",
+      "domain": "abrinc.com",
+      "segment": "other labor-scarce or paperwork-heavy Alaska SMBs",
+      "location": "Fairbanks and Anchorage, Alaska",
+      "status": "drafted",
+      "run_date": "2026-07-30",
+      "fit_score": 23,
+      "why_picked": "Employee-owned environmental research and consulting firm. Won a four-way tie at fit_total 23 on the substance of the verified contact path, a named president and a public business email both on fetched pages at a firm small enough that she reads her own mail.",
+      "contact_name": "Adrian Gall, Ph.D.",
+      "contact_role": "President and Director of Research",
+      "contact_email": "agall@abrinc.com",
+      "contact_source": "verified on two independent ABR pages, her own bio page and the Senior NEPA Specialist posting. Not pattern-derived.",
+      "study_path": "runs/2026-07-30/abr-inc/field-study.html",
+      "live_link": "https://alaskaaihq.com/awesomeproposal/abr-inc/",
+      "outcome": "Study shipped, build NOT recommended at observable volume. The conservative ROI case does not clear and the study says so in its section heading. Break-even needs about 31 past-performance-bearing submissions a year. The ask is that ABR count their own submissions, with the line named below which nobody should build it including us. Two things handed over free, a drafted homepage paragraph and a post-season data validation rule list.",
+      "recommended_build": "A cited search and assembly tool over an audited corpus of ABR's own approved proposal text, deterministic search shipped first as the baseline any model layer must beat. Phase one contains NO model. It retrieves and cites, code assembles, a human writes, and it never touches a determination.",
+      "roi_summary": "Computed in scripts/roi_math.py, never narrated. Conservative $36,600 cost, $8,861 return, 24 percent recovered, no payback in five years. Most likely $29,820, $31,696, 106 percent, payback month 57. Aggressive $23,575, $91,661, 389 percent, payback month 19. Break-even 31.1 submissions a year. NO ROW MARKED VERIFIED, which is the honest state of a business nobody has measured.",
+      "gmail_draft_id": "r-1726211984517643426",
+      "notes": "study-critic took NINE rounds to ship. It caught a fabricated 96-to-99-percent statistic that does not exist in its cited paper, an unread buy-versus-build multiple, an architecture diagram whose renderer labelled our own work as the prospect's, and a demo broken by a one-word edit. Two machine fixes were committed, build_study_page.py and FIELD_STUDY_SPEC.md. Known deviation: the page runs about 4,470 words against the spec's 2,000 to 3,000 budget, a 49 percent overrun, adjudicated across review rounds and accepted."
     }
   ]
 }
