@@ -199,6 +199,14 @@ knowledge/OUTREACH_CRAFT.md to the letter, no em or en dashes, no colons, no
 semicolons, easy on commas, zero AI tells, zero marketer cheese. If a message
 could have been sent to any other company, it failed.
 
+TWO WORD-LEVEL RULES BIND EVERY ARTIFACT THIS ROUTINE PRODUCES, not just the email.
+The study, the demo, the carrier email, every visible string.
+- NEVER "cannot". Always "can't". No exceptions anywhere, ever.
+- NEVER open a sentence with "And" or "But".
+Both were set by the maintainer on 2026-07-31. scripts/study_qa.py enforces them in
+code, so a violation fails the readability gate rather than relying on anyone to
+notice it.
+
 ## THE DATABASE
 
 Schema of record is db/schema.sql. Three tables in the leadflow schema, leads (the
