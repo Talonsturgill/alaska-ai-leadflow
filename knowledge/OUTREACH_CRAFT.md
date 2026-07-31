@@ -84,6 +84,18 @@ is two to three weeks of work" is a memo. "It's two to three weeks of work" is a
 person talking. Writing every verb out long reads as careful, and careful reads as
 AI. The punctuation rules above are strict precisely so the prose can be loose.
 
+"CANNOT" IS BANNED OUTRIGHT. Always "can't". No exceptions, not for emphasis, not
+for rhythm, not in a quotation we are paraphrasing, not anywhere. It is the single
+most formal word that still slips past the contraction rule, and it is the one that
+most reliably makes a sentence sound written rather than spoken. If a sentence
+seems to need the weight of "cannot", the sentence is the problem, so rewrite it.
+
+NEVER START A SENTENCE WITH "AND" OR "BUT". Not in the email, not in the study, not
+in a heading, not anywhere. Both are the sound of a thought that was bolted on after
+the fact, and a cold reader hears the bolt. Join it to the sentence before it, or
+make it a real sentence with a real subject. The fix is almost always a comma or a
+full stop, and the result is always tighter.
+
 ## The CTA (small and reply-first)
 
 A first touch does NOT ask for a call. Too much for a cold open. The study is

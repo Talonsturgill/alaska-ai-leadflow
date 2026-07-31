@@ -1,0 +1,312 @@
+{
+  "meta": {
+    "company": "Calista Corporation",
+    "domain": "calistacorp.com",
+    "run_date": "2026-07-31",
+    "rule": "THIS FILE IS THE ONLY THING ANYTHING DOWNSTREAM MAY CITE. Every quotation here is the EXACT page string. Do not repolish, retrim, or re-paraphrase any of it. The fact-checker found a systematic quote-polish drift in the research package and every one of these pages is one click from the prospect."
+  },
+  "contact": {
+    "email": "tleonard@calistacorp.com",
+    "name": "Thom Aparuk Leonard",
+    "title": null,
+    "title_rule": "NO TITLE IS PUBLISHED. Neither the executive page nor his personnel page prints one. The description that IS published: he 'oversees Calista's daily communications activities' and 'directs Shareholder services'. The research room's 'VP of Corporate Affairs' was UNSOURCED and its corroboration was FALSE. Use the description or nothing.",
+    "verbatim": "If you would like more information or to schedule an interview with Calista Corporation, please contact communications manager Thom Leonard at 907-868-2426 or tleonard@calistacorp.com.",
+    "source_url": "https://www.calistacorp.com/press_release/andrew-guy-reinstated-as-presidentceo-effective-immediately/",
+    "page_date": "2012-11-07",
+    "person_still_present": "https://www.calistacorp.com/titles/executive/",
+    "confidence": "medium"
+  },
+  "verified_claims": [
+    {
+      "id": "C1",
+      "claim": "Calista Corporation ranked No. 6 on Alaska Business Magazine's 2025 Top 49ers with 2024 gross revenue of $1,089,783,000, up from $968,700,000 in 2023, and 4,250 employees worldwide / 1,020 statewide.",
+      "supporting_text": "Rank 6; 2024 Revenue $1,089,783,000; 2023 Revenue $968,700,000; Employees Worldwide 4,250; Employees Statewide 1,020",
+      "url": "https://digital.akbizmag.com/issue/october-2025/2025-top-49ers/",
+      "note": "Self-reported list, not audited financials. Cite it as such."
+    },
+    {
+      "id": "C2",
+      "claim": "Calista has more than 39,500 Alaska Native Shareholders, approximately 20,000 of whom live in the Yukon-Kuskokwim Region.",
+      "supporting_text": "more than 39,500 Alaska Native Shareholders, with approximately 20,000 living throughout our ancestral Homelands in the Yukon-Kuskokwim Region",
+      "url": "https://deltadiscovery.com/calista-testimony-at-western-alaska-disaster-related-field-hearing/",
+      "note": "Andrew Guy testimony, US Senate Committee on Indian Affairs field hearing, Bethel, 2026-05-06."
+    },
+    {
+      "id": "C3",
+      "claim": "Andrew Guy on the Typhoon Halong response.",
+      "supporting_text": "coordinated with Tribal governments, village corporations, local leaders, state agencies, nonprofits, and federal partners / used our regional relationships and logistical capacity to help connect communities with immediate relief",
+      "url": "https://deltadiscovery.com/calista-testimony-at-western-alaska-disaster-related-field-hearing/"
+    },
+    {
+      "id": "C4",
+      "claim": "Calista publishes a Shareholder Address Unknown List. NO COUNT IS PUBLISHED ON THE PAGE. Counted in code on 2026-07-31: 127 entries.",
+      "supporting_text": "Updated July 1, 2026 / A list of Shareholders unable to receive distribution checks, voting materials or newsletters by mail.",
+      "url": "https://www.calistacorp.com/shareholders/shareholder-address-unknown-list/",
+      "note": "COUNTING METHOD, written down because two earlier hand counts were both wrong. The page was fetched on 2026-07-31 and parsed. An entry is one list item matching the pattern 'Surname, Firstname (Village)'. That returned 127 entries across the entire page, 127 of them unique, with zero non-matching list items in the roster region, zero duplicates and no pagination. The earlier hand counts of 213 and 217 recorded in the research package are SUPERSEDED and must not be used. NEVER print 163, which was the original research-room figure and is also wrong."
+    },
+    {
+      "id": "C5",
+      "claim": "Calista's own shareholder distributions page contrasts direct deposit against rural mail.",
+      "supporting_text": "Direct deposit: The same day as the distribution, but verify with your individual bank / Mail: 3 weeks or longer, especially in rural Alaska, from the day of distribution.",
+      "url": "https://www.calistacorp.com/shareholders/shareholder-distributions/",
+      "note": "THIS IS THE ONLY PERMISSIBLE WORDING."
+    },
+    {
+      "id": "C6",
+      "claim": "Calista's annual meeting page on online voting.",
+      "supporting_text": "In 2026, a record-breaking 88% of Shareholders voted online. / The average Shareholder completes online voting in under 4 minutes / In 2026, 1 ton of paper was saved by Shareholders who opted to receive Annual Meeting materials electronically",
+      "url": "https://www.calistacorp.com/shareholders/annual-meeting/",
+      "note": "THE SAME PAGE also states 'On average, only 5 in 10 Shareholders vote in the Annual Meeting'. The 88% almost certainly means 88% of votes CAST were online, not 88% of the shareholder base. QUOTE THE SENTENCE, NEVER THE INTERPRETATION. No vote count is published."
+    },
+    {
+      "id": "C7",
+      "claim": "Calista's Land page routes all land and gravel business through an email inbox and a phone number, with no online application form anywhere on the page. Landholdings are 6.5 million acres, 264,000 acres fee estate, 4,000 acres under ANCSA Section 14(h)(1).",
+      "supporting_text": "Before excavating any material from Calista's subsurface land, the developer needs to enter into a material sale agreement (MSA) with Calista. / Calista_Land@calistacorp.com / 907-275-2800",
+      "url": "https://www.calistacorp.com/land/"
+    },
+    {
+      "id": "C8",
+      "claim": "Calista's Land department ran three concurrent federal proceedings in one bimonthly column, March/April 2026.",
+      "supporting_text": "comments due March 30, 2026 / docket # DOI-2025-0170 / Risk of collisions with small aircraft / to set a Western Alaska chum bycatch limit of 45,000 chum / While this cap does not go far enough, Calista is encouraged by the Council's willingness to take concrete action",
+      "url": "https://www.calistacorp.com/news/land-in-focus-raising-our-voice-on-subsistence-issues/"
+    },
+    {
+      "id": "C9",
+      "claim": "Benefit Accountant II posting, live, reconciles benefits ledgers across every subsidiary.",
+      "supporting_text": "The Benefit Accountant II will reconcile Corporate and all subsidiaries group benefits General Ledger (GL) accounts. / This position will coordinate with HR Benefits when discrepancies are found in employee benefit coverage elections during the reconciliation process.",
+      "url": "https://builtin.com/job/benefit-accountant-ii/9656914",
+      "note": "Status line reads 'Reposted 8 Hours Ago'. There is NO evidence of a 3-month temp role and NO evidence two roles posted the same day. Do not use the 'throwing bodies at a backlog' framing."
+    },
+    {
+      "id": "C10",
+      "claim": "A Benefits Specialist role at Calista is live and has been reposted.",
+      "supporting_text": "Reposted 10 Days Ago",
+      "url": "https://builtin.com/job/benefits-specialist/9949680",
+      "note": "ONLY the repost status survives. The composite 'failure modes' list does not exist on the page. Do not build a thesis on it."
+    },
+    {
+      "id": "C11",
+      "claim": "The Shareholder Distributions Coordinator posting, live, describes hand-researched estate casework, a typing-speed requirement, rural travel and overtime.",
+      "supporting_text": "Research and calculate payments owed to deceased Shareholders and identify those that must be voided or stopped then redistributed to rightful heirs. / Evaluate bank reconciliation files, payment holds and releases and payment reissue, redistributions, and direct deposits. / Ability to accurately type at least 45 WPM and use keyboards and 10-key by touch. / Travel to rural Alaska as needed up to four times a year for a week at a time. / Although the standard work week is scheduled at 40 hours, overtime hours may be required to meet objectives and project deadlines.",
+      "url": "https://builtin.com/job/shareholder-distributions-coordinator/10325933",
+      "note": "THESE FIVE ARE THE ACTUAL PAGE STRINGS. All five previously-quoted versions were paraphrases."
+    },
+    {
+      "id": "C12",
+      "claim": "Shareholder Services runs a dedicated part-time receptionist separate from the corporate front desk, and prefers a Yup'ik speaker.",
+      "supporting_text": "a part-time position working four hours a day Monday through Friday, for a total of twenty hours a week / answer and route calls, greet visitors, handle mail and supplies, assist with data entry, scheduling, meeting logistics. / a fast-paced multi-tasking customer-service oriented environment. / Ability to speak Yupik strongly preferred.",
+      "url": "https://builtin.com/job/shareholder-services-receptionist/10075528",
+      "note": "Posted 24 Days Ago."
+    },
+    {
+      "id": "C13",
+      "claim": "Financial reporting runs across four named systems and a junior analyst is being hired to bridge them.",
+      "supporting_text": "Perform complex financial data analysis and develop reports using Deltek Business Intelligence (Cognos), MS Power BI, and OnBase reporting tools / Deltek Costpoint, Deltek Business Intelligence, Deltek Time & Expense, and Hyland OnBase",
+      "url": "https://builtin.com/job/business-intelligence-analyst/9459341"
+    },
+    {
+      "id": "C14",
+      "claim": "Calista's hiring preference for shareholders and descendants.",
+      "supporting_text": "Preference will be given to Calista Corporation (\"Calista\") Shareholders and their Descendants and spouses, and to Shareholders of other corporations created pursuant to the Alaska Native Claims Settlement Act, 43 U.S.C. 1601 et. seq.",
+      "url": "https://www.calistacorp.com/careers/",
+      "note": "EXACT, including the (\"Calista\") parenthetical. hr@calistacorp.com is on this page for accommodation requests only."
+    },
+    {
+      "id": "C15",
+      "claim": "Calista markets the ANC 8(a) procurement advantage on its own federal contracting page.",
+      "supporting_text": "GAO reports show the 8(a) program allows contracts to be signed with ANC-owned companies up to two months faster than 'full and open' bids. / Studies show that 8(a) contracts rarely exceed one-half of one percent in administrative costs, outperforming their full and open counterparts.",
+      "url": "https://www.calistacorp.com/federal-contracting/",
+      "note": "These are CALISTA'S OWN marketing claims about GAO, not GAO findings we verified. externalaffairs@calistacorp.com is on this page."
+    },
+    {
+      "id": "C16",
+      "claim": "Calista has a Chief Information Officer and a named executive bench.",
+      "supporting_text": "Chief Information Officer of Calista Corporation (Tim Strait) / Vice President of Land and Natural Resources (Tisha Kuhns) / General Counsel at Calista Corporation (Walter Featherly) / Chief Financial Officer at Calista (Kathy Moran)",
+      "url": "https://www.calistacorp.com/titles/executive/"
+    },
+    {
+      "id": "C17",
+      "claim": "Calista Brice leadership transition announced January 13, 2026.",
+      "supporting_text": "incoming Calista Brice president Stefan Rearden",
+      "url": "https://www.calistacorp.com/news/calista-corporation-announces-holding-line-leadership-transition/"
+    },
+    {
+      "id": "C18",
+      "claim": "The Alaska FiberOptic Project will bring buried fiber to seven Y-K villages by the end of 2027, at Anchorage and Fairbanks prices.",
+      "supporting_text": "construction is expected to start in the fall and be completed by December 31, 2027 / Home internet will be offered at the same prices and speeds offered in Anchorage and Fairbanks",
+      "url": "https://www.calistacorp.com/news/alaska-fiberoptic-project-moves-forward/",
+      "note": "Villages: Upper Kalskag, Lower Kalskag, Tuluksak, Akiak, Akiachak, Kwethluk, Napakiak. Partners include Doyon Limited, Gana-A 'Yoo Limited, Tanana Chiefs Conference, Alaska Communications."
+    },
+    {
+      "id": "C19",
+      "claim": "The AIRRAQ Network already delivers fiber to 13 Western Alaska communities.",
+      "supporting_text": "405-mile fiber-optic network / affordable 2.5 gig residential internet speeds and unlimited data plans / more than 11,800 people / more than $100 million / translates to 'string that tells the story'",
+      "url": "https://www.stocktitan.net/news/LBRDA/usda-grant-award-expands-airraq-broadband-fiber-project-to-three-v5bau4r9kvze.html",
+      "note": "GCI and Bethel Native Corporation. 13 communities is a FRACTION of the region's villages; the rest run on satellite. This is a live feasibility constraint for anything cloud-dependent."
+    },
+    {
+      "id": "C20",
+      "claim": "Koniag Government Services, a direct ANC peer, reports fielded production AI inside an Army procurement office.",
+      "supporting_text": "687,000 hours saved annually / $37 million yearly cost avoidance / DORA reducing a one-hour task to 2 minutes / 150+ automated workflows / J&A Jumpstarter and PWS Jumpstarter on Amazon Bedrock / 2026 ACT-IAC Innovation Impact Award from 120+ submissions",
+      "url": "https://aws.amazon.com/solutions/case-studies/us-army-koniag-gov-services/",
+      "note": "VENDOR-AUTHORED. No baseline or methodology published. NEVER usable as an expected result for Calista. CASPER, the AWS Generative AI Competency and Koniag AI Solutions were NOT verified and may not be cited."
+    },
+    {
+      "id": "C21",
+      "claim": "ASRC Federal, another ANC peer, has AI in production on NOAA financial management.",
+      "supporting_text": "AI/ML to examine data from prior spending cycles to predict future spending needs / leverages a commercially developed custom AI module / In the first couple of years of deployment, the system has identified tens of millions of dollars that had not yet been allocated due to complex planning practices.",
+      "url": "https://www.asrcfederal.com/asrc-federal-selected-by-noaa-to-provide-ai-enabled-financial-management/",
+      "note": "Dated 2026-04-22. Self-reported dollar outcome."
+    },
+    {
+      "id": "C22",
+      "claim": "Akima's AI language is future contract scope, not a fielded system.",
+      "supporting_text": "Akima companies will apply artificial intelligence and machine learning, digital engineering, open systems architectures, model-based systems engineering, and agile processes to support the acquisition, development, and sustainment of these capabilities.",
+      "url": "https://www.akima.com/mda-shield-idiq/",
+      "note": "2026-03-16. Note the tense."
+    },
+    {
+      "id": "C23",
+      "claim": "Yulista's capabilities page names five capability lines and markets no AI capability.",
+      "supporting_text": "Manufacturing, Integration, Modification / Maintenance Logistics / Aerospace Systems & Engineering / Cyber & Technology / Base Operations Support",
+      "url": "https://www.yulista.com/capabilities/",
+      "note": "FIVE lines, not eight. The only occurrence of 'AI' on the page is a partner company named 'AI Solutions'. DISCLOSE THAT so the prospect cannot catch us on it."
+    },
+    {
+      "id": "C24",
+      "claim": "A small Alaska environmental firm is already compressing multi-day inspections into hours.",
+      "supporting_text": "Inspections that used to take me several days, I can get done in a few hours. / For some of the document reviews, it used to take an hour. Now we can get a summary and get an answer really quickly.",
+      "url": "https://alaskacontractor.akbizmag.com/issue/spring-2025/technology-tools/",
+      "note": "Krista Scott, environmental scientist, Midnight Sun Environmental, Spring 2025 Alaska Contractor. The drone imagery and document review are MSE. The AI meeting transcription belongs to SafeLogic Alaska, a DIFFERENT company. Do not merge them."
+    },
+    {
+      "id": "C25",
+      "claim": "The most technology-forward large US builder runs its flagship AI program on 8 of 275 sites.",
+      "supporting_text": "RSW is one of just eight of the company's 275 active construction sites nationwide designated as a JOF site. / could take six to eight hours / the process can take as little as 10 to 15 minutes / Cary Greenwood, site AI engineer / about $1.2 billion",
+      "url": "https://www.gulfshorebusiness.com/development/how-ai-is-helping-build-rsws-12-billion-terminal-expansion/article_4f17fe9d-24dd-42c0-b13e-766421a0e727.html",
+      "note": "The 8-of-275 is the journalist's. The RFI time saving is Suffolk's own claim with no baseline."
+    },
+    {
+      "id": "C26",
+      "claim": "Tribal governments are deploying AI in the assist category with small honest numbers.",
+      "supporting_text": "92 users / 4,864 recordings processed / about 2 minutes saved per session / 40 minutes a day on a 20-patient schedule / roughly 30 minutes training / tribal code of over 1,700 pages",
+      "url": "https://fedtechmagazine.com/article/2025/09/tribalnet-2025-3-ways-tribal-nations-are-using-ai",
+      "note": "Cherokee Nation Health Services, Oracle Clinical AI Agent with ambient listening. Cherokee Nation legal agent is Microsoft Copilot-powered. Choctaw Nation's Zachary Harbort led AI-assisted digitization of elder interviews."
+    },
+    {
+      "id": "C27",
+      "claim": "Cherokee Nation's CIO on the data risk, which matters for any shareholder-records system.",
+      "supporting_text": "AI has so many capabilities that lead to exfiltration of your data that you really have to think about it differently. It is not just another technology.",
+      "url": "https://fedtechmagazine.com/article/2025/09/tribalnet-2025-3-ways-tribal-nations-are-using-ai",
+      "note": "Paula Starr. THIS EXACT WORDING ONLY."
+    },
+    {
+      "id": "C28",
+      "claim": "The federal agencies that regulate ANC land run AI on document triage only, with zero high-impact uses.",
+      "supporting_text": "In OMB's 2025 consolidated inventory, DOI is reported as having 247 publicly reported AI use cases, 129 deployed or piloted, and zero high-impact use cases as of April 13, 2026.",
+      "url": "https://laylahughes.substack.com/p/ai-in-federal-environmental-review",
+      "note": "FWS DocketScope deployed for public-comment triage. BLM CE Works announced 2026-01-29. CE Explorer announced 2025-06-05. USGS pilot for BOEM uses computer vision on aerial imagery."
+    },
+    {
+      "id": "C29",
+      "claim": "GAO has sanctioned a federal contractor for AI-fabricated citations in a bid protest.",
+      "supporting_text": "Most troubling, the misconduct continued after GAO explicitly warned the protester of the potential for sanctions if such misconduct persisted. / fact-checking and citation-checking are absolute necessities when utilizing AI or any of its subsets.",
+      "url": "https://www.smithcurrie.com/publications/common-sease-contract-law/",
+      "note": "Oready, LLC, B-423649, Sept. 25, 2025, three consolidated protests dismissed. Preceded by a warning in Raven Investigations, B-423447, May 7, 2025. DROP the 'first ever' superlative, it is not on the page. Correct URL: https://www.smithcurrie.com/publications/common-sense-contract-law/your-bid-protests-dismissal-was-not-a-hallucination-gao-loses-patience-with-blind-reliance-on-ai-assisted-legal-research/"
+    },
+    {
+      "id": "C30",
+      "claim": "A randomized controlled trial found experienced developers were slower with AI while believing they were faster.",
+      "supporting_text": "When developers are allowed to use AI tools, they take 19% longer to complete issues. / developers expected AI to speed them up by 24% / they still believed AI had sped them up by 20%",
+      "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+      "note": "16 experienced developers, 246 real issues, 2025-07-10. Authors explicitly caution results may not generalize to less experienced developers or other domains. USE FOR THE PRINCIPLE that self-reported time savings are not evidence, NOT as a claim that AI slows everyone down."
+    },
+    {
+      "id": "C31",
+      "claim": "The best-evidenced number for AI as an assist on a service desk is 14 percent, not a multiple.",
+      "supporting_text": "data from 5,179 customer support agents. Access to the tool increases productivity, as measured by issues resolved per hour, by 14% on average, including a 34% improvement for novice and low-skilled workers but with minimal impact on experienced and highly skilled workers.",
+      "url": "https://www.nber.org/papers/w31161",
+      "note": "Brynjolfsson, Li and Raymond, NBER w31161."
+    },
+    {
+      "id": "C32",
+      "claim": "AI project abandonment more than doubled in a year.",
+      "supporting_text": "The share of companies abandoning most of their AI initiatives jumped to 42%, up from 17% last year. / The average organization scrapped 46% of AI proof-of-concepts before they reached production. / a survey of more than 1,000 respondents in North America and Europe",
+      "url": "https://www.ciodive.com/news/AI-project-fail-data-SPGlobal/742590/",
+      "note": "S&P Global Market Intelligence, reported 2025-03-14. Note the DIRECTION: worse from 2024 to 2025, not better."
+    },
+    {
+      "id": "C33",
+      "claim": "GAO found federal agencies were not collecting lessons learned from AI acquisitions.",
+      "supporting_text": "Federal agencies reportedly more than doubled their use of artificial intelligence (AI) from 2023 to 2024. / GAO found the selected agencies were not yet systematically collecting lessons learned from AI acquisitions",
+      "url": "https://www.gao.gov/products/gao-26-107859",
+      "note": "GAO-26-107859, 2026-04-13, 13 AI acquisitions across DOD, DHS, GSA and VA."
+    },
+    {
+      "id": "C34",
+      "claim": "Nine in ten government contractors are using or planning AI, one in twenty call it mature, and nearly half cannot state the return.",
+      "supporting_text": "90% of respondents are now using, or planning to use, AI in at least one business function in 2026 / 45% of respondents report being unclear on the return on investment for leveraging AI / Only 38% of respondents reported measurable positive business impact tied to AI use",
+      "url": "https://www.prnewswire.com/news-releases/the-latest-deltek-clarity-industry-studies-highlight-ai-challenges-talent-strain-and-delivery-capacity-pressures-for-project-based-businesses-302769095.html",
+      "note": "Deltek Clarity 17th Annual GovCon Study, 917 respondents, released 2026-05-12; only 5% report fully developed AI maturity. The 38% figure is from the companion 47th Annual A&E study, 896 respondents. DO NOT claim 'generative AI adoption exceeds 90 percent' for GovCon, that was not confirmed."
+    },
+    {
+      "id": "C35",
+      "claim": "Klarna replaced frontline support with AI, published strong aggregate numbers, then publicly walked it back.",
+      "supporting_text": "2.3 million conversations in its first month / the equivalent work of 700 full-time agents / 11 minutes to under 2 minutes / As cost unfortunately seems to have been a too predominant evaluation factor when organizing this, what you end up having is lower quality.",
+      "url": "https://www.bigeye.com/blog/klarnas-ai-customer-service-deployment",
+      "note": "CEO Sebastian Siemiatkowski, May 2025. THE DIAGNOSTIC LESSON: the aggregate metrics looked great while the damage happened in the tails, on the emotionally loaded multi-step cases."
+    },
+    {
+      "id": "C36",
+      "claim": "AI translation into Yup'ik is documented as not ready, in Calista's own region.",
+      "supporting_text": "They were Yup'ik words all right, but they were all jumbled together, and they didn't make sense / KYUK's reporting on the scandal prompted a civil rights investigation, and the California contractor, Accent on Languages, reimbursed the agency for the faulty translations. / a poor record when it comes to translating them, often providing inaccurate sentences and even completely invented words. / nearly half the region's population - some 10,000 people - learn to speak Yugtun, the Central Yup'ik dialect, before they learn English. / Prisma International, a Minneapolis-based company, posted an ad seeking 'experienced, professional Translators and Interpreters' of Yup'ik, Inupiaq, and other Alaska Native languages",
+      "url": "https://www.hcn.org/articles/can-ai-translate-native-languages-in-times-of-disaster/",
+      "note": "MOST SENSITIVE MATERIAL IN THE RUN. Annie Rosenthal, High Country News, Nov 14 2025, updated Nov 17 2025. The first quote is Julia Jimmie, KYUK translator. USE THESE STRINGS AND NO OTHERS. The phrase 'to whatever end' DOES NOT EXIST in the article and must never appear."
+    },
+    {
+      "id": "C37",
+      "claim": "On the data-sovereignty question, the sourced quote is Crystal Hill-Pennington's.",
+      "supporting_text": "If we have communities that have a historical socioeconomic disadvantage, and then companies can come in, gather a little bit of information, and then try to capitalize on that knowledge without continuing to engage the originating community that holds that heritage, that's problematic.",
+      "url": "https://www.hcn.org/articles/can-ai-translate-native-languages-in-times-of-disaster/",
+      "note": "Attribute to Crystal Hill-Pennington by name, or do not use it."
+    },
+    {
+      "id": "C38",
+      "claim": "Typhoon Halong's remnants displaced more than 1,500 residents.",
+      "supporting_text": "displaced more than 1,500 residents and killed at least one person in the village of Kwigillingok in mid-October.",
+      "url": "https://www.hcn.org/articles/can-ai-translate-native-languages-in-times-of-disaster/",
+      "note": "THE DEATH TOLL IS 'AT LEAST ONE'. The research room's 'three people' is NOT SUPPORTED. This is a death toll in a community this prospect serves. Exactly right or say nothing."
+    },
+    {
+      "id": "C39",
+      "claim": "Calista has an open Full Stack Developer role in Huntsville, Alabama, alongside its back-office openings.",
+      "supporting_text": "job listings on the Built In company page: Full Stack Developer (Huntsville, AL), Benefit Accountant I, Benefit Accountant II, Benefits Specialist, Shareholder Distributions Coordinator, Administrative Assistant - Receptionist, plus three field roles",
+      "url": "https://builtin.com/company/calista-corporation",
+      "note": "ONLY THE EXISTENCE of the role is verified. Every quoted string from that posting FAILED verification. Do not quote the stack, the microservices language, or 'next generation of internal tools'. Built In's profile also shows an obviously wrong '71 Total Employees'. NEVER cite that number."
+    },
+    {
+      "id": "C40",
+      "claim": "Calista is a named appellee in Alaska Supreme Court litigation brought by Tribes inside its own region.",
+      "supporting_text": "Orutsararmiut Native Council, Chevak Native Village, Native Village of Eek, Native Village of Kwigillingok, and Cook Inletkeeper v. John Boyle, Donlin Gold LLC, and Calista Corporation, Supreme Court of Alaska, decided November 14, 2025, Nos. S-18737/18888 (consolidated). The court affirmed the water rights permits and the pipeline right-of-way approval.",
+      "url": "https://caselaw.findlaw.com/court/ak-supreme-court/117934126.html",
+      "note": "SENSITIVE, DO NOT RAISE IN OUTREACH OR THE STUDY. Recorded here only so no one downstream stumbles into it."
+    }
+  ],
+  "explicitly_forbidden": [
+    "The number 163 for the Address Unknown List, and the earlier hand counts of 213 and 217. All three are wrong. The count is 127, obtained in code from the fetched page on 2026-07-31 by the method recorded in C4.",
+    "The entire spring distribution paragraph: $14.4 million, $337 per 100 shares, 51st distribution, 10 percent above 2025, $180 million lifetime, 7x since 2008, paid April 6 2026. NO FETCHABLE SOURCE for any of it.",
+    "'nearly 13,500 shareholders voted'. No source, and it contradicts the 88% figure on the same page.",
+    "Any Andrew Guy 'steady growth' quote. UNSOURCED.",
+    "Any Willie Kasayulie quote. UNSOURCED.",
+    "The Donlin transaction chain (Barrick, NOVAGOLD, Paulson, $4.2 billion, Q4 2026) and the Guy quote attached to it. UNSOURCED and sensitive.",
+    "Calista Brice's '22 companies and $520 million', the '40+ subsidiaries organized into 4 holding lines' quotation, and 'roughly 70 percent growth over five years'. NO SOURCE.",
+    "Brice safety awards, EMR 0.60, AGC placement. NO SOURCE.",
+    "Any claim about Chugach, Bering Straits, Aleut Federal, Aleutian Thunder, Koniag CASPER, the AWS Generative AI Competency, Koniag AI Solutions, the Ipsos/VRIFY mineral survey, the Gartner agentic-AI forecast, or the RICS construction survey. NOT RE-FETCHED, so not citable.",
+    "'Ena Holding renamed to Calista Real Estate'. INFERENCE.",
+    "'No ANCSA regional corporation does shareholder-facing AI'. Absence of evidence. May be framed ONLY as 'we found none', never as 'there are none'.",
+    "Any statement that Yulista lists eight capability lines. It lists five.",
+    "Three deaths from Typhoon Halong. The sourced figure is 'at least one'."
+  ],
+  "drift_pattern_to_watch": "TWO LEANS, BOTH POINTING THE SAME WAY. (1) QUOTE POLISH. Ten separate strings sat inside quotation marks in language crisper than the page actually uses, and every rewrite moved toward the more quotable sentence. Individually each looks like tidying; together they are a systematic upgrade of evidence into copy, and the prospect can open every one of these pages. (2) EVERY WHOLLY UNSOURCED NUMBER WAS A LARGE FLATTERING HEADLINE FIGURE, while the one number that made the company look WORSE (the Address Unknown roster) was reported a third too low. The sourced material skews favorable and the single unfavorable count skews low. WATCH FOR THIS RECURRING DOWNSTREAM.",
+  "fact_checker_verdict": "fix, company qualifies, package did not. Applied by construction: only verified claims appear in this file."
+}

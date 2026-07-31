@@ -119,6 +119,56 @@
           "added": []
         }
       ]
+    },
+    {
+      "run_date": "2026-07-30",
+      "company": "ABR, Inc.",
+      "deltas": [
+        {
+          "kinds": [
+            "added"
+          ],
+          "before": null,
+          "after": "We spent the week researching your business and industry and how AI will impact it, our study is below for you.",
+          "dropped": [],
+          "added": []
+        },
+        {
+          "kinds": [
+            "added"
+          ],
+          "before": null,
+          "after": "P.S.",
+          "dropped": [],
+          "added": []
+        },
+        {
+          "kinds": [
+            "lengthened"
+          ],
+          "before": "The study below has a replacement paragraph already drafted for you.",
+          "after": "The study below has a replacement paragraph already drafted for you along with our field study into your company.",
+          "dropped": [],
+          "added": [
+            "along",
+            "company",
+            "field",
+            "into",
+            "our",
+            "with",
+            "your"
+          ]
+        },
+        {
+          "kinds": [
+            "deleted"
+          ],
+          "before": "Worth a reply either way.",
+          "after": null,
+          "dropped": [],
+          "added": []
+        }
+      ]
     }
   ]
 }

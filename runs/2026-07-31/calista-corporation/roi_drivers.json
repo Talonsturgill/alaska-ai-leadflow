@@ -1,0 +1,97 @@
+{
+  "scenarios": {
+    "conservative": {
+      "pursuits_per_year": 2100,
+      "benefit_lines": [],
+      "avoided_cost_lines": [
+        {
+          "label": "Mail production, postage and returned-mail handling avoided on the migrated cohort",
+          "events_per_year": 6300,
+          "cost_per_event": 1.2,
+          "reduction": 0.8
+        },
+        {
+          "label": "Carrying cost avoided on CONFIRMED reconnections only",
+          "events_per_year": 35,
+          "cost_per_event": 60,
+          "reduction": 0.8
+        },
+        {
+          "label": "Check reissue and stop-payment cycles removed by direct deposit",
+          "events_per_year": 63,
+          "cost_per_event": 55,
+          "reduction": 0.8
+        }
+      ],
+      "implementation": 44000,
+      "training": 4500,
+      "run_cost_per_year": 15360.0,
+      "run_cost_years": 4.5,
+      "contingency": 0.2,
+      "year1_ramp": 0.3,
+      "years": 5
+    },
+    "most_likely": {
+      "pursuits_per_year": 4800,
+      "benefit_lines": [],
+      "avoided_cost_lines": [
+        {
+          "label": "Mail production, postage and returned-mail handling avoided on the migrated cohort",
+          "events_per_year": 19200,
+          "cost_per_event": 1.6,
+          "reduction": 0.9
+        },
+        {
+          "label": "Carrying cost avoided on CONFIRMED reconnections only",
+          "events_per_year": 55,
+          "cost_per_event": 75,
+          "reduction": 0.9
+        },
+        {
+          "label": "Check reissue and stop-payment cycles removed by direct deposit",
+          "events_per_year": 192,
+          "cost_per_event": 65,
+          "reduction": 0.9
+        }
+      ],
+      "implementation": 44000,
+      "training": 4500,
+      "run_cost_per_year": 19240.0,
+      "run_cost_years": 4.5,
+      "contingency": 0.18,
+      "year1_ramp": 0.4,
+      "years": 5
+    },
+    "aggressive": {
+      "pursuits_per_year": 9000,
+      "benefit_lines": [],
+      "avoided_cost_lines": [
+        {
+          "label": "Mail production, postage and returned-mail handling avoided on the migrated cohort",
+          "events_per_year": 45000,
+          "cost_per_event": 2.1,
+          "reduction": 0.95
+        },
+        {
+          "label": "Carrying cost avoided on CONFIRMED reconnections only",
+          "events_per_year": 80,
+          "cost_per_event": 90,
+          "reduction": 0.95
+        },
+        {
+          "label": "Check reissue and stop-payment cycles removed by direct deposit",
+          "events_per_year": 450,
+          "cost_per_event": 75,
+          "reduction": 0.95
+        }
+      ],
+      "implementation": 44000,
+      "training": 4500,
+      "run_cost_per_year": 31700.0,
+      "run_cost_years": 4.5,
+      "contingency": 0.15,
+      "year1_ramp": 0.5,
+      "years": 5
+    }
+  }
+}

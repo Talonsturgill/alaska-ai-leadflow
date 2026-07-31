@@ -248,6 +248,18 @@ def main():
           "light" if light_print else ("dark only" if has_print else "none"),
           "light theme for the PDF")
 
+    # --- banned words, set by the maintainer on 2026-07-31 ---
+    # Enforced in code rather than trusted to a reader, because this run showed
+    # that a rule nobody checks is a rule that quietly erodes.
+    cannots = re.findall(r"\bcannot\b", text, flags=re.I)
+    check(not cannots, "the word cannot",
+          f"{len(cannots)} found" if cannots else "none", "zero, always use can't")
+
+    # A sentence opening with And or But. Start of text, or after . ! ? or a newline.
+    andbut = re.findall(r"(?:^|(?<=[.!?])\s+)(And|But)\s", text)
+    check(not andbut, "sentences opening And/But",
+          f"{len(andbut)} found" if andbut else "none", "zero")
+
     failures = [c for c in hard if not c["ok"]]
 
     if args.json:
