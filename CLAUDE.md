@@ -119,6 +119,47 @@ NO action note or housekeeping block for him to delete first. An unread draft is
 an undelivered draft. A run whose deliverable Talon cannot read or click has not
 delivered, whatever else it did right.
 
+## THE MERGE LAW (a run that does not merge did not ship)
+
+Every run MERGES ITS OWN WORK TO MAIN, autonomously, in the same run. Both repos.
+This one is not a draft and does not wait for a human.
+
+The reason is written in the ledger. On 2026-07-30 a run shipped its Gmail draft
+and published its study to the public site, then left its private PR as a draft.
+The next run checked out main and got none of it, so the dedupe row for that
+prospect did not exist and a cold scout nearly re-contacted a company we had
+emailed the day before. An unmerged run is worse than no run, because the ledger
+says the work happened and the machine behaves as though it did not.
+
+WHAT MERGES, EVERY RUN, WITHOUT ASKING.
+- The public package to alaskaaicarousels. GitHub Pages deploys on the merge and
+  the email link is dead until it does, so this one is not optional.
+- The private run to alaska-ai-leadflow. The archive, the ledger rows, and any
+  machine change the run made.
+
+WHAT STOPS AND ASKS, ALWAYS. These are the only three.
+- Anything that would rewrite already-published history on main.
+- Anything that SENDS rather than drafts. THE ONE LAW is untouched by this.
+- Deleting or overwriting a shipped run artifact under runs/.
+
+CHECK BEFORE MERGING, because a blind merge is how this law does damage. On
+2026-07-31 the stranded 2026-07-30 PR could not be merged as it stood, because it
+was branched off an older main and would have reverted ledger/leads.json to a state
+missing that day's prospect, re-opening the exact dedupe hole the merge existed to
+close. It would also have reverted a knowledge file edited the same day. The merge
+was only safe after main was merged into the branch and the conflicts resolved in
+main's favour. So:
+- Never merge a branch that is behind main without merging main into it first.
+- Diff the ledger and knowledge/ against main before merging. THE LEDGER ONLY EVER
+  GROWS. A merge that reduces the lead count is a bug, never a resolution.
+- Re-render and re-run study_qa if the merge touched scripts/ or knowledge/, and
+  re-verify the live URL if it touched anything published. A renderer change can
+  silently relabel a diagram, which is exactly what nearly shipped that day.
+- If a merge would break a live URL, it does not merge. Republish to the SAME path
+  so a draft already written to a prospect keeps resolving.
+
+A failed run commits its evidence to its branch and does NOT merge.
+
 ## THE ITERATION LAW (loops are the machine working)
 
 Every artifact that faces a critic loops until it meets the standard, produce,
