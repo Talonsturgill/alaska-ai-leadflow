@@ -484,6 +484,13 @@ until it does. Write out/<date>/outreach.json.
 
 ## PHASE 8 - DRAFT AND RECORD
 
+0. MERGE, DO NOT DRAFT. Every PR this run opens is opened READY and MERGED in the
+   same run, both repos, per THE MERGE LAW in CLAUDE.md. Before each merge, confirm
+   the branch is not behind main (merge main in first if it is), diff ledger/ and
+   knowledge/ against main and confirm THE LEDGER DID NOT SHRINK, and re-verify the
+   live URL if the merge touched anything published. A merge that would break a live
+   link or reduce the ledger does not merge until it is fixed.
+
 1. ARCHIVE FIRST, the links depend on it. Copy the study to
    runs/<date>/<company-slug>/field-study.html (+ .pdf and demo.html if present),
    write runs/<date>/<company-slug>/study.json and a dossier.md (the full internal
