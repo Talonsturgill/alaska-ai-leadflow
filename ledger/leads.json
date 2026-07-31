@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Memory of record for dedupe. Authoritative, git-backed, always available. Supabase leadflow.leads is dual-written when reachable but is no longer required to run.",
-  "updated": "2026-07-29",
+  "updated": "2026-07-31",
   "leads": [
     {
       "company": "Goldbelt, Incorporated",
@@ -114,6 +114,26 @@
       "run_date": "2026-07-23",
       "why_picked": "inbound scan opt-in",
       "source": "reconciled from Supabase 2026-07-29"
+    },
+    {
+      "company": "ABR, Inc.",
+      "domain": "abrinc.com",
+      "segment": "other labor-scarce or paperwork-heavy Alaska SMBs",
+      "location": "Fairbanks and Anchorage, Alaska",
+      "status": "drafted",
+      "fit_score": 23,
+      "run_date": "2026-07-30",
+      "why_picked": "Employee-owned environmental research and consulting firm. Won a four-way tie at fit_total 23 on the substance of the verified contact path.",
+      "contact_name": "Adrian Gall, Ph.D.",
+      "contact_role": "President and Director of Research",
+      "contact_email": "agall@abrinc.com",
+      "contact_source": "verified on two independent ABR pages",
+      "study_path": "runs/2026-07-30/abr-inc/field-study.html",
+      "gmail_draft_id": "r-1726211984517643426",
+      "recommended_build": "A cited search and assembly tool over an audited corpus of ABR's own approved proposal text.",
+      "roi_summary": "Conservative $36,600 cost / $8,861 return / 24 percent recovered / no payback in five years. Break-even 31.1 submissions a year.",
+      "outcome": "Study shipped, build NOT recommended at observable volume.",
+      "reconciled_note": "Recovered from Supabase on 2026-07-31. The 2026-07-30 run shipped its draft but left PR #21 unmerged, so this row never reached the git ledger."
     }
   ]
 }
