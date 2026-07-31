@@ -147,6 +147,16 @@ assumed Y" moves trust. Generic disclaimers do not.
 reads as a guess. But precision only credentials us if the reader can see why we
 chose it, so every driver is stated.
 
+**Never write "cannot". Always "can't".** The rule is absolute and it applies to
+every visible string on the page, the demo included. "Cannot" is the formal word
+that survives every other contraction rule, and it is what makes a sentence read as
+written rather than spoken. A document that has just told a stranger the honest
+version of their own numbers should not sound like a memo while it does it.
+
+**Never open a sentence with "And" or "But".** Both announce that the thought was
+added afterwards, which is exactly the impression a study built on care should not
+give. Join the clause to the sentence before it or give it its own subject.
+
 **Zero errors.** There is no accumulated trust to spend on a typo, and one wrong
 fact about their business ends the document.
 

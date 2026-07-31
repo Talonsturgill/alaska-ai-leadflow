@@ -12,15 +12,25 @@ That promotion is a human decision, never automatic.
 
 ## Recurring patterns
 
-- **lengthened**, in 1 send(s), 2 time(s) total
+- **lengthened**, in 2 send(s), 3 time(s) total
+- **deleted**, in 2 send(s), 2 time(s) total
 - **shortened**, in 1 send(s), 1 time(s) total
-- **deleted**, in 1 send(s), 1 time(s) total
-- **presumption cut**, in 1 send(s), 1 time(s) total
 - **agent-team framing cut**, in 1 send(s), 2 time(s) total
-- **cta softened**, in 1 send(s), 1 time(s) total
 - **contraction**, in 1 send(s), 4 time(s) total
+- **presumption cut**, in 1 send(s), 1 time(s) total
+- **cta softened**, in 1 send(s), 1 time(s) total
+- **added**, in 1 send(s), 2 time(s) total
 
 ## Log
+
+### 2026-07-30, ABR, Inc.
+
+- `added` not drafted, added by hand: We spent the week researching your business and industry and how AI will impact it, our study is below for you.
+- `added` not drafted, added by hand: P.S.
+- `lengthened`
+  - drafted: The study below has a replacement paragraph already drafted for you.
+  - sent:    The study below has a replacement paragraph already drafted for you along with our field study into your company.
+- `deleted` drafted, cut before sending: Worth a reply either way.
 
 ### 2026-07-29, Allen Marine Tours
 

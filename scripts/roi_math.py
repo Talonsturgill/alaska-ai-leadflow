@@ -34,6 +34,18 @@ Drivers file shape (one entry per scenario):
 """
 import argparse
 import json
+import math
+
+
+def _hu(x):
+    """Round half UP, not to even.
+
+    Python's round() is banker's rounding, so a component ending in .5 can round
+    down while its neighbour rounds up, and a printed column then fails to add.
+    A reader who adds three numbers and a total is the first check anyone runs on
+    an ROI table, so the arithmetic has to survive it.
+    """
+    return int(math.floor(float(x) + 0.5))
 
 
 def compute(name, s):
@@ -69,10 +81,10 @@ def compute(name, s):
 
     return {
         "scenario": name,
-        "annual_run_rate_benefit": round(run_rate),
-        "cumulative_benefit_%dyr" % years: round(cumulative_benefit),
-        "tco_%dyr" % years: round(tco),
-        "percent_of_tco_recovered": round(recovered * 100),
+        "annual_run_rate_benefit": _hu(run_rate),
+        "cumulative_benefit_%dyr" % years: _hu(cumulative_benefit),
+        "tco_%dyr" % years: _hu(tco),
+        "percent_of_tco_recovered": _hu(recovered * 100),
         "payback_month": payback_month,
         "pays_back_within_horizon": payback_month is not None,
     }
