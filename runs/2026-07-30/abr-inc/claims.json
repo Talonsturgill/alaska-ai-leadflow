@@ -1,0 +1,570 @@
+{
+  "run_date": "2026-07-30",
+  "story": "ABR, Inc., Fairbanks and Anchorage environmental research and consulting firm, already runs machine learning in production but does not say so anywhere a client looks first",
+  "contact_ok": true,
+  "verdict": "PASS WITH CORRECTIONS",
+  "drift_pattern": "TWO directional patterns, both matter more than the individual errors. FIRST, a run of small errors ALL LEAN TOWARD MAKING ABR LOOK FURTHER BEHIND ON TECHNOLOGY THAN THE EVIDENCE SUPPORTS. The package asserted ABR has 'no drone or UAS program named on its site' when ABR's own Remote Sensing page lists 'aerial and UAV photography' in the same bullet list the package quoted from. Same direction: SWCA was quoted non-verbatim in a form reading more AI-forward than the actual sentence, and Stantec's unverifiable claims were carried at all. Strip those three and the honest competitive finding gets NARROWER AND STRONGER, not weaker. ABR does machine learning, its homepage says only 'leading edge technologies', and that is a POSITIONING gap not a CAPABILITY gap. DO NOT LET THE STUDY WIDEN IT BACK OUT. SECOND, precision drift in the industry section. Scale figures were carried at a precision the cited pages do not print (OWL-C '5 hours for 26 gigapixels', KAMERA '1.5 million image sets and 26 TB', every Ecobot number). The headline metrics on those same pages all verified. USE THE VERIFIED HEADLINE, NEVER THE UNVERIFIED SCALE DETAIL.",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "ABR publishes agall@abrinc.com as Adrian Gall's email on her own staff bio page",
+      "verbatim": "Contact [agall@abrinc.com](mailto:agall@abrinc.com) [ext. 125](mailto:agall@abrinc.com)",
+      "url": "https://www.abrinc.com/about/offices/fairbanks/adrian_gall/",
+      "confidence": 0.99,
+      "notes": "Live mailto in Contact block, ext 125. Corroborated by C02 on a different page. NOT pattern-derived."
+    },
+    {
+      "id": "C02",
+      "claim": "ABR's Senior NEPA Specialist posting names Adrian Gall and prints her email",
+      "verbatim": "If you have any questions about the positions, please contact Adrian Gall by email (agall@abrinc.com).",
+      "url": "https://www.abrinc.com/careers/nepa-specialist",
+      "confidence": 0.99,
+      "notes": "Second independent ABR page. Two-source contact confirmation complete."
+    },
+    {
+      "id": "C03",
+      "claim": "Adrian Gall, Ph.D. is President and Director of Research at ABR",
+      "verbatim": "President & Director of Research",
+      "url": "https://www.abrinc.com/about/leadership/",
+      "confidence": 0.98,
+      "notes": "Verbatim from leadership page and bio page. Page also confirms Alexander K. Prichard Senior Scientist and Board Chair, Janet Daley Treasurer/Secretary, Wendy Davis Research Coordinator, Matthew J. Macander Senior Scientist."
+    },
+    {
+      "id": "C04",
+      "claim": "ABR's own copy refers to Adrian Gall with she and her pronouns",
+      "verbatim": "Since joining ABR in 2005, she has focused on movements and habitat use of seabirds, waterfowl, shorebirds, and marine mammals in terrestrial and marine environments.",
+      "url": "https://www.abrinc.com/about/offices/fairbanks/adrian_gall/",
+      "confidence": 0.98,
+      "notes": "PRONOUN CONFIRMED ON PAGE, not assumed. Downstream copy MUST use she and her. Also establishes she joined ABR in 2005."
+    },
+    {
+      "id": "C05",
+      "claim": "ABR holds a BLM Botanical Services Blanket Purchase Agreement",
+      "verbatim": "Contract #: 140L0624A0027",
+      "url": "https://www.abrinc.com/clients/government-agencies",
+      "confidence": 0.97,
+      "notes": "Confirmed character for character across two fetches."
+    },
+    {
+      "id": "C06",
+      "claim": "ABR's BLM Botanical Services BPA runs through June 2029",
+      "verbatim": "through 30 June 2029",
+      "url": "https://www.abrinc.com/clients/government-agencies",
+      "confidence": 0.95,
+      "notes": "ABR prints day-month-year. Prefer ABR's own format when quoting."
+    },
+    {
+      "id": "C07",
+      "claim": "ABR holds a GSA Multiple Award Schedule contract",
+      "verbatim": "Contract #: 47QRAA20D0010",
+      "url": "https://www.abrinc.com/clients/government-agencies",
+      "confidence": 0.97,
+      "notes": "Confirmed on two fetches."
+    },
+    {
+      "id": "C08",
+      "claim": "ABR's GSA MAS contract runs through November 2029",
+      "verbatim": "through 3 November 2029",
+      "url": "https://www.abrinc.com/clients/government-agencies",
+      "confidence": 0.95,
+      "notes": "Longest-dated of the four vehicles."
+    },
+    {
+      "id": "C09",
+      "claim": "ABR holds a NOAA ProTech Oceans contract",
+      "verbatim": "Contract #: 1305M424D0030",
+      "url": "https://www.abrinc.com/clients/government-agencies",
+      "confidence": 0.97,
+      "notes": "Confirmed on two fetches."
+    },
+    {
+      "id": "C10",
+      "claim": "ABR's NOAA ProTech Oceans contract runs through April 2029",
+      "verbatim": "through 28 April 2029",
+      "url": "https://www.abrinc.com/clients/government-agencies",
+      "confidence": 0.95,
+      "notes": "All four vehicles expire 2028-2029, so all four are LIVE as of the run date."
+    },
+    {
+      "id": "C11",
+      "claim": "ABR holds a USFWS Wetland Mapping Services BPA",
+      "verbatim": "Contract #: 140F0S23A0028",
+      "url": "https://www.abrinc.com/clients/government-agencies",
+      "confidence": 0.97,
+      "notes": "NOTE the character is a LETTER S in 140F0S23A0028, not a five. TYPO RISK HIGH, check in the rendered study."
+    },
+    {
+      "id": "C12",
+      "claim": "ABR's USFWS Wetland Mapping BPA runs through July 2028",
+      "verbatim": "through 23 July 2028",
+      "url": "https://www.abrinc.com/clients/government-agencies",
+      "confidence": 0.95,
+      "notes": "Earliest expiry, just under two years from run date."
+    },
+    {
+      "id": "C13",
+      "claim": "ABR's public staff directory lists 36 named people",
+      "verbatim": "TOTAL NAMED PEOPLE: 36",
+      "url": "https://www.abrinc.com/about/staff",
+      "confidence": 0.93,
+      "needs_softening": true,
+      "notes": "Counted from fetched page, sections reconcile 4+12+8+4+8=36. This is a FLOOR for permanent staff, NOT a headcount. Seasonal crew not listed. Phrase as 'lists 36 named people' or 'roughly three dozen named staff', NEVER 'ABR has 36 employees'."
+    },
+    {
+      "id": "C14",
+      "claim": "ABR's staff directory lists four people under Management",
+      "verbatim": "Management ... Adrian Gall, Ph.D. ... Wendy Davis, M.Sc., P.W.S. ... Charles T. Schick, Ph.D. ... Rebecca McGuire, Ph.D.",
+      "url": "https://www.abrinc.com/about/staff",
+      "confidence": 0.95,
+      "notes": "Named and counted off the fetched page."
+    },
+    {
+      "id": "C15",
+      "claim": "ABR's staff directory lists twelve Senior Scientists",
+      "verbatim": "Senior Scientists ... Count: 12",
+      "url": "https://www.abrinc.com/about/staff",
+      "confidence": 0.95,
+      "notes": "Includes Sue Ives M.S. P.W.S., very likely the 'Sue' at C25, but the post prints no surname so that link is INFERENCE not fact. Also Tawna Morgan, Christopher S. Swingley, Dorte Dissing, Matthew J. Macander, Alexander K. Prichard, John C. Seigle."
+    },
+    {
+      "id": "C16",
+      "claim": "ABR's staff directory lists eight Research Biologists",
+      "verbatim": "Research Biologists ... Count: 8",
+      "url": "https://www.abrinc.com/about/staff",
+      "confidence": 0.95
+    },
+    {
+      "id": "C17",
+      "claim": "ABR's staff directory lists four Field Technicians",
+      "verbatim": "Field Technicians ... Count: 4",
+      "url": "https://www.abrinc.com/about/staff",
+      "confidence": 0.95,
+      "notes": "Year-round technicians only. NOT the size of the field workforce in July."
+    },
+    {
+      "id": "C18",
+      "claim": "ABR's staff directory lists eight people under Project Support",
+      "verbatim": "Project Support ... Count: 8",
+      "url": "https://www.abrinc.com/about/staff",
+      "confidence": 0.95,
+      "notes": "Includes EXACTLY ONE IT professional (William Lentz, M.S.) and EXACTLY ONE proposal and marketing role (Nick Moser, MFA). Both singleton observations supported."
+    },
+    {
+      "id": "C19",
+      "claim": "ABR's Remote Sensing and GIS Mapping page lists machine learning modeling of vegetation abundance and types",
+      "verbatim": "Machine learning modeling of vegetation abundance and types",
+      "url": "https://www.abrinc.com/services/remote-sensing-and-gis-mapping",
+      "confidence": 0.98,
+      "notes": "THE STUDY'S MOST IMPORTANT COMPETITIVE FACT AND IT IS EXACT. Note the correct URL contains 'and', the package cited a 404 path."
+    },
+    {
+      "id": "C20",
+      "claim": "ABR's Biostatistics and Modeling page lists machine learning analyses among telemetry methods",
+      "verbatim": "Kernel Density analysis, dynamic Brownian Bridge Movement Models, integrated Step-Selection Analyses, Resource Selection Function analyses, and Machine Learning analyses.",
+      "url": "https://www.abrinc.com/services/biostatistics-and-modeling",
+      "confidence": 0.97,
+      "notes": "SECOND independent ABR page stating ML practice. Any pitch assuming ABR needs to be taught what a model is is dead on arrival. C19+C20 are the proof."
+    },
+    {
+      "id": "C21",
+      "claim": "ABR's homepage describes its technology only as leading edge technologies",
+      "verbatim": "We incorporate leading edge technologies into every project we undertake.",
+      "url": "https://www.abrinc.com/",
+      "confidence": 0.9,
+      "needs_softening": true,
+      "notes": "The quoted sentence is EXACT. The negative half is an ABSENCE on the page fetched, so phrase as 'the homepage I read does not use the words' rather than 'ABR never says'. This is the whole positioning finding."
+    },
+    {
+      "id": "C22",
+      "claim": "ABR's Remote Sensing page names aerial and UAV photography among its imagery sources",
+      "verbatim": "Imagery processing, classification, and extraction from sources including satellites (e.g., Landsat, WorldView, Planet, Ikonos, Pleiades, Sentinel 1/2, MODIS, and VIIRS), airborne and terrestrial lidar, and aerial and UAV photography",
+      "url": "https://www.abrinc.com/services/remote-sensing-and-gis-mapping",
+      "confidence": 0.96,
+      "notes": "CORRECTS THE PACKAGE. The claim that ABR has 'no drone or UAS program' is CONTRADICTED by ABR's own page. THE STUDY MUST NOT SAY ABR LACKS UAS. Note this says UAV imagery is a SOURCE ABR PROCESSES, not that ABR operates its own drone fleet, so do not overclaim the other way either."
+    },
+    {
+      "id": "C23",
+      "claim": "ABR's Data Management and Programming page lists in-house database design, mobile data collection apps, custom dynamic web applications, and Access, SQL Server and PostgreSQL expertise",
+      "verbatim": "Database design and management ... Data collection apps for mobile devices ... Custom, data-driven, dynamic web applications ... Expertise in Microsoft Access, SQL Server, and PostgreSQL",
+      "url": "https://www.abrinc.com/services/data-management-and-programming",
+      "confidence": 0.96,
+      "notes": "All four strings verbatim. List also contains 'Data review applications designed for display and QA/QC tasks' and 'Experience collecting, analyzing, and maintaining animal telemetry data'. THIS IS THE IN-HOUSE SOFTWARE BENCH ANY PROPOSED BUILD WOULD SIT ON."
+    },
+    {
+      "id": "C24",
+      "claim": "ABR hosts public software written for the USGS Alaska Science Center with NPS and USFWS support",
+      "verbatim": "These programs were written for the U.S. Geological Survey-Alaska Science Center, with additional support from the National Park Service and U.S. Fish and Wildlife Service.",
+      "url": "https://sealog.abrinc.com/",
+      "confidence": 0.95,
+      "notes": "ABR-operated subdomain so primary. Publishes cswingley@abrinc.com matching Christopher S. Swingley in C15. Evidence ABR ALREADY SHIPS SOFTWARE TO FEDERAL USERS."
+    },
+    {
+      "id": "C25",
+      "claim": "ABR's Arctic Village wetlands post says a senior scientist produced both map and report on a quick turnaround",
+      "verbatim": "Sue produced the wetlands map and associated report on a quick turnaround to support the project on their schedule.",
+      "url": "https://www.abrinc.com/post/arctic-village-wetlands",
+      "confidence": 0.96,
+      "notes": "VERBATIM MATCH. Post dated 'Mar 25' with NO YEAR printed, so DO NOT PRINT A YEAR. 'Sue' is almost certainly Sue Ives but the post prints no surname, so that identification is INFERENCE and must not be stated as fact."
+    },
+    {
+      "id": "C26",
+      "claim": "ABR states its team performs rigorous data QA/QC and delivers datasets in the fall after the field season",
+      "verbatim": "This fall, the ABR team will perform rigorous data QA/QC and deliver datasets in electronic format.",
+      "url": "https://www.abrinc.com/post/alaska-aim",
+      "date_of_source": "2025-11-13",
+      "confidence": 0.96,
+      "notes": "VERBATIM. STRONGEST PAIN EVIDENCE IN THE FILE because it is STATED, not inferred."
+    },
+    {
+      "id": "C27",
+      "claim": "ABR's aquatic team conducted five ten-day sampling hitches at more than 50 wadeable stream sites in one season",
+      "verbatim": "conducted five 10-day sampling hitches to collect detailed habitat data at over 50 wadeable stream sites",
+      "url": "https://www.abrinc.com/post/alaska-aim",
+      "date_of_source": "2025-11-13",
+      "confidence": 0.96,
+      "notes": "VERBATIM as substring. Full sentence begins 'For the aquatic component, a team led by John Seigle...'. John C. Seigle appears in C15, so the named lead is corroborated."
+    },
+    {
+      "id": "C28",
+      "claim": "ABR's terrestrial team collected vegetation, soils, hydrology and permafrost data at 60 plots in the same season",
+      "verbatim": "vegetation, soils, hydrology, and permafrost data at 60 plots in remote, logistically challenging BLM lands",
+      "url": "https://www.abrinc.com/post/alaska-aim",
+      "date_of_source": "2025-11-13",
+      "confidence": 0.94,
+      "notes": "CORRECTED QUOTE. The leading word 'collected' did NOT come back. Use the verbatim string above and nothing longer. 50+ stream sites and 60 plots in one summer is consistent with the fall QA crunch at C26."
+    },
+    {
+      "id": "C29",
+      "claim": "ABR's Senior NEPA Specialist posting is listed as open until filled",
+      "verbatim": "Open until filled.",
+      "url": "https://www.abrinc.com/careers/nepa-specialist",
+      "confidence": 0.97,
+      "needs_softening": true,
+      "notes": "The phrase is exact. HOW LONG it has been open is NOT VERIFIED. The study may say the role is posted open until filled. IT MAY NOT SAY OR IMPLY IT HAS BEEN OPEN FOR MONTHS."
+    },
+    {
+      "id": "C30",
+      "claim": "ABR's Senior NEPA Specialist posting accepts a remote candidate",
+      "verbatim": "Anchorage or Fairbanks, Alaska, or remote",
+      "url": "https://www.abrinc.com/careers/nepa-specialist",
+      "confidence": 0.96,
+      "notes": "VERBATIM. Notable for an Alaska field-science firm on a senior document role, but present as a FACT ABOUT THE POSTING, not a diagnosis of desperation."
+    },
+    {
+      "id": "C31",
+      "claim": "ABR's Senior NEPA Specialist role includes preparing proposals and business development alongside technical work",
+      "verbatim": "Contribute to the preparation of proposals for environmental assessment work and expand our client base by keeping informed on new projects in Alaska.",
+      "url": "https://www.abrinc.com/careers/nepa-specialist",
+      "confidence": 0.96,
+      "notes": "VERBATIM. Pairs with C18 (exactly one proposal and marketing coordinator). Proposal work genuinely sits on senior billable scientists."
+    },
+    {
+      "id": "C32",
+      "claim": "ABR states it does most of its ecological research in house including statistical analyses, permit applications, environmental assessments, and graphic and editorial services",
+      "verbatim": "We do most of our ecological research in-house, including statistical analyses, designing specialized equipment, permit applications, environmental assessments, and graphic and editorial services.",
+      "url": "https://www.abrinc.com/careers",
+      "confidence": 0.96,
+      "notes": "VERBATIM. The breadth of internal functions is stated by ABR itself."
+    },
+    {
+      "id": "C33",
+      "claim": "ABR states it is dedicated to providing a stable and pleasant work environment conducive to individual opportunity and growth",
+      "verbatim": "ABR is dedicated to providing a stable and pleasant work environment that is conducive to individual opportunity and growth for those who seek it.",
+      "url": "https://www.abrinc.com/careers",
+      "confidence": 0.96,
+      "notes": "VALUES GUARDRAIL. Any efficiency framing must be about TAKING WORK OFF PEOPLE, never reducing headcount. With C38 this is the tone test the study must pass."
+    },
+    {
+      "id": "C34",
+      "claim": "ABR updates caribou collar location data daily as part of a database it manages for a state agency",
+      "verbatim": "update the location data daily, add other data such as calving and fall composition data",
+      "url": "https://www.abrinc.com/experience/projects/management-of-caribou-collar-telemetry-data",
+      "confidence": 0.93,
+      "notes": "VERBATIM as substring. Quote ONLY this string. Establishes ABR carries DAILY OPERATIONAL DATA OBLIGATIONS, not just project deliverables."
+    },
+    {
+      "id": "C35",
+      "claim": "ABR manages caribou collar telemetry data for ADFG covering four caribou herds since 2015",
+      "verbatim": "Western Arctic Herd (WAH), Teshekpuk Caribou Herd (TCH), Central Arctic Herd (CAH), and Porcupine Caribou Herd",
+      "url": "https://www.abrinc.com/experience/projects/management-of-caribou-collar-telemetry-data",
+      "confidence": 0.92,
+      "notes": "CORRECTS THE PACKAGE which said three. The page names FOUR. Range 2015-present. ADFG is ABR's named client here AND the same agency in the OWL-C census at C41, so the industry evidence lands INSIDE ABR's own client relationship rather than beside it."
+    },
+    {
+      "id": "C36",
+      "claim": "ABR's publications page tells readers to contact the firm for older publications rather than offering them online",
+      "verbatim": "Looking for an older publication? Contact Us",
+      "url": "https://www.abrinc.com/about/publications",
+      "confidence": 0.94,
+      "needs_softening": true,
+      "notes": "Quoted string exact, listed years span 2000 to 2026, no search box on the page fetched. The '~300 publications' estimate could NOT be counted exactly. Say 'roughly two decades of listed publications' or count in code. NEVER print 300 as verified."
+    },
+    {
+      "id": "C37",
+      "claim": "An ABR field technician posting listed data entry and proofing on mobile electronic devices",
+      "verbatim": "Data entry and proofing, primarily on mobile electronic devices",
+      "url": "https://pacificseabirdgroup.org/news/job-opening-field-technician-wildlife-ak/",
+      "date_of_source": "2021-03-04",
+      "confidence": 0.85,
+      "needs_softening": true,
+      "notes": "BACKGROUND NOT CURRENT. Dated 2021-03-04, FIVE YEARS outside the run window, and a job board reposting not ABR's own page. Evidences the STRUCTURE of the role, not a current 2026 hiring need. LABEL AS A 2021 POSTING OR DROP IT."
+    },
+    {
+      "id": "C38",
+      "claim": "ABR's mission commits to taking care of its people, communities and the planet alongside scientific rigour",
+      "verbatim": "We aim to provide innovative, cost effective, and scientifically rigorous solutions to our clients' environmental needs while taking care of our people, our communities, and the health of our planet.",
+      "url": "https://www.abrinc.com/",
+      "confidence": 0.96,
+      "notes": "VERBATIM from homepage. 'Scientifically rigorous' IS THE BAR THE READER WILL HOLD THE STUDY TO. Gall is a working Director of Research, so hype reads as a disqualifier to exactly this reader."
+    },
+    {
+      "id": "C39",
+      "claim": "ABR lists two offices, Fairbanks and an Anchorage office at 1225 E International Airport Rd",
+      "verbatim": "1225 E International Airport Rd #110 Anchorage, AK 99518",
+      "url": "https://www.abrinc.com/contact",
+      "confidence": 0.93,
+      "notes": "Fairbanks returned as 'PO Box 80410, Fairbanks, AK 99708' tel 907-455-6777. The 2842 Goldstream Road street address did NOT come back and is KILLED. Only TWO offices listed, which disposes of the third-party Forest Grove OR listing."
+    },
+    {
+      "id": "C40",
+      "claim": "ABR's careers page shows exactly one posted opening, a Senior NEPA Specialist",
+      "verbatim": "Senior NEPA Specialist",
+      "url": "https://www.abrinc.com/careers",
+      "confidence": 0.9,
+      "needs_softening": true,
+      "notes": "AS OF THE 2026-07-30 FETCH. A careers page is a live surface, so DATE THE OBSERVATION in the study."
+    },
+    {
+      "id": "C41",
+      "claim": "A weakly supervised computer vision model run over an ADFG caribou census reported F1 0.965, recall 0.980, precision 0.951",
+      "verbatim": "F1=0.965, recall =0.980, precision =0.951",
+      "url": "https://arxiv.org/html/2606.13911",
+      "date_of_source": "2026-06-11",
+      "confidence": 0.9,
+      "needs_softening": true,
+      "notes": "'Overhead Wildlife Locator (OWL): Benchmarking Weakly Supervised Learning for Aerial Wildlife Surveys', arXiv:2606.13911v1. PREPRINT, NOT PEER REVIEWED, SAY SO. Authors' own limits: deployment-scale empty-terrain specificity remains future work, detection threshold was test-optimal not held-out validated. REPORT THOSE LIMITS IN THE SAME BREATH AS THE METRICS."
+    },
+    {
+      "id": "C42",
+      "claim": "The same caribou census model predicted 12,840 against 12,456 ground truth, about three percent signed error",
+      "verbatim": "12,840 predicted vs. 12,456 ground-truth annotations",
+      "url": "https://arxiv.org/html/2606.13911",
+      "date_of_source": "2026-06-11",
+      "confidence": 0.89,
+      "needs_softening": true,
+      "notes": "Both counts and +3.1% verified. Arithmetic check 12840/12456=1.0308 so +3.1% is internally consistent. PREPRINT, hedge accordingly."
+    },
+    {
+      "id": "C43",
+      "claim": "NOAA's KAMERA aerial survey system is reported to cut dataset processing time by up to 80 percent",
+      "verbatim": "KAMERA provides up to an 80% reduction in dataset processing time over previous methods.",
+      "url": "https://arxiv.org/abs/2509.19129",
+      "date_of_source": "2025-09-23",
+      "confidence": 0.88,
+      "needs_softening": true,
+      "notes": "VERBATIM on abstract page. DEVELOPERS' OWN MEASUREMENT, not an independent audit, and 'up to' is doing real work. Write as 'the developers report up to an 80% reduction'. NEVER as 'AI cuts processing time 80%'."
+    },
+    {
+      "id": "C44",
+      "claim": "USFWS approves exactly three automated acoustic bat identification software programs",
+      "verbatim": "BCID ... Kaleidoscope Pro ... SonoBat",
+      "url": "https://www.fws.gov/media/automated-acoustic-bat-id-software-programs",
+      "date_of_source": "2026-03-20",
+      "confidence": 0.93,
+      "notes": "Versions BCID 2.8, Kaleidoscope Pro 5.7.0, SonoBat 30.1 and 30.2. Page PUBLISHED 2019-01-31 and LAST UPDATED 2026-03-20, describe 2026-03-20 as the last update NOT the publication date. Regulator-mandated production ML, the cleanest example in this industry."
+    },
+    {
+      "id": "C45",
+      "claim": "USFWS publishes a stated failure mode for the approved bat classifiers when target species are present in low numbers",
+      "verbatim": "do not reliably provide a MLE p-value of <0.05 for rare target species when they are present in low numbers at the night level (<15 files per site night)",
+      "url": "https://www.fws.gov/media/automated-acoustic-bat-id-software-programs",
+      "date_of_source": "2026-03-20",
+      "confidence": 0.92,
+      "notes": "VERBATIM. THE REGULATOR WRITES THE FAILURE MODE INTO THE APPROVAL ITSELF. Single best piece of evidence for the study's honesty posture."
+    },
+    {
+      "id": "C46",
+      "claim": "A peer reviewed blind evaluation found sensitivity as low as 0.01 for northern long eared bat across the approved classifiers",
+      "verbatim": "SN ranging between 0.01 and 0.52",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11146688/",
+      "date_of_source": "2024-06-03",
+      "confidence": 0.92,
+      "notes": "PEER REVIEWED, PLoS One. Figure is for Myotis septentrionalis, a FEDERALLY LISTED species. Contrast with 96-99% on common acoustically distinct species. The classifier is WORST EXACTLY WHERE THE REGULATORY STAKES ARE HIGHEST."
+    },
+    {
+      "id": "C47",
+      "claim": "The same evaluation reported sensitivity between 0.09 and 0.41 for Indiana bat across the three approved classifiers",
+      "verbatim": "0.09 (BCID), 0.19 (KPro), and 0.41 (SonoBat)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11146688/",
+      "date_of_source": "2024-06-03",
+      "confidence": 0.88,
+      "needs_softening": true,
+      "notes": "The range is ASSEMBLED FROM THREE PER-PROGRAM TABLE VALUES, not printed as a range in prose. Say 'sensitivity of 0.09, 0.19 and 0.41 depending on the program'. DO NOT ATTRIBUTE THE RANGE STRING AS A QUOTATION."
+    },
+    {
+      "id": "C48",
+      "claim": "The evaluation's authors concluded all three approved programs obtained metrics well below what is advertised",
+      "verbatim": "All three programs struggled with accuracy for some species, obtaining metrics well below what is advertised.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11146688/",
+      "date_of_source": "2024-06-03",
+      "confidence": 0.93,
+      "notes": "VERBATIM, PEER REVIEWED. The cleanest available authority for the anti-hype position, and IT COMES FROM THE SCIENCE RATHER THAN FROM US."
+    },
+    {
+      "id": "C49",
+      "claim": "The evaluation's authors recommend a qualified analyst verify automated classifications before species presence or absence is confirmed",
+      "verbatim": "we recommend that a qualified bat acoustic analyst verify automated classifications to confirm species presence or probable absence",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11146688/",
+      "date_of_source": "2024-06-03",
+      "confidence": 0.92,
+      "notes": "VERBATIM as substring, sentence opens 'Until advances in signal processing demonstrate consistently high accuracy...'. THE HUMAN-IN-THE-LOOP DESIGN CONSTRAINT, SOURCED. Use it to justify keeping the scientist's signature on every determination."
+    },
+    {
+      "id": "C50",
+      "claim": "The largest federal AI programme touching NEPA reports over 500 beta users and publishes no performance metrics",
+      "verbatim": "SearchNEPA, PermitAI's first application, was launched in late 2024 and is undergoing beta testing by over 500 users across various federal agencies.",
+      "url": "https://www.pnnl.gov/projects/permitai/ai-applications",
+      "confidence": 0.9,
+      "notes": "CORRECTS THE PACKAGE which attributed 500 users to SearchNEPA AND CommentNEPA. The page attributes it to SearchNEPA ONLY. No quantified performance metrics for any tool, confirmed on the fetched page. THE ABSENCE IS THE FINDING."
+    },
+    {
+      "id": "C51",
+      "claim": "A federal benchmark of AI agents drafting EIS sections reports promising results with no score and states systems still require human oversight",
+      "verbatim": "AI coding agents can generate structured and domain-specific draft sections for environmental impact statements with promising results",
+      "url": "https://techxplore.com/news/2026-06-machine-readable-dataset-environmental-tasks.html",
+      "date_of_source": "2026-06-30",
+      "confidence": 0.82,
+      "needs_softening": true,
+      "notes": "SECONDARY SOURCE, attribute as 'reported by Tech Xplore'. 102 real-world test cases from 19 agencies confirmed. IMPORTANT NEGATIVE: the page states NO percentage and NO hours saved, which KILLS the widely repeated 15% figure. Page also states 'the systems still require human oversight'."
+    },
+    {
+      "id": "C52",
+      "claim": "SWCA Environmental Consultants markets Deep Learning and GeoAI as a named capability",
+      "verbatim": "By integrating high-resolution imagery, LiDAR, drone data, and satellite observations with Deep Learning and GeoAI, we transform complex datasets into meaningful insights that support environmental assessments, habitat mapping, species identification",
+      "url": "https://www.swca.com/services/technology",
+      "confidence": 0.9,
+      "needs_softening": true,
+      "notes": "CORRECTED QUOTE. The package's version DOES NOT EXIST on the page. National corporate marketing, and the Anchorage office page carries NO AI mention, so SWCA's Alaska-project AI use is NOT established. SAY 'MARKETS', NOT 'USES'."
+    },
+    {
+      "id": "C53",
+      "claim": "SWCA states its advanced analytics reduce reliance on manual field data collection",
+      "verbatim": "Advanced analytics are applied to detect patterns, classify features, and identify change over time, reducing reliance on manual field data collection while improving accuracy, efficiency, and regulatory defensibility.",
+      "url": "https://www.swca.com/services/technology",
+      "confidence": 0.9,
+      "needs_softening": true,
+      "notes": "VERBATIM. Marketing copy with NO measured outcome attached. Present as COMPETITOR POSITIONING LANGUAGE, not a demonstrated result."
+    },
+    {
+      "id": "C54",
+      "claim": "LGL states it developed automated detection software for Arctic marine mammals without using the words AI or machine learning",
+      "verbatim": "Developed automated detection software for marine mammal monitoring to deliver cost effective, near real-time results",
+      "url": "https://lgl.com/marine-mammal-and-acoustic-research/",
+      "confidence": 0.9,
+      "notes": "Page also carries 'Developed species-specific software to detect Arctic marine mammals'. Confirmed that artificial intelligence, AI and machine learning do NOT appear. Strongest verified automated detection among Alaska peers, and it is MARINE MAMMAL SPECIFIC, leaving terrestrial imagery genuinely unoccupied. Absence on one page is not proof of absence firm-wide."
+    },
+    {
+      "id": "C55",
+      "claim": "Fairweather Science reviews its aerial survey imagery manually in two human passes with no automated detection named",
+      "verbatim": "On board each flight, a data analyst performs an initial assessment. Upon landing, scientists conduct a second analysis of the imagery for quality control and assurance.",
+      "url": "https://fairweathersciencellc.com/projects",
+      "confidence": 0.88,
+      "notes": "Page also states 'The survey utilizes a plane equipped with high resolution and infrared cameras to conduct aerial surveys.' Confirmed AI, machine learning and automated detection do not appear. Sensor hardware plus MANUAL review, an adjacent currently-manual workload in ABR's own client base. 'None found' means absent from the page read."
+    },
+    {
+      "id": "C56",
+      "claim": "61 North Environmental markets a cloud hosted multi user project database with no AI or machine learning claim",
+      "verbatim": "Project-specific database collection systems: Cloud hosted; multi-user/station operation; time-stamped project activity, environmental conditions, and animal group data.",
+      "url": "https://www.61northalaska.com/services",
+      "confidence": 0.87,
+      "notes": "Also 'Research support with hardware, software, and database packages for theodolite-integrated, land-based marine mammal tracking'. Confirmed AI and machine learning do not appear. The package's tide-prediction and observer-height detail did NOT come back and is KILLED. A smaller shop markets purpose-built software more visibly than ABR does, supporting C21."
+    },
+    {
+      "id": "C57",
+      "claim": "A survey of AEC professionals found only 27 percent currently use AI in their operations",
+      "verbatim": "only 27% of respondents use AI in their operations",
+      "url": "https://www.asce.org/publications-and-news/civil-engineering-source/article/2025/12/18/architecture-engineering-construction-sector-slow-to-adapt-ai-survey-shows",
+      "date_of_source": "2025-12-18",
+      "confidence": 0.83,
+      "needs_softening": true,
+      "notes": "VENDOR-FIELDED, run by Bluebeam and reported by ASCE, so ASCE is SECONDARY. Covers broader AEC NOT environmental consulting. DIRECTIONAL ONLY, attribute as 'a Bluebeam survey reported by ASCE'."
+    },
+    {
+      "id": "C58",
+      "claim": "The same survey of 1,000 professionals found 52 percent still use paper during the design phase",
+      "verbatim": "52% of survey respondents still use paper during the design phase and 49% during planning",
+      "url": "https://www.asce.org/publications-and-news/civil-engineering-source/article/2025/12/18/architecture-engineering-construction-sector-slow-to-adapt-ai-survey-shows",
+      "date_of_source": "2025-12-18",
+      "confidence": 0.83,
+      "needs_softening": true,
+      "notes": "n=1000 confirmed. Barriers: data-sharing security 42%, cost and complexity 33%. Supports the point that the biggest wins in this sector are often NOT ML at all."
+    },
+    {
+      "id": "C59",
+      "claim": "ABR's Management section lists a Director of Business Development",
+      "verbatim": "Charles T. Schick, Ph.D. - Director of Business Development",
+      "url": "https://www.abrinc.com/about/staff",
+      "confidence": 0.95,
+      "notes": "Verified on a fresh fetch by the Phase 6 fact-checker (V44). NOT in the Phase 2 claims file, which is why the study-critic flagged the study for asserting it. Folded in here so the evidence file matches what was actually verified. MATERIAL: the study argued proposal work had nowhere to live while ABR's own directory names a BD director. Naming him makes the finding narrower and more credible."
+    },
+    {
+      "id": "C60",
+      "claim": "The PLoS One evaluation reported sensitivity of 0.88 to 0.97 for the common, acoustically distinct species, in a deliberate best-case test",
+      "verbatim": "While our analyses intentionally used high-quality, hand-picked echolocation calls by known species to provide a best-case scenario for automated classifiers, all three programs struggled with accuracy for some species, obtaining metrics well below what is advertised.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11146688/",
+      "confidence": 0.92,
+      "notes": "RE-FETCHED BY THE SHOWRUNNER 2026-07-30 after the study-critic flagged the first version of C60 as manufactured. IT WAS RIGHT AND THE FIGURE WAS ALSO WRONG. There is NO '96 to 99 percent' sentence in this paper. That string came from an unverified annotation in C46's notes. The real Table 1 sensitivities on common species are 0.88 to 0.97. The paper's own framing matters more than the numbers: the calls were hand-picked to give a BEST CASE, and all three still struggled for some species.",
+      "value": "Table 1 sensitivity: big brown bat KPro 0.88 SonoBat 0.90; tricolored bat KPro 0.91 SonoBat 0.97",
+      "date_of_source": "2024-06-03"
+    },
+    {
+      "id": "C61",
+      "claim": "MIT NANDA, as reported by Fortune, on buying versus building AI capability",
+      "verbatim": "Purchasing AI tools from specialized vendors and building partnerships succeed about 67% of the time, while internal builds succeed only one-third as often.",
+      "url": "https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/",
+      "date_of_source": "2025-08-18",
+      "confidence": 0.85,
+      "notes": "RE-FETCHED BY THE SHOWRUNNER 2026-07-30 because the study-critic asked whether the two-to-one split had been read or carried from recall. IT HAD NOT BEEN READ. And the MULTIPLE IS AMBIGUOUS in the source: 'internal builds succeed only one-third as often' reads literally as roughly three times, while the article's own gloss implies 67 vs 33 which is twice. knowledge/AI_SCOPING.md says 'about twice'. The study now prints the unambiguous 67 percent figure and avoids asserting a multiple. Also confirms the headline: 'About 5% of AI pilot programs achieve rapid revenue acceleration; the vast majority stall, delivering little to no measurable impact on P&L.' SECONDARY SOURCE, attribute to the reporting."
+    }
+  ],
+  "stories_surviving": [
+    "ABR already runs machine learning and does not say so where clients look first (C19,C20,C21,C22,C23,C52,C53,C54,C56)",
+    "The post-field-season data QA and delivery crunch, stated by ABR in its own words (C25,C26,C27,C28,C36)",
+    "Senior staff time absorbed by documents and proposals (C29,C30,C31,C32,C40,C15,C18)",
+    "Four live federal contract vehicles running to 2028 and 2029 (C05-C12)",
+    "Daily operational data obligations for a state agency across four caribou herds (C34,C35,C23,C24)",
+    "Where AI is proven in this industry and where the regulator says it breaks (C41-C51)",
+    "Verified contact and how to address her (C01,C02,C03,C04,C33,C38)"
+  ],
+  "killed": [
+    "ABR revenue ~$9.1M: third-party aggregator only, never print",
+    "ABR headcount ~43 or 31-35: third-party estimate, only C13's 36 named people is defensible and it is a FLOOR",
+    "ABR is an ESOP: nothing on abrinc.com uses ESOP, stock, shareholder. Say employee-owned and stop",
+    "The NEPA role has been open for months: UNVERIFIABLE, archive blocked. Only C29 and C30 are provable",
+    "DraftNEPABench 15% drafting reduction or 1-5 hours per subsection: vendor blog only. Tech Xplore page confirmed to publish NO percentage and NO hours. Killed on POSITIVE EVIDENCE OF ABSENCE",
+    "Stantec Remote Sensing Center of Excellence AI claims: site JavaScript-rendered, never page-verified",
+    "LGL Alaska Anchorage street address: absent from lgl.com's own contact page, do not print an address",
+    "ABR has no drone or UAS program: CONTRADICTED BY ABR'S OWN PAGE, see C22. MOST CONSEQUENTIAL CORRECTION",
+    "SWCA 'combining scientific expertise with advanced sensor technologies, Deep Learning, and GeoAI': that string DOES NOT EXIST on the page, actual sentence at C52",
+    "OWL-C processed ~26 gigapixels in ~5 hours on a single A100: not found, paper reports ~100 patches/sec in Table 3",
+    "OWL-C 44 mosaics, 17.39 gigapixels, 2.2-4.0 cm/pixel: not returned by fetch. Headline metrics C41/C42 verified, scale details did not",
+    "KAMERA 2025-04-04 to 2025-06-10, 1.5 million image sets, 26 TB: none of it on the abstract page, only C43's 80% is supported",
+    "KAMERA published at an ICCV 2025 workshop: venue not stated, cite as arXiv preprint dated 2025-09-23",
+    "Kohls v. Ellison expert exclusion: DIES. No URL supplied, FOUR independent sources attempted and none reached (CourtListener 403, Justia 403, National Law Review 404, JD Supra empty). DO NOT CITE. C45, C48, C49 carry the human-in-the-loop weight from sources actually read",
+    "Concord Music Group v. Anthropic and Matter of Weber: no URL, not fetched, same disposition as Kohls",
+    "Counsel warnings about opponents exploiting AI concerns and AI being explainable to third parties: quoted with NO URL. An unattributed quotation cannot ship. Make the argument in our own words as reasoning, not as citation",
+    "All Ecobot numbers (40-50% less time, 250 sample points, 90 wetland units, 14 days, 3x faster, 35% margin): exact strings not on the fetched index, vendor self-reported anyway. Print none",
+    "Ramboll 'supercharging our consultants': not fetched, excluded",
+    "USFWS Kaleidoscope Pro classifier NA 5.7.03: sub-classifier version did not come back, C44 is enough",
+    "ABR Fairbanks street address 2842 Goldstream Road: fetch returned PO Box 80410 only. Use the PO Box or just say Fairbanks",
+    "BBB Forest Grove Oregon location: third-party, and C39 shows ABR lists two offices only",
+    "Gall became third president in 45 years in 2021 succeeding Steve Murphy: leadership page contains NO such sentence and does not mention Murphy. C04 supports only that she joined in 2005",
+    "Matthew Macander leads remote sensing and co-authored a June 2025 ML soil-mapping paper: bio URL 404s and the arXiv affiliation was never established. Attaching a named person to a paper that does not list his employer is exactly the error that ends a document. C15 supports only Senior Scientist",
+    "ABR manages caribou telemetry for three herds: the page names FOUR, corrected at C35",
+    "61 North auto-retrieves tide predictions and calculates observer height: neither appears on the fetched page",
+    "ABR has roughly 300 publications 2000-2026: an estimate, not a printed count. Say 'roughly two decades of listed publications' or count in code",
+    "Senior-heavy shape means senior time is absorbing production work: INFERENCE. Counts C15/C16/C17 are facts, the interpretation is OURS and must be presented as our reading, never as ABR's claim",
+    "ABR reads as a traditional field-biology shop to a procurement scorer: INFERENCE. C21 and C22 support a NARROWER AND BETTER claim. Do not upgrade the inference into a finding",
+    "'96 to 99 percent on common acoustically distinct species' as a figure from the PLoS One paper. RE-FETCHED AND FALSE. No such sentence exists. It originated as an unverified annotation inside C46's notes and was promoted to a claim without re-reading the source. Real Table 1 sensitivities are 0.88 to 0.97. Never print 96 to 99."
+  ]
+}
