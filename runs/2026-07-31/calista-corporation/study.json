@@ -86,12 +86,12 @@
         {
           "id": "matcher",
           "label": "Match finder, rules only",
-          "kind": "ai"
+          "kind": "build"
         },
         {
           "id": "queue",
           "label": "Confirmation queue",
-          "kind": "ai"
+          "kind": "build"
         },
         {
           "id": "staff",
@@ -101,7 +101,7 @@
         {
           "id": "invite",
           "label": "Enrollment invite, works offline",
-          "kind": "ai"
+          "kind": "build"
         },
         {
           "id": "record",
