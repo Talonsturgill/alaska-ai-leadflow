@@ -44,6 +44,12 @@
       "status": "success",
       "shortlist_count": 23,
       "notes": "Reconciled from Supabase on 2026-07-31. ABR, Inc. drafted; PR #21 left unmerged so the archive and ledger row never landed on main."
+    },
+    {
+      "run_date": "2026-07-31",
+      "status": "success",
+      "shortlist_count": 24,
+      "notes": "Calista Corporation. 11 study-critic rounds. Roster count corrected in code to 127 after two hand counts of 213 and 217 both proved wrong. Both segment-reflex builds killed on evidence."
     }
   ]
 }
