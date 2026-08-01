@@ -1,0 +1,429 @@
+{
+ "meta": {
+  "company": "Medical Park Family Care",
+  "domain": "mpfcak.com",
+  "segment": "Independent family medicine",
+  "place": "Anchorage, Alaska",
+  "date": "August 1, 2026",
+  "prepared_for_first": true
+ },
+ "thesis": "Your site already tells patients when the phones are busiest, and that sentence is the most useful thing we found.",
+ "brief": "Medical Park publishes something most practices keep private. Your frequently asked questions page says \"Our peak calling time is between 8:30am-10am every morning, especially Mondays.\" You then tell patients to use the portal or call after 11. That is a practice that knows its own bottleneck and is honest with people about it.\n\nWe spent this week on what travels down that line. A good deal of it has one fixed answer that you have already written down, from how a refill starts at the pharmacy to what a records release costs and which plans you take. Those answers are on your site today, and reaching them still often means reaching a person during the hour you named as your busiest.\n\nWhat we would build first has no AI in it at all. A pre-call check on your own site that answers the fixed questions, and a structured callback queue for the ones it can't, so your front desk works a ranked list instead of whatever rings next. Two weeks at a fixed 13,500 dollars. On assumptions we chose and printed, the conservative case returns about 1.7 times that over five years, and most of it is hours given back rather than money, plus one wrong commitment avoided. It is plain rules your staff can read, it can be tested exhaustively, and it can't invent an answer.\n\nHere is the honest counterweight, and we would rather you hear it from us. Your frequently asked questions page already publishes most of those answers, and the morning peak persists anyway. That is real evidence against the idea that a tidier version of your own content will move your phones. It is exactly why the ask is two weeks and measured rather than two months and confident.\n\nWhat we could not verify is most of it. No call volume, no hold times, no registration counts are published anywhere we could find, so every number in our cost table is one we chose and named, not one of yours. The tally week comes first and it is free, and the count becomes the number both sides argue from.\n\nWe are also telling you not to buy two things. Not an ambient scribe, because athenahealth's chief executive has said it goes into your core athenaOne fee at no incremental charge with testing that was to begin in the first half of this year. Not anything that answers your phone, because the arithmetic on that is bad and we show it below.\n\nThe ask is a reply. No call and no pitch.",
+ "found": {
+  "title": "You already tell patients when the phones are busiest, which is rarer than it sounds",
+  "lede": "Most companies make you go looking for the operational gap. Medical Park printed it, then printed the workaround.",
+  "body": "The sentence is on your frequently asked questions page. \"Our peak calling time is between 8:30am-10am every morning, especially Mondays.\" The next sentence points patients at the portal or asks them to call after 11. Read that as what it is, a practice paying enough attention to its own front desk to warn people about it in writing.\n\nAlmost everything has to travel down that line, much of it by design. Your contact page tells patients that for clinical questions or appointment requests they should use the phone or the Patient Portal \"rather than email\" because \"Email communication is not secure or HIPAA compliant.\" That is correct, and we want to be clear we think so. Your portal, in your own description, lets a patient request and confirm an appointment, which is a request a person then works. Saturday is walk-in only, so Saturday has no appointment channel at all.",
+  "callout_big": "8:30 to 10am",
+  "callout_note": "The window your own page names, especially Mondays. We could not find a published number for how many calls arrive in it, and we did not invent one.",
+  "body_2": "Some of what arrives in that hour has exactly one correct answer, already written on your site. Your frequently asked questions page already carries most of it, which is more than most practices publish. Reaching it still often means reaching a person, during the hour you named as your busiest."
+ },
+ "costing": {
+  "title": "We can describe the shape of this, and we can't price it, because you have not published the numbers",
+  "lede": "This is the part where a vendor would show you a chart. We are not going to, because the inputs would be someone else's.",
+  "body": "We could tell you what this costs by quoting a national average for where practice phone time goes. We are not going to, because it would be somebody else's number with your name on it, and that is the most common dishonest move in this business.\n\nSo take the shape instead. Five roles are open on your jobs page against a team your about page puts at over 90 employees, and the Registered Nurse and Radiologic Technologist postings have been up since late April, roughly three months. When hiring is the binding constraint rather than budget, an hour spent repeating an answer that is already published is an hour you can't buy back at any price.\n\nOne of those five postings suggests somebody there is already asking this question. Your Executive Assistant role, published July 7, asks for \"Process improvement experience and use of AI tools preferred\".",
+  "callout_big": "Five open roles",
+  "callout_note": "Two of them, Registered Nurse and Radiologic Technologist, posted April 30 and April 29 and still listed on August 1.",
+  "body_2": "That hiring pattern also changes how we are allowed to talk about return. Two postings aged three months reads to us as a hiring constraint rather than a budget one, and that is our inference rather than something you told us. If it is the reverse, tell us and the capacity argument becomes a cash one. Until then we label time given back to your front desk as capacity, not cash, and the table below keeps the two apart."
+ },
+ "opportunity": {
+  "title": "What changes is that a fixed answer stops needing a person at 8:40 on a Monday",
+  "lede": "Walk one real call through, as it runs today and as it would run after. The step we chose not to change is the interesting one.",
+  "outcome_body": "The outcome we would aim at is deliberately narrow. Fewer calls in your published peak whose answer was already on your site, and a structured place for the calls that genuinely need a person to land. Nothing clinical, nothing booked, nothing after hours.",
+  "before_after": {
+   "headline": "One patient asking what a full chart release costs, Monday at 8:40",
+   "before_title": "Today",
+   "after_title": "After",
+   "rows": [
+    {
+     "today": "Patient calls the main line during the hour your page names as peak.",
+     "after": "Patient opens the pre-call check on their phone.",
+     "gone": true
+    },
+    {
+     "today": "Call joins the queue behind same-day requests and refill questions.",
+     "after": "Picks records request from a short list of what people actually call about.",
+     "gone": true
+    },
+    {
+     "today": "Front desk answers, listens, and looks up the fee and the timeline.",
+     "after": "Reads your answer, seven to ten days and $25 for a full chart release, in your words.",
+     "gone": true
+    },
+    {
+     "today": "Staff member explains that records before October 2019 sit in the older system.",
+     "after": "Same answer, on the page, with the date it was last reviewed shown.",
+     "gone": true
+    },
+    {
+     "today": "Patient asks a follow-up the page had not anticipated.",
+     "after": "Patient asks a follow-up the page had not anticipated.",
+     "gone": false
+    },
+    {
+     "today": "Staff member takes the question and promises to call back.",
+     "after": "Question lands as a structured callback with a reason, a number and a best time.",
+     "gone": false
+    }
+   ],
+   "note": "The Today column is our reconstruction from what you publish, not from watching your desk, and the tally week replaces it with what actually happens. Row five is identical on purpose. A patient with a question nobody anticipated should reach a person, and we are not going to put software between them and your staff to make a figure look tidier."
+  },
+  "after_body": "The queue matters more than the page. A page that answers questions with nowhere to put the ones it can't just moves the problem to a different desk."
+ },
+ "build": {
+  "title": "Most of what we would build has no AI in it, and the first phase has none at all",
+  "lede": "A page, a list of answers you own and edit, a queue, and a counter. That is the whole of phase one.",
+  "plain_parts": "A short page on your own site that answers the questions with one fixed answer. A file of those answers that your staff edit without calling us, each with a review date. A queue where anything the page can't answer lands with a name, a number and a reason. A counter that records what was asked. Later, and only maybe, a reader that pulls text off the paper forms people still hand you.",
+  "what_it_does": "A patient opens the check on a phone, picks what they need or types a word, and gets the answer you already publish. A typed word is matched against a fixed list with the emergency and clinical lists checked first, so a symptom always beats a topic. The answers live in a versioned file you own rather than inside code. When the page can't answer, it collects the question into a callback queue your front desk works from one ordered list. Every interaction writes a row to a counter, which is how you get a number for what your 8:30 to 10am calls are actually about. Any clinical question, any symptom, anything the page is unsure of, stops and routes the person to your phone or your portal. It never guesses and it never reassures.",
+  "feasibility": "We would not put AI on your phones, in your after-hours line, on your prior authorizations, or anywhere near your coding, where the independent read is that AI is pushing billing intensity up and payers are answering with across-the-board downcoding, and we would not sell you an ambient scribe at all.\n\nThe phones are the clearest case. Answering a call end to end is roughly ten judgement steps by our count, and a narrow router that only gives hours and transfers is a much shorter chain, and chaining judgement steps multiplies their error. At 95 percent per step that is about 60 percent of calls completing correctly, at 90 percent about 35. Those per-step figures are ours, not measured on your line, and we print them so you can substitute your own. What is not in doubt is the direction, because the arithmetic compounds against you on the one channel where a missed acute complaint is a safety event rather than an inconvenience.\n\nPrior authorization is the largest slice of that phone time at 45 percent nationally, and it is the biggest thing we could have proposed to you. We are not proposing it, because not one page of yours mentions it and we will not use a national average as your number.\n\nYour after-hours arrangement, a staffed pediatric triage line and a named human backstop for adults, is more conservative than what most vendors would sell you, and we think you should keep it exactly as it is.\n\nOn the scribe, athenahealth's chief executive has said ambient documentation \"will all be embedded in the core athenaOne fee and will not be at any incremental charge\" and that testing was to begin in the first half of this year, with no release date published. We are not telling you those tools do not work. A randomised trial found one cut time in note by 9.5 percent, from 4m30s to 3m49s, while another showed no significant change. We are telling you not to buy it from anyone, us included, when your own vendor has said it will be included at no incremental charge. The call to make is to your athenahealth representative.",
+  "build_vs_buy": "We buy the hosting, the certificates and the backups, because those are commodities. We build the page, the answer file, the queue and the counter, because they are small and you should own them.\n\nIf a second phase ever happens, we would ask athenahealth what forms capability your contract already includes before we write a renderer, for the same reason we told you to wait on the scribe. If they already cover it, our work shrinks to your own paper templates, the checkbox reading and the connection into the chart. We would rather lose that scope than sell you something you already pay for.",
+  "architecture": {
+   "nodes": [
+    {
+     "id": "patient",
+     "label": "Patient on a phone",
+     "kind": "user"
+    },
+    {
+     "id": "check",
+     "label": "Pre-call check page",
+     "kind": "build"
+    },
+    {
+     "id": "answers",
+     "label": "Answers you own and edit",
+     "kind": "data"
+    },
+    {
+     "id": "queue",
+     "label": "Callback queue",
+     "kind": "build"
+    },
+    {
+     "id": "staff",
+     "label": "Front desk",
+     "kind": "user"
+    },
+    {
+     "id": "counts",
+     "label": "Counts and weekly baseline",
+     "kind": "data"
+    },
+    {
+     "id": "reader",
+     "label": "Paper form reader, gated",
+     "kind": "ai"
+    },
+    {
+     "id": "athena",
+     "label": "athenahealth record",
+     "kind": "external"
+    }
+   ],
+   "edges": [
+    {
+     "from": "patient",
+     "to": "check"
+    },
+    {
+     "from": "answers",
+     "to": "check"
+    },
+    {
+     "from": "check",
+     "to": "queue"
+    },
+    {
+     "from": "check",
+     "to": "counts"
+    },
+    {
+     "from": "queue",
+     "to": "staff"
+    },
+    {
+     "from": "queue",
+     "to": "counts"
+    },
+    {
+     "from": "reader",
+     "to": "staff"
+    },
+    {
+     "from": "staff",
+     "to": "athena"
+    }
+   ],
+   "caption": "Read left to right. Phase one is the top path and it has no model in it. The paper form reader is the only place a model appears, it belongs to a second phase, and it proposes to a person. The only line into your record starts at your front desk."
+  }
+ },
+ "roi": {
+  "title": "The conservative case clears over five years, and it clears slowly",
+  "lede": "Three scenarios. Every figure is computed from the drivers printed underneath it, and not one row is a fact about your business yet.",
+  "lede_body": "Read the marks in the left column before the numbers. Nothing here is marked verified, and that is the honest state of the evidence rather than an oversight. No call volume, hold time or registration count is published anywhere we could find, and we refused to put a national average in a column with your name on it. The tally week replaces the most important assumption in this table with your own count.",
+  "table_caption": "Five-year cost against modelled benefit, for the two-week phase one ask only. Recurring and one-time benefits are kept apart on purpose, because a one-time saving multiplied across five years is the oldest trick in this business.",
+  "table_head": [
+   "",
+   "Conservative",
+   "Most likely",
+   "Aggressive"
+  ],
+  "table": [
+   {
+    "label": "Front desk hours returned per working day",
+    "cells": [
+     "0.6",
+     "1.4",
+     "2.6"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Fully loaded front desk hourly cost",
+    "cells": [
+     "$32",
+     "$34",
+     "$36"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Repeat inbound calls removed per year",
+    "cells": [
+     "1,500",
+     "4,200",
+     "8,000"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Recurring benefit a year, and it is CAPACITY not cash",
+    "cells": [
+     "$7,200",
+     "$19,880",
+     "$41,000"
+    ],
+    "mark": "modelled",
+    "emphasis": true
+   },
+   {
+    "label": "Recurring benefit over five years, year one ramped",
+    "cells": [
+     "$30,960",
+     "$87,472",
+     "$184,500"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "One-time cash avoided, counted ONCE",
+    "cells": [
+     "$12,550",
+     "$23,600",
+     "$35,000"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Five-year benefit, both kinds together",
+    "cells": [
+     "$43,510",
+     "$111,072",
+     "$219,500"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Five-year cost of ownership",
+    "cells": [
+     "$25,110",
+     "$24,692",
+     "$24,064"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Five-year benefit per dollar spent",
+    "cells": [
+     "1.7x",
+     "4.5x",
+     "9.1x"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Share of cost covered by CASH alone",
+    "cells": [
+     "50%",
+     "96%",
+     "145%"
+    ],
+    "mark": "modelled",
+    "emphasis": true
+   },
+   {
+    "label": "Payback month on recurring benefit alone",
+    "cells": [
+     "48",
+     "19",
+     "11"
+    ],
+    "mark": "modelled"
+   }
+  ],
+  "table_note": "How to reproduce every figure. Working days are 250 a year. Phase one is $13,500 fixed, which is 2.5 person-weeks at a blended rate of about $5,400 per person-week. That rate is our assumption and you should argue with it. Training is $900 of our time to run it, and it separately asks about six to seven hours of yours. Run cost is $1,450 a year over four and a half years, which is a mid-year go-live across a five-year horizon, and it covers hosting, monitoring and about two hours a quarter of content maintenance. The maintenance is in there on purpose because your price list page says it was last updated January 30, 2024. Contingency is 20, 18 and 15 percent and it is applied to everything. So the conservative cost is 13,500 plus 900 plus 1,450 times 4.5, times 1.20, which is $25,110.\n\nRecurring benefit is hours times rate times 250 days, plus the repeat calls at about three minutes each. Year one is ramped to 30, 40 and 50 percent, so there is no day-one full benefit anywhere. A repeat call means a SECOND inbound chasing a request already made, which the queue removes rather than the page deflecting, so it is counted separately and not inside the hours row. We value one at $1.60, $1.90 and $2.20 across the three columns, which is $2,400 of the conservative $7,200.\n\nThe one-time line is 20 percent of $44,000, the second phase we would not then build, plus 15 percent of $25,000, a first-year subscription bought without a baseline. That is $12,550 conservatively. It is counted ONCE and it is never multiplied across the five years, because you only discover the write-back answer once.\n\nThe hours per day figure is ours, not yours. At about 2.5 minutes of handling per routine call the conservative column is roughly 14 deflected calls a day, and 1,500 repeat calls is about six a day. The hourly cost is anchored between your own published starting pay for a new-graduate CMA at $22 and a new-graduate RN at $37. The aggressive column is shown so you can see how wide the range really is, and it is not a case we would plan against.",
+  "payback_big": "1.7x",
+  "payback_range": "Five-year benefit per dollar in the conservative case. Most likely 4.5x, aggressive 9.1x. Read the next paragraph before you use any of those numbers.",
+  "base_rate_note": "Three things here cut against us and you should have all of them.\n\nMost of that conservative return is capacity, not cash. Hours given back to your front desk only become money if you defer a hire, avoid a backfill, or move somebody to higher-value work, and with two clinical roles open three months we do not think you would do the first. On cash alone the conservative case covers half its five-year cost, so it does not pay for itself in money. It pays for itself in hours and in one avoided mistake.\n\nOn recurring benefit alone the conservative case pays back in month 48. That is late by any normal standard, and a payback past two years should make you ask whether this is even the right thing to buy. Our answer is that a two-week fixed-price test is worth it anyway because of what it tells you, and you are entitled to disagree.\n\nOn the outside view, one widely cited study found roughly 95 percent of enterprise generative-AI pilots produce no measurable profit-and-loss impact, and that figure is directional rather than precise, its denominator is debated, and it measures pilots without profit-and-loss impact rather than AI not working. In this sector 46 percent of medical group leaders report AI made providers more productive while 27 percent report no gains at all. The nearest honest reference class for what we are proposing is not AI at all, it is self-service deflection on a site that already publishes the answers, and the base rate there is mixed at best. Your own page is the evidence, since it carries these answers today and the peak persists anyway.",
+  "value_owner": "Whoever runs the clinic day to day on the administrative side owns these numbers, not a clinician. Your site names your providers and an HR contact, and it publishes no administrator or executive title, so we are not going to assign one to anybody. They would track three things against the tally week, calls in the 8:30 to 10am block, the share answerable from already-published information, and queue items closed without a second inbound call, then report actual against baseline in writing at ninety days, including the case where the page saw little use."
+ },
+ "roadmap": {
+  "title": "The free test comes first, then two weeks, then a decision you can walk away from",
+  "lede": "Sequenced by what is cheapest to learn from, not by what is biggest to build.",
+  "body": "Before the two weeks are committed, there is a free test. Your front desk marks a tally sheet for one week, including a Monday, and we agree the kill number before it runs. A test we would refuse to lose is not a test. Everything after that is judged against your own count rather than against a forecast we wrote.",
+  "now": [
+   {
+    "item": "Run a five day call tally before you commit anything. One sheet at each phone position, one week including a Monday, nine buckets, plus a mark for could a page have answered this. Zero dollars, no software, and we write the kill number down first. Under 20 percent answerable and we tell you in writing not to build it.",
+    "metric": "One week of marks, alongside whatever call report your phone vendor already produces."
+   },
+   {
+    "item": "The pre-call check, live on your site, answering only questions with one fixed answer, built from your own pages.",
+    "metric": "Completions per week and the change in published-answer calls against the tally. Target set after the baseline, never before."
+   },
+   {
+    "item": "The structured callback queue behind it, so a request lands as a filled-in row rather than a voicemail.",
+    "metric": "Share returned the same business day, and median hours from request to callback. Baseline is zero because the channel does not exist."
+   },
+   {
+    "item": "A five day investigation of the athenahealth write-back path and its business associate terms.",
+    "metric": "Three yes or no answers in writing, with the contract language attached."
+   },
+   {
+    "item": "A named owner and a review date on every published answer, before the page ships.",
+    "metric": "A person named and the next review date already in a calendar."
+   }
+  ],
+  "next": [
+   {
+    "item": "A paper to athenahealth intake pipeline for the forms patients actually fill in, with one AI step and a person accepting every field.",
+    "metric": "Minutes per registration against the baseline with review time counted in, never out, and the reading step measured field by field against a set of your own completed forms before it is trusted anywhere."
+   },
+   {
+    "item": "Ask athenahealth what forms capability you already pay for, before we write a renderer.",
+    "metric": "A written comparison, which may well say buy rather than build."
+   },
+   {
+    "item": "Count your prior authorization load for four weeks. You run this yourself, free, whether or not you hire us.",
+    "metric": "Authorizations started per week by payer and service line, plus staff minutes."
+   }
+  ],
+  "later": [
+   {
+    "item": "Online self-scheduling and Saturday capacity visibility. Not from us. Ask athenahealth what your agreement already includes.",
+    "metric": "Share of routine bookings completed without a staff member."
+   },
+   {
+    "item": "You already refuse email for clinical questions because it is not secure. A compliant channel that is not the phone is the gap that leaves, and it is a vendor and compliance decision before it is a technology one.",
+    "metric": "Share of routine questions arriving outside the phone."
+   },
+   {
+    "item": "Anything that answers your phone stays a no from us until you have four weeks of measured volume, abandonment and reason mix, and even then the safety argument has to be answered first.",
+    "metric": "Four weeks of call data, then a conversation rather than a proposal."
+   },
+   {
+    "item": "Ambient documentation. Wait for athenahealth and spend nothing. We will help you evaluate it when it lands.",
+    "metric": "Time in note before switch-on and again at ninety days, with the bar written down first."
+   }
+  ],
+  "gates": "The first two items above are free and happen before anything is signed. The two-week fixed price covers the rest.\n\nThree gates and each is a real way out. Gate zero, day five of the two weeks. If the athenahealth answer is no, the honest recommendation becomes the page and the queue and nothing more from us.\n\nGate one, the end of two weeks, is a complete stopping point. You keep the live page and its content, the callback queue, your measured tally, the written answer on write-back, and a named owner with a review date. It is code and content you can read, host and edit, with no model in it and no dependency on us.\n\nGate two, ninety days, judged against your own tally and against a success bar you write down during the tally week, before the page goes live, so nobody can move it once the result is known.",
+  "need_from_you": "One named person who owns the answers and can be reached inside a day. About two hours from whoever answers the phone between 8:30 and 10am, plus the week of tally marks, which is the dependency everything rests on. A yes or no on whether any person keys a hand-filled form into athenahealth today. Your athenahealth account contact and permission to ask them directly. A check that each answer we copy is still current, particularly the price list."
+ },
+ "honest": {
+  "title": "Four things would make us wrong, and we would run the free test before any of them mattered",
+  "lede": "We would rather raise these than have you find them.",
+  "body": "It may not move your phones at all, and this is the assumption everything here rests on. We are assuming a meaningful share of your 8:30 to 10am peak is people asking things whose answers are already fixed and already published. The evidence cuts against us before we start, because your frequently asked questions page already carries most of those answers and the peak persists anyway. That is why we would run the tally first, for nothing, with the kill number agreed in advance. If it comes back under 20 percent we tell you not to build it.\n\nA second phase may be impossible, because whether athenahealth lets a third party write into your chart is a commercial question about a contract we have never seen. That is why the investigation sits inside the two weeks and why you can stop at the end of them with everything working.\n\nThere is a question that could delete the largest part of any second phase, so we will ask it before you do. Does any person here key a hand-filled form into athenahealth today? We guessed that somebody does, from the forms on your printable documents page that a patient fills in by hand. That is a guess about your back office, not a fact, and you can settle it in one sentence. If nobody keys them, the second phase is off."
+ },
+ "next_step_title": "The next step is small",
+ "next_step": "Read it and tell us if it landed. We are not asking for a meeting. If you want the tally sheet or the four week prior authorization count, we will send both whether or not you ever hire us.",
+ "sources": [
+  {
+   "claim": "Peak calling time, 8:30am to 10am, especially Mondays",
+   "url": "https://mpfcak.com/patient-information/frequently-asked-questions/"
+  },
+  {
+   "claim": "Phone or portal for clinical questions, not email, on security grounds",
+   "url": "https://mpfcak.com/contact-us/"
+  },
+  {
+   "claim": "Records requests, seven to ten days, $25 full chart release",
+   "url": "https://mpfcak.com/patient-information/frequently-asked-questions/"
+  },
+  {
+   "claim": "Refills initiated by the pharmacy, 72 hours asked",
+   "url": "https://mpfcak.com/patient-information/prescription-refills/"
+  },
+  {
+   "claim": "Records before October 1, 2019 behind a separate login",
+   "url": "https://mpfcak.com/patient-information/patient-portal/"
+  },
+  {
+   "claim": "Records before October 1, 2019 behind a separate login",
+   "url": "https://mpfcak.com/patient-information/patient-portal/"
+  },
+  {
+   "claim": "Patient portal capabilities, appointment requests and results",
+   "url": "https://mpfcak.com/patient-information/patient-portal/"
+  },
+  {
+   "claim": "Ten plans accepted, five others closed to new patients",
+   "url": "https://mpfcak.com/patient-information/insurance/"
+  },
+  {
+   "claim": "Saturday walk-in only, and same-day slots reserved",
+   "url": "https://mpfcak.com/patient-information/frequently-asked-questions/"
+  },
+  {
+   "claim": "After-hours routing, pediatric triage line and adult backstop",
+   "url": "https://mpfcak.com/patient-information/frequently-asked-questions/"
+  },
+  {
+   "claim": "Over 90 employees, local and physician-owned since 1971",
+   "url": "https://mpfcak.com/about-us/"
+  },
+  {
+   "claim": "Five open roles, RN and Radiologic Technologist since late April, new-graduate pay",
+   "url": "https://www.mpfcak.com/jobs/"
+  },
+  {
+   "claim": "Published procedure price list, last updated January 30, 2024",
+   "url": "https://mpfcak.com/patient-information/top-10-procedure-codes-pricing/"
+  },
+  {
+   "claim": "athenahealth as the patient portal and record system",
+   "url": "https://www.newsweek.com/athenahealth-throws-its-hat-in-ambient-scribe-ai-assistant-rings-access-health-10991353"
+  },
+  {
+   "claim": "Randomised trial of two ambient tools, one significant, one not",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12265753/"
+  },
+  {
+   "claim": "Refills initiated by the pharmacy, 72 hours asked",
+   "url": "https://www.mgma.com/mgma-stat/phones-are-still-a-backlog-costing-medical-practices-time"
+  },
+  {
+   "claim": "Medical group leaders on AI productivity gains",
+   "url": "https://www.mgma.com/mgma-stat/are-ai-tools-making-clinicians-more-productive-its-complicated"
+  },
+  {
+   "claim": "Enterprise AI pilots without measurable profit-and-loss impact",
+   "url": "https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/"
+  },
+  {
+   "claim": "Executive Assistant posting asking for AI tool experience",
+   "url": "https://mpfcak.com/jobs/executive-assistant/"
+  },
+  {
+   "claim": "Downloadable patient documents, forms and policies",
+   "url": "https://mpfcak.com/patient-information/printable-documents/"
+  }
+ ]
+}
