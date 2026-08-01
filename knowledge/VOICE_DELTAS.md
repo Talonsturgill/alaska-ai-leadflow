@@ -12,16 +12,30 @@ That promotion is a human decision, never automatic.
 
 ## Recurring patterns
 
-- **lengthened**, in 2 send(s), 3 time(s) total
+- **lengthened**, in 3 send(s), 5 time(s) total  <- READY TO PROMOTE
 - **deleted**, in 2 send(s), 2 time(s) total
-- **shortened**, in 1 send(s), 1 time(s) total
-- **agent-team framing cut**, in 1 send(s), 2 time(s) total
+- **added**, in 2 send(s), 4 time(s) total
 - **contraction**, in 1 send(s), 4 time(s) total
 - **presumption cut**, in 1 send(s), 1 time(s) total
+- **agent-team framing cut**, in 1 send(s), 2 time(s) total
+- **shortened**, in 1 send(s), 1 time(s) total
 - **cta softened**, in 1 send(s), 1 time(s) total
-- **added**, in 1 send(s), 2 time(s) total
+
+The writer keeps making these and Talon keeps undoing them. Fix the brief,
+not the individual email.
 
 ## Log
+
+### 2026-07-31, Calista Corporation
+
+- `added` not drafted, added by hand: Happy Friday,
+- `lengthened`
+  - drafted: We already did the study on closing that list and the first thing we'd build has no AI in it.
+  - sent:    We already did the week long study on closing that list and the first thing we'd build is attached along with our deep dive into your business:
+- `lengthened`
+  - drafted: Worth a reply either way.
+  - sent:    No strings, if you want to go for it we're here.
+- `added` not drafted, added by hand: Alaskaaihq.com
 
 ### 2026-07-30, ABR, Inc.
 
