@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Memory of record for dedupe. Authoritative, git-backed, always available. Supabase leadflow.leads is dual-written when reachable but is no longer required to run.",
-  "updated": "2026-07-31",
+  "updated": "2026-08-01",
   "leads": [
     {
       "company": "Goldbelt, Incorporated",
@@ -152,6 +152,25 @@
       "recommended_build": "Shareholder Reachability and Enrollment Work Queue. Roughly 85 percent deterministic, no model at all in phase one, one gated model step in phase two pre-committed not to ship if a test set does not exist.",
       "roi_summary": "Conservative 32 percent of five-year cost recovered, never pays back, loses money every year once the invitation programme is costed. Most likely 118 percent, payback month 44, which the study calls slow. Aggressive 263 percent, month 14, printed as a ceiling we would not plan on. No row marked verified.",
       "outcome": "Study shipped after eleven study-critic rounds. Two reflex builds for this segment killed on evidence, the federal proposal engine (RICE 1.67) and a Shareholder voice agent (RICE 14.06). Roster count corrected in code from 213/217 to 127. Ask is a two-week look at six to eight thousand with a written fail line, then a $40,500 pilot priced as decision data."
+    },
+    {
+      "company": "Medical Park Family Care",
+      "domain": "mpfcak.com",
+      "segment": "healthcare",
+      "location": "Anchorage",
+      "run_date": "2026-08-01",
+      "status": "drafted",
+      "fit_score": 24,
+      "why_picked": "Tied at 24 with three others across all four segments and alone at reachability 5, a general business email published on its own contact page. First healthcare lead in the ledger, a segment the market notes call the highest-ROI domain in the state.",
+      "contact_name": null,
+      "contact_role": null,
+      "contact_email": "info@mpfcak.com",
+      "contact_source": "https://mpfcak.com/contact-us/",
+      "study_path": "runs/2026-08-01/medical-park-family-care/",
+      "outcome": "Field Study delivered. Recommends a two-week deterministic build with NO AI in it, and advises against buying an ambient scribe from anyone because athenahealth has committed to bundling one into the fee they already pay.",
+      "recommended_build": "Rules-first pre-call access kit plus a structured callback queue, two weeks fixed at $13,500, with a conditional paper-to-athenahealth intake pipeline gated on three binary unknowns",
+      "roi_summary": "Conservative 1.7x over five years, 50 percent covered by cash alone, payback month 48 on recurring benefit alone. Zero verified rows, no volume data is published anywhere.",
+      "gmail_draft_id": "r7719449938830381340"
     }
   ]
 }

@@ -169,6 +169,78 @@
           "added": []
         }
       ]
+    },
+    {
+      "run_date": "2026-07-31",
+      "company": "Calista Corporation",
+      "deltas": [
+        {
+          "kinds": [
+            "added"
+          ],
+          "before": null,
+          "after": "Happy Friday,",
+          "dropped": [],
+          "added": []
+        },
+        {
+          "kinds": [
+            "lengthened"
+          ],
+          "before": "We already did the study on closing that list and the first thing we'd build has no AI in it.",
+          "after": "We already did the week long study on closing that list and the first thing we'd build is attached along with our deep dive into your business:",
+          "dropped": [
+            "ai",
+            "has",
+            "in",
+            "it",
+            "no"
+          ],
+          "added": [
+            "along",
+            "attached",
+            "business",
+            "deep",
+            "dive",
+            "into",
+            "is",
+            "long"
+          ]
+        },
+        {
+          "kinds": [
+            "lengthened"
+          ],
+          "before": "Worth a reply either way.",
+          "after": "No strings, if you want to go for it we're here.",
+          "dropped": [
+            "a",
+            "either",
+            "reply",
+            "way",
+            "worth"
+          ],
+          "added": [
+            "for",
+            "go",
+            "here",
+            "if",
+            "it",
+            "no",
+            "strings",
+            "to"
+          ]
+        },
+        {
+          "kinds": [
+            "added"
+          ],
+          "before": null,
+          "after": "Alaskaaihq.com",
+          "dropped": [],
+          "added": []
+        }
+      ]
     }
   ]
 }

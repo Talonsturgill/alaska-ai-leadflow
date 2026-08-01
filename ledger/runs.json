@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Per-run audit and the double-fire guard. Reconstructed rows before 2026-07-29 are inferred from archived artifacts, not from the database.",
-  "updated": "2026-07-31",
+  "updated": "2026-08-01",
   "runs": [
     {
       "run_date": "2026-07-16",
@@ -50,6 +50,12 @@
       "status": "success",
       "shortlist_count": 24,
       "notes": "Calista Corporation. 11 study-critic rounds. Roster count corrected in code to 127 after two hand counts of 213 and 217 both proved wrong. Both segment-reflex builds killed on evidence."
+    },
+    {
+      "run_date": "2026-08-01",
+      "status": "success",
+      "shortlist_count": 24,
+      "notes": null
     }
   ]
 }
