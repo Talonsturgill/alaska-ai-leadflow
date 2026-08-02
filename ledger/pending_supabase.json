@@ -1,8 +1,17 @@
 {
-  "version": 1,
-  "note": "Writes owed to Supabase because it was unreachable when the run shipped. Backfill these when it recovers, then empty the list.",
-  "updated": "2026-07-29",
-  "pending": [],
-  "last_backfill": "2026-07-29",
-  "backfill_note": "All owed writes landed after Supabase recovered at ~13:45 UTC. leadflow.runs row and leadflow.leads row for Allen Marine both written, status sent. study_json was NOT backfilled, the full study lives in git at runs/2026-07-29/allen-marine-tours/ which is the record of authority. INBOUND FIRST checked on recovery, one consented opt-in ever (Paychex 2026-07-23) and it was already suppressed, so nothing was owed to anyone."
+ "version": 1,
+ "note": "Writes owed to Supabase because it was unreachable when the run shipped. Backfill these when it recovers, then empty the list.",
+ "updated": "2026-08-02",
+ "pending": [
+  {
+   "owed": "leadflow.leads.study_json for northcountrycharters.com",
+   "row_id": "0756fbdf-49c5-46e8-8319-809aed0f6bf4",
+   "why": "Supabase was UP and every other column landed, including dossier_md, competitors, ai_opportunities, sources and the draft. The study object is about 23KB of JSON and was not written in this run. This is a size and run-budget limitation, NOT an outage.",
+   "source_of_truth": "runs/2026-08-02/north-country-charters/study.json in this repo, and the rendered study live at https://alaskaaihq.com/awesomeproposal/north-country-charters/",
+   "how_to_backfill": "update leadflow.leads set study_json = <contents of runs/2026-08-02/north-country-charters/study.json>::jsonb where lower(domain)='northcountrycharters.com';",
+   "impact": "Dashboard rendering of the study object only. Dedupe, the pipeline row, the audit row and the paper trail are all complete. study_path points at git and the live URL serves the study."
+  }
+ ],
+ "last_backfill": "2026-07-29",
+ "backfill_note": "All owed writes landed after Supabase recovered at ~13:45 UTC. leadflow.runs row and leadflow.leads row for Allen Marine both written, status sent. study_json was NOT backfilled, the full study lives in git at runs/2026-07-29/allen-marine-tours/ which is the record of authority. INBOUND FIRST checked on recovery, one consented opt-in ever (Paychex 2026-07-23) and it was already suppressed, so nothing was owed to anyone."
 }

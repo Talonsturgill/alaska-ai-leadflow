@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Memory of record for dedupe. Authoritative, git-backed, always available. Supabase leadflow.leads is dual-written when reachable but is no longer required to run.",
-  "updated": "2026-08-01",
+  "updated": "2026-08-02",
   "leads": [
     {
       "company": "Goldbelt, Incorporated",
@@ -171,6 +171,25 @@
       "recommended_build": "Rules-first pre-call access kit plus a structured callback queue, two weeks fixed at $13,500, with a conditional paper-to-athenahealth intake pipeline gated on three binary unknowns",
       "roi_summary": "Conservative 1.7x over five years, 50 percent covered by cash alone, payback month 48 on recurring benefit alone. Zero verified rows, no volume data is published anywhere.",
       "gmail_draft_id": "r7719449938830381340"
+    },
+    {
+      "company": "North Country Charters",
+      "domain": "northcountrycharters.com",
+      "segment": "tourism",
+      "location": "Homer, Alaska (Homer Spit)",
+      "status": "drafted",
+      "fit_score": 22,
+      "why_picked": "Highest ICP total of 21 page-verified candidates, tied at 22 with Alaska Escrow and Title and won on the contract tiebreak, reachability level at 5 and offer_fit 5 against 4. Their own FAQ publishes the finding, that voicemails and emails aren't always seen right away and every minute counts, sitting in a paragraph that also promises to resell cancelled seats and return the deposit.",
+      "contact_name": null,
+      "contact_role": null,
+      "contact_email": "northcountrycharters@gmail.com",
+      "contact_source": "General business inbox, verified verbatim on both northcountrycharters.com/contact-1 and /about by the fact-checker and re-confirmed at Phase 6. Not a personal address. Site-published titles exist for Brian Ritchie (Owner and Captain of The Irish) and Kathy Brennan (co-owner and office manager).",
+      "study_path": "runs/2026-08-02/north-country-charters/field-study.html",
+      "outcome": "Turn more of the demand already reaching one phone line and one shared inbox into paid seats, without adding a person.",
+      "recommended_build": "The 14-Day Clock, downscoped. Email only, one classifier node, behind a two-week measurement fortnight. Week one ships a plain Gmail autoresponder with no AI in it.",
+      "roi_summary": "Ask is 2,800 dollars for the measurement fortnight. Conservative case recovers 104 percent counting the whole three-year commitment avoided, and 83 percent counting only year one, which does not clear, and both are printed. The Clock itself gets a break-even of 19 to 54 recovered seats a season rather than a dollar return, because no charter rate is published anywhere.",
+      "gmail_draft_id": "r4069284968970934362",
+      "run_date": "2026-08-02"
     }
   ]
 }
