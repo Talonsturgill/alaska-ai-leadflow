@@ -8,32 +8,32 @@
   "prepared_for_first": true
  },
  "thesis": "Your FAQ asks guests to phone because voicemails and emails aren't always seen, and real money rides on that.",
- "brief": "We spent this week studying North Country Charters. Nobody asked us to. We do this for one Alaska business at a time, we give it away, and this is yours.\n\nWhat we looked at: everything you publish. Your home page, your FAQ, your captains, your contact details. Then your neighbours on the Spit, Central Charters, Smokey Bay Air, Emerald Air Service, Destination Alaska Charters, Bear Viewing Alaska, and what the booking platforms behind them actually do. Then the honest research on what AI is doing for operators your size, which is less than the people selling it suggest.\n\nWhat we found sits in one sentence you wrote yourselves. Your FAQ says: \"IF YOU NEED TO CANCEL please call us and confirm over the phone with us that you are cancelling. We don't always see voicemails or emails right away and every minute counts.\" Directly beneath it, your own policy attaches money to timing. Fifty percent at fourteen days or less. One hundred percent at twenty four hours or a no-show. You have written down that a channel is unreliable, and you have written down what the clock is worth.\n\nBe clear about what that is and is not. It is a fact about a message channel. It is not us telling you that you're overwhelmed, and we looked for that. Nothing you publish says the phones ring off the hook, so we won't imply it.\n\nWhat we'd build first has no AI in it at all. A plain automatic reply on your shared inbox, in the wording already on your own FAQ, so every guest who writes in gets your call-and-confirm request inside a minute instead of only the ones who read the FAQ page. That is a Gmail setting and about ten minutes of work.\n\nWhat we'd ask you to buy is two weeks of counting. Two thousand eight hundred dollars, fixed. Nothing logs how many messages reach you or how many are about cancelling, so no honest price exists for the real build. The fortnight produces that number, and it ends with a written verdict that includes \"build nothing further.\"\n\nWhat we couldn't verify: your charter rates, your message volume, and whether that FAQ line still describes today. So there is no dollar return in here for the bigger build, only a break-even you can test yourself.\n\nThe ask is a reply. Not a call.",
+ "brief": "We spent this week studying North Country Charters. Nobody asked us to. We do this for one Alaska business at a time, we give it away, and this is yours.\n\nWhat we looked at: everything you publish. Your home page, your FAQ, your captains, your contact details. Then other Homer operators, Central Charters, Smokey Bay Air, Emerald Air Service, Destination Alaska Charters, Bear Viewing Alaska, and what the booking platforms behind them do. Then the honest research on what AI is doing for operators your size, which is less than the people selling it suggest.\n\nWhat we found is one paragraph you wrote yourselves. It opens with \"We have phenomenal office staff and we do everything we can to resell cancelled seats,\" and it ends with \"IF YOU NEED TO CANCEL please call us and confirm over the phone with us that you are cancelling. We don't always see voicemails or emails right away and every minute counts.\"\n\nBoth halves are true at once, and the second is not a complaint about the first. Your office can be as good as you say and a message can still sit unseen, because those are different problems. One is about people and the other is about a channel. Everything below is about the channel.\n\nWe are not telling you that you're overwhelmed, and we looked for that. Nothing you publish says the phones ring off the hook, so we won't imply it.\n\nWhat we'd build first has no AI in it. A plain automatic reply on your shared inbox, in the wording already on your own FAQ, so every guest who writes in gets your call-and-confirm request instead of only the ones who read the FAQ page. That is a Gmail setting and about ten minutes of work.\n\nWhat we'd ask you to buy is two weeks of counting. Two thousand eight hundred dollars, fixed. Nothing logs how many messages reach you or how many are about cancelling, so no honest price exists for the real build. The fortnight produces that number, and it ends with a written verdict that includes \"build nothing further.\"\n\nWhat we couldn't verify: your charter rates, your message volume, and whether that FAQ line still describes today. So there is no dollar return in here for the bigger build, only a break-even you can test yourself.\n\nThe ask is a reply. Not a call.",
  "found": {
-  "title": "You already wrote down where this hurts, on your own FAQ",
+  "title": "You already wrote down where this hurts, and you wrote the answer to it too",
   "lede": "The strongest thing we found about your business, you published yourselves.",
-  "body": "Most studies like this open with a problem the writer invented. Yours was already on the page. Your FAQ tells guests, in capitals, to phone and confirm a cancellation rather than trust the message they just sent, and it says why in the same breath.\n\nRead that against the rest of what you publish. One number. One shared inbox. Hours of \"Sunday - Saturday: 6:00am - 7:00/8:00pm\" in season, and on the home page, \"Winter Hours Are Inconsistent, Leave a Voicemail.\" No second line and no answering service anywhere on the site. Brian is listed as \"Owner & Captain of The Irish,\" so for much of a summer day he is on the water.",
+  "body": "Most studies like this open with a problem the writer invented. Yours was already on the page, in a single paragraph of your FAQ. That paragraph sets out your money lines first, fifty percent at fourteen days or less, the full rate at twenty four hours or a no-show. It then says something most operators would not put in writing: \"If we can resell cancelled spaces, then we do not retain the deposit.\" It closes by telling guests, in capitals, to phone and confirm a cancellation rather than trust the message they just sent.\n\nRead that against the rest of what you publish. One number. One shared inbox. Hours of \"Sunday - Saturday: 6:00am - 7:00/8:00pm\" in season, and on the home page, \"Winter Hours Are Inconsistent, Leave a Voicemail.\" Your site publishes no second line and no answering service. Brian is listed as \"Owner & Captain of The Irish,\" which is our reason for guessing he isn't at a desk much in August, though you'd know better.",
   "callout_big": "One phone line, one shared inbox, no answering service",
-  "callout_note": "What your contact page publishes, and what it doesn't. Outside your posted hours the only path in is voicemail.",
-  "body_2": "One thing we want to be careful about. We are not saying you're drowning, and we went looking. No page of yours says the phones ring off the hook or that calls get missed. What is there is a written acknowledgement that one channel is slow, sitting above the paragraphs where the money changes. That is a smaller claim than a salesperson would make, and it is the one the evidence supports."
+  "callout_note": "What your contact page publishes, and what it doesn't. We can only see what you publish, so treat this as the outside view of your setup rather than a description of it.",
+  "body_2": "One thing we want to be careful about. We are not saying you're drowning, and we went looking. No page of yours says the phones ring off the hook, and the same paragraph that admits the channel is slow also says your office staff are phenomenal. We take both at face value. A good office and a slow channel are different things, and only one of them is a software problem."
  },
  "costing": {
-  "title": "The clock costs you in two directions, and your own policy sets both",
-  "lede": "Your cancellation rules are the clearest statement of what timing is worth here.",
-  "body": "A charter seat is perishable in a way a hotel room barely is. Once the boat leaves, that seat earned nothing and can never be sold again. Your policy already prices the run-up to that moment. A cancellation that reaches you late doesn't change what the guest owes, since they gave notice when they sent it. What it changes is how long that seat had to find someone else.",
-  "callout_big": "Two weeks, then one day",
-  "callout_note": "The two lines in your published policy where the money changes. Both count from the guest's notice, not from when it was read.",
-  "body_2": "There is a second direction, and it ends up in reviews. A guest who emailed four days out, then got charged as though they hadn't, is holding written proof they told you. Nobody wins that conversation.\n\nWe can't tell you what either costs you a season. That number doesn't exist, and inventing one would be the fastest way to lose your trust."
+  "title": "You already promised to resell cancelled seats, and the clock decides whether you can",
+  "lede": "Your own policy sets the stakes better than we could.",
+  "body": "A charter seat is perishable in a way a hotel room barely is. Once the boat leaves, that seat earned nothing and can never be sold again. Your policy prices the run-up to that moment, and it does something more unusual too. You wrote that if you resell a cancelled space you don't keep the deposit.\n\nThat is a promise with a clock on it. Reselling is what lets you hand the deposit back, and reselling gets harder the later you learn the seat is free.",
+  "callout_big": "\"If we can resell cancelled spaces, then we do not retain the deposit.\"",
+  "callout_note": "Your FAQ. It is the most generous line on the page, and it is the one that depends most on timing.",
+  "body_2": "There is a second direction, and it ends up in reviews. A guest who wrote to you well ahead, then found the seat had not been resold, is a conversation nobody wins. Your own paragraph says you do everything you can to resell. The build is not about trying harder, it is about the message arriving sooner.\n\nWe can't tell you what any of this costs you a season. That number doesn't exist, and inventing one would be the fastest way to lose your trust."
  },
  "opportunity": {
   "title": "The change is that a message stops waiting for someone to open the inbox",
-  "lede": "One real cancellation, walked step by step, before and after.",
+  "lede": "One cancellation, walked step by step. We're guessing at your side of it, so correct us.",
   "outcome_body": "Nothing about how guests reach you changes. No new number, no new inbox, no app, nothing to sign into. The work happens around the channel you already have.",
   "before_after": {
    "headline": "A guest emails at 9pm to cancel Saturday",
    "before_title": "Today",
    "after_title": "After",
-   "note": "Look at the fifth row. The call to the guest is identical on both sides, deliberately. That conversation is the part of your business worth protecting, so we're not putting a machine near it. The fourth row barely moves either, because checking how close Saturday is means opening FareHarbor, and we'd rather a person did that than have software guess at a date that governs real money.",
+   "note": "The Today column is our reading of how this probably goes, not something we watched, so strike anything we got wrong. Look at the fifth row. The call to the guest is identical on both sides, deliberately. That conversation is the part of your business worth protecting, so we're not putting a machine near it. The fourth row barely moves either, because checking how close Saturday is means opening FareHarbor, and we'd rather a person did that than have software guess at a date that governs real money.",
    "rows": [
     {
      "today": "A guest emails at 9pm to cancel Saturday.",
@@ -47,17 +47,17 @@
     },
     {
      "today": "Nobody knows it is there until someone next opens the inbox.",
-     "after": "One text reaches Kathy's phone saying a message reads like a cancellation.",
+     "after": "One text reaches whoever is covering the inbox, saying a message reads like a cancellation.",
      "gone": true
     },
     {
      "today": "Whoever opens it first works out how close Saturday is.",
-     "after": "Kathy opens FareHarbor and checks the date herself. Ten seconds.",
+     "after": "A person opens FareHarbor and checks the date. Ten seconds.",
      "gone": false
     },
     {
-     "today": "Kathy calls the guest back to confirm.",
-     "after": "Kathy calls the guest back to confirm.",
+     "today": "Someone calls the guest back to confirm.",
+     "after": "Someone calls the guest back to confirm.",
      "gone": false
     },
     {
@@ -72,9 +72,9 @@
  "build": {
   "title": "What we would build is small, and most of it isn't AI",
   "lede": "One model call, one text message, and a count nobody has taken.",
-  "plain_parts": "The moving pieces, in plain nouns. An automatic reply, which is a setting inside your own Gmail. A reader that watches new mail with a key that can only look, never change. One short question put to a language model, is this message about cancelling. A log with a row per message. A text to a phone Kathy already carries.",
-  "what_it_does": "The automatic reply goes out first, in week one, before any model exists. Every message gets the same fixed sentence from your FAQ, so it can't say anything wrong about a booking, because it says nothing about any booking. You approve the wording first.\n\nThe reader copies each new message, blanks out the name and phone number, and asks one question of one model. When the answer is yes, one text goes to Kathy. If the guest still has no reply an hour later, one goes to Brian. Six a day maximum, and a word you can text back that silences it.",
-  "feasibility": "We looked hard at whether this needs AI at all, and mostly it doesn't. The date arithmetic belongs in code where it can be tested, not in a model where it can be invented. The guest reply is one canned sentence. Which refund rule applies on a weather day is a two-way branch out of your own policy. Being reachable while a captain is on the water is a phone company purchase, not software.\n\nOne job resists a rule. A keyword filter catches \"I need to cancel\" and misses \"family emergency, we won't make Saturday.\" People write it a hundred ways and the point is catching all of them. That is the only place we put a model.\n\nWhere we would not use it: anywhere a guest gets bad news. A study of 467 people found willingness to book fell further with an AI agent than with a human when the news was bad. Weather cancellations are that moment for you.",
+  "plain_parts": "The moving pieces, in plain nouns. An automatic reply, which is a setting inside your own Gmail. A reader that watches new mail with a key that can only look, never change. One short question put to a language model, is this message about cancelling. A log with a row per message. A text to whichever phone you tell us to send it to.",
+  "what_it_does": "The automatic reply goes out first, in week one, before any model exists. Every message gets the same fixed sentence from your FAQ, so it can't say anything wrong about a booking, because it says nothing about any booking. You approve the wording first.\n\nThe reader copies each new message, blanks out the name and phone number, and asks one question of one model. When the answer is yes, one text goes to whoever you nominate. If the guest still has no reply an hour later, it goes to a second person. Six a day maximum, and a word you can text back that silences it.",
+  "feasibility": "We looked hard at whether this needs AI at all, and mostly it doesn't. The date arithmetic belongs in code where it can be tested, not in a model where it can be invented. The guest reply is one canned sentence. Which refund rule applies on a weather day is a two-way branch out of your own policy. Being reachable when nobody is at the desk is a phone company purchase, not software.\n\nOne job resists a rule. A keyword filter catches \"I need to cancel\" and misses \"family emergency, we won't make Saturday.\" People write it a hundred ways and the point is catching all of them. That is the only place we put a model.\n\nWhere we would not use it: anywhere a guest gets bad news. A study of 467 people found willingness to book fell further with an AI agent than with a human when the news was bad. Weather cancellations are that moment for you.",
   "build_vs_buy": "Almost all of it is bought. The automatic reply is a Gmail setting, the mailbox access is Google's own, the model is off the shelf. Two things are ours to build, the small program in the middle, and the labelled set of your real messages that shows whether the model is any good. That second one you keep.\n\nOne thing we won't build. FareHarbor, which you already pay for, has announced FareHarbor Agent, described on their own page as answering guest questions across phone, email, chat and social, and rolling out to a select group of operators. Ask them for it. If it covers this, we stop billing.",
   "architecture": {
    "nodes": [
@@ -154,7 +154,7 @@
  "roi": {
   "title": "We're asking for 2,800 dollars, and the conservative case clears it by four points",
   "lede": "The honest return of the fortnight is a number you don't have, not a saving we projected.",
-  "lede_body": "There is no dollar return here for the bigger build, because producing one would mean inventing your charter rate and your message volume. Neither is published anywhere and we won't make them up.\n\nWhat it gets instead is a break-even you can test against your own season. At our indicative 5,500 to 8,000 dollars plus running costs over three years, the Clock pays for itself somewhere between 19 and 54 recovered seats a season. At 350 dollars a seat, our assumption and not your number, that is 24 seats at the low end of our price and 38 at the high end. We count only half a seat's value, because your own deposit already protects the other half.\n\nAsk whether that many late cancellations even happen to you. If the answer is obviously not, you have your verdict, and it cost you nothing.",
+  "lede_body": "There is no dollar return here for the bigger build, because producing one would mean inventing your charter rate and your message volume. Neither is published anywhere and we won't make them up.\n\nWhat it gets instead is a break-even you can test against your own season. Your policy is what makes the arithmetic work. If a cancelled seat goes unsold you keep the fifty percent deposit. If you resell it you hand that deposit back and collect the full rate from the new guest, so reselling is worth about half a seat to you, not a whole one. We used the half. Using the whole seat would have halved the threshold in our favour and it would have been wrong.\n\nAt our indicative 5,500 to 8,000 dollars plus running costs over three years, the Clock needs between 19 and 54 recovered seats a season to pay for itself. That full spread covers both ends of our price and three guesses at what a seat is worth. Fix the seat at 350 dollars, our assumption and not your number, and it narrows to 24 seats a season at the bottom of our price and 38 at the top.\n\nAsk whether that many late cancellations even happen to you. If the answer is obviously not, you have your verdict, and it cost you nothing.",
   "table_caption": "The measurement fortnight, the only thing being asked for today",
   "table_head": [
    "",
@@ -237,13 +237,13 @@
   "table_note": "Assumptions, all ours and all arguable. Our fee is fixed and can't overrun, and we still added contingency on top. Your time is priced at an assumed 50 dollars an hour, our figure, not your payroll. The largest driver is the chance the count says build nothing, set at 40 percent in the conservative case. That is the first number you should argue with, because if you think it should be 20 percent the conservative case fails and you shouldn't buy the fortnight. One result we'd rather show than bury: the autoresponder alone recovers 25 percent of the fee over three years. It is not what pays for this. The number is.",
   "payback_big": "104%",
   "payback_range": "of the fortnight's cost comes back in the conservative case. It clears by four points, not by a landslide, and it clears inside one year rather than the five most cases are stretched over.",
-  "base_rate_note": "The outside view first, because it applies to us too. Roughly 95 percent of enterprise AI pilots produce no measurable impact on the books. Your industry sits near the bottom of AI adoption, around 8 percent, and we found no independently measured deployment at family-run charter scale anywhere. That absence is not a reason to be first. It is why we're selling two weeks of counting instead of a build.",
-  "value_owner": "Kathy Brennan owns the number, because it lands in the inbox she runs and every alert routes to her first. At the end of the fortnight three assumptions above get replaced with actuals from your own records."
+  "base_rate_note": "The outside view first, because it applies to us too. Your industry sits near the bottom of AI adoption, around 8 percent, and we could not find a single independently measured AI deployment at family-run charter scale anywhere. The one small-operator case study we did find was published by the vendor selling the product, in a different industry, which is not evidence and we won't dress it up as any. That absence is not a reason to be first. It is why we're selling two weeks of counting instead of a build.",
+  "value_owner": "We'd propose one named owner for the number rather than assume one. Kathy is the co-owner and office manager by your own page, so she is our suggestion, and you should override us if the inbox actually sits with someone else. At the end of the fortnight three assumptions above get replaced with actuals from your own records."
  },
  "roadmap": {
   "title": "Start with two weeks of counting, and keep the exit real",
   "lede": "Sequenced so the cheapest, most reversible thing happens first.",
-  "body": "One date matters most. Your season closes mid-September, so a fortnight started by 24 August measures real summer traffic. Miss it and the next honest window is May 2027. The off-season work runs the other way and gets better as the season closes.",
+  "body": "One question decides the timing and only you can answer it. We're assuming your season winds down through September, which means a fortnight starting in late August would measure real summer traffic. If that is wrong, say so and we'll move it. The off-season work runs the other way and gets better as the season closes.",
   "now": [
    {
     "item": "Ask FareHarbor for the Agent pilot. Costs nothing, and we recommend it whether or not you hire us.",
@@ -251,7 +251,7 @@
    },
    {
     "item": "Switch on the automatic reply, in your FAQ's own wording, with no AI in it.",
-    "metric": "Every email answered inside a minute, from a baseline of none."
+    "metric": "Share of inbound email getting a written acknowledgement, measured against whatever it is now, which we haven't seen."
    },
    {
     "item": "Sign the data agreement and grant read-only mailbox access.",
@@ -266,7 +266,7 @@
     "metric": "A written answer on whether transcription exists."
    },
    {
-    "item": "The written verdict, delivered inside your season.",
+    "item": "The written verdict, delivered before your season winds down.",
     "metric": "A yes or no against a threshold both sides signed before day one."
    }
   ],
@@ -285,7 +285,7 @@
    },
    {
     "item": "The off-season desk, an autoresponder and an interest form. No chatbot, no model.",
-    "metric": "Off-season inquiries captured, against a voicemail baseline of nothing."
+    "metric": "Off-season inquiries captured with a contact and a date, against a baseline the fortnight establishes."
    },
    {
     "item": "Weather-day notifications, templates with a human on the send button.",
@@ -295,7 +295,7 @@
   "later": [
    {
     "item": "Filling a freed seat from a standby list. A database query and a text, with no AI in it.",
-    "metric": "Consented names on the list, zero today."
+    "metric": "Consented names on the list, then seats resold before departure."
    },
    {
     "item": "A staffable text path. Emerald Air Service publishes text and WhatsApp. We are not the vendor for this one.",
@@ -315,7 +315,7 @@
    }
   ],
   "gates": "Four gates, and the money moves one at a time. The count that decides gate one is written down and signed before anything starts, so it can't be rationalised backwards once the data lands. Gate one is the real exit. If the fortnight comes in under that bar, our recommendation says the build is not worth making, you keep the automatic reply and the numbers, and you buy nothing further from us. On today's evidence that outcome is genuinely live. Gate two, measured accuracy has to land inside the range we assumed. Gate three, the Clock has to beat the baseline over a full in-season month. Gate four, nothing later is funded until the number it depends on exists.",
-  "need_from_you": "A signed data agreement and consent from both of you, before any access. Read-only mailbox access through Google's own consent screen, revocable in one click, and no password ever shared. A forwarding rule works instead if you'd rather. Fifteen minutes from both of you on day one to agree the threshold and what counts as a cancellation. Your sign-off on the reply wording. Ten minutes a week from Kathy checking our labels."
+  "need_from_you": "A signed data agreement and consent from both of you, before any access. Read-only mailbox access through Google's own consent screen, revocable in one click, and no password ever shared. A forwarding rule works instead if you'd rather. Fifteen minutes from both of you on day one to agree the threshold and what counts as a cancellation. Your sign-off on the reply wording. Ten minutes a week from whoever knows the inbox best, checking our labels."
  },
  "honest": {
   "title": "Four things that could make this the wrong call, and what we'd do about each",
@@ -323,7 +323,7 @@
   "body": "Your existing vendor may do this for free. This is the biggest commercial risk here and we haven't retired it. FareHarbor Agent already covers email, and alerting an operator is an easier feature for them to add than the guest-facing one they've shipped. So we tell you to ask for the pilot now, before you spend anything with us.\n\nThe honest ceiling may be small. If two weeks turn up a handful of cancellation emails, the right answer is that you should build nothing. That exit is written in with a threshold agreed before any number exists, because a gate nobody would honour is worse than no gate. You keep the reply, you keep the count, and the money bought the number that stopped a larger mistake.\n\nLate August only tells you about late August, so the finding gets labelled August-only rather than folded into a build to make the annual case look bigger.\n\nWe may be reading one sentence too hard. That FAQ line could be old policy text that no longer describes how anything works today. Two weeks of real messages tests it, and \"the channel is fine\" is a legitimate result that ends with us recommending you build nothing."
  },
  "next_step_title": "The next step is a reply, not a call",
- "next_step": "If this was useful, tell us. If it was wrong somewhere, tell us that instead, we'd rather know. There is nothing to book and nothing to sit through. If you want the fortnight, we'd need access by 17 August to start on the 24th.",
+ "next_step": "If this was useful, tell us. If it was wrong somewhere, tell us that instead, we'd rather know, and there are places above where we've guessed at your side of things. There is nothing to book and nothing to sit through. If you want the fortnight, the sooner it starts the more of your season it sees.",
  "sources": [
   {
    "claim": "Your hours, the winter voicemail line, and since 1979",
@@ -380,10 +380,6 @@
   {
    "claim": "AI review summaries downplaying complaints",
    "url": "https://travel.yahoo.com/advice/safety/articles/booked-disaster-tripadvisor-ai-accused-223127463.html"
-  },
-  {
-   "claim": "The one small-operator case study, published by its vendor",
-   "url": "https://www.vendasta.com/blog/call-answering-service-for-small-business/"
   },
   {
    "claim": "North Country listed independently of your own site",
