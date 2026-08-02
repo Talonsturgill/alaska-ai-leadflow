@@ -1,0 +1,154 @@
+{
+ "company": "North Country Charters",
+ "domain": "northcountrycharters.com",
+ "location": "Homer, Alaska (Homer Spit)",
+ "segment": "tourism",
+ "company_analyst": {
+  "what_they_do": "Homer Spit fishing charter operator running halibut, salmon, and combo trips in Kachemak Bay and Cook Inlet from a fleet of independently owner-operated boats. Also runs boat transport for unguided spring/fall black bear and Sitka blacktail deer hunters on the lower Kenai Peninsula, helps arrange hiking, fjord kayaking and bear viewing as add-ons, and rents one guest room above the charter office on the Homer Spit boardwalk, bookable through FareHarbor.",
+  "size": "Small multi-owner charter operation. Their Captains and Boats page names five owner-captains each running their own vessel (Clay Duda / Irish Mist, Ben Martin / Longshot, Jay Keller / Tuff Stuff, a 35ft Bertram, Al Kitner / Beau Soleil, Pelle Bergstrom / Storm Petrel). Names You Might Know adds Brian Ritchie, captain of The Irish, and co-captain Finn Raupp-Larson. The two pages do not fully reconcile boat names. Office side is at minimum one named office manager, Kathy Brennan, with one listed business phone line and one shared inbox. A ZoomInfo headcount of 7 is an unverified third-party data-broker number and must not be quoted.",
+  "locations": [
+   "4287 Homer Spit Rd. #10, Homer, Alaska 99603 (charter office, guest room above it)"
+  ],
+  "revenue_model": "Per-trip charter bookings (full, three-quarter and half-day halibut, 8-10 hour salmon, 8-12 hour combo), a nightly-rate guest room booked via FareHarbor, and paid boat transport for unguided black bear and Sitka blacktail deer hunters. Kayaking, hiking and bear viewing outside Kachemak Bay are arranged for guests rather than directly operated.",
+  "pains": [
+   {
+    "pain": "One phone line and one email inbox cover charter booking, guest-room booking, hunt-transport booking and general inquiries, with explicitly unreliable winter coverage",
+    "evidence_quote": "Winter Hours Are Inconsistent, Leave a Voicemail",
+    "also": "Hours listed as Sunday - Saturday: 6:00am - 7:00/8:00pm",
+    "source_url": "https://www.northcountrycharters.com/",
+    "kind": "fact"
+   },
+   {
+    "pain": "The business treats phone confirmation as time-critical and puts the burden on the caller to reach a person fast, a sign the cancellation workflow runs through a human picking up rather than through a system",
+    "evidence_quote": "IF YOU NEED TO CANCEL please call us and confirm over the phone...every minute counts.",
+    "source_url": "https://www.northcountrycharters.com/faq",
+    "kind": "fact"
+   },
+   {
+    "pain": "One named office manager carries the administrative load for a multi-boat, multi-product operation at the peak of visitor season",
+    "evidence_quote": "Kathy Brennan, Owner and Office Manager, handles everything no one else wants to deal with, including scheduling, guest services and company administration.",
+    "source_url": "https://www.northcountrycharters.com/names-you-might-know",
+    "kind": "fact"
+   },
+   {
+    "pain": "Capacity and booking mismatch across a fleet of independently owned boats has surfaced as a real customer complaint",
+    "evidence_quote": "Do not oversell your boat! Reviewer describes a six-person charter where only three could fish at a time while the other three waited, and the group missed a planned species as a result.",
+    "source_url": "https://www.tripadvisor.com/ShowUserReviews-g31009-d2186481-r804300891-North_Country_Charters-Homer_Alaska.html",
+    "kind": "fact"
+   },
+   {
+    "pain": "One office running four distinct sellable products through one phone number during peak season, with no confirmed answering service or overflow staffing beyond FareHarbor",
+    "evidence_quote": "n/a, structural inference from one phone and email, one named office manager, and four active product lines listed on their own site",
+    "source_url": "https://www.northcountrycharters.com/",
+    "kind": "inference"
+   }
+  ],
+  "notable_context": "Operating since 1979, their own site says Fishing the wild, wonderous waters of Kachemak Bay and Cook Inlet since 1979, corroborated by a Fish Alaska Magazine outfitter listing describing a family-owned enterprise nearly 45 years in business. About page self-describes as Local, Woman Co-Owned. TripAdvisor shows 362 reviews, ranked #9 of 76 Homer boat tours and water sports operators, per search results. Wanderlog aggregates 4.9/5 over 311 reviews, dominated by praise for named captains and abundant catches, with no pattern of responsiveness complaints in the reviews retrieved. The scout's bear-viewing hunts phrasing resolves into two different things worth not conflating, bear and deer HUNT TRANSPORT, and separate bear-VIEWING trip planning. The scout's rentals claim maps only to the single guest room. Ownership transition flagged, third-party sources name Sean and Gerri Martin as 1978-79 founders with Ben Martin still an owner-captain, while the current site lists Brian Ritchie and Kathy Brennan as owners. That transition is not explained on-site and is inferred, so it carries a caveat. Yelp and the TripAdvisor overview page returned 403 to direct fetch.",
+  "confidence": "Medium-high on what they do, hours, and cancellation policy, all directly fetched from their own site across multiple pages. Medium on size. LOW-MEDIUM on the specific operational pain, there is NO first-party quote saying they are overwhelmed or that phones ring off the hook. The case rests on structural facts, one phone line, one office manager, four product lines, inconsistent winter hours, plus one isolated negative review about boat capacity."
+ },
+ "people_finder": {
+  "leaders": [
+   {
+    "name": "Brian Ritchie",
+    "role": "Owner and Captain (of The Irish)",
+    "source_url": "https://www.northcountrycharters.com/names-you-might-know"
+   },
+   {
+    "name": "Kathy Brennan",
+    "role": "Co-owner / Office Manager",
+    "source_url": "https://www.northcountrycharters.com/names-you-might-know"
+   }
+  ],
+  "best_contact": {
+   "type": "email",
+   "value": "northcountrycharters@gmail.com",
+   "source_url": "https://www.northcountrycharters.com/contact-1",
+   "also_on": "https://www.northcountrycharters.com/about"
+  },
+  "notes": "A general business inbox, Gmail-hosted, not a personal address for either named owner. Confirmed verbatim on both the contact page and the about page. No personal email for Brian Ritchie or Kathy Brennan is published anywhere on the site. The site DOES publish titles for these two, so the titles above may be used. Third named staffer Emmy Lou Pearl Olsen is listed only as Human Resources, an informal joke role, not a decision-maker title, so no formal role is assigned. The Alaska Division of Corporations search portal returned 403 and could not be checked.",
+  "confidence": "medium-high for identity and titles, read directly on the company's own named-staff page. medium for the contact, real and verified but a general inbox rather than a named person's address."
+ },
+ "competitor_analyst": {
+  "competitors": [
+   {
+    "name": "Central Charters and Tours",
+    "note": "Closest direct twin. Family owned since 1982, on Homer Spit Rd about half a mile from North Country's office, same model, booking agency plus beachfront lodging plus bear viewing plus halibut and salmon charters out of Homer Harbor.",
+    "ai_usage": "none found. Online bookings through its own site and instant online booking on the aggregator FishingBooker, with a real-time August 2026 availability calendar, 10 percent deposit checkout, and a live people-looking-at-this-charter counter. No live chat, chatbot, or stated response-time promise on any page reached.",
+    "source_url": "https://fishingbooker.com/charters/view/41714"
+   },
+   {
+    "name": "Smokey Bay Air",
+    "note": "Homer bear-viewing and glacier flightseeing air operator on Kachemak Drive, a direct alternative to boat-based bear viewing.",
+    "ai_usage": "none found. Books through FareHarbor with a 50 percent deposit or pay-in-full, plus phone and email. No live chat, no chatbot, no stated response-time promise. Its standout policy is non-AI, a 50 percent refund if no bears are seen.",
+    "source_url": "https://smokeybayair.com/bear-viewing.html"
+   },
+   {
+    "name": "Emerald Air Service",
+    "note": "Homer's longest-standing bear-viewing air operator, over 35 years flying to Katmai and Brooks Falls.",
+    "ai_usage": "none found, but the most channel-forward of the group. Runs FareHarbor for the current season and a separate VallyPro portal for advance 2027 bookings, and takes inquiries by phone, text, WhatsApp, email and a site contact form. No live chat, chatbot, or automated response-time guarantee found.",
+    "source_url": "https://www.emeraldairservice.com/"
+   },
+   {
+    "name": "Destination Alaska Charters",
+    "note": "Fishing and bear-viewing operator on Spit Road, direct fishing-charter competitor.",
+    "ai_usage": "none found. Books through FareHarbor via a Book Now button, otherwise pushes callers to Call Today. No live chat, chatbot, or response-time promise.",
+    "source_url": "https://destinationalaskacharters.com/"
+   },
+   {
+    "name": "Bear Viewing Alaska",
+    "note": "Boat-based bear-viewing operator running the same Kachemak Bay to Chinitna Bay route North Country can arrange, departs Homer Harbor.",
+    "ai_usage": "none found. Books through FareHarbor. The only operator found publishing a subscribable departure-time calendar (webcal feed), because trips are tide-scheduled. No live chat, chatbot, or stated response-time promise.",
+    "source_url": "https://www.bearviewingalaska.com/"
+   }
+  ],
+  "where_target_is_behind": "Nowhere on the booking mechanic itself. North Country already runs FareHarbor with Book Now buttons for its charters and its guest room, the same platform Smokey Bay Air, Emerald Air Service, Destination Alaska Charters and Bear Viewing Alaska all use, so it is at PARITY there, not behind. The real exposure is after-hours capture. Their own site tells winter callers Winter Hours Are Inconsistent, Leave a Voicemail, a dead end at exactly the season when a same-day answer decides whether a booking happens. Emerald Air Service has covered more inbound ground by adding text and WhatsApp on top of phone, email and FareHarbor.",
+  "where_target_could_lead": "Nobody in the Homer and Kachemak Bay charter, lodging and bear-viewing set is visibly running AI-driven guest response, no live chat, no chatbot, no AI phone line, on any operator site checked, including the FishingBooker and directory listings above them. The one live signal is inside the shared plumbing rather than on any operator's site. FareHarbor has launched FareHarbor Agent, an AI layer answering guest questions across phone, email, chat, SMS and social and turning them into bookings against live availability, but FareHarbor states it is rolling out to a select group of operators and no Homer operator fetched shows it live. North Country already banks its trips and lodging through FareHarbor, so it stands closer to that switch than anyone else in this set.",
+  "confidence": "high on booking-mechanics facts, fetched from operator, FareHarbor and FishingBooker pages directly. Central Charters' own site returned 403, so its detail is corroborated through the fetched FishingBooker listing, medium confidence on that one company's own-site specifics. High on the overall read that no Homer operator has visibly activated AI guest response."
+ },
+ "industry_analyst": {
+  "industry": "Small-operator sportfishing charters, guided outdoor tourism, and independent seasonal lodging, family-run, phone and email driven, three to five month Alaska season",
+  "in_production": [
+   {
+    "who": "FareHarbor, booking platform used by 20,000+ tour, activity and charter operators, most of them small",
+    "what_ai": "FareHarbor Agent, an AI messaging assistant answering guest questions about tours, pricing and logistics across phone, email, chat, SMS, Facebook, Instagram and WhatsApp, checking live availability and pushing a booking or payment link into the conversation",
+    "outcome": "Vendor claims only. After-hours inquiry capture, peak-season volume without added staff, faster response turning into more bookings. NO independent measurement, no named operator, no before/after numbers on the announcement page.",
+    "source_url": "https://fareharbor.com/blog/meet-fareharbor-agent-ai-powered-guest-communication-for-tour-operators/",
+    "reliability": "vendor_claim"
+   },
+   {
+    "who": "Choice Signature Luxury Car Rental, Atlanta, small operator in an adjacent segment, same missed-call-capture use case at similar business size",
+    "what_ai": "Vendasta AI Receptionist, an after-hours call answerer that rings a human first, picks up after 20 seconds of no answer, and qualifies callers with scripted questions",
+    "outcome": "1,017 inbound calls handled, 778 converted to qualified leads, a 76 percent conversion rate on AI-qualified leads over four months. Single-business vendor case study published by Vendasta itself, quoted from the managing marketing agency, NOT an independent audit.",
+    "source_url": "https://www.vendasta.com/blog/call-answering-service-for-small-business/",
+    "reliability": "vendor_claim"
+   },
+   {
+    "who": "Gate 1 Travel, large escorted-tour operator, not family-run scale but the same review-response temptation",
+    "what_ai": "Automated or AI-assisted review response that pulled specifics from a negative customer review and generated a reply",
+    "outcome": "The response read as conciliatory but tone-deaf, restating the complainant's own problems back at them near-verbatim, and became a visible embarrassment on a public travel forum rather than a resolution.",
+    "source_url": "https://community.ricksteves.com/travel-forum/trip-reports/gate-1",
+    "reliability": "proven"
+   }
+  ],
+  "state_of_play": "AI is not yet a mainstream operational tool at businesses this size in this industry. It is early and mostly bolted on by the booking platforms operators already use rather than built by the operators themselves. Census Bureau survey data puts accommodation and food services among the lowest AI-adoption sectors tracked. Most Alaska lodges and charters still book by direct phone call or email with the person answering doing the qualifying and scheduling by hand. What is real and shipping is AI layered into booking software operators already pay for, FareHarbor Agent being the clearest named example, aimed at after-hours inquiry capture, with no independently measured outcome published for any actual operator. What is proven hard is anything touching a disappointed guest. A controlled study of 467 participants in tourism booking scenarios found booking intention dropped more sharply for an AI chatbot than for a human agent specifically in the negative scenario, a price increase, and the authors recommend small tourism businesses keep a human escalation path rather than let AI handle bad news alone. That maps directly onto weather-driven cancellation and rebooking, the most common bad-news moment a charter has. AI-generated review handling is a documented risk rather than a proven win.",
+  "the_gap": "The laggards are the norm. Most Alaska charter and lodging operators of this size still run on phone and email with no automated capture of after-hours or missed calls, despite cell-coverage gaps and guides being on the water for hours. Every vendor in this space pitches missed-call capture as the obvious fix, but none of the case studies found are independently verified or specific to this industry and business size, they are all vendor-authored. The honest opening is narrower than the pitch. Missed-call and after-hours booking capture is a real, well-understood pain worth solving with a narrow, human-handoff-first tool, while anything touching weather cancellation, rebooking or review response needs a human in the loop by design, because that is exactly where the independent evidence says AI currently underperforms.",
+  "grounding_facts": [
+   {
+    "fact": "Accommodation and food services is one of the lowest AI-adoption sectors the Census Bureau tracks, around 8.3 percent, well below information at 39.7 percent and finance and insurance at 33.9 percent.",
+    "source_url": "https://www.fool.com/research/ai-adoption-statistics/",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "In a controlled 467-participant study, booking intention dropped further for an AI chatbot than for a human agent in a negative-outcome scenario, a price increase, 0.83 points versus 0.54 points, and the researchers recommend small tourism operators keep a human escalation path rather than let AI handle disappointing interactions alone.",
+    "source_url": "https://www.mdpi.com/2673-5768/6/1/36",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "An independent Which? and Guardian investigation found TripAdvisor's AI-generated review summaries downplayed serious guest complaints, describing them in bland terms.",
+    "source_url": "https://travel.yahoo.com/advice/safety/articles/booked-disaster-tripadvisor-ai-accused-223127463.html",
+    "reliability": "authoritative"
+   }
+  ],
+  "confidence": "medium. The counter-evidence, adoption data, the academic booking study, the review-AI backlash, is solid and directly transferable. Named, independently measured AI production deployments at family-run charter or small-lodge scale were NOT found. The closest analogs are a booking platform's own vendor claim and one small-business case study from an adjacent industry."
+ }
+}
