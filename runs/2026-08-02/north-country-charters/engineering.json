@@ -1,0 +1,296 @@
+{
+ "note": "The four engineering-room outputs. Full text of each specialist's return, plus the showrunner's computed ROI. The PRD, architecture, ROI and roadmap in full are preserved in dossier.md.",
+ "roi_computed_by_code": [
+  {
+   "scenario": "phase1_conservative",
+   "annual_run_rate_benefit": 4835,
+   "cumulative_benefit_1yr": 4110,
+   "tco_1yr": 3960,
+   "percent_of_tco_recovered": 104,
+   "payback_month": 12,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "phase1_most_likely",
+   "annual_run_rate_benefit": 8578,
+   "cumulative_benefit_1yr": 7720,
+   "tco_1yr": 3747,
+   "percent_of_tco_recovered": 206,
+   "payback_month": 6,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "phase1_aggressive",
+   "annual_run_rate_benefit": 14440,
+   "cumulative_benefit_1yr": 13718,
+   "tco_1yr": 3507,
+   "percent_of_tco_recovered": 391,
+   "payback_month": 4,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "phase1_autoresponder_only_3yr",
+   "annual_run_rate_benefit": 375,
+   "cumulative_benefit_3yr": 1069,
+   "tco_3yr": 4200,
+   "percent_of_tco_recovered": 25,
+   "payback_month": null,
+   "pays_back_within_horizon": false
+  },
+  {
+   "scenario": "clock_low_r250_s20",
+   "annual_run_rate_benefit": 2500,
+   "cumulative_benefit_3yr": 6500,
+   "tco_3yr": 10925,
+   "percent_of_tco_recovered": 59,
+   "payback_month": null,
+   "pays_back_within_horizon": false
+  },
+  {
+   "scenario": "clock_low_r250_s40",
+   "annual_run_rate_benefit": 5000,
+   "cumulative_benefit_3yr": 13000,
+   "tco_3yr": 10925,
+   "percent_of_tco_recovered": 119,
+   "payback_month": 27,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "clock_low_r250_s60",
+   "annual_run_rate_benefit": 7500,
+   "cumulative_benefit_3yr": 19500,
+   "tco_3yr": 10925,
+   "percent_of_tco_recovered": 178,
+   "payback_month": 18,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "clock_low_r350_s20",
+   "annual_run_rate_benefit": 3500,
+   "cumulative_benefit_3yr": 9100,
+   "tco_3yr": 10925,
+   "percent_of_tco_recovered": 83,
+   "payback_month": null,
+   "pays_back_within_horizon": false
+  },
+  {
+   "scenario": "clock_low_r350_s40",
+   "annual_run_rate_benefit": 7000,
+   "cumulative_benefit_3yr": 18200,
+   "tco_3yr": 10925,
+   "percent_of_tco_recovered": 167,
+   "payback_month": 19,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "clock_low_r350_s60",
+   "annual_run_rate_benefit": 10500,
+   "cumulative_benefit_3yr": 27300,
+   "tco_3yr": 10925,
+   "percent_of_tco_recovered": 250,
+   "payback_month": 14,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "clock_low_r450_s20",
+   "annual_run_rate_benefit": 4500,
+   "cumulative_benefit_3yr": 11700,
+   "tco_3yr": 10925,
+   "percent_of_tco_recovered": 107,
+   "payback_month": 31,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "clock_low_r450_s40",
+   "annual_run_rate_benefit": 9000,
+   "cumulative_benefit_3yr": 23400,
+   "tco_3yr": 10925,
+   "percent_of_tco_recovered": 214,
+   "payback_month": 16,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "clock_low_r450_s60",
+   "annual_run_rate_benefit": 13500,
+   "cumulative_benefit_3yr": 35100,
+   "tco_3yr": 10925,
+   "percent_of_tco_recovered": 321,
+   "payback_month": 11,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "clock_high_r250_s20",
+   "annual_run_rate_benefit": 2500,
+   "cumulative_benefit_3yr": 6250,
+   "tco_3yr": 16800,
+   "percent_of_tco_recovered": 37,
+   "payback_month": null,
+   "pays_back_within_horizon": false
+  },
+  {
+   "scenario": "clock_high_r250_s40",
+   "annual_run_rate_benefit": 5000,
+   "cumulative_benefit_3yr": 12500,
+   "tco_3yr": 16800,
+   "percent_of_tco_recovered": 74,
+   "payback_month": null,
+   "pays_back_within_horizon": false
+  },
+  {
+   "scenario": "clock_high_r250_s60",
+   "annual_run_rate_benefit": 7500,
+   "cumulative_benefit_3yr": 18750,
+   "tco_3yr": 16800,
+   "percent_of_tco_recovered": 112,
+   "payback_month": 30,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "clock_high_r350_s20",
+   "annual_run_rate_benefit": 3500,
+   "cumulative_benefit_3yr": 8750,
+   "tco_3yr": 16800,
+   "percent_of_tco_recovered": 52,
+   "payback_month": null,
+   "pays_back_within_horizon": false
+  },
+  {
+   "scenario": "clock_high_r350_s40",
+   "annual_run_rate_benefit": 7000,
+   "cumulative_benefit_3yr": 17500,
+   "tco_3yr": 16800,
+   "percent_of_tco_recovered": 104,
+   "payback_month": 32,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "clock_high_r350_s60",
+   "annual_run_rate_benefit": 10500,
+   "cumulative_benefit_3yr": 26250,
+   "tco_3yr": 16800,
+   "percent_of_tco_recovered": 156,
+   "payback_month": 21,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "clock_high_r450_s20",
+   "annual_run_rate_benefit": 4500,
+   "cumulative_benefit_3yr": 11250,
+   "tco_3yr": 16800,
+   "percent_of_tco_recovered": 67,
+   "payback_month": null,
+   "pays_back_within_horizon": false
+  },
+  {
+   "scenario": "clock_high_r450_s40",
+   "annual_run_rate_benefit": 9000,
+   "cumulative_benefit_3yr": 22500,
+   "tco_3yr": 16800,
+   "percent_of_tco_recovered": 134,
+   "payback_month": 25,
+   "pays_back_within_horizon": true
+  },
+  {
+   "scenario": "clock_high_r450_s60",
+   "annual_run_rate_benefit": 13500,
+   "cumulative_benefit_3yr": 33750,
+   "tco_3yr": 16800,
+   "percent_of_tco_recovered": 201,
+   "payback_month": 17,
+   "pays_back_within_horizon": true
+  }
+ ],
+ "break_even_seats_per_season": {
+  "low_cost_case_3yr_tco": 10925,
+  "high_cost_case_3yr_tco": 16800,
+  "seats_needed": {
+   "low_250": 33.6,
+   "low_350": 24.0,
+   "low_450": 18.7,
+   "high_250": 53.8,
+   "high_350": 38.4,
+   "high_450": 29.9
+  },
+  "note": "Computed in scripts/roi_math.py. Per-seat rates are ASSUMED, no charter price was verified. The 0.50 incremental fraction is anchored to their VERIFIED published 50 percent deposit at 14 days or less."
+ },
+ "architecture": {
+  "nodes": [
+   {
+    "id": "guest",
+    "label": "Guest emails the shop",
+    "kind": "user"
+   },
+   {
+    "id": "gmail",
+    "label": "Their shared inbox, plus Gmail's own auto reply",
+    "kind": "external"
+   },
+   {
+    "id": "watcher",
+    "label": "Clock Watcher, reads the mail and never changes it",
+    "kind": "build"
+   },
+   {
+    "id": "read",
+    "label": "Cancellation Read, the one model call",
+    "kind": "ai"
+   },
+   {
+    "id": "log",
+    "label": "Message Log, every message and every timestamp",
+    "kind": "data"
+   },
+   {
+    "id": "sms",
+    "label": "Text to a phone they already carry",
+    "kind": "external"
+   },
+   {
+    "id": "crew",
+    "label": "Kathy first, Brian only if nobody answers",
+    "kind": "user"
+   }
+  ],
+  "edges": [
+   {
+    "from": "guest",
+    "to": "gmail"
+   },
+   {
+    "from": "gmail",
+    "to": "guest"
+   },
+   {
+    "from": "gmail",
+    "to": "watcher"
+   },
+   {
+    "from": "watcher",
+    "to": "read"
+   },
+   {
+    "from": "watcher",
+    "to": "log"
+   },
+   {
+    "from": "read",
+    "to": "log"
+   },
+   {
+    "from": "log",
+    "to": "sms"
+   },
+   {
+    "from": "sms",
+    "to": "crew"
+   },
+   {
+    "from": "crew",
+    "to": "gmail"
+   }
+  ]
+ },
+ "riskiest_assumption": "Durable, read-only, lawfully consented access to a CONSUMER Gmail mailbox for at least the length of the fortnight. gmail.readonly is a RESTRICTED scope, and an app in Google's testing status issues refresh tokens that expire after seven days, which would break a fourteen day measurement in the middle.",
+ "spike": "Three working days of one engineer, before the contract is signed and before a dollar is invoiced, run entirely on our own mailboxes. Written exit criteria decided first. PASS if a refresh token issued to a consumer account still returns mail on day eight with no re-consent AND no screen in the flow would stop a cautious owner. On a fail we ship the forwarding design instead, which deletes the Gmail API from the picture entirely and costs one extra day.",
+ "estimate_range": "Signature to written recommendation, 4 to 6 weeks elapsed at about 70 percent confidence. 3 weeks only if the spike passes on the first path and the carrier text registration clears fast. The Clock itself, NOT what is being asked for, is indicative at 5,500 to 8,000 dollars over 3 to 5 weeks, at roughly 50 percent confidence by design, because it rests on a volume number that does not exist yet."
+}

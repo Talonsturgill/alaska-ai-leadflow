@@ -241,6 +241,71 @@
           "added": []
         }
       ]
+    },
+    {
+      "run_date": "2026-08-01",
+      "company": "Medical Park Family Care",
+      "deltas": [
+        {
+          "kinds": [
+            "reworded"
+          ],
+          "before": "We already did the study on that and the first thing we'd build has no AI in it.",
+          "after": "So we studied into Medical Park to see if AI could solve this, you might like what we came up with.",
+          "dropped": [
+            "already",
+            "and",
+            "build",
+            "did",
+            "first",
+            "has",
+            "in",
+            "it"
+          ],
+          "added": [
+            "came",
+            "could",
+            "if",
+            "into",
+            "like",
+            "medical",
+            "might",
+            "park"
+          ]
+        },
+        {
+          "kinds": [
+            "lengthened"
+          ],
+          "before": "Tell us if it's useful.",
+          "after": "No strings, we only ask that you let us know what you think.",
+          "dropped": [
+            "if",
+            "it's",
+            "tell",
+            "useful"
+          ],
+          "added": [
+            "ask",
+            "know",
+            "let",
+            "no",
+            "only",
+            "strings",
+            "that",
+            "think"
+          ]
+        },
+        {
+          "kinds": [
+            "added"
+          ],
+          "before": null,
+          "after": "https://alaskaaihq.com/",
+          "dropped": [],
+          "added": []
+        }
+      ]
     }
   ]
 }

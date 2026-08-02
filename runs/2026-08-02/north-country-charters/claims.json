@@ -1,0 +1,226 @@
+{
+ "company": "North Country Charters",
+ "domain": "northcountrycharters.com",
+ "location": "Homer, Alaska (Homer Spit)",
+ "segment": "tourism",
+ "fact_checker_verdict": "fix, corrections applied below. The company itself is not disqualified.",
+ "drift_pattern_to_watch": "The rejected claims all leaned ONE direction, toward making the operational-overwhelm case look more proven than the sources support. A quote was ellipsis-trimmed in a way that removed corroborating evidence, duties were invented and welded onto a real quote, an unfetchable review was used as proof of a capacity complaint, a data-broker headcount was left in play, and a forum poster's speculation was upgraded to proven. The honest structural case needs none of that. EVERY DOWNSTREAM ROOM MUST RESIST THE SAME PULL. Where the evidence is structural, say structural. There is no first-party statement from this company that it is overwhelmed and none may be implied.",
+ "company_first_party": {
+  "note": "Every item here was fetched and verified verbatim on the company's own site.",
+  "identity": [
+   {
+    "claim": "Their home page says: \"Fishing the wild, wonderous waters of Kachemak Bay and Cook Inlet since 1979\"",
+    "url": "https://www.northcountrycharters.com/",
+    "kind": "verbatim quote"
+   },
+   {
+    "claim": "The About page is titled \"Local, Woman Co-Owned Fishing in Homer AK\"",
+    "url": "https://www.northcountrycharters.com/about",
+    "kind": "verbatim"
+   },
+   {
+    "claim": "Office and mailing address is 4287 Homer Spit Rd. #10, Homer, Alaska 99603, and the business phone is 907-235-7620",
+    "url": "https://www.northcountrycharters.com/contact-1",
+    "kind": "verbatim"
+   }
+  ],
+  "what_they_sell": [
+   {
+    "claim": "Their home page lists exactly four things they sell: Halibut Fishing, Combo Fishing, Salmon Fishing, and a Guest Room",
+    "url": "https://www.northcountrycharters.com/",
+    "kind": "verbatim list"
+   },
+   {
+    "claim": "The site carries a BOOK NOW button into a booking system, and the booking system in use is FareHarbor",
+    "url": "https://www.northcountrycharters.com/",
+    "kind": "verified"
+   }
+  ],
+  "people": [
+   {
+    "claim": "Brian Ritchie is listed as \"Owner & Captain of The Irish\"",
+    "url": "https://www.northcountrycharters.com/names-you-might-know",
+    "kind": "verbatim title, may be used"
+   },
+   {
+    "claim": "The page says: \"Kathy is the co-owner and office manager, which loosely translates to: the person who handles everything no one else wants to deal with.\"",
+    "url": "https://www.northcountrycharters.com/names-you-might-know",
+    "kind": "verbatim quote, use EXACTLY this wording"
+   }
+  ],
+  "hours_and_reachability": [
+   {
+    "claim": "Published hours are \"Sunday - Saturday: 6:00am - 7:00/8:00pm\"",
+    "url": "https://www.northcountrycharters.com/",
+    "kind": "verbatim quote"
+   },
+   {
+    "claim": "The home page carries the line \"Winter Hours Are Inconsistent, Leave a Voicemail\"",
+    "url": "https://www.northcountrycharters.com/",
+    "kind": "verbatim quote"
+   },
+   {
+    "claim": "One business phone number and one shared email inbox, northcountrycharters@gmail.com, cover the whole operation. No second line, no department routing and no answering service is published anywhere on the site.",
+    "url": "https://www.northcountrycharters.com/contact-1",
+    "kind": "verified structural fact, what the site does and does not publish"
+   }
+  ],
+  "the_load_bearing_quote": {
+   "claim": "Their FAQ says, verbatim and contiguously: \"IF YOU NEED TO CANCEL please call us and confirm over the phone with us that you are cancelling. We don't always see voicemails or emails right away and every minute counts.\"",
+   "url": "https://www.northcountrycharters.com/faq",
+   "kind": "verbatim quote, USE THIS EXACT WORDING. An earlier ellipsis-trimmed version was rejected by the fact-checker for cutting the corroborating half.",
+   "why_it_matters": "This is the company telling its own customers, in writing, that voicemails and emails are not reliably seen right away. It is first-party and it is the strongest evidence in the whole package. It is evidence about a MESSAGE CHANNEL, not a statement that the business is overwhelmed."
+  },
+  "cancellation_and_weather_economics": [
+   {
+    "claim": "FAQ, the OPENING of the cancellation paragraph: \"We have phenomenal office staff and we do everything we can to resell cancelled seats.\"",
+    "url": "https://www.northcountrycharters.com/faq",
+    "kind": "verbatim quote, re-fetched and confirmed by the showrunner 2026-08-02",
+    "why_it_matters": "The study originally quoted only the TAIL of this paragraph. Skipping this sentence is the same manoeuvre as an ellipsis-trim executed at the other end. It must be quoted and ANSWERED, never omitted. A good office and a slow channel are different problems."
+   },
+   {
+    "claim": "FAQ: \"If we can resell cancelled spaces, then we do not retain the deposit.\"",
+    "url": "https://www.northcountrycharters.com/faq",
+    "kind": "verbatim quote, re-fetched and confirmed by the showrunner 2026-08-02",
+    "why_it_matters": "LOAD-BEARING FOR THE ROI. The deposit does NOT simply protect half a seat, it is handed back when the seat resells. So the incremental value of a resale is full rate collected minus deposit refunded, which is about half a seat, the same 0.50 factor for a CORRECT reason. Any study text explaining the half-seat figure must use this reason."
+   },
+   {
+    "claim": "FAQ: \"Short notice cancellations (14 days or less) are subject to a 50% deposit.\"",
+    "url": "https://www.northcountrycharters.com/faq",
+    "kind": "verbatim quote"
+   },
+   {
+    "claim": "FAQ: \"In the unlikely event of a last-minute cancellation of 24 hours or less OR a no-show... you will be charged 100% of the charter rate.\"",
+    "url": "https://www.northcountrycharters.com/faq",
+    "kind": "verbatim quote"
+   },
+   {
+    "claim": "FAQ: \"If a charter is cancelled before departure due to weather, there is a 100% refund.\"",
+    "url": "https://www.northcountrycharters.com/faq",
+    "kind": "verbatim quote"
+   },
+   {
+    "claim": "FAQ: \"If we leave the dock but find we were unable to fish due to weather, there is a nominal fee of $30/person which helps cover crew and fuel expenses.\"",
+    "url": "https://www.northcountrycharters.com/faq",
+    "kind": "verbatim quote"
+   }
+  ],
+  "confirmed_absences": [
+   "NO first-party quote anywhere on any fetched page says this business is overwhelmed, that phones ring off the hook, or that it misses calls. The operational case is STRUCTURAL and must be framed as such, never asserted as a company statement.",
+   "The site publishes NO answering service, no chatbot, no live chat, no second phone line and no after-hours contact path other than voicemail.",
+   "The site publishes NO price list that was verified, so no charter rate may be stated as fact.",
+   "The site publishes NO headcount. Any staff number is unverified and may not be cited."
+  ],
+  "paragraph_order_note": "VERIFIED ORDER on the FAQ cancellation section, because an earlier draft got it backwards. 1, the 50 percent deposit at 14 days or less. 2, the deposit is waived if the spaces are resold. 3, the 100 percent charge at 24 hours or less or a no-show. 4, the business rationale on seat availability. 5, the flexible-policy and resale-efforts sentences including the phenomenal office staff line. 6, the IF YOU NEED TO CANCEL instruction ending in every minute counts. 7, travel insurance. The money lines come BEFORE the call-and-confirm instruction, never after it."
+ },
+ "independent_existence": [
+  {
+   "claim": "The business is independently listed at 4287 Homer Spit Rd, Homer, Alaska on Yelp and on TripAdvisor, and carries an outfitter listing in Fish Alaska Magazine",
+   "url": "https://www.fishalaskamagazine.com/outfitters/north-country-charters/",
+   "kind": "existence confirmation only. Review counts and ratings from these pages were REJECTED as unverifiable, the pages 403 to direct fetch. Cite existence, never a rating or a count."
+  }
+ ],
+ "market": {
+  "note": "Every competitor claim below was fetched and verified.",
+  "claims": [
+   {
+    "claim": "Central Charters and Tours, the closest direct twin on Homer Spit, takes instant online booking through the aggregator FishingBooker with a clickable August 2026 availability calendar, a \"Book with 10% deposit, pay rest to captain\" checkout, and a live \"There are 5 people looking at this charter\" counter. No live chat and no chatbot.",
+    "url": "https://fishingbooker.com/charters/view/41714"
+   },
+   {
+    "claim": "Smokey Bay Air books through FareHarbor with a 50 percent deposit or pay-in-full, and publishes a guarantee, \"In the event we do not see bears, will gladly refund 50% of your money.\" No live chat and no chatbot.",
+    "url": "https://smokeybayair.com/bear-viewing.html"
+   },
+   {
+    "claim": "Emerald Air Service runs FareHarbor for the current season plus a separate portal for 2027 advance bookings, and lists phone, text, WhatsApp, email and a contact form. No live chat and no chatbot.",
+    "url": "https://www.emeraldairservice.com/"
+   },
+   {
+    "claim": "Destination Alaska Charters books through FareHarbor via a Book Now button and otherwise pushes phone contact. No live chat and no chatbot.",
+    "url": "https://destinationalaskacharters.com/"
+   },
+   {
+    "claim": "Bear Viewing Alaska books through FareHarbor and publishes a subscribable webcal departure-time calendar because its trips are tide-scheduled. No live chat and no chatbot.",
+    "url": "https://www.bearviewingalaska.com/"
+   }
+  ],
+  "position": "PARITY, NOT BEHIND, ON THE BOOKING MECHANIC. North Country already runs FareHarbor with Book Now buttons, the same platform Smokey Bay Air, Emerald Air Service, Destination Alaska Charters and Bear Viewing Alaska all use. Do not tell them to fix a booking system they already have. The verified difference is in the INBOUND CHANNELS around it. Emerald Air Service publishes text and WhatsApp on top of phone, email and FareHarbor. North Country publishes phone, one shared inbox, and voicemail.",
+  "nobody_has_ai": "Verified across every operator page fetched. No Homer or Kachemak Bay charter, lodging or bear-viewing operator checked is running AI guest response, no live chat, no chatbot, no AI phone line."
+ },
+ "industry": {
+  "claims": [
+   {
+    "claim": "FareHarbor has launched FareHarbor Agent, an AI layer answering guest questions across phone, email, chat, SMS, Facebook, Instagram and WhatsApp, checking live availability and pushing a booking or payment link, and its own page states it \"is currently rolling out to a select group of operators\"",
+    "url": "https://fareharbor.com/blog/meet-fareharbor-agent-ai-powered-guest-communication-for-tour-operators/",
+    "reliability": "vendor page, rollout status is the company's own wording",
+    "note": "This matters enormously. The platform they ALREADY PAY FOR is building this. Any proposal must reckon with it honestly rather than pretend it does not exist."
+   },
+   {
+    "claim": "FareHarbor's own site states \"20.000+ companies use FareHarbor\"",
+    "url": "https://fareharbor.com/blog/meet-fareharbor-agent-ai-powered-guest-communication-for-tour-operators/",
+    "reliability": "vendor figure",
+    "note": "The qualifier \"most of them small\" was REJECTED and may not be used."
+   },
+   {
+    "claim": "FareHarbor publishes no independent measurement, no named operator and no before/after numbers for FareHarbor Agent",
+    "url": "https://fareharbor.com/blog/meet-fareharbor-agent-ai-powered-guest-communication-for-tour-operators/",
+    "reliability": "verified absence"
+   },
+   {
+    "claim": "Accommodation and food services sits at 8.3 percent AI adoption, among the lowest sectors tracked",
+    "url": "https://www.fool.com/research/ai-adoption-statistics/",
+    "reliability": "survey data",
+    "note": "The comparison figures previously stated as 39.7 and 33.9 percent were REJECTED as WRONG. The fetched page says information 43 percent and finance and insurance 31.3 percent. Use the corrected figures or none."
+   },
+   {
+    "claim": "A controlled study of 467 participants in tourism booking scenarios found booking intention dropped further for an AI chatbot than for a human agent in a negative-outcome scenario, a price increase, 0.83 points versus 0.54 points. The authors recommend small tourism operators keep a human escalation path rather than let AI handle disappointing interactions alone.",
+    "url": "https://www.mdpi.com/2673-5768/6/1/36",
+    "reliability": "peer-reviewed, independent",
+    "note": "THE STRONGEST ANTI-HYPE EVIDENCE IN THE PACKAGE. It maps directly onto weather cancellation and rebooking, which is this company's most common bad-news moment and is governed by real money in their published policy."
+   },
+   {
+    "claim": "A Which? and Guardian investigation found TripAdvisor's AI-generated review summaries downplayed serious guest complaints, describing a resort with documented raw-chicken and insect complaints as having spotless accommodations and minimizing alleged sexual harassment as service lapses",
+    "url": "https://travel.yahoo.com/advice/safety/articles/booked-disaster-tripadvisor-ai-accused-223127463.html",
+    "reliability": "independent investigation"
+   },
+   {
+    "claim": "Vendasta published a case study of an AI Receptionist at a small Atlanta car-rental operator, reporting 1,017 inbound calls handled, 778 qualified leads and a 76 percent conversion rate on AI-qualified leads over four months. It rings a human first and picks up after 20 seconds of no answer.",
+    "url": "https://www.vendasta.com/blog/call-answering-service-for-small-business/",
+    "reliability": "VENDOR-PUBLISHED CASE STUDY, NOT INDEPENDENT. Adjacent industry, not tourism. If cited at all it must carry that label in the same breath."
+   }
+  ],
+  "honest_state_of_play": "AI is not mainstream at this business size in this industry. What is real and shipping is AI layered into booking software operators already pay for, with no independently measured outcome published for any actual operator. No named, independently measured AI deployment at family-run charter or small-lodge scale could be found at all. What is documented is where it goes wrong, on bad news and on reviews."
+ },
+ "contact": {
+  "contact_ok": true,
+  "email": "northcountrycharters@gmail.com",
+  "contact_source": "Confirmed verbatim on BOTH https://www.northcountrycharters.com/contact-1 and https://www.northcountrycharters.com/about, both directly fetched by the fact-checker and re-confirmed by the showrunner.",
+  "type": "general business inbox, Gmail-hosted. NOT a personal address for either named owner.",
+  "named_owners": [
+   {
+    "name": "Brian Ritchie",
+    "published_title": "Owner & Captain of The Irish"
+   },
+   {
+    "name": "Kathy Brennan",
+    "published_title": "co-owner and office manager"
+   }
+  ],
+  "rule": "These two titles are published by the company and may be used. No one else may be given a title. No personal address exists for either owner and none may be constructed."
+ },
+ "rejected_do_not_cite": [
+  "ZoomInfo headcount of 7 employees. Unverifiable data-broker figure.",
+  "TripAdvisor 362 reviews, ranked #9 of 76. Page 403s, came from a search snippet.",
+  "Wanderlog 4.9/5 over 311 reviews. No fetchable source.",
+  "The TripAdvisor review about a six-person charter where only three could fish. URL 403s, unverifiable.",
+  "The captains-and-boats roster (Clay Duda, Ben Martin, Jay Keller, Al Kitner, Pelle Bergstrom and their vessels). No fetchable source page.",
+  "The ownership transition story, Sean and Gerri Martin as founders. No fetchable source. Only Ritchie and Brennan as current named owners is verified.",
+  "AI-adoption comparison figures of 39.7 and 33.9 percent. WRONG. The source says 43 and 31.3.",
+  "The qualifier that most FareHarbor operators are small.",
+  "Gate 1 Travel's review reply as a PROVEN AI-generated response. A forum poster speculated it was AI. Not confirmed. Do not cite as an AI failure.",
+  "Hunt transport, bear viewing, kayaking and apartment rentals as current product lines. The home page lists four products and these are not among them.",
+  "Any charter price or rate. None was verified.",
+  "Any claim that the 14-day or 24-hour windows are measured from when notice was SENT rather than received. The FAQ does not say, and an earlier draft asserted it.",
+  "Any figure for what share of inbound messages are cancellations. Unknown, unmeasured, and it is the exact quantity the proposed fortnight exists to discover."
+ ]
+}

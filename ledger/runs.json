@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Per-run audit and the double-fire guard. Reconstructed rows before 2026-07-29 are inferred from archived artifacts, not from the database.",
-  "updated": "2026-08-01",
+  "updated": "2026-08-02",
   "runs": [
     {
       "run_date": "2026-07-16",
@@ -55,6 +55,12 @@
       "run_date": "2026-08-01",
       "status": "success",
       "shortlist_count": 24,
+      "notes": null
+    },
+    {
+      "run_date": "2026-08-02",
+      "status": "success",
+      "shortlist_count": 21,
       "notes": null
     }
   ]
