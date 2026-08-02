@@ -1,0 +1,479 @@
+{
+ "scenarios": {
+  "phase1_conservative": {
+   "pursuits_per_year": 750,
+   "benefit_lines": [
+    {
+     "label": "first touch reply removed by the week one autoresponder",
+     "hours_per_pursuit": 0.05,
+     "rate": 50,
+     "cut": 0.2
+    }
+   ],
+   "avoided_cost_lines": [
+    {
+     "label": "avoided wrong build spend",
+     "events_per_year": 1,
+     "cost_per_event": 9500,
+     "reduction": 0.4
+    },
+    {
+     "label": "avoided duplicate vendor spend",
+     "events_per_year": 1,
+     "cost_per_event": 1200,
+     "reduction": 0.15
+    },
+    {
+     "label": "data work transferred out of the build",
+     "events_per_year": 1,
+     "cost_per_event": 800,
+     "reduction": 0.6
+    }
+   ],
+   "implementation": 2800,
+   "training": 400,
+   "run_cost_per_year": 100,
+   "run_cost_years": 1,
+   "contingency": 0.2,
+   "year1_ramp": 0.85,
+   "years": 1
+  },
+  "phase1_most_likely": {
+   "pursuits_per_year": 1400,
+   "benefit_lines": [
+    {
+     "label": "first touch reply removed by the week one autoresponder",
+     "hours_per_pursuit": 0.06,
+     "rate": 50,
+     "cut": 0.3
+    }
+   ],
+   "avoided_cost_lines": [
+    {
+     "label": "avoided wrong build spend",
+     "events_per_year": 1,
+     "cost_per_event": 11750,
+     "reduction": 0.55
+    },
+    {
+     "label": "avoided duplicate vendor spend",
+     "events_per_year": 1,
+     "cost_per_event": 1440,
+     "reduction": 0.25
+    },
+    {
+     "label": "data work transferred out of the build",
+     "events_per_year": 1,
+     "cost_per_event": 1100,
+     "reduction": 0.45
+    }
+   ],
+   "implementation": 2800,
+   "training": 300,
+   "run_cost_per_year": 75,
+   "run_cost_years": 1,
+   "contingency": 0.18,
+   "year1_ramp": 0.9,
+   "years": 1
+  },
+  "phase1_aggressive": {
+   "pursuits_per_year": 2500,
+   "benefit_lines": [
+    {
+     "label": "first touch reply removed by the week one autoresponder",
+     "hours_per_pursuit": 0.07,
+     "rate": 50,
+     "cut": 0.4
+    }
+   ],
+   "avoided_cost_lines": [
+    {
+     "label": "avoided wrong build spend",
+     "events_per_year": 1,
+     "cost_per_event": 14000,
+     "reduction": 0.7
+    },
+    {
+     "label": "avoided duplicate vendor spend",
+     "events_per_year": 1,
+     "cost_per_event": 1800,
+     "reduction": 0.4
+    },
+    {
+     "label": "data work transferred out of the build",
+     "events_per_year": 1,
+     "cost_per_event": 1400,
+     "reduction": 0.3
+    }
+   ],
+   "implementation": 2800,
+   "training": 200,
+   "run_cost_per_year": 50,
+   "run_cost_years": 1,
+   "contingency": 0.15,
+   "year1_ramp": 0.95,
+   "years": 1
+  },
+  "phase1_autoresponder_only_3yr": {
+   "pursuits_per_year": 750,
+   "benefit_lines": [
+    {
+     "label": "first touch reply removed",
+     "hours_per_pursuit": 0.05,
+     "rate": 50,
+     "cut": 0.2
+    }
+   ],
+   "avoided_cost_lines": [],
+   "implementation": 2800,
+   "training": 400,
+   "run_cost_per_year": 100,
+   "run_cost_years": 3,
+   "contingency": 0.2,
+   "year1_ramp": 0.85,
+   "years": 3
+  },
+  "clock_low_r250_s20": {
+   "implementation": 5500,
+   "training": 400,
+   "run_cost_per_year": 1200,
+   "run_cost_years": 3,
+   "contingency": 0.15,
+   "year1_ramp": 0.6,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 20,
+     "cost_per_event": 250,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_low_r250_s40": {
+   "implementation": 5500,
+   "training": 400,
+   "run_cost_per_year": 1200,
+   "run_cost_years": 3,
+   "contingency": 0.15,
+   "year1_ramp": 0.6,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 40,
+     "cost_per_event": 250,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_low_r250_s60": {
+   "implementation": 5500,
+   "training": 400,
+   "run_cost_per_year": 1200,
+   "run_cost_years": 3,
+   "contingency": 0.15,
+   "year1_ramp": 0.6,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 60,
+     "cost_per_event": 250,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_low_r350_s20": {
+   "implementation": 5500,
+   "training": 400,
+   "run_cost_per_year": 1200,
+   "run_cost_years": 3,
+   "contingency": 0.15,
+   "year1_ramp": 0.6,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 20,
+     "cost_per_event": 350,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_low_r350_s40": {
+   "implementation": 5500,
+   "training": 400,
+   "run_cost_per_year": 1200,
+   "run_cost_years": 3,
+   "contingency": 0.15,
+   "year1_ramp": 0.6,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 40,
+     "cost_per_event": 350,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_low_r350_s60": {
+   "implementation": 5500,
+   "training": 400,
+   "run_cost_per_year": 1200,
+   "run_cost_years": 3,
+   "contingency": 0.15,
+   "year1_ramp": 0.6,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 60,
+     "cost_per_event": 350,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_low_r450_s20": {
+   "implementation": 5500,
+   "training": 400,
+   "run_cost_per_year": 1200,
+   "run_cost_years": 3,
+   "contingency": 0.15,
+   "year1_ramp": 0.6,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 20,
+     "cost_per_event": 450,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_low_r450_s40": {
+   "implementation": 5500,
+   "training": 400,
+   "run_cost_per_year": 1200,
+   "run_cost_years": 3,
+   "contingency": 0.15,
+   "year1_ramp": 0.6,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 40,
+     "cost_per_event": 450,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_low_r450_s60": {
+   "implementation": 5500,
+   "training": 400,
+   "run_cost_per_year": 1200,
+   "run_cost_years": 3,
+   "contingency": 0.15,
+   "year1_ramp": 0.6,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 60,
+     "cost_per_event": 450,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_high_r250_s20": {
+   "implementation": 8000,
+   "training": 600,
+   "run_cost_per_year": 1800,
+   "run_cost_years": 3,
+   "contingency": 0.2,
+   "year1_ramp": 0.5,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 20,
+     "cost_per_event": 250,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_high_r250_s40": {
+   "implementation": 8000,
+   "training": 600,
+   "run_cost_per_year": 1800,
+   "run_cost_years": 3,
+   "contingency": 0.2,
+   "year1_ramp": 0.5,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 40,
+     "cost_per_event": 250,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_high_r250_s60": {
+   "implementation": 8000,
+   "training": 600,
+   "run_cost_per_year": 1800,
+   "run_cost_years": 3,
+   "contingency": 0.2,
+   "year1_ramp": 0.5,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 60,
+     "cost_per_event": 250,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_high_r350_s20": {
+   "implementation": 8000,
+   "training": 600,
+   "run_cost_per_year": 1800,
+   "run_cost_years": 3,
+   "contingency": 0.2,
+   "year1_ramp": 0.5,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 20,
+     "cost_per_event": 350,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_high_r350_s40": {
+   "implementation": 8000,
+   "training": 600,
+   "run_cost_per_year": 1800,
+   "run_cost_years": 3,
+   "contingency": 0.2,
+   "year1_ramp": 0.5,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 40,
+     "cost_per_event": 350,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_high_r350_s60": {
+   "implementation": 8000,
+   "training": 600,
+   "run_cost_per_year": 1800,
+   "run_cost_years": 3,
+   "contingency": 0.2,
+   "year1_ramp": 0.5,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 60,
+     "cost_per_event": 350,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_high_r450_s20": {
+   "implementation": 8000,
+   "training": 600,
+   "run_cost_per_year": 1800,
+   "run_cost_years": 3,
+   "contingency": 0.2,
+   "year1_ramp": 0.5,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 20,
+     "cost_per_event": 450,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_high_r450_s40": {
+   "implementation": 8000,
+   "training": 600,
+   "run_cost_per_year": 1800,
+   "run_cost_years": 3,
+   "contingency": 0.2,
+   "year1_ramp": 0.5,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 40,
+     "cost_per_event": 450,
+     "reduction": 0.5
+    }
+   ]
+  },
+  "clock_high_r450_s60": {
+   "implementation": 8000,
+   "training": 600,
+   "run_cost_per_year": 1800,
+   "run_cost_years": 3,
+   "contingency": 0.2,
+   "year1_ramp": 0.5,
+   "years": 3,
+   "pursuits_per_year": 0,
+   "benefit_lines": [],
+   "avoided_cost_lines": [
+    {
+     "label": "late seen cancellation resold as a seat",
+     "events_per_year": 60,
+     "cost_per_event": 450,
+     "reduction": 0.5
+    }
+   ]
+  }
+ }
+}
