@@ -73,6 +73,18 @@
   },
   "cancellation_and_weather_economics": [
    {
+    "claim": "FAQ, the OPENING of the cancellation paragraph: \"We have phenomenal office staff and we do everything we can to resell cancelled seats.\"",
+    "url": "https://www.northcountrycharters.com/faq",
+    "kind": "verbatim quote, re-fetched and confirmed by the showrunner 2026-08-02",
+    "why_it_matters": "The study originally quoted only the TAIL of this paragraph. Skipping this sentence is the same manoeuvre as an ellipsis-trim executed at the other end. It must be quoted and ANSWERED, never omitted. A good office and a slow channel are different problems."
+   },
+   {
+    "claim": "FAQ: \"If we can resell cancelled spaces, then we do not retain the deposit.\"",
+    "url": "https://www.northcountrycharters.com/faq",
+    "kind": "verbatim quote, re-fetched and confirmed by the showrunner 2026-08-02",
+    "why_it_matters": "LOAD-BEARING FOR THE ROI. The deposit does NOT simply protect half a seat, it is handed back when the seat resells. So the incremental value of a resale is full rate collected minus deposit refunded, which is about half a seat, the same 0.50 factor for a CORRECT reason. Any study text explaining the half-seat figure must use this reason."
+   },
+   {
     "claim": "FAQ: \"Short notice cancellations (14 days or less) are subject to a 50% deposit.\"",
     "url": "https://www.northcountrycharters.com/faq",
     "kind": "verbatim quote"
@@ -98,7 +110,8 @@
    "The site publishes NO answering service, no chatbot, no live chat, no second phone line and no after-hours contact path other than voicemail.",
    "The site publishes NO price list that was verified, so no charter rate may be stated as fact.",
    "The site publishes NO headcount. Any staff number is unverified and may not be cited."
-  ]
+  ],
+  "paragraph_order_note": "VERIFIED ORDER on the FAQ cancellation section, because an earlier draft got it backwards. 1, the 50 percent deposit at 14 days or less. 2, the deposit is waived if the spaces are resold. 3, the 100 percent charge at 24 hours or less or a no-show. 4, the business rationale on seat availability. 5, the flexible-policy and resale-efforts sentences including the phenomenal office staff line. 6, the IF YOU NEED TO CANCEL instruction ending in every minute counts. 7, travel insurance. The money lines come BEFORE the call-and-confirm instruction, never after it."
  },
  "independent_existence": [
   {
@@ -206,6 +219,8 @@
   "The qualifier that most FareHarbor operators are small.",
   "Gate 1 Travel's review reply as a PROVEN AI-generated response. A forum poster speculated it was AI. Not confirmed. Do not cite as an AI failure.",
   "Hunt transport, bear viewing, kayaking and apartment rentals as current product lines. The home page lists four products and these are not among them.",
-  "Any charter price or rate. None was verified."
+  "Any charter price or rate. None was verified.",
+  "Any claim that the 14-day or 24-hour windows are measured from when notice was SENT rather than received. The FAQ does not say, and an earlier draft asserted it.",
+  "Any figure for what share of inbound messages are cancellations. Unknown, unmeasured, and it is the exact quantity the proposed fortnight exists to discover."
  ]
 }
