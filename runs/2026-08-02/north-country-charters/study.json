@@ -12,7 +12,7 @@
  "found": {
   "title": "You already wrote down where this hurts, and you wrote the answer to it too",
   "lede": "The strongest thing we found about your business, you published yourselves.",
-  "body": "One number. One shared inbox. Hours of \"Sunday - Saturday: 6:00am - 7:00/8:00pm\" in season, and on the home page, \"Winter Hours Are Inconsistent, Leave a Voicemail.\" No second line and no answering service anywhere on the site. Brian is listed as \"Owner & Captain of The Irish,\" which is why we guess he isn't at a desk much in August, though you'd know better.\n\nWe checked the others on the bay before calling any of this a gap, and mostly it isn't. You run FareHarbor with a Book Now button, and so do Smokey Bay Air, Destination Alaska Charters and Bear Viewing Alaska, so on booking you are level with them and anyone telling you to fix that system is wrong on the facts. Not one operator we checked in Homer or Kachemak Bay runs AI guest response of any kind. The one real difference is reach. Emerald Air Service publishes text and WhatsApp alongside phone and email. You publish a phone line, an inbox and voicemail.",
+  "body": "One number. One shared inbox. Hours of \"Sunday - Saturday: 6:00am - 7:00/8:00pm\" in season, and on the home page, \"Winter Hours Are Inconsistent, Leave a Voicemail.\" No second line and no answering service anywhere on the site. Brian is listed as \"Owner & Captain of The Irish,\" which is why we guess he isn't at a desk much in August, though you'd know better.\n\nWe checked the others on the bay before calling any of this a gap, and mostly it isn't. You run FareHarbor with a Book Now button, and so do Emerald Air Service, Smokey Bay Air, Destination Alaska Charters and Bear Viewing Alaska, while Central Charters takes instant online booking through a listing site. On booking you are level with all of them, and anyone telling you to fix that system is wrong on the facts. Not one operator we checked in Homer or Kachemak Bay runs AI guest response of any kind. The one real difference is reach. Emerald Air Service publishes text and WhatsApp alongside phone and email. You publish a phone line, an inbox and voicemail.",
   "callout_big": "One phone line, one shared inbox, no answering service",
   "callout_note": "What your contact page publishes, and what it doesn't. We can only see what you publish, so treat this as the outside view of your setup rather than a description of it.",
   "body_2": null
@@ -85,7 +85,7 @@
     },
     {
      "id": "gmail",
-     "label": "Your inbox and its auto reply",
+     "label": "Your inbox, auto reply on",
      "kind": "external"
     },
     {
@@ -105,8 +105,8 @@
     },
     {
      "id": "sms",
-     "label": "Text to a phone they carry",
-     "kind": "external"
+     "label": "Texting service we wire up",
+     "kind": "build"
     },
     {
      "id": "crew",
@@ -244,7 +244,7 @@
     "mark": "modelled"
    }
   ],
-  "table_note": "We valued an hour of your time at 50 dollars throughout. Our figure, not your payroll.\n\nCost, conservative column: our fee 2,800 fixed, plus eight hours of your time at setup, plus two hours a year afterwards watching the automatic reply, times twenty percent contingency, gives 3,960. The middle column is six hours and eighteen percent, the right is four and fifteen. The fee never moves.\n\nBenefit, all credited in year one because that is when you decide. Building blind commits you to 9,500, being 5,500 to build plus 400 of your time plus 1,200 a year of running for three years. Times the 40 percent chance we tell you not to build, 3,800. Add 180 for the chance FareHarbor ships this and you avoid paying us twice, 480 for labelling you would otherwise buy inside the build, and 375 of first-touch time the reply saves that year, which is capacity rather than cash and only becomes money if that time goes to something that earns. Total 4,835, cut fifteen percent as a risk adjustment because not every line lands in full, gives 4,110. The other columns move the same drivers.\n\nThat benefit is mostly money NOT SPENT, avoided once when you decide. Credit only the first year of the build and the conservative case recovers 83 percent, which doesn't clear, and it only counts at all if you'd otherwise have bought blind. The 40 percent is the first number to argue with, because at 20 the conservative case fails. Run the reply alone over three years with no decision value and it recovers about a quarter of its own cost. It is not what pays for this.",
+  "table_note": "We valued an hour of your time at 50 dollars throughout. Our figure, not your payroll.\n\nCost, conservative column: our fee 2,800 fixed, plus eight hours of your time at setup, plus two hours a year afterwards watching the automatic reply, times twenty percent contingency, gives 3,960. The middle column is six hours and eighteen percent, the right is four and fifteen. The fee never moves.\n\nBenefit, all credited in year one because that is when you decide. Building blind commits you to 9,500, being 5,500 to build plus 400 of your time plus 1,200 a year of running for three years. Times the 40 percent chance we tell you not to build, 3,800. Add 180, being a 1,200 duplicate-vendor exposure at a 15 percent chance. Add 480, being 800 of labelling at 60 percent. and 375 of first-touch time the reply saves that year, which is capacity rather than cash and only becomes money if that time goes to something that earns. Total 4,835, cut fifteen percent as a risk adjustment because not every line lands in full, gives 4,110. The other columns move the same drivers.\n\nThat benefit is mostly money NOT SPENT, avoided once when you decide. Credit only the first year of the build and the conservative case recovers 83 percent, which doesn't clear, and it only counts at all if you'd otherwise have bought blind. The 40 percent is the first number to argue with, because at 20 the conservative case fails. Run the reply alone over three years with no decision value and it recovers about a quarter of its own cost. It is not what pays for this.",
   "payback_big": "104%",
   "payback_range": "of the fortnight's cost comes back in the conservative case, counting the whole three-year commitment you would avoid. Count only year one of that build and it is 83 percent, which doesn't clear. Both are in the table, and both depend on you having been willing to buy blind.",
   "base_rate_note": "The outside view first, because it applies to us too. We could not find a single independently measured AI deployment at family-run charter scale anywhere, and the small-operator case studies we did find were published by the vendors selling the product. The closest sector the national survey tracks to yours sits around 8 percent adoption, near the bottom. The reason this one is built to survive that record is that the only thing funded today is a count, and the count is allowed to end it.",
