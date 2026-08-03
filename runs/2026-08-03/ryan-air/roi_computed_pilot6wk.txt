@@ -1,0 +1,29 @@
+[
+  {
+    "scenario": "conservative",
+    "annual_run_rate_benefit": 6558,
+    "cumulative_benefit_5yr": 28199,
+    "tco_5yr": 49680,
+    "percent_of_tco_recovered": 57,
+    "payback_month": null,
+    "pays_back_within_horizon": false
+  },
+  {
+    "scenario": "most_likely",
+    "annual_run_rate_benefit": 16257,
+    "cumulative_benefit_5yr": 70716,
+    "tco_5yr": 37229,
+    "percent_of_tco_recovered": 190,
+    "payback_month": 30,
+    "pays_back_within_horizon": true
+  },
+  {
+    "scenario": "aggressive",
+    "annual_run_rate_benefit": 33075,
+    "cumulative_benefit_5yr": 147184,
+    "tco_5yr": 26335,
+    "percent_of_tco_recovered": 559,
+    "payback_month": 14,
+    "pays_back_within_horizon": true
+  }
+]
