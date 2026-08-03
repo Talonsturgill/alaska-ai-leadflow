@@ -1,0 +1,8 @@
+{
+ "ask": "Phase 1 pilot, Arrival Notice Desk at Bethel, one hub, roughly six weeks",
+ "scenarios": {
+  "conservative": {"pursuits_per_year":310,"benefit_lines":[{"label":"Recovered station-agent minutes at Bethel, CAPACITY","hours_per_pursuit":1.0,"rate":26,"cut":0.30}],"avoided_cost_lines":[{"label":"Avoided rework on a multi-station commitment made under two unverified assumptions, CASH","events_per_year":0.23,"cost_per_event":45000,"reduction":0.40}],"implementation":22000,"training":3200,"run_cost_per_year":3600,"run_cost_years":4.5,"contingency":0.20,"year1_ramp":0.30,"years":5},
+  "most_likely": {"pursuits_per_year":310,"benefit_lines":[{"label":"Recovered station-agent minutes at Bethel, CAPACITY","hours_per_pursuit":2.0,"rate":30,"cut":0.40}],"avoided_cost_lines":[{"label":"Avoided rework on a multi-station commitment made under two unverified assumptions, CASH","events_per_year":0.229,"cost_per_event":70000,"reduction":0.55}],"implementation":17000,"training":2400,"run_cost_per_year":2700,"run_cost_years":4.5,"contingency":0.18,"year1_ramp":0.35,"years":5},
+  "aggressive": {"pursuits_per_year":310,"benefit_lines":[{"label":"Recovered station-agent minutes at Bethel, CAPACITY","hours_per_pursuit":3.5,"rate":34,"cut":0.50}],"avoided_cost_lines":[{"label":"Avoided rework on a multi-station commitment made under two unverified assumptions, CASH","events_per_year":0.22,"cost_per_event":95000,"reduction":0.70}],"implementation":13000,"training":1800,"run_cost_per_year":1800,"run_cost_years":4.5,"contingency":0.15,"year1_ramp":0.45,"years":5}
+ }
+}

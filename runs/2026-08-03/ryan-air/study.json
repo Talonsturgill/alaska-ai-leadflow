@@ -1,0 +1,388 @@
+{
+ "meta": {
+  "company": "Ryan Air, Inc.",
+  "domain": "ryanalaska.com",
+  "segment": "Alaska air cargo",
+  "place": "Anchorage and seven bush stations",
+  "date": "August 3, 2026",
+  "prepared_for_first": true
+ },
+ "thesis": "Your storage clock starts when you tell a consignee in writing, so that notice is a billing document.",
+ "brief": "Your freight rules page says storage fees may be applied for shipments held more than three days after written notification of arrival at the destination point, at $.75 per 100 pounds or part thereof, per day. Read that closely. The clock does not start when the freight lands. It starts when the consignee is told, in writing, that it landed. That sentence turns an arrival notice into a billing document at every station you run, and it means a fee you already publish is only as solid as the record of the notice behind it.\n\nThe raw material already exists. Your Bethel Lead Cargo Agent posting says an on hand reconciliation is completed daily, so once a day that station knows exactly what is sitting there. What we can't see from outside is what happens next, whether every arriving airbill produces a written notice, how fast, and where those notices are kept.\n\nSo we would build a small desk that turns that daily count into a written, timestamped notice per consignee, drafted automatically and released by the agent who handled the freight that day. Nothing a shipper reads would be written by a model. Finding what newly arrived is a comparison against yesterday, the storage date is arithmetic on the rule you publish, the notice is a fixed template. One place a model might appear, reading the daily sheet, and it gets deleted if that sheet is already a file.\n\nHere is the part most proposals leave out. We priced that six week build and its conservative case did not clear, so we are not asking you to buy it yet. What we recommend buying first is two weeks of measurement at Bethel, and the deliverable is the decision itself. Our fee for that is about $7,200 to $8,300 including contingency, plus roughly twenty hours of your own people's time, which we have not priced.\n\nBe careful with the return we put on those two weeks. It rests on one thing, the rework you avoid by not committing blind, and that is worth something only if a second station is genuinely on the table. If Bethel is the whole ambition, the quantified return is zero and what you are buying is a decision record and two baselines you do not have today.\n\nWe could not verify your shipment volumes, call counts or contact data, so every figure here is a modeled illustration and labeled as one.\n\nBefore any of that, do the free thing. Five policies missing from your rules page are worth more per hour than anything we would charge you for.",
+ "found": {
+  "title": "Your own tariff makes the arrival notice a billing document",
+  "lede": "The most interesting sentence on your website is in the freight rules.",
+  "body": "Storage fees only apply to shipments held more than three days after written notification of arrival, not more than three days after arrival. Every day of storage you ever charge traces back to a piece of writing and the date it went out.\n\nThat makes the notice unusual. It is a service to the consignee, a way to get freight off your floor, and the basis for a fee, all in one document.",
+  "callout_big": "3 days",
+  "callout_note": "After written notification of arrival, not after arrival. Your freight rules page.",
+  "body_2": "The material already exists once a day. Your Bethel Lead Cargo Agent posting says the role ensures an on hand reconciliation is completed daily, and that all mail and freight received is processed into TakeFlite.\n\nWhat happens next is what we can't see from outside, and we won't assume you are failing at it. Measuring it is the first thing we would do."
+ },
+ "costing": {
+  "title": "The people who would send those notices are the people you are trying to hire",
+  "lede": "Two things about Bethel put this work on the wrong desk at the wrong moment.",
+  "body": "Your Bethel Customer Service Agent posting puts greeting and assisting customers with shipping, receiving or locating their freight, over the counter or on the telephone, on the same person who processes Takeflite tasks, flight documents and ground service contract paperwork.\n\nYour Nome Traffic Coordinator posting names the outbound half, notifying village agents and customers of flight schedules, ETAs and load onboard. The posting does not say how. What it does say is that a person does it, shipment by shipment.",
+  "callout_big": "4 of 10",
+  "callout_note": "Of your open postings today, four are at Bethel. Verified on your careers page on August 3.",
+  "body_2": "Meanwhile the expectation your shippers arrive with has moved. Lynden pushes automated email at five points in a shipment's life, including when it is available for pickup, to five of your seven bush stations.\n\nOn a 500 pound shipment sitting a week past the notice, your published rate comes to about $26 if the clock runs from the notice, or about $15 if the first three days are free. Your page does not say which, which is one more reason the record of the notice matters.\n\nNone of that means you stopped tending your site. Your freight rules page was updated on July 27, seven days before we looked, and nine customer facing pages changed in the last six weeks."
+ },
+ "opportunity": {
+  "title": "The only thing that changes is the half hour after the daily count",
+  "lede": "The change is small and lands in one place.",
+  "outcome_body": "Nothing about the physical work changes. What changes is what happens to the count once it exists.",
+  "before_after": {
+   "headline": "One day at Bethel, today and after",
+   "before_title": "Today",
+   "after_title": "After",
+   "note": "The Today column is our reconstruction from your job postings and your published pages, not something we measured. Two rows are identical on purpose. The count stays human because it is the only step where someone stands next to the freight, and the release stays human because the notice starts a billable clock.",
+   "rows": [
+    {
+     "today": "Agent completes the daily on hand count",
+     "after": "Agent completes the daily on hand count",
+     "gone": false
+    },
+    {
+     "today": "Someone works out which items are new since yesterday",
+     "after": "The desk compares today against yesterday",
+     "gone": true
+    },
+    {
+     "today": "Someone looks up who each shipment belongs to",
+     "after": "The desk matches each line to a consignee, and anything uncertain goes to a queue",
+     "gone": true
+    },
+    {
+     "today": "Someone works out when storage would start",
+     "after": "The desk computes that from your published three day rule",
+     "gone": true
+    },
+    {
+     "today": "Village agents and consignees are notified one at a time",
+     "after": "The desk drafts one written notice per consignee, all at once",
+     "gone": true
+    },
+    {
+     "today": "Agent reviews and releases, or holds any line",
+     "after": "Agent reviews and releases, or holds any line",
+     "gone": false
+    },
+    {
+     "today": "Any record of the notice lives wherever the agent puts it",
+     "after": "Every released notice stored with its send time",
+     "gone": false
+    },
+    {
+     "today": "Consignee calls to ask whether it landed",
+     "after": "Consignee has it in writing, though some still call",
+     "gone": false
+    }
+   ]
+  },
+  "after_body": "One row is deliberately unanswered. We can't see from outside whether a record of sent notices already exists, so we are not claiming it doesn't. If it does, the first two weeks will show it and the build gets smaller.\n\nThe last row is honest rather than flattering. A count that closes at end of day protects the record better than it protects the phone, so a consignee whose freight lands at ten may still call at noon."
+ },
+ "build": {
+  "title": "Almost none of this needs a model, and the one that might gets deleted if your sheet is a file",
+  "lede": "A small desk between the count you already do and the notice you already owe.",
+  "plain_parts": "The moving pieces, in plain nouns. A folder where the daily count lands. A comparison against yesterday. A list of consignees and how to reach them. A date calculator holding your three day rule. A fixed notice template. One review screen with a release button. A stored log of every notice and the time it went. Email and text delivery. That is the whole thing.",
+  "what_it_does": "Each day the desk takes the on hand list, compares it against yesterday to find what newly arrived, matches each line to a consignee, and computes the date fees would begin under your published rule. It drafts one notice per consignee carrying the shipment reference, the arrival time and that date, with your storage rule quoted as written. A Bethel agent opens one screen, sees only the new lines and anything uncertain, and releases the batch or holds a line.\n\nIf a notice goes out wrong, one button retracts and corrects it, and that shipment is permanently marked so no storage fee can be raised on it.",
+  "feasibility": "Finding what newly arrived is a comparison between two lists. The storage date is arithmetic on a rule you publish. Matching a consignee is name matching with a threshold, and anything below it goes to a person, because a computer's best guess about who owns a shipment is exactly the error that costs money. The notice is a fixed template. All of those can be tested line by line in a way no model can.\n\nOne place a model might appear, reading the daily sheet, and only if it is paper. If it comes out of Takeflite as a file, that piece is deleted and the build gets cheaper and more reliable at once.\n\nWe declined two things. No voice agent on your station phone. Every question it would field is a lookup or a sum ordinary software does the same way every time and that you can test exhaustively, and the likely ones are all money statements, a rate quote carrying a stack of interacting modifiers, an arrival answer that starts your storage clock, a refund promise against your published ten business day window. In 2024 a tribunal held that a carrier is responsible for what its own website tells a customer. We are also staying out of dispatch and weather, where the cost of an error is a human life.",
+  "build_vs_buy": "Ask before you buy anything, including from us. Takeflite already runs reservations, freight, dispatch and scheduling in this market, so it may already send arrival notification, and Northern Air Cargo, a sibling inside Saltchuk Aviation, already ships a self serve rate estimator. If Takeflite already sends arrival notification, stop there. Nothing below gets funded and we bill nothing.\n\nOtherwise we would buy the commodity and build only what encodes your rules. The notice log is the actual product, because it is the record your storage clause depends on. We would ask for no Takeflite credentials.",
+  "architecture": {
+   "nodes": [
+    {
+     "id": "recon",
+     "label": "Daily on-hand list, Bethel",
+     "kind": "external"
+    },
+    {
+     "id": "reader",
+     "label": "Sheet reader, only if paper",
+     "kind": "ai"
+    },
+    {
+     "id": "desk",
+     "label": "Arrival Notice Desk",
+     "kind": "build"
+    },
+    {
+     "id": "log",
+     "label": "Notice log, timestamped",
+     "kind": "data"
+    },
+    {
+     "id": "agent",
+     "label": "Station agent releases or holds",
+     "kind": "user"
+    },
+    {
+     "id": "sender",
+     "label": "Email and text delivery",
+     "kind": "external"
+    },
+    {
+     "id": "consignee",
+     "label": "Consignee in the village",
+     "kind": "user"
+    }
+   ],
+   "edges": [
+    {
+     "from": "recon",
+     "to": "reader"
+    },
+    {
+     "from": "recon",
+     "to": "desk"
+    },
+    {
+     "from": "reader",
+     "to": "desk"
+    },
+    {
+     "from": "desk",
+     "to": "log"
+    },
+    {
+     "from": "desk",
+     "to": "agent"
+    },
+    {
+     "from": "agent",
+     "to": "sender"
+    },
+    {
+     "from": "sender",
+     "to": "consignee"
+    }
+   ],
+   "caption": "Two ways in, and we expect only one gets built. Nothing reaches a consignee until a Bethel agent releases the batch."
+  }
+ },
+ "roi": {
+  "title": "We priced the build and the conservative case did not clear, so we shrank the ask",
+  "lede": "The number we did not like comes first.",
+  "lede_body": "We built the case for the six week desk first. Our fee for it lands between about $13,000 and $22,000 depending which door the measurement opens, and its five year cost including running it falls between about $26,000 and $50,000. In the conservative case it recovers about 57 percent of that and never pays back. It clears in the most likely case and pays back around month 30, and only if measured arrival status work at Bethel runs above about one hour per operating day. Those figures are modelled from our own pricing, not measured at your end.\n\nNobody outside your building can see how much arrival status work Bethel carries, so the floor we are willing to defend is low, and at that floor the recurring saving lands about level with the annual running cost.\n\nSo the ask shrank to two weeks of measurement. Its case rests on one thing, the rework you avoid by not committing blind, and that is worth something only if a second station is genuinely on the table.",
+  "table_caption": "Two weeks of measurement at Bethel, over five years. Every driver is a number we chose and named.",
+  "table_head": [
+   "",
+   "Conservative",
+   "Most likely",
+   "Aggressive"
+  ],
+  "table": [
+   {
+    "label": "Our fee, contingency of 15 to 20 percent included",
+    "cells": [
+     "$8,280",
+     "$8,083",
+     "$7,245"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Your staff time, about 20 hours, not priced by us",
+    "cells": [
+     "not priced",
+     "not priced",
+     "not priced"
+    ]
+   },
+   {
+    "label": "Rework exposure if you commit blind",
+    "cells": [
+     "$45,000",
+     "$70,000",
+     "$95,000"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Share of that the measurement retires",
+    "cells": [
+     "40%",
+     "55%",
+     "70%"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Value returned over five years",
+    "cells": [
+     "$18,000",
+     "$38,500",
+     "$66,500"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Share of our fee recovered",
+    "cells": [
+     "217%",
+     "476%",
+     "918%"
+    ],
+    "emphasis": true,
+    "mark": "modelled"
+   },
+   {
+    "label": "Payback",
+    "cells": [
+     "month 28",
+     "month 13",
+     "month 7"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Storage fee defensibility",
+    "cells": [
+     "not counted",
+     "not counted",
+     "not counted"
+    ]
+   }
+  ],
+  "table_note": "Read the marks. Nothing here is verified, which is the honest state of a first look from outside. We could not source a single shipment count, call count or handle time for Ryan Air, so we used none and did not borrow another carrier's. Our fee before contingency is $6,300 to $6,900, carried at 15 to 20 percent. The rework exposure is the Bethel build plus the two further stations a blind commitment would have seeded before anyone measured, which is why it runs above the six week price. If Bethel is the whole ambition, or if you would never have funded the build without measuring first, the quantified return on these two weeks is zero and what you are buying is the decision record and two baselines you do not have today. At about $8,280 that is what we think it is worth, and you should judge it on that rather than on the percentage.",
+  "payback_big": "217%",
+  "payback_range": "Conservative case recovers 217 percent of our fee with payback around month 28, and only if a second station is genuinely on the table. If it is not, the quantified return is zero and the deliverable is the decision.",
+  "base_rate_note": "The base rate for this work is bad and we won't pretend otherwise. MIT's 2025 work found about 95 percent of enterprise generative AI pilots produce no measurable profit impact, and that figure is directional. The defence here is simpler than a survey. This is barely an AI build.",
+  "value_owner": "The number belongs to whoever holds the Lead Cargo Agent seat at Bethel, since that role's posted duties already include the daily reconciliation this rides on. That seat is open today, so it has to be named from existing staff on day one. The rollout question is not a Bethel decision, so the second half of this number belongs to whoever approves a one hub pilot inside Saltchuk Aviation."
+ },
+ "roadmap": {
+  "title": "How we would start, and the first two steps cost you nothing",
+  "lede": "Money is released one stage at a time, each earned by the last one's actuals.",
+  "body": "The first three items are what we are actually asking for, and two of them are free. The build is not in this lane.",
+  "now": [
+   {
+    "item": "Publish the five policies missing from your freight rules page, a freight cutoff time, a claims procedure, an embargo policy, how you handle perishables, and station hours. We read that page in full and none of the five are on it.",
+    "metric": "Five of five live with an effective date, countable the day it ships"
+   },
+   {
+    "item": "Open one support ticket with Takeflite and ask it two things. Whether the Bypass Mail Order lookup can be turned on for you, the way Everts already exposes it on the same platform, and whether Takeflite already sends arrival notification for freight.",
+    "metric": "A written yes or no to each. If Takeflite already sends arrival notification, stop there, nothing below gets funded and we bill nothing"
+   },
+   {
+    "item": "Two weeks at Bethel measuring, not building. Ten business days of your on hand sheets in whatever form they exist, a count of what contact detail 200 consecutive airbills carry, and two shifts timing arrival status calls.",
+    "metric": "Two baselines that exist nowhere today, and two yes or no answers on paper"
+   }
+  ],
+  "next": [
+   {
+    "item": "Then, only if the measurement supports it, the desk at Bethel, roughly six weeks, including two weeks where it runs alongside the counter and sends nothing",
+    "metric": "Share of arriving freight carrying a written notice inside 24 hours, moving from your measured baseline toward 90 percent, with zero wrong arrival or storage dates as a guardrail that outranks it"
+   },
+   {
+    "item": "A two week question, not a build, on whether Takeflite will give you event access",
+    "metric": "One dated document with a go or no go on it"
+   },
+   {
+    "item": "A rate calculator built from your published tariff, containing no AI at all",
+    "metric": "Count of what will this cost calls, against the baseline taken in the measurement week"
+   },
+   {
+    "item": "A real tracking page with instructions, replacing the bare link",
+    "metric": "Share of tracking sessions that resolve without a call"
+   },
+   {
+    "item": "A second station. At Aniak and Nome you handle Everts freight on the ground, by their own map, so those stations' on hand lists carry another carrier's shipments and the second station has to be picked with that in mind",
+    "metric": "Same notice share against that hub's own baseline"
+   }
+  ],
+  "later": [
+   {
+    "item": "Notices fired from platform events instead of the daily count",
+    "metric": "Share sent within an hour of arrival"
+   },
+   {
+    "item": "Reading the station paperwork that goes to Anchorage Accounting",
+    "metric": "Rekeying minutes per station, once someone counts them"
+   },
+   {
+    "item": "A refund request form and status page",
+    "metric": "Share of refunds requested without a phone call"
+   }
+  ],
+  "gates": "Gate zero costs nothing, the policies publish and the ticket gets its answers, both your own work. Gate zero fails, and the whole thing stops, if Takeflite says it already sends arrival notification. Gate one releases the two week measurement. Gate two releases the build and clears only on both baselines, both findings in writing, and measured arrival status work above about one hour per operating day. Below that the desk has not earned it and we will say so. If contact details are not there, the work is repriced as contact capture before a line of the desk is built. Gate three releases a second station and clears only if the written notice share rose from your own baseline and no notice stated a wrong arrival or storage date. If it does not clear, no second hub is funded and you keep the notice log, the templates, both baselines and both findings. That is a real off ramp rather than a courtesy.",
+  "need_from_you": "Ten business days of real Bethel on hand sheets in whatever form they exist, photographs of paper included. A decision on consignee contact data, what exists and whether we may use it. A named person at Bethel to review and release, about two hours a week. Sign off on exactly what the notice says, because it is a document with your name on it that starts a billable clock. Last, confirmation of who approves a one hub pilot, since you are one of six Saltchuk Aviation companies."
+ },
+ "honest": {
+  "title": "Four things could sink this, and consignees you can't reach in writing can sink it outright",
+  "lede": "The first one has no fallback.",
+  "body": "Your consignees may not be reachable in writing. If most are reachable only by a call to a village agent or a sheet at the counter, the sending half of this is aimed at a channel that does not exist, and phase one is capturing contact details at the counter, a different project at a different price. That is why we want to count 200 airbills before building anything, and if it comes back thin we will say so and reshape or recommend stopping.\n\nThe review could quietly turn into rubber stamping. If a day at Bethel runs anything like the one in the demonstration below, thirteen lines with six new, the batch is small enough to approve without reading by week three. So we count how often the agent changes something before releasing, and watch it in both directions. Too many changes means our comparison is wrong. A week with none means the reading stopped.\n\nA wrong notice costs more than a wrong email. It starts a fee clock your customer did not earn, on a record you created, so everything is tuned toward holding rather than sending.\n\nSomebody may already sell you this. That is why the Takeflite ticket asks whether they already send arrival notification, and why a yes stops the whole thing. That question costs you nothing and might cost us the engagement."
+ },
+ "next_step_title": "One answer about your daily sheet decides most of this",
+ "next_step": "Tell us whether your daily on hand sheet is a file or a piece of paper. That one answer decides most of this, and it costs you one reply. If it is a file, the whole thing gets simpler and we will say so.",
+ "sources": [
+  {
+   "claim": "The storage rule, and the five policies the page does not publish",
+   "url": "https://ryanalaska.com/rates-rules/freight-rules/"
+  },
+  {
+   "claim": "Refunds go through the station of booking, up to 10 business days",
+   "url": "https://ryanalaska.com/about/faq/"
+  },
+  {
+   "claim": "The Airbill Tracking page is a bare link out",
+   "url": "https://ryanalaska.com/airbill-tracking-f/"
+  },
+  {
+   "claim": "Eight stations each publish a fax number",
+   "url": "https://ryanalaska.com/contacts/"
+  },
+  {
+   "claim": "Ten open positions today, four at Bethel",
+   "url": "https://careers.saltchuk.com/company/ryan-air-alaska/"
+  },
+  {
+   "claim": "Bethel Customer Service Agent duties",
+   "url": "https://careers.saltchuk.com/jobs/rya-csa-in-bethel-alaska-99559-us/"
+  },
+  {
+   "claim": "Bethel Lead Cargo Agent, daily on hand reconciliation",
+   "url": "https://careers.saltchuk.com/jobs/rya-lead-cargo-agent-in-bethel-alaska-99559-us/"
+  },
+  {
+   "claim": "Nome Traffic Coordinator notifies customers of ETAs",
+   "url": "https://careers.saltchuk.com/jobs/rya-traffic-coordinator-in-nome-alaska-99762-us/"
+  },
+  {
+   "claim": "Freight rules updated July 27, nine pages changed in six weeks",
+   "url": "https://ryanalaska.com/wp-sitemap-posts-page-1.xml"
+  },
+  {
+   "claim": "Everts accepts a Bypass Mail Order number on its tracker",
+   "url": "https://evertsair.com/cargo/freight-tracking"
+  },
+  {
+   "claim": "Everts names Ryan Air as its ground handler at Aniak and Nome",
+   "url": "https://evertsair.com/cargo/destinations-map"
+  },
+  {
+   "claim": "Lynden scheduled service to five of your stations",
+   "url": "https://www.lynden.com/lac/solutions/scheduled-service-within-alaska/"
+  },
+  {
+   "claim": "Lynden sends automated email at five shipment milestones",
+   "url": "https://www.lynden.com/online-tools/shipment-updates/"
+  },
+  {
+   "claim": "Northern Air Cargo runs a self serve online rate estimator",
+   "url": "https://www.nac.aero/online-estimator/"
+  },
+  {
+   "claim": "Grant Aviation runs Takeflite across its operation",
+   "url": "https://tflite.com/about-us/case-studies/grant-aviation/"
+  },
+  {
+   "claim": "Ryan Air is one of six Saltchuk Aviation companies",
+   "url": "https://www.saltchukaviation.com/"
+  },
+  {
+   "claim": "A carrier held responsible for what its website told a customer",
+   "url": "https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot"
+  },
+  {
+   "claim": "MIT, about 95 percent of enterprise generative AI pilots show no profit impact",
+   "url": "https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/"
+  }
+ ]
+}

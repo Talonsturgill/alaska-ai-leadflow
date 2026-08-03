@@ -1,0 +1,338 @@
+{
+ "company": "Ryan Air, Inc.",
+ "domain": "ryanalaska.com",
+ "run_date": "2026-08-03",
+ "status": "VERIFIED. This file is the ONLY thing downstream may cite. Every entry below was re-fetched and confirmed verbatim by the fact-checker. Anything not here does not exist for the purposes of this study.",
+ "identity": [
+  {
+   "claim": "Ryan Air joined the Saltchuk Family of Companies. Parent verbatim: 'Ryan Air-the Alaskan bush freight carrier founded by Wilfred and Eva Ryan in 1953-joined the Saltchuk Family of Companies in December.' The article is dated April 25 2023 and states NO YEAR for the acquisition, so no year may be asserted.",
+   "url": "https://www.saltchukaviation.com/news/seventy-years-flying-alaskas-freight"
+  },
+  {
+   "claim": "Ryan Air is listed as one of six Saltchuk Aviation companies, alongside Aloha Air Cargo, Aloha Tech Ops, Northern Air Cargo, Northern Air Maintenance Services and Saltchuk Aviation Shared Services.",
+   "url": "https://www.saltchukaviation.com/"
+  },
+  {
+   "claim": "Ryan Air's own about page says 'Ryan Air remains a family and native company managed by the third generation of Ryan family'. That is a statement about MANAGEMENT and is silent on ownership.",
+   "url": "https://ryanalaska.com/about/"
+  },
+  {
+   "claim": "Ryan Air job postings are hosted on careers.saltchuk.com, corroborating the corporate relationship.",
+   "url": "https://careers.saltchuk.com/company/ryan-air-alaska/"
+  },
+  {
+   "claim": "'Lee Ryan, named company president in 2019'",
+   "url": "https://www.saltchukaviation.com/news/seventy-years-flying-alaskas-freight"
+  },
+  {
+   "claim": "'Started in 1953 in the small village of Unalakleet'",
+   "url": "https://ryanalaska.com/about/"
+  },
+  {
+   "claim": "'Air cargo shipping is our primary business.'",
+   "url": "https://ryanalaska.com/about/"
+  },
+  {
+   "claim": "Homepage tagline verbatim: 'Freight, charter, and passenger service to friends and family for over 70 years!'",
+   "url": "https://ryanalaska.com/"
+  }
+ ],
+ "size_spread": {
+  "claim": "The company publishes numbers that disagree with each other across its own pages and its parent's. This spread is the verified claim. No single figure may be stated as settled.",
+  "readings": [
+   {
+    "page": "Homepage",
+    "text": "Today, we operate 24 aircraft out of eight hubs, proudly serving 80 villages throughout Western Alaska.",
+    "url": "https://ryanalaska.com/"
+   },
+   {
+    "page": "About",
+    "text": "operating 24 aircraft out of eight hubs. We serve over 70 villages and employ over 180 people.",
+    "url": "https://ryanalaska.com/about/"
+   },
+   {
+    "page": "Destinations",
+    "text": "Operating 25 aircraft out of eight hubs, serving 80 villages and employing over 180 people.",
+    "url": "https://ryanalaska.com/destinations/"
+   },
+   {
+    "page": "Saltchuk Aviation",
+    "text": "Operating a fleet of 20 aircraft from seven strategic hubs, over 70 villages, over 150 dedicated professionals",
+    "url": "https://www.saltchukaviation.com/companies/ryan-air"
+   }
+  ],
+  "spread": "fleet 20 to 25, hubs 7 or 8, villages 70 to 80, headcount 150 to 180 plus"
+ },
+ "service_policies": [
+  {
+   "claim": "REFUNDS, verbatim: 'Please call the station of booking to request a refund or cancellation, or to check on the status of a refund. Refunds may take up to 10 business days to process.'",
+   "url": "https://ryanalaska.com/about/faq/"
+  },
+  {
+   "claim": "BOOKING CUTOFF, verbatim: 'If your desired passenger flight is in less than 16 hours, please call the appropriate Ryan Air station to inquire about booking over the phone.'",
+   "url": "https://ryanalaska.com/passenger/"
+  },
+  {
+   "claim": "STORAGE, verbatim: 'Storage fees may be applied for shipments held more than three days after written notification of arrival at the destination point. Storage fees are $.75 per 100 pounds or part thereof, per day.'",
+   "url": "https://ryanalaska.com/rates-rules/freight-rules/"
+  },
+  {
+   "claim": "PRIORITY GUARANTEE, verbatim: 'Priority Letter and Priority Service are both expedited services that are guaranteed next available flight from the hub station to a service point on a single flight from that hub.'",
+   "url": "https://ryanalaska.com/rates-rules/freight-rules/"
+  },
+  {
+   "claim": "PRIORITY REMEDY, verbatim: 'Mishandled Priority Shipments will be refunded at 50% of the applicable fees when they are not delivered on the next available flight to the destination point, except for the following reasons: Weather, Aircraft mechanical, Circumstances out of the control of Ryan Air.'",
+   "url": "https://ryanalaska.com/rates-rules/freight-rules/"
+  },
+  {
+   "claim": "LIABILITY, verbatim: 'Liability of Ryan Air is limited to $.50 per pound, but not less than $50.00 per shipment, unless a higher value is declared. For higher declared values, a valuation charge of $.50 per $100.00 of value will be assessed.'",
+   "url": "https://ryanalaska.com/rates-rules/freight-rules/"
+  },
+  {
+   "claim": "'Ryan Air does not offer insurance.'",
+   "url": "https://ryanalaska.com/rates-rules/freight-rules/"
+  },
+  {
+   "claim": "'The Fuel Surcharge has been discontinued' and 'Flat rates have been discontinued.'",
+   "url": "https://ryanalaska.com/rates-rules/freight-rules/"
+  },
+  {
+   "claim": "The Freight Rules page publishes NO freight cutoff time, NO claims procedure, NO embargo policy, NO perishables handling and NO station hours. FIVE absences, verified on a page read in full. Do not write four.",
+   "url": "https://ryanalaska.com/rates-rules/freight-rules/"
+  }
+ ],
+ "tariff": [
+  {
+   "claim": "Freight rates page is marked 'Effective 3/01/2025' with four weight brackets, '1-499#', '500-999#', '1000-4999#', '5000# PLUS', and a '$30.00' minimum charge. Aniak to Bethel runs $1.30 / $1.26 / $1.21 / $1.16 per pound across the four brackets.",
+   "url": "https://ryanalaska.com/rates-rules/freight-rates/"
+  },
+  {
+   "claim": "Tariff rules verbatim: '6.25% federal excise tax must be added to all air freight delivery rates'; 'a $30.00 hazmat surcharge for HM shipments originating on Ryan Air'; 'The rate for Priority Letter Service is $18.82($20.00 including tax) per piece'; 'the rate for Priority Service is 140% of all other applicable tariffs'; 'An exception rate of 140% will be applied to oversize freight'; 'Human remains will be rated at 200%'; 'Dim. Wt. = (Greatest Length X Width X Height (inches)) / 166'; 'will be rated at $.35 per pound if the destination is on the same flight'; 'Backhaul freight rates are 75% of the general rates'.",
+   "url": "https://ryanalaska.com/rates-rules/freight-rules/"
+  }
+ ],
+ "fleet": [
+  {
+   "claim": "Fleet page payloads: Cessna 207 at 1,100 lb, described with the phrase 'Mainstay for air mail schedules'; Cessna 208 at 3,100 lb max; CASA 212-200 at 5,000 lb; Pilatus PC-12 at 2,600 lb max; SAAB 340 at 7,500 lb max.",
+   "url": "https://ryanalaska.com/fleet/"
+  }
+ ],
+ "contact_surface": [
+  {
+   "claim": "The contacts page lists TEN locations: eight stations (Anchorage Corporate, Aniak, Bethel, Emmonak, Kotzebue, Nome, St. Mary's, Unalakleet) each publishing a fax number, plus Anchorage Maintenance (907.771.2307) and Unalakleet Maintenance (907.624.5200) which publish NO fax. Correct form of the claim: all eight STATIONS publish a fax number. It is NOT true that every location does.",
+   "url": "https://ryanalaska.com/contacts/"
+  },
+  {
+   "claim": "Bethel station verbatim: 'P.O. Box 732, Bethel AK 99559, Phone: 907.885.3190, Fax: 907.543.3657'",
+   "url": "https://ryanalaska.com/contacts/"
+  },
+  {
+   "claim": "hr@ryanalaska.com is scoped on the contacts page to 'Send 49 CFR Part 40 Drug & Alcohol requests to Human Resources at [address]', a federal DOT testing-records mailbox.",
+   "url": "https://ryanalaska.com/contacts/"
+  },
+  {
+   "claim": "The charter request form has six required fields (Name, Organization Name, Email, Phone Number, Origin, Destination) plus optional Charter Type, Number of Passengers, Freight Weight and Description, Date Requested. There is NO stated response time, acknowledgement, disclaimer or terms anywhere on the page.",
+   "url": "https://ryanalaska.com/charter-request-form/"
+  },
+  {
+   "claim": "The Airbill Tracking page is a bare 'Track Airbill' hyperlink out to https://apps6.tflite.com/Public/RYN/Freight/Tracking/ with no instruction text, no required fields and no disclaimers.",
+   "url": "https://ryanalaska.com/airbill-tracking-f/"
+  }
+ ],
+ "hiring_and_work": [
+  {
+   "claim": "TEN open positions as of 2026-08-03, count verified live today: RYA Lead Cargo Agent Bethel Jul 31 2026; RYA Traffic Coordinator Nome Jul 31 2026; RYA Cargo Agent Nome Jul 16 2026; RYA Traffic Coordinator Bethel Jul 12 2026; RYA Aviation Maint Tech Anchorage Jul 11 2026; RYA Cargo Agent Bethel Jul 7 2026; RYA Cargo Agent Kobuk Jul 7 2026; RYA CSA Bethel Jun 23 2026; RYA Technical Records Assistant Anchorage Jun 5 2026; RYA Technical Records Assistant Anchorage Jun 2 2026. Bethel has four. The two Anchorage Technical Records Assistant postings are three days apart.",
+   "url": "https://careers.saltchuk.com/company/ryan-air-alaska/"
+  },
+  {
+   "claim": "CUSTOMER SERVICE AGENT spec, verbatim and contiguous: 'Responsible for greeting and assisting customers with shipping, receiving or locating their freight either over-the-counter or on the telephone.' 'Responsible for processing Takeflite sales tasks and sales documents on a daily basis.' 'Responsible for computer database flight operations tasks and flight documents.' 'Responsible for ground service contracts customer service and paperwork.'",
+   "url": "https://careers.saltchuk.com/jobs/rya-csa-in-bethel-alaska-99559-us/"
+  },
+  {
+   "claim": "TRAFFIC COORDINATOR spec, verbatim: 'Obtains current village weather and runway conditions. Relays information to Company pilots and operations agent in a timely and continual manner.' 'Notifies village agents and customers of flight schedules, ETA's and load onboard.' 'Prepares and completes flight and accounting paperwork for Anchorage Accounting Department.' 'Serves as Cargo or Customer Service Agent, as needed'",
+   "url": "https://careers.saltchuk.com/jobs/rya-traffic-coordinator-in-nome-alaska-99762-us/"
+  },
+  {
+   "claim": "LEAD CARGO AGENT spec, verbatim: 'Ensures that all mail and freight received is accurately processed, including input into TakeFlite.' and 'Ensures that an on hand reconciliation is completed daily.'",
+   "url": "https://careers.saltchuk.com/jobs/rya-lead-cargo-agent-in-bethel-alaska-99559-us/"
+  }
+ ],
+ "sitemap_truth": {
+  "claim": "The sitemap shows BOTH old and recent pages, and the honest reading carries both halves. Six customer-facing pages have not changed since 2022 or 2024. Nine others were updated within the last six weeks, including freight-rules seven days before this run. The correct claim is that specific self-service pages are stale while the tariff and schedule pages are actively maintained. It is NOT true that the site is generally neglected, and the prospect owns this file.",
+  "stale": [
+   {
+    "page": "airbill-tracking-f",
+    "modified": "2022-08-26"
+   },
+   {
+    "page": "our-process",
+    "modified": "2022-08-26"
+   },
+   {
+    "page": "rates-rules",
+    "modified": "2022-08-25"
+   },
+   {
+    "page": "about/jobs",
+    "modified": "2022-08-25"
+   },
+   {
+    "page": "charter-request-form",
+    "modified": "2022-09-13"
+   },
+   {
+    "page": "faq",
+    "modified": "2024-04-29"
+   }
+  ],
+  "fresh": [
+   {
+    "page": "freight-rules",
+    "modified": "2026-07-27"
+   },
+   {
+    "page": "homepage, destinations, passenger, schedules",
+    "modified": "2026-07-20"
+   },
+   {
+    "page": "about, contacts, fleet",
+    "modified": "2026-07-14"
+   },
+   {
+    "page": "freight-rates",
+    "modified": "2026-05-27"
+   }
+  ],
+  "url": "https://ryanalaska.com/wp-sitemap-posts-page-1.xml"
+ },
+ "competitors": [
+  {
+   "claim": "THE BYPASS MAIL TRACKING GAP, verified live on BOTH sides today. Everts Air Cargo verbatim: 'Simply click on the Freight Tracking button above and enter the Everts Airway Bill, Booking, Consolidation or Bypass Mail Order (example B20ANC-1234) number to begin your search.' Ryan Air's tracker, on the SAME Takeflite platform, verbatim: 'Enter your Booking, Air Waybill, Consolidation or Tracking Numbers (including prefixes, if any)' with 'Separate multiple entries with a comma.' No Bypass Mail Order number is named anywhere on Ryan Air's tracker.",
+   "url": "https://evertsair.com/cargo/freight-tracking"
+  },
+  {
+   "claim": "Everts also offers Create a Shipment, Freight Estimate and Customer Login.",
+   "url": "https://evertsair.com/cargo/freight-tracking"
+  },
+  {
+   "claim": "Everts hubs include Anchorage, Aniak, Fairbanks, King Salmon, Kotzebue, Nome and Unalakleet, overlapping Ryan Air at Aniak, Kotzebue, Nome and Unalakleet. Everts' own destinations map names Ryan Air as its ground handler at two of them, 'Aniak - Ryan Air' and 'Nome - Ryan Air', so Everts is simultaneously an upstream partner and a competitor for the same freight.",
+   "url": "https://evertsair.com/cargo/destinations-map"
+  },
+  {
+   "claim": "Northern Air Cargo runs a self-serve online rate estimator taking origin, destination, cargo type, ship date, email, quantity, weight, length, width and height across 16 cargo categories, with the verbatim disclaimer 'This is an estimate for planning purposes only - the final freight charges must be calculated when freight is delivered to NAC.' Destinations offered are Anchorage, Aniak, Barrow, Bethel, Deadhorse, Dillingham, Fairbanks, King Salmon, Kotzebue, Nome and Unalakleet, five of which are Ryan Air stations.",
+   "url": "https://www.nac.aero/online-estimator/"
+  },
+  {
+   "claim": "Lynden Air Cargo verbatim: 'We offer year-round, scheduled air cargo service from Anchorage to Bethel, Emmonak, Kotzebue, Nome, and St. Mary's.' That is five of Ryan Air's seven stations, and Lynden does NOT serve Aniak or Unalakleet on that list.",
+   "url": "https://www.lynden.com/lac/solutions/scheduled-service-within-alaska/"
+  },
+  {
+   "claim": "Lynden pushes automated email at FIVE shipment milestones, verbatim: 'Shipment is received by Lynden', 'Shipment departs the origin Service Center', 'Shipment has been scheduled for delivery, or is available for pickup', 'Shipment is out for delivery', 'Shipment has been delivered'. Frequency verbatim: 'Updates can be received instantly, hourly, or daily.'",
+   "url": "https://www.lynden.com/online-tools/shipment-updates/"
+  },
+  {
+   "claim": "Grant Aviation runs on Takeflite, the SAME platform as Ryan Air, covering verbatim 'reservations, freight, inventory, dispatch, scheduling, pilots, accounts', with '90% of our operational employees interact with Takeflite on a daily basis.' The platform is shared ground in this market, so nobody differentiates by buying it.",
+   "url": "https://tflite.com/about-us/case-studies/grant-aviation/"
+  },
+  {
+   "claim": "Yute Commuter Service uses a Takeflite public booking portal at apps6.tflite.com/Public/PAK/Booking/Search and publishes 1-888-FLY-YUTE. No freight tracking, rate tool or portal was found on its routes page.",
+   "url": "https://yutebethel.com/routes/"
+  },
+  {
+   "claim": "Alaska Air Cargo serves 20 Alaska points including Bethel, Kotzebue, Nome and Unalakleet, with Book a Shipment and Track through the iCargo portal and a Rates and Estimates section. It publishes regular station hours and cooler or freezer availability for perishables per location, which Ryan Air does not publish anywhere.",
+   "url": "https://www.alaskacargo.com/network-locations?airportCode=BET"
+  },
+  {
+   "claim": "Ryan Air is named as one of six carriers in a Western Alaska disaster relief effort, alongside Alaska Air Cargo, Everts Air Cargo, Grant Aviation, Lynden Air Cargo and Northern Air Cargo.",
+   "url": "https://info.lynden.com/blog/air-cargo-carriers-unite-for-western-alaska-disaster-relief"
+  }
+ ],
+ "market_context": [
+  {
+   "claim": "USPS Office of Inspector General audit of Alaska mail services, report 22-090-R22, issued September 28 2022, with site visits 'the week of May 23, 2022' in Anchorage, Bethel and Fairbanks, identified '$346,649' in overpayments to air carriers. Its recommendations include establishing 'a review and approval process for air carrier payments', developing 'a solution that will provide visibility over mail movement in Alaska', requiring 'shippers to schedule appointments to tender bypass mail to air carriers' with postage verification, and establishing 'a standard weight threshold for the verification of shipments by air carriers'. NOTE: the overpayment is attributable to payment review only. Do NOT attribute it to missing claim documentation, that half was rejected.",
+   "url": "https://www.uspsoig.gov/reports/audit-reports/alaska-mail-services"
+  },
+  {
+   "claim": "The Postal Regulatory Commission 'passed an increase of 9.39%' for Alaska Bypass. Ravn 'announced it was canceling all flights across Alaska' in August 2025. The article names 'Bering Air and cargo company Ryan Air as the only airlines regularly serving the region's villages'.",
+   "url": "https://alaskapublic.org/programs/alaska-economic-report/2025-08-21/in-rural-alaska-bypass-mail-rates-are-going-sky-high"
+  },
+  {
+   "claim": "BETA Technologies published a story titled 'Alaska's Ryan Air Bets on BETA Electric Aircraft' dated September 25 2025. ONLY the headline and date are verified. No aircraft count, payload, order terms or charging detail may be used.",
+   "url": "https://beta.team/stories"
+  }
+ ],
+ "ai_evidence": [
+  {
+   "claim": "C.H. Robinson receives 11,000 emails daily from shippers and carriers requesting pricing, and its system replies to 2,000 customer quotes daily in 'just over 2 minutes', with 2,268 truckload customers benefiting from the automated emails. The same article notes a shrinking workforce across five consecutive quarters. This is a global 3PL, NOT a template for a carrier of Ryan Air's size.",
+   "url": "https://www.truckingdive.com/news/ch-robinson-ai-automate-emailed-price-quotes-touchless-appointments/714925/"
+  },
+  {
+   "claim": "Alaska Airlines with Air Space Intelligence 'Flyways': 'In a six-month pilot with Flyways, Alaska reduced its fuel use by 480,000 gallons' and 'reducing nearly 4,600 tons of CO2 emissions into the atmosphere'. The human stays on the decision, verbatim: 'the dispatcher uses their judgment to determine when and how to use the Flyways optimized routes while always ensuring that safety comes first'. Airline-reported, not independently audited. No dispatcher count and no lead-time figure are published.",
+   "url": "https://news.alaskaair.com/alaska-airlines/revolutionizing-more-efficient-sustainable-ways-to-fly-flywaysai/"
+  },
+  {
+   "claim": "MIT Lincoln Laboratory's VEIA visibility tool is 'more than 90 percent accurate in detecting low-visibility conditions when compared to co-located ASOS data'. 'The system looks at the past 10 days' worth of imagery' and applies 'an edge-detection algorithm (called a Sobel filter)', using existing FAA web camera feeds with no specialized sensors. Pilots can access real-time visibility estimates alongside the camera imagery itself. NOTE: there is NO FAA Safety Risk Management panel and NO mandate on that page. Any claim of a regulatory requirement to show the raw image is FABRICATED and must never appear.",
+   "url": "https://news.mit.edu/2020/algorithm-eye-visibility-helps-pilots-alaska-0106"
+  },
+  {
+   "claim": "Gartner verbatim: 'Cross-enterprise negotiation, dynamic cost trade-offs and ethical judgment are poor candidates for agentic AI before 2027.' Agent washing is 'relabeling conventional automation as agentic, thereby increasing the likelihood of misaligned investments and extended vendor lock-in.' Most existing agentic features enhance user experience rather than transforming decision quality.",
+   "url": "https://www.dcvelocity.com/technology/artificial-intelligence/agent-washing-shows-risks-of-rush-to-agentic-ai"
+  },
+  {
+   "claim": "Moffatt v. Air Canada, 2024 BCCRT 149, February 19 2024. The tribunal found Air Canada owed a duty of care and rejected its argument that 'the chatbot is a separate legal entity that is responsible for its own actions', holding verbatim: 'It should be obvious to Air Canada that it is responsible for all the information on its website.' A carrier owns what its bot tells a customer. NOTE: no damages figure is verified from this source.",
+   "url": "https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot"
+  },
+  {
+   "claim": "Michael Rentz, Chief Revenue Officer of container-visibility vendor Gnosis Freight, verbatim: 'AI does not create accuracy, it amplifies whatever you feed it. If the underlying container data is incomplete, delayed, or conflicting, the AI does not just fail quietly.' and 'It's death by a thousand small errors that erode trust in the technology until the team stops using it and goes back to manual.' Vendor-sourced, presented as such.",
+   "url": "https://www.freightwaves.com/news/why-logistics-tech-is-failing-the-ai-test"
+  }
+ ],
+ "base_rate": [
+  {
+   "claim": "MIT Project NANDA, State of AI in Business 2025: about 95 percent of enterprise generative-AI pilots produce no measurable P&L impact. The cause is the learning and integration gap, not model quality. The 95 percent is directional and its denominator is debated, and it measures pilots without P&L impact rather than 'AI does not work'. Carried from knowledge/AI_SCOPING.md, our own hand-sourced knowledge base, NOT re-fetched this run. Re-verify at Phase 6 before it ships.",
+   "url": "https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/"
+  },
+  {
+   "claim": "RAND, The Root Causes of Failure for AI Projects (RRA2680-1): more than 80 percent of AI projects fail, about twice the rate of non-AI IT. The five root causes are misunderstanding the problem, lacking the data, chasing the latest tech over the real problem, weak infrastructure, and applying AI to problems too hard for it. Carried from knowledge/AI_SCOPING.md, NOT re-fetched this run. Re-verify at Phase 6.",
+   "url": "https://www.rand.org/pubs/research_reports/RRA2680-1.html"
+  },
+  {
+   "claim": "Google, Rules of ML, Rule 1: do not be afraid to launch without machine learning. If ML would give a 100 percent boost, a heuristic gets you 50 percent of the way there. Carried from knowledge/AI_SCOPING.md, NOT re-fetched this run. Re-verify at Phase 6.",
+   "url": "https://developers.google.com/machine-learning/guides/rules-of-ml"
+  },
+  {
+   "claim": "Anthropic, Building Effective Agents: find the simplest solution possible and only increase complexity when needed, which might mean not building an agentic system at all. Use workflows for well-defined tasks, agents only for open-ended problems where you can't hardcode the path. Carried from knowledge/AI_SCOPING.md, NOT re-fetched this run. Re-verify at Phase 6.",
+   "url": "https://www.anthropic.com/engineering/building-effective-agents"
+  }
+ ],
+ "contact": {
+  "contact_ok": true,
+  "email": "smiller@ryanalaska.com",
+  "name": "Stefanie Miller",
+  "role_note": "Published by Ryan Air for media, community and donation requests. She is NOT the buyer. The carrier email must be worth forwarding to Lee Ryan, President.",
+  "contact_source": "https://info.lynden.com/blog/air-cargo-carriers-unite-for-western-alaska-disaster-relief renders the address in clear as a live mailto link, verbatim 'Ryan Air - Stefanie Miller (smiller@ryanalaska.com)', on a third-party domain. Independently corroborates both the person and the exact address.",
+  "publisher_of_record": "https://ryanalaska.com/contacts/, where the address is Cloudflare-obfuscated. The fetch returns the placeholder inside the exact predicted sentence, 'Send media, community, and donation requests to [email protected]', confirming the sentence structure.",
+  "decision_maker": "Lee Ryan, President, named company president in 2019 per Saltchuk Aviation. NO email address for him is published anywhere fetchable and none may ever be constructed."
+ },
+ "DO_NOT_USE": [
+  "The 11 million pounds of mail in 2024 figure, and the whole carrier poundage comparison table. NO URL exists for it anywhere and the fact-checker could not locate the article across four attempts. This was the largest quantitative claim about the prospect's own business and it rests on nothing. It must not appear in the study, the ROI, the demo or the email, in any form or rounding.",
+  "Any FAA Safety Risk Management panel, mandate or regulatory requirement attached to VEIA. Fabricated.",
+  "Any dispatcher count (67), lead time (eight-plus hours), or platform name (Azure AI) for Flyways or C.H. Robinson.",
+  "C.H. Robinson's 3 million tasks, 1 million quotes, or 30 percent productivity increase. The cited page carries only forward-looking goals of 15 and 10 percent.",
+  "Any description of Ryan Air as family owned or Alaska Native owned. This is the single most dangerous error available to this study.",
+  "The acquisition YEAR. Say 'joined the Saltchuk Family of Companies' and cite the parent. December 2022 is not a fetched fact.",
+  "Lee Ryan's Bering Straits board resignation, his shareholder status, or any October 2025 trade coverage. Unverified and it concerns a named individual.",
+  "Any Bering Air detail. The page never loaded past a bot check, so its rates, village list, loyalty portal and the negative finding that it has no tracking tool are ALL unverified.",
+  "The 'only 3 of 72 communities have paved runways' claim. Not on the cited page.",
+  "Any Yelp review, the BBB profile, or the Nome station 'four companies, four tracking systems' detail.",
+  "The Ryan Air partners list. ryanalaska.com/partners/ 404s. Only the Everts ground-handling relationship survives, on Everts' own map.",
+  "'Alaska Inspires' or any Alaska Airlines passenger AI. Uncited.",
+  "The DPD chatbot incident and the Convoy shutdown. Not re-fetched, so not verified.",
+  "USPS Handbook PO-508 quotes, KYUK bypass tender rules, the ten-year background check requirement, the DIOMEDE seasonal route, station manager names, and the 6400 Carl Brady Drive HQ address. All uncited or unconfirmed.",
+  "Any characterisation of Ryan Air's site as generally neglected or of thin digital capacity. Nine customer-facing pages were updated within six weeks and the prospect owns the sitemap that proves it.",
+  "'Fax is in the loop at every location'. Two of ten locations publish no fax. Say all eight STATIONS publish a fax number.",
+  "The RAND 80 percent figure. rand.org returned HTTP 403 on every attempt this run, so nobody has seen the page. Reject when unsure.",
+  "MIT's 95 percent without the word GENERATIVE. The finding is about enterprise GENERATIVE AI pilots, and broadening it to all enterprise AI is a materially wider claim than the source supports."
+ ],
+ "DRIFT_WARNING": "The fact-checker found that EVERY directional rejection leaned the same way, making Ryan Air look further behind and the AI precedent look more solid than the pages support. Ten separate items pushed that direction. Treat that pattern as the finding, not the individual errors. The honest version of this study is still strong: no self-serve quoting, no proactive notification, no online account setup, no published hours or freight cutoff, a phone-and-counter service model documented in their own job specs, and a bypass mail tracking gap sitting unused on a platform they already pay for. Every one of those survived verification. The drift did not make the case stronger, it made it fragile."
+}

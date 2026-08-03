@@ -1,17 +1,25 @@
 {
  "version": 1,
  "note": "Writes owed to Supabase because it was unreachable when the run shipped. Backfill these when it recovers, then empty the list.",
- "updated": "2026-08-02",
+ "updated": "2026-08-03",
  "pending": [
   {
    "owed": "leadflow.leads.study_json for northcountrycharters.com",
    "row_id": "0756fbdf-49c5-46e8-8319-809aed0f6bf4",
-   "why": "Supabase was UP and every other column landed, including dossier_md, competitors, ai_opportunities, sources and the draft. The study object is about 23KB of JSON and was not written in this run. This is a size and run-budget limitation, NOT an outage.",
+   "why": "Carried over from 2026-08-02 and still owed. Supabase was UP on both runs and every other column landed. The study object is about 23KB of minified JSON and the only write path available to the routine is the Supabase MCP execute_sql tool, which requires the whole object to be re-emitted verbatim inside the tool call. This is a connector limitation, NOT an outage, and re-emitting 23KB by hand carries a real risk of silent corruption.",
    "source_of_truth": "runs/2026-08-02/north-country-charters/study.json in this repo, and the rendered study live at https://alaskaaihq.com/awesomeproposal/north-country-charters/",
-   "how_to_backfill": "update leadflow.leads set study_json = <contents of runs/2026-08-02/north-country-charters/study.json>::jsonb where lower(domain)='northcountrycharters.com';",
-   "impact": "Dashboard rendering of the study object only. Dedupe, the pipeline row, the audit row and the paper trail are all complete. study_path points at git and the live URL serves the study."
+   "how_to_backfill": "From a machine with psql and the project connection string: \\set s `cat runs/2026-08-02/north-country-charters/study.json` then update leadflow.leads set study_json = :'s'::jsonb where lower(domain)='northcountrycharters.com';",
+   "impact": "Dashboard rendering of the study object only. Dedupe, the pipeline row, the audit row, the draft and the paper trail are all complete, study_path points at git and the live URL serves the study."
+  },
+  {
+   "owed": "leadflow.leads.study_json for ryanalaska.com",
+   "row_id": "fcc1465a-3e58-4856-bd92-7697c55a1f73",
+   "why": "Same connector limitation as above, about 24KB minified. Every other column for this lead landed this run, including the full draft body, the ROI summary and the recommended build.",
+   "source_of_truth": "runs/2026-08-03/ryan-air/study.json in this repo, and the rendered study live at https://alaskaaihq.com/awesomeproposal/ryan-air/",
+   "how_to_backfill": "From a machine with psql: \\set s `cat runs/2026-08-03/ryan-air/study.json` then update leadflow.leads set study_json = :'s'::jsonb where lower(domain)='ryanalaska.com';",
+   "impact": "Dashboard rendering of the study object only. Dedupe, the pipeline row, the audit row, the draft and the paper trail are all complete."
   }
  ],
  "last_backfill": "2026-07-29",
- "backfill_note": "All owed writes landed after Supabase recovered at ~13:45 UTC. leadflow.runs row and leadflow.leads row for Allen Marine both written, status sent. study_json was NOT backfilled, the full study lives in git at runs/2026-07-29/allen-marine-tours/ which is the record of authority. INBOUND FIRST checked on recovery, one consented opt-in ever (Paychex 2026-07-23) and it was already suppressed, so nothing was owed to anyone."
+ "backfill_note": "2026-08-03. Supabase was UP and every other write landed, the leads row, the runs row and three new suppressions. Two study_json objects remain owed, both for the same reason, which is that the routine's only write path re-emits the whole object inside a tool call and 23KB of JSON is not safe to retype by hand. This is now a KNOWN MACHINE LIMITATION rather than a one-off, and it has recurred on two consecutive runs. The durable fix is a direct database connection string available to the routine so a file can be streamed with psql, which would clear both rows in one command. Flagged for a human decision."
 }

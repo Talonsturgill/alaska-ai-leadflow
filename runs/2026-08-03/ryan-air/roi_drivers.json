@@ -1,0 +1,8 @@
+{
+ "ask": "Two-week format-and-contact-data finding at Bethel. The deliverable is the decision itself.",
+ "scenarios": {
+  "conservative": {"pursuits_per_year":310,"benefit_lines":[],"avoided_cost_lines":[{"label":"Avoided rework on a multi-station commitment made under two unverified assumptions, CASH","events_per_year":0.20,"cost_per_event":45000,"reduction":0.40}],"implementation":6500,"training":400,"run_cost_per_year":0,"run_cost_years":0,"contingency":0.20,"year1_ramp":1.0,"years":5},
+  "most_likely": {"pursuits_per_year":310,"benefit_lines":[],"avoided_cost_lines":[{"label":"Avoided rework on a multi-station commitment made under two unverified assumptions, CASH","events_per_year":0.20,"cost_per_event":70000,"reduction":0.55}],"implementation":6500,"training":350,"run_cost_per_year":0,"run_cost_years":0,"contingency":0.18,"year1_ramp":1.0,"years":5},
+  "aggressive": {"pursuits_per_year":310,"benefit_lines":[],"avoided_cost_lines":[{"label":"Avoided rework on a multi-station commitment made under two unverified assumptions, CASH","events_per_year":0.20,"cost_per_event":95000,"reduction":0.70}],"implementation":6000,"training":300,"run_cost_per_year":0,"run_cost_years":0,"contingency":0.15,"year1_ramp":1.0,"years":5}
+ }
+}

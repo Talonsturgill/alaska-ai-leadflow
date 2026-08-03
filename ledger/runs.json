@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Per-run audit and the double-fire guard. Reconstructed rows before 2026-07-29 are inferred from archived artifacts, not from the database.",
-  "updated": "2026-08-02",
+  "updated": "2026-08-03",
   "runs": [
     {
       "run_date": "2026-07-16",
@@ -62,6 +62,12 @@
       "status": "success",
       "shortlist_count": 21,
       "notes": null
+    },
+    {
+      "run_date": "2026-08-03",
+      "status": "success",
+      "shortlist_count": 24,
+      "notes": "Ryan Air, Inc. Four scouts, 24 candidates. Fact-checker 2 rounds (29 then 12 rejections, all applied). study-critic 4 rounds to ship. lead-critic 3 rounds to ship. Ask resized mid-run because the six week conservative case did not clear. Suppressed nana.com, ahtna.com and doyon.com on the detention-contracting screen."
     }
   ]
 }

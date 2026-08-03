@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Memory of record for dedupe. Authoritative, git-backed, always available. Supabase leadflow.leads is dual-written when reachable but is no longer required to run.",
-  "updated": "2026-08-02",
+  "updated": "2026-08-03",
   "leads": [
     {
       "company": "Goldbelt, Incorporated",
@@ -190,6 +190,25 @@
       "roi_summary": "Ask is 2,800 dollars for the measurement fortnight. Conservative case recovers 104 percent counting the whole three-year commitment avoided, and 83 percent counting only year one, which does not clear, and both are printed. The Clock itself gets a break-even of 19 to 54 recovered seats a season rather than a dollar return, because no charter rate is published anywhere.",
       "gmail_draft_id": "r4069284968970934362",
       "run_date": "2026-08-02"
+    },
+    {
+      "company": "Ryan Air, Inc.",
+      "domain": "ryanalaska.com",
+      "segment": "other labor-scarce or paperwork-heavy Alaska SMBs (rural air cargo)",
+      "location": "Anchorage HQ, with bush stations at Aniak, Bethel, Emmonak, Kotzebue, Nome, St. Mary's and Unalakleet",
+      "status": "drafted",
+      "fit_score": 24,
+      "why_picked": "Highest fit_total of the day at 24, the only candidate above 23, so no tiebreak was needed. Reachability scored the highest mark any candidate earned. A shape we had never worked, and the season is real, Western Alaska freight runs through October.",
+      "contact_name": "Stefanie Miller",
+      "contact_role": "Published by Ryan Air for media, community and donation requests. NOT the buyer. Lee Ryan, President, is the decision-maker and no address for him is published anywhere fetchable, so the email was written to be forwarded and names nobody.",
+      "contact_email": "smiller@ryanalaska.com",
+      "contact_source": "https://info.lynden.com/blog/air-cargo-carriers-unite-for-western-alaska-disaster-relief renders the address in clear as a live mailto alongside five other named carrier contacts, independently corroborating both the person and the exact address. Ryan Air's own contacts page publishes it Cloudflare-obfuscated.",
+      "study_path": "runs/2026-08-03/ryan-air/",
+      "outcome": "Field Study drafted and published. The finding is one sentence on their own freight rules page, storage fees only apply to shipments held more than three days after WRITTEN NOTIFICATION of arrival, so the clock runs from the notice rather than the landing and their arrival notice is a billing document.",
+      "recommended_build": "Arrival Notice Desk, a deterministic workflow with one conditional extraction node, piloted at Bethel. The ask that shipped is two weeks of measurement first, because the six week build's conservative case did not clear.",
+      "roi_summary": "Two week measurement at Bethel. Conservative recovers 217 percent of our fee with payback at month 28, most likely 476 percent at month 13, aggressive 918 percent at month 7. Computed in scripts/roi_math.py. The six week build it gates recovers only 57 percent conservatively and never pays back, which is why the ask shrank. The return is zero unless a multi station rollout is genuinely contemplated, and the study says so beside the number.",
+      "gmail_draft_id": "r8074858835552895385",
+      "run_date": "2026-08-03"
     }
   ]
 }
