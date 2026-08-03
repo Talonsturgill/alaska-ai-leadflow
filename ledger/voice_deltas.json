@@ -306,6 +306,48 @@
           "added": []
         }
       ]
+    },
+    {
+      "run_date": "2026-08-02",
+      "company": "North Country Charters",
+      "deltas": [
+        {
+          "kinds": [
+            "reworded"
+          ],
+          "before": "The study's first build is a plain auto reply carrying your own sentence back and there's no AI in it.",
+          "after": "So we spent the week learning everything about your business and working on a fix that would increase your revenue.",
+          "dropped": [
+            "ai",
+            "auto",
+            "back",
+            "build",
+            "carrying",
+            "first",
+            "in",
+            "is"
+          ],
+          "added": [
+            "about",
+            "business",
+            "everything",
+            "fix",
+            "increase",
+            "learning",
+            "on",
+            "revenue"
+          ]
+        },
+        {
+          "kinds": [
+            "added"
+          ],
+          "before": null,
+          "after": "https://alaskaaihq.com/",
+          "dropped": [],
+          "added": []
+        }
+      ]
     }
   ]
 }
