@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Never-contact list. Companies disqualified at a gate, competitors, and anyone who said no.",
-  "updated": "2026-07-29",
+  "updated": "2026-08-03",
   "suppressions": [
     {
       "company": "Bering Straits Native Corporation",
@@ -20,6 +20,24 @@
       "domain": "paychex.com",
       "reason": "values/fit: national payroll and HR-automation corporation, not an Alaska SMB and an adjacent automation vendor; inbound opt-in came from a personal address, not a genuine decision-maker.",
       "date": "2026-07-29"
+    },
+    {
+      "company": "NANA Regional Corporation",
+      "domain": "nana.com",
+      "reason": "values/reputation: ICE detention contracting through subsidiary Akima (Krome and Guantanamo), documented in Turtle Talk's compiled overview and Alaska Public Media reporting (2025-10-31). Same rule that suppressed beringstraits.com. Screened out at Phase 1 by the ANC lead-scout, never contacted. Subsidiaries included.",
+      "date": "2026-08-03"
+    },
+    {
+      "company": "Ahtna, Incorporated",
+      "domain": "ahtna.com",
+      "reason": "values/reputation: ICE guard-services contracting, a reported $35M contract in Texas plus work at Port Isabel, through Ahtna Federal. Documented in Turtle Talk's compiled overview and Alaska Public Media reporting (2025-10-31). Same rule that suppressed beringstraits.com. Screened out at Phase 1 by the ANC lead-scout, never contacted. Subsidiaries included.",
+      "date": "2026-08-03"
+    },
+    {
+      "company": "Doyon, Limited",
+      "domain": "doyon.com",
+      "reason": "values/reputation: operations, transportation and food services at the 800-bed El Paso Service Processing Center through Doyon Government Group. Documented in Turtle Talk's compiled overview and Alaska Public Media reporting (2025-10-31). Same rule that suppressed beringstraits.com. Screened out at Phase 1 by the ANC lead-scout, never contacted. Subsidiaries included.",
+      "date": "2026-08-03"
     }
   ]
 }
