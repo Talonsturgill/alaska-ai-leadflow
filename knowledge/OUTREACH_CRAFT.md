@@ -34,8 +34,12 @@ The skeleton, stripped to the bone.
 
 ## Length (the hardest rule, and the one most often broken)
 
-FORTY TO SIXTY WORDS in the body. Three or four sentences, plus the link and the
-sign-off. That is the entire email.
+FORTY TO SIXTY WORDS in the body. Three or four sentences, plus the link. That is
+the entire email.
+
+NO SIGN-OFF LINE. The Gmail account carries a signature block in its settings, set
+by the maintainer on 2026-08-03, so the email ends on the ask. A drafted sign-off
+would sit above that block and read as signing twice.
 
 A cold email is not read, it is glanced at. Every sentence past the fourth pushes
 the link further down the screen and makes the whole thing look like work. The
@@ -166,7 +170,8 @@ slick or as AI and gets deleted. Specificity is the whole defense.
 1. The one specific true thing we found about them. First sentence, no preamble.
 2. What it costs them, one line.
 3. The link, named plainly as work already done for them.
-4. One small ask that does not imply a gate. Sign off as Talon at Alaska AI.
+4. One small ask that does not imply a gate. Nothing after it, the signature block
+   closes the email.
 
 Forty to sixty words. The study carries the weight, the email just opens the door.
 
@@ -194,11 +199,9 @@ rewrite its own rules is a run that grades its own homework.
 
   Worth a reply either way.
 
-  Talon at Alaska AI
-
-Forty-one words. Zero commas, and it loses nothing. Opens on a number true only of
-them. Never mentions us until the signature. The build, the ROI range, and the
-honest part all live in the study, where there is room for them.
+Thirty-seven words. Zero commas, and it loses nothing. Opens on a number true only
+of them. Never mentions us at all, the signature block does that. The build, the
+ROI range, and the honest part all live in the study, where there is room for them.
 
 ## What a real send taught us, 2026-07-29
 
