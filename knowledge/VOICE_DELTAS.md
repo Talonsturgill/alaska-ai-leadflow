@@ -12,20 +12,26 @@ That promotion is a human decision, never automatic.
 
 ## Recurring patterns
 
-- **lengthened**, in 4 send(s), 6 time(s) total  <- READY TO PROMOTE
+- **lengthened**, in 5 send(s), 7 time(s) total  <- READY TO PROMOTE
 - **added**, in 4 send(s), 6 time(s) total
 - **deleted**, in 2 send(s), 2 time(s) total
 - **reworded**, in 2 send(s), 2 time(s) total
-- **cta softened**, in 1 send(s), 1 time(s) total
-- **agent-team framing cut**, in 1 send(s), 2 time(s) total
 - **shortened**, in 1 send(s), 1 time(s) total
-- **contraction**, in 1 send(s), 4 time(s) total
+- **agent-team framing cut**, in 1 send(s), 2 time(s) total
 - **presumption cut**, in 1 send(s), 1 time(s) total
+- **contraction**, in 1 send(s), 4 time(s) total
+- **cta softened**, in 1 send(s), 1 time(s) total
 
 The writer keeps making these and Talon keeps undoing them. Fix the brief,
 not the individual email.
 
 ## Log
+
+### 2026-08-03, Ryan Air, Inc.
+
+- `lengthened`
+  - drafted: Worth a reply or a forward either way.
+  - sent:    Worth a reply or a forward either way, no strings.
 
 ### 2026-08-02, North Country Charters
 

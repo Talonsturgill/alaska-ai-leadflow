@@ -348,6 +348,24 @@
           "added": []
         }
       ]
+    },
+    {
+      "run_date": "2026-08-03",
+      "company": "Ryan Air, Inc.",
+      "deltas": [
+        {
+          "kinds": [
+            "lengthened"
+          ],
+          "before": "Worth a reply or a forward either way.",
+          "after": "Worth a reply or a forward either way, no strings.",
+          "dropped": [],
+          "added": [
+            "no",
+            "strings"
+          ]
+        }
+      ]
     }
   ]
 }
