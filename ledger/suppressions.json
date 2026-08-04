@@ -62,6 +62,12 @@
       "domain": "chugach.com",
       "reason": "values: subsidiary Chugach Management Services settled False Claims Act allegations for $822,000 on 2010-05-10, over allegedly billing the military for heavy-duty steel while installing lighter cheaper steel across four security-fence projects. Verified against the DOJ release before recording. THINNER AND OLDER THAN THE OTHER SUPPRESSIONS, a single 2010 settlement rather than a pattern, and flagged here for a human to reverse if Talon judges it stale. Recorded because billing misstatement on federal work is directly on point with a proposal and compliance build. Screened out at Phase 1, never contacted. Source: https://www.justice.gov/archive/usao/waw/press/2010/may/chugach.html",
       "date": "2026-08-04"
+    },
+    {
+      "company": "Koniag, Incorporated",
+      "domain": "koniag.com",
+      "reason": "values/reputation: ICE Enforcement and Removal Operations contracting. On 2026-07-29, six days before this run, Koniag Services, Inc. was awarded GSA OASIS SB task order 70CDCR26FR0000034 by U.S. Immigration and Customs Enforcement for support services to ERO's 287(g) National Coordination Center, reported at a 63,035,230.95 ceiling. CONFIRMED against USASpending, not taken from the trade aggregator that first surfaced it: award 70CDCR26FR0000034, recipient KONIAG SERVICES, INC., awarding sub-agency U.S. Immigration and Customs Enforcement, description 'THE PURPOSE OF THIS TASK ORDER IS TO PROVIDE SUPPORT SERVICES IN SUPPORT OF ENFORCEMENT AND REMOVAL OPERATIONS'. Same rule that suppressed beringstraits.com, nana.com, ahtna.com and doyon.com, and the Bering Straits reasoning applies with unusual force here because our offer to this company would have been AI for its federal capture and proposal pipeline, which accelerates exactly this line of work. Disqualified at the Phase 2 research gate, never contacted, no email drafted. NOTE: Koniag is a separate entity from Afognak Native Corporation and Alutiiq LLC and this record is its own. Also note Koniag Brillient LLC holds a USCIS records-operations contract, which is immigration BENEFITS processing and was not the basis for this suppression.",
+      "date": "2026-08-04"
     }
   ]
 }
