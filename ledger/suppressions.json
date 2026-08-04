@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Never-contact list. Companies disqualified at a gate, competitors, and anyone who said no.",
-  "updated": "2026-08-03",
+  "updated": "2026-08-04",
   "suppressions": [
     {
       "company": "Bering Straits Native Corporation",
@@ -38,6 +38,30 @@
       "domain": "doyon.com",
       "reason": "values/reputation: operations, transportation and food services at the 800-bed El Paso Service Processing Center through Doyon Government Group. Documented in Turtle Talk's compiled overview and Alaska Public Media reporting (2025-10-31). Same rule that suppressed beringstraits.com. Screened out at Phase 1 by the ANC lead-scout, never contacted. Subsidiaries included.",
       "date": "2026-08-03"
+    },
+    {
+      "company": "Cape Fox Corporation",
+      "domain": "capefoxcorp.com",
+      "reason": "values/reputation: ProPublica investigation documented fraud and self-dealing alleged in five of its seven 8(a) federal-contracting companies, including $16M in consulting fees to an insider, an executive charging 90 percent of his consulting firm's expenses to the corporation with family on payroll, a 2010 Alexandria VA jury finding of unjust enrichment ordering $850K restitution, and a 2009 Air Force suspension of a consultant and his firm. Verified directly against the ProPublica article before recording. Screened out at Phase 1 by the ANC lead-scout, never contacted. Source: https://www.propublica.org/article/rampant-fraud-self-dealing-alleged-in-alaska-native-corporation",
+      "date": "2026-08-04"
+    },
+    {
+      "company": "The Eyak Corporation",
+      "domain": "eyakcorporation.com",
+      "reason": "values: subsidiaries Eyak Technology LLC and Eyak Services LLC settled False Claims Act and Anti-Kickback allegations for $2.5M over conduct from 2005 to 2011, accepting kickbacks from subcontractors in exchange for directing subcontract work, and charging the US Army Corps of Engineers for services never rendered and labor never performed. Directly on point with the proposal and compliance work we would propose to an ANC. Verified before recording. Screened out at Phase 1, never contacted. Source: https://bergermontague.com/alaska-based-eyak-corporation-agrees-settle-false-claims-act-allegations-2-5-million/",
+      "date": "2026-08-04"
+    },
+    {
+      "company": "Afognak Native Corporation",
+      "domain": "afognak.com",
+      "reason": "parent of Alutiiq, LLC (alutiiq.com), already suppressed for documented federal-contracting fraud history. The subsidiary rule runs upward as well as downward, so the parent of an excluded entity is excluded. Screened out at Phase 1, never contacted. NOTE FOR FUTURE RUNS: Afognak is a Kodiak-region corporation and so is Koniag, Incorporated. They are SEPARATE ENTITIES and this record does not attach to Koniag.",
+      "date": "2026-08-04"
+    },
+    {
+      "company": "Chugach Alaska Corporation",
+      "domain": "chugach.com",
+      "reason": "values: subsidiary Chugach Management Services settled False Claims Act allegations for $822,000 on 2010-05-10, over allegedly billing the military for heavy-duty steel while installing lighter cheaper steel across four security-fence projects. Verified against the DOJ release before recording. THINNER AND OLDER THAN THE OTHER SUPPRESSIONS, a single 2010 settlement rather than a pattern, and flagged here for a human to reverse if Talon judges it stale. Recorded because billing misstatement on federal work is directly on point with a proposal and compliance build. Screened out at Phase 1, never contacted. Source: https://www.justice.gov/archive/usao/waw/press/2010/may/chugach.html",
+      "date": "2026-08-04"
     }
   ]
 }
