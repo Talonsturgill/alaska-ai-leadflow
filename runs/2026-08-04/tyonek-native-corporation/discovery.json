@@ -1,0 +1,90 @@
+{
+ "provisional_pick": "Affiliate Past Performance Documentation Engine",
+ "outcome": "Increase the number of federal proposals in which the full corporate past performance record is actually evaluable, and cut to zero the proposals where an affiliate's record is submitted without the documentation the solicitation requires for it to count. Measured per bid as the percentage of named affiliates shipping with the complete required documentation set (signed affiliation, teaming or JV agreement, plus the significant-and-critical-aspects narrative), baseline from their last completed bids, target 100 percent, plus median capture hours spent assembling that documentation per bid. Two counters keep it honest: bids submitted per quarter must not fall, and no proposal goes out with a narrative no human at Tyonek approved.",
+ "target_job": "When I bid an 8(a) or competitive federal award, I need every relevant Tyonek affiliate's past performance documented the way that specific solicitation demands, so the corporation's whole record counts instead of only the bidding entity's.",
+ "why_it_wins": "The loss it prevents is TOTAL and IRREVERSIBLE where every other candidate's loss is incremental. An affiliate submitted without documentation 'shall not be evaluated or considered', which zeroes an asset the corporation already owns, at submission, with no recovery path. It is the only candidate whose unit of value is an award rather than a saved minute. It sits on the right side of the regulatory boundary for a fast start, because its corpus is corporate and contractual documents rather than technical data on defense articles. And it stops at the right rung of the feasibility ladder: retrieval, a deterministic per-solicitation checklist, and one bounded drafting step.",
+ "opportunity_map_areas": [
+  "Federal capture and proposals across a many-entity structure",
+  "Entity and registration administration (SAM, UEI, CAGE hygiene)",
+  "Quality and regulatory recordkeeping (AS9102 FAI, NCRs)",
+  "Aircraft and aerostat maintenance execution and return to service",
+  "Manufacturing across 210,000 sq ft in eight buildings",
+  "Government property administration",
+  "Cyber operations training and courseware",
+  "Recruiting and workforce across 25 locations in 16 states",
+  "Multi-site CUI handling and incident reporting",
+  "Market positioning and capability messaging",
+  "Aviation safety",
+  "Shareholder and village obligations",
+  "Alaska lands",
+  "Predictive maintenance (mapped, deliberately not pursued)"
+ ],
+ "candidates_ranked": [
+  {
+   "name": "Affiliate Past Performance Documentation Engine",
+   "rice": 7.9,
+   "cod": "HIGHEST, structurally irreversible. The documentation decision is made at submission and an omitted affiliate is gone for that bid with no remedy.",
+   "effort_pm": 4,
+   "confidence": 0.7,
+   "owner": "Capture and business development, escalating to CEO Stephen Peskosky since it crosses both operating groups"
+  },
+  {
+   "name": "Government Property Records Automation",
+   "rice": 4.2,
+   "cod": "MODERATE, and it runs BACKWARDS. They posted the analyst role 14-Jul-2026, so human capacity is arriving and delay slightly improves the odds.",
+   "effort_pm": 3,
+   "confidence": 0.5,
+   "note": "Mostly deterministic rules, not AI. AI_SCOPING says structured, stable, high-volume, high-risk work belongs to deterministic automation. We would say that out loud."
+  },
+  {
+   "name": "Quality Records Assistant (AS9102 FAI and NCRs)",
+   "rice": 3.0,
+   "cod": "LOW to MODERATE, steady-state with no cliff.",
+   "effort_pm": 8,
+   "confidence": 0.4,
+   "note": "Wrong side of the ITAR boundary for a fast start. FAI content is drawing-derived technical data. Would spend its first half-year on enclave work before producing anything. Hard non-goal: never signs, never approves, never generates a maintenance release."
+  },
+  {
+   "name": "Courseware Production Assistant",
+   "rice": 2.1,
+   "cod": "HIGH on paper, FA8773-25-C-0001 completes 2026-02-28.",
+   "effort_pm": 5,
+   "confidence": 0.35,
+   "note": "Best pure language fit in the map, but the claims file cannot state the classification of 39th IOS courseware, and in a defense training environment an unknown handling level is a STOP, not a risk to price."
+  },
+  {
+   "name": "Recruiting and Requisition Assistant",
+   "rice": 1.2,
+   "cod": "LOW, nothing expires.",
+   "effort_pm": 2,
+   "confidence": 0.6,
+   "note": "The one surface with no CUI or ITAR exposure at all. Value as a de-risked warm-up, not as value."
+  },
+  {
+   "name": "Predictive Maintenance Program",
+   "rice": 1.0,
+   "cod": "NONE, delay is the correct action.",
+   "effort_pm": 12,
+   "confidence": 0.1,
+   "note": "SCORED SO IT COULD BE REJECTED IN THE OPEN. GAO and the DoD Inspector General evidence is bad, nothing in the claims file says Tyonek wants it, and every one of RAND's five root causes of AI project failure is present at once. Tyonek is not behind here, it is in the majority."
+  }
+ ],
+ "the_risk_that_could_invalidate_the_pick": "The internal satisfaction score of 4 is an ESTIMATE from structural evidence, not a measurement. If Tyonek's documentation completeness rate is already high, this build is worth far less than modeled and the pick should move to Government Property Records Automation. The feasibility gate should attack this first.",
+ "open_questions": [
+  "Proposals submitted per quarter and what share name affiliate past performance. Every reach figure is an assumption and the RICE ranking is sensitive to this one number.",
+  "Current documentation completeness rate on affiliate past performance. This is the baseline and the one measurement that could invalidate the pick.",
+  "What capture and proposal tooling they already run. No system is named in the claims file.",
+  "Classification and handling level of the 39th IOS courseware.",
+  "Whether they already operate an accredited environment meeting the DFARS 252.204-7012 FedRAMP Moderate equivalent bar, and at which sites.",
+  "AS9102 FAI and NCR volumes across the two repair stations and the manufacturing footprint.",
+  "Functional headcount split by capture, quality, property and training.",
+  "Who actually owns capture. No capture or BD leader is named anywhere in the file."
+ ],
+ "constraints_honored": [
+  "No candidate automates or implies automating a maintenance sign-off. 14 CFR 145.213(d) and 43.9(a)(4) reserve it to a certificated human. Carried as an explicit non-negotiable non-goal.",
+  "Every candidate states its side of the CUI and ITAR boundary.",
+  "The GAO decision is used only for what it supports, that the affiliate provision was material and contested. Dismissed on untimeliness and prematurity, merits never reached, Tyonek remained in the competition.",
+  "Predictive maintenance scored and rejected in the open rather than quietly omitted.",
+  "The FAA 240,869 hour figure and the ARSA 23,000 percent figure are deliberately ABSENT from every business case."
+ ]
+}

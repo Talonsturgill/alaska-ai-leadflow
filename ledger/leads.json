@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Memory of record for dedupe. Authoritative, git-backed, always available. Supabase leadflow.leads is dual-written when reachable but is no longer required to run.",
-  "updated": "2026-08-03",
+  "updated": "2026-08-04",
   "leads": [
     {
       "company": "Goldbelt, Incorporated",
@@ -209,6 +209,25 @@
       "roi_summary": "Two week measurement at Bethel. Conservative recovers 217 percent of our fee with payback at month 28, most likely 476 percent at month 13, aggressive 918 percent at month 7. Computed in scripts/roi_math.py. The six week build it gates recovers only 57 percent conservatively and never pays back, which is why the ask shrank. The return is zero unless a multi station rollout is genuinely contemplated, and the study says so beside the number.",
       "gmail_draft_id": "r8074858835552895385",
       "run_date": "2026-08-03"
+    },
+    {
+      "company": "Tyonek Native Corporation",
+      "domain": "tyonek.com",
+      "segment": "Alaska Native corporations and tribal enterprises",
+      "location": "Anchorage, Alaska",
+      "status": "drafted",
+      "fit_score": 22,
+      "why_picked": "Next on the replacement queue after Koniag was disqualified on ICE contracting. ANCSA village corporation, 22 federal registrations under one parent UEI with near duplicate names across states, a verified named-human contact read in clear, and a dated this-company-only finding in GAO decision B-424364.",
+      "contact_name": "Stephanie Deemer",
+      "contact_role": "Director of Marketing and Communications",
+      "contact_email": "sdeemer@tyonek.com",
+      "contact_source": "https://tyonek.com/contact/ read in clear, corroborated in the press-contact block of the 10 October 2024 Coast Guard release at https://tyonek.com/news/. A router, not the buyer, based at the Alabama campus.",
+      "study_path": "runs/2026-08-04/tyonek-native-corporation/",
+      "outcome": "Field Study drafted and published unlisted. The study recommends a half-day baseline retrospective rather than a build, and states in its own heading that the build we costed never pays back in cash in any modelled scenario.",
+      "recommended_build": "Affiliate Past Performance Completeness Check. Deterministic completeness rules over an entity register keyed on UEI and CAGE, with two bounded model calls neither of which can move the verdict.",
+      "roi_summary": "The ask, a half-day baseline retrospective, returns $2.75 per dollar conservatively and $7.31 aggressively. The gated Phase 1 build recovers 4, 18 and 78 percent of its five year cost in cash and pays back in cash in NO scenario. Freed hours are reported as hours, never converted to money.",
+      "gmail_draft_id": "r1437136797899123975",
+      "run_date": "2026-08-04"
     }
   ]
 }
