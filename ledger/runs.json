@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Per-run audit and the double-fire guard. Reconstructed rows before 2026-07-29 are inferred from archived artifacts, not from the database.",
-  "updated": "2026-08-03",
+  "updated": "2026-08-04",
   "runs": [
     {
       "run_date": "2026-07-16",
@@ -68,6 +68,12 @@
       "status": "success",
       "shortlist_count": 24,
       "notes": "Ryan Air, Inc. Four scouts, 24 candidates. Fact-checker 2 rounds (29 then 12 rejections, all applied). study-critic 4 rounds to ship. lead-critic 3 rounds to ship. Ask resized mid-run because the six week conservative case did not clear. Suppressed nana.com, ahtna.com and doyon.com on the detention-contracting screen."
+    },
+    {
+      "run_date": "2026-08-04",
+      "status": "success",
+      "shortlist_count": 20,
+      "notes": "Koniag disqualified on ICE contracting and replaced with Tyonek. 6 study-critic rounds, 3 fact-check rounds, 4 lead-critic rounds."
     }
   ]
 }

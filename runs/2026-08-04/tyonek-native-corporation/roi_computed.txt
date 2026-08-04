@@ -1,0 +1,56 @@
+[
+  {
+    "scenario": "ask_conservative",
+    "annual_run_rate_benefit": 19500,
+    "cumulative_benefit_1yr": 19500,
+    "tco_1yr": 7080,
+    "percent_of_tco_recovered": 275,
+    "payback_month": 5,
+    "pays_back_within_horizon": true
+  },
+  {
+    "scenario": "ask_most_likely",
+    "annual_run_rate_benefit": 31200,
+    "cumulative_benefit_1yr": 31200,
+    "tco_1yr": 6095,
+    "percent_of_tco_recovered": 512,
+    "payback_month": 3,
+    "pays_back_within_horizon": true
+  },
+  {
+    "scenario": "ask_aggressive",
+    "annual_run_rate_benefit": 42900,
+    "cumulative_benefit_1yr": 42900,
+    "tco_1yr": 5865,
+    "percent_of_tco_recovered": 731,
+    "payback_month": 2,
+    "pays_back_within_horizon": true
+  },
+  {
+    "scenario": "phase1_conservative",
+    "annual_run_rate_benefit": 4512,
+    "cumulative_benefit_5yr": 19176,
+    "tco_5yr": 213600,
+    "percent_of_tco_recovered": 9,
+    "payback_month": null,
+    "pays_back_within_horizon": false
+  },
+  {
+    "scenario": "phase1_most_likely",
+    "annual_run_rate_benefit": 19058,
+    "cumulative_benefit_5yr": 81949,
+    "tco_5yr": 171100,
+    "percent_of_tco_recovered": 48,
+    "payback_month": null,
+    "pays_back_within_horizon": false
+  },
+  {
+    "scenario": "phase1_aggressive",
+    "annual_run_rate_benefit": 64360,
+    "cumulative_benefit_5yr": 279966,
+    "tco_5yr": 140300,
+    "percent_of_tco_recovered": 200,
+    "payback_month": 28,
+    "pays_back_within_horizon": true
+  }
+]
