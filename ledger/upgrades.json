@@ -94,6 +94,16 @@
     "scripts/study_qa.py",
     "scripts/build_study_page.py"
    ]
+  },
+  {
+   "date": "2026-08-05",
+   "change": "The htmlBody check from the review batch was UNSATISFIABLE and would have hard-failed every future run at the delivery gate. The Gmail connector cannot return an htmlBody, so the HTML is now verified from the payload the run passes to create_draft, tied to the draft by its plaintext so a payload from a different email fails rather than passing. The contract now saves out/<date>/draft_payload.json before creating the draft.",
+   "evidence": "Caught by the maintainer, who asked why a run was going to hit a failure I already knew about. Investigated instead of guessing: list_drafts with DRAFT_VIEW_FULL returns plaintextBody and no htmlBody on any of five real drafts, and get_thread, which does document htmlBody, is denied by this connector's scopes. The decisive evidence is the sibling carousel routine, which creates html-only drafts, and those come back from list_drafts with no body field at all, which is only possible if htmlBody is never returned.",
+   "verified_how": "Tested against the REAL read-back shape rather than a fixture, using the actual shipped Fountainhead draft. Passes with a reconstructed payload, fails with no payload and names the remedy, fails when the payload carries no htmlBody, and fails when the payload is a different email entirely, which is the check that stops payload verification being theatre. The eight earlier delivery negatives all still fail and the well-formed case still passes.",
+   "files": [
+    "scripts/delivery_check.py",
+    "prompts/routine_instructions.md"
+   ]
   }
  ]
 }
