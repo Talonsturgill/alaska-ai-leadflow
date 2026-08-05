@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Per-run audit and the double-fire guard. Reconstructed rows before 2026-07-29 are inferred from archived artifacts, not from the database.",
-  "updated": "2026-08-04",
+  "updated": "2026-08-05",
   "runs": [
     {
       "run_date": "2026-07-16",
@@ -74,6 +74,12 @@
       "status": "success",
       "shortlist_count": 20,
       "notes": "Koniag disqualified on ICE contracting and replaced with Tyonek. 6 study-critic rounds, 3 fact-check rounds, 4 lead-critic rounds."
+    },
+    {
+      "run_date": "2026-08-05",
+      "status": "success",
+      "shortlist_count": 23,
+      "notes": "Fountainhead Hotels. Pick locked at the lowest rung of the feasibility ladder, no AI in the recommended build. study-critic ship on round 2 after 12 blocking fixes, lead-critic ship on round 3."
     }
   ]
 }

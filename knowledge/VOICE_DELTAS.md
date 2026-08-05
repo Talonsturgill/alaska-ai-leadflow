@@ -12,20 +12,30 @@ That promotion is a human decision, never automatic.
 
 ## Recurring patterns
 
-- **lengthened**, in 5 send(s), 7 time(s) total  <- READY TO PROMOTE
-- **added**, in 4 send(s), 6 time(s) total
+- **lengthened**, in 6 send(s), 8 time(s) total  <- READY TO PROMOTE
+- **added**, in 5 send(s), 7 time(s) total
+- **reworded**, in 3 send(s), 3 time(s) total
 - **deleted**, in 2 send(s), 2 time(s) total
-- **reworded**, in 2 send(s), 2 time(s) total
-- **shortened**, in 1 send(s), 1 time(s) total
 - **agent-team framing cut**, in 1 send(s), 2 time(s) total
 - **presumption cut**, in 1 send(s), 1 time(s) total
-- **contraction**, in 1 send(s), 4 time(s) total
+- **shortened**, in 1 send(s), 1 time(s) total
 - **cta softened**, in 1 send(s), 1 time(s) total
+- **contraction**, in 1 send(s), 4 time(s) total
 
 The writer keeps making these and Talon keeps undoing them. Fix the brief,
 not the individual email.
 
 ## Log
+
+### 2026-08-04, Tyonek Native Corporation
+
+- `lengthened`
+  - drafted: We've already done the study on how to measure that exposure.
+  - sent:    We just wrapped up our study on how to measure that exposure and did a deep dive on Tyonek.
+- `added` not drafted, added by hand: Here's what we came up with ⬇
+- `reworded`
+  - drafted: Tell us if it's useful or pass it along.
+  - sent:    No strings, we just think you'll like it.
 
 ### 2026-08-03, Ryan Air, Inc.
 

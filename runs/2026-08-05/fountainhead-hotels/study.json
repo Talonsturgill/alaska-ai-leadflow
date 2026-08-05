@@ -1,0 +1,370 @@
+{
+ "meta": {
+  "company": "Fountainhead Hotels",
+  "domain": "fountainheadhotels.com",
+  "segment": "Independent hospitality",
+  "place": "Fairbanks, Alaska",
+  "date": "5 August 2026",
+  "prepared_for_first": true
+ },
+ "thesis": "Aurora season opens in sixteen days and your two pages disagree about the date.",
+ "brief": "You told us the shape of this yourselves. Your jobs page says you more than double hotel staffing for summer to make sure guests have caring, personal experiences at your properties, and the roster you hire starts with Seasonal Front Desk Clerks. Those are the people standing between a guest and every answer, at three separately addressed properties, on desks you staff around the clock.\n\nThe answers are already good. Check-in at 4PM and check-out at 11AM, 24 hours notice on cancellations, no late check-outs from mid-May through mid-September, a courtesy van running 24 hours to the airport and the rail station that excludes tour groups and large groups traveling together. What that content never does is tell a clerk which answer belongs to the building they are standing in, on the date they are standing there.\n\nHere is the one thing we found that you can check in a minute. Your Wedgewood aurora page dates the season 21 August through 21 April. Your Bear Lodge rooms page dates the same season mid-August to late April. Both are yours and the start dates disagree by about a week, though mid-August is a phrase rather than a date so that gap is our reading of your words. That is normal for any business with a lot of pages and a lot of years, and it is proof the problem is real before anyone sells you software.\n\nSo the first thing we would build has no AI in it. A set of cards, one question and one agreed answer each, tagged to a property and to a date range, with a source, an owner and a review date. A season that flips because the calendar says so rather than because someone remembered. A printed sheet of the twenty questions asked most, taped to each desk. We think that sheet of paper will be the most-used thing we deliver, and we would rather say so than sell you a search box.\n\nRoughly 18,000 to 26,000 dollars, fixed. That buys four to seven weeks of one person, and most of it is not software. The audit, the interviews at each property, and the editorial passes where your people decide the one right answer are the bulk of the cost. Where it lands in that range depends on how much of your operating knowledge is already written down rather than sitting in a veteran's head.\n\nBe careful with our own numbers. At our conservative assumptions this never pays for itself on prevented interruptions, which is why we print a threshold you can test rather than a saving we made up. Time your people get back is capacity, not cash, and it only becomes money if it defers a seasonal hire. We have no headcount for you, no revenue, no call volume, and no idea what booking system you run.\n\nThe ask is one reply carrying one number. Roughly what share of your summer front-of-house people worked a season with you before. That single number decides whether any of this is worth your time.",
+ "found": {
+  "title": "This is ordinary, it is cheap to settle, and it is the proof",
+  "lede": "One defect you can check from outside, sixteen days before it matters.",
+  "body": "Your Wedgewood Resort aurora page says the season runs 21 August through 21 April. Your Bear Lodge rooms page, describing the courtesy Northern Lights wakeup call and the headlamps you rent at the front desk, dates the same season mid-August to late April. The start dates disagree by about a week. We should be precise about that number, because mid-August is a phrase rather than a date, so the size of the gap is our reading of your words and not something you published.\n\nThis is not a sign of anything wrong with how you run hotels. It is what happens to any business that has maintained a lot of pages over a lot of years. It matters because of which window it is, and because settling it costs one decision.",
+  "callout_big": "21 August",
+  "callout_note": "Sixteen days from the date of this study, when the answer changes on two of your three properties. We found no aurora content published for Sophie Station Suites, which is itself worth knowing.",
+  "body_2": "Your other two seasonal windows are tidy. The late check-out rule and the Golden Bear Restaurant are both published as mid-May to mid-September, the same span on both pages. The aurora window is the odd one out, it is the one your two pages disagree on, and it is the one that turns over first."
+ },
+ "costing": {
+  "title": "The cost is an interruption nobody counts, and it is time rather than money",
+  "lede": "It never appears on a schedule, so it never appears in a budget.",
+  "body": "When a new clerk can't answer something, the question walks across the lobby to the most experienced person on the floor. That person is on the phone, or in the back, or is a seasonal hire themselves that week. Nothing about this shows up as a line item, which is exactly why it survives year after year.\n\nBe careful how you value that. Your desks are staffed around the clock either way, so twenty minutes handed back to a clerk is capacity, not cash. It only becomes money if it defers a seasonal hire or avoids a backfill, and you publish that you more than double staffing for summer, so that path is real for you. If no hire is deferred, read the dollar column as zero and the benefit as better guest service.\n\nWe also can't size the problem from outside and we refuse to guess. The one number circulating in this industry, that 40 percent of calls to hotel front desks go unanswered, is a claim by a vendor executive with no study behind it, naming no property. It appears nowhere in our numbers.",
+  "callout_big": "Four measures, no baselines",
+  "callout_note": "Every number this study would want about your desks is currently uncollected. Measuring the before is the first two weeks of the work.",
+  "body_2": "The industry backdrop is real even where your own figures are not. A survey of 282 hoteliers run by the American Hotel and Lodging Association with Hireology over December 2024 and January 2025 found 65 percent reporting staffing shortages and 71 percent carrying openings they were unable to fill despite active searches. Front desk was the second most acute shortage at 26 percent, behind housekeeping at 38. That is eighteen-month-old context for why this is worth attention. It is not a measurement of you."
+ },
+ "opportunity": {
+  "title": "What changes is that the answer stops depending on who is standing there",
+  "lede": "One shift, walked step by step, before and after.",
+  "outcome_body": "The outcome is narrow and stated as a change in behaviour rather than as a tool. A first-week seasonal hire gives the same correct answer a ten-year veteran would give, at any property and in either season, without escalating and without a guest ever talking to a machine.",
+  "before_after": {
+   "headline": "A shift on 21 August, the morning aurora season opens at Wedgewood and Bear Lodge",
+   "before_title": "Today",
+   "after_title": "After",
+   "note": "Row four is deliberately unchanged. Asking a person is the right answer for anything genuinely new, and a build that tried to replace it would be selling you something worse than what you have.",
+   "rows": [
+    {
+     "today": "Clerk is asked whether the Northern Lights wakeup call is running yet. Two of your pages give different start dates.",
+     "after": "The card for the wakeup call appeared on the page this morning, carrying one agreed date range that your team settled before the season opened.",
+     "gone": true
+    },
+    {
+     "today": "Clerk checks whether late check-out is available now that summer feels over. The rule actually runs to mid-September.",
+     "after": "The late check-out card is still showing, with its own end date printed on it, so the answer is right for another three weeks.",
+     "gone": true
+    },
+    {
+     "today": "Guest asks whether the Golden Bear is open. The window is published on the Bear Lodge page, and we have no way to know what a clerk has in front of them mid-shift.",
+     "after": "The restaurant card carries its own window and disappears on its own date, so the calendar does the remembering.",
+     "gone": true
+    },
+    {
+     "today": "Guest asks something genuinely unusual. Clerk finds a supervisor.",
+     "after": "Clerk finds a supervisor. The card says who to ask and your desks are staffed around the clock anyway."
+    },
+    {
+     "today": "A policy changes. We could find no dated, owned answer published anywhere a clerk could reach.",
+     "after": "One named person changes one card. All three desks are saying the same thing that afternoon, and the change is dated and signed.",
+     "gone": true
+    }
+   ]
+  },
+  "after_body": "The row we did not change is the one worth reading twice. Your desks are staffed 24 hours by design, so asking a person is fast and it is the right thing to do at a hotel. Nothing we could build beats turning your head. What this beats is the three cases where turning your head fails, and we would rather define the win that narrowly than claim a bigger one you would catch us on by October."
+ },
+ "build": {
+  "title": "What we would build, and why there is no AI in it",
+  "lede": "Cards, a calendar, and a sheet of paper.",
+  "plain_parts": "A card for each question, holding one agreed answer, the property it applies to, the dates it is true, where it came from, who owns it and when it was last checked. A calendar file holding your season dates. A page per property that shows only the cards that are true today, with a plain word filter for finding one. A printed sheet of the twenty questions asked most, per property, per season. A log of what people looked for and did not find.",
+  "what_it_does": "The season switch is a date, so a rule handles it and every case can be tested. 21 August is past or it is not. Which property a clerk works at is a setting, not a guess. The van rule that excludes tour groups and large groups traveling together is written policy, so that is a rule too. Deciding the one right answer is editorial work your people do once, and no model should do it for you, because the answer has to be yours.\n\nA card can go out of date, so it says so on its face. Past its review date it stays visible, because hiding the only answer a clerk has helps nobody, and it carries a band naming the owner and the date. It drops off the printed sheet automatically, so a stale answer never gets taped to a desk.",
+  "feasibility": "There is one thing this will never do, and it is structural rather than a limitation we plan to fix later. The cards hold policy and how-to, never anything that changes today. No availability, no rates, no room status. Nothing we verified names a booking or property system you run, so a card claiming to know tonight's rooms would be a card that lies. A real share of what your desk gets asked is exactly that kind of question, so the honest ceiling on this is lower than a pitch would imply. Your own tally in the first two weeks will tell you how much lower.\n\nWe would also not put a model in front of a guest, now or ever. In a study of 340 UK adults who had used chatbots to book hotels, published in the International Journal of Hospitality Management, the discomfort those chatbots caused cut willingness to keep interacting by nearly 38 percent. Separately, inaccuracy about room rates and cancellation policies nearly doubled the chance a booking was delayed or abandoned. Applying a guest-facing finding to a staff-facing tool is our inference and not a measured result, and we would rather flag that than borrow the number quietly.",
+  "build_vs_buy": "One thing on your map we would tell you to buy rather than let us build. Housekeeping route software has the best evidence in this package and it is honest in both directions, an independent test at an 80-room hotel measured 2.5 minutes saved per room clean while the same reviewer called the vendor's marketed 500 percent return fiction. It sits in the Later lane below, and we would price it against your own occupancy and labour rate rather than rescaling one hotel's number onto third-party room listings.",
+  "architecture": {
+   "nodes": [
+    {
+     "id": "owner",
+     "label": "Named card owner",
+     "kind": "user"
+    },
+    {
+     "id": "cards",
+     "label": "Answer cards",
+     "kind": "build"
+    },
+    {
+     "id": "book",
+     "label": "Desk book, by property",
+     "kind": "build"
+    },
+    {
+     "id": "sheet",
+     "label": "Printed shift sheet",
+     "kind": "build"
+    },
+    {
+     "id": "desk",
+     "label": "Front desk clerk",
+     "kind": "user"
+    },
+    {
+     "id": "asklog",
+     "label": "Ask log",
+     "kind": "data"
+    },
+    {
+     "id": "live",
+     "label": "Your live booking systems",
+     "kind": "external"
+    }
+   ],
+   "edges": [
+    {
+     "from": "owner",
+     "to": "cards"
+    },
+    {
+     "from": "cards",
+     "to": "book"
+    },
+    {
+     "from": "cards",
+     "to": "sheet"
+    },
+    {
+     "from": "book",
+     "to": "desk"
+    },
+    {
+     "from": "sheet",
+     "to": "desk"
+    },
+    {
+     "from": "desk",
+     "to": "asklog"
+    },
+    {
+     "from": "desk",
+     "to": "live"
+    },
+    {
+     "from": "asklog",
+     "to": "owner"
+    }
+   ],
+   "caption": "Your answers, dated and owned, become one page per property and one sheet of paper per shift. Anything that changes today stays where it already lives, because nothing here connects to it."
+  }
+ },
+ "roi": {
+  "title": "The conservative case does not pay for itself on prevented interruptions alone",
+  "lede": "So we print the threshold instead of a saving, and you can test it in a week.",
+  "lede_body": "We can't project a labour saving here and we are not going to pretend to. Every input such a model needs is missing from anything we could verify. Nothing in the table below was measured at your desks, and the marks say so on every row.\n\nRead the dollars as conditional. Prevented interruptions are capacity, and they turn into money only if the hours defer a seasonal hire or avoid a backfill. So the table answers one question. How many interruptions per shift would this have to prevent before it has paid for itself over five years.",
+  "table_caption": "Break-even threshold, five-year view. Conservative pairs the high end of our fee with the lowest benefit assumptions.",
+  "table_head": [
+   "",
+   "Conservative",
+   "Most likely",
+   "Aggressive"
+  ],
+  "table": [
+   {
+    "label": "Interruptions prevented per shift",
+    "cells": [
+     "2",
+     "4",
+     "5"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Desk shifts covered per day",
+    "cells": [
+     "3",
+     "6",
+     "9"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Minutes an interruption costs",
+    "cells": [
+     "4",
+     "5",
+     "6"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Loaded hourly rate",
+    "cells": [
+     "28",
+     "32",
+     "36"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Five-year total cost",
+    "cells": [
+     "43,094",
+     "38,374",
+     "33,654"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Annual value if those hours defer a hire",
+    "cells": [
+     "4,087",
+     "23,358",
+     "59,130"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Share of five-year cost recovered",
+    "cells": [
+     "43%",
+     "289%",
+     "862%"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Break-even interruptions per shift",
+    "cells": [
+     "4.7",
+     "1.4",
+     "0.6"
+    ],
+    "emphasis": true,
+    "mark": "modelled"
+   }
+  ],
+  "table_note": "Read the last row first. At our conservative assumptions this would need to prevent 4.7 interruptions per shift to cover its five-year cost, and we only assumed 2, which is why that column recovers 43 percent and never pays back. Not one row is verified, because not one figure was measured at your desks, and the middle column is the midpoint of our assumed ranges rather than a probability judgment. Desk shifts means three eight-hour shifts at one property, so the conservative column assumes one property adopts and the other two watch, and the aggressive column assumes all three. Year one counts about six months of benefit in the conservative column, nine in the middle and eleven in the aggressive, because a slower start is part of what makes the conservative case conservative. Fee 18,000 to 26,000, about 40 hours of your people's time across the phase, and upkeep of about 48 hours a year at an assumed 38 dollars plus a small reprint and hosting allowance, which rounds to 2,000 a year and is counted from the middle of year one. Contingency 18 percent.",
+  "payback_big": "43%",
+  "payback_range": "of five-year cost recovered in the conservative case, against 289 percent in the middle column. If a hire is deferred, payback never comes in the conservative column, arrives at roughly a year and a half in the middle and roughly six months at the top.",
+  "base_rate_note": "The honest starting assumption for any AI proposal, including ours, is that it will not pay. MIT's Project NANDA put roughly 95 percent of enterprise AI pilots at no measurable profit impact, and RAND found more than 80 percent of AI projects fail, about twice the rate of other technology work. Both are industry base rates and neither is a fact about you. The strongest argument this build beats them is also the least flattering to us. There is no AI in it, so most of the documented failure modes structurally can't apply. The base rate you should actually fear here is the ordinary fate of internal documentation, beautiful in month one and wrong by month eight, and nothing about the absence of AI protects against that. Only a named owner, a visible expiry on every card and a review tied to dates you already publish touch that risk.",
+  "value_owner": "Your Operations Manager should own the number, with one front-desk supervisor owning the cards day to day. We name the role and not a person, because the only source we have for who holds it is a profile from 2018. If no single name can be attached to the upkeep hours, that is a reason not to start rather than a detail to settle later."
+ },
+ "roadmap": {
+  "title": "How we would start, and where you can stop",
+  "lede": "Gates all the way down, each one your off-ramp, and you keep something real at every one.",
+  "body": "You can stop at any gate. What follows assumes the pre-quote question has already been answered.",
+  "now": [
+   {
+    "item": "Ask the returning-versus-new question, before any quote",
+    "metric": "One number, the returning share of the summer roster"
+   },
+   {
+    "item": "Two weeks of paper tally at three desks, before anything is built",
+    "metric": "Escalations per shift, and the share of questions that are live status"
+   },
+   {
+    "item": "Audit every answer you publish, across three properties and both seasons",
+    "metric": "Count of contradictions found, and one agreed aurora date range before 21 August"
+   },
+   {
+    "item": "Turn what you publish into cards with property, dates, source, owner and review date",
+    "metric": "Cards live with an owner, and zero disagreements with your own website"
+   },
+   {
+    "item": "Write down the operating long tail that is on no page",
+    "metric": "Share of a shift's real questions a card now answers"
+   },
+   {
+    "item": "The printed shift sheet, summer and aurora, taped to each desk",
+    "metric": "The aurora cards appearing on the Wedgewood and Bear Lodge sheets on 21 August without a reminder"
+   },
+   {
+    "item": "Hand it over with a named owner and a plain export",
+    "metric": "One review run by them with us watching, not doing"
+   }
+  ],
+  "next": [
+   {
+    "item": "A search box that matches a guest's wording to your card, priced only if your own log asks for it",
+    "metric": "A repeating set of searches where the right card existed and the wording missed it"
+   },
+   {
+    "item": "Written answers for the multi-part questions that actually recur",
+    "metric": "Escalations on those patterns, before and after"
+   }
+  ],
+  "later": [
+   {
+    "item": "Buy housekeeping route software, pilot one property before three",
+    "metric": "Minutes saved per room clean on your property, at your occupancy and your labour rate"
+   },
+   {
+    "item": "The extended-stay and corporate reply path",
+    "metric": "Enquiry volume and current first-response time, which only you can measure"
+   },
+   {
+    "item": "A form and a shared board for courtesy van arrivals, not a voice agent",
+    "metric": "Share of arrivals reaching the desk as a complete record"
+   },
+   {
+    "item": "Sorting the general inbox by property and intent",
+    "metric": "Time from a message landing to reaching the right property"
+   }
+  ],
+  "gates": "You can stop at any gate and keep what it produced. After the audit you keep the full list of contradictions and one settled aurora date range, and you can fix your own pages and never speak to us again. After the cards exist you keep the whole set permanently, no licence, nothing that switches off. After the season run you keep four baselines and the question log, including the parts that argue against buying anything else from us.",
+  "need_from_you": "A named owner with authority to settle a disputed answer. About two hours each from a veteran at each property. Whatever internal training material already exists, which is the biggest reason the fee moves within its range. Supervisors willing to run paper tallies for two weeks."
+ },
+ "honest": {
+  "title": "What would make us wrong",
+  "lede": "Four ways this is a bad buy, and we would rather you found them now.",
+  "body": "Your summer front desk might be mostly the same people every year, which is why we ask before quoting rather than after. It would shrink the prize sharply without zeroing it, because returning staff still come back after eight months away, across the switch between your two seasons, and the date difference on your own pages is a defect regardless of who reads it.\n\nThe thing that actually gets used might be the sheet of paper, not the software. We think this is the likely outcome and we designed for it, which is why the printed sheet is a real deliverable rather than an export nobody maintains. If the screen goes unused your log will show it, and that is the strongest possible argument against funding anything smarter on top.\n\nMost of what your desk gets asked might be live status, which a card set can never answer. Your own two-week tally will tell you what share it is before you commit to anything beyond it.\n\nNobody might own it. An answer book with no owner goes stale, and a confidently wrong card taped to a desk is worse than the honest gap you have today. If no single name can be attached to about 48 hours a year, tell us at the first gate and do not start. There is also a version of this that costs you nothing. Run the tally yourselves for a week and fix the aurora date on your own two pages. If that is enough, keep your money."
+ },
+ "next_step_title": "One number decides whether this is worth your time",
+ "next_step": "One reply telling us roughly what share of your summer front-of-house people worked a season with you before. That single number decides whether this is worth your time, and we would rather you spent it on the answer than on a call.",
+ "sources": [
+  {
+   "claim": "Your jobs page, on doubling staffing for summer and the seasonal roster",
+   "url": "https://www.fountainheadhotels.com/jobs"
+  },
+  {
+   "claim": "Your FAQ, on check-in, late check-outs, cancellations, 24/7 desks and the shuttle call",
+   "url": "https://www.fountainheadhotels.com/faq"
+  },
+  {
+   "claim": "Your Wedgewood aurora page, dating the season 21 August through 21 April",
+   "url": "https://www.fountainheadhotels.com/wedgewood-resort/specials/aurora-season-special"
+  },
+  {
+   "claim": "Your Bear Lodge page, on a seasonal hotel and the Golden Bear window",
+   "url": "https://www.fountainheadhotels.com/bear-lodge"
+  },
+  {
+   "claim": "Your Bear Lodge rooms page, on the courtesy van, its group exclusion, and the wakeup call dated mid-August to late April",
+   "url": "https://www.fountainheadhotels.com/bear-lodge-rooms.html"
+  },
+  {
+   "claim": "Your contact page, listing all three properties",
+   "url": "https://www.fountainheadhotels.com/contact-us"
+  },
+  {
+   "claim": "Your homepage, on extended stay routed to a named reservations manager",
+   "url": "https://www.fountainheadhotels.com"
+  },
+  {
+   "claim": "Explore Fairbanks listing for Wedgewood, the third-party source we decline to rescale from",
+   "url": "https://www.explorefairbanks.com/listing/wedgewood-resort-fountainhead-hotels/10108/"
+  },
+  {
+   "claim": "Study of 340 hotel chatbot users, International Journal of Hospitality Management",
+   "url": "https://techxplore.com/news/2026-05-hotel-chatbots-customers.html"
+  },
+  {
+   "claim": "AHLA and Hireology survey of 282 hoteliers, fielded December 2024 to January 2025",
+   "url": "https://www.ahla.com/news/65-surveyed-hotels-report-staffing-shortages"
+  },
+  {
+   "claim": "Independent eight-week test of housekeeping route software",
+   "url": "https://6hoteliers.com/housekeeping/optii-review/"
+  },
+  {
+   "claim": "The 40 percent unanswered-calls figure, stated by a vendor executive with no study",
+   "url": "https://www.hoteldive.com/news/hotel-tech-ai-voice-front-desk-calls/740672/"
+  },
+  {
+   "claim": "MIT Project NANDA, State of AI in Business 2025, on enterprise AI pilots showing no measurable profit impact",
+   "url": "https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/"
+  },
+  {
+   "claim": "RAND, The Root Causes of Failure for AI Projects",
+   "url": "https://www.rand.org/pubs/research_reports/RRA2680-1.html"
+  }
+ ]
+}

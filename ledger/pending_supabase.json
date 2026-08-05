@@ -1,7 +1,7 @@
 {
  "version": 1,
  "note": "Writes owed to Supabase because it was unreachable when the run shipped. Backfill these when it recovers, then empty the list.",
- "updated": "2026-08-03",
+ "updated": "2026-08-05",
  "pending": [
   {
    "owed": "leadflow.leads.study_json for northcountrycharters.com",
@@ -18,8 +18,16 @@
    "source_of_truth": "runs/2026-08-03/ryan-air/study.json in this repo, and the rendered study live at https://alaskaaihq.com/awesomeproposal/ryan-air/",
    "how_to_backfill": "From a machine with psql: \\set s `cat runs/2026-08-03/ryan-air/study.json` then update leadflow.leads set study_json = :'s'::jsonb where lower(domain)='ryanalaska.com';",
    "impact": "Dashboard rendering of the study object only. Dedupe, the pipeline row, the audit row, the draft and the paper trail are all complete."
+  },
+  {
+   "owed": "leadflow.leads.study_json for fountainheadhotels.com",
+   "row_id": "7a7bf1a9-ba2e-4db7-bedf-3ef6eeea2b3f",
+   "why": "Same KNOWN CONNECTOR LIMITATION as 2026-08-02 and 2026-08-03, now a third consecutive run. Supabase was UP and every other column landed. The study object is about 25KB of JSON and the only write path available to the routine is the Supabase MCP execute_sql tool, which requires the whole object re-emitted verbatim inside the tool call. Re-emitting 25KB by hand carries a real risk of silent corruption.",
+   "source_of_truth": "runs/2026-08-05/fountainhead-hotels/study.json in this repo, and the rendered study live at https://alaskaaihq.com/awesomeproposal/fountainhead-hotels/",
+   "how_to_backfill": "From a machine with psql: \\set s `cat runs/2026-08-05/fountainhead-hotels/study.json` then update leadflow.leads set study_json = :'s'::jsonb where lower(domain)='fountainheadhotels.com';",
+   "impact": "Dashboard rendering of the study object only. Dedupe, the pipeline row, the audit row, the draft and the paper trail are all complete."
   }
  ],
  "last_backfill": "2026-07-29",
- "backfill_note": "2026-08-03. Supabase was UP and every other write landed, the leads row, the runs row and three new suppressions. Two study_json objects remain owed, both for the same reason, which is that the routine's only write path re-emits the whole object inside a tool call and 23KB of JSON is not safe to retype by hand. This is now a KNOWN MACHINE LIMITATION rather than a one-off, and it has recurred on two consecutive runs. The durable fix is a direct database connection string available to the routine so a file can be streamed with psql, which would clear both rows in one command. Flagged for a human decision."
+ "backfill_note": "2026-08-05. THIRD CONSECUTIVE RUN owing study_json for the same structural reason. Supabase was fully reachable and every other column landed on all three. This is a MACHINE LIMITATION, not an outage, and it now has a three-run track record. The durable fix is a direct database connection string available to the routine so a file can be streamed with psql, which would clear all three rows in one command. Flagged for a human decision."
 }
