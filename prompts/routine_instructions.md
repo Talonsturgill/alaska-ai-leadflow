@@ -95,7 +95,8 @@ is that we did the real work and told the truth.
 - knowledge/ROADMAP_CRAFT.md, how the roadmap is planned, estimated, and written.
 - knowledge/FIELD_STUDY_SPEC.md, the deliverable contract and the study.json shape.
 - knowledge/OUTREACH_CRAFT.md, the carrier-email voice, length rule, and kill-list.
-- db/schema.sql, the shape of the memory.
+- db/SCHEMA.md, the shape of the memory. The old db/schema.sql is retired and
+  lives under db/retired/, do not read it and never act on it.
 - .claude/agents/, the two rooms (see THE ROOMS below).
 
 Tools. WebSearch and WebFetch for all research (they route through Anthropic and
@@ -673,9 +674,11 @@ COMPLETION GATE, verify before you finish.
   There is no second store to reconcile against.
 - Voice signal surfaced. Any READY TO PROMOTE pattern appears in the delivery
   summary as a drafted diff for OUTREACH_CRAFT.md, never applied by the run.
-- Retro ran. Phase 10 is mandatory. ledger/upgrades.json carries this run's
-  entries or an explicit, reasoned "nothing worth changing", any repeat offender
-  closed is named, and the delivery summary surfaces both.
+- Retro SHIPPED A FIX. Phase 10 is mandatory and its deliverable is a diff, not a
+  list. ledger/upgrades.json carries AT LEAST ONE entry from this run, the files
+  it names actually changed in this run's commits, its verification included a
+  negative case, and it is merged with everything else. A backlog entry is not an
+  entry. If a repeat offender was closed, the summary names which one.
 - Draft only. Nothing was sent.
 If any check fails and cannot be fixed this run, do not paper over it. Draft Talon a
 note stating exactly what failed.
@@ -704,21 +707,60 @@ merge has not shipped.
    that has cost two runs gets fixed this run, ahead of anything new and more
    interesting. Re-noting a known defect is how a backlog becomes a graveyard.
    Say out loud in the summary which repeat you closed.
-3. Pick AT MOST THREE changes, repeats first. Bounded, verifiable, each earned by
+3. Pick ONE TO THREE changes, repeats first. Bounded, verifiable, each earned by
    something that actually happened. An upgrade with no evidence line is a
    preference, not an upgrade.
-4. IMPLEMENT and VERIFY. A change that is not tested does not ship, and the test
-   has to include the NEGATIVE case. A gate that passes everything is worse than
-   no gate, because it looks like coverage. Every gate written on 2026-08-05 was
-   validated by reconstructing real defects and confirming it caught them, and
-   every one of them had false positives on the first try.
+
+   ONE IS A FLOOR, NOT A SUGGESTION. Set by the maintainer on 2026-08-05, who
+   said it plainly: mandatory means the retro MAKES FIXES, it does not mean the
+   retro writes a list. A retro whose entire output is a backlog entry has not
+   run. Three is the ceiling so a run cannot wander off rebuilding the machine
+   instead of shipping, and one is the floor so it cannot do nothing and call
+   that judgement.
+
+   No run is ever short of material. Every run of this thing spends a round it
+   should not have, works around something, or finds a check that a script could
+   have made. Pick the smallest real one and fix it. "Nothing worth changing" is
+   available to the frontier scan in 10b, which is looking for something that may
+   genuinely not exist yet. It is NOT available here, because here you are
+   looking at a run that just happened and every run leaves evidence.
+
+4. IMPLEMENT and VERIFY. THE DELIVERABLE IS A DIFF. Code written, a file edited,
+   a test run, committed and merged in THIS run alongside everything else. A
+   change described but not made counts as nothing at all, and describing one is
+   the specific way this phase fails, because writing the note feels like doing
+   the work.
+
+   A change that is not tested does not ship, and the test has to include the
+   NEGATIVE case. A gate that passes everything is worse than no gate, because it
+   looks like coverage. Every gate written on 2026-08-05 was validated by
+   reconstructing real defects and confirming it caught them, and every one of
+   them had false positives on the first try.
 5. Log each to ledger/upgrades.json with the change, the EVIDENCE, how it was
    verified, and the files touched.
-6. Surface them in the delivery summary. A change to the machine is never
+6. RUN THE GATE. `python scripts/retro_check.py` after the retro's work is
+   committed. It must exit 0 and the run is not done until it does. It checks
+   that at least one upgrade is dated today, and then the one thing prose cannot
+   fake, that the files each upgrade CLAIMS to have changed were really touched
+   by a commit today. A careful entry describing a change nobody made reads
+   exactly like a real one, which is why this is a script and not a reminder.
+7. Surface them in the delivery summary. A change to the machine is never
    invisible.
-7. Anything you could not fix goes to knowledge/MACHINE_BACKLOG.md with its
+8. Anything you could not fix goes to knowledge/MACHINE_BACKLOG.md with its
    evidence, and if it is already there, add THIS run's date to it so the repeat
    count is visible rather than buried.
+
+   COULD NOT is a high bar and it has to be NAMED. The backlog is for work that
+   is genuinely blocked or genuinely bigger than a run, and the entry says which,
+   in a sentence: it needs a human decision, it needs access this run does not
+   have, or it is large enough that a rushed version would be worse than none.
+   Out of scope for one run is a real reason. Did not get to it is not.
+
+   AN ITEM ON ITS SECOND APPEARANCE IS NOT ELIGIBLE FOR THE BACKLOG AT ALL. It
+   is the one you fix, ahead of anything newer and more interesting, and it
+   satisfies the floor in step 3 on its own. Deferring a thing twice is how a
+   backlog turns into a graveyard, which is exactly what item 5 did before a
+   human noticed it had been READY TO PROMOTE for six sends.
 
 ### 10b. THE UPGRADE SESSION (stay bleeding edge)
 
