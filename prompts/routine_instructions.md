@@ -613,10 +613,23 @@ until it does. Write out/<date>/outreach.json.
    - Gmail connector down. Do not lose the work. Persist everything to out/<date>/
      and runs/<date>/, record the lead with gmail_draft_id null, and make the
      delivery summary loud that the draft must be made by hand.
-4. DELIVERY GATE, read the draft back and let the code judge it. Fetch the draft
-   you just created (list_drafts with DRAFT_VIEW_FULL), save the response JSON to
-   out/<date>/draft_readback.json, and run
+4. DELIVERY GATE, read the draft back and let the code judge it.
+
+   SAVE THE PAYLOAD BEFORE YOU CREATE THE DRAFT. Write the exact object you are
+   about to hand create_draft, to and subject and body and htmlBody, to
+   out/<date>/draft_payload.json. This is not bookkeeping. The Gmail connector
+   CANNOT return an htmlBody: list_drafts with DRAFT_VIEW_FULL gives back
+   plaintextBody and nothing else, and get_thread, which does document htmlBody,
+   is denied by this connector's scopes. So the HTML body is the one part of the
+   deliverable that no read-back can show you, and the saved payload is the only
+   honest way to verify the thing the prospect actually sees. The gate ties the
+   payload to the draft by its plaintext, so a payload from a different email
+   fails rather than passing.
+
+   Then fetch the draft you just created (list_drafts with DRAFT_VIEW_FULL),
+   save the response JSON to out/<date>/draft_readback.json, and run
    python scripts/delivery_check.py --readback out/<date>/draft_readback.json
+     --payload out/<date>/draft_payload.json
      --draft-id <the id> --link <the live study URL> --live-link <the live study URL>
    The gate passes ONLY on exit 0. The script verifies mechanically what the
    prose requires: body present with paragraph breaks intact, no raw markup or
