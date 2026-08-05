@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Memory of record for dedupe. Authoritative, git-backed, always available. Supabase leadflow.leads is dual-written when reachable but is no longer required to run.",
-  "updated": "2026-08-04",
+  "updated": "2026-08-05",
   "leads": [
     {
       "company": "Goldbelt, Incorporated",
@@ -228,6 +228,26 @@
       "roi_summary": "The ask, a half-day baseline retrospective, returns $2.75 per dollar conservatively and $7.31 aggressively. The gated Phase 1 build recovers 4, 18 and 78 percent of its five year cost in cash and pays back in cash in NO scenario. Freed hours are reported as hours, never converted to money.",
       "gmail_draft_id": "r1437136797899123975",
       "run_date": "2026-08-04"
+    },
+    {
+      "company": "Fountainhead Hotels",
+      "domain": "fountainheadhotels.com",
+      "segment": "Tourism and visitor industry",
+      "location": "Fairbanks, Alaska",
+      "status": "drafted",
+      "fit_score": 24,
+      "why_picked": "Highest ICP total in a three-way tie at 24, broken on reachability. The only one of the three with a named human and a published business email rendered as a live mailto on a page a scout actually fetched.",
+      "contact_name": "Becky Kunkle",
+      "contact_role": "Reservations Manager",
+      "contact_email": "beckyk@fdialaska.com",
+      "contact_source": "https://www.fountainheadhotels.com, live mailto, re-verified by the fact-checker",
+      "study_path": "runs/2026-08-05/fountainhead-hotels/",
+      "outcome": "Field Study drafted and published. Recommended build has NO AI in it.",
+      "recommended_build": "The Desk Answer Book, a canonical property-aware and season-aware answer set for three front desks, with a printed shift sheet. Desk Search named as a conditional next step and deliberately not priced.",
+      "roi_summary": "Break-even threshold, not a projection. Conservative recovers 43 percent of five-year cost and never pays back, needing 4.7 prevented interruptions per shift against 2 assumed. Middle 289 percent, top 862 percent. No verified row in the table. Ask 18,000 to 26,000 fixed.",
+      "gmail_draft_id": "r-5102924268035691663",
+      "live_url": "https://alaskaaihq.com/awesomeproposal/fountainhead-hotels/",
+      "run_date": "2026-08-05"
     }
   ]
 }

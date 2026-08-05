@@ -1,0 +1,41 @@
+{
+ "conservative": {
+  "scenario": "conservative",
+  "annual_run_rate_benefit": 4087,
+  "cumulative_benefit_5yr": 18363,
+  "tco_5yr": 43094,
+  "percent_of_tco_recovered": 43,
+  "payback_month": null,
+  "pays_back_within_horizon": false,
+  "break_even_per_shift": 4.7,
+  "assumed": 2,
+  "implied_recovery_pct": 43,
+  "reconciles": true
+ },
+ "most_likely": {
+  "scenario": "most_likely",
+  "annual_run_rate_benefit": 23358,
+  "cumulative_benefit_5yr": 111019,
+  "tco_5yr": 38374,
+  "percent_of_tco_recovered": 289,
+  "payback_month": 19,
+  "pays_back_within_horizon": true,
+  "break_even_per_shift": 1.4,
+  "assumed": 4,
+  "implied_recovery_pct": 289,
+  "reconciles": true
+ },
+ "aggressive": {
+  "scenario": "aggressive",
+  "annual_run_rate_benefit": 59130,
+  "cumulative_benefit_5yr": 289974,
+  "tco_5yr": 33654,
+  "percent_of_tco_recovered": 862,
+  "payback_month": 6,
+  "pays_back_within_horizon": true,
+  "break_even_per_shift": 0.6,
+  "assumed": 5,
+  "implied_recovery_pct": 862,
+  "reconciles": true
+ }
+}

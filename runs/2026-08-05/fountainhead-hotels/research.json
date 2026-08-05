@@ -1,0 +1,972 @@
+{
+ "competitors": {
+  "company": "Fountainhead Hotels",
+  "competitors": [
+   {
+    "name": "Westmark Fairbanks Hotel & Conference Center",
+    "domain": "hollandamericahotels.com",
+    "what_they_are": "400-room downtown Fairbanks hotel at 813 Noble Street with 13 function rooms and over 17,000 sq ft of meeting space, the largest meeting footprint in Fairbanks. Operated by Holland America Hotels, a Holland America Line subsidiary under Carnival Corporation. Direct competitor on BOTH rooms and the convention, catering and banquet business, and fed cruisetour and land-tour demand by its parent.",
+    "ai_or_automation_observed": "None found. Fetched conference page names no chat widget, virtual agent or AI tool, and directs bookings to a Regional Sales Office phone number and the front desk line.",
+    "evidence_strength": "none_found",
+    "source": "https://hollandamericahotels.com/conferences-meetings/fairbanks-conference/"
+   },
+   {
+    "name": "Fairbanks Princess Riverside Lodge",
+    "domain": "princesslodges.com",
+    "what_they_are": "328-room lodge at 4477 Pikes Landing Road on the Chena River. Owned by Princess Lodges / Princess Cruises (also Carnival). Site promotes packaged vacations including glass-domed railcar travel to Denali and Talkeetna, so a large share of rooms arrive pre-sold through the cruisetour channel.",
+    "ai_or_automation_observed": "None found on the fetched property page. The automation advantage here is channel, not software.",
+    "evidence_strength": "none_found",
+    "source": "https://www.princesslodges.com/princess-alaska-lodges/fairbanks-lodge/"
+   },
+   {
+    "name": "Pike's Waterfront Lodge",
+    "domain": "pikeslodge.com",
+    "what_they_are": "The closest structural peer to Fountainhead. Alaskan-owned independent Fairbanks lodge on the Chena River with 180 rooms and 28 cabins, its own restaurant, and free shuttles. Same guest, same season, same independent cost structure, same food-and-beverage-attached model.",
+    "ai_or_automation_observed": "Online booking only. Book Now routes to BookOnTheNet. No chat widget, no AI assistant, no mobile check-in or automated messaging visible.",
+    "evidence_strength": "observed_on_page",
+    "source": "https://pikeslodge.com/"
+   },
+   {
+    "name": "River's Edge Resort",
+    "domain": "riversedge.net",
+    "what_they_are": "Cottage-style Fairbanks resort at 4200 Boat Street on the Chena River with an onsite restaurant. Operated by JL Hospitality Management, LLC.",
+    "ai_or_automation_observed": "Uses Windsurfer CRS (SHR) as its reservation platform. No chat widget, AI assistant, automated messaging or self check-in found.",
+    "evidence_strength": "observed_on_page",
+    "source": "https://www.riversedge.net/"
+   },
+   {
+    "name": "SpringHill Suites by Marriott Fairbanks",
+    "domain": "marriott.com",
+    "what_they_are": "All-suite Marriott-flagged hotel at 575 1st Avenue on the Chena River downtown. Brand-flagged, competes for the same corporate, government and shoulder-season traveler as Sophie Station Suites.",
+    "ai_or_automation_observed": "Mobile Key listed on the property page, guests unlock rooms via the Bonvoy app. At brand level Marriott launched Ask Bonvoy, a conversational generative-AI search experience, in beta 2026-06-16 across roughly 10,000 properties. This property inherits both at no property-level build cost.",
+    "evidence_strength": "observed_on_page",
+    "source": "https://www.marriott.com/en-us/hotels/faish-springhill-suites-fairbanks/overview/"
+   },
+   {
+    "name": "Hampton Inn & Suites Fairbanks (Hilton)",
+    "domain": "hilton.com",
+    "what_they_are": "101-room, 1-meeting-room Hilton-flagged hotel at 433 Harold Bentley Avenue with free airport and Alaska Railroad depot shuttle.",
+    "ai_or_automation_observed": "Property page lists Digital Key as a Hilton Honors amenity. At brand level Hilton launched the Hilton AI Planner, a generative-AI digital concierge, on hilton.com in March 2026. Both arrive at this property through the flag.",
+    "evidence_strength": "observed_on_page",
+    "source": "https://www.hilton.com/en/hotels/faiakhx-hampton-suites-fairbanks/hotel-info/"
+   },
+   {
+    "name": "Chena Hot Springs Resort",
+    "domain": "chenahotsprings.com",
+    "what_they_are": "Interior Alaska destination resort roughly 60 miles from town. Rooms plus hot springs, Aurora Ice Museum and aurora tours. Competes hard for the aurora-season guest and multi-night experience-attached stays.",
+    "ai_or_automation_observed": "Online booking and reservation modification through iHotelier (Amadeus/TravelClick family). No AI chatbot, chat widget, self check-in or automated messaging found.",
+    "evidence_strength": "observed_on_page",
+    "source": "https://chenahotsprings.com/"
+   },
+   {
+    "name": "Borealis Basecamp",
+    "domain": "borealisbasecamp.net",
+    "what_they_are": "Aurora-lodge operator on 100 acres roughly 25 miles north of Fairbanks, selling transparent-dome igloos, Cubes and Cube Suites on a dark-sky ridgeline. The premium aurora-experience competitor.",
+    "ai_or_automation_observed": "None found. Book Now routes to package pages, contact is an email and an 877 number.",
+    "evidence_strength": "none_found",
+    "source": "https://borealisbasecamp.net/"
+   }
+  ],
+  "brand_asymmetry": {
+   "detail": "Verified, not assumed, and it runs in two directions. FLAG TECHNOLOGY: the Fairbanks Hampton page lists Digital Key and the Fairbanks SpringHill page lists Mobile Key, neither property built or bought that. Above them, Hilton put a generative-AI digital concierge live on hilton.com in March 2026 and Marriott put Ask Bonvoy into beta across roughly 10,000 properties on 2026-06-16. A 101-room Fairbanks Hampton gets a corporate AI planner and a phone-as-room-key on the same day a 3,000-room flagship does, at zero property-level engineering spend. TOUR-OPERATOR DEMAND: Westmark Fairbanks (400 rooms) is a Holland America Line subsidiary under Carnival, and Fairbanks Princess Riverside Lodge (328 rooms) is Princess Lodges under the same parent. Those two properties, 728 rooms between them, are substantially filled by a parent's package inventory rather than by winning a Fairbanks booking decision. An independent family-held group buys every piece of this or goes without. What the independents actually have is a booking engine and a phone number, Fountainhead on TravelClick, Chena Hot Springs on iHotelier, River's Edge on Windsurfer CRS, Pike's on BookOnTheNet.",
+   "sources": [
+    "https://www.hilton.com/en/hotels/faiakhx-hampton-suites-fairbanks/hotel-info/",
+    "https://stories.hilton.com/releases/hilton-introduces-the-hilton-ai-planner",
+    "https://www.marriott.com/en-us/hotels/faish-springhill-suites-fairbanks/overview/",
+    "https://www.prnewswire.com/news-releases/marriott-international-introduces-ask-bonvoy-a-new-ai-powered-search-experience-transforming-travel-exploration-302801647.html",
+    "https://hollandamericahotels.com/conferences-meetings/fairbanks-conference/",
+    "https://www.princesslodges.com/princess-alaska-lodges/fairbanks-lodge/",
+    "https://www.fountainheadhotels.com/wedgewood-resort"
+   ]
+  },
+  "where_exposed": [
+   {
+    "detail": "Phone-as-room-key and app check-in already exist in this market and Fountainhead's fetched pages show no equivalent. A guest arriving at 1am off a late flight can skip the desk at the Hampton and the SpringHill.",
+    "source": "https://www.hilton.com/en/hotels/faiakhx-hampton-suites-fairbanks/hotel-info/"
+   },
+   {
+    "detail": "Top-of-funnel discovery is being captured by brand AI. A traveler who types an aurora-trip prompt into hilton.com or the Bonvoy app is shown flagged Fairbanks inventory. Fountainhead's own pages present no conversational surface at all, its stated contact path is three separate phone numbers.",
+    "source": "https://www.fountainheadhotels.com/"
+   },
+   {
+    "detail": "On the convention and catering side, the property with the most meeting space in Fairbanks is corporate-owned. Westmark carries 400 rooms and 13 function rooms totaling over 17,000 sq ft with a 5,400 sq ft ballroom, backed by a Regional Sales Office. Fountainhead competes for the same banquet and convention business without that parent sales apparatus.",
+    "source": "https://hollandamericahotels.com/conferences-meetings/fairbanks-conference/"
+   },
+   {
+    "detail": "728 rooms of Fairbanks supply (Westmark 400, Fairbanks Princess 328) sit inside cruise-line package pipelines that pre-sell inventory. Fountainhead competes for the residual independent demand against that structural fill.",
+    "source": "https://www.princesslodges.com/princess-alaska-lodges/fairbanks-lodge/"
+   }
+  ],
+  "where_could_leap": [
+   {
+    "detail": "Across all eight competitor sites fetched, not one showed a live chat widget, AI concierge or conversational assistant of its own. The only AI in this market is inherited corporate AI that lives on hilton.com and marriott.com, not on any Fairbanks property's own site. No Fairbanks-owned or Interior operator has moved.",
+    "source": "https://pikeslodge.com/"
+   },
+   {
+    "detail": "No Fairbanks operator fetched surfaces aurora or seasonal intelligence as an interactive guest-facing decision tool of its own. Even Explore Fairbanks runs its Aurora Tracker and Midnight Sun Tracker as traditional widgets with no conversational layer.",
+    "source": "https://www.explorefairbanks.com/"
+   },
+   {
+    "detail": "The aurora-season premium competitors are the least automated of all. Borealis Basecamp shows no automation whatsoever.",
+    "source": "https://borealisbasecamp.net/"
+   },
+   {
+    "detail": "No vendor press release, case study or news item naming any Fairbanks or Interior Alaska hotel as an AI or automation customer surfaced in search. The published record of AI adoption in this specific market is empty.",
+    "source": "https://www.explorefairbanks.com/"
+   }
+  ],
+  "claims": [
+   {
+    "claim": "Westmark Fairbanks Hotel & Conference Center is at 813 Noble Street, Fairbanks, Alaska 99701, has 400 rooms and suites, and 13 function rooms totaling over 17,000 square feet.",
+    "source": "https://hollandamericahotels.com/conferences-meetings/fairbanks-conference/",
+    "verbatim": "400 rooms and suites"
+   },
+   {
+    "claim": "Westmark Fairbanks operates under Holland America Hotels, a Holland America Line subsidiary, owned by Carnival Corporation & plc.",
+    "source": "https://hollandamericahotels.com/conferences-meetings/fairbanks-conference/",
+    "verbatim": null
+   },
+   {
+    "claim": "Fairbanks Princess Riverside Lodge is a 328-room lodge at 4477 Pikes Landing Road, operated by Princess Lodges, and its site promotes Alaska tour options including glass-domed railcar travel to Denali and Talkeetna.",
+    "source": "https://www.princesslodges.com/princess-alaska-lodges/fairbanks-lodge/",
+    "verbatim": "set on the banks of the Chena River"
+   },
+   {
+    "claim": "Pike's Waterfront Lodge in Fairbanks is Alaskan-owned with 180 rooms and 28 cabins, and its Book Now button routes to the BookOnTheNet booking engine.",
+    "source": "https://pikeslodge.com/",
+    "verbatim": "180 rooms and 28 cabins"
+   },
+   {
+    "claim": "River's Edge Resort at 4200 Boat Street, Fairbanks is operated by JL Hospitality Management, LLC and uses Windsurfer CRS as its reservation system.",
+    "source": "https://www.riversedge.net/",
+    "verbatim": "4200 Boat Street, Fairbanks, Alaska 99709"
+   },
+   {
+    "claim": "Hampton Inn & Suites Fairbanks at 433 Harold Bentley Avenue has 101 guest rooms and lists Digital Key as a Hilton Honors amenity.",
+    "source": "https://www.hilton.com/en/hotels/faiakhx-hampton-suites-fairbanks/hotel-info/",
+    "verbatim": "Digital Key"
+   },
+   {
+    "claim": "Hilton launched the Hilton AI Planner, a generative AI-powered digital concierge, on hilton.com, initially to a small pool of site traffic on 2026-03-10 with broader access by 2026-03-17.",
+    "source": "https://stories.hilton.com/releases/hilton-introduces-the-hilton-ai-planner",
+    "verbatim": "a generative AI-powered digital concierge that helps travelers explore the company's global portfolio of hotels and plan memorable stays with Hilton"
+   },
+   {
+    "claim": "SpringHill Suites by Marriott Fairbanks is at 575 1st Avenue and its property page lists Mobile Key and promotes the Marriott Bonvoy app.",
+    "source": "https://www.marriott.com/en-us/hotels/faish-springhill-suites-fairbanks/overview/",
+    "verbatim": "575 1st Avenue, Fairbanks, Alaska, USA, 99701"
+   },
+   {
+    "claim": "Marriott launched Ask Bonvoy, a conversational natural language search experience, in beta on 2026-06-16 on Marriott.com and the Bonvoy apps, covering approximately 10,000 properties in 146 countries and territories.",
+    "source": "https://www.prnewswire.com/news-releases/marriott-international-introduces-ask-bonvoy-a-new-ai-powered-search-experience-transforming-travel-exploration-302801647.html",
+    "verbatim": "A new conversational, natural language search experience"
+   },
+   {
+    "claim": "Chena Hot Springs Resort is at 17600 Chena Hot Springs Rd and uses the iHotelier platform for reservation booking and modification.",
+    "source": "https://chenahotsprings.com/",
+    "verbatim": "17600 Chena Hot Springs Rd. Fairbanks, AK 99712"
+   },
+   {
+    "claim": "Borealis Basecamp is on 100 acres at 2640 Himalaya Road roughly 25 miles north of Fairbanks, selling dome igloos, Cubes and Cube Suites, with booking by package page, email and phone and no chat or AI assistant.",
+    "source": "https://borealisbasecamp.net/",
+    "verbatim": "a remote, dark-sky ridgeline"
+   },
+   {
+    "claim": "Fountainhead Hotels' Wedgewood Resort room pages route Book now to the TravelClick reservations platform at reservations.travelclick.com/13562, so the group already runs a third-party online booking engine.",
+    "source": "https://www.fountainheadhotels.com/wedgewood-resort",
+    "verbatim": null
+   },
+   {
+    "claim": "Explore Fairbanks runs an Aurora Borealis Tracker and a Midnight Sun Tracker but shows no chat widget, AI trip planner or AI assistant on its homepage.",
+    "source": "https://www.explorefairbanks.com/",
+    "verbatim": "check back frequently to see how up-to-the-minute, real-time aurora viewing opportunities change based on current aurora activity, weather and daylight"
+   }
+  ],
+  "could_not_verify": [
+   "Whether any competitor runs a chat widget script that does not render in fetched page text. The fetch tool converts pages to markdown and strips script tags, so a JavaScript-loaded widget would be invisible. All 'none found' chat verdicts are limited to what renders in page text, they are not proof of absence in page source.",
+   "Wedgewood Resort's 305-room count, its 105 acres, the Fountainhead Antique Auto Museum and the wildlife sanctuary were NOT confirmed from a fetched Fountainhead page. The fetched homepage described Wedgewood only as condo-style suites and placed Bear Lodge WITHIN Wedgewood Resort, which differs from the brief's description of Bear Lodge as a separate seasonal property.",
+   "Fountainhead's property management system, revenue management system, and whether it has any automated pre-arrival or post-stay guest messaging. Only the TravelClick booking engine was observable.",
+   "Sophie Station Suites' booking engine vendor.",
+   "Best Western Plus Chena River Lodge. Its property page returned HTTP 403 and could not be fetched, so no technology claim is made about it.",
+   "Which booking or CRS vendor Westmark Fairbanks uses.",
+   "Whether any Fairbanks or Interior Alaska property appears in a hospitality AI vendor's customer list or case study."
+  ],
+  "sources_fetched": [
+   "https://www.fountainheadhotels.com/",
+   "https://www.fountainheadhotels.com/wedgewood-resort",
+   "https://www.fountainheadhotels.com/sophie-station",
+   "https://pikeslodge.com/",
+   "https://www.riversedge.net/",
+   "https://hollandamericahotels.com/fairbanks.php",
+   "https://hollandamericahotels.com/conferences-meetings/fairbanks-conference/",
+   "https://www.princesslodges.com/princess-alaska-lodges/fairbanks-lodge/",
+   "https://www.marriott.com/en-us/hotels/faish-springhill-suites-fairbanks/overview/",
+   "https://www.hilton.com/en/hotels/faiakhx-hampton-suites-fairbanks/hotel-info/",
+   "https://stories.hilton.com/releases/hilton-introduces-the-hilton-ai-planner",
+   "https://www.prnewswire.com/news-releases/marriott-international-introduces-ask-bonvoy-a-new-ai-powered-search-experience-transforming-travel-exploration-302801647.html",
+   "https://chenahotsprings.com/",
+   "https://borealisbasecamp.net/",
+   "https://www.explorefairbanks.com/"
+  ]
+ },
+ "company": {
+  "company": "Fountainhead Hotels (hotel group of Fountainhead Development, Inc.)",
+  "domain": "fountainheadhotels.com",
+  "what_they_do": "A privately held Fairbanks, Alaska hospitality group operating three hotels under one brand (Wedgewood Resort, Sophie Station Suites, and the summer-only Bear Lodge), all owned by Fountainhead Development, Inc. (FDI), established 1985. The hotels are almost entirely all-suite / apartment-style with full kitchens, which pushes them into three distinct guest segments at once: summer motorcoach and independent tourists, aurora-season winter visitors (Aug 21 to Apr 21), and month-plus extended-stay / corporate / government lodging. Around the rooms they run a full food-and-beverage operation (Zach's Restaurant and Express Room Lounge at Sophie Station; Golden Bear Restaurant, Bear's Tale Lounge and Den Cafe at Bear Lodge), a meetings/conventions and weddings business across six venues on the 105-acre Wedgewood Resort plus three at Sophie Station, a 24-hour complimentary airport and Alaska Railroad shuttle fleet, a 75-acre owned wildlife sanctuary, and the Fountainhead Antique Auto Museum, which through 2025 sat on the Wedgewood grounds and has now relocated off-property to a 90,000 sq ft former Kmart on Airport Way, reopening in soft-open mode on July 13, 2026. The parent FDI is a broader real estate development, commercial leasing and equipment group.",
+  "lines_of_business": [
+   {
+    "name": "Hotel rooms, three properties, one brand",
+    "detail": "Homepage presents Wedgewood Resort, Sophie Station Suites and Bear Lodge as one group with separate front desks and one shared reservations line (800.528.4916). Each property has its own front desk number: Wedgewood 907.452.1442, Sophie Station 907.479.3650, Bear Lodge 907.452.1442 (homepage labels Bear Lodge's front desk 'May-Aug').",
+    "source": "https://www.fountainheadhotels.com/"
+   },
+   {
+    "name": "Extended stay / corporate lodging, sold by a named human, not the booking engine",
+    "detail": "The homepage sells extended stay separately from the online booking path and routes it to a person. 'Looking for an extended stay, corporate lodging or need a short-term rental? Don't settle for a small hotel room' ... 'Work with our Reservations Manager Becky Kunkle for availability and very best rates.' Contact given as beckyk@fdialaska.com and 907-458-6123. Threshold is 'If you are staying a month or more.'",
+    "source": "https://www.fountainheadhotels.com/wedgewood-resort/specials/extended-stay-rates"
+   },
+   {
+    "name": "Food and beverage, multiple outlets, seasonal hours",
+    "detail": "Zach's Restaurant and Express Room Lounge at Sophie Station; Golden Bear Restaurant, Bear's Tale Lounge and Den Cafe at Bear Lodge. Zach's posts summer 2026 hours as three separate day-parts, 6:00 am - 9:00 am, 11:00 am - 2:00 pm, 4:00 pm - 10:00 pm, Sunday through Saturday, for 'mid-May through mid-Sept 2026'.",
+    "source": "https://www.fountainheadhotels.com/sophie-station/dining/zach-s-restaurant"
+   },
+   {
+    "name": "Meetings, conventions and weddings",
+    "detail": "Wedgewood markets six venues: Borealis Ballroom, Gazebo Room, Board Room, Garden Room, Taiga Center, and the Antique Auto Museum. Event planner named is Zoe Hill. Sophie Station adds three venues: Express Room (1,944 sq ft, up to 45), Zach's Restaurant (920 sq ft private dining, up to 70), Board Room (595 sq ft, up to 20), with Restaurant Manager Sandy at Sandyb@fountainheadhotels.com.",
+    "source": "https://www.fountainheadhotels.com/wedgewood-resort/meetings-weddings"
+   },
+   {
+    "name": "Group and motorcoach tour business",
+    "detail": "Groups are handled as a distinct operational class. The Bear Lodge rooms page states the complimentary van 'excludes tour and large groups' and that 'Group transportation must be arranged through tour providers.' The careers page lists seasonal 'Group Representatives', 'Bell Captains and Luggage Handlers' and 'Porters' as separate roles.",
+    "source": "https://www.fountainheadhotels.com/bear-lodge-rooms.html"
+   },
+   {
+    "name": "Fountainhead Antique Auto Museum",
+    "detail": "Ticketed attraction: Ages 13+ $20, ages 6-12 $10, 5 and under free, Adult Season Pass $100, Family Season Pass $150. 'One Hour Docent Guided Tour: $32 per person. 12 person min, during business hours.' Motorcoach drop-off and reserved car-club parking arranged in advance.",
+    "source": "https://www.fountainheadmuseum.com/plan-a-visit"
+   },
+   {
+    "name": "Wedgewood Wildlife Sanctuary",
+    "detail": "Resort-owned 75-acre sanctuary with Wander Lake, a one-mile Taiga Trail and an observation deck, hosting 'over 120 species of birds' and '15 types of mammals'. Wander Lake described as a 'model wetlands restoration project' by the U.S. Fish & Wildlife Service.",
+    "source": "https://www.fountainheadhotels.com/things-to-do"
+   },
+   {
+    "name": "Complimentary 24-hour airport and railroad shuttle fleet",
+    "detail": "'24-hour courtesy van services to and from the Fairbanks International Airport and Alaska Railroad Station.' Guests are told to phone in for pickup, with a different number per property. Careers page lists 'Courtesy Van Drivers' year-round and 'Shuttle Bus Drivers' seasonally.",
+    "source": "https://www.fountainheadhotels.com/faq"
+   }
+  ],
+  "size": {
+   "claim": "Three hotels currently marketed, totaling 610 rooms per Explore Fairbanks DMO listings (Wedgewood 305, Sophie Station 148, Bear Lodge 157). Alaska Business Magazine's 2018 FDI profile said '600+ rooms across three properties' and put employment at '170 to 350 employees depending on season.' The Greater Fairbanks Chamber listing says 'over 700 guest rooms' across four hotels including the 93-room Bridgewater, which is NOT listed on fountainheadhotels.com today. Indeed lists company size as '51 to 200'. The 2026 headcount is NOT verifiable from fetched pages and the 170-350 figure is eight years old.",
+   "source": "https://digital.akbizmag.com/issue/november-2018/fountainhead-development-inc/"
+  },
+  "properties": [
+   {
+    "name": "Wedgewood Resort",
+    "detail": "212 Wedgewood Drive. 305 rooms, 7 accessible, rate range $179-$389 per Explore Fairbanks. All-suite condo-style one/two/three-bedroom units, 800+ sq ft, full kitchens. 105 acres beside the owned 75-acre Wedgewood Wildlife Sanctuary and a roughly 2,000-acre waterfowl refuge. Front desk 907.452.1442.",
+    "season": "Year-round. Aurora Season Special runs 'August 21 through April 21'.",
+    "source": "https://www.explorefairbanks.com/listing/wedgewood-resort-fountainhead-hotels/10108/"
+   },
+   {
+    "name": "Sophie Station Suites",
+    "detail": "1717 University Avenue, 2.8 miles from Fairbanks International Airport. 148 suites, 4 accessible, $179-$349 per Explore Fairbanks (Expedia independently shows 148 rooms, 9.0/10 across 653 reviews). All suites have full kitchens and a separate bedroom. Zach's Restaurant and Express Room Lounge on site. Front desk 907.479.3650.",
+    "season": "Year-round.",
+    "source": "https://www.explorefairbanks.com/listing/sophie-station-suites-fountainhead-hotels/10106/"
+   },
+   {
+    "name": "Bear Lodge (at Wedgewood Resort)",
+    "detail": "157 rooms, 8 accessible, $189-$289 per Explore Fairbanks. Golden Bear Restaurant & Lounge, Bear's Tale Lounge, Den Cafe. 24-hour front desk, headlamp rentals, and a 'Courtesy Northern Lights wakeup call during the Aurora Season (mid-August to late April)'. Their own pages disagree on street address (325 Wedgewood Dr on contact-us, 212 Wedgewood Drive on the property page, 1501 Queens Way in the booking portal).",
+    "season": "Summer only, 'mid-May to mid-September'. Homepage labels its front desk '(May-Aug)'.",
+    "source": "https://www.fountainheadhotels.com/bear-lodge"
+   },
+   {
+    "name": "Fountainhead Antique Auto Museum (relocated off-property 2025-2026)",
+    "detail": "Opened at Wedgewood in 2009 in roughly 30,000 sq ft. Moved to the former Kmart at 3225 Airport Way, 90,000 sq ft, merged with the Pioneer Air Museum collection. Its own site says 'over 125 pre-World War II automobiles'. The hotel's things-to-do page still says 'over 95 unique automobiles' and the museum-as-venue page still lists it at Wedgewood Resort at 'SIZE: 25,000 SF'.",
+    "season": "Soft open since July 13, 2026, 12:00PM-4:00PM seven days a week.",
+    "source": "https://www.fountainheadmuseum.com/plan-a-visit"
+   },
+   {
+    "name": "Bridgewater Hotel (relationship unclear as of 2026)",
+    "detail": "93 rooms, 723 First Ave downtown, now branded 'Trademark Collection by Wyndham'. The Greater Fairbanks Chamber listing names it among Fountainhead properties, but fountainheadhotels.com does not list it and the Explore Fairbanks listing contains no Fountainhead mention.",
+    "season": "Year-round per Explore Fairbanks.",
+    "source": "https://www.explorefairbanks.com/listing/bridgewater-hotel-trademark-collection-by-wyndham/10104/"
+   }
+  ],
+  "transaction_path": {
+   "detail": "Online booking runs on iHotelier / TravelClick (Amadeus). The multi-property portal lists all three hotels under 'Fountainhead Hotels & Resort'. Alongside that, a large share of transactions is explicitly routed to the phone or to a named person: one shared reservations line 800.528.4916, three separate property front desks, a fourth line 907-458-6123 for extended stay / corporate to Becky Kunkle, a general askus@fountainheadhotels.com inbox used by all three properties, a web contact form, and separate RFP forms for Wedgewood, Bear Lodge and Sophie Station. The Wedgewood RFP form collects 14 fields ending in a 'Submit My Event!' button, with NO stated response-time promise. Airport and rail pickups are phone-initiated. Discounted rates (corporate, AAA, AARP, 15% Alaska resident, military/government) are gated behind direct booking. Check-in 4PM, check-out 11AM, front desks staffed 24/7, minimum check-in age 21, cancellations require 24 hours notice or a one-night penalty.",
+   "source": "https://reservations.ihotelier.com/areasearch/default.cfm?portalsymbol=FHH"
+  },
+  "pain_quotes": [
+   {
+    "quote": "When we gear up for the \"tourist\" season, we try to find many team members for some of the best summer jobs in town. We more than double our current hotel staffing for summer to make sure guests have caring, personal experiences at our properties.",
+    "context": "Careers page, under 'Seasonal Summer Hospitality'. The company stating in its own words that its labor base more than doubles for the summer, which by definition means it more than halves again when the season ends. The seasonal list includes Seasonal Front Desk Clerks, Group Representatives, Bell Captains and Luggage Handlers, Porters, Laundry, Housekeeping, Shuttle Bus Drivers, Flower and Lawn Supervisors, Groundskeeper and Museum Attendant.",
+    "source": "https://www.fountainheadhotels.com/jobs"
+   },
+   {
+    "quote": "we are unable to offer late check-outs during the summer months (mid-May through mid-September)",
+    "context": "FAQ answer on check-in and check-out. A capacity statement in their own words: from mid-May to mid-September the room-turn schedule has no slack.",
+    "source": "https://www.fountainheadhotels.com/faq"
+   },
+   {
+    "quote": "PLEASE BOOK WITH US DIRECTLY TO RESERVE YOUR SPECIAL RATE. Call us directly at 800.528.4916 with help booking your reservation.",
+    "context": "FAQ answer about corporate, AAA and AARP rates. All-caps instruction pushing rate-shoppers off the web and onto a single phone line, in the same season the FAQ elsewhere says has no slack.",
+    "source": "https://www.fountainheadhotels.com/faq"
+   },
+   {
+    "quote": "we cannot change the pricing from other 3rd websites once you've reserved with them",
+    "context": "Same FAQ answer. Acknowledges a recurring guest conflict at the desk over OTA-booked rates that staff can't fix.",
+    "source": "https://www.fountainheadhotels.com/faq"
+   },
+   {
+    "quote": "Once you have your luggage, please call your hotel for the shuttle:",
+    "context": "FAQ answer on airport and railroad shuttle. Every arriving guest generates an inbound phone call to a property front desk, 24 hours a day, and the numbers differ by property.",
+    "source": "https://www.fountainheadhotels.com/faq"
+   },
+   {
+    "quote": "Not long, they are desperate for people, they can not keep people. They have a very high turn over rate.",
+    "context": "ONE anonymous employee answer dated November 12, 2024 on Indeed's company page. Not a company statement and should be weighted accordingly.",
+    "source": "https://www.indeed.com/cmp/Fountainhead-Development,-Inc.-2"
+   },
+   {
+    "quote": "It means we are still a work in progress. We are still actively building out our clothing displays, getting exhibits set, and continuing construction of the new addition.",
+    "context": "Museum homepage explaining its July 13, 2026 soft opening. Operating at reduced hours during the peak visitor month while construction continues.",
+    "source": "https://www.fountainheadmuseum.com/"
+   },
+   {
+    "quote": "We're truly local and independent. This enables us to personalize service to our guests in a way that they don't get at other hotels.",
+    "context": "Bobby Hanson, Operations Manager, Alaska Business Magazine November 2018. Defines the service promise the seasonal doubling exists to protect, and 'independent' means no brand-level central reservations or revenue system behind them.",
+    "source": "https://digital.akbizmag.com/issue/november-2018/fountainhead-development-inc/"
+   }
+  ],
+  "ownership_history": {
+   "detail": "FDI established 1985, headquartered in Fairbanks at 1501 Queens Way. Tim Cerny is President. Named managers on fetched pages: Bobby Hanson Operations Manager; Karen Wilken Marketing and PR Manager (907) 458-6114; Becky Kunkle Reservations Manager beckyk@fdialaska.com / 907-458-6123; Willard Vinton Fountainhead Manager; Zoe Hill event planner at Wedgewood; Sandy Restaurant Manager at Sophie Station. The corporate domain fdialaska.com 301-redirects to fountainheadhotels.com. Cerny in April 2026: 'We spent 20 years getting recognized nationally and internationally for what we do in Fairbanks, Alaska.' Structure is a multi-industry private group, hospitality plus real estate development and commercial leasing, plus Fountainhead Northwest LLC in Kent Washington and the affiliated Equipment Source Inc.",
+   "source": "https://members.agcak.org/memberdirectory/Details/wedgewood-resort-fountainhead-development-inc-1699416"
+  },
+  "timely": [
+   {
+    "detail": "Aurora season starts in 16 days. Wedgewood's Aurora Season Special runs 'August 21 through April 21', and the Bear Lodge rooms page dates the 'Courtesy Northern Lights wakeup call during the Aurora Season (mid-August to late April)'. Winter aurora demand begins overlapping the tail of summer while summer operations are still fully loaded.",
+    "source": "https://www.fountainheadhotels.com/wedgewood-resort/specials/aurora-season-special"
+   },
+   {
+    "detail": "Bear Lodge, 157 rooms, is inside the last five to six weeks of its declared 'mid-May to mid-September' season, and the homepage labels its front desk as May-Aug. Zach's Restaurant is still running its posted summer 2026 schedule. Late check-outs remain suspended through mid-September.",
+    "source": "https://www.fountainheadhotels.com/bear-lodge"
+   },
+   {
+    "detail": "The seasonal workforce that 'more than double[s] our current hotel staffing for summer' unwinds at the same moment aurora season opens. The seasonal roster includes the exact front-of-house roles that absorb guest contact: Seasonal Front Desk Clerks, Group Representatives, Bell Captains and Luggage Handlers, Shuttle Bus Drivers and Museum Attendant.",
+    "source": "https://www.fountainheadhotels.com/jobs"
+   },
+   {
+    "detail": "The Antique Auto Museum is mid-transition. It soft-opened at its new 90,000 sq ft Airport Way building on July 13, 2026 at reduced hours of 12pm-4pm with construction ongoing. As of today the hotel site still markets the museum as a Wedgewood Resort event venue at 'SIZE: 25,000 SF' and the things-to-do page still says 'over 95 unique automobiles' while the museum's own site says over 125.",
+    "source": "https://www.akbizmag.com/industry/tourism/antiqueflight/"
+   },
+   {
+    "detail": "Fairbanks peak visitor season runs through mid-September per the company's own repeated 'mid-May through mid-September' framing, so the group is currently at the top of its annual load across rooms, F&B, shuttles, groups and the attraction simultaneously.",
+    "source": "https://www.fountainheadhotels.com/faq"
+   }
+  ],
+  "claims": [
+   {
+    "claim": "Fountainhead Hotels markets exactly three hotels: Wedgewood Resort, Sophie Station Suites and Bear Lodge.",
+    "source": "https://www.fountainheadhotels.com/",
+    "verbatim": null
+   },
+   {
+    "claim": "Fountainhead Development, Inc. was established in 1985 and is headquartered in Fairbanks, Alaska.",
+    "source": "https://www.indeed.com/cmp/Fountainhead-Development,-Inc.-2",
+    "verbatim": "Established in 1985, Fountainhead Development Inc. (FDI) is an integral part of the fabric that makes up Fairbanks, Alaska."
+   },
+   {
+    "claim": "Alaska Business Magazine's November 2018 FDI profile reported 170 to 350 employees depending on season and 600+ rooms across three hotel properties, with Tim Cerny as President and Bobby Hanson as Operations Manager.",
+    "source": "https://digital.akbizmag.com/issue/november-2018/fountainhead-development-inc/",
+    "verbatim": "We're truly local and independent. This enables us to personalize service to our guests in a way that they don't get at other hotels."
+   },
+   {
+    "claim": "The company states it more than doubles hotel staffing for summer.",
+    "source": "https://www.fountainheadhotels.com/jobs",
+    "verbatim": "We more than double our current hotel staffing for summer to make sure guests have caring, personal experiences at our properties."
+   },
+   {
+    "claim": "Check-in is 4PM and check-out is 11AM Alaska Standard Time, and late check-outs are not offered mid-May through mid-September.",
+    "source": "https://www.fountainheadhotels.com/faq",
+    "verbatim": "we are unable to offer late check-outs during the summer months (mid-May through mid-September)"
+   },
+   {
+    "claim": "All three properties staff the front desk 24/7.",
+    "source": "https://www.fountainheadhotels.com/faq",
+    "verbatim": "Yes. We are available 24/7 to assist you during your stay."
+   },
+   {
+    "claim": "Cancellations require at least 24 hours notice or a one-night penalty is charged.",
+    "source": "https://www.fountainheadhotels.com/faq",
+    "verbatim": "All cancellations must be made at least 24 hours in advance."
+   },
+   {
+    "claim": "Discount rates are gated behind direct booking via a single toll-free line, and the company says it can't adjust OTA pricing after the fact.",
+    "source": "https://www.fountainheadhotels.com/faq",
+    "verbatim": "PLEASE BOOK WITH US DIRECTLY TO RESERVE YOUR SPECIAL RATE. Call us directly at 800.528.4916 with help booking your reservation."
+   },
+   {
+    "claim": "Airport and rail shuttle pickups are initiated by the guest phoning the property.",
+    "source": "https://www.fountainheadhotels.com/faq",
+    "verbatim": "Once you have your luggage, please call your hotel for the shuttle:"
+   },
+   {
+    "claim": "The complimentary courtesy van runs 24 hours to and from Fairbanks International Airport and the Alaska Railroad Station, but excludes tour and large groups.",
+    "source": "https://www.fountainheadhotels.com/bear-lodge-rooms.html",
+    "verbatim": "24-hour courtesy van services to and from the Fairbanks International Airport and Alaska Railroad Station"
+   },
+   {
+    "claim": "Bear Lodge is a summer-only property operating mid-May to mid-September.",
+    "source": "https://www.fountainheadhotels.com/bear-lodge",
+    "verbatim": "mid-May to mid-September"
+   },
+   {
+    "claim": "Aurora season for the resort's package is defined as August 21 through April 21.",
+    "source": "https://www.fountainheadhotels.com/wedgewood-resort/specials/aurora-season-special",
+    "verbatim": "August 21 through April 21"
+   },
+   {
+    "claim": "Bear Lodge offers a courtesy Northern Lights wake-up call during aurora season and rents headlamps.",
+    "source": "https://www.fountainheadhotels.com/bear-lodge-rooms.html",
+    "verbatim": "Courtesy Northern Lights wakeup call during the Aurora Season (mid-August to late April)"
+   },
+   {
+    "claim": "Extended stay rates apply at one month or more, at Wedgewood, on 105 acres.",
+    "source": "https://www.fountainheadhotels.com/wedgewood-resort/specials/extended-stay-rates",
+    "verbatim": "condo-style one-bedroom suite surrounded by 105 acres of pristine beauty"
+   },
+   {
+    "claim": "Extended stay and corporate lodging is handled by a named Reservations Manager, Becky Kunkle, at beckyk@fdialaska.com and 907-458-6123.",
+    "source": "https://www.fountainheadhotels.com/",
+    "verbatim": "Work with our Reservations Manager Becky Kunkle for availability and very best rates."
+   },
+   {
+    "claim": "Sophie Station's meetings contact is Sandy, Restaurant Manager, across three venues sized 1,944 sq ft (45 guests), 920 sq ft (70 guests) and 595 sq ft (20 guests).",
+    "source": "https://www.fountainheadhotels.com/sophie-station/meetings-events",
+    "verbatim": "1,944 square feet of space"
+   },
+   {
+    "claim": "Wedgewood's meetings and weddings page lists six venues and names Zoe Hill as event planner.",
+    "source": "https://www.fountainheadhotels.com/wedgewood-resort/meetings-weddings",
+    "verbatim": null
+   },
+   {
+    "claim": "Group and event leads are captured by a web RFP form with 14 fields and no stated response-time commitment.",
+    "source": "https://www.fountainheadhotels.com/wedgewood-resort/meetings-weddings/rfp",
+    "verbatim": "Submit My Event!"
+   },
+   {
+    "claim": "Online reservations run on the iHotelier booking platform under the portal symbol FHH, covering all three hotels.",
+    "source": "https://reservations.ihotelier.com/areasearch/default.cfm?portalsymbol=FHH",
+    "verbatim": null
+   },
+   {
+    "claim": "Explore Fairbanks lists Wedgewood Resort at 305 rooms, 7 accessible, $179-$389, on 105 acres.",
+    "source": "https://www.explorefairbanks.com/listing/wedgewood-resort-fountainhead-hotels/10108/",
+    "verbatim": "1 & 2 bedroom residential-style suites"
+   },
+   {
+    "claim": "Explore Fairbanks lists Sophie Station Suites at 148 suites, 4 accessible, $179-$349.",
+    "source": "https://www.explorefairbanks.com/listing/sophie-station-suites-fountainhead-hotels/10106/",
+    "verbatim": "free internet access & airport/train courtesy van service"
+   },
+   {
+    "claim": "Explore Fairbanks lists Bear Lodge at 157 rooms, 8 accessible, $189-$289.",
+    "source": "https://www.explorefairbanks.com/listing/bear-lodge-at-wedgewood-resort-fountainhead-hotels/10321/",
+    "verbatim": "A hideaway tucked between a 75-acre wildlife reserve & a 2,000-acre bird refuge"
+   },
+   {
+    "claim": "Zach's Restaurant runs three separate day-parts in summer 2026.",
+    "source": "https://www.fountainheadhotels.com/sophie-station/dining/zach-s-restaurant",
+    "verbatim": "Sunday - Saturday 6:00 am - 9:00 am 11:00 am - 2:00 pm 4:00 pm - 10:00 pm"
+   },
+   {
+    "claim": "The Wedgewood Wildlife Sanctuary hosts over 120 bird species and 15 mammal types.",
+    "source": "https://www.fountainheadhotels.com/things-to-do",
+    "verbatim": "over 120 species of birds"
+   },
+   {
+    "claim": "The Fountainhead Antique Auto Museum soft-opened at its new site on July 13, 2026 with 12pm-4pm daily hours while construction continues.",
+    "source": "https://www.fountainheadmuseum.com/",
+    "verbatim": "We are excited to announce our soft opening beginning July 13, 2026! From today forward we are officially opening from 12pm-4pm, 7 days a week!"
+   },
+   {
+    "claim": "The museum's new address is 3225 Airport Way, with admission $20 adult / $10 child, season passes $100 and $150, and a $32 per person docent tour with a 12 person minimum.",
+    "source": "https://www.fountainheadmuseum.com/plan-a-visit",
+    "verbatim": "One Hour Docent Guided Tour: $32 per person. 12 person min, during business hours."
+   },
+   {
+    "claim": "Alaska Business Magazine reported the museum's move from 30,000 sq ft at Wedgewood to a 90,000 sq ft former Kmart on Airport Way, and that the vacated Wedgewood museum space becomes a convention center and event space.",
+    "source": "https://www.akbizmag.com/industry/tourism/antiqueflight/",
+    "verbatim": null
+   },
+   {
+    "claim": "Tim Cerny is president of Fountainhead Development and gave an April 2026 interview about the museum relocation.",
+    "source": "https://www.alaskasnewssource.com/2026/04/26/fountainhead-antique-auto-museum-reopen-this-summer-new-location/",
+    "verbatim": "We spent 20 years getting recognized nationally and internationally for what we do in Fairbanks, Alaska."
+   },
+   {
+    "claim": "The corporate domain fdialaska.com 301-redirects to fountainheadhotels.com.",
+    "source": "https://www.fdialaska.com/",
+    "verbatim": null
+   },
+   {
+    "claim": "The Greater Fairbanks Chamber describes over 700 guest rooms across four hotels including the Bridgewater.",
+    "source": "https://www.fairbankschamber.org/list/member/fountainhead-development-wedgewood-resort-434",
+    "verbatim": "Fountainhead Hotels features over 700 guest rooms, two restaurants, two lounges, and a marvelous convention facility."
+   }
+  ],
+  "could_not_verify": [
+   "Current (2026) employee headcount and the peak-versus-shoulder split. The only sourced figure is Alaska Business Magazine's November 2018 '170 to 350 employees depending on season', eight years old. Indeed says '51 to 200', which conflicts.",
+   "Revenue of any kind. No fetched page carries a revenue figure and third-party aggregators do not count as verification.",
+   "Whether the Bridgewater Hotel is still a Fountainhead property. Chamber listing names it; fountainheadhotels.com does not; the Explore Fairbanks listing does not mention Fountainhead.",
+   "Whether the vacated Wedgewood museum building has actually been converted to a convention center yet.",
+   "Bear Lodge's true street address. Their own pages give three different answers.",
+   "Guest review sentiment at any depth. Yelp, TripAdvisor and ApartmentRatings all returned HTTP 403. Only Trip.com, Expedia and Hotels.com were readable.",
+   "fountainheaddevelopment.com did not resolve, so the parent company's own site could not be read.",
+   "Golden Bear Restaurant's operating hours and reservation mechanics. Its page carries no hours, no phone and no reservation instruction.",
+   "Total acreage reconciliation. Company and Explore Fairbanks both say 105 acres; alaska.org says '30 beautifully landscaped acres'.",
+   "Which property management system (PMS) they run behind the iHotelier booking engine. Only the booking engine is visible."
+  ],
+  "sources_fetched": [
+   "https://www.fountainheadhotels.com/",
+   "https://www.fountainheadhotels.com/sitemap.xml",
+   "https://www.fountainheadhotels.com/jobs",
+   "https://www.fountainheadhotels.com/faq",
+   "https://www.fountainheadhotels.com/contact-us",
+   "https://www.fountainheadhotels.com/things-to-do",
+   "https://www.fountainheadhotels.com/bear-lodge-rooms.html",
+   "https://www.fountainheadhotels.com/wedgewood-resort",
+   "https://www.fountainheadhotels.com/wedgewood-resort/meetings-weddings",
+   "https://www.fountainheadhotels.com/wedgewood-resort/meetings-weddings/rfp",
+   "https://www.fountainheadhotels.com/wedgewood-resort/specials/aurora-season-special",
+   "https://www.fountainheadhotels.com/wedgewood-resort/specials/extended-stay-rates",
+   "https://www.fountainheadhotels.com/sophie-station",
+   "https://www.fountainheadhotels.com/sophie-station/meetings-events",
+   "https://www.fountainheadhotels.com/sophie-station/dining/zach-s-restaurant",
+   "https://www.fountainheadhotels.com/bear-lodge",
+   "https://www.fdialaska.com/",
+   "https://reservations.ihotelier.com/areasearch/default.cfm?portalsymbol=FHH",
+   "https://www.fountainheadmuseum.com/",
+   "https://www.fountainheadmuseum.com/plan-a-visit",
+   "https://www.fountainheadnw.com/about",
+   "https://www.explorefairbanks.com/listing/wedgewood-resort-fountainhead-hotels/10108/",
+   "https://www.explorefairbanks.com/listing/sophie-station-suites-fountainhead-hotels/10106/",
+   "https://www.explorefairbanks.com/listing/bear-lodge-at-wedgewood-resort-fountainhead-hotels/10321/",
+   "https://www.akbizmag.com/industry/tourism/antiqueflight/",
+   "https://digital.akbizmag.com/issue/november-2018/fountainhead-development-inc/",
+   "https://www.alaskasnewssource.com/2026/04/26/fountainhead-antique-auto-museum-reopen-this-summer-new-location/",
+   "https://www.adn.com/alaska-life/travel/2026/06/26/summer-shines-in-fairbanks-with-attractions-and-activities/",
+   "https://www.fairbankschamber.org/list/member/fountainhead-development-wedgewood-resort-434",
+   "https://members.agcak.org/memberdirectory/Details/wedgewood-resort-fountainhead-development-inc-1699416",
+   "https://www.indeed.com/cmp/Fountainhead-Development,-Inc.-2",
+   "https://www.expedia.com/Fairbanks-Hotels-Sophie-Station-Suites.h12429.Hotel-Information"
+  ]
+ },
+ "industry": {
+  "industry": "Independent and family-held hotels and resorts, roughly 100 to 400 rooms, not brand-flagged, with meaningful F&B, catering and group business and a heavily seasonal demand curve",
+  "real_deployments": [
+   {
+    "who": "Odyssey Resorts, nine independent seasonal Midwest resort properties",
+    "what": "IDeaS G3 RMS, automated revenue management replacing fragmented manual pricing and decentralized rate decisions",
+    "measured_outcome": "Nearly 8% portfolio RevPAR growth year over year through August 2025 versus 2024. Five of nine properties posted double-digit RevPAR growth, top performer 19%. All nine exceeded prior-year lodging revenue for the first time since 2021 at that point in the year. No implementation date, no cost, no control group.",
+    "date": "Results period through August 2025",
+    "evidence_type": "vendor_claim",
+    "source": "https://ideas.com/success-story/resilience-and-growth-odyssey-resorts-shift-to-data-driven-revenue-management/"
+   },
+   {
+    "who": "An 80-room independent city hotel in Amsterdam, tested by a reviewer at 6hoteliers",
+    "what": "Optii Housekeeping, AI room-attendant assignment and route optimization, run in PARALLEL with existing manual scheduling for eight weeks",
+    "measured_outcome": "Average 2.5 minutes saved per room clean, tracked against payroll data at 73% occupancy and EUR 16/hour fully loaded, roughly EUR 13,800 per year. Morning assignment fell from 40-55 minutes to about 10 minutes of review. Floor inspection time ROSE, improving room quality scores. Reviewer verbatim: 'The AI does work, the labour savings are real (though not 18% in my case).' Same review calls the vendor's '500% ROI' claim 'fiction' for well-run properties, and reports the Android app crashing multiple times weekly.",
+    "date": "Eight-week test January to February 2026",
+    "evidence_type": "independent_measurement",
+    "source": "https://6hoteliers.com/housekeeping/optii-review/"
+   },
+   {
+    "who": "Omni Atlanta Hotel (branded and larger than the 100-400 band, the only named group-RFP AI pilot retrievable)",
+    "what": "Amadeus MeetingBroker 'Email to RFP', Azure OpenAI reads an inbound group booking email and generates an RFP response",
+    "measured_outcome": "Described only as 'faster responses and near autonomous RFP handling.' No numbers, no baseline, no time period.",
+    "date": "Press release June 17, 2025",
+    "evidence_type": "vendor_claim",
+    "source": "https://amadeus.com/en/newsroom/press-releases/ai-hospitality-demand360-meetingbroker"
+   },
+   {
+    "who": "Magic Moment Resort & Kids Club, Kissimmee, Florida",
+    "what": "Worldie AI digital concierge, reported as the first U.S. hotel to deploy it",
+    "measured_outcome": "None. Trade coverage describes intent only, with no measured result.",
+    "date": "May 27, 2026",
+    "evidence_type": "vendor_claim",
+    "source": "https://www.hoteldive.com/news/6-emerging-hotel-tech-solutions-h1-2026/824810/"
+   }
+  ],
+  "failures_and_disappointments": [
+   {
+    "what": "Peer-reviewed evidence that inaccurate hotel booking chatbots actively cost bookings",
+    "detail": "Texas A&M researchers (lead author Naeem Akhtar), 340 UK adults who had used chatbots for hotel bookings, International Journal of Hospitality Management, DOI 10.1016/j.ijhm.2025.104428. Inaccuracy produced the strongest negative response, an effect 'more than four times larger than incredibility.' Discomfort cut willingness to keep interacting by 'nearly 38%' and 'nearly doubled the likelihood they would delay or abandon a booking decision.' Disclosing the agent is AI reduced discomfort tied to inaccurate answers but intensified creepiness linked to incredibility. Researcher line: 'Competence without transparency doesn't solve the problem.' The single best evidence that a half-built guest-facing bot is worse than no bot.",
+    "date": "Published 2026, reported May 2026",
+    "source": "https://techxplore.com/news/2026-05-hotel-chatbots-customers.html"
+   },
+   {
+    "what": "Half the industry is still not past the pilot stage, and the named barriers are integration and skills, not model quality",
+    "detail": "Canary Technologies survey of 404 hospitality IT decision-makers across North America, EMEA and APAC. Only 51% are piloting or have adopted AI, despite 85% planning to put more than 5% of IT budget into AI. Top challenges are data and privacy, integration barriers, limited training bandwidth and lack of technical expertise. Model capability appears nowhere on the blocker list.",
+    "date": "March 19, 2026",
+    "source": "https://www.hoteldive.com/news/hotel-industry-artificial-intelligence-investment-2026/815349/"
+   },
+   {
+    "what": "Independents are roughly half as likely as chains to be using AI at all",
+    "detail": "Cloudbeds reports 41% of independent hotels use AI versus 80% of chains. Same report: independent hotel RevPAR declined 5.4% in 2025, ADR fell 5.8%, OTA share of independent bookings rose to 63.4%, labor is 47 to 60% of operating expenses, and 67% cite managing disparate systems as a top concern. Cloudbeds is a PMS vendor selling to exactly this segment, so treat as directionally useful and commercially motivated.",
+    "date": "April 30, 2026",
+    "source": "https://www.hospitalitynet.org/news/4132167/six-forces-reshaping-independent-hotels-in-2026-including-ai-discovery-margin-pressure-and-the-connectivity-imperative"
+   },
+   {
+    "what": "Hoteliers themselves draw a hard line at the guest-facing moment that matters most",
+    "detail": "Mews surveyed 500+ global properties December 2025 to March 2026. 98% used AI in the prior six months, yet 59% say the front desk welcome and check-in should stay human-led, and that view is STRONGEST among properties already using AI extensively. 41% have no formal AI policy. Trust in AI decision-making is 92% at properties with a written policy versus 49% without. Vendor-run survey of its own customer base, so adoption is overstated relative to the wider market, but the internal contrast is informative.",
+    "date": "Fielded December 2025 to March 2026",
+    "source": "https://www.hospitalitynet.org/news/4132496/most-hoteliers-use-ai-daily-but-guest-experience-still-needs-a-human-touch"
+   },
+   {
+    "what": "The most cited independent-hotel AI survey is structurally incapable of reporting failure",
+    "detail": "TakeUp's 'AI Hospitality Revolution 2025', widely quoted as '74.5% of properties using AI report positive results.' The sample is 200 independent property owners who were ALREADY actively using AI, recruited on Pollfish. TakeUp sells an AI dynamic pricing platform to independents. Screening out non-adopters means the survey cannot detect abandonment.",
+    "date": "October 1, 2025",
+    "source": "https://www.prnewswire.com/news-releases/takeup-unveils-the-ai-hospitality-revolution-2025-report-showing-how-independent-properties-are-embracing-new-tools-for-competitive-advantage-302572137.html"
+   },
+   {
+    "what": "Guest tolerance for chatbots is real but shallow",
+    "detail": "Hotel Tech Report survey of 402 recent hotel guests, margin of error 4.9% at 95% confidence. 70% find chatbots helpful for SIMPLE inquiries, 58% believe AI can improve their stay, 39% would use a chatbot to ask for the wifi password. Two-thirds have privacy concerns with voice-activated devices. The pattern is permission for low-stakes lookup, not for handling money or complaints.",
+    "date": "March 11, 2026",
+    "source": "https://hoteltechreport.com/news/2026-state-of-hotel-guest-technology-report"
+   }
+  ],
+  "buy_off_the_shelf": [
+   {
+    "capability": "Group and catering RFP intake and response generation, plus opportunity scoring and real-time availability checks",
+    "who_already_sells_it": "Amadeus, inside MeetingBroker and the Amadeus Max layer",
+    "detail": "'Email to RFP' lets planners email an inbound RFP directly to MeetingBroker, where AI evaluates it and creates an instant RFP response, running on Azure OpenAI. The clearest example of a group-sales capability that is already a checkbox in a system many properties with convention business already license. NOTE: iHotelier/TravelClick is in the Amadeus family, so a property already on iHotelier should check what it already has before building anything here.",
+    "source": "https://amadeus.com/en/newsroom/press-releases/ai-hospitality-demand360-meetingbroker"
+   },
+   {
+    "capability": "Dynamic pricing, guest messaging across WhatsApp/SMS/OTA/email with an autonomous agent, and natural-language workflow automations, all native inside the PMS",
+    "who_already_sells_it": "Mews",
+    "detail": "Launched May 27, 2026 across PMS, RMS, messaging, automations and AR. If a property is already on Mews, building a separate messaging bot or pricing engine duplicates the stack. The claimed 13.7% revenue lift is vendor causal-inference, and the IDC 476% three-year ROI has a disclosed sample of n=8.",
+    "source": "https://www.hospitalitynet.org/news/4132634/mews-unveils-the-operating-system-for-hospitality.html"
+   },
+   {
+    "capability": "Conversational operations copilot inside the PMS, extending reservations, smart room assignment, resolving overbookings, housekeeping reports, no-shows, morning briefings",
+    "who_already_sells_it": "Apaleo",
+    "detail": "Announced March 26, 2025 as an agentic layer embedded in the platform, trainable on the hotel's own SOPs. Pricing not disclosed. No pilot hotels and no measured results published with the launch, so a shipped capability with no field evidence attached.",
+    "source": "https://www.hospitalitynet.org/news/4131640/apaleo-launches-ai-copilot-to-ease-operational-pressure-on-hotel-teams"
+   },
+   {
+    "capability": "AI voice answering for front desk and reservation calls",
+    "who_already_sells_it": "Canary Technologies",
+    "detail": "Canary sells an AI voice agent working with hotels in more than 90 countries. Its widely quoted '40% of calls to front desks go unanswered' is a VENDOR number generated by the company selling the fix, and the article carries no named property and no measured post-deployment result.",
+    "source": "https://www.hoteldive.com/news/hotel-tech-ai-voice-front-desk-calls/740672/"
+   },
+   {
+    "capability": "AI route optimization and time-standard assignment for housekeeping, sitting on top of PMS room status",
+    "who_already_sells_it": "Optii Solutions",
+    "detail": "Off-the-shelf and independently verified to deliver real, modest savings. Caveats: pricing is opaque and gated behind a sales call with a confidentiality clause, the Android app was unstable in test, and there is NO portfolio-level reporting for multi-property groups.",
+    "source": "https://6hoteliers.com/housekeeping/optii-review/"
+   }
+  ],
+  "integration_reality": [
+   {
+    "constraint": "Oracle OPERA integration is gated, paid, and priced very differently by version",
+    "detail": "OPERA 5 and Suite8 use an approval-based Oracle Hospitality Partner Integration Program requiring formal vetting. Stated costs: Oracle Partner Network base membership $500/year, the OPERA 5 License & Hardware track an additional $3,000/year, and integration validation $7,000 to $15,000 one-time. Oracle may also require a hotel customer ready to justify the integration. OPERA 5 connectivity may require VPN access or IP whitelisting. OPERA Cloud is far easier, self-service through OHIP at $500/year with no additional fee. Which version a property runs is a five-figure swing in integration cost and a months-versus-days swing in timeline.",
+    "source": "https://www.altexsoft.com/blog/opera-pms-integration/"
+   },
+   {
+    "constraint": "System fragmentation is the operator-reported top concern and already costs measurable staff time",
+    "detail": "67% of independent hotels cite managing disparate systems as a top concern, and properties lose the equivalent of one to two workdays weekly reconciling data across platforms. Vendor-published (Cloudbeds) but consistent with the integration barriers reported independently by Canary's survey.",
+    "source": "https://www.hospitalitynet.org/news/4132167/six-forces-reshaping-independent-hotels-in-2026-including-ai-discovery-margin-pressure-and-the-connectivity-imperative"
+   },
+   {
+    "constraint": "Any AI phone agent that hears a card number pulls the hotel's call path into PCI DSS scope",
+    "detail": "PCI DSS requires a recorded PAN be masked to the last four digits, and CVV codes must not be retained after authorization, including inside call recordings. The standard mitigation is pause-and-resume recording. Practical consequence: either the agent never touches cardholder data and hands off to a tokenized payment link or a human, or the whole recording and transcript pipeline enters PCI scope. Source is a call-recording vendor, so treat the framing as vendor-sourced even though the underlying PCI requirements are not in dispute.",
+    "source": "https://www.callcabinet.com/blog/understanding-pci-dss-call-recording-requirements/"
+   },
+   {
+    "constraint": "Guest-facing AI without live PMS context is worse than none, and the academic evidence quantifies the downside",
+    "detail": "Inaccuracy is the dominant driver of negative guest response to booking chatbots, over four times stronger than incredibility, and discomfort nearly doubles the likelihood a guest delays or abandons the booking. Any deployment that cannot read live availability, rates and the guest's own reservation is structurally set up to be inaccurate.",
+    "source": "https://techxplore.com/news/2026-05-hotel-chatbots-customers.html"
+   }
+  ],
+  "seasonality_and_labor": [
+   {
+    "detail": "AHLA and Hireology surveyed 282 hoteliers between December 6, 2024 and January 3, 2025. 65% report staffing shortages, 9% describe themselves as severely understaffed, and 71% have job openings they cannot fill despite active searches, averaging six to seven open positions per property. Shortages by department: housekeeping 38%, front desk 26%, culinary 14%, maintenance 13%. Hotel employment remains nearly 10% below pre-pandemic levels.",
+    "source": "https://www.ahla.com/news/65-surveyed-hotels-report-staffing-shortages"
+   },
+   {
+    "detail": "Wages have already been used as the lever and did not close the gap. Hotels paid a projected $123 billion in wages and compensation in 2024, up 4% year over year and 20% versus 2019, while 65% still reported shortages. The implication for AI scoping is that in this segment saved hours are more credibly counted as avoided overtime or an unfilled req that stays unfilled, rather than as a headcount reduction.",
+    "source": "https://www.hoteldive.com/news/hotels-wages-staffing-ahla-report/740839/"
+   },
+   {
+    "detail": "Housekeeping labor is where measured, reproducible AI savings actually exist in this segment, and the size of the prize is modest and per-room. The independently verified figure is about 2.5 minutes per occupied room clean. That scales linearly with room count and occupancy, which means a SEASONAL property earns it only during peak months and the annualized number is proportionally smaller than a year-round hotel of the same size.",
+    "source": "https://6hoteliers.com/housekeeping/optii-review/"
+   }
+  ],
+  "claims": [
+   {
+    "claim": "In a study of 340 UK adults who had used chatbots for hotel bookings, published in the International Journal of Hospitality Management, chatbot inaccuracy produced the strongest negative response, more than four times larger than incredibility, and discomfort reduced willingness to continue interacting by nearly 38% and nearly doubled the likelihood a user would delay or abandon a booking decision.",
+    "source": "https://techxplore.com/news/2026-05-hotel-chatbots-customers.html",
+    "verbatim": "more than four times larger than incredibility"
+   },
+   {
+    "claim": "An AHLA and Hireology survey of 282 hoteliers fielded December 2024 to January 2025 found 65% of hotels reporting staffing shortages, 71% with job openings they could not fill, an average of six to seven open positions per property, and front desk as the second most cited shortage at 26%, behind housekeeping at 38%.",
+    "source": "https://www.ahla.com/news/65-surveyed-hotels-report-staffing-shortages",
+    "verbatim": "trying to fill six to seven open positions per property"
+   },
+   {
+    "claim": "Hotels paid employees a projected $123 billion in wages and compensation in 2024, up 4% year over year and 20% from 2019, and shortages persisted anyway.",
+    "source": "https://www.hoteldive.com/news/hotels-wages-staffing-ahla-report/740839/",
+    "verbatim": null
+   },
+   {
+    "claim": "Integrating with Oracle OPERA 5 or Suite8 requires Oracle Partner Network membership at $500 per year plus a $3,000 per year License and Hardware track, and one-time integration validation of $7,000 to $15,000. OPERA Cloud integration via OHIP is self-service at $500 per year with no additional fee.",
+    "source": "https://www.altexsoft.com/blog/opera-pms-integration/",
+    "verbatim": "$7,000 - $15,000 (one-time)"
+   },
+   {
+    "claim": "Cloudbeds reports that 41% of independent hotels use AI versus 80% of chains, that 67% of independents cite managing disparate systems as a top concern, that labor is 47 to 60% of operating expenses by region, and that independent hotel RevPAR declined 5.4% in 2025 with OTA share of independent bookings at 63.4%.",
+    "source": "https://www.hospitalitynet.org/news/4132167/six-forces-reshaping-independent-hotels-in-2026-including-ai-discovery-margin-pressure-and-the-connectivity-imperative",
+    "verbatim": "41% of independent hotels use AI (versus 80% of chains)"
+   },
+   {
+    "claim": "In a Canary Technologies survey of 404 hospitality IT decision-makers published March 19, 2026, only 51% are piloting or have adopted AI. Named challenges are data and privacy, integration barriers, limited training bandwidth and lack of technical expertise.",
+    "source": "https://www.hoteldive.com/news/hotel-industry-artificial-intelligence-investment-2026/815349/",
+    "verbatim": null
+   },
+   {
+    "claim": "In a Mews survey of 500+ global properties fielded December 2025 to March 2026, 98% used AI in the prior six months, yet 59% believe the front desk welcome and check-in should stay human-led, and that view is strongest among properties already using AI extensively.",
+    "source": "https://www.hospitalitynet.org/news/4132496/most-hoteliers-use-ai-daily-but-guest-experience-still-needs-a-human-touch",
+    "verbatim": "the front desk welcome and check-in should stay human-led"
+   },
+   {
+    "claim": "An eight-week parallel test of Optii housekeeping AI at an 80-room Amsterdam hotel in January to February 2026 measured an average 2.5 minutes saved per room clean, about EUR 13,800 per year at 73% occupancy and EUR 16/hour fully loaded, and cut the morning assignment process from 40-55 minutes down to about 10 minutes of review, while the reviewer described the vendor's 500% ROI marketing claim as fiction for a well-run property.",
+    "source": "https://6hoteliers.com/housekeeping/optii-review/",
+    "verbatim": "The AI does work, the labour savings are real (though not 18% in my case)"
+   },
+   {
+    "claim": "Odyssey Resorts, nine independent Midwest resort properties, reported nearly 8% year-over-year portfolio RevPAR growth through August 2025 after implementing IDeaS G3 RMS, with all nine exceeding prior-year lodging revenue for the first time since 2021 at that point in the year.",
+    "source": "https://ideas.com/success-story/resilience-and-growth-odyssey-resorts-shift-to-data-driven-revenue-management/",
+    "verbatim": "G3 RMS isn't just optimizing rates, it's fundamentally transforming our revenue performance and competitive position in the market."
+   },
+   {
+    "claim": "Amadeus launched Email to RFP inside MeetingBroker on June 17, 2025, using Azure OpenAI to evaluate an emailed inbound group request and create an instant RFP response, with Omni Atlanta Hotel as the first pilot customer, reported only as achieving faster responses and near autonomous RFP handling.",
+    "source": "https://amadeus.com/en/newsroom/press-releases/ai-hospitality-demand360-meetingbroker",
+    "verbatim": "faster responses and near autonomous RFP handling"
+   },
+   {
+    "claim": "Canary Technologies' claim that 40% of calls to hotel front desks go unanswered is the company's own research, stated by a Canary executive, and the article carrying it names no property and reports no post-deployment measurement.",
+    "source": "https://www.hoteldive.com/news/hotel-tech-ai-voice-front-desk-calls/740672/",
+    "verbatim": "We found that actually 40% of calls to front desks go unanswered"
+   },
+   {
+    "claim": "In a Hotel Tech Report survey of 402 recent hotel guests published March 11, 2026, 70% find chatbots helpful for simple inquiries, while two-thirds have privacy concerns with voice-activated devices.",
+    "source": "https://hoteltechreport.com/news/2026-state-of-hotel-guest-technology-report",
+    "verbatim": "70% of Guests Find Chatbots Helpful for Simple Inquiries"
+   },
+   {
+    "claim": "PCI DSS requires that a recorded primary account number be masked to the last four digits and that CVV codes never be retained after authorization, including inside call recordings, which puts any AI voice agent that hears card details into PCI scope unless pause-and-resume or equivalent redaction is used.",
+    "source": "https://www.callcabinet.com/blog/understanding-pci-dss-call-recording-requirements/",
+    "verbatim": "These three-digit security codes must not be retained after authorization. If captured in any system, including call recordings, they must be redacted or deleted immediately."
+   }
+  ],
+  "hype_flags": [
+   "Canary's '40% of front desk calls go unanswered' is the single most repeated number in hotel voice AI marketing. It is the vendor's own research, published by the company selling the fix, and no independent replication was found. DO NOT USE AS FACT.",
+   "Mews' 476% three-year ROI, four-month payback and EUR 350,000 annual benefit per 100 rooms rest on an IDC study with n=8, disclosed in the footnote.",
+   "Mews' 13.7% revenue lift is footnoted to the vendor's own causal-inference methodology against a control group it selected.",
+   "TakeUp's '74.5% of properties report positive results' surveys only people already using AI, run by an AI pricing vendor. The study literally cannot observe failure.",
+   "Optii's marketed '500% ROI' was called 'fiction' for a well-run property by the only independent tester who measured it.",
+   "AIIR's 'up to 30% energy savings' is a vendor figure with no named property and no measurement period.",
+   "Hotel Tech Report's Q2 2026 framing, 'A year ago the best hotel AI could tell your revenue manager what to do. This quarter, it does the thing itself,' is agent-washing language attached to a 40-product roundup with zero named hotels and zero documented failures.",
+   "Unsourced adoption percentages circulate freely in hospitality opinion writing with no linkable sources.",
+   "Cloudbeds' independent-hotel statistics are the best segment-specific numbers available and are simultaneously published by a PMS vendor selling to that exact segment. Use, but always attribute.",
+   "'Distinctive Inns' AI results surfaced repeatedly in search but only on AI-generated marketing blogs. Not included, not verifiable."
+  ],
+  "could_not_verify": [
+   "Mythos Group's claims that only 23% of hotel guests are satisfied with AI chatbot interactions and that hotels waste $2.3 billion annually on ineffective AI. Vendor blogs only, no retrievable primary source.",
+   "The figure that 63% of hotel technology budgets go to maintaining legacy systems. Primary pages returned 403.",
+   "Any measured outcome for AI review-response tools at a named independent hotel. Every result found was vendor marketing.",
+   "Any measured outcome for AI upsell engines at a named independent hotel in the 100-400 room band.",
+   "Any measured outcome for AI night-audit or back-office automation at a named independent hotel.",
+   "Exact OHIP per-API-call pricing.",
+   "Whether any specific PMS vendor bundles its AI features at no incremental cost. Mews and Apaleo describe theirs as native and embedded, but neither disclosed pricing, so 'already included in what you pay' remains an assumption to check property by property.",
+   "A documented, publicly reported case of an independent hotel switching off an AI deployment. Staff resistance and stalled pilots are widely discussed, but no named rollback was found."
+  ],
+  "sources_fetched": [
+   "https://techxplore.com/news/2026-05-hotel-chatbots-customers.html",
+   "https://www.ahla.com/news/65-surveyed-hotels-report-staffing-shortages",
+   "https://www.hoteldive.com/news/hotels-wages-staffing-ahla-report/740839/",
+   "https://www.hoteldive.com/news/hotel-tech-ai-voice-front-desk-calls/740672/",
+   "https://www.hoteldive.com/news/hotel-industry-artificial-intelligence-investment-2026/815349/",
+   "https://www.hoteldive.com/news/6-emerging-hotel-tech-solutions-h1-2026/824810/",
+   "https://www.hospitalitynet.org/news/4132167/six-forces-reshaping-independent-hotels-in-2026-including-ai-discovery-margin-pressure-and-the-connectivity-imperative",
+   "https://www.hospitalitynet.org/news/4132496/most-hoteliers-use-ai-daily-but-guest-experience-still-needs-a-human-touch",
+   "https://www.hospitalitynet.org/news/4131640/apaleo-launches-ai-copilot-to-ease-operational-pressure-on-hotel-teams",
+   "https://www.hospitalitynet.org/news/4132634/mews-unveils-the-operating-system-for-hospitality.html",
+   "https://ideas.com/success-story/resilience-and-growth-odyssey-resorts-shift-to-data-driven-revenue-management/",
+   "https://6hoteliers.com/housekeeping/optii-review/",
+   "https://amadeus.com/en/newsroom/press-releases/ai-hospitality-demand360-meetingbroker",
+   "https://www.altexsoft.com/blog/opera-pms-integration/",
+   "https://hoteltechreport.com/news/2026-state-of-hotel-guest-technology-report",
+   "https://hoteltechreport.com/news/q2-2026-hotel-ai-trends-report",
+   "https://www.prnewswire.com/news-releases/takeup-unveils-the-ai-hospitality-revolution-2025-report-showing-how-independent-properties-are-embracing-new-tools-for-competitive-advantage-302572137.html",
+   "https://www.callcabinet.com/blog/understanding-pci-dss-call-recording-requirements/"
+  ]
+ },
+ "people": {
+  "company": "Fountainhead Hotels (hotel group of Fountainhead Development, Inc.), Fairbanks, Alaska",
+  "ownership": {
+   "detail": "Privately held, locally owned, no corporate parent. Fountainhead Development, Inc. (FDI) was established in 1985 and is headquartered at 1501 Queens Way, Fairbanks, AK 99701 (907-456-7143). Tim Cerny (Timothy T. Cerny) is President and is repeatedly identified in fetched news and trade press as the owner. Alaska Business Magazine renders 'Tim Cerny, President' quoted as 'We're Alaska-born and -raised and built Arctic-tough', alongside 'Bobby Hanson, Operations Manager' saying 'We're truly local and independent'. Anchorage Daily News renders 'Cerny, president of Fountainhead Development Inc.' and 'owner Tim Cerny'. Alaska's News Source (2024) renders 'Tim Cerny, President of Fountainhead Development'. Barbara Cerny is named in Alaska Business Magazine as running the fashion component of the museum, indicating family involvement. FDI is a multi-entity group: the hotels (Wedgewood Resort, Sophie Station Suites, Bear Lodge, Bridgewater Hotel) under the Fountainhead Hotels brand, the Fountainhead Antique Auto Museum (operating under the 501(c)(3) Fountainhead Museum Foundation), Fairbanks Rentals / Wedgewood Apartments / Walkada Apartments, Fountainhead Northwest LLC in Kent WA, and Equipment Source Inc. CAVEAT: the Alaska state corporations database, the Regulatory Commission of Alaska entity page and OpenCorporates all returned 403. Shareholder percentages are NOT state-registry-verified. Ownership is established from fetched news and trade-press pages plus the company's own subsidiary pages, consistent across four independent outlets.",
+   "source": "https://digital.akbizmag.com/issue/november-2018/fountainhead-development-inc/"
+  },
+  "people": [
+   {
+    "name": "Tim Cerny (Timothy T. Cerny)",
+    "title": "President and owner, Fountainhead Development, Inc.",
+    "role_type": "buyer",
+    "source": "https://digital.akbizmag.com/issue/november-2018/fountainhead-development-inc/",
+    "email": null,
+    "email_source": null
+   },
+   {
+    "name": "Bobby Hanson",
+    "title": "Operations Manager, Fountainhead Development, Inc.",
+    "role_type": "buyer",
+    "source": "https://www.akbizmag.com/industry/tourism/antiqueflight/",
+    "email": null,
+    "email_source": null
+   },
+   {
+    "name": "Karen Wilken",
+    "title": "Marketing and Public Relations Manager, Fountainhead Development",
+    "role_type": "router",
+    "source": "https://www.akbizmag.com/industry/tourism/antiqueflight/",
+    "email": null,
+    "email_source": null
+   },
+   {
+    "name": "Becky Kunkle",
+    "title": "Reservations Manager (extended stay and corporate lodging point of contact), Fountainhead Hotels",
+    "role_type": "router",
+    "source": "https://members.agcak.org/memberdirectory/Details/wedgewood-resort-fountainhead-development-inc-1699416",
+    "email": "beckyk@fdialaska.com",
+    "email_source": "https://www.fountainheadhotels.com"
+   },
+   {
+    "name": "Sandy (surname not published)",
+    "title": "Restaurant Manager, Sophie Station Suites meetings and events / catering",
+    "role_type": "router",
+    "source": "https://www.fountainheadhotels.com/sophie-station/meetings-events",
+    "email": "Sandyb@fountainheadhotels.com",
+    "email_source": "https://www.fountainheadhotels.com/sophie-station/meetings-events"
+   },
+   {
+    "name": "Willard (Willy) Vinton",
+    "title": "Museum Manager, Fountainhead Antique Auto Museum",
+    "role_type": "unclear",
+    "source": "https://www.alaskasnewssource.com/2024/11/20/fairbanks-auto-aviation-collections-combine-into-transportation-museum/",
+    "email": null,
+    "email_source": null
+   },
+   {
+    "name": "Zoe Hill",
+    "title": "Wedding planner / events, Wedgewood Resort",
+    "role_type": "unclear",
+    "source": "https://www.fountainheadhotels.com/wedgewood-resort/meetings-weddings",
+    "email": null,
+    "email_source": null
+   }
+  ],
+  "best_contact": {
+   "email": "beckyk@fdialaska.com",
+   "name": "Becky Kunkle",
+   "title": "Reservations Manager, Fountainhead Hotels",
+   "role_type": "router",
+   "source": "https://www.fountainheadhotels.com",
+   "confidence": "high",
+   "why": "Read verbatim as a live mailto: link on the Fountainhead Hotels homepage, fetched twice with a verbatim-quote prompt both times. The rendered sentence is 'Interested? Work with our Reservations Manager Becky Kunkle for availability and very best rates. 907-458-6123 or via email' with beckyk@fdialaska.com as the clickable mailto. It is the only named-human email the company publishes on its own homepage, and it sits on the FDI corporate domain fdialaska.com, independently confirmed as FDI-controlled because https://fdialaska.com/ 301-redirects to https://www.fountainheadhotels.com/. Becky is a ROUTER, not a BUYER. The buyers are Tim Cerny (President/owner) and Bobby Hanson (Operations Manager), and neither publishes an email anywhere verifiable. Becky is a real, monitored, named corporate manager inbox at the reservations and extended-stay revenue seam, which is the likeliest internal path to Hanson and Cerny."
+  },
+  "other_verified_emails": [
+   {
+    "email": "askus@fountainheadhotels.com",
+    "source": "https://www.fountainheadhotels.com/contact-us",
+    "what_it_is": "General guest inbox, rendered as a mailto: link three times on their own contact page, once each under Wedgewood Resort, Sophie Station Suites and Bear Lodge. No name behind it. Independently corroborated on the Explore Fairbanks listings. Strongest general-inbox fallback."
+   },
+   {
+    "email": "Sandyb@fountainheadhotels.com",
+    "source": "https://www.fountainheadhotels.com/sophie-station/meetings-events",
+    "what_it_is": "Named human, rendered as a mailto: link (fetched twice, verbatim both times). Scope is restaurant and catering events only, so a narrower router than Becky Kunkle."
+   },
+   {
+    "email": "jobs@fdifairbanks.com",
+    "source": "https://www.fountainheadhotels.com/jobs",
+    "what_it_is": "HR inbox, rendered as a mailto: link labeled 'Email HR'. CONFIRMED as published but it is a recruiting inbox and the wrong door. The apex domain fdifairbanks.com does not resolve, so the address is published but the mailbox cannot be proven live."
+   },
+   {
+    "email": "faam@fountainheadhotels.com",
+    "source": "https://www.explorefairbanks.com/listing/fountainhead-antique-auto-museum-at-wedgewood-resort/10523/",
+    "what_it_is": "Museum inbox. Rendered on a fetched page, but that page is the Explore Fairbanks partner listing, NOT a Fountainhead-owned page. Second-tier verification."
+   }
+  ],
+  "refuted_or_unconfirmed": [
+   {
+    "candidate": "karenw@fdialaska.com",
+    "what_happened": "REFUTED. A search engine asserted it appeared on the accessibility page. Fetching that page with a verbatim-quote prompt returned 'There are no email addresses or mailto: links present on this page.' Not used."
+   },
+   {
+    "candidate": "kwilken@fountainheaddev.com",
+    "what_happened": "REJECTED ON SIGHT. Pattern-invented by an email-format aggregator. Never seen on any page. Refused as a fabrication."
+   },
+   {
+    "candidate": "tonym@fdialaska.com (FCC ULS license record)",
+    "what_happened": "UNCONFIRMED. Appeared only in a search-result snippet. The FCC page returned HTTP 403 twice. Not used."
+   },
+   {
+    "candidate": "Masked aggregator entries for Becky Kunkle, Bonni Brooks, Zoe Hill, Carly Nelson, Pam Johnston, Thomas Szidloski",
+    "what_happened": "UNCONFIRMED and UNUSABLE. All ZoomInfo/RocketReach entries with the local part masked. ZoomInfo places Becky Kunkle on @fountainheadhotels.com while her own company's homepage renders her mailto as beckyk@fdialaska.com. The company's own page wins."
+   },
+   {
+    "candidate": "Any email for Tim Cerny, Bobby Hanson, or Karen Wilken",
+    "what_happened": "LOOKED FOR, NOT FOUND across the sitemap, homepage, contact-us, jobs, faq, accessibility, property contact and meetings pages, the museum site, the rentals site, the NW subsidiary, the Chamber and AGC listings, Explore Fairbanks, two Alaska Business articles, Petroleum News, ADN, News-Miner and Alaska's News Source. Returning null is the honest answer."
+   },
+   {
+    "candidate": "fountainheaddevelopment.com",
+    "what_happened": "COULD NOT FETCH. DNS failed on three attempts over both http and https."
+   },
+   {
+    "candidate": "Alaska state corporations registry officer/shareholder record",
+    "what_happened": "COULD NOT FETCH. All registry sources returned 403. The detail 'registered 1985-10-21, entity 36844D, agent Timothy T Cerny' appeared only in search snippets and is UNVERIFIED, not a finding."
+   }
+  ],
+  "corporate_domain": "fdialaska.com is the confirmed FDI corporate domain (301-redirects to fountainheadhotels.com, and carries the published mailto for Becky Kunkle). fountainheadhotels.com is the live hotel-brand domain and primary web property. fdifairbanks.com is a legacy FDI domain still published on the jobs page but its apex does not resolve. fountainheaddevelopment.com is advertised as the FDI corporate site but did not resolve. fountainheadmuseum.com is the museum site, fairbanksrentals.com the residential rental arm, fountainheadnw.com the Washington subsidiary.",
+  "sources_fetched": [
+   "https://www.fountainheadhotels.com/",
+   "https://www.fountainheadhotels.com/sitemap.xml",
+   "https://www.fountainheadhotels.com/contact-us",
+   "https://www.fountainheadhotels.com/jobs",
+   "https://www.fountainheadhotels.com/faq",
+   "https://www.fountainheadhotels.com/accessibility",
+   "https://www.fountainheadhotels.com/wedgewood-resort/rooms-amenities",
+   "https://www.fountainheadhotels.com/wedgewood-resort/contact-location",
+   "https://www.fountainheadhotels.com/wedgewood-resort/meetings-weddings",
+   "https://www.fountainheadhotels.com/sophie-station/meetings-events",
+   "https://www.fountainheadhotels.com/bear-lodge/meetings-weddings/request-for-proposal",
+   "https://fdialaska.com/",
+   "https://www.fountainheadmuseum.com/",
+   "https://fairbanksrentals.com/",
+   "https://www.fountainheadnw.com/about",
+   "https://members.agcak.org/memberdirectory/Details/wedgewood-resort-fountainhead-development-inc-1699416",
+   "https://www.fairbankschamber.org/list/member/fountainhead-development-wedgewood-resort-434",
+   "https://www.explorefairbanks.com/listing/fountainhead-antique-auto-museum-at-wedgewood-resort/10523/",
+   "https://www.explorefairbanks.com/listing/wedgewood-resort-fountainhead-hotels/10108/",
+   "https://www.explorefairbanks.com/listing/sophie-station-suites-fountainhead-hotels/10106/",
+   "https://digital.akbizmag.com/issue/november-2018/fountainhead-development-inc/",
+   "https://www.akbizmag.com/industry/tourism/antiqueflight/",
+   "https://www.adn.com/features/article/antique-cars-find-unlikely-home-interior-community-fairbanks/2014/07/27/",
+   "https://www.alaskasnewssource.com/2024/11/20/fairbanks-auto-aviation-collections-combine-into-transportation-museum/",
+   "https://www.newsminer.com/news/kris_capps/automobiles-and-aviation-combine-at-new-transportation-museum/article_95e262ba-a213-11ef-aff2-33309884c54b.html",
+   "https://www.petroleumnews.com/story/2016/10/23/news/arctic-directory-2016-fountainhead-development-inc/32766.html"
+  ]
+ }
+}

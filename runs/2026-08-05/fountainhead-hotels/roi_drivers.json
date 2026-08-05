@@ -1,0 +1,32 @@
+{
+ "scenarios": {
+  "conservative": {
+   "_note": "Conservative pairs the HIGH cost end with the LOW benefit drivers.",
+   "shifts_per_day": 3, "interruptions_prevented_per_shift": 2,
+   "minutes_per_interruption": 4, "loaded_hourly_rate": 28,
+   "pursuits_per_year": 1095,
+   "benefit_lines": [{"label":"Supervisor interruptions prevented per shift","hours_per_pursuit":0.1333,"rate":28,"cut":1.0}],
+   "implementation": 26000, "training": 1520,
+   "run_cost_per_year": 2000, "run_cost_years": 4.5,
+   "contingency": 0.18, "year1_ramp": 0.493, "years": 5
+  },
+  "most_likely": {
+   "shifts_per_day": 6, "interruptions_prevented_per_shift": 4,
+   "minutes_per_interruption": 5, "loaded_hourly_rate": 32,
+   "pursuits_per_year": 2190,
+   "benefit_lines": [{"label":"Supervisor interruptions prevented per shift","hours_per_pursuit":0.3333,"rate":32,"cut":1.0}],
+   "implementation": 22000, "training": 1520,
+   "run_cost_per_year": 2000, "run_cost_years": 4.5,
+   "contingency": 0.18, "year1_ramp": 0.753, "years": 5
+  },
+  "aggressive": {
+   "shifts_per_day": 9, "interruptions_prevented_per_shift": 5,
+   "minutes_per_interruption": 6, "loaded_hourly_rate": 36,
+   "pursuits_per_year": 3285,
+   "benefit_lines": [{"label":"Supervisor interruptions prevented per shift","hours_per_pursuit":0.5,"rate":36,"cut":1.0}],
+   "implementation": 18000, "training": 1520,
+   "run_cost_per_year": 2000, "run_cost_years": 4.5,
+   "contingency": 0.18, "year1_ramp": 0.904, "years": 5
+  }
+ }
+}

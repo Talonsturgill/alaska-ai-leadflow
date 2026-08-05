@@ -1,0 +1,417 @@
+{
+ "company": "Fountainhead Hotels (hotel group of Fountainhead Development, Inc.)",
+ "domain": "fountainheadhotels.com",
+ "place": "Fairbanks, Alaska",
+ "date": "2026-08-05",
+ "THE_RULE": "This file is the ONLY source of truth downstream. Nothing may be cited that is not here. The fact-checker explicitly did NOT re-verify, and therefore FORBIDS citing: the museum relocation and its dates, the meetings and weddings venues and their square footages, the RFP forms, Zoe Hill, Sandyb@, the iHotelier/TravelClick booking path, Zach's restaurant hours, the wildlife sanctuary figures, the Chamber's 'over 700 rooms' line, the Bridgewater question, and every competitor fact other than the Fairbanks Hampton Inn and the Fairbanks SpringHill Suites. Also forbidden: any revenue figure (none exists), any current headcount, and the Canary 40 percent number except in the attributed form of c46.",
+ "DRIFT_WARNING": "The fact-checker found that every substantive rejection leaned the same way, toward making Fountainhead look more strained, more sharply seasonal and further behind than its own pages support. Bear Lodge's season was tightened by borrowing the restaurant's dates. An eight-year-old headcount sat beside 2026 facts. One anonymous review supplied the only turnover claim. A vendor number inflated the unanswered-call problem. On the competitor side, a members-only US beta was rendered as live across 10,000 properties and an amenity-list entry became a described 1am desk bypass. Individually small, together they build a company more desperate and more outgunned than the evidence shows. Do not rebuild that shape. The company's own voice is the strongest material here and it needs no amplification.",
+ "contact": {
+  "email": "beckyk@fdialaska.com",
+  "name": "Becky Kunkle",
+  "title": "Reservations Manager, Fountainhead Hotels",
+  "role_type": "router, not the buyer",
+  "source": "https://www.fountainheadhotels.com",
+  "verbatim": "Interested? Work with our Reservations Manager Becky Kunkle for availability and very best rates.",
+  "note": "The only email rendered anywhere on the homepage. The buyers are Tim Cerny (President and owner of Fountainhead Development) and Bobby Hanson (Operations Manager), and neither publishes a verifiable address anywhere. Fallback is askus@fountainheadhotels.com on the contact page.",
+  "contact_ok": true
+ },
+ "verified_claims": [
+  {
+   "id": "c1",
+   "claim": "Fountainhead Hotels' homepage names Becky Kunkle as Reservations Manager and publishes her email and direct line for extended stay and corporate lodging.",
+   "source": "https://www.fountainheadhotels.com",
+   "verbatim": "Interested? Work with our Reservations Manager Becky Kunkle for availability and very best rates.",
+   "confidence": "high",
+   "note": "beckyk@fdialaska.com is the ONLY email rendered anywhere on the homepage, and 907-458-6123 is on the same page."
+  },
+  {
+   "id": "c2",
+   "claim": "The homepage sells extended stay and corporate lodging as a separate, human-routed path rather than through the booking engine.",
+   "source": "https://www.fountainheadhotels.com",
+   "verbatim": "Looking for an extended stay, corporate lodging or need a short-term rental?",
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "id": "c3",
+   "claim": "askus@fountainheadhotels.com is published on the contact page under all three properties as the general guest inbox.",
+   "source": "https://www.fountainheadhotels.com/contact-us",
+   "verbatim": "askus@fountainheadhotels.com",
+   "confidence": "high",
+   "note": "Only email on that page. No name attached."
+  },
+  {
+   "id": "c4",
+   "claim": "Fountainhead Hotels markets three properties, Wedgewood Resort, Sophie Station Suites and Bear Lodge, each with its own address on the contact page.",
+   "source": "https://www.fountainheadhotels.com/contact-us",
+   "verbatim": "325 Wedgewood Drive, Fairbanks Alaska, 99701",
+   "confidence": "high",
+   "note": "Wedgewood 212 Wedgewood Drive, Sophie Station 1717 University Avenue, Bear Lodge 325 Wedgewood Drive."
+  },
+  {
+   "id": "c5",
+   "claim": "The company states in its own words that it more than doubles hotel staffing for summer.",
+   "source": "https://www.fountainheadhotels.com/jobs",
+   "verbatim": "We more than double our current hotel staffing for summer to make sure guests have caring, personal experiences at our properties.",
+   "confidence": "high",
+   "note": "Contiguous with the preceding sentence, \"When we gear up for the 'tourist' season, we try to find many team members for some of the best summer jobs in town.\" Both may be quoted together. THIS IS THE STRONGEST SINGLE FACT IN THE PACKAGE."
+  },
+  {
+   "id": "c6",
+   "claim": "The seasonal roster the company hires for includes the front-of-house roles that absorb guest contact.",
+   "source": "https://www.fountainheadhotels.com/jobs",
+   "verbatim": "Seasonal Front Desk Clerks",
+   "confidence": "high",
+   "note": "Page also lists Seasonal Group Representatives, Seasonal Bell Captains and Luggage Handlers, Seasonal Porters, Seasonal Laundry, Seasonal Housekeeping, Seasonal Shuttle Bus Drivers, Seasonal Museum Attendant. Every title carries the 'Seasonal' prefix on the page, do not drop it when quoting."
+  },
+  {
+   "id": "c7",
+   "claim": "Late check-outs are not offered during the summer months.",
+   "source": "https://www.fountainheadhotels.com/faq",
+   "verbatim": "we are unable to offer late check-outs during the summer months (mid-May through mid-September)",
+   "confidence": "high",
+   "note": "Confirmed character for character on a second targeted fetch."
+  },
+  {
+   "id": "c8",
+   "claim": "Check-in begins at 4PM and check-out is 11AM Alaska Standard Time.",
+   "source": "https://www.fountainheadhotels.com/faq",
+   "verbatim": "Check-in begins at 4PM and check-out is 11AM Alaska Standard Time (AST).",
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "id": "c9",
+   "claim": "Discounted and special rates are gated behind booking direct on a single toll-free line.",
+   "source": "https://www.fountainheadhotels.com/faq",
+   "verbatim": "PLEASE BOOK WITH US DIRECTLY TO RESERVE YOUR SPECIAL RATE. Call us directly at 800.528.4916 with help booking your reservation.",
+   "confidence": "high",
+   "note": "All caps is on the page, reproduce it as caps or not at all."
+  },
+  {
+   "id": "c10",
+   "claim": "The company tells guests it can't adjust pricing booked through third-party sites.",
+   "source": "https://www.fountainheadhotels.com/faq",
+   "verbatim": "we cannot change the pricing from other 3rd websites once you've reserved with them",
+   "confidence": "high",
+   "note": "RENDERER TRAP. This verbatim contains 'cannot', which study_qa.py fails on. Paraphrase outside quotation marks. NEVER silently edit a sourced quotation to satisfy a style gate."
+  },
+  {
+   "id": "c11",
+   "claim": "Every airport and rail shuttle pickup is initiated by the guest phoning the property.",
+   "source": "https://www.fountainheadhotels.com/faq",
+   "verbatim": "Once you have your luggage, please call your hotel for the shuttle",
+   "confidence": "high",
+   "note": "The page has a trailing colon after 'shuttle'. Ending the quote at 'shuttle' is accurate and avoids the colon."
+  },
+  {
+   "id": "c12",
+   "claim": "Front desks are staffed around the clock.",
+   "source": "https://www.fountainheadhotels.com/faq",
+   "verbatim": "Yes. We are available 24/7 to assist you during your stay.",
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "id": "c13",
+   "claim": "Cancellations require at least 24 hours notice.",
+   "source": "https://www.fountainheadhotels.com/faq",
+   "verbatim": "All cancellations must be made at least 24 hours in advance.",
+   "confidence": "high",
+   "note": "The one-night penalty was NOT confirmed. Cite the notice window only."
+  },
+  {
+   "id": "c14",
+   "claim": "Wedgewood Resort's Aurora Season Special runs August 21 through April 21.",
+   "source": "https://www.fountainheadhotels.com/wedgewood-resort/specials/aurora-season-special",
+   "verbatim": "Visit Fairbanks during Aurora Season, August 21 through April 21, and stay in your own spacious suite.",
+   "confidence": "high",
+   "note": "August 21 is 16 days after this study's date."
+  },
+  {
+   "id": "c15",
+   "claim": "Bear Lodge describes itself as a seasonal hotel located on the grounds of Wedgewood Resort.",
+   "source": "https://www.fountainheadhotels.com/bear-lodge",
+   "verbatim": "As a seasonal hotel located on the grounds of Wedgewood Resort, we offer all of the same amenities",
+   "confidence": "high",
+   "note": "This is the ONLY seasonality statement the page makes about the LODGE and it carries NO dates. Do not add dates to it."
+  },
+  {
+   "id": "c16",
+   "claim": "The Golden Bear Restaurant at Bear Lodge is open during summer months, mid-May to mid-September.",
+   "source": "https://www.fountainheadhotels.com/bear-lodge",
+   "verbatim": "Open during summer months (mid-May to mid-September), the Golden Bear Restaurant",
+   "confidence": "high",
+   "note": "These dates belong to the RESTAURANT, not to the lodge. Do not transfer them to the lodge's room season."
+  },
+  {
+   "id": "c17",
+   "claim": "The complimentary courtesy van runs 24 hours to and from Fairbanks International Airport and the Alaska Railroad Station.",
+   "source": "https://www.fountainheadhotels.com/bear-lodge-rooms.html",
+   "verbatim": "24-hour courtesy van services to and from the Fairbanks International Airport and Alaska Railroad Station for arriving and departing guests.",
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "id": "c18",
+   "claim": "The courtesy van excludes tour groups and large groups traveling together.",
+   "source": "https://www.fountainheadhotels.com/bear-lodge-rooms.html",
+   "verbatim": "this excludes tour groups and large groups traveling together.",
+   "confidence": "high",
+   "note": "Use THIS string."
+  },
+  {
+   "id": "c19",
+   "claim": "Bear Lodge offers a courtesy Northern Lights wakeup call during aurora season and rents headlamps at the front desk.",
+   "source": "https://www.fountainheadhotels.com/bear-lodge-rooms.html",
+   "verbatim": "Courtesy Northern Lights wakeup call during the Aurora Season (mid-August to late April)",
+   "confidence": "high",
+   "note": "Headlamp string also on the page: 'Headlamps available for rent at front desk for trail-walking or Aurora watching'. This page dates aurora season mid-August to late April while the Wedgewood special dates it August 21 to April 21. If both are cited, do not present them as one figure."
+  },
+  {
+   "id": "c20",
+   "claim": "Explore Fairbanks lists Wedgewood Resort at 305 rooms, 7 accessible, rate range 179 to 389, on 105 acres.",
+   "source": "https://www.explorefairbanks.com/listing/wedgewood-resort-fountainhead-hotels/10108/",
+   "verbatim": "Tucked away on 105 acres",
+   "confidence": "high",
+   "note": "THIRD-PARTY DMO LISTING, NOT the company's own page. Any use must attribute to Explore Fairbanks."
+  },
+  {
+   "id": "c21",
+   "claim": "Explore Fairbanks lists Sophie Station Suites at 148 suites, 4 accessible, rate range 179 to 349.",
+   "source": "https://www.explorefairbanks.com/listing/sophie-station-suites-fountainhead-hotels/10106/",
+   "verbatim": "148 suites",
+   "confidence": "high",
+   "note": "THIRD-PARTY DMO LISTING, must be attributed."
+  },
+  {
+   "id": "c22",
+   "claim": "Explore Fairbanks lists Bear Lodge at 157 rooms, 8 accessible, rate range 189 to 289.",
+   "source": "https://www.explorefairbanks.com/listing/bear-lodge-at-wedgewood-resort-fountainhead-hotels/10321/",
+   "verbatim": "# of Rooms: 157",
+   "confidence": "high",
+   "note": "THIRD-PARTY DMO LISTING. The derived total of 610 rooms is arithmetic on three DMO listings and must carry the same attribution. Never present 610 as a company figure."
+  },
+  {
+   "id": "c23",
+   "claim": "Alaska Business Magazine's November 2018 profile reported that Fountainhead Development had 170 to 350 employees depending on the season.",
+   "source": "https://digital.akbizmag.com/issue/november-2018/fountainhead-development-inc/",
+   "verbatim": "The company-which has 170 to 350 employees, depending on the season-is focused on training",
+   "confidence": "high",
+   "note": "HARD CONSTRAINT. 2018 figure. May ONLY be used as 'as of a 2018 Alaska Business Magazine profile'. NEVER as current headcount, never juxtaposed with 2026 facts in a way implying currency. Indeed currently lists 51 to 200, which conflicts. Safest use is not to use a headcount at all."
+  },
+  {
+   "id": "c24",
+   "claim": "Alaska Business Magazine's November 2018 profile said Fountainhead Development had more than 600 rooms across three Fairbanks properties.",
+   "source": "https://digital.akbizmag.com/issue/november-2018/fountainhead-development-inc/",
+   "verbatim": "Fountainhead Development Inc., (FDI) has more than 600 rooms spread across three distinctive Fairbanks properties",
+   "confidence": "high",
+   "note": "2018 figure."
+  },
+  {
+   "id": "c25",
+   "claim": "Bobby Hanson, Operations Manager of Fountainhead Development, described the company as truly local and independent.",
+   "source": "https://digital.akbizmag.com/issue/november-2018/fountainhead-development-inc/",
+   "verbatim": "We're truly local and independent,",
+   "confidence": "high",
+   "note": "2018 quote, must be dated when used. Quote ONLY this confirmed clause."
+  },
+  {
+   "id": "c26",
+   "claim": "Indeed lists Fountainhead Development, Inc. company size as 51 to 200 and carries the company blurb that it was established in 1985.",
+   "source": "https://www.indeed.com/cmp/Fountainhead-Development,-Inc.-2",
+   "verbatim": "Established in 1985, Fountainhead Development Inc. (FDI) is an integral part of the fabric that makes up Fairbanks, Alaska.",
+   "confidence": "medium",
+   "note": "Employer self-description, not independent. The 1985 founding is safe."
+  },
+  {
+   "id": "c27",
+   "claim": "Tim Cerny is president of Fountainhead Development and spoke to Alaska's News Source in April 2026 about the museum relocation.",
+   "source": "https://www.alaskasnewssource.com/2026/04/26/fountainhead-antique-auto-museum-reopen-this-summer-new-location/",
+   "verbatim": "We've decided to stick with the Fountainhead Antique Auto Museum logo and name because we spent 20 years getting recognized nationally and internationally for what we do in Fairbanks, Alaska.",
+   "confidence": "high",
+   "note": "Page renders his title as 'Tim Cerny, the president of Fountainhead Development'. Use the FULL quote, never the truncated capital-W version."
+  },
+  {
+   "id": "c28",
+   "claim": "A Texas A&M study of 340 UK adults who had used chatbots to book hotels, published in the International Journal of Hospitality Management, found chatbot inaccuracy produced an effect more than four times larger than incredibility.",
+   "source": "https://techxplore.com/news/2026-05-hotel-chatbots-customers.html",
+   "verbatim": "path coefficient more than four times larger than incredibility",
+   "confidence": "high",
+   "note": "Attribute the researcher as Babak Taheri, Texas A&M College of Agriculture and Life Sciences. NOT Naeem Akhtar, that attribution was rejected."
+  },
+  {
+   "id": "c29",
+   "claim": "In the same study, discomfort reduced users' willingness to continue interacting with the chatbot by nearly 38%.",
+   "source": "https://techxplore.com/news/2026-05-hotel-chatbots-customers.html",
+   "verbatim": "reduced users' willingness to continue interacting with the chatbot by nearly 38%",
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "id": "c30",
+   "claim": "In the same study, chatbot inaccuracy nearly doubled the likelihood a user would delay or abandon a booking decision.",
+   "source": "https://techxplore.com/news/2026-05-hotel-chatbots-customers.html",
+   "verbatim": "nearly doubled the likelihood they would delay or abandon a booking decision",
+   "confidence": "high",
+   "note": "The article attaches this specifically to inaccuracies about ROOM RATES AND CANCELLATION POLICIES. Do not generalize beyond that framing."
+  },
+  {
+   "id": "c31",
+   "claim": "In the Mews Hotelier Survey 2026, 59% of hoteliers say the front desk welcome and check-in should stay human-led.",
+   "source": "https://www.hospitalitynet.org/news/4132496/most-hoteliers-use-ai-daily-but-guest-experience-still-needs-a-human-touch",
+   "verbatim": "59% of hoteliers say the front desk welcome and check-in should stay human-led.",
+   "confidence": "high",
+   "note": "VENDOR-RUN SURVEY. Mews is a PMS vendor surveying its own base. Must be attributed to Mews by name."
+  },
+  {
+   "id": "c32",
+   "claim": "The same Mews survey covered more than 500 properties globally between December 2025 and March 2026, and found 98% of hoteliers had used AI across their operations in the last six months.",
+   "source": "https://www.hospitalitynet.org/news/4132496/most-hoteliers-use-ai-daily-but-guest-experience-still-needs-a-human-touch",
+   "verbatim": "The Mews Hotelier Survey 2026, conducted between December 2025 and March 2026 across more than 500 properties globally",
+   "confidence": "high",
+   "note": "Vendor-run, attribute. The 98% is a customer-base figure and overstates the wider market, say so if used."
+  },
+  {
+   "id": "c33",
+   "claim": "AHLA's Front Desk Feedback survey of 282 hoteliers, run with Hireology between December 6 2024 and January 3 2025, found 65% of surveyed hotels report staffing shortages.",
+   "source": "https://www.ahla.com/news/65-surveyed-hotels-report-staffing-shortages",
+   "verbatim": "nearly two-thirds (65%) of surveyed hotels continue to report shortages",
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "id": "c34",
+   "claim": "In the same AHLA survey, housekeeping at 38% and front desk at 26% were the most acute departmental shortages.",
+   "source": "https://www.ahla.com/news/65-surveyed-hotels-report-staffing-shortages",
+   "verbatim": null,
+   "confidence": "medium",
+   "note": "Both figures confirmed present but returned summarized rather than as one contiguous sentence. Use as numbers with attribution, do NOT wrap in quotation marks as a quoted sentence."
+  },
+  {
+   "id": "c35",
+   "claim": "In the same AHLA survey, 71% of hotels had job openings they were unable to fill despite active searches, averaging six to seven open positions per property.",
+   "source": "https://www.ahla.com/news/65-surveyed-hotels-report-staffing-shortages",
+   "verbatim": "On average, hotels are trying to fill six to seven open positions per property.",
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "id": "c36",
+   "claim": "An independent eight-week test of Optii housekeeping AI at an 80-room Amsterdam hotel in January to February 2026 measured an average 2.5 minutes saved per room clean.",
+   "source": "https://6hoteliers.com/housekeeping/optii-review/",
+   "verbatim": "AI route optimisation saved an average of 2.5 minutes per room clean across our eight-week test",
+   "confidence": "high",
+   "note": "The single strongest independent measurement in the package. Keep property size and occupancy attached, the figure does not travel without them."
+  },
+  {
+   "id": "c37",
+   "claim": "That test valued the saving at approximately EUR 13,800 per year at 80 rooms and 73% occupancy against a fully loaded staff cost of EUR 16 per hour.",
+   "source": "https://6hoteliers.com/housekeeping/optii-review/",
+   "verbatim": "approximately 13,800 EUR per year at 80 rooms and 73% occupancy, against fully-loaded staff cost of 16 EUR/hour",
+   "confidence": "high",
+   "note": "Property-specific. Do not rescale without stating it as a modeled assumption."
+  },
+  {
+   "id": "c38",
+   "claim": "The same independent reviewer called Optii's marketed 500% ROI fiction for a well-run 80-room hotel while confirming the labour savings are real.",
+   "source": "https://6hoteliers.com/housekeeping/optii-review/",
+   "verbatim": "To get to 500% ROI, you'd need labour savings of five times your subscription cost",
+   "confidence": "high",
+   "note": "RENDERER TRAP. The reviewer's next sentence opens with 'But', which the VOICE law bans. Paraphrase outside quotation marks rather than editing the source."
+  },
+  {
+   "id": "c39",
+   "claim": "The same reviewer summarized the result as the AI working with real but smaller-than-marketed labour savings.",
+   "source": "https://6hoteliers.com/housekeeping/optii-review/",
+   "verbatim": "The AI does work, the labour savings are real (though not 18% in my case)",
+   "confidence": "high",
+   "note": ""
+  },
+  {
+   "id": "c40",
+   "claim": "Amadeus announced Email to RFP inside MeetingBroker on June 17 2025, powered by Azure OpenAI, generating property-specific responses to inbound RFP emails.",
+   "source": "https://amadeus.com/en/newsroom/press-releases/ai-hospitality-demand360-meetingbroker",
+   "verbatim": "Email to RFP, a new AI enhancement within MeetingBroker will enable hotels to automatically generate contextual, property-specific responses to inbound request for proposal (RFP) emails.",
+   "confidence": "high",
+   "note": "VENDOR PRESS RELEASE."
+  },
+  {
+   "id": "c41",
+   "claim": "Amadeus names Omni Atlanta Hotel as the first pilot customer, reporting only faster responses and near autonomous RFP handling with no numbers.",
+   "source": "https://amadeus.com/en/newsroom/press-releases/ai-hospitality-demand360-meetingbroker",
+   "verbatim": "Omni Atlanta Hotel, the first pilot customer, has seen significant returns with faster responses and near autonomous RFP handling.",
+   "confidence": "high",
+   "note": "VENDOR CLAIM, no baseline, no measurement period. If used, the absence of numbers must be stated, which is the more persuasive framing anyway."
+  },
+  {
+   "id": "c42",
+   "claim": "The Fairbanks Hampton Inn & Suites property page at 433 Harold Bentley Avenue lists Digital Key as a Hilton Honors amenity, and the property has 101 guest rooms.",
+   "source": "https://www.hilton.com/en/hotels/faiakhx-hampton-suites-fairbanks/hotel-info/",
+   "verbatim": "Digital Key",
+   "confidence": "high",
+   "note": "Confirmed in the Conveniences amenity list. This is an amenity LISTING only. The page does NOT describe a check-in flow or say a guest can bypass the front desk, that inference was rejected."
+  },
+  {
+   "id": "c43",
+   "claim": "The Fairbanks SpringHill Suites by Marriott property page at 575 1st Avenue lists Mobile Key among on-site property amenities.",
+   "source": "https://www.marriott.com/en-us/hotels/faish-springhill-suites-fairbanks/overview/",
+   "verbatim": "Mobile Key",
+   "confidence": "high",
+   "note": "Amenity listing only. 'Guests unlock rooms via the Bonvoy app' is an inference, not page text."
+  },
+  {
+   "id": "c44",
+   "claim": "Hilton announced the Hilton AI Planner, a generative AI-powered digital concierge, on March 10 2026, initially in beta to a small pool of hilton.com traffic, with all hilton.com visitors given access as of March 17 2026.",
+   "source": "https://stories.hilton.com/releases/hilton-introduces-the-hilton-ai-planner",
+   "verbatim": null,
+   "confidence": "high",
+   "note": "RENDERER TRAP. The on-page description contains an EN DASH in 'AI-powered'. Paraphrase outside quotation marks, never silently swap the character inside a quotation."
+  },
+  {
+   "id": "c45",
+   "claim": "Marriott introduced Ask Bonvoy, a conversational natural language search experience, in beta on June 16 2026.",
+   "source": "https://www.prnewswire.com/news-releases/marriott-international-introduces-ask-bonvoy-a-new-ai-powered-search-experience-transforming-travel-exploration-302801647.html",
+   "verbatim": "a new conversational, natural language search experience",
+   "confidence": "high",
+   "note": "SCOPE LIMIT, ENFORCED. Beta is US English only, on Marriott.com and the iOS/Android apps, TO A SUBSET OF MEMBERS, with full global release planned later in 2026. The ~10,000 properties figure describes the SEARCHABLE PORTFOLIO, not the beta footprint. Never write 'in beta across roughly 10,000 properties'."
+  },
+  {
+   "id": "c46",
+   "claim": "Canary Technologies' widely quoted figure that 40% of calls to hotel front desks go unanswered is stated by Aman Shahi, Canary's VP of Product, with no cited study or methodology, in an article naming no property and reporting no post-deployment measurement.",
+   "source": "https://www.hoteldive.com/news/hotel-tech-ai-voice-front-desk-calls/740672/",
+   "verbatim": "We found that actually 40% of calls to front desks go unanswered",
+   "confidence": "high",
+   "note": "VENDOR-SOURCED. MUST be attributed in this form or not used. The verified claim is that a Canary executive SAID it, not that it is true. It may NOT be used to size a Fountainhead call-volume problem and may NOT appear anywhere in the ROI model."
+  },
+  {
+   "id": "c47",
+   "claim": "MIT Project NANDA, State of AI in Business 2025, reports roughly 95 percent of enterprise generative-AI pilots produce no measurable P&L impact.",
+   "source": "https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/",
+   "verbatim": null,
+   "confidence": "high",
+   "note": "Industry base rate, never a fact about this company. Sourced in knowledge/AI_SCOPING.md as authoritative tier. Directional, denominator debated."
+  },
+  {
+   "id": "c48",
+   "claim": "RAND, The Root Causes of Failure for AI Projects, finds more than 80 percent of AI projects fail, about twice the rate of non-AI IT projects.",
+   "source": "https://www.rand.org/pubs/research_reports/RRA2680-1.html",
+   "verbatim": null,
+   "confidence": "high",
+   "note": "Industry base rate, never a fact about this company. Sourced in knowledge/AI_SCOPING.md as authoritative tier."
+  }
+ ],
+ "rejected_do_not_use": [
+  "Bear Lodge operating 'mid-May to mid-September' as its room season. Those dates belong to the Golden Bear Restaurant. The lodge says only that it is 'a seasonal hotel'.",
+  "The anonymous Indeed review about turnover. One anonymous review is not evidence about a company and is a reputational hazard in a document sent to that company.",
+  "'Group transportation must be arranged through tour providers.' Not confirmed on the page.",
+  "'excludes tour and large groups' as a quoted string. The page says 'this excludes tour groups and large groups traveling together.'",
+  "Naeem Akhtar as lead author of the chatbot study. The page names Babak Taheri.",
+  "'600+ rooms across three properties' as a quotation. The source wrote 'more than 600 rooms spread across three distinctive Fairbanks properties'.",
+  "The truncated standalone Cerny quote beginning 'We spent 20 years'. It is a dependent clause in the source.",
+  "The Canary 40 percent as an industry fact or as a sizing input.",
+  "'Ask Bonvoy in beta across roughly 10,000 properties'. Overstates the rollout.",
+  "Any claim that a guest can skip the desk at the Hampton or the SpringHill. Amenity listings only, no check-in flow described.",
+  "Any revenue figure. None exists."
+ ]
+}
