@@ -68,6 +68,16 @@
    "files": [
     "prompts/routine_instructions.md"
    ]
+  },
+  {
+   "date": "2026-08-05",
+   "change": "scripts/retro_check.py, and Phase 10 given a FLOOR of one shipped change per run instead of only a ceiling of three. The completion gate no longer accepts a reasoned 'nothing worth changing' from the retro, and an item on its SECOND appearance is barred from the backlog entirely, it is the one that gets fixed. Also repointed the CONTEXT list from the retired db/schema.sql to db/SCHEMA.md.",
+   "evidence": "The maintainer, on being shown a mandatory retro: 'when I said retro mandatory I meant it should actually make fixes, not just list them.' Phase 10 already said IMPLEMENT and VERIFY and still had a way out, because the completion gate accepted an entry in this file as proof and an entry is prose. Prose is exactly what a language model produces when it has not done anything, and writing a careful backlog note feels like doing the work.",
+   "verified_how": "retro_check compares each upgrade's named files against the files a commit really touched that day, which is the one thing prose cannot fake. Ran clean on the real ledger, zero false positives across nine file claims. Then ran five injected negative cases and it caught all five: a retro that did nothing, a described-but-not-made change naming a real but untouched file, a named file that does not exist, an entry with no evidence or verification, and an entry naming no files at all. It had a false positive first, and a total one: git's approxidate attaches the current time of day to a bare --since date, so it hid every commit made earlier that morning and reported nine failures against nine changes that had all really shipped.",
+   "files": [
+    "scripts/retro_check.py",
+    "prompts/routine_instructions.md"
+   ]
   }
  ]
 }
