@@ -121,6 +121,21 @@ def main():
     words = text.split()
     nwords = len(words)
 
+    # PROSE vs STRUCTURE, split on 2026-08-05.
+    # The 2,000 to 3,000 budget comes from Nielsen's page-time model, which is
+    # about text a reader moves through LINEARLY. Table cells, source lines and
+    # figure labels are scanned, not read, so counting them against a reading-time
+    # budget measures the wrong thing. On 2026-08-05 a study whose prose spine was
+    # roughly 2,400 words reported 3,858 and three trimming passes fought a number
+    # that did not mean what it said, while the critics were simultaneously
+    # demanding MORE honesty disclosure. Two gates that are both right should not
+    # pull against each other, so they now measure different things.
+    structural = " ".join(re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", body, flags=re.S))
+    structural += " " + " ".join(re.findall(r"<ol class=\"srcs\"[^>]*>(.*?)</ol>", body, flags=re.S))
+    structural += " " + " ".join(re.findall(r"<(?:text|caption)[^>]*>(.*?)</(?:text|caption)>", body, flags=re.S))
+    nstruct = len(visible_text(structural).split())
+    nprose = max(0, nwords - nstruct)
+
     hard, soft = [], []
 
     def check(ok, label, got, want):
@@ -131,8 +146,10 @@ def main():
         soft.append({"ok": None, "label": label, "got": got, "want": want})
 
     # --- length ---
-    note("word count", f"{nwords:,}", "~3,000 target")
-    note("reading time", f"{nwords/220:.1f} min @220wpm", "under 8 min")
+    check(2000 <= nprose <= 3000, "prose words", f"{nprose:,}", "2,000-3,000")
+    note("structure words", f"{nstruct:,}", "tables, sources, figure labels")
+    note("total on page", f"{nwords:,}")
+    note("prose reading time", f"{nprose/220:.1f} min @220wpm", "under 8 min")
 
     # --- headings ---
     levels = {n: len(re.findall(rf"<h{n}[\s>]", body)) for n in range(1, 7)}
