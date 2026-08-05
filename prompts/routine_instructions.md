@@ -362,6 +362,15 @@ Collect the four into out/<date>/engineering.json.
 
 ## PHASE 5 - ASSEMBLE AND RENDER THE STUDY
 
+0. RECONCILE THE ROOM FIRST. The four Phase 4 agents ran in parallel and none of
+   them could see the others' constraints. Run
+   python scripts/room_reconcile.py --dir out/<date>
+   It must EXIT 0. It catches the room contradicting its own gate, a killed
+   capability promised anyway, a stated non-goal delivered by the roadmap, a pick
+   that drifted between the four outputs, and a model doing work in phase one
+   when the locked pick has no AI in it. Fix the contradiction at its source, in
+   the output that is wrong, rather than papering over it in study.json.
+
 1. Assemble out/<date>/study.json exactly to the FIELD_STUDY_SPEC.md contract from
    claims.json (the finding, homework, sources), the discovery output (opportunity),
    the locked pick and feasibility (build, feasibility line), and engineering.json
@@ -403,6 +412,34 @@ Collect the four into out/<date>/engineering.json.
    resolve anything it surfaces under CONFLICTS, QUOTE DRIFT or CONDITIONAL
    MISMATCH before the critic sees the study. It is faster to fix a contradiction
    in code than to spend a critic round on it.
+1a. THE DIRECTION PASS. Read the whole study once asking ONE question and nothing
+   else. Does this make them look worse than the evidence actually does?
+
+   This is a named step with an artifact because it has been a principle for
+   weeks and principles get skipped. Every run of this routine has drifted the
+   same way. On 2026-08-05 the fact-checker named it, the study-critic
+   independently rediscovered it on the same study after a round of fixes, and
+   found it AGAIN in milder form on round two. It is not carelessness, it is the
+   pipeline's incentive gradient, because a pitch is easier to write when the
+   prospect is in trouble, so every agent shades a little and the errors compound
+   because they all lean together.
+
+   Write out/<date>/direction_pass.md. For every sentence that asserts something
+   unflattering about them, record the sentence, what licenses it, and the
+   verdict, KEEP or SOFTEN or CUT. Three questions decide it.
+   - Could we actually KNOW this from outside their building? If not, say what we
+     could see instead. "We could find no dated answer published anywhere a clerk
+     could reach" is honest. "Nothing carries the answer to three desks" is a
+     guess wearing a finding's clothes.
+   - Is the unflattering reading load-bearing, or is it decoration that makes the
+     pitch easier? Decoration goes.
+   - Would they recognise themselves, or would they get defensive at something
+     they know is unfair?
+
+   study_lint catches the greppable half. This step exists for the half a regex
+   can't see, tone and accumulation. The artifact is the gate, a run that did not
+   write the file did not do the pass.
+
 1b. LINT BEFORE ANY CRITIC SEES IT. Run
    python scripts/study_lint.py --study out/<date>/study.json
    It must EXIT 0. It catches what a script can catch so a critic never spends a
@@ -593,45 +630,79 @@ COMPLETION GATE, verify before you finish.
 - Recorded. ledger/leads.json has the lead and ledger/runs.json has this run's
   row, both committed, nothing duplicated, and `ledger.py stats` reflects both.
   There is no second store to reconcile against.
+- Retro ran. Phase 10 is mandatory. ledger/upgrades.json carries this run's
+  entries or an explicit, reasoned "nothing worth changing", any repeat offender
+  closed is named, and the delivery summary surfaces both.
 - Draft only. Nothing was sent.
 If any check fails and cannot be fixed this run, do not paper over it. Draft Talon a
 note stating exactly what failed.
 
 ---
 
-## PHASE 10 - THE RETRO (leave the machine better than you found it)
+## PHASE 10 - THE RETRO (mandatory, every run, no exceptions)
 
-The run is delivered. This phase exists because the lessons of this routine kept
-living only in commit messages, where nothing reads them, and the machine kept
-paying to relearn the same things. On 2026-07-29 seven critic rounds produced two
-rules that survived only because a human wrote them down.
+THIS PHASE IS NOT OPTIONAL AND A RUN IS NOT DONE WITHOUT IT. Set by the
+maintainer on 2026-08-05. The lessons of this routine kept living only in commit
+messages where nothing reads them, and the machine kept paying to relearn the
+same things. On 2026-07-29 seven critic rounds produced two rules that survived
+only because a human wrote them down.
+
+A run that skips the retro has not completed, the same way a run that does not
+merge has not shipped.
+
+### 10a. THE RETRO
 
 1. DIFF WHAT ACTUALLY HAPPENED against this contract. Where did the run spend
    rounds it should not have? What did a critic catch that a script could have?
-   What did you have to work around? What surprised you?
-2. Pick AT MOST THREE changes. Bounded, verifiable, and each one earned by
-   something that actually happened in THIS run. An upgrade with no evidence line
-   is a preference, not an upgrade.
-3. IMPLEMENT and VERIFY them. A change that is not tested does not ship. Prefer a
-   script that mechanises a defect over a paragraph asking a future run to be
-   careful, because paragraphs get skipped and gates do not.
-4. Log each one to ledger/upgrades.json with the change, the EVIDENCE that earned
-   it, how it was verified, and the files touched.
-5. Surface them in the delivery summary. A change to the machine is never
+   What did you work around? What surprised you?
+2. CHECK THE REPEAT OFFENDERS FIRST. Read ledger/upgrades.json and
+   knowledge/MACHINE_BACKLOG.md before deciding anything. If a defect you just
+   hit has been recorded before, IT IS NO LONGER A NOTE, IT IS THE WORK. A thing
+   that has cost two runs gets fixed this run, ahead of anything new and more
+   interesting. Re-noting a known defect is how a backlog becomes a graveyard.
+   Say out loud in the summary which repeat you closed.
+3. Pick AT MOST THREE changes, repeats first. Bounded, verifiable, each earned by
+   something that actually happened. An upgrade with no evidence line is a
+   preference, not an upgrade.
+4. IMPLEMENT and VERIFY. A change that is not tested does not ship, and the test
+   has to include the NEGATIVE case. A gate that passes everything is worse than
+   no gate, because it looks like coverage. Every gate written on 2026-08-05 was
+   validated by reconstructing real defects and confirming it caught them, and
+   every one of them had false positives on the first try.
+5. Log each to ledger/upgrades.json with the change, the EVIDENCE, how it was
+   verified, and the files touched.
+6. Surface them in the delivery summary. A change to the machine is never
    invisible.
-6. Anything you could not fix, or that needs a human, goes to
-   knowledge/MACHINE_BACKLOG.md with its evidence. That file only takes items a
-   dated run actually earned.
+7. Anything you could not fix goes to knowledge/MACHINE_BACKLOG.md with its
+   evidence, and if it is already there, add THIS run's date to it so the repeat
+   count is visible rather than buried.
 
-WHAT A RUN MAY NEVER EDIT, and this is the whole reason the phase is safe.
-knowledge/OUTREACH_CRAFT.md, CLAUDE.md, and any quality bar the run is judged
-against. Those are hand-authored on purpose. A routine that rewrites the rules it
-is graded by is grading its own homework. PROPOSE those in the delivery summary,
-with the suggested wording drafted, so a human is approving a diff rather than
+### 10b. THE UPGRADE SESSION (stay bleeding edge)
+
+The retro fixes what broke. This does not wait for something to break.
+
+Every run spends a timeboxed session asking what this machine SHOULD be doing
+that it is not yet. Rotate the focus so it does not circle one area.
+
+- What did the models, tools or connectors available to this routine gain
+  recently that it is not using? Search for it rather than assuming.
+- What is the sharpest current practice in the thing we sell, AI scoping, product
+  discovery, ROI honesty, cold outreach? Our knowledge files are dated. Are they
+  still right?
+- What would a better shop's version of this routine do that ours does not?
+- What is slow, and is it slow for a real reason?
+
+Same bar as the retro. At most a few changes, each bounded, verified with a
+negative case, evidence-logged. A frontier scan that finds nothing worth changing
+is a legitimate outcome, and saying so beats inventing an upgrade to look busy.
+
+### THE GUARD, and it is what makes this safe
+
+A run may NEVER edit knowledge/OUTREACH_CRAFT.md, CLAUDE.md, or any quality bar
+it is judged against. Those are hand-authored on purpose. A routine that rewrites
+its own grading rubric is grading its own homework. PROPOSE those in the delivery
+summary with the wording already drafted, so a human approves a diff rather than
 being handed homework. THE ONE LAW and the honesty rules are untouchable.
-
-If the run found nothing worth changing, say so plainly and change nothing. A
-retro that invents an upgrade to look productive is worse than an empty one.
 
 ---
 
