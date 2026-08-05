@@ -89,6 +89,48 @@ def check_live_link(url, failures, tries=6, wait=20):
     failures.append(f"live link not serving after {tries} tries ({last}): {url}")
 
 
+def check_html_body(draft, links, failures):
+    """The HTML body is what the prospect actually sees. Verify it, or say so.
+
+    This gate read only plaintextBody for its whole life, and the read-back it
+    was pointed at carried no htmlBody key at all. So the body Gmail renders was
+    never checked once, while the gate printed DELIVERY CHECK PASSED. CLAUDE.md
+    requires BOTH bodies on every draft, and an unverified one is exactly the
+    "draft Talon cannot read" the delivery gate exists to prevent.
+
+    A missing htmlBody is a FAILURE and not a skip. If the read-back genuinely
+    cannot carry it, that is a real problem to surface on the next run and hand
+    to a human, not something to wave through in silence.
+    """
+    if "htmlBody" not in draft:
+        failures.append(
+            "read-back carries no htmlBody, so the body the prospect actually "
+            "reads was never verified. Re-read the draft with a view that "
+            "returns the HTML part and save THAT as the read-back. Do not "
+            "record the run delivered on a plaintext-only check.")
+        return
+
+    html = draft.get("htmlBody") or ""
+    if not html.strip():
+        failures.append("htmlBody is present but empty, Gmail will render a blank message")
+        return
+    if not re.search(r"<(p|br|div)\b", html, re.I):
+        failures.append("htmlBody has no paragraph markup, it will render as one run-on block")
+    if re.search(r"[A-Za-z0-9+/=]{300,}", html):
+        failures.append("htmlBody contains a raw base64-looking blob, an attachment leaked into it")
+    if re.search(r"&lt;(p|a|br|div)\b", html, re.I):
+        failures.append("htmlBody has escaped tags (&lt;p&gt;), the markup will show as literal text")
+
+    unwrapped = unwrap_gmail_links(html)
+    for link in links:
+        if link not in unwrapped:
+            failures.append(f"expected link missing from htmlBody: {link}")
+        elif not re.search(r'href=["\']' + re.escape(link), unwrapped):
+            failures.append(
+                f"link appears in htmlBody as text but not inside an href, so it "
+                f"is not clickable: {link}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--readback", required=True)
@@ -114,6 +156,13 @@ def main():
     else:
         failures.append("read-back contains no drafts")
 
+    # EVERY deliverable link, whichever flag carried it. --live-link used to be
+    # checked only for serving and never for presence in the body, which meant
+    # the one thing the prospect is supposed to click was exempt from the check
+    # that it is actually in the email. The study now ships as ONE live link, so
+    # that exemption covered the entire deliverable.
+    all_links = list(args.link) + list(args.live_link)
+
     if draft is not None:
         body = draft.get("plaintextBody") or ""
         if not body.strip():
@@ -128,14 +177,19 @@ def main():
                 failures.append("body contains a raw base64-looking blob, an attachment leaked into text")
             if re.search(r"<(html|body|div|span|style|head)\b", body, re.I):
                 failures.append("plaintext body contains raw HTML markup, it will read as code")
-        if not draft.get("subject", "").strip():
+        # `or ""` rather than a get() default: the API returns an explicit null
+        # for an unset subject, and a default only applies to a MISSING key, so
+        # the old form raised AttributeError and took the whole gate down.
+        if not (draft.get("subject") or "").strip():
             failures.append("subject is empty")
         if not draft.get("toRecipients"):
             failures.append("no recipients on the draft")
         unwrapped = unwrap_gmail_links(body)
-        for link in args.link:
+        for link in all_links:
             if link not in unwrapped:
-                failures.append(f"expected link missing from body: {link}")
+                failures.append(f"expected link missing from plaintext body: {link}")
+
+        check_html_body(draft, all_links, failures)
 
     for link in args.link:
         check_github_link(link, args.repo_dir, failures)
