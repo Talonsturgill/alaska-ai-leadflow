@@ -78,6 +78,22 @@
     "scripts/retro_check.py",
     "prompts/routine_instructions.md"
    ]
+  },
+  {
+   "date": "2026-08-05",
+   "change": "A code review of the whole pipeline, and fifteen fixes. Six gates were failing OPEN or inert: dedupe treated a missing leads.json as 'nobody has been contacted', the delivery gate never read the HTML body or checked the live link was in the email at all, study_lint counted scenarios it never compared a number in, room_reconcile's non-goal check had never examined anything and its refusal vocabulary excused real violations, study_qa's paragraph budget had never executed, and build_study_page shipped a stale PDF when a re-render failed. Also two clock bugs in retro_check, a mutated loop variable in claim_sweep, and a bare \\bno\\b that failed legitimate rows.",
+   "evidence": "Asked for a review of today's work and got one worth having. The theme was uniform and worth naming: every gate here was validated against the defect it was DESIGNED to catch and none was validated against its own plumbing failing, an input file missing, a key renamed, a label changed. So they printed PASS while examining nothing, and the contract treats exit 0 as proof. Confirmed by running the pre-fix code: delivery_check printed DELIVERY CHECK PASSED for an email containing no link at all, study_lint printed 'ok ROI reconciled across 3 scenario(s)' having compared zero numbers, ledger check printed 'clear' for a company already in the ledger, and try_pdf returned True with yesterday's PDF untouched after chromium exited 1.",
+   "verified_how": "Every fix carries two tests, not one: the defect it was built to catch is still caught, and the plumbing failing is now loud. Thirty negative cases across the ten scripts, all caught, plus false-positive guards where a fix risked over-firing. The whole real corpus stays clean afterwards, all ten gates exit 0 against runs/2026-08-05 and out/2026-08-05, ledger still 17 leads. Two fixes needed a second round because the first over-fired: room_reconcile's strong-refusal list rejected the roadmap's legitimate buy-instead-of-build line, fixed by deriving the refusal vocabulary from what was killed rather than pooling it, and the pick-drift check still could not fire until it used the proportional matcher instead of any(). One quality bar was CHANGED rather than fixed and is called out in the commit: study_qa's paragraph spacing read 1.5 * line-height, had never once executed, and is now one full line-height.",
+   "files": [
+    "scripts/ledger.py",
+    "scripts/delivery_check.py",
+    "scripts/study_lint.py",
+    "scripts/room_reconcile.py",
+    "scripts/retro_check.py",
+    "scripts/claim_sweep.py",
+    "scripts/study_qa.py",
+    "scripts/build_study_page.py"
+   ]
   }
  ]
 }

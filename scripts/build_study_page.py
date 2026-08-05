@@ -794,6 +794,27 @@ def build_html(study, demo_embed=None):
 
 
 def try_pdf(html_path, pdf_path):
+    """Render the PDF, and never accept a stale one as success.
+
+    This used to ignore chromium's exit code and accept any file already sitting
+    at pdf_path that happened to be over 1000 bytes. So a re-render that failed,
+    which is exactly what happens after a fix, silently reported success and
+    left YESTERDAY'S PDF in place, and that PDF then shipped to the public site
+    carrying the defect the re-render existed to correct. A stale artifact that
+    passes as fresh is worse than a missing one.
+    """
+    # Remove the old file FIRST, so existence afterwards can only mean this run
+    # wrote it. Nothing downstream may confuse a previous render for this one.
+    stale = os.path.exists(pdf_path)
+    if stale:
+        try:
+            os.remove(pdf_path)
+        except OSError as e:
+            print(f"  pdf: cannot remove the previous {pdf_path} ({e}), refusing "
+                  "to risk shipping a stale render", file=sys.stderr)
+            return False
+
+    tried = []
     for exe in ("/opt/pw-browsers/chromium-1194/chrome-linux/chrome",
                 "chromium", "chromium-browser", "google-chrome"):
         try:
@@ -802,10 +823,30 @@ def try_pdf(html_path, pdf_path):
                  f"--print-to-pdf={pdf_path}", "--no-pdf-header-footer",
                  f"file://{os.path.abspath(html_path)}"],
                 capture_output=True, timeout=120)
-            if os.path.exists(pdf_path) and os.path.getsize(pdf_path) > 1000:
-                return True
-        except Exception:
+        except FileNotFoundError:
+            continue                      # this browser is not installed, try the next
+        except Exception as e:            # noqa: BLE001
+            tried.append(f"{exe}: {e}")
             continue
+
+        if r.returncode != 0:
+            err = (r.stderr or b"").decode("utf-8", "replace").strip().splitlines()
+            tried.append(f"{exe}: exit {r.returncode} {err[-1][:120] if err else ''}")
+            continue
+        if not os.path.exists(pdf_path) or os.path.getsize(pdf_path) <= 1000:
+            tried.append(f"{exe}: exit 0 but wrote no usable file")
+            continue
+        with open(pdf_path, "rb") as fh:
+            if fh.read(5) != b"%PDF-":
+                tried.append(f"{exe}: output is not a PDF")
+                continue
+        return True
+
+    for t in tried:
+        print(f"  pdf: {t}", file=sys.stderr)
+    if stale:
+        print("  pdf: the previous PDF was REMOVED and not replaced. Nothing "
+              "stale will ship, and there is now no PDF at all.", file=sys.stderr)
     return False
 
 

@@ -101,12 +101,22 @@ def extract_values(study):
                     if val is None:
                         continue
                     val = val.strip().lower().replace(",", "")
-                    if kind == "duration":
-                        val = f"{val} {m.group(2).lower().rstrip('s')}"
-                        kind = "duration:" + m.group(2).lower().rstrip("s")
-                    if kind == "count":
-                        kind = "count:" + m.group(2).lower().rstrip("s")
-                    out.append({"kind": kind, "value": val, "sentence": sent,
+                    # A FRESH LOCAL PER MATCH. This used to reassign `kind`, the
+                    # loop variable of the enclosing `for kind, rx in PATTERNS`,
+                    # so the second match in a sentence inherited the first
+                    # one's unit: "3 weeks ... 6 months" came out as
+                    # duration:week "3 week" and duration:week "6". That both
+                    # invents conflicts between values that share no unit and
+                    # HIDES real ones, because the mismatching month figure is
+                    # filed under weeks where nothing compares against it.
+                    k = kind
+                    if k == "duration":
+                        unit = m.group(2).lower().rstrip("s")
+                        val = f"{val} {unit}"
+                        k = "duration:" + unit
+                    elif k == "count":
+                        k = "count:" + m.group(2).lower().rstrip("s")
+                    out.append({"kind": k, "value": val, "sentence": sent,
                                 "path": path, "section": section_of(path),
                                 "words": words(sent)})
     return out

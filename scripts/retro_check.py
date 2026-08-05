@@ -48,6 +48,19 @@ import os
 import subprocess
 import sys
 
+# The SAME clock the ledger stamps its dates with. This defaulted to the system
+# date, which is UTC on the runner, while every date this gate compares against
+# is written by ledger.py's fixed Anchorage offset. The two agree for most of
+# the day and disagree between 00:00 and 08:00 UTC, where a run would hard-fail
+# "NO UPGRADE DATED ..." against a retro that really had shipped. A gate that
+# fails a correct run on a clock difference gets switched off, and then it is
+# not a gate.
+ANCHORAGE = datetime.timezone(datetime.timedelta(hours=-8))
+
+
+def run_date():
+    return datetime.datetime.now(ANCHORAGE).strftime("%Y-%m-%d")
+
 # Wording that indicates someone tested the case where the check SHOULD fire.
 # Deliberately broad. This drives a warning, never a failure.
 NEGATIVE_SIGNALS = (
@@ -79,9 +92,15 @@ def files_touched_on(repo, date):
     # made this morning. The first version of this gate did exactly that and
     # reported nine described-but-not-made failures against nine changes that
     # had all really shipped.
+    # The window carries the Anchorage offset explicitly. Bare timestamps are
+    # read in the runner's local zone, which is UTC, so an Anchorage run date
+    # and a UTC window are eight hours out of step: commits made between 00:00
+    # and 08:00 UTC belong to the PREVIOUS Anchorage day and fell outside the
+    # window entirely. Same class of bug as the approxidate one below, one layer
+    # further out.
     nxt = (datetime.date.fromisoformat(date) + datetime.timedelta(days=1)).isoformat()
-    out = git(repo, "log", "--since", date + " 00:00:00",
-              "--until", nxt + " 00:00:00",
+    out = git(repo, "log", "--since", date + "T00:00:00-08:00",
+              "--until", nxt + "T00:00:00-08:00",
               "--name-only", "--pretty=format:")
     if out is None:
         return None
@@ -90,10 +109,12 @@ def files_touched_on(repo, date):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--date", default=datetime.date.today().isoformat())
+    ap.add_argument("--date", default=None,
+                    help="run date, default the Anchorage date ledger.py stamps")
     ap.add_argument("--repo", default=".")
     ap.add_argument("--upgrades", default=None)
     a = ap.parse_args()
+    a.date = a.date or run_date()
 
     path = a.upgrades or os.path.join(a.repo, "ledger", "upgrades.json")
     fails, warns, oks = [], [], []

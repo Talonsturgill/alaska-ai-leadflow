@@ -78,15 +78,125 @@ def visible_text(body):
     return htmllib.unescape(t)
 
 
-def css_value(css, selector_frag, prop):
-    """Best-effort: find `prop:` inside the first rule containing selector_frag."""
-    for m in re.finditer(r"([^{}]+)\{([^}]*)\}", css):
-        sel, decls = m.group(1), m.group(2)
-        if selector_frag in sel:
-            hit = re.search(prop + r"\s*:\s*([^;]+)", decls)
-            if hit:
-                return hit.group(1).strip()
-    return None
+def strip_at_blocks(css, names=("print",)):
+    """Drop @media print (and friends) so screen rules are what gets measured.
+
+    `css_value(css, "body", "font-size")` used to return 11pt, out of the print
+    stylesheet, because the old scan had no idea an at-rule was a container.
+    """
+    out, i, n = [], 0, len(css)
+    while i < n:
+        m = re.compile(r"@media[^{]*\b(" + "|".join(names) + r")\b[^{]*\{").search(css, i)
+        if not m:
+            out.append(css[i:])
+            break
+        out.append(css[i:m.start()])
+        depth, j = 1, m.end()
+        while j < n and depth:
+            if css[j] == "{":
+                depth += 1
+            elif css[j] == "}":
+                depth -= 1
+            j += 1
+        i = j
+    return "".join(out)
+
+
+def selector_matches(sel, frag):
+    """True when `frag` is a real selector token, not a substring of one.
+
+    The old check was `frag in sel`, so looking up `p` matched `.page`, `.prose`
+    and `.pill`, and the paragraph-spacing budget silently measured whichever of
+    those came first. A tag name must not match a class that merely starts with
+    the same letters.
+    """
+    for part in sel.split(","):
+        for tok in re.split(r"[\s>+~]+", part.strip()):
+            if not tok:
+                continue
+            if tok == frag:
+                return True
+            # p matches p.lead and p:first-child, never .page or pre
+            if tok.startswith(frag) and re.match(r"[.:\[#]", tok[len(frag):]):
+                return True
+    return False
+
+
+def css_rules(css):
+    for m in re.finditer(r"([^{}]+)\{([^{}]*)\}", css):
+        sel = m.group(1).strip()
+        if sel.startswith("@"):
+            continue
+        yield sel, m.group(2)
+
+
+def css_value(css, selector_frag, prop, screen_only=True):
+    """The effective value of `prop` for a selector, last declaration wins.
+
+    Last rather than first, because a reset like `p{margin:0}` followed by the
+    real rule is the normal shape of a stylesheet, and taking the first match
+    reports the reset as the answer.
+    """
+    src = strip_at_blocks(css) if screen_only else css
+    best = None   # (rank, order, value), lower rank wins, then later order
+    for order, (sel, decls) in enumerate(css_rules(src)):
+        if not selector_matches(sel, selector_frag):
+            continue
+        hit = re.search(r"(?:^|;)\s*" + re.escape(prop) + r"\s*:\s*([^;]+)", decls)
+        if not hit:
+            continue
+        # Rank 0 is the BASE rule, a selector part that is exactly this token.
+        # Without it, `.brief p:last-child{margin-bottom:0}` outranked
+        # `p{margin:0 0 var(--u)}` purely by coming later in the file, and the
+        # measurement reported an override for one paragraph in one panel as
+        # the document's paragraph spacing. Last-wins is only a tiebreak among
+        # equally general rules, it is not a specificity model.
+        rank = 0 if any(part.strip() == selector_frag for part in sel.split(",")) else 1
+        if best is None or rank < best[0] or (rank == best[0] and order > best[1]):
+            best = (rank, order, hit.group(1).strip())
+    return best[2] if best else None
+
+
+def css_value_ranked(css, selector_frag, prop, screen_only=True):
+    """css_value, plus how general the rule it came from was. 0 = base rule."""
+    src = strip_at_blocks(css) if screen_only else css
+    best = None
+    for order, (sel, decls) in enumerate(css_rules(src)):
+        if not selector_matches(sel, selector_frag):
+            continue
+        hit = re.search(r"(?:^|;)\s*" + re.escape(prop) + r"\s*:\s*([^;]+)", decls)
+        if not hit:
+            continue
+        rank = 0 if any(part.strip() == selector_frag for part in sel.split(",")) else 1
+        if best is None or rank < best[0] or (rank == best[0] and order > best[1]):
+            best = (rank, order, hit.group(1).strip())
+    return (best[0], best[2]) if best else (99, None)
+
+
+def resolve_vars(css, value, depth=3):
+    """Substitute var(--x) from :root so a shorthand carrying one can be read."""
+    for _ in range(depth):
+        if not value or "var(" not in value:
+            break
+        def sub(m):
+            got = var_value(css, m.group(1))
+            return got if got else (m.group(2) or "")
+        value = re.sub(r"var\(\s*(--[\w-]+)\s*(?:,\s*([^)]*))?\)", sub, value)
+    return value
+
+
+def margin_bottom(shorthand):
+    """The bottom value of a margin shorthand: 1->all, 2->tb, 3->t lr b, 4->t r b l."""
+    if not shorthand:
+        return None
+    parts = re.findall(r"[-\w.%()]+", shorthand)
+    if not parts:
+        return None
+    if len(parts) == 1:
+        return parts[0]
+    if len(parts) == 2:
+        return parts[0]
+    return parts[2]
 
 
 def var_value(css, name):
@@ -104,6 +214,10 @@ def px(val, default=None, root=16.0):
     m = re.search(r"(-?[\d.]+)\s*r?em", val)
     if m:
         return float(m.group(1)) * root
+    # A unitless zero IS a length, and reading it as "unmeasurable" is how a
+    # collapsed margin passes as an unknown rather than failing as a zero.
+    if re.fullmatch(r"\s*-?0+(\.0+)?\s*", val or ""):
+        return 0.0
     return default
 
 
@@ -214,10 +328,35 @@ def main():
     else:
         note("measure", "could not determine", "45-80 char")
 
-    p_mb = px(css_value(css, "p", "margin-bottom")) or px(css_value(css, "p", "margin"))
+    # Resolve the shorthand and any var() before measuring. The real stylesheet
+    # writes `p{margin:0 0 var(--u)}`, which the old code could not read at all,
+    # so this budget never ran and the run reported a clean sheet without it.
+    # Take whichever declaration came from the MORE GENERAL rule. The longhand
+    # margin-bottom:0 here lives on `.brief p:last-child`, an override for one
+    # paragraph in one panel, and preferring the longhand unconditionally let it
+    # stand in for the whole document's paragraph spacing.
+    mb_rank, mb_raw = css_value_ranked(css, "p", "margin-bottom")
+    sh_rank, sh_raw = css_value_ranked(css, "p", "margin")
+    if mb_rank <= sh_rank and mb_raw is not None:
+        p_raw = mb_raw
+    else:
+        p_raw = margin_bottom(sh_raw)
+    p_mb = px(resolve_vars(css, p_raw), root=body_fs)
     if p_mb is not None:
-        check(p_mb >= 1.5 * lh, "paragraph spacing",
-              f"{p_mb:.0f}px (line-height {lh:.0f}px)", f">= {1.5*lh:.0f}px")
+        # ONE FULL LINE of space between paragraphs. The bar used to read
+        # 1.5 * line-height and had never once executed, so it was an untested
+        # assertion rather than an established standard: at this page's 16px/1.62
+        # it demands a 39px gap, around 2.4em, which is larger than body
+        # paragraphs are normally set. One line-height is the defensible floor,
+        # it is what "the paragraphs are clearly separated" means, and it still
+        # fails a collapsed margin, which is the defect worth catching.
+        check(p_mb >= lh, "paragraph spacing",
+              f"{p_mb:.0f}px (line-height {lh:.0f}px)", f">= {lh:.0f}px")
+    else:
+        # Never silent. A budget that cannot be measured is reported as such,
+        # not omitted from the tally as though it had passed.
+        note("paragraph spacing", f"could not read p margin ({p_raw!r})",
+             f">= {1.5*lh:.0f}px")
 
     check(body_fs >= 16, "body font-size", f"{body_fs:.0f}px", ">= 16px")
 

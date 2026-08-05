@@ -71,12 +71,53 @@ def normalize(domain):
     return d.strip(".")
 
 
-def _load(path, key):
+class LedgerUnavailable(RuntimeError):
+    """A ledger file this answer DEPENDS ON could not be read.
+
+    Never confused with an empty ledger. Empty means nobody has been contacted.
+    Unavailable means we do not know who has been contacted, and those two must
+    never produce the same answer.
+    """
+
+
+def _load(path, key, required=True):
+    """Read a ledger file. ABSENCE OF INPUT IS A FAILURE, NEVER A PASS.
+
+    This used to return an empty list for a missing file, which made every
+    dedupe question fail OPEN: with leads.json absent, `check <domain>` printed
+    "clear" and exited 0 for a company already in the ledger, and add-lead would
+    have created a fresh one-row file over a seventeen-row history.
+
+    That is the 2026-07-30 failure mode with a different cause. The ledger is
+    the only thing standing between this routine and contacting someone twice,
+    so it does not get to be quietly empty. required=False is for the two queue
+    files that legitimately bootstrap on a fresh checkout, and for nothing else.
+    """
     if not os.path.exists(path):
+        if required:
+            raise LedgerUnavailable(
+                "{} does not exist. The git ledger is the ONLY dedupe of record, "
+                "so a missing file means this run cannot tell a new company from "
+                "one we emailed yesterday. Check the working directory and the "
+                "checkout before going any further.".format(path))
         return {"version": 1, key: []}
-    with open(path) as fh:
-        data = json.load(fh)
-    data.setdefault(key, [])
+    try:
+        with open(path) as fh:
+            data = json.load(fh)
+    except (OSError, ValueError) as e:
+        raise LedgerUnavailable("{} could not be read ({}). Refusing to treat an "
+                                "unreadable ledger as an empty one.".format(path, e))
+    if not isinstance(data, dict) or not isinstance(data.get(key), list):
+        # Schema drift used to land here silently via setdefault, turning a
+        # renamed top-level key into "nobody has ever been contacted".
+        if required:
+            raise LedgerUnavailable(
+                "{} has no '{}' list. Refusing to treat a shape this file does "
+                "not have as an empty ledger.".format(path, key))
+        if isinstance(data, dict):
+            data.setdefault(key, [])
+        else:
+            data = {"version": 1, key: []}
     return data
 
 
@@ -461,7 +502,9 @@ def cmd_inbound_status(args):
 
 
 def cmd_pending(args):
-    data = _load(PENDING, "pending")
+    # History only. Its absence is the expected steady state now that nothing
+    # writes it, so this is the one core file that may legitimately be gone.
+    data = _load(PENDING, "pending", required=False)
     if args.json:
         print(json.dumps(data, indent=2))
     else:
@@ -540,7 +583,19 @@ def main():
     s.set_defaults(fn=cmd_inbound_status)
 
     args = p.parse_args()
-    sys.exit(args.fn(args))
+    try:
+        sys.exit(args.fn(args))
+    except LedgerUnavailable as e:
+        # EXIT 3, and it means something different from exit 1. Exit 1 is "this
+        # domain is excluded, take the next name". Exit 3 is "the memory itself
+        # is gone, so no answer about any domain is trustworthy". A run that
+        # treated 3 as 1 would walk its whole replacement queue getting a
+        # non-zero for every name and end the day having learned nothing.
+        print("\n  LEDGER UNAVAILABLE, refusing to answer\n", file=sys.stderr)
+        print("  {}\n".format(e), file=sys.stderr)
+        print("  Nothing is 'clear' when the ledger cannot be read. Fix the "
+              "checkout,\n  do not proceed to another candidate.\n", file=sys.stderr)
+        sys.exit(3)
 
 
 if __name__ == "__main__":

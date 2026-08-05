@@ -48,6 +48,12 @@ import os
 import re
 import sys
 
+# The ROI check delegates every figure to roi_math rather than recomputing it.
+# One implementation of the arithmetic, in the module the showrunner already
+# runs, so the gate and the study can never be reconciling different formulas.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import roi_math  # noqa: E402
+
 # Negative assertions about the prospect's own operation. Each of these was
 # either shipped or nearly shipped, and none of them is knowable from outside.
 NEGATIVE_PATTERNS = [
@@ -138,7 +144,14 @@ def check_provenance(study, claims, fail, warn):
             continue
         label = (r.get("label") or "")
         cells = " ".join(str(c) for c in (r.get("cells") or []))
-        if re.search(r"\bnone\b|\bzero\b|\bno\b|^\s*-\s*$", cells, re.I) or \
+        # A bare \bno\b matched any cell containing the word, so a legitimate
+        # verified row reading "no more than 12" or "no charge" hard-failed as
+        # an asserted absence. Match the phrasings that actually MEAN nothing is
+        # there, not every use of the word.
+        absence_cell = (r"\bnone\b|\bzero\b|\bn/?a\b|\bno (?:figures?|data|"
+                        r"records?|evidence|numbers?|basis|source)\b|"
+                        r"^\s*[-–—]\s*$|^\s*$")
+        if re.search(absence_cell, cells, re.I) or \
            re.search(r"\bnone\b|\bno figures?\b", label, re.I):
             fail("a row marked `verified` states an ABSENCE, which reads as "
                  f"'verified figures' and means the opposite: {label!r}\n"
@@ -180,15 +193,24 @@ def check_roi(study, drivers, fail, warn, drivers_path=None):
              f"{missing}, so the printed table was not reconciled against anything.")
         return
 
-    checked = 0
+    # LABEL FRAGMENTS, several per figure. A table may legitimately word a row
+    # differently, and the point of tracking them is that a NO-MATCH is loud
+    # rather than silent, which is what went wrong here before.
+    WANT = {
+        "annual":    ("annual value", "annual benefit", "annual "),
+        "tco":       ("total cost", "five-year total", "5-year total", " tco"),
+        "recovered": ("recovered", "recovery", "share of"),
+        "breakeven": ("break-even", "break even", "breakeven"),
+    }
 
-    def cell(label_frag, i):
+    def cell(frags, i):
+        """The cell for a figure, plus the label it matched. None when nothing did."""
         for lab, r in rows.items():
-            if label_frag in lab:
+            if any(f in lab for f in frags):
                 cells = r.get("cells") or []
                 if i < len(cells):
-                    return str(cells[i])
-        return None
+                    return str(cells[i]), lab
+        return None, None
 
     def num(s):
         if s is None:
@@ -196,59 +218,119 @@ def check_roi(study, drivers, fail, warn, drivers_path=None):
         m = re.findall(r"-?[\d,]+\.?\d*", s.replace(",", ""))
         return float(m[0]) if m else None
 
+    # The break-even row is expressed in units of ONE driver, and which driver
+    # that is cannot be guessed from the table. Naming it in the drivers file is
+    # what lets the cross-basis check survive a build that is not this hotel.
+    be_cfg = drivers.get("break_even") or {}
+    be_key = be_cfg.get("unit_key")
+
+    checked = 0
+    compared = 0
+
     for i, name in enumerate(order):
         s = scen[name]
+
+        # ONE implementation of the arithmetic, in roi_math, which is what the
+        # showrunner runs and what the study's numbers come from. This used to
+        # be a second hand-written copy keyed on a vocabulary invented for one
+        # hotel study (shifts_per_day, minutes_per_interruption), so any other
+        # build hard-failed the gate, and today's drivers file only passed
+        # because it redundantly carried BOTH schemas with nothing checking they
+        # agreed. A checker that reimplements the thing it checks is checking
+        # itself.
         try:
-            annual = (s["shifts_per_day"] * 365
-                      * (s["minutes_per_interruption"] / 60.0)
-                      * s["loaded_hourly_rate"] * s["interruptions_prevented_per_shift"])
-            basis = s["year1_ramp"] + (s["years"] - 1)
-            tco = (s["implementation"] + s["training"]
-                   + s["run_cost_per_year"] * s["run_cost_years"]) * (1 + s["contingency"])
-            per_unit = annual / s["interruptions_prevented_per_shift"]
-            be = tco / (per_unit * basis)
-            recovered = 100.0 * (annual * basis) / tco
-        except (KeyError, ZeroDivisionError) as e:
-            fail(f"ROI {name}: drivers are incomplete ({e}), so this column's "
-                 "printed numbers were not reconciled against anything.")
+            got = roi_math.compute(name, s)
+        except (KeyError, TypeError, ZeroDivisionError) as e:
+            fail(f"ROI {name}: the drivers do not fit the schema roi_math.py "
+                 f"documents and consumes ({e}). Expected pursuits_per_year, "
+                 "benefit_lines[hours_per_pursuit, rate, cut], implementation, "
+                 "training, run_cost_per_year, run_cost_years, contingency, "
+                 "year1_ramp, years. This column's printed numbers were not "
+                 "reconciled against anything.")
             continue
         checked += 1
 
-        printed_annual = num(cell("annual value", i))
-        if printed_annual is not None and abs(printed_annual - annual) > max(2.0, annual * 0.01):
-            fail(f"ROI {name}: annual benefit prints {printed_annual:,.0f}, "
-                 f"drivers give {annual:,.0f}")
+        annual = got["annual_run_rate_benefit"]
+        tco = next(v for k, v in got.items() if k.startswith("tco_"))
+        recovered = got["percent_of_tco_recovered"]
 
-        printed_tco = num(cell("five-year total", i))
-        if printed_tco is not None and abs(printed_tco - tco) > max(2.0, tco * 0.01):
-            fail(f"ROI {name}: five-year cost prints {printed_tco:,.0f}, "
-                 f"drivers give {tco:,.0f}")
+        hits = 0
 
-        printed_rec = num(cell("recovered", i))
-        printed_be = num(cell("break-even", i))
-        if printed_rec is not None and abs(printed_rec - recovered) > 2.0:
-            fail(f"ROI {name}: recovery prints {printed_rec:.0f}%, "
-                 f"drivers give {recovered:.0f}%")
-        if printed_be is not None and abs(printed_be - be) > 0.15:
-            fail(f"ROI {name}: break-even prints {printed_be:.2f}, "
-                 f"drivers give {be:.2f}")
-        # The one that actually shipped wrong: two rows on different bases.
-        if printed_rec is not None and printed_be is not None and printed_be > 0:
-            implied = 100.0 * s["interruptions_prevented_per_shift"] / printed_be
-            # Slack from the printed rounding of break-even itself, plus a point.
-            half = 0.05
-            hi = 100.0 * s["interruptions_prevented_per_shift"] / max(printed_be - half, 1e-9)
-            lo = 100.0 * s["interruptions_prevented_per_shift"] / (printed_be + half)
-            tol = max(abs(hi - lo) / 2.0, 1.0) + 1.0
-            if abs(implied - printed_rec) > tol:
-                fail(f"ROI {name}: the recovery row and the break-even row sit on "
-                     f"DIFFERENT BASES. {s['interruptions_prevented_per_shift']} "
-                     f"divided by {printed_be} implies {implied:.0f}%, the table "
-                     f"prints {printed_rec:.0f}%. A reader with a calculator finds this.")
+        printed_annual, lab = cell(WANT["annual"], i)
+        printed_annual = num(printed_annual)
+        if printed_annual is not None:
+            hits += 1
+            if abs(printed_annual - annual) > max(2.0, annual * 0.01):
+                fail(f"ROI {name}: annual benefit prints {printed_annual:,.0f}, "
+                     f"drivers give {annual:,.0f}  (row {lab!r})")
 
-    if checked:
-        NOTES.append(f"ROI reconciled across {checked} scenario(s) against "
+        printed_tco, lab = cell(WANT["tco"], i)
+        printed_tco = num(printed_tco)
+        if printed_tco is not None:
+            hits += 1
+            if abs(printed_tco - tco) > max(2.0, tco * 0.01):
+                fail(f"ROI {name}: five-year cost prints {printed_tco:,.0f}, "
+                     f"drivers give {tco:,.0f}  (row {lab!r})")
+
+        printed_rec, lab = cell(WANT["recovered"], i)
+        printed_rec = num(printed_rec)
+        if printed_rec is not None:
+            hits += 1
+            if abs(printed_rec - recovered) > 2.0:
+                fail(f"ROI {name}: recovery prints {printed_rec:.0f}%, "
+                     f"drivers give {recovered:.0f}%  (row {lab!r})")
+
+        printed_be, be_lab = cell(WANT["breakeven"], i)
+        printed_be = num(printed_be)
+        if printed_be is not None:
+            hits += 1
+            if not be_key:
+                warn(f"ROI {name}: the table prints a break-even row ({be_lab!r}) "
+                     "and the drivers file does not say which driver it is "
+                     "counted in. Add break_even.unit_key so the row can be "
+                     "reconciled instead of trusted.")
+            elif be_key not in s:
+                fail(f"ROI {name}: break_even.unit_key is {be_key!r}, which is "
+                     "not a driver in this scenario, so the break-even row was "
+                     "not reconciled.")
+            elif recovered > 0:
+                # THE ONE THAT ACTUALLY SHIPPED WRONG. Recovery and break-even
+                # must sit on the same basis: break-even units over modelled
+                # units equals 100 over the recovered percentage, whatever the
+                # unit happens to be. On 2026-08-05 the two rows were computed
+                # on different bases and only a careful fact-checker caught it.
+                expect_be = s[be_key] * 100.0 / recovered
+                half = 0.05
+                hi = s[be_key] * 100.0 / max(recovered - half, 1e-9)
+                lo = s[be_key] * 100.0 / (recovered + half)
+                tol = max(abs(hi - lo) / 2.0, 0.15)
+                if abs(printed_be - expect_be) > tol:
+                    fail(f"ROI {name}: the recovery row and the break-even row sit "
+                         f"on DIFFERENT BASES. At {recovered:.0f}% recovered, "
+                         f"break-even is {expect_be:.2f} {be_key}, the table "
+                         f"prints {printed_be:.2f}. A reader with a calculator "
+                         "finds this.")
+
+        compared += hits
+        if hits == 0:
+            # THE SILENT SKIP. `checked` used to be incremented here regardless,
+            # so relabelling a row made this print "ok ROI reconciled across 3
+            # scenario(s)" while comparing zero numbers. A gate that passes
+            # everything is worse than no gate, because it looks like coverage.
+            fail(f"ROI {name}: NOT ONE PRINTED CELL WAS RECONCILED. No row label "
+                 "matched anything this check knows how to verify.\n"
+                 f"        table rows: {sorted(rows)}\n"
+                 "        looked for labels containing: "
+                 + "; ".join("/".join(v) for v in WANT.values()))
+
+    if checked and compared:
+        NOTES.append(f"ROI reconciled across {checked} scenario(s), {compared} "
+                     f"printed cell(s) recomputed from "
                      f"{os.path.basename(drivers_path or 'roi_drivers.json')}")
+    elif checked:
+        fail("ROI CHECK COMPARED NOTHING. Every scenario parsed and no printed "
+             "cell matched a label this check understands, so the table is "
+             "unverified despite the drivers file being present and valid.")
 
 
 def check_negatives(study, fail, warn):
