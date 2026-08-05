@@ -166,6 +166,23 @@ than all of them and costs the most to get.
 
 ## SHIPPED
 
+- **2026-08-05, item 3, scripts/study_lint.py.** Runs before any critic. Catches
+  forbidden strings the fact-checker rejected coming back, URLs in the body with
+  no sources entry, a `verified` mark on something nobody verified, an ROI table
+  whose printed cells do not reconcile with its own drivers, and unverifiable
+  negatives about the prospect. Validated against five reconstructions of the
+  defects that actually shipped or were blocked that day, caught all five, zero
+  false positives on the clean study. Wired into the Phase 6 ship gate.
+- **2026-08-05, item 2, the self-improvement loop.** Phase 10 retro in the run
+  contract plus ledger/upgrades.json. At most three bounded, verified changes per
+  run, each with the evidence that earned it, surfaced in the delivery summary.
+  Hard guard: a run may never edit OUTREACH_CRAFT.md, CLAUDE.md, or any bar it is
+  judged against. It proposes those with wording drafted and a human decides.
+- **2026-08-05, item 7, outcome tracking.** ledger.py record-outcome and
+  scoreboard, cutting reply rate by segment, by named-human versus general inbox,
+  by fit score, and by whether we recommended AGAINST a build, which is the cut
+  that tests the honest-restraint thesis instead of believing it.
+
 - **2026-08-05, gotcha openings banned.** The email opened on a website
   inconsistency, which passed every rule and was still worthless. OUTREACH_CRAFT
   gained WHAT THE FIRST SENTENCE IS ABOUT, with a nod test and a meeting test.

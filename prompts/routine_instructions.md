@@ -403,6 +403,16 @@ Collect the four into out/<date>/engineering.json.
    resolve anything it surfaces under CONFLICTS, QUOTE DRIFT or CONDITIONAL
    MISMATCH before the critic sees the study. It is faster to fix a contradiction
    in code than to spend a critic round on it.
+1b. LINT BEFORE ANY CRITIC SEES IT. Run
+   python scripts/study_lint.py --study out/<date>/study.json
+   It must EXIT 0. It catches what a script can catch so a critic never spends a
+   round on it, forbidden strings the fact-checker rejected coming back, a URL in
+   the body with no entry in sources[], a `verified` provenance mark on something
+   nobody verified, an ROI table whose printed cells do not reconcile with the
+   stated drivers, and unverifiable negative assertions about the prospect's own
+   operation, which is the drift pattern mechanised. Fix what it names and re-run.
+   Warnings are judgement calls, read them and decide. Failures are facts.
+
 2. Spawn study-critic on the finished study.json AND out/<date>/demo.html if it
    exists. It audits the whole thing against the hype tables in AI_SCOPING.md and
    ROI_METHOD.md, evidence integrity, feasibility integrity, and specificity, and
@@ -586,6 +596,42 @@ COMPLETION GATE, verify before you finish.
 - Draft only. Nothing was sent.
 If any check fails and cannot be fixed this run, do not paper over it. Draft Talon a
 note stating exactly what failed.
+
+---
+
+## PHASE 10 - THE RETRO (leave the machine better than you found it)
+
+The run is delivered. This phase exists because the lessons of this routine kept
+living only in commit messages, where nothing reads them, and the machine kept
+paying to relearn the same things. On 2026-07-29 seven critic rounds produced two
+rules that survived only because a human wrote them down.
+
+1. DIFF WHAT ACTUALLY HAPPENED against this contract. Where did the run spend
+   rounds it should not have? What did a critic catch that a script could have?
+   What did you have to work around? What surprised you?
+2. Pick AT MOST THREE changes. Bounded, verifiable, and each one earned by
+   something that actually happened in THIS run. An upgrade with no evidence line
+   is a preference, not an upgrade.
+3. IMPLEMENT and VERIFY them. A change that is not tested does not ship. Prefer a
+   script that mechanises a defect over a paragraph asking a future run to be
+   careful, because paragraphs get skipped and gates do not.
+4. Log each one to ledger/upgrades.json with the change, the EVIDENCE that earned
+   it, how it was verified, and the files touched.
+5. Surface them in the delivery summary. A change to the machine is never
+   invisible.
+6. Anything you could not fix, or that needs a human, goes to
+   knowledge/MACHINE_BACKLOG.md with its evidence. That file only takes items a
+   dated run actually earned.
+
+WHAT A RUN MAY NEVER EDIT, and this is the whole reason the phase is safe.
+knowledge/OUTREACH_CRAFT.md, CLAUDE.md, and any quality bar the run is judged
+against. Those are hand-authored on purpose. A routine that rewrites the rules it
+is graded by is grading its own homework. PROPOSE those in the delivery summary,
+with the suggested wording drafted, so a human is approving a diff rather than
+being handed homework. THE ONE LAW and the honesty rules are untouchable.
+
+If the run found nothing worth changing, say so plainly and change nothing. A
+retro that invents an upgrade to look productive is worse than an empty one.
 
 ---
 
