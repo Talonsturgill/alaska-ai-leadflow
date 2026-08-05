@@ -69,6 +69,9 @@ HEDGES = [
 ]
 
 
+NOTES = []
+
+
 def walk(obj, path=""):
     """Yield (path, string) for every string in the study object."""
     if isinstance(obj, str):
@@ -148,18 +151,36 @@ def check_provenance(study, claims, fail, warn):
         warn("no provenance marks on the ROI table at all, the honesty rail is missing")
 
 
-def check_roi(study, drivers, fail, warn):
-    """Recompute every derived cell from the stated drivers, on ONE basis."""
-    if not drivers:
-        return
+def check_roi(study, drivers, fail, warn, drivers_path=None):
+    """Recompute every derived cell from the stated drivers, on ONE basis.
+
+    Every early return here is LOUD. This is the most valuable check in the file
+    and a silent skip would let a study pass the gate with its arithmetic never
+    examined, which is precisely the failure this script exists to prevent.
+    """
     roi = study.get("roi") or {}
     rows = {(r.get("label") or "").lower(): r for r in (roi.get("table") or [])}
-    if not rows:
+    has_table = bool(rows)
+
+    if not drivers:
+        if has_table:
+            fail("ROI CHECK DID NOT RUN. The study prints an ROI table and no "
+                 f"drivers file was found at {drivers_path or 'the default path'}. "
+                 "Every number in that table is unverified by this gate. Pass "
+                 "--drivers, or say in the run log why the table has no drivers "
+                 "behind it.")
+        return
+    if not has_table:
         return
     order = ["conservative", "most_likely", "aggressive"]
     scen = drivers.get("scenarios") or {}
-    if not all(k in scen for k in order):
+    missing = [k for k in order if k not in scen]
+    if missing:
+        fail("ROI CHECK DID NOT RUN. The drivers file is missing scenario(s) "
+             f"{missing}, so the printed table was not reconciled against anything.")
         return
+
+    checked = 0
 
     def cell(label_frag, i):
         for lab, r in rows.items():
@@ -187,8 +208,11 @@ def check_roi(study, drivers, fail, warn):
             per_unit = annual / s["interruptions_prevented_per_shift"]
             be = tco / (per_unit * basis)
             recovered = 100.0 * (annual * basis) / tco
-        except (KeyError, ZeroDivisionError):
+        except (KeyError, ZeroDivisionError) as e:
+            fail(f"ROI {name}: drivers are incomplete ({e}), so this column's "
+                 "printed numbers were not reconciled against anything.")
             continue
+        checked += 1
 
         printed_annual = num(cell("annual value", i))
         if printed_annual is not None and abs(printed_annual - annual) > max(2.0, annual * 0.01):
@@ -221,6 +245,10 @@ def check_roi(study, drivers, fail, warn):
                      f"DIFFERENT BASES. {s['interruptions_prevented_per_shift']} "
                      f"divided by {printed_be} implies {implied:.0f}%, the table "
                      f"prints {printed_rec:.0f}%. A reader with a calculator finds this.")
+
+    if checked:
+        NOTES.append(f"ROI reconciled across {checked} scenario(s) against "
+                     f"{os.path.basename(drivers_path or 'roi_drivers.json')}")
 
 
 def check_negatives(study, fail, warn):
@@ -264,10 +292,12 @@ def main():
     check_forbidden(study, claims, fail, warn)
     check_sources(study, fail, warn)
     check_provenance(study, claims, fail, warn)
-    check_roi(study, drivers, fail, warn)
+    check_roi(study, drivers, fail, warn, drivers_p)
     check_negatives(study, fail, warn)
 
     print("\n  STUDY LINT  —  {}\n".format(a.study))
+    for n in NOTES:
+        print("  ok    " + n)
     for f in fails:
         print("  FAIL  " + f)
     for w in warns:
