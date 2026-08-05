@@ -204,20 +204,38 @@ Saying the honest thing IS the pitch.
 
 ## MEMORY AND DEDUPE
 
-The dedupe memory of record is GIT, ledger/leads.json and ledger/suppressions.json
-in this private repo, read and written through scripts/ledger.py. It ships with the
-checkout, so it is always available and no outage can cost a day of outreach. Never
-contact a company whose normalized domain appears in either file. The routine
-dedupes at Phase 0 with `ledger.py check`, and dedupe is COMPUTED in code, never
-eyeballed by the model, the same way ROI arithmetic is computed in roi_math.py.
+THE DATABASE IS GIT. There is no second copy and no other system to check.
+ledger/leads.json, ledger/runs.json, ledger/suppressions.json and
+ledger/inbound.json in this private repo, read and written ONLY through
+scripts/ledger.py. It ships with the checkout, so it is always available, it can
+never be down, and every change arrives as a reviewable diff attached to the run
+that made it. Never contact a company whose normalized domain appears in leads or
+suppressions. The routine dedupes at Phase 0 with `ledger.py check`, and dedupe is
+COMPUTED in code, never eyeballed by the model, the same way ROI arithmetic is
+computed in roi_math.py. The schema is db/SCHEMA.md.
 
-Supabase (project alaska-ai-dashboard, schema leadflow) remains the inbound scanner
-queue and the analytics store, and every run DUAL-WRITES to it when it is
-reachable. It is no longer required to run. When it is down the run proceeds on the
-git ledger, queues the owed rows in ledger/pending_supabase.json for backfill,
-skips INBOUND FIRST, and says so loudly in the delivery summary. What that mode
-loses is inbound priority, never the run. Backfill the pending rows on the first
-run after Supabase recovers, then empty the list.
+THE SPLIT THAT MAKES IT WORK. Structured fields live in ledger/. LARGE DOCUMENTS
+LIVE AS FILES under runs/<date>/<slug>/, referenced by study_path. A 25KB study
+object is a document, and git stores documents better than a jsonb column does.
+
+SUPABASE WAS RETIRED on 2026-08-05 by the maintainer, and nothing in this routine
+may reach for it again. It had cost three consecutive runs a write it could not
+retry (the study object, too large to re-emit safely inside a tool call) and had
+already blinded one run to the inbound queue during a three-hour outage. Both
+failure modes are structural and neither was going to fix itself. If any
+instruction, prompt or habit says to dual-write, backfill, or check Supabase,
+it is out of date and this law wins.
+
+INBOUND intake is a GitHub ISSUE on this repo labelled `scan-opt-in`, because a
+public form has to write somewhere and git cannot take an anonymous POST. That is
+a real queue with an API, timestamps, state and an audit trail. `ledger.py
+inbound-next` computes who is owed a study, skipping anything already suppressed
+or already in leads, and exits 1 when the queue is clear. ONE HANDOFF IS STILL
+OPEN and is written down in db/SCHEMA.md rather than hidden, the scanner backend
+lives in a repo this routine cannot reach and still writes to the old table, so
+until it is repointed an opt-in is queued by hand with `inbound-add`. A silently
+empty inbound queue is exactly what the skip counter exists to catch, so it stays
+loud.
 
 ## PRIVATE DATA
 
@@ -250,10 +268,17 @@ notice it.
 
 ## THE DATABASE
 
-Schema of record is db/schema.sql. Three tables in the leadflow schema, leads (the
-pipeline and every dossier), runs (the per-run audit), suppressions (the
-never-contact list). RLS is on, so the tables are invisible to any public key and
-reachable only through the privileged connector the routine uses.
+Schema of record is db/SCHEMA.md. It is git. ledger/leads.json (the pipeline and
+the record of authority for every company touched), ledger/runs.json (the per-run
+audit that stops a double fire), ledger/suppressions.json (the never-contact
+list), ledger/inbound.json (the consented opt-in queue). The repo is private, so
+the data is private, and the repo is also the backup, every row carries full
+history and any state is recoverable with git checkout.
+
+`ledger.py stats` answers what the dashboard used to query, counts by status and
+segment, mean fit score, how many leads carry a verified contact, how many carry
+a draft, how many were sent, and the inbound queue depth. It reads the same files
+everything else reads, so it can never disagree with them.
 
 ## TUNING (where to change behavior)
 

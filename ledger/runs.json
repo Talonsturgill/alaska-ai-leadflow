@@ -1,85 +1,97 @@
 {
-  "version": 1,
-  "note": "Per-run audit and the double-fire guard. Reconstructed rows before 2026-07-29 are inferred from archived artifacts, not from the database.",
-  "updated": "2026-08-05",
-  "runs": [
-    {
-      "run_date": "2026-07-16",
-      "status": "success",
-      "shortlist_count": null,
-      "notes": "reconstructed"
-    },
-    {
-      "run_date": "2026-07-17",
-      "status": "success",
-      "shortlist_count": null,
-      "notes": "reconstructed"
-    },
-    {
-      "run_date": "2026-07-19",
-      "status": "success",
-      "shortlist_count": null,
-      "notes": "reconstructed, two companies archived this date"
-    },
-    {
-      "run_date": "2026-07-21",
-      "status": "success",
-      "shortlist_count": null,
-      "notes": "reconstructed"
-    },
-    {
-      "run_date": "2026-07-22",
-      "status": "success",
-      "shortlist_count": null,
-      "notes": "reconstructed"
-    },
-    {
-      "run_date": "2026-07-29",
-      "status": "success",
-      "shortlist_count": 22,
-      "notes": "Allen Marine Tours. DEGRADED MODE, Supabase unreachable for about three hours, 28P01 password authentication failed on both postgres and supabase_read_only_user while edge functions and the REST gateway kept serving normally. Cleared on its own. Cause not proven, the observables point at the connector credentials rather than the project being down. Dedupe served from the git ledger, INBOUND FIRST not checked. Owner authorised proceeding and excluded Bristol Bay Native Corporation. Seven critic rounds to ship."
-    },
-    {
-      "run_date": "2026-07-30",
-      "status": "success",
-      "shortlist_count": 23,
-      "notes": "Reconciled from Supabase on 2026-07-31. ABR, Inc. drafted; PR #21 left unmerged so the archive and ledger row never landed on main."
-    },
-    {
-      "run_date": "2026-07-31",
-      "status": "success",
-      "shortlist_count": 24,
-      "notes": "Calista Corporation. 11 study-critic rounds. Roster count corrected in code to 127 after two hand counts of 213 and 217 both proved wrong. Both segment-reflex builds killed on evidence."
-    },
-    {
-      "run_date": "2026-08-01",
-      "status": "success",
-      "shortlist_count": 24,
-      "notes": null
-    },
-    {
-      "run_date": "2026-08-02",
-      "status": "success",
-      "shortlist_count": 21,
-      "notes": null
-    },
-    {
-      "run_date": "2026-08-03",
-      "status": "success",
-      "shortlist_count": 24,
-      "notes": "Ryan Air, Inc. Four scouts, 24 candidates. Fact-checker 2 rounds (29 then 12 rejections, all applied). study-critic 4 rounds to ship. lead-critic 3 rounds to ship. Ask resized mid-run because the six week conservative case did not clear. Suppressed nana.com, ahtna.com and doyon.com on the detention-contracting screen."
-    },
-    {
-      "run_date": "2026-08-04",
-      "status": "success",
-      "shortlist_count": 20,
-      "notes": "Koniag disqualified on ICE contracting and replaced with Tyonek. 6 study-critic rounds, 3 fact-check rounds, 4 lead-critic rounds."
-    },
-    {
-      "run_date": "2026-08-05",
-      "status": "success",
-      "shortlist_count": 23,
-      "notes": "Fountainhead Hotels. Pick locked at the lowest rung of the feasibility ladder, no AI in the recommended build. study-critic ship on round 2 after 12 blocking fixes, lead-critic ship on round 3."
-    }
-  ]
+ "version": 2,
+ "note": "The per-run audit, and the record of authority for whether a run already shipped. Migrated off Supabase on 2026-08-05, this file is now the only copy.",
+ "updated": "2026-08-05",
+ "runs": [
+  {
+   "run_date": "2026-07-16",
+   "status": "success",
+   "shortlist_count": null,
+   "notes": "reconstructed"
+  },
+  {
+   "run_date": "2026-07-17",
+   "status": "success",
+   "shortlist_count": null,
+   "notes": "reconstructed"
+  },
+  {
+   "run_date": "2026-07-19",
+   "status": "success",
+   "shortlist_count": 21,
+   "notes": "Big Dan's Fishing Charters (tourism, fit 23). Second run recorded on this date, the other is CRW Engineering. Migrated from Supabase 2026-08-05."
+  },
+  {
+   "run_date": "2026-07-19",
+   "status": "success",
+   "shortlist_count": null,
+   "notes": "reconstructed, two companies archived this date"
+  },
+  {
+   "run_date": "2026-07-21",
+   "status": "success",
+   "shortlist_count": null,
+   "notes": "reconstructed"
+  },
+  {
+   "run_date": "2026-07-22",
+   "status": "success",
+   "shortlist_count": null,
+   "notes": "reconstructed"
+  },
+  {
+   "run_date": "2026-07-23",
+   "status": "success",
+   "shortlist_count": 21,
+   "notes": "Inbound Paychex disqualified and suppressed (not an Alaska SMB, automation vendor). Cold-scouted replacement Bristol Bay Native Corporation. Migrated from Supabase 2026-08-05."
+  },
+  {
+   "run_date": "2026-07-29",
+   "status": "success",
+   "shortlist_count": 22,
+   "notes": "Allen Marine Tours. DEGRADED MODE, Supabase unreachable for about three hours, 28P01 password authentication failed on both postgres and supabase_read_only_user while edge functions and the REST gateway kept serving normally. Cleared on its own. Cause not proven, the observables point at the connector credentials rather than the project being down. Dedupe served from the git ledger, INBOUND FIRST not checked. Owner authorised proceeding and excluded Bristol Bay Native Corporation. Seven critic rounds to ship."
+  },
+  {
+   "run_date": "2026-07-30",
+   "status": "success",
+   "shortlist_count": 23,
+   "notes": "Reconciled from Supabase on 2026-07-31. ABR, Inc. drafted; PR #21 left unmerged so the archive and ledger row never landed on main."
+  },
+  {
+   "run_date": "2026-07-31",
+   "status": "success",
+   "shortlist_count": 24,
+   "notes": "Calista Corporation. 11 study-critic rounds. Roster count corrected in code to 127 after two hand counts of 213 and 217 both proved wrong. Both segment-reflex builds killed on evidence."
+  },
+  {
+   "run_date": "2026-08-01",
+   "status": "success",
+   "shortlist_count": 24,
+   "notes": null
+  },
+  {
+   "run_date": "2026-08-02",
+   "status": "success",
+   "shortlist_count": 21,
+   "notes": null
+  },
+  {
+   "run_date": "2026-08-03",
+   "status": "success",
+   "shortlist_count": 24,
+   "notes": "Ryan Air, Inc. Four scouts, 24 candidates. Fact-checker 2 rounds (29 then 12 rejections, all applied). study-critic 4 rounds to ship. lead-critic 3 rounds to ship. Ask resized mid-run because the six week conservative case did not clear. Suppressed nana.com, ahtna.com and doyon.com on the detention-contracting screen."
+  },
+  {
+   "run_date": "2026-08-04",
+   "status": "success",
+   "shortlist_count": 20,
+   "notes": "Koniag disqualified on ICE contracting and replaced with Tyonek. 6 study-critic rounds, 3 fact-check rounds, 4 lead-critic rounds."
+  },
+  {
+   "run_date": "2026-08-05",
+   "status": "success",
+   "shortlist_count": 23,
+   "notes": "Fountainhead Hotels. Pick locked at the lowest rung of the feasibility ladder, no AI in the recommended build. study-critic ship on round 2 after 12 blocking fixes, lead-critic ship on round 3."
+  }
+ ]
 }
