@@ -1,12 +1,15 @@
 {
- "subject": "Your two aurora start dates and the Fountainhead field study",
- "body": "Your Wedgewood aurora page dates the season 21 August through 21 April. Your Bear Lodge rooms page dates the same season mid-August to late April. The start dates disagree by about a week and a guest gets whichever one they hear first.\n\nWe already did the study on fixing that.\n\nhttps://alaskaaihq.com/awesomeproposal/fountainhead-hotels/\n\nWorth a reply or a forward either way.",
+ "subject": "A field study on the Fountainhead summer front desks",
+ "body": "You more than double your staffing every summer so the newest people answer every guest question at three front desks that never close.\n\nThe measured AI wins in hotels are back of house not the front desk and an independent test clocked 2.5 minutes saved per room clean.\n\nWe already did the study.\n\nhttps://alaskaaihq.com/awesomeproposal/fountainhead-hotels/\n\nWorth a reply or a forward.",
  "to": "beckyk@fdialaska.com",
  "to_name": "Becky Kunkle",
  "title_note": "Reservations Manager, Fountainhead Hotels. Published as a live mailto on their own homepage for extended stay and corporate lodging, and the only email rendered anywhere on that page. She is a ROUTER, not the buyer. The buyers are Tim Cerny (president and owner of Fountainhead Development) and Bobby Hanson (operations manager), and neither publishes a verifiable address anywhere, so the email names nobody, assumes nothing about whose desk it is, and is written to survive a forward with the subject stripped.",
  "link": "https://alaskaaihq.com/awesomeproposal/fountainhead-hotels/",
- "opens_on": "Their Wedgewood aurora page dates the season 21 August through 21 April while their Bear Lodge rooms page dates the same season mid-August to late April. Both are their own live pages and the START dates disagree by about a week. The end dates do not disagree, since 21 April is late April, and the email says only what the pages support.",
+ "opens_on": "Their own jobs page states they more than double hotel staffing for summer and the seasonal roster starts with Seasonal Front Desk Clerks, so the newest people in the building carry every guest question across three desks staffed around the clock.",
  "lead_critic": "ship on round 3. Round 1 killed 'That's sixteen days out and a guest gets whichever answer that desk learned first' for an ambiguous antecedent (a reader parses it as the pages differing by sixteen days when they differ by about a week) and for grading her own team. Round 2 killed the replacement because the ambiguity moved rather than died, because the number DECAYED and would be false whenever the human actually sent it, and because the real finding had vanished from the body. Round 3 states the finding outright, carries no clock-relative number so it stays true on any send date, and moves the cost onto the information rather than her staff.",
- "word_count_prose": 58,
- "comma_count": 0
+ "word_count_prose": 59,
+ "comma_count": 0,
+ "industry_proof": "The measured AI wins in hotels are back of house rather than the front desk, with an independent eight-week test at an 80-room hotel measuring 2.5 minutes saved per room clean. Independent measurement, not a vendor number.",
+ "supersedes": "r-5102924268035691663, which opened on two of their own pages disagreeing about a date. The maintainer killed that as a gotcha rather than an insight, and website-defect openings are now banned in OUTREACH_CRAFT.md.",
+ "draft_of_record": "r6162210636023396010"
 }
