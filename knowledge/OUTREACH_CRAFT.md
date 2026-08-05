@@ -32,6 +32,82 @@ The skeleton, stripped to the bone.
 3. Point at the study as work already done for them.
 4. One small reply-first ask.
 
+## WHAT THE FIRST SENTENCE IS ABOUT (set by the maintainer, 2026-08-05)
+
+Specific is not the same as insightful, and the run of 2026-08-05 proved it. That
+email opened by pointing out that two pages on the prospect's own website disagreed
+about a date. Every rule in this file passed. It was verified, it was true only of
+them, it was checkable in a minute, it carried no kill-list term and no comma. It
+was also, in the maintainer's words, pretty dumb and not very insightful, and it
+was killed before sending.
+
+Here is why it failed while passing every test. The routine is told to open on a
+specific verified fact, and the CHEAPEST way to satisfy that is to crawl their site
+and find an inconsistency. That is a defect in their marketing, not a fact about
+their business. It reads as though a machine diffed their pages, because one did.
+
+THE RULE. THE FIRST SENTENCE IS ABOUT HOW THEY OPERATE, NEVER ABOUT A DEFECT IN
+THEIR WEBSITE. Name something structural about the way the business actually runs,
+the thing an owner already knows is true and has felt. If the sentence describes
+something they could fix by editing a page, it is not the opening.
+
+THE TWO TESTS, apply both before the email ships.
+- THE NOD TEST. Would the owner read the first sentence and nod, because you have
+  just described their world back to them accurately? Or would they get defensive,
+  because you opened by telling them they made a mistake? Correcting a stranger is
+  a terrible way to start a conversation, and it costs us the room before the link
+  is ever clicked.
+- THE MEETING TEST. Is this a sentence they would say out loud in a meeting about
+  their own company? "We rebuild the whole front desk every summer" is. "Two of our
+  pages disagree about a date" is not, it is a ticket for whoever owns the website.
+
+WHERE THE SMALL DISCREPANCY BELONGS. Inside the study, as evidence, where there is
+room to frame it as ordinary and cheap to settle. It is a fine PROOF that a problem
+is real. It is never the PROBLEM. Do not promote evidence to a headline just
+because it is the most checkable thing we found.
+
+The good openings all name a structural fact about the operation. Twenty-two
+federal registrations under one parent, so one attachment decides whose record
+counts. More than three hundred million a year across twenty-two 8(a) subsidiaries,
+so winning proposals walk out the door at graduation. Doubling the entire front of
+house every summer, so the operating knowledge leaves with them every September.
+Each of those is something the owner lives with, and none of them could be found by
+a spellchecker.
+
+## CARRY ONE PIECE OF REAL INDUSTRY PROOF (set by the maintainer, 2026-08-05)
+
+The prospect does not know whether AI is real in THEIR industry. They have heard
+the noise and they have no idea which parts are true. Telling them where it is
+already measurably working, in businesses shaped like theirs, is the single most
+useful thing a cold email can carry after the fact about them. It also proves we
+read the field rather than the brochure.
+
+So the email SHOULD carry one line of industry evidence, in this shape.
+- The pocket where it is genuinely working, named plainly.
+- One measured number, with its source strength attached.
+
+THE STANDARD FOR THAT NUMBER IS HIGHER THAN ANYWHERE ELSE IN THE EMAIL, because
+it is the one claim the reader cannot check against their own business.
+- An INDEPENDENT measurement is worth quoting. Say "an independent test".
+- A VENDOR case study may be used only if labelled as one, and it is usually not
+  worth the words in a forty-word email.
+- A vendor's own marketing number is never quoted. The industry-analyst flags
+  these as hype for exactly this reason, and they never reach the email.
+- If the honest finding is that the evidence in their industry is thin or that
+  the loudest number is a vendor's, SAY THAT INSTEAD. "The number everyone quotes
+  comes from the company selling the fix" is a more valuable sentence than a
+  borrowed statistic, and it is the kind of thing that gets a reply.
+
+WHERE IT IS WORKING IS OFTEN NOT WHERE THEY EXPECT, and that gap is the insight.
+The 2026-08-05 research found the only independently measured win in independent
+hotels was BACK of house, while the guest-facing chatbot evidence was actively
+negative. Telling an owner "the measured wins are in the back office, not the
+thing you were about to be sold" is worth more than any pitch.
+
+Never let this line become a claim about what WE would achieve for them. It is
+what the field has measured, stated as such, and the study carries the version
+with the caveats.
+
 ## Length (the hardest rule, and the one most often broken)
 
 FORTY TO SIXTY WORDS in the body. Three or four sentences, plus the link. That is
@@ -157,6 +233,12 @@ We never narrate ourselves, and in a forty-word email there is no room to.
 Preamble of any kind. Anything before the specific fact about them. If the first
 sentence is not a true thing about their business, delete it and start there.
 
+Gotcha openings. Any first sentence whose content is a mistake, typo, inconsistency,
+broken link, stale page or outdated figure on their own website. Also anything that
+reads as a site audit, "we noticed on your site", "your page says X but your other
+page says Y". These pass the specificity test and fail the human one. See WHAT THE
+FIRST SENTENCE IS ABOUT above.
+
 Shock theater and hype-in-print. Profanity, crude analogies, manufactured
 outrage, fear deadlines ("this will put you out of business"), the word guru,
 exclamation points, hustle and grind talk, motivational-poster lines.
@@ -167,7 +249,8 @@ sentence that could have been sent to any business is a sentence that reads as
 slick or as AI and gets deleted. Specificity is the whole defense.
 
 ## Shape to aim for
-1. The one specific true thing we found about them. First sentence, no preamble.
+1. The one specific true thing we found about HOW THEY OPERATE. First sentence, no
+   preamble, and never a defect on their website.
 2. What it costs them, one line.
 3. The link, named plainly as work already done for them.
 4. One small ask that does not imply a gate. Nothing after it, the signature block

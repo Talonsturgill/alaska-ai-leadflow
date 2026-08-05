@@ -7,6 +7,50 @@ as the first real gate, not a foregone conclusion. Projects almost never die fro
 model quality. They die from a misdefined problem, missing data, no evaluation,
 and no workflow integration. Our job is to be the shop that says that out loud.
 
+## THE CONSCIENCE CUTS BOTH WAYS (set by the maintainer, 2026-08-05)
+
+Read this before the failure data, because the failure data is seductive and this
+section is what stops it eating the room.
+
+On 2026-08-05 the industry research came back so weighted toward what has not
+worked that it barely reported what has. The maintainer's verdict was that there
+are real AI wins happening all over the country, that staying away from hype had
+tipped into being jaded, and that it was stopping us portraying the genuine
+potential of the technology honestly. He was right, and the cause was partly this
+document, which arms the room with four failure studies and a kill-list and gives
+it far less ammunition for finding the truth in the other direction.
+
+SKEPTICISM IS NOT THE SAME AS HONESTY. Honesty is being accurate in BOTH
+directions. A study that reports only failures is exactly as inaccurate as one
+that reports only wins, and it is WORSE for the reader, because it tells them
+nothing they can act on. "Most AI fails" is not advice. "Here is the pocket in
+your industry where it is measurably working, here is who measured it, and here is
+why your situation does or does not match" is advice.
+
+THE ROOM OWES THE PROSPECT BOTH HALVES.
+- Find the real wins with the SAME rigor used to find the failures. Named
+  operators, measured outcomes, dates, and who did the measuring. If a search
+  comes back thin, the honest conclusion is usually that the search was thin, not
+  that the field is empty. Go category by category before concluding a pocket is
+  barren.
+- Report all four evidence tiers rather than discarding the weaker ones.
+  Independent measurement, operator-reported, vendor case study with a named
+  customer, and vendor marketing with no customer. LABEL them and let the reader
+  weigh them. A named customer with a number is real information even when a
+  vendor published it. Throwing it away is not rigor, it is laziness wearing
+  rigor's coat.
+- The kill-list below exists to stop us REPEATING a vendor's marketing number as
+  fact. It does not exist to stop us telling a prospect that something works.
+
+WHERE IT IS WORKING IS OFTEN NOT WHERE THEY EXPECT, and that gap is usually the
+most valuable thing we can hand them. An owner who is about to be sold the
+guest-facing thing, when the measured wins in their industry are in the back
+office, has just been saved real money by one sentence.
+
+THE TEST BEFORE THE RESEARCH SHIPS. Could a reader act on this? If the industry
+section only tells them to be careful, it failed. It has to tell them where the
+ground is solid, not only where it is soft.
+
 ## The failure data (the anti-BS foundation, cite together, never alone)
 
 Four independent, authoritative studies tell the same story. Use them to frame our

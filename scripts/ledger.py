@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """Git-backed memory of record for the lead-flow routine.
 
-Supabase remains the inbound-scanner queue and the analytics store, but dedupe
-no longer depends on it. The ledger files under ledger/ are committed to this
-private repo every run, so the routine can always answer the only two questions
-that gate a run: have we contacted this company, and did a run already ship
-today.
+THIS IS THE DATABASE. Supabase was retired on 2026-08-05. The ledger files under
+ledger/ are committed to this private repo every run, so the routine can always
+answer the questions that gate a run: have we contacted this company, did a run
+already ship today, and who is still owed a study they asked for.
+
+Structured fields live here. Large documents live as files under runs/<date>/<slug>/
+and are referenced by study_path, because git stores documents better than a jsonb
+column does, and re-emitting 25KB of JSON inside a tool call is how the old store
+silently lost three consecutive writes.
 
 Dedupe is computed here rather than narrated by the model, the same way ROI
 arithmetic is computed in roi_math.py. A domain either matches the ledger or it
@@ -19,7 +23,8 @@ Usage
   ledger.py add-lead --json <file|->
   ledger.py add-suppression --domain D --company C --reason R
   ledger.py add-run --status success|no_lead|failed [--shortlist N] [--notes T]
-  ledger.py pending [--json]                   Supabase writes still owed
+  ledger.py inbound-next [--json]              oldest unserved consented opt-in
+  ledger.py stats [--json]                     the analytics the database answered
 """
 
 import argparse
@@ -34,7 +39,7 @@ LEDGER_DIR = os.path.join(REPO, "ledger")
 LEADS = os.path.join(LEDGER_DIR, "leads.json")
 SUPPRESSIONS = os.path.join(LEDGER_DIR, "suppressions.json")
 RUNS = os.path.join(LEDGER_DIR, "runs.json")
-PENDING = os.path.join(LEDGER_DIR, "pending_supabase.json")
+PENDING = os.path.join(LEDGER_DIR, "retired_pending_supabase.json")  # history only
 
 # America/Anchorage is UTC-8 (AKDT) in summer, UTC-9 (AKST) in winter. The
 # routine only needs the date, and it fires mid-morning Alaska time, so a fixed
@@ -184,13 +189,137 @@ def cmd_add_run(args):
     return 0
 
 
+# ---------------------------------------------------------------- inbound queue
+# Supabase was retired on 2026-08-05. The scanner opt-in queue now arrives as
+# GitHub ISSUES on this repo labelled "scan-opt-in", which is a real queue with
+# an API, timestamps, state and an audit trail, and it ships with the repo the
+# way everything else here does. The showrunner lists and closes those issues
+# with the GitHub tools. THIS FILE owns the state, which of them we have served,
+# so the answer to "who is still owed a study" is computed rather than eyeballed.
+INBOUND_Q = os.path.join(LEDGER_DIR, "inbound.json")
+
+
+def _inbound_q():
+    if not os.path.exists(INBOUND_Q):
+        return {"version": 1,
+                "note": "The consented Bottleneck Scanner opt-in queue. Intake is a GitHub issue labelled scan-opt-in on this repo. A row lands here when the run picks it up, and served flips when a study ships. INBOUND OUTRANKS OUTBOUND, so anything unserved here is served before any cold scouting.",
+                "queue": []}
+    return json.load(open(INBOUND_Q))
+
+
+def cmd_inbound_add(args):
+    """Record a consented opt-in pulled off the GitHub issue queue."""
+    n = normalize(args.domain)
+    if not n:
+        print("refusing to queue an opt-in with no domain", file=sys.stderr)
+        return 2
+    if not args.email or "@" not in args.email:
+        print("refusing to queue an opt-in with no consented email", file=sys.stderr)
+        return 2
+    d = _inbound_q()
+    for row in d["queue"]:
+        if normalize(row.get("domain")) == n:
+            print("already queued {}".format(n))
+            return 0
+    d["queue"].append({"domain": n, "company": args.company, "email": args.email,
+                       "issue": args.issue, "queued_on": today(),
+                       "served": False, "served_on": None})
+    _save(INBOUND_Q, d)
+    print("queued inbound {}".format(n))
+    return 0
+
+
+def cmd_inbound_next(args):
+    """Print the OLDEST unserved opt-in that is not suppressed, or nothing.
+
+    Exits 0 when there is one to serve, 1 when the queue is clear. That is the
+    signal Phase 0 branches on, so it is computed here rather than judged.
+    """
+    d = _inbound_q()
+    sup = {normalize(r.get("domain")) for r in _load(SUPPRESSIONS, "suppressions")["suppressions"]}
+    leads = {normalize(r.get("domain")) for r in _load(LEADS, "leads")["leads"]}
+    live = [r for r in d["queue"] if not r.get("served")
+            and normalize(r.get("domain")) not in sup
+            and normalize(r.get("domain")) not in leads]
+    live.sort(key=lambda r: r.get("queued_on") or "")
+    if not live:
+        print("inbound queue clear, no unserved consented opt-in")
+        return 1
+    r = live[0]
+    if args.json:
+        print(json.dumps(r, indent=1))
+    else:
+        print("SERVE THIS FIRST  {}  {}  (queued {}, issue {})".format(
+            r["domain"], r.get("email"), r.get("queued_on"), r.get("issue")))
+        if len(live) > 1:
+            print("{} more waiting, oldest first".format(len(live) - 1))
+    return 0
+
+
+def cmd_inbound_serve(args):
+    """Mark an opt-in served. Close its GitHub issue in the same run."""
+    n = normalize(args.domain)
+    d = _inbound_q()
+    for row in d["queue"]:
+        if normalize(row.get("domain")) == n:
+            row["served"] = True
+            row["served_on"] = today()
+            _save(INBOUND_Q, d)
+            print("served inbound {} (close issue {})".format(n, row.get("issue")))
+            return 0
+    print("no queued opt-in for {}".format(n), file=sys.stderr)
+    return 1
+
+
+def cmd_stats(args):
+    """The analytics Supabase used to answer, computed from the git ledger."""
+    leads = _load(LEADS, "leads")["leads"]
+    runs = _load(RUNS, "runs")["runs"]
+    sup = _load(SUPPRESSIONS, "suppressions")["suppressions"]
+    q = _inbound_q()["queue"]
+    by_status, by_segment = {}, {}
+    for l in leads:
+        by_status[l.get("status") or "unknown"] = by_status.get(l.get("status") or "unknown", 0) + 1
+        seg = (l.get("segment") or "unknown").split(",")[0][:34]
+        by_segment[seg] = by_segment.get(seg, 0) + 1
+    scored = [l["fit_score"] for l in leads if isinstance(l.get("fit_score"), int)]
+    out = {
+        "leads": len(leads),
+        "runs": len(runs),
+        "suppressions": len(sup),
+        "inbound_queued": len(q),
+        "inbound_unserved": len([r for r in q if not r.get("served")]),
+        "by_status": by_status,
+        "by_segment": by_segment,
+        "mean_fit_score": round(sum(scored) / len(scored), 1) if scored else None,
+        "with_contact_email": len([l for l in leads if l.get("contact_email")]),
+        "with_draft": len([l for l in leads if l.get("gmail_draft_id")]),
+        "sent": len([l for l in leads if l.get("status") == "sent"]),
+    }
+    if args.json:
+        print(json.dumps(out, indent=1))
+        return 0
+    print("\n  LEAD FLOW, from the git ledger\n")
+    for k in ("leads", "runs", "suppressions", "inbound_queued", "inbound_unserved",
+              "with_contact_email", "with_draft", "sent", "mean_fit_score"):
+        print("  {:22} {}".format(k, out[k]))
+    print("\n  by status")
+    for k, v in sorted(by_status.items(), key=lambda x: -x[1]):
+        print("    {:20} {}".format(k, v))
+    print("\n  by segment")
+    for k, v in sorted(by_segment.items(), key=lambda x: -x[1]):
+        print("    {:36} {}".format(k, v))
+    print()
+    return 0
+
+
 INBOUND = os.path.join(LEDGER_DIR, "inbound_watch.json")
 
 
 def _inbound():
     if not os.path.exists(INBOUND):
         return {"version": 1,
-                "note": "Consecutive runs that could not check INBOUND FIRST. The scanner opt-in queue lives only in Supabase, so an outage makes consented inbound leads invisible and a cold lead ships in their place. This counter makes that cost visible instead of silent.",
+                "note": "Consecutive runs that could not check INBOUND FIRST. The opt-in queue is GitHub issues labelled scan-opt-in on this repo. If it cannot be read, consented inbound leads go invisible and a cold lead ships in their place, so this counter makes that cost visible instead of silent.",
                 "consecutive_skips": 0, "first_skipped": None, "last_checked": None}
     return json.load(open(INBOUND))
 
@@ -243,7 +372,7 @@ def cmd_pending(args):
     else:
         rows = data["pending"]
         if not rows:
-            print("No Supabase writes owed.")
+            print("Nothing owed anywhere. Git is the only store.")
         for row in rows:
             print("{}  {}  {}".format(row.get("queued_on"), row.get("kind"),
                                       row.get("summary")))
@@ -282,8 +411,22 @@ def main():
     s = sub.add_parser("pending"); s.add_argument("--json", action="store_true")
     s.set_defaults(fn=cmd_pending)
 
+    s = sub.add_parser("inbound-add", help="queue a consented opt-in off the GitHub issue queue")
+    s.add_argument("--domain", required=True); s.add_argument("--company")
+    s.add_argument("--email", required=True); s.add_argument("--issue")
+    s.set_defaults(fn=cmd_inbound_add)
+
+    s = sub.add_parser("inbound-next", help="oldest unserved opt-in, exit 1 when the queue is clear")
+    s.add_argument("--json", action="store_true"); s.set_defaults(fn=cmd_inbound_next)
+
+    s = sub.add_parser("inbound-serve", help="mark an opt-in served")
+    s.add_argument("--domain", required=True); s.set_defaults(fn=cmd_inbound_serve)
+
+    s = sub.add_parser("stats", help="the analytics the database used to answer")
+    s.add_argument("--json", action="store_true"); s.set_defaults(fn=cmd_stats)
+
     s = sub.add_parser("inbound-skipped", help="INBOUND FIRST could not run this run")
-    s.add_argument("--reason", default="Supabase unreachable")
+    s.add_argument("--reason", default="inbound issue queue unreadable")
     s.set_defaults(fn=cmd_inbound_skipped)
 
     s = sub.add_parser("inbound-ok", help="INBOUND FIRST ran, clear the counter")

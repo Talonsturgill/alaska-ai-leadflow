@@ -1,0 +1,6 @@
+{
+ "version": 1,
+ "note": "The consented Bottleneck Scanner opt-in queue. Intake is a GitHub issue labelled scan-opt-in on this repo. A row lands here when the run picks it up, and served flips when a study ships. INBOUND OUTRANKS OUTBOUND, so anything unserved here is served before any cold scouting.",
+ "queue": [],
+ "updated": "2026-08-05"
+}

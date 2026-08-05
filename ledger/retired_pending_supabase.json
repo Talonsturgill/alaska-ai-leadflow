@@ -29,5 +29,6 @@
   }
  ],
  "last_backfill": "2026-07-29",
- "backfill_note": "2026-08-05. THIRD CONSECUTIVE RUN owing study_json for the same structural reason. Supabase was fully reachable and every other column landed on all three. This is a MACHINE LIMITATION, not an outage, and it now has a three-run track record. The durable fix is a direct database connection string available to the routine so a file can be streamed with psql, which would clear all three rows in one command. Flagged for a human decision."
+ "backfill_note": "2026-08-05. THIRD CONSECUTIVE RUN owing study_json for the same structural reason. Supabase was fully reachable and every other column landed on all three. This is a MACHINE LIMITATION, not an outage, and it now has a three-run track record. The durable fix is a direct database connection string available to the routine so a file can be streamed with psql, which would clear all three rows in one command. Flagged for a human decision.",
+ "RETIRED": "2026-08-05. Supabase was retired and this debt is VOID rather than outstanding. Every study_json it owed lives in git as runs/<date>/<slug>/study.json, which is the record of authority and always was. Kept as history, read by nothing."
 }

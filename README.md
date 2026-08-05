@@ -12,7 +12,6 @@ CLAUDE.md.
 
 ## One-time setup
 
-1. Database. Apply db/schema.sql to the Supabase project alaska-ai-dashboard
    (schema `leadflow`). It is namespaced and reversible, and the study columns are
    an additive, re-runnable migration.
 2. Repo. This one, private. The shipped studies and dossiers live under runs/ here,
@@ -20,7 +19,6 @@ CLAUDE.md.
 3. Routine. At claude.ai/code/routines, create a new routine.
    - Point it at this repo.
    - Paste prompts/ROUTINE_PROMPT.txt as the prompt.
-   - Include the Gmail and Supabase connectors, and only what it needs.
    - Set a weekday or daily schedule and a strong model.
    - Connect Gmail AS docket@alaskaaihq.com (the Google Workspace mailbox on the
      domain). Drafts then land in that mailbox already from the right address, so
@@ -44,7 +42,6 @@ The showrunner run orchestrates two rooms of agents in .claude/agents.
   with an inline architecture diagram, plus a PDF, and outreach-writer writes the
   very short email that carries it.
 
-Only the showrunner touches Supabase, Python, and Gmail. The method the room runs
 is documented and sourced in knowledge/ENGINEERING_METHOD.md, AI_SCOPING.md, and
 ROI_METHOD.md.
 
@@ -57,7 +54,6 @@ ROI_METHOD.md.
   live here).
 - knowledge/LEAD_RESEARCH.md and ALASKA_MARKET.md, how it researches and the market
   it grounds in.
-The Supabase leadflow tables are the memory that keeps it from repeating itself.
 
 ## Layout
 - prompts/         routine_instructions.md (master) and ROUTINE_PROMPT.txt
@@ -65,5 +61,20 @@ The Supabase leadflow tables are the memory that keeps it from repeating itself.
 - knowledge/       the research notes, the engineering method, and the study spec
 - .claude/agents/  the two rooms, the critics, and the writer
 - scripts/         build_study_page.py (renders the Field Study)
-- db/              schema.sql (the Supabase leadflow schema of record)
 - runs/            the shipped Field Study and dossier per company, private
+
+## The database
+
+It is git. `ledger/*.json`, read and written only through `scripts/ledger.py`.
+Schema and rationale in `db/SCHEMA.md`. Supabase was retired on 2026-08-05.
+
+Structured fields live in the ledger. Large documents (the study object, the
+dossier, the rendered page, the demo) live as files under `runs/<date>/<slug>/`
+and are referenced by `study_path`, because git stores documents better than a
+jsonb column does.
+
+```
+python scripts/ledger.py stats          what the dashboard used to answer
+python scripts/ledger.py check <domain> exit 1 if we may not contact them
+python scripts/ledger.py inbound-next   exit 1 when the opt-in queue is clear
+```

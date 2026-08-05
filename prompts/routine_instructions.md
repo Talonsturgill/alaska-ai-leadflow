@@ -34,7 +34,7 @@ is that we did the real work and told the truth.
 4. DEDUPE. Never engage a company already in the git ledger, ledger/leads.json or
    ledger/suppressions.json. Match on normalized domain, COMPUTED by
    scripts/ledger.py rather than judged by eye. Enforce at Phase 0 so you never
-   burn a run on a repeat. Dual-write Supabase when it is up, never depend on it.
+   burn a run on a repeat. Git is the only database, see db/SCHEMA.md.
 5. ONE lead, gone deep. Not many, not shallow. Both rooms actually run. If the
    finished study could have been produced for any other company, it failed.
 6. VOICE. The carrier email obeys knowledge/OUTREACH_CRAFT.md to the letter. No em
@@ -100,9 +100,8 @@ is that we did the real work and told the truth.
 
 Tools. WebSearch and WebFetch for all research (they route through Anthropic and
 work on any network policy). Python plus scripts/ledger.py for every dedupe read
-and every record write, the git memory of record. The Supabase connector for the
-inbound scanner queue and for the dual-write when it is up (project
-alaska-ai-dashboard, schema leadflow), never as a gate on the run. Python for
+and every record write, the ONLY database there is. The GitHub tools for the
+inbound opt-in queue, which is issues labelled scan-opt-in on this repo. Python for
 scripts/build_study_page.py to render the study. The Gmail connector create_draft
 for delivery. It CANNOT ATTACH FILES, its attachments parameter does not work, and
 no run may attempt it, past runs that tried produced unreadable garbage drafts.
@@ -112,7 +111,7 @@ the draft is written. Nothing is ever attached and nothing is left for Talon to
 download, he reads it and hits send. Every draft is created with BOTH a
 plaintext body and an htmlBody (simple p tags and real links), and every draft is
 READ BACK and verified before the run counts it delivered. ONLY the showrunner
-touches Supabase, Python, Gmail, and the two git repos. The subagents research
+touches the ledger, Python, Gmail, and the two git repos. The subagents research
 and think and hand you structured JSON.
 
 Date is America/Anchorage. Scratch lives in out/<date>/ during the run. The shipped
@@ -142,7 +141,7 @@ At wake, write out/<date>/run_state.json with each phase pending, set each to do
 with its artifact path as you finish. If the session restarts, resume from
 run_state rather than starting over. The ledger/runs.json row you add at Phase 8 is
 the durable record that a run completed for this date, and it is committed to git,
-so it survives regardless of whether Supabase was reachable.
+and it is the only record, so nothing can be owed to anywhere else.
 
 ---
 
@@ -151,78 +150,67 @@ so it survives regardless of whether Supabase was reachable.
 1. Read CLAUDE.md, config/icp.yaml, and all of knowledge/. Absorb the ICP, the
    scoring criteria, the market notes, the engineering method, the AI-scoping
    conscience, the ROI method, and the Field Study contract.
-2. Build the EXCLUDE set from the GIT LEDGER, which is always available because it
+2. Build the EXCLUDE set from the GIT LEDGER, which is the only memory there is and
    ships with the checkout. Run `python scripts/ledger.py exclude-set --json` and
    hold the result as the run's EXCLUDE set. Test any candidate with
-   `python scripts/ledger.py check <domain>`, which exits 1 on a match. This is
-   the dedupe of record and it cannot fail for network reasons.
-   THEN try Supabase, as a bonus rather than a gate. If it is reachable, reconcile
-   leadflow.leads and leadflow.suppressions into the ledger so anything recorded
-   only in the database gets picked up, and carry on. If it is unreachable, set
-   DEGRADED MODE in run_state, continue on the git EXCLUDE set, and make the
-   delivery summary say plainly that inbound priority was skipped and Supabase
-   writes are owed. Never stop the run over Supabase.
+   `python scripts/ledger.py check <domain>`, which exits 1 on a match. This is the
+   dedupe of record and it cannot fail for network reasons.
+   THERE IS NO SECOND DATABASE. Supabase was retired on 2026-08-05. Do not query
+   it, do not dual-write to it, do not reconcile against it, and do not treat its
+   absence as degraded mode. The schema is db/SCHEMA.md.
+
 3. INBOUND FIRST. Inbound ALWAYS outranks cold scouting. Someone who asked for a
-   study beats anyone we could find, without exception, and the rest of this step
-   exists to make sure an outage cannot quietly reverse that.
+   study beats anyone we could find, without exception.
 
-   This step REQUIRES Supabase, because the scanner queue is the one thing git
-   cannot hold, a public form has to write somewhere. So Supabase gets its HARDEST
-   retry here, harder than anywhere else in the run, because this is the only thing
-   that actually depends on it. Try the query, and on failure retry with backoff at
-   roughly 15s, 30s, 60s and 120s before giving up. Losing a day of inbound
-   priority is worth four minutes of waiting.
+   The queue is a GitHub ISSUE on this repo labelled `scan-opt-in`. List the open
+   ones with the GitHub tools, oldest first. Each issue body carries domain, email
+   and company, one per line.
 
-   If it is reachable, run `python scripts/ledger.py inbound-ok`. If that reports a
-   BACKLOG from previous skipped runs, DRAIN IT. Serve inbound every run, oldest
-   first, until the queue is empty, and do not resume cold scouting until it is.
-   Cold leads shipped during the outage took those people's place and that debt is
-   paid before anything else.
+   For each one not already queued, run
+   `python scripts/ledger.py inbound-add --domain <d> --email <e> --company <c> --issue <n>`
 
-   If it is unreachable after the full retry, run
-   `python scripts/ledger.py inbound-skipped --reason "<what failed>"`, then go to
-   Phase 1 cold scouting. The counter tracks consecutive skips, and at three or
-   more it tells you to ESCALATE. When it does, the delivery summary leads with it,
-   at the top and in plain words, not buried in a footnote. A consented opt-in
-   sitting unserved for three days while we cold-mail strangers is the single worst
-   thing this routine can quietly do, and the only defence is saying it loudly.
+   Then run `python scripts/ledger.py inbound-next`. It EXITS 0 with the oldest
+   unserved opt-in, and EXITS 1 when the queue is clear. It already skips anything
+   suppressed or already in leads, so a disqualified opt-in can never come back
+   around, and that judgement is computed rather than made by eye.
 
-   Otherwise, before any scouting, check for a consented Bottleneck Scanner opt-in
-   that has not been served,
-   select id, company, domain, notes, status, created_at from leadflow.leads
-   where (why_picked = 'inbound scan opt-in' or notes ilike '%inbound scan opt-in%')
-     and study_json is null
-   order by created_at asc;
-   Drop any whose normalized domain sits in leadflow.suppressions (leave the row,
-   note it in one line for the delivery summary). If any survive, the OLDEST is
-   today's company. SKIP PHASE 1 ENTIRELY, no scouts, and go straight to Phase 2
-   on it. Inbound outranks outbound, always, someone who asked for the study is
-   worth more than anyone we could find cold. Serve one per run, the rest wait in
-   age order for the following days.
+   If it exits 0, THAT COMPANY IS TODAY'S LEAD. SKIP PHASE 1 ENTIRELY, no scouts,
+   go straight to Phase 2. Serve one per run, the rest wait in age order. When the
+   study ships, run `ledger.py inbound-serve --domain <d>` and CLOSE THE ISSUE.
+   Then run `ledger.py inbound-ok`.
+
+   If it exits 1, run `python scripts/ledger.py inbound-ok` and go to Phase 1 cold
+   scouting.
+
+   If the issue list itself cannot be read, run
+   `python scripts/ledger.py inbound-skipped --reason "<what failed>"`, then cold
+   scout. The counter tracks consecutive skips and at three or more it tells you to
+   ESCALATE, and the delivery summary leads with it in plain words. A consented
+   opt-in sitting unserved while we cold-mail strangers is the single worst thing
+   this routine can quietly do.
+
+   ONE HANDOFF IS STILL OPEN, and say so in the summary if the queue reads clear
+   for many runs. The scanner backend lives in a repo this routine cannot reach and
+   still writes opt-ins to the retired database, so until it is repointed at the
+   issue queue an opt-in has to be queued by hand. db/SCHEMA.md carries the detail.
    Rules for an inbound lead:
-   - THE GIVEN CONTACT. The opt-in stamp in notes carries the requester's email,
-     "inbound scan opt-in YYYY-MM-DD (email)", and scanner.scans.consent_email
-     for the domain is the backup copy of the same address. It was GIVEN by the
-     prospect, not found, so it is the send-to and it outranks anything
-     people-finder surfaces. The fact-checker records it contact_ok true with
-     contact_source "inbound scan opt-in", it will not appear on any fetched page
-     and that is expected, provenance is the verification. people-finder still
-     runs, to learn who the address likely belongs to and the decision-maker
-     picture, never to replace it.
-   - ANCHORING STILL HOLDS. Do not read the scan's observations, tags, or
-     headline into any room, and do not fetch the scan result page for them. The
-     rooms get claims.json and nothing else, and they map the whole business
-     fresh. The shallow scan is marketing, the study is the real work, and the
-     study must never echo the scan.
+   - THE GIVEN CONTACT. The email in the issue was GIVEN by the prospect, not
+     found, so it is the send-to and it outranks anything people-finder surfaces.
+     The fact-checker records it contact_ok true with contact_source "inbound scan
+     opt-in", it will not appear on any fetched page and that is expected,
+     provenance is the verification. people-finder still runs, to learn who the
+     address likely belongs to, never to replace it.
+   - ANCHORING STILL HOLDS. Do not read the scan's observations into any room. The
+     rooms get claims.json and nothing else, and they map the whole business fresh.
+     The shallow scan is marketing, the study is the real work.
    - The carrier email MAY say plainly that this study exists because they asked
      for it after their scan. That is the hook, and it is true.
-   - A KILL verdict on an inbound company suppresses and replaces like any other,
-     the replacement path is the normal scout flow, resume at Phase 1. Phase 8's
-     upsert updates the existing row, keep why_picked "inbound scan opt-in".
+   - A KILL verdict suppresses and replaces like any other, resume at Phase 1.
+
 4. Guard against a double fire. Run `python scripts/ledger.py ran-today`, which
    exits 0 when a success row already exists for today. If it does, a run already
    shipped, so exit without picking a second lead. Cross-check leadflow.runs as
-   well when Supabase is up.
+   well.
 5. Set today's date (America/Anchorage), create out/<date>/, write run_state.json.
 6. Note timely Alaska context (fishing openers, freeze-up, tourist season, PFD
    timing, Iditarod, a live legislative session) so the scouts do not miss an angle.
@@ -560,18 +548,12 @@ until it does. Write out/<date>/outreach.json.
    idempotent upsert on normalized domain, so the whole run is safe to retry.
    Then `python scripts/ledger.py add-run --status success --shortlist N`. Commit
    the ledger alongside the archive from step 1, in the same push.
-6. DUAL-WRITE SUPABASE when it is reachable, for the dashboard and the analytics.
-   The same lead into leadflow.leads with ONE upsert, every column populated,
-   company, normalized domain, segment, location, status, fit_score, why_picked,
-   contact_name, contact_role, contact_email, contact_source, competitors (jsonb),
-   ai_opportunities (jsonb), sources (jsonb), dossier_md, outcome,
-   recommended_build, roi_summary, study_json (jsonb), study_path, draft_subject,
-   draft_body, gmail_draft_id, run_id, plus the leadflow.runs row.
-   IDEMPOTENCY. The unique index on lower(domain) is the safety net. On conflict,
-   update the existing row rather than creating a second draft.
-   If Supabase is DOWN, append both rows to ledger/pending_supabase.json instead
-   and carry on. The run is fully recorded either way, and the backfill is owed on
-   the first run after it recovers.
+6. THAT IS THE WHOLE RECORD. There is no dual-write and nothing is owed
+   anywhere else. The structured fields are in ledger/, the study object, the
+   dossier, the rendered page and the demo are files under runs/<date>/<slug>/,
+   and study_path in the lead row points at them. Confirm with
+   `python scripts/ledger.py stats` that the lead count grew by one and that the
+   run is recorded, then commit the ledger alongside the archive in the same push.
 
 ## PHASE 9 - DELIVER AND SELF-CHECK
 
@@ -599,9 +581,8 @@ COMPLETION GATE, verify before you finish.
   to download. The study is archived to runs/<date>/ in this private repo and
   the delivery summary carries the live link.
 - Recorded. ledger/leads.json has the lead and ledger/runs.json has this run's
-  row, both committed, nothing duplicated. Supabase carries the same two rows if
-  it was reachable, or ledger/pending_supabase.json carries the backfill if it
-  was not.
+  row, both committed, nothing duplicated, and `ledger.py stats` reflects both.
+  There is no second store to reconcile against.
 - Draft only. Nothing was sent.
 If any check fails and cannot be fixed this run, do not paper over it. Draft Talon a
 note stating exactly what failed.
@@ -610,31 +591,12 @@ note stating exactly what failed.
 
 ## FAILURE PROTOCOL
 
-- Supabase unreachable at any point. DEGRADE, never stop. Dedupe and the run audit
-  live in the git ledger, so the run proceeds normally on it. Skip INBOUND FIRST,
-  queue every owed row in ledger/pending_supabase.json, and make the delivery
-  summary say plainly that Supabase was down, that inbound priority was skipped,
-  and that a backfill is owed. A database outage costs inbound priority for one
-  day. It never costs the day's outreach.
-- Supabase reports ACTIVE_HEALTHY but every query fails with 28P01, password
-  authentication failed. This happened on 2026-07-29 for about three hours and
-  then cleared on its own. Report the OBSERVABLES and take the action, do not
-  narrate a root cause you cannot prove.
-  What to record. Which Postgres roles were rejected (it hit both postgres and
-  supabase_read_only_user), and whether the NON-database paths still answer. Try
-  an edge function endpoint and the REST gateway. If those serve normally, as they
-  did that day, the project itself is up and the failure is between the connector
-  and the database, not the project being unavailable.
-  What NOT to conclude. get_advisors may return "currently hibernated and will
-  wake on next supported request". That message is not reliable evidence on its
-  own, and on 2026-07-29 it was misleading. A project in daily use does not idle
-  pause, so do not reach for that explanation, and do not recommend a plan change
-  or a support ticket off one API string. The repeated 28P01 across two roles is
-  the stronger signal and it points at credentials.
-  What to do. Have Talon re-authorize the Supabase connector. It may also clear by
-  itself as tokens refresh. Either way DEGRADE and carry on, the git ledger covers
-  the run, and note in the summary that Supabase was unreachable and what the
-  observables were.
+- The inbound issue queue cannot be read. DEGRADE, never stop. Dedupe and the run
+  audit live in the git ledger, which ships with the checkout, so the run proceeds
+  normally. Run `ledger.py inbound-skipped --reason "<what failed>"`, cold scout,
+  and make the delivery summary say plainly that inbound priority was skipped. At
+  three consecutive skips the summary LEADS with it. A GitHub outage costs inbound
+  priority for one day. It never costs the day's outreach.
 - A lead disqualifies at any gate (unverifiable, values conflict, no genuine AI
   ROI, no contact path worth pursuing). Disqualify and REPLACE. Suppress it with
   its reason, leave a one-line note, take the next name on the replacement queue,
