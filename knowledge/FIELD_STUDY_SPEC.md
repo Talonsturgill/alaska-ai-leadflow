@@ -96,7 +96,8 @@ own credentials instead: "death moves."
 
 | | Budget | Why |
 |---|---|---|
-| Words | **2,000 to 3,000** | 4,500 earns ~20 percent read; proposal data shows no evidence longer wins |
+| Prose words | **2,000 to 3,000** | 4,500 earns ~20 percent read; proposal data shows no evidence longer wins. PROSE ONLY, the text a reader moves through linearly |
+| Structure words | reported, not capped | Table cells, source lines and figure labels are scanned rather than read. Counting them against a reading-time budget measures the wrong thing, and on 2026-08-05 it made a 2,951-word study report 3,858 and fight a gate it already passed |
 | Headings | **12 to 18**, max 3 levels | Butterick; NN/g at most 3 sizes |
 | Bullets | **<= 25, never more than paragraphs** | Bullets delete the relationships between ideas. Rows of the before/after figure are parallel by design, so they are reported but not charged |
 | Bold | **<= 30 percent** | Bold everywhere is bold nowhere |
