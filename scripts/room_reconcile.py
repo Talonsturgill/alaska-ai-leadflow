@@ -39,6 +39,15 @@ WHAT IT CHECKS
      feasibility gate removed. That happened in miniature on 2026-08-05, where a
      phase two that might never be funded was becoming the headline.
 
+  6. THE SHOWRUNNER FILED A SUMMARY INSTEAD OF THE ROOM'S OUTPUT. Each section of
+     engineering.json is checked against the `# OUTPUT` block of the agent that
+     contracts it, so the agent spec is the schema and no second copy can drift.
+     This is why check 2 above had never examined anything: the PRD in
+     engineering.json kept ZERO of the product-manager's ten contracted keys.
+     The fields a summary drops are the caveats, non_goals, open_questions,
+     assumptions, conservative_clears, base_rate_note, and a dropped key is read
+     by nobody, where dropped prose would at least face a critic.
+
 Usage:
   python scripts/room_reconcile.py --dir out/<date>
 """
@@ -132,9 +141,116 @@ def mentions(haystack, phrase, need=3):
     return True
 
 
+# Which agent contracts each engineering.json section. The agent spec IS the
+# schema, so this stays in sync by construction rather than by anyone
+# remembering to update a second copy.
+SECTION_AGENT = {
+    "prd": "product-manager",
+    "design": "staff-engineer",
+    "roadmap": "delivery-lead",
+    "roi": "roi-analyst",
+}
+
+# Fields whose absence silently DISABLES a check rather than merely losing
+# detail. Missing one of these is always a failure, never a warning, because a
+# check with no input passes and looks like coverage.
+LOAD_BEARING = {"non_goals"}
+
+
+def contracted_keys(agent, repo_root):
+    """The top-level keys an agent's `# OUTPUT` block promises to return."""
+    path = os.path.join(repo_root, ".claude", "agents", agent + ".md")
+    if not os.path.exists(path):
+        return None
+    src = open(path).read()
+    i = src.find("# OUTPUT")
+    if i < 0:
+        return None
+    j = src.find("{", i)
+    if j < 0:
+        return None
+    depth, blob = 0, None
+    for k in range(j, len(src)):
+        if src[k] == "{":
+            depth += 1
+        elif src[k] == "}":
+            depth -= 1
+            if depth == 0:
+                blob = src[j:k + 1]
+                break
+    if blob is None:
+        return None
+    keys, depth = [], 0
+    for tok in re.finditer(r'[{}]|"([\w_]+)"\s*:', blob):
+        t = tok.group(0)
+        if t == "{":
+            depth += 1
+        elif t == "}":
+            depth -= 1
+        elif depth == 1:
+            keys.append(tok.group(1))
+    return keys
+
+
+def check_shapes(eng, repo_root, fails, warns, notes):
+    """Did the showrunner persist what the agents returned, or its own summary?
+
+    Check 6, added 2026-08-05 after the non-goal check was found to have never
+    examined anything. The cause was not the check. engineering.json held a
+    showrunner rewrite: four ad-hoc keys over the product-manager's ten, six of
+    nine dropped from the design, eight of nine from the ROI.
+
+    Two failures in one. Every downstream check reading a contracted key found
+    nothing and passed in silence. And the fields a summary drops are the
+    caveats, non_goals, open_questions, assumptions, conservative_clears,
+    base_rate_note, build_vs_buy, spike_to_retire_it. That is the drift pattern
+    operating at the filing cabinet instead of in the prose, and it is worse
+    there, because prose gets read by a critic and a dropped key gets read by
+    nobody.
+    """
+    for sec, agent in SECTION_AGENT.items():
+        want = contracted_keys(agent, repo_root)
+        if not want:
+            warns.append(f"cannot read the contracted output shape for {agent}, "
+                         f"so the {sec} section was not shape-checked")
+            continue
+        got = set((eng.get(sec) or {}).keys())
+        if not got:
+            fails.append(f"engineering.json has no {sec} section at all, and "
+                         f"{agent} is contracted to produce one")
+            continue
+        missing = [k for k in want if k not in got]
+        kept = len(want) - len(missing)
+
+        if kept * 2 < len(want):
+            fails.append(
+                f"THE {sec.upper()} IS A REWRITE, NOT {agent.upper()}'S OUTPUT\n"
+                f"        it kept {kept} of {len(want)} contracted keys\n"
+                f"        dropped: {', '.join(missing)}\n"
+                f"        persisted instead: {', '.join(sorted(got - set(want))) or '(nothing extra)'}\n"
+                "        Persist the agent's JSON VERBATIM. A summary drops the\n"
+                "        caveats and silently disables every check downstream.")
+            continue
+
+        lost = [k for k in missing if k in LOAD_BEARING]
+        if lost:
+            fails.append(
+                f"the {sec} is missing {', '.join(lost)}, which is not a detail. "
+                f"A check that reads it has no input, so it passes and looks "
+                f"like coverage. {agent} is contracted to produce it.")
+        rest = [k for k in missing if k not in LOAD_BEARING]
+        if rest:
+            warns.append(f"the {sec} is missing contracted key(s) {', '.join(rest)} "
+                         f"from {agent}, check they were not summarised away")
+        if not missing:
+            notes.append(f"the {sec} carries all {len(want)} keys {agent} contracts")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dir", required=True, help="out/<date>")
+    ap.add_argument("--repo", default=os.path.dirname(os.path.dirname(
+        os.path.abspath(__file__))), help="repo root, for .claude/agents")
     ap.add_argument("--strict", action="store_true")
     a = ap.parse_args()
 
@@ -242,6 +358,9 @@ def main():
                     fails.append(f"{label.upper()} PROMISES A KILLED CAPABILITY\n"
                                  f"        the feasibility gate killed: {subject[:100]}\n"
                                  f"        at {path}\n        {text.strip()[:130]}")
+
+    # 6. Did the showrunner persist the agents' output, or its own summary?
+    check_shapes(eng, a.repo, fails, warns, notes)
 
     scan_for_killed("roadmap", roadmap)
     scan_for_killed("PRD", prd)

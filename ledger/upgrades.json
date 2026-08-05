@@ -104,6 +104,16 @@
     "scripts/delivery_check.py",
     "prompts/routine_instructions.md"
    ]
+  },
+  {
+   "date": "2026-08-05",
+   "change": "room_reconcile check 6, the shape check. Each engineering.json section is verified against the `# OUTPUT` block of the agent that contracts it, so the agent spec is the schema and no second copy can drift. A section keeping fewer than half its contracted keys fails as a rewrite, a missing non_goals fails outright because a check with no input passes and looks like coverage, and other missing keys warn. The contract now says to persist each agent's JSON VERBATIM and says why.",
+   "evidence": "Ran down the loose end from the review, that the PRD emitted non_goals: null. The null was a symptom. engineering.json was not the room's output at all, it was a showrunner summary: the PRD kept ZERO of product-manager's ten contracted keys, the ROI kept one of nine, the design three of nine. Two failures in one. Every downstream check reading a contracted key found nothing and passed in silence, which is why the non-goal check had never examined anything in its life. And the fields a summary drops are the caveats, non_goals, open_questions, assumptions, conservative_clears, base_rate_note, build_vs_buy, spike_to_retire_it. The drift pattern operating at the filing cabinet rather than in the prose, where it is worse, because dropped prose faces a critic and a dropped key is read by nobody.",
+   "verified_how": "Fires correctly on the real 2026-08-05 room, three rewrite failures naming exactly which keys were dropped. Then, deliberately, PROVED IT IS PASSABLE, because an unsatisfiable gate was the mistake made earlier the same day with the htmlBody check: a well-shaped room carrying every contracted key passes with zero failures and zero warnings. Four negatives, all caught, a rewrite, a missing non_goals, a missing non-load-bearing key which warns rather than fails, and an absent section.",
+   "files": [
+    "scripts/room_reconcile.py",
+    "prompts/routine_instructions.md"
+   ]
   }
  ]
 }

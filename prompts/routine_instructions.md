@@ -359,7 +359,23 @@ pick, and the feasibility notes.
   the strategist's full opportunity map, the Later lane carries the best of what
   the pick left behind so nothing found is wasted.
 
-Collect the four into out/<date>/engineering.json.
+Collect the four into out/<date>/engineering.json, AS THEY RETURNED THEM. Each
+agent's JSON goes in VERBATIM under its own key (prd, design, roadmap, roi), with
+every field it was contracted to produce, spelled the way its `# OUTPUT` block
+spells it. Do not rewrite, rename, summarise or trim on the way in.
+
+This is not tidiness. On 2026-08-05 the showrunner wrote its own four-key summary
+over the product-manager's ten-key PRD, six of nine keys over the design, and
+eight of nine over the ROI. Two things went wrong at once. Every downstream check
+that reads a contracted key found nothing and silently passed, which is how
+room_reconcile's non-goal check went its whole life without examining anything.
+And look at WHICH fields a summary drops: non_goals, open_questions, assumptions,
+conservative_clears, base_rate_note, build_vs_buy, spike_to_retire_it. The
+caveats. The drift pattern operating at the filing cabinet rather than in the
+prose, and the room's restraint is exactly what gets lost.
+
+If you want a summary, add a key beside the agent's object. Never in place of it.
+scripts/room_reconcile.py checks this against the agent specs and fails the run.
 
 ## PHASE 5 - ASSEMBLE AND RENDER THE STUDY
 
