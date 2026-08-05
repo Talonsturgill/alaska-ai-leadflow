@@ -59,6 +59,15 @@
    "files": [
     "prompts/routine_instructions.md"
    ]
+  },
+  {
+   "date": "2026-08-05",
+   "change": "Phase 7 gained an escalation ladder for the lead-critic loop, and a step that surfaces a READY TO PROMOTE voice pattern as a drafted OUTREACH_CRAFT diff instead of leaving it in a file nothing reads. Rounds one through three refine the email, unchanged. A fourth fix verdict redirects the work to the BRIEF rather than the sentences, keeping the draft in hand, and continued fix verdicts after that condemn the opening FACT rather than the writing.",
+   "evidence": "Today's email took three lead-critic rounds and round two found that round one's fix had MOVED the defect rather than killed it, which is the signature of a brief that is wrong rather than an email that is unfinished. Separately, VOICE_DELTAS has carried lengthened as READY TO PROMOTE across six sends and it was never surfaced at a moment anyone could act on it, because promotion is correctly a human decision and nothing put the decision in front of the human.",
+   "verified_how": "Read back against the Phase 7 text and the completion gate. The threshold was set at four rounds by the maintainer, over an earlier draft that escalated at two, on the grounds that forty words legitimately need a few passes and an early fix verdict says nothing. The escalation changes WHERE the run looks, never how many rounds it may spend, so the ITERATION LAW is untouched. The promote step is proposal-only and names OUTREACH_CRAFT.md as never-edit, per the guard on this file.",
+   "files": [
+    "prompts/routine_instructions.md"
+   ]
   }
  ]
 }

@@ -110,24 +110,6 @@ all lean together.
 
 ---
 
-## 5. The email brief is the defect, and nothing enforces that
-
-**Evidence.** The 2026-08-05 email took three lead-critic rounds. Round two found
-that round one's fix had MOVED the defect rather than killed it. VOICE_DELTAS has
-carried "fix the brief, not the individual email" for weeks, and `lengthened` has
-been READY TO PROMOTE across five separate sends without ever being promoted,
-because promotion is correctly a human decision that nothing surfaces at the right
-moment.
-
-**The fix.** When the lead-critic returns `fix` twice on the same email, the
-showrunner must rewrite the BRIEF and say what it changed, rather than passing the
-same brief back with one more instruction stapled on. And a READY TO PROMOTE
-pattern should appear in the delivery summary as a decision request with the
-suggested wording already drafted, so the human is approving a diff rather than
-being handed homework.
-
----
-
 ## 6. The rooms cannot see each other's constraints
 
 **Evidence.** On 2026-08-05 the product-manager wrote its PRD before the
@@ -165,6 +147,17 @@ than all of them and costs the most to get.
 ---
 
 ## SHIPPED
+
+- **2026-08-05, item 5, the Phase 7 escalation ladder.** Rounds are refinement
+  and nothing caps them. What changes at the FOURTH fix verdict is where the run
+  looks: the defect is in the brief, not in the sentences it keeps moving, so
+  change the brief and hand the writer the draft it already has. Continued fix
+  verdicts after that condemn the opening FACT. The four-round threshold is the
+  maintainer's, over a draft that escalated at two, because forty words
+  legitimately need a few passes and an early fix verdict says nothing. Phase 7
+  also now surfaces a READY TO PROMOTE voice pattern in the delivery summary with
+  the OUTREACH_CRAFT wording already drafted, so the human approves a diff rather
+  than being handed homework. `lengthened` sat at six sends before anyone did.
 
 - **2026-08-05, item 6, scripts/room_reconcile.py.** Cross-checks the room's four
   parallel outputs before they become a study. Killed capability promised anyway,
