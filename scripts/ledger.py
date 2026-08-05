@@ -189,6 +189,101 @@ def cmd_add_run(args):
     return 0
 
 
+# ------------------------------------------------------------------- outcomes
+# Added 2026-08-05. Seventeen leads, sixteen drafts, one confirmed send and not
+# one recorded reply. Every quality gate in this routine is tuned against a
+# target nobody has measured, which makes the whole anti-hype thesis an article
+# of faith. It might be exactly right. It might be why nobody answers. This is
+# the cheapest possible way to find out, and until it has data every other
+# improvement to this machine is a guess wearing a lab coat.
+OUTCOMES = ("no_reply", "replied", "meeting", "won", "lost", "bounced", "unsubscribed")
+
+
+def cmd_record_outcome(args):
+    n = normalize(args.domain)
+    if args.outcome not in OUTCOMES:
+        print("outcome must be one of {}".format(", ".join(OUTCOMES)), file=sys.stderr)
+        return 2
+    data = _load(LEADS, "leads")
+    for row in data["leads"]:
+        if normalize(row.get("domain")) == n:
+            row["result"] = args.outcome
+            row["result_on"] = today(args.date)
+            if args.note:
+                row["result_note"] = args.note
+            _save(LEADS, data)
+            print("recorded {} for {}".format(args.outcome, n))
+            return 0
+    print("no lead for {}".format(n), file=sys.stderr)
+    return 1
+
+
+def cmd_scoreboard(args):
+    """What actually happened, cut the ways that would change how we work.
+
+    Every cut here answers a question the routine currently decides by taste.
+    """
+    leads = _load(LEADS, "leads")["leads"]
+    sent = [l for l in leads if l.get("gmail_draft_id") or l.get("status") in ("drafted", "sent")]
+    known = [l for l in sent if l.get("result")]
+    good = {"replied", "meeting", "won"}
+
+    def rate(rows):
+        k = [r for r in rows if r.get("result")]
+        if not k:
+            return None, 0
+        return round(100.0 * len([r for r in k if r["result"] in good]) / len(k)), len(k)
+
+    def cut(label, keyfn):
+        buckets = {}
+        for l in sent:
+            buckets.setdefault(keyfn(l), []).append(l)
+        out = []
+        for k, rows in sorted(buckets.items()):
+            r, n = rate(rows)
+            out.append((k, r, n, len(rows)))
+        return label, out
+
+    cuts = [
+        cut("by segment", lambda l: (l.get("segment") or "unknown").split(",")[0][:30]),
+        # The thesis this shop is betting on. If restraint does not out-reply a
+        # normal pitch, we are paying for honesty in replies and should know it.
+        cut("recommended against a build",
+            lambda l: "yes" if "no ai" in (l.get("recommended_build") or "").lower()
+            or "no ai" in (l.get("outcome") or "").lower()
+            or "not recommended" in (l.get("outcome") or "").lower() else "no"),
+        cut("contact was a named human",
+            lambda l: "yes" if l.get("contact_name") else "general inbox"),
+        cut("fit score", lambda l: str(l.get("fit_score") or "?")),
+    ]
+    overall, n_known = rate(sent)
+    if args.json:
+        print(json.dumps({"drafted": len(sent), "outcome_known": n_known,
+                          "reply_rate_pct": overall,
+                          "cuts": {lbl: {str(k): {"rate": r, "known": kn, "total": t}
+                                         for k, r, kn, t in rows} for lbl, rows in cuts}},
+                         indent=1))
+        return 0
+    print("\n  SCOREBOARD, what actually happened\n")
+    print("  drafted or sent        {}".format(len(sent)))
+    print("  outcome recorded       {}".format(n_known))
+    if not n_known:
+        print("\n  NOTHING IS RECORDED YET, so every number below is blank and every")
+        print("  quality decision this routine makes is currently unmeasured.")
+        print("  After a send lands, run:")
+        print("    ledger.py record-outcome --domain <d> --outcome replied|no_reply|meeting|won")
+        print()
+        return 0
+    print("  reply rate             {}%  (of {} known)".format(overall, n_known))
+    for lbl, rows in cuts:
+        print("\n  {}".format(lbl))
+        for k, r, kn, t in rows:
+            shown = "{}%".format(r) if r is not None else "  -"
+            print("    {:32} {:>4}   known {}/{}".format(k, shown, kn, t))
+    print()
+    return 0
+
+
 # ---------------------------------------------------------------- inbound queue
 # Supabase was retired on 2026-08-05. The scanner opt-in queue now arrives as
 # GitHub ISSUES on this repo labelled "scan-opt-in", which is a real queue with
@@ -421,6 +516,15 @@ def main():
 
     s = sub.add_parser("inbound-serve", help="mark an opt-in served")
     s.add_argument("--domain", required=True); s.set_defaults(fn=cmd_inbound_serve)
+
+    s = sub.add_parser("record-outcome", help="what actually happened after a send")
+    s.add_argument("--domain", required=True)
+    s.add_argument("--outcome", required=True, help="|".join(OUTCOMES))
+    s.add_argument("--note"); s.add_argument("--date")
+    s.set_defaults(fn=cmd_record_outcome)
+
+    s = sub.add_parser("scoreboard", help="reply rate, cut the ways that change how we work")
+    s.add_argument("--json", action="store_true"); s.set_defaults(fn=cmd_scoreboard)
 
     s = sub.add_parser("stats", help="the analytics the database used to answer")
     s.add_argument("--json", action="store_true"); s.set_defaults(fn=cmd_stats)
