@@ -507,10 +507,51 @@ If the study passes, continue.
    gets it clicked.
 2. Spawn lead-critic to judge it on specific, value-first with a small ask, and
    human with zero tells. If it does not ship, apply its fix, re-run the writer,
-   and re-critic. Loop until it ships, no round cap, per the ITERATION LAW. If
-   the same fix bounces twice without progress, the brief to the writer is the
-   problem, sharpen it (name the specific fact to open on, the exact kill-list
-   term to remove) before the next round.
+   and re-critic. Loop until it ships, no round cap, per the ITERATION LAW.
+
+   ROUNDS ARE REFINEMENT. A FOURTH ONE IS A DIAGNOSIS. Set by the maintainer on
+   2026-08-05. Rounds are the machine working and forty words take a few passes
+   to get right, so nothing here caps them or treats an early fix verdict as a
+   signal about anything. Refine, and keep refining.
+
+   What changes at the FOURTH fix verdict is where you look, not how hard you
+   work. Four rounds on one email means the defect is not in the sentences you
+   keep moving, it is in what the writer was ASKED FOR, and each new instruction
+   stapled to the same brief just relocates it. That is the writing equivalent of
+   fixing the sentence a critic quoted instead of the claim underneath it, and it
+   is exactly what happened on 2026-08-05 when round two's fix moved round one's
+   defect instead of killing it.
+
+   So at round four, keep the email. It is usually most of the way there, and
+   throwing away good work is not the point. Change the BRIEF, hand the writer
+   the draft it already has, and note in outreach.json what you changed about the
+   brief and why. A brief is wrong in one of three ways and the critic's own
+   words usually say which.
+   - It never named the specific fact to open on, so the writer guessed.
+   - It carried a constraint the writer could satisfy while missing the point,
+     which is what produces a defect that moves instead of dying.
+   - It asked for two things that fight, most often maximum brevity and a
+     disclosure that needs room.
+
+   If fix verdicts continue past the brief change, the OFFER or the FACT is the
+   problem, not the writing. Go back and pick a different opening fact. No amount
+   of refining saves an email built on the wrong thing, which is what happened on
+   2026-08-05 when a technically flawless email opened on a defect in the
+   prospect's website and had to be thrown away after it passed every rule.
+
+3. SURFACE ANY READY TO PROMOTE PATTERN AS A DRAFTED DIFF. If
+   knowledge/VOICE_DELTAS.md flags a pattern at three or more separate sends, the
+   writer keeps producing something Talon keeps undoing by hand, and the fix is a
+   rule rather than another round. NEVER edit OUTREACH_CRAFT.md, it is
+   hand-authored law and a run does not rewrite the rules it is judged by.
+
+   Instead put the proposal in the delivery summary WITH THE WORDING ALREADY
+   WRITTEN, so he approves a diff rather than being handed homework. Name the
+   pattern, the number of separate sends, one example of the edit he made, and
+   the exact sentences you would add to OUTREACH_CRAFT.md. A pattern that has
+   been READY TO PROMOTE for weeks without being surfaced properly is the routine
+   wasting the best signal it has, and `lengthened` sat at five sends before
+   anyone drafted the rule for it.
 
 PERSONALIZATION GATE. The final email must name at least one specific, verified,
 this-company-only fact, carry the honest ROI as a range not a hero number, and trip
@@ -630,6 +671,8 @@ COMPLETION GATE, verify before you finish.
 - Recorded. ledger/leads.json has the lead and ledger/runs.json has this run's
   row, both committed, nothing duplicated, and `ledger.py stats` reflects both.
   There is no second store to reconcile against.
+- Voice signal surfaced. Any READY TO PROMOTE pattern appears in the delivery
+  summary as a drafted diff for OUTREACH_CRAFT.md, never applied by the run.
 - Retro ran. Phase 10 is mandatory. ledger/upgrades.json carries this run's
   entries or an explicit, reasoned "nothing worth changing", any repeat offender
   closed is named, and the delivery summary surfaces both.
