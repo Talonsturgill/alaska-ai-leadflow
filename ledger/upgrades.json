@@ -31,6 +31,34 @@
    "files": [
     "scripts/ledger.py"
    ]
+  },
+  {
+   "date": "2026-08-05",
+   "change": "scripts/room_reconcile.py, cross-checks the engineering room's four parallel outputs before they become a study",
+   "evidence": "The product-manager wrote its PRD before the staff-engineer's design existed, flagged the problem itself, and said the two would need reconciling. They happened to agree and nothing checked. The four Phase 4 agents run in parallel and none can see the others' constraints.",
+   "verified_how": "Clean on the real run. Then validated against four injected contradictions, a roadmap promising the killed voice agent, a roadmap building what we said to buy, a PRD promising killed dictation, and a roadmap shipping the killed Arrival Desk. Caught 4 of 4. FOUR rounds of false positives were fixed on the way there: hedge words checked against a whole section instead of the local string, a refusal vocabulary too narrow to recognise BOUGHT or gated as refusals, matching that required every keyterm including our own words, and matching loose enough that desk plus build tripped everything.",
+   "files": [
+    "scripts/room_reconcile.py",
+    "prompts/routine_instructions.md"
+   ]
+  },
+  {
+   "date": "2026-08-05",
+   "change": "THE DIRECTION PASS, a named Phase 6 step with a required artifact",
+   "evidence": "The drift pattern is systemic, not a per-run accident. The fact-checker named it, the study-critic independently rediscovered it on the same study after a round of fixes, then found it AGAIN in milder form on round two. It is the pipeline's incentive gradient, a pitch is easier to write when the prospect is in trouble, so every agent shades a little and the errors compound because they all lean together.",
+   "verified_how": "Not a script, so it is verified by the artifact existing. out/<date>/direction_pass.md is the gate, a run that did not write the file did not do the pass. study_lint covers the greppable half, this covers tone and accumulation which a regex can't see.",
+   "files": [
+    "prompts/routine_instructions.md"
+   ]
+  },
+  {
+   "date": "2026-08-05",
+   "change": "Phase 10 made MANDATORY, repeat offenders prioritised, and an upgrade session added",
+   "evidence": "Maintainer's call. A retro that is optional is a retro that gets skipped on a long run, which is exactly when it is most needed. Repeat defects were being re-noted rather than fixed, which turns a backlog into a graveyard. And a routine that only fixes what breaks never gets better, it only stops getting worse.",
+   "verified_how": "Wired into the COMPLETION GATE, so a run without a retro entry has not completed. The upgrade session rotates focus and is explicitly allowed to conclude that nothing is worth changing.",
+   "files": [
+    "prompts/routine_instructions.md"
+   ]
   }
  ]
 }

@@ -166,6 +166,17 @@ than all of them and costs the most to get.
 
 ## SHIPPED
 
+- **2026-08-05, item 6, scripts/room_reconcile.py.** Cross-checks the room's four
+  parallel outputs before they become a study. Killed capability promised anyway,
+  non-goal delivered by the roadmap, pick drift, AI role drift. Validated against
+  four injected contradictions, caught all four, after four rounds of false
+  positives that are recorded in the upgrades ledger because they are the failure
+  mode of a checker like this.
+- **2026-08-05, item 4, THE DIRECTION PASS.** The mechanical half shipped inside
+  study_lint. The doctrinal half is now a named Phase 6 step with a required
+  artifact, out/<date>/direction_pass.md, because it was a principle for weeks and
+  principles get skipped while steps do not.
+
 - **2026-08-05, item 3, scripts/study_lint.py.** Runs before any critic. Catches
   forbidden strings the fact-checker rejected coming back, URLs in the body with
   no sources entry, a `verified` mark on something nobody verified, an ROI table
