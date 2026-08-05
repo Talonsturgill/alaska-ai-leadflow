@@ -144,9 +144,26 @@ def main():
 
     eng = load("engineering.json")
     feas = load("feasibility.json")
+
+    # ABSENCE OF INPUT IS A FAILURE, NEVER A PASS. Both files used to be
+    # optional in practice: a missing engineering.json printed "nothing to
+    # reconcile" and exited 0, and a missing feasibility.json left checks 1, 3
+    # and 5 as silent no-ops while the script printed the all-clear. Four of the
+    # five checks here read feasibility.json, so without it this script is an
+    # expensive way to print a reassuring line.
+    missing = []
     if not eng:
-        print("no engineering.json in {}, nothing to reconcile".format(a.dir))
-        return 0
+        missing.append("engineering.json (the room's four outputs)")
+    if not feas:
+        missing.append("feasibility.json (the kill list and the locked pick, "
+                       "which four of the five checks reconcile against)")
+    if missing:
+        print("\n  ROOM RECONCILE  —  {}\n".format(a.dir))
+        for m in missing:
+            print("  FAIL  MISSING INPUT, nothing was reconciled: " + m)
+        print("\n  This gate cannot pass on absent input. Produce the file or "
+              "say in the\n  run log why this run has no room to reconcile.\n")
+        return 1
 
     fails, warns, notes = [], [], []
 
@@ -168,12 +185,44 @@ def main():
     # vendor" is the refusal of "building it ourselves", and "gated on one
     # measurement" is the refusal of "as a scoped build". Both read as promises
     # until the vocabulary covers how a refusal actually gets written.
-    REFUSAL = ("killed", "we would not", "we will not", "not priced", "non-goal",
-               "non goal", "permanent", "declined", "do not build", "never",
-               "explicitly not", "rather than", "only if", "not a build",
-               "measure first", "conditional", "buy", "bought", "buying",
-               "gated", "gate on", "measurement", "only they can", "vendor",
-               "before anything", "held in", "not scoped")
+    # STRONG MARKERS ONLY. The first list carried bare nouns, "vendor", "buy",
+    # "measurement", "gated", and those refuse nothing on their own: a roadmap
+    # line promising a killed capability that happened to mention a vendor was
+    # excused as "refuses it in place". A refusal is a NEGATION or a DEFERRAL,
+    # it is a grammatical act, not a topic. Every entry below either negates or
+    # postpones, so it cannot be satisfied by a line that merely discusses the
+    # same subject matter.
+    REFUSAL = (
+        # explicit negation
+        "not ", "never", "no ", "without", "declined", "killed", "ruled out",
+        "rules out", "out of scope", "non-goal", "non goal", "excluded",
+        "we would not", "we will not", "do not build", "deliberately",
+        "explicitly not", "refuse", "drop", "dropped", "removed",
+        # contrast, which is how a buy-instead-of-build refusal gets written
+        "rather than", "instead of", "as opposed to",
+        # deferral, which is how a conditional refusal gets written
+        "only if", "only when", "conditional", "gated on", "gate on",
+        "until we", "before we", "would have to be earned", "measure first",
+        "not priced", "not in phase one", "not phase one", "later lane",
+    )
+
+    # A BUILD-IT-OURSELVES kill is refused by BUYING, and no amount of adding
+    # nouns to a global list expresses that. "Housekeeping route optimisation,
+    # BOUGHT from an established vendor" carries no negation and no contrast
+    # word, and it is a complete refusal of "Building housekeeping route
+    # optimisation ourselves". So the refusal vocabulary is derived from what
+    # was killed rather than pooled across every kill: buy-language only counts
+    # as a refusal when the thing killed was building it in-house.
+    BUY_REFUSAL = ("buy", "bought", "buying", "purchase", "purchased", "licence",
+                   "license", "licensed", "off the shelf", "off-the-shelf",
+                   "subscription", "vendor", "third party", "third-party",
+                   "existing tool", "commercial")
+
+    def refusal_markers(subject):
+        low = norm(subject)
+        if re.search(r"\b(ourselves|in house|inhouse|from scratch|our own)\b", low):
+            return REFUSAL + BUY_REFUSAL
+        return REFUSAL
 
     def scan_for_killed(label, section):
         for path, text in strings(section):
@@ -182,10 +231,11 @@ def main():
                 subject = k.split(".")[0]
                 if not mentions(low, subject, need=3):
                     continue
+                markers = refusal_markers(subject)
                 # The hedge must sit in THIS string, not merely somewhere in the
                 # section. One correct refusal elsewhere must not immunise a
                 # promise here, which is exactly the bug this check shipped with.
-                if any(h in low for h in REFUSAL):
+                if any(h in low for h in markers):
                     notes.append(f"{label} references the killed item and refuses it "
                                  f"in place: {subject[:64]}")
                 else:
@@ -198,9 +248,36 @@ def main():
     scan_for_killed("design", design)
 
     # 2. A stated non-goal delivered by the roadmap.
-    for ng in (prd.get("non_goals") or []):
-        phrase = ng.get("non_goal") if isinstance(ng, dict) else str(ng)
+    # This check had never examined a single thing. It read ng["non_goal"], and
+    # product-manager.md emits {"item", "reason"}, so every phrase came back
+    # None and the loop did nothing while the script printed its all-clear.
+    # Worse, the real PRD emitted non_goals: null, so there was nothing to read
+    # under any key. Both failure modes are now visible.
+    non_goals = prd.get("non_goals")
+    if not non_goals:
+        warns.append("the PRD states NO non-goals. product-manager is contracted to "
+                     "emit them and a proposal with no stated scope boundary is how "
+                     "a Later item becomes an expectation. Nothing to reconcile the "
+                     "roadmap against here.")
+        non_goals = []
+
+    def ng_phrase(ng):
+        """The non-goal text, whatever key the PRD used to carry it."""
+        if isinstance(ng, str):
+            return ng
+        if not isinstance(ng, dict):
+            return ""
+        for k in ("item", "non_goal", "goal", "name", "text", "description"):
+            v = ng.get(k)
+            if isinstance(v, str) and v.strip():
+                return v
+        return ""
+
+    for ng in non_goals:
+        phrase = ng_phrase(ng)
         if not phrase:
+            warns.append("a non_goals entry carries no readable text under any known "
+                         f"key, so it was not reconciled: {str(ng)[:90]}")
             continue
         for path, text in strings(roadmap):
             low = norm(text)
@@ -218,12 +295,29 @@ def main():
     pick = (feas or {}).get("recommended_pick") or {}
     pick_name = pick.get("name") or ""
     if pick_name:
-        kt = keyterms(pick_name, n=3)
-        for label, text in (("design", blob(design)), ("PRD", prd_text),
-                            ("roadmap", roadmap_text)):
-            if kt and not any(w in text for w in kt):
-                warns.append(f"the {label} never names the locked pick "
-                             f"({pick_name[:60]}), check it is costing the same build")
+        # Match on DISTINCTIVE terms only. "The Desk Answer Book" yields desk,
+        # answer and book, and all three are domain wallpaper, so the old check
+        # matched any text mentioning a desk and could never fire. A drift
+        # warning that cannot fire is worse than none, because the clean run
+        # reads as evidence the builds agree.
+        kt = distinctive(keyterms(pick_name, n=6))
+        if not kt:
+            warns.append(f"the locked pick ({pick_name[:60]}) is named entirely in "
+                         "domain-generic words, so drift cannot be detected from its "
+                         "name. Read the four outputs by hand this run, and prefer a "
+                         "pick name carrying at least one distinctive term.")
+        else:
+            for label, text in (("design", blob(design)), ("PRD", prd_text),
+                                ("roadmap", roadmap_text)):
+                # mentions(), not any(). A single shared word is not evidence the
+                # output is costing the same build: "Aurora Concierge Telemetry
+                # Platform" matched on "aurora" alone, which appears all over a
+                # study about aurora season, so a total pick substitution raised
+                # nothing at all.
+                if not mentions(text, pick_name):
+                    warns.append(f"the {label} never names the locked pick "
+                                 f"({pick_name[:60]}), check it is costing the same "
+                                 f"build. Looked for: {', '.join(kt)}")
 
     # 5. AI role drift, the one the pipeline is most prone to.
     if (pick.get("ai_role") or "").lower() == "none":
