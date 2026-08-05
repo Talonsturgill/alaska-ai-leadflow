@@ -366,6 +366,70 @@
           ]
         }
       ]
+    },
+    {
+      "run_date": "2026-08-04",
+      "company": "Tyonek Native Corporation",
+      "deltas": [
+        {
+          "kinds": [
+            "lengthened"
+          ],
+          "before": "We've already done the study on how to measure that exposure.",
+          "after": "We just wrapped up our study on how to measure that exposure and did a deep dive on Tyonek.",
+          "dropped": [
+            "already",
+            "done",
+            "the",
+            "we've"
+          ],
+          "added": [
+            "a",
+            "and",
+            "deep",
+            "did",
+            "dive",
+            "just",
+            "our",
+            "tyonek"
+          ]
+        },
+        {
+          "kinds": [
+            "added"
+          ],
+          "before": null,
+          "after": "Here's what we came up with \u2b07",
+          "dropped": [],
+          "added": []
+        },
+        {
+          "kinds": [
+            "reworded"
+          ],
+          "before": "Tell us if it's useful or pass it along.",
+          "after": "No strings, we just think you'll like it.",
+          "dropped": [
+            "along",
+            "if",
+            "it's",
+            "or",
+            "pass",
+            "tell",
+            "us",
+            "useful"
+          ],
+          "added": [
+            "just",
+            "like",
+            "no",
+            "strings",
+            "think",
+            "we",
+            "you'll"
+          ]
+        }
+      ]
     }
   ]
 }
