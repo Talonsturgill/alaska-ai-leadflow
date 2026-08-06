@@ -1,0 +1,242 @@
+{
+ "opportunity_map": [
+  {
+   "area": "New patient front door, online registration to a booked appointment",
+   "what_ai_could_change": "ANHC's own published process runs two staff initiated waits, 1 to 2 business days for a text with the intake form links (C10) and a further 1 to 2 business days for a call to schedule (C11), and the page does not say these are sequential for every path so they must never be summed. Anyone not seen in 36 months re-enters this loop (C12). AI could take the patient's registration in natural language over text or web, complete the intake and sliding fee packet in the patient's own language, and hand staff a complete, ready to book packet, so the human call becomes a booking call rather than a data gathering call. What AI could NOT change here is appointment supply. Nothing in the record says whether the two windows are a communications constraint or a schedule capacity constraint, so any claim that AI shortens the wait to be seen is unsupported."
+  },
+  {
+   "area": "Main patient line and the TEXT ME channel",
+   "what_ai_could_change": "One main line, 907-743-7200, carries general questions, refills and lab results, and it already accepts a TEXT ME message (C14). The medical clinic runs 7:30 a.m. to 9:00 p.m. Monday through Thursday (C86), a 13.5 hour front door. AI could classify and draft replies to the inbound text stream with a human approving each one, and rank urgent messages first, which is the pattern Providence's CMO describes for its own inbound patient messages (C78). Two honest limits. ANHC's call and message volume is nowhere in the verified record, so this pocket can't be sized. The existing TEXT ME channel means a self service text path already exists, so this is less underserved than it looks from outside."
+  },
+  {
+   "area": "After hours coverage",
+   "what_ai_could_change": "Very little, and this is a place to leave alone. Established patients have a dedicated after hours number, 907-330-3267, reaching an answering service (C15). The research package originally claimed the main line drops to an answering service after hours and that was killed, so no build may rest on it. Cost of error on an after hours clinical line is the highest in the whole operation, and it is already routed to humans."
+  },
+  {
+   "area": "Same day access for established patients",
+   "what_ai_could_change": "Nothing that needs building. ANHC publishes a same day promise, 'We'll make every effort to see you on the day you contact us' (C87), which applies to established patients and sits beside the new patient loop rather than against it. This is a pocket that is working and it should be described that way."
+  },
+  {
+   "area": "Clinical documentation",
+   "what_ai_could_change": "Already changed, by ANHC, before anyone approached them. An ambient AI documentation tool is in clinical production and no vendor is named anywhere public (C34). The CMO describes moving from 10 minutes charting after a 20 minute visit to 25 minutes with the patient and five reviewing the note (C32) and says it reduces pajama time (C33). ANHC is ahead of every Alaska FQHC peer checked (C82, C83, C84). There is no build here for us, and any framing that treats ANHC as behind on AI is factually wrong."
+  },
+  {
+   "area": "Note accuracy when a visit runs through an interpreter",
+   "what_ai_could_change": "This is the sharpest unpicked item in the map. A JMIR study found ambient AI scribes propagated interpreter errors into clinical notes in simulated English and Spanish encounters (C63), and ANHC's homepage reports 56 languages translated (C20). ANHC runs an ambient scribe today. AI could not fix this on its own, the honest intervention is a sampling audit and a governance artifact, largely process work with a retrieval assist. Flag before anyone treats this as a finding about ANHC, the study is simulated rather than live clinical, and the absence of a public governance document is not evidence that no governance exists."
+  },
+  {
+   "area": "Sliding fee discount lifecycle",
+   "what_ai_could_change": "The most rule shaped paperwork in the business. A discount is valid one year with documentation or six months with a self declaration (C16), the temporary self declaration lasts 30 days and can be used only once every twelve months (C17), and a new application is required when a patient is new, after a change in household size or income, and before the discount expires (C18). Forms publish in four languages (C19). Date math here is deterministic and needs no model. What AI genuinely adds is turning what a patient says into a completed application in their language, and flagging which of the three triggers applies. Unverified and important, whether ANHC already sends renewal reminders is not in the record."
+  },
+  {
+   "area": "Insurance enrollment assistance",
+   "what_ai_could_change": "Less than it looks. The homepage shows 2,929 health insurance assists (C23) and the 2024 report 2,198 (C30), and Medicaid is reportedly about 34 percent of revenue per Alaska Public Media (C38), so coverage continuity is financially material. This is eligibility judgment and trust work done by navigators with patients, and AI's role is preparation and paperwork behind the navigator, not the conversation itself."
+  },
+  {
+   "area": "Written language access",
+   "what_ai_could_change": "A real and verified gap, four published form languages (C19) against a homepage figure of 56 languages translated (C20). A PLOS Digital Health review found AI translation non inferior to human translation for Spanish (C58), while Russian accuracy fell to about 89 percent for GPT-4 and about 80 percent for Google Translate with up to 6 percent of instruction sets containing potentially harmful errors (C59, C60), back translation retained only 36 to 76 percent of meaning for certain non European languages (C61), and the review concludes human interpreters remain essential for complex, emotionally charged or high stakes clinical communication (C62). The zone the evidence supports is written administrative material with human review. Live spoken interpretation is out of scope, permanently."
+  },
+  {
+   "area": "Referrals and follow up after the mammography change",
+   "what_ai_could_change": "ANHC discontinued onsite screening mammography effective June 2nd, 2026 and states it remains committed to breast cancer screening through referral and follow up (C26). Closing an external referral loop is a tracking job AI can support. Evidence is thin, nothing in the record describes how ANHC tracks referral closure today, so this stays on the map and does not get sized."
+  },
+  {
+   "area": "Revenue cycle and patient financial services",
+   "what_ai_could_change": "At least fifteen distinct roles were listed on Indeed on August 6th, 2026, weighted toward patient facing administrative and revenue cycle work, including a Patient Financial Services Representative II at 23.98 to 35.97 dollars an hour (C89). That wage band is the only verified labor cost anchor in the package and it is the honest way to size admin time saved, per hour rather than per FTE. No ANHC denial or coding problem is evidenced, and the UCSF study found no difference in claim denials between scribe adopters and non adopters (C53), so do not invent a denials pain. A commentary warns Aetna and Cigna downcoding could offset scribe related revenue gains (C57)."
+  },
+  {
+   "area": "Hiring and onboarding",
+   "what_ai_could_change": "Screening and job posting work is a generic AI fit. The record can't support it here. The job board figure is a same day snapshot with no trend behind it and may not be used to claim turnover or growth (C89), and no headcount exists anywhere in the verified record."
+  },
+  {
+   "area": "Board governance and the approval path",
+   "what_ai_could_change": "Nothing to build, and everything to respect. Federal rules and bylaws require a majority of board members to be ANHC patients (C35), the board runs 11 to 17 members meeting the last Wednesday of each month (C36) with three year terms (C37). A material new system is board visible, so decision latency is measured in monthly meetings and any urgency or scarcity pressure reads badly. This constrains scope and pricing shape more than any technical fact in the map."
+  },
+  {
+   "area": "Public reporting and the statistics band",
+   "what_ai_could_change": "The homepage band carries 47,783 patient visits, 7.1 million dollars uncompensated care, 2,929 insurance assists, 95 percent patient satisfaction and 52 years of service with no period label on any of them (C21 to C25), and the 2024 annual report reports 53,021 total visits (C27). The two figures differ and can't be reconciled from public pages, which is a definitional mismatch and not a measured decline (C31). This is a reporting definition fix, not an AI build, and raising it at all risks reading as a scold rather than a service."
+  },
+  {
+   "area": "Mobile clinic at shelters",
+   "what_ai_could_change": "Little. 314 mobile clinic visits at shelters across Anchorage (C30) is relational, offline outreach to people who by definition are hard to reach through a digital front door. Any build that assumes a smartphone and a stable number excludes exactly this population, which is a design constraint on everything else in this map."
+  },
+  {
+   "area": "Staff training cadence",
+   "what_ai_could_change": "Not a pain, an adoption asset. ANHC opens late on the second and fourth Tuesday of each month for staff training (C85), which is a standing institutional slot for rolling out a new system. Combined with an ambient scribe already in production (C34), this organization has demonstrated it can absorb and train on new clinical technology."
+  },
+  {
+   "area": "Ability to buy",
+   "what_ai_could_change": "Nothing to build, and it reframes the ask. Revenue of 31,234,658 dollars against expenses of 29,601,126 dollars for the fiscal year ending June 2025 (C39, C40), following revenue of 28,822,081 dollars against 26,339,049 dollars for FY2024 (C41), so two consecutive surplus years. The FY2023 deficit (C42) is three years old and is history, not a current condition. CHCF focus groups with California safety net leaders found the pricing models don't work for the safety net (C64) and that a community clinic may lack the data scientists on staff needed to implement AI (C65), and CHAI and NACHC report 60 percent of all community health centers say expenses were a challenge to implementing emerging technologies (C66). The honest reading is that the pricing SHAPE is the constraint, not the balance sheet, and that the integration work is what a buyer like this is actually purchasing."
+  }
+ ],
+ "outcome": "Cut the elapsed time from a new patient registering online to holding a confirmed appointment, and raise the share of registrations that reach a booked appointment, without adding staff and without touching appointment supply. Measured as three falsifiable numbers, median hours from online registration to intake forms returned complete, median hours from registration to a confirmed appointment, and the percentage of online registrations that never reach a booked appointment. All three baselines have to be pulled from ANHC's own logs in week one, because none of them exist in the public record, so the first deliverable of any build is the measurement, not the feature. The published process today puts the first window at 1 to 2 business days and the second at a further 1 to 2 business days (C10, C11). The target is to remove the first window entirely and to shorten the second by handing staff a complete packet instead of a blank one. Rejected as an outcome, any version of 'ANHC has an AI assistant.'",
+ "opportunities": [
+  {
+   "job": "When I decide to establish care at ANHC, get me from registering to a confirmed appointment without waiting on somebody to call me back.",
+   "pain_source": "C10, C11, C12, C80, C88",
+   "current_workaround": "An online registration form, then a staff sent text with form links, then a staff placed phone call. The patient's alternative is to call a different Anchorage provider that books in real time, or to wait.",
+   "importance": 9,
+   "satisfaction": 4,
+   "opportunity_score": 14,
+   "notes": "Highest scoring and the only one where the pain, the current process and a same city alternative are all verified primary sources. Satisfaction is not 1, ANHC does publish an online registration path and does use text. What is missing is closure, the loop always ends in a human callback."
+  },
+  {
+   "job": "When my sliding fee discount is about to lapse, help me requalify before I get billed at rates I can't pay.",
+   "pain_source": "C16, C17, C18, C19",
+   "current_workaround": "The patient tracks their own expiry date and starts a new application. Four written form languages carry it.",
+   "importance": 8,
+   "satisfaction": 4,
+   "opportunity_score": 12,
+   "notes": "The clearest dated clock in the whole map, which makes it the strongest genuine cost of delay. Held back by one honest unknown, whether ANHC already sends renewal reminders is not in the verified record, so its satisfaction score is the least reliable number on this list."
+  },
+  {
+   "job": "As a clinician, let me trust the AI note when the visit ran through an interpreter.",
+   "pain_source": "C63, C34, C20, C69",
+   "current_workaround": "Clinician review of the generated note, five minutes per the CMO's own account (C32).",
+   "importance": 8,
+   "satisfaction": 4,
+   "opportunity_score": 12,
+   "notes": "The single most useful industry fact in the package for this specific company, and the study is simulated rather than live clinical, which must survive into anything written. Scored down on satisfaction with low confidence, because a clinician already reviews every note and the absence of a public governance artifact proves nothing. This is advisory work more than a build, which is why it does not become the target."
+  },
+  {
+   "job": "As a clinician, let me finish the note without taking it home.",
+   "pain_source": "C32, C33, C34",
+   "current_workaround": "An ambient AI documentation tool already running in clinical production.",
+   "importance": 9,
+   "satisfaction": 8,
+   "opportunity_score": 10,
+   "notes": "Important and already served. This pocket is working and ANHC solved it ahead of every Alaska FQHC peer checked. Worth saying out loud that the outside evidence is more modest than the internal anecdote, the JAMA study found EHR time outside work hours did not change significantly (C47) even while documentation time fell 16.0 minutes (C45), and the UCSF authors translate the RVU gain to about 3,044 dollars per physician per year (C52) against subscription fees most health systems pay of 200 to 600 dollars per clinician per month (C54), which is break even at best. No build for us here, and no reason to disturb it."
+  },
+  {
+   "job": "When I have a refill, a lab result or a question, let me get an answer without waiting on one line.",
+   "pain_source": "C14, C86",
+   "current_workaround": "Call or text the main line. After hours, established patients use the separate 907-330-3267 answering service line (C15).",
+   "importance": 7,
+   "satisfaction": 6,
+   "opportunity_score": 8,
+   "notes": "Deliberately scored down. ANHC already runs a text channel on this line, which is a real modernization, and no ANHC call or message volume exists in the record, so this can't be sized. The one analogue in the package, an AI contact center handling 80 percent of call volume, is a vendor press release with no independent audit (C76, C77)."
+  },
+  {
+   "job": "When ANHC stops doing a service onsite, make sure my referral for it actually closes.",
+   "pain_source": "C26",
+   "current_workaround": "Not described anywhere in the verified record.",
+   "importance": 7,
+   "satisfaction": 5,
+   "opportunity_score": 9,
+   "notes": "Both scores are guesses on an unevidenced workaround, which is exactly why this stays on the map and out of the candidate set. Do not frame this as ANHC abandoning screening, ANHC states the opposite."
+  },
+  {
+   "job": "Help me get and keep insurance coverage so care stays affordable.",
+   "pain_source": "C23, C30, C38",
+   "current_workaround": "Human enrollment navigators, at scale already.",
+   "importance": 8,
+   "satisfaction": 7,
+   "opportunity_score": 9,
+   "notes": "High importance, already well served by people who do thousands of these a year. AI's honest role is behind the navigator, not in front of the patient."
+  },
+  {
+   "job": "Give me clinic materials in a language I actually read.",
+   "pain_source": "C19, C20, C58 to C62",
+   "current_workaround": "Four published form languages plus interpretation for everything else.",
+   "importance": 7,
+   "satisfaction": 5,
+   "opportunity_score": 9,
+   "notes": "Real, verified, and best served as a component of a larger build rather than on its own. Capped hard by the evidence, written administrative material with human review is in, live spoken interpretation is out."
+  },
+  {
+   "job": "Give the organization one number that means one thing when the board or a funder asks.",
+   "pain_source": "C31, C21 to C25",
+   "current_workaround": "Hand maintained figures published in two places with different labels.",
+   "importance": 5,
+   "satisfaction": 3,
+   "opportunity_score": 7,
+   "notes": "A definitional mismatch, never a decline, and stating it otherwise is the single highest risk sentence available about this company. Low importance because it costs the organization nothing today, and raising it reads as a scold."
+  },
+  {
+   "job": "Do the patient facing admin and revenue cycle work with the people we can actually hire.",
+   "pain_source": "C89",
+   "current_workaround": "Hiring for it.",
+   "importance": 6,
+   "satisfaction": 5,
+   "opportunity_score": 7,
+   "notes": "Scored low on purpose. A same day job board snapshot with no trend may not be used to claim turnover or growth, and no headcount exists in the verified record, so this opportunity can't be sized at all. The wage band is still the one usable labor cost anchor for any downstream ROI, priced per hour of admin time and never per FTE."
+  }
+ ],
+ "target_opportunity": {
+  "job": "When I decide to establish care at ANHC, get me from registering to a confirmed appointment without waiting on somebody to call me back.",
+  "why": "It tops Ulwick at 14, and it is the only opportunity where the pain, the current process and a same city alternative are all verified primary sources rather than inference. Torres cross check. Sizing, every new registrant hits it and the 36 month rule (C12) continuously refreshes who counts as new against a verified population anchor of 15,203 unique medical and dental patients served in 2024 (C28), though the new patient share itself is not published so the reach is bounded rather than measured. Market position, Providence offers new patients real time online self scheduling at its Anchorage Huffman clinic (C80), which is the same Anchorage patient on the same day choosing between a booking screen and a callback promise. Strategy fit, the published mission is to be a trusted partner in every person's wellness regardless of ability to pay (C09), so an access build argues itself to a board that is majority patients (C35). Two opportunities tied at 12 behind it and both ride to the roadmap rather than being dropped, the sliding fee renewal clock, which carries the strongest genuine cost of delay in the map, and interpreter error propagation into ambient notes, which is advisory work more than a build.",
+  "forces": "PUSH, ANHC's own published loop puts 1 to 2 business days before the forms arrive and a further 1 to 2 business days before the scheduling call (C10, C11), and an outside op ed writer reported in October 2024 that establishing care took 2 to 3 weeks while recording a 10 day actual experience in the same sentence (C88). PULL, a same city competitor books new patients in real time today (C80), and ANHC already runs an ambient AI tool in clinical production with a CMO who talks about it publicly (C32, C34), so the organization has already crossed the line of adopting clinical AI once. ANXIETY, a material new system is board visible with 11 to 17 members meeting monthly and a patient majority (C35, C36), safety net leaders report the pricing models don't work for them (C64) and that a community clinic may lack the data scientists on staff to implement AI (C65), 77 percent name lack of AI tool maturity as a top barrier (C69), and the patient portal resolves to an Epic MyChart login operated for Providence Health and Services Alaska (C81), which means write access to scheduling is not ANHC's alone to grant. HABIT, the callback loop is published on their own site and staffed today, the same day promise already works for established patients (C87), and a TEXT ME channel already exists on the main line (C14). VERDICT, push plus pull beats anxiety plus habit ONLY IF the build avoids the Epic write path on day one and avoids per seat pricing. That is not a footnote, it is the shape of the answer, and it disqualifies the most obvious candidate before scoring even starts. Two forces work in our favour and both are verified, two surplus years mean the money exists (C39, C40, C41), and a standing staff training slot on the second and fourth Tuesday of each month (C85) means there is already a place to train people on a new system."
+ },
+ "candidates": [
+  {
+   "name": "Front Door Voice Agent",
+   "our_build": "Voice and front desk agent",
+   "what_it_does": "Answers the main line and the TEXT ME channel, handles hours, location, sliding fee and new patient questions, takes registration conversationally, and books directly into open appointment slots. Clinical triage and the after hours line stay out of scope.",
+   "rice": {
+    "reach": "9 of 10. Everyone who calls or texts the main line (C14, C86). No ANHC call volume exists in the verified record, so the reach rank is a judgement and not a measurement.",
+    "impact": "2 of 3 if it can book, 0.5 if it can't. Without write access it re-routes the same callback rather than removing it.",
+    "confidence": "40 percent, the heaviest penalty in the set and it is deliberate. The only supporting analogue is a vendor press release quoting a health center CEO with no independent audit, no before and after abandonment rate and no disclosed cost (C76, C77). Booking depends on write access to an Epic MyChart instance operated for Providence Health and Services Alaska (C81), and the Epic Community Connect inference was explicitly killed, so the integration path is unknown rather than hard. This is also the product our own shop over indexes on, which is a reason to discount it further, not less.",
+    "effort": "8 person months. Telephony, clinical guardrails, multilingual handling, a scheduling integration through a third party's Epic instance, and a board review cycle measured in monthly meetings.",
+    "score": "9 x 2 x 0.40 / 8 = 0.90"
+   },
+   "cost_of_delay": "Low. Nothing in the evidence dates this, and the one thing that would raise its urgency, a measured abandonment rate on the main line, does not exist. Delay here buys information."
+  },
+  {
+   "name": "New Patient Intake Concierge",
+   "our_build": "Workflow automation plus the paperwork engine, with a retrieval assisted question answerer over ANHC's own published pages",
+   "what_it_does": "The moment someone registers online it sends the intake form links immediately instead of in 1 to 2 business days, then walks the patient through the intake and sliding fee packet by text or web in their own language, converting what they type into completed forms with staff review before anything is filed. It answers the narrow set of questions ANHC already publishes. It hands staff a ranked queue of complete, ready to book packets. IT DOES NOT BOOK and it never writes to the scheduling system.",
+   "rice": {
+    "reach": "7 of 10. Every online registrant, with the 36 month rule continuously refreshing that population (C12) against a verified anchor of 15,203 unique patients in 2024 (C28). New patient share is not published, so this is bounded rather than measured.",
+    "impact": "2 of 3. It removes the first 1 to 2 day window outright and shortens the second by making the staff call a booking call instead of a data gathering call. It does not touch appointment supply and must never be described as though it does.",
+    "confidence": "70 percent, the highest of the AI candidates. Both windows are ANHC's own published process at 0.97 confidence (C10, C11), the sliding fee rules are verbatim (C16, C17, C18), the language gap is verified on both sides (C19, C20), the competitive contrast is a fetched primary page (C80), and the design deliberately avoids the one unverified integration in the map. Discounted from higher by two honest gaps, no baseline exists for how many registrations currently stall, and AI translation carries real limits (C58, C59, C60, C61), which is why human review sits on every filed form and why live spoken interpretation is a permanent non goal (C62).",
+    "effort": "3 person months, scoped so phase one is the deterministic slice.",
+    "score": "7 x 2 x 0.70 / 3 = 3.27"
+   },
+   "cost_of_delay": "Moderate and honest. Providence books new patients in real time in Anchorage today (C80), so each quarter of delay is a quarter in which the same patient has a faster option. No dated deadline exists in the evidence and none should be manufactured, particularly against a board that meets monthly with a patient majority (C35, C36), where urgency pressure reads badly. Realistic decision latency of one to three board meetings is itself the argument for starting with the smallest slice."
+  },
+  {
+   "name": "Message Triage Teammate",
+   "our_build": "Digital employee, human in the loop on every outbound",
+   "what_it_does": "Classifies the inbound TEXT ME stream into refills, results, new patient and urgent, drafts a reply for staff approval, and pushes the highest risk messages to the top of the queue, the pattern Providence's CMO describes (C78).",
+   "rice": {
+    "reach": "8 of 10 on the message channel, unmeasured.",
+    "impact": "0.5 of 3 against the stated outcome. It serves the refills and results job, which scored 8, not the new patient job, which scored 14.",
+    "confidence": "50 percent. The Providence precedent is operator reported with no published measurement (C78), and the 18 day build claim is an operator claim with no independent verification (C79). No ANHC message volume exists. The urgent class carries the highest cost of error of anything in the candidate set, since the failure mode is a missed clinical message, and 77 percent of health systems name tool maturity as a top barrier (C69).",
+    "effort": "5 person months, most of it in the safety envelope rather than the model.",
+    "score": "8 x 0.5 x 0.50 / 5 = 0.40"
+   },
+   "cost_of_delay": "Low, and there is an argument for actively deferring it. ANHC already runs a text channel on that line, so the marginal gain is triage quality rather than access."
+  },
+  {
+   "name": "Coverage Continuity Engine",
+   "our_build": "The paperwork and proposal engine, pointed at eligibility paperwork",
+   "what_it_does": "Tracks every sliding fee discount against its own clock (C16, C17), reaches out before expiry in the patient's language, pre fills the new application from what the patient tells it, and routes it for staff review. Covers the new patient trigger too, since a new patient at ANHC is one of the three stated reapplication triggers (C18).",
+   "rice": {
+    "reach": "6 of 10. Every patient carrying a sliding fee discount, a count that is not published.",
+    "impact": "1 of 3 against the stated outcome, since the sliding fee application is one component of the new patient packet. Against its own outcome, coverage continuity and avoided write offs, it would rate 2 and score 2.40.",
+    "confidence": "60 percent. The rules are verbatim and unambiguous, which is unusual and valuable. Discounted for one gap that matters, whether ANHC already sends renewal reminders is not in the verified record, so the size of the gap being closed is unknown.",
+    "effort": "3 person months. Most of the logic is date math and needs no model at all.",
+    "score": "6 x 1 x 0.60 / 3 = 1.20"
+   },
+   "cost_of_delay": "The strongest in the map, and the only one with a real clock. Discounts expire on six and twelve month cycles per patient, so every quarter of delay is a cohort that lapses, and a missed 30 day temporary window carries a twelve month tail because that form can be used only once every twelve months (C17). This is the reason it belongs in the Next lane rather than being dropped."
+  },
+  {
+   "name": "Deterministic Auto Send, the no AI control",
+   "our_build": "Nothing. Rules only, inside tooling ANHC plausibly already owns",
+   "what_it_does": "Fires the intake form links the instant an online registration lands rather than within 1 to 2 business days, then runs a fixed reminder ladder and flags incomplete packets for staff. No model, no inference, no language handling beyond the four languages ANHC already publishes.",
+   "rice": {
+    "reach": "7 of 10, identical to the concierge.",
+    "impact": "1 of 3. It removes the first published window and nothing else. It does not help a patient who reads none of the four published form languages, it does not fill in what the patient leaves blank, and it does not shorten the second callback.",
+    "confidence": "85 percent, the highest in the set, because there is nothing uncertain about it.",
+    "effort": "1 person month.",
+    "score": "7 x 1 x 0.85 / 1 = 5.95"
+   },
+   "cost_of_delay": "Same clock as the concierge, at a fraction of the cost, which is precisely why it should not wait for anything else."
+  }
+ ],
+ "provisional_pick": {
+  "name": "New Patient Intake Concierge, shipped with the deterministic auto send as its phase one",
+  "why_over_others": "THE ARITHMETIC DID NOT PICK THE AI. The no AI control scored 5.95 against the concierge's 3.27, and that result stands rather than being explained away, because it is the finding. The honest conclusion is that the first 1 to 2 business day window (C10) is a rules problem that deserves a rules fix, and any proposal that sells a model to solve it is selling hype. So the deterministic auto send is not a rejected candidate, it is the walking skeleton and it ships first, alone, measured. AI earns its place on top of that baseline or it does not get built. Three things the rules fix demonstrably can't do, and each is verified. It can't serve a patient who reads none of the four languages ANHC publishes forms in (C19) against a homepage figure of 56 languages translated (C20). It can't turn what a patient types into a completed intake and sliding fee packet, which is what determines whether the second callback is a booking call or another data gathering call (C11, C18). It can't tell staff which of the three sliding fee reapplication triggers applies to a given person (C18). Those three are language, extraction and classification over unstructured input, which is the narrow band where a model genuinely beats a rule, and they are the entire AI scope. Against the runners up. The voice agent lost at 0.90 on evidence, not on ambition, its only analogue is an unaudited vendor press release (C76, C77) and its central capability depends on write access to an Epic MyChart instance operated for a different organization (C81). Choosing it would be over indexing on the product our shop likes rather than the one the evidence supports. The message triage teammate lost at 0.40 because it serves a job that scored 8, not the one that scored 14. The coverage continuity engine lost this round at 1.20 while carrying the best cost of delay argument in the whole map, so it goes to the Next lane on its own clock rather than to the bin, and it shares most of its plumbing with the concierge. Two constraints bind the pick and both come from the evidence rather than from taste. Pricing may NOT be per clinician per seat (C64, C54, C55). Delivery has to carry the integration work itself, because a community clinic may lack the data scientists on staff needed to implement AI (C65). Finally, a tone rule that outranks everything above. ANHC already runs an ambient AI documentation tool in clinical production ahead of every Alaska FQHC peer checked (C34). Nothing here treats them as behind, because they are not."
+ },
+ "pays_off": true
+}

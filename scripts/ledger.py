@@ -46,6 +46,60 @@ PENDING = os.path.join(LEDGER_DIR, "retired_pending_supabase.json")  # history o
 # -8 offset never lands on the wrong calendar day for our purposes.
 ANCHORAGE = timezone(timedelta(hours=-8))
 
+ICP = os.path.join(REPO, "config", "icp.yaml")
+
+# Legacy short keys written by runs before add-lead validated anything. They map
+# to the canonical config/icp.yaml names rather than being rejected, because the
+# rows carrying them are real history and a re-add must not fail on them.
+SEGMENT_ALIASES = {
+    "tourism": "Tourism and visitor industry",
+    "healthcare": "Independent healthcare and elder care",
+    "anc": "Alaska Native corporations and tribal enterprises",
+    "other": "Other labor-scarce or paperwork-heavy Alaska SMBs",
+}
+
+
+def icp_segments():
+    """The canonical lead_segments names, read from config/icp.yaml.
+
+    Parsed with a regex rather than a YAML library because this script has no
+    third-party dependencies and must run on a bare checkout. It reads only the
+    `name:` lines under `lead_segments:`, which is the one shape icp.yaml has.
+    """
+    try:
+        text = open(ICP).read()
+    except OSError:
+        return []
+    block = re.split(r"^\s*lead_segments\s*:\s*$", text, maxsplit=1, flags=re.M)
+    if len(block) < 2:
+        return []
+    names = []
+    for line in block[1].splitlines():
+        if re.match(r"^\s{0,2}\S", line) and not line.lstrip().startswith("-"):
+            break                      # dedented out of the lead_segments block
+        m = re.match(r'\s*-?\s*name\s*:\s*"?([^"\n]+?)"?\s*$', line)
+        if m:
+            names.append(m.group(1))
+    return names
+
+
+def canonical_segment(value):
+    """Map a segment string onto a canonical ICP name, or return None.
+
+    Case and surrounding whitespace do not matter. Nothing else is guessed: a
+    string that is not a canonical name or a known legacy alias comes back None
+    so the caller can refuse it. Fuzzy matching is deliberately absent, because
+    a near-miss silently filed under the wrong segment is the defect this exists
+    to stop, not a convenience to preserve.
+    """
+    if not value or not str(value).strip():
+        return None
+    v = str(value).strip()
+    for name in icp_segments():
+        if v.lower() == name.lower():
+            return name
+    return SEGMENT_ALIASES.get(v.lower())
+
 
 def today(date_str=None):
     if date_str:
@@ -193,6 +247,29 @@ def cmd_add_lead(args):
         print("refusing to add a lead with no domain", file=sys.stderr)
         return 2
     lead["domain"] = n
+    # SEGMENT IS VALIDATED, NOT TRUSTED. On 2026-08-06 a run wrote "Healthcare"
+    # where the ICP says "Independent healthcare and elder care", and the ledger
+    # took it. `stats` then reported eight segment buckets for four real
+    # segments, so every by-segment cut, including the outcome scoreboard that
+    # is supposed to tell us which segments answer, was silently split in half.
+    # The model caught that one by eye at the last second, which is exactly the
+    # kind of check that belongs in code.
+    seg = canonical_segment(lead.get("segment"))
+    if not seg:
+        print("refusing to add a lead with an unrecognised segment: {!r}".format(
+            lead.get("segment")), file=sys.stderr)
+        valid = icp_segments()
+        if valid:
+            print("\n  config/icp.yaml lead_segments are:", file=sys.stderr)
+            for name in valid:
+                print("    {}".format(name), file=sys.stderr)
+        else:
+            print("\n  config/icp.yaml could not be read for the canonical list.",
+                  file=sys.stderr)
+        print("\n  Nothing was written. Fix the segment and re-run.\n",
+              file=sys.stderr)
+        return 2
+    lead["segment"] = seg
     lead.setdefault("run_date", today())
     data = _load(LEADS, "leads")
     for i, row in enumerate(data["leads"]):
@@ -585,6 +662,24 @@ def main():
     args = p.parse_args()
     try:
         sys.exit(args.fn(args))
+    except BrokenPipeError:
+        # A reader closed the pipe early, which is what `| head`, `| grep -m` and
+        # `| less` all do by design. On 2026-08-06 `ledger.py stats | head -20`
+        # printed its stats and then died with a full traceback out of cmd_stats.
+        # This is the memory of record, so a traceback on a command that actually
+        # SUCCEEDED is worse than noise: it teaches a reader to skim tracebacks
+        # from the one script whose tracebacks must never be skimmed.
+        #
+        # stdout is redirected to devnull before exiting so the interpreter's
+        # shutdown flush cannot raise the same error again and reprint the
+        # traceback that was just suppressed. The exit code is 141, the shell's
+        # 128+SIGPIPE convention, so this stays honestly distinct from a clean
+        # exit 0 while a pipeline still reports the reader's status and not ours.
+        try:
+            os.dup2(os.open(os.devnull, os.O_WRONLY), sys.stdout.fileno())
+        except OSError:
+            pass
+        sys.exit(141)
     except LedgerUnavailable as e:
         # EXIT 3, and it means something different from exit 1. Exit 1 is "this
         # domain is excluded, take the next name". Exit 3 is "the memory itself

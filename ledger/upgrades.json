@@ -2,7 +2,7 @@
  "version": 1,
  "note": "The automation-change trail. Every machine upgrade a run makes to itself lands here, with the evidence that earned it and how it was verified. Surfaced in the delivery summary so a change to the machine is never invisible. An upgrade with no evidence line is not an upgrade, it is a preference, and it does not belong here.",
  "guard": "A run may NEVER edit knowledge/OUTREACH_CRAFT.md, CLAUDE.md, or any quality bar it is judged against. Those are hand-authored on purpose, because a routine that rewrites the rules it is graded by is grading its own homework. A run PROPOSES those in the delivery summary and a human decides.",
- "updated": "2026-08-05",
+ "updated": "2026-08-06",
  "upgrades": [
   {
    "date": "2026-08-05",
@@ -113,6 +113,33 @@
    "files": [
     "scripts/room_reconcile.py",
     "prompts/routine_instructions.md"
+   ]
+  },
+  {
+   "date": "2026-08-06",
+   "change": "ledger.py stops printing a traceback when a reader closes the pipe. BrokenPipeError is caught at the entry point, stdout is redirected to devnull so the interpreter's shutdown flush cannot reprint the traceback that was just suppressed, and the process exits 141, the shell's 128+SIGPIPE convention. A pipeline still reports the reader's status, so `ledger.py stats | head` is exit 0 as it always was, and the 141 is only visible to anything that asks for PIPESTATUS.",
+   "evidence": "Observed at Phase 1 of this run. `python scripts/ledger.py stats | head -20` printed its stats correctly and then died with a full BrokenPipeError traceback out of cmd_stats. Any printing subcommand piped into head, grep -m or less does the same. This is the memory of record. A traceback on a command that actually SUCCEEDED teaches a reader to skim tracebacks from the one script whose tracebacks must never be skimmed, and it hands a false failure signal to any future gate that reads its exit code. The routine already reads ledger.py exit codes as load-bearing answers, exit 1 for excluded and exit 3 for unavailable, so a spurious non-zero from a successful command is not cosmetic here.",
+   "verified_how": "POSITIVE, `stats` piped into head prints clean with zero bytes on stderr, and unpiped still exits 0 with zero bytes on stderr. A subprocess whose stdout pipe is closed outright exits 141 with no traceback anywhere on stderr. NEGATIVE, the case that matters, a real failure still fails loudly and is unaffected: `check anhc.org` on a domain already in the ledger still exits 1 and still prints EXCLUDED, and `add-lead --json /nonexistent.json` still exits non-zero and still prints its error. The suppression is scoped to a closed pipe and nothing else.",
+   "files": [
+    "scripts/ledger.py"
+   ]
+  },
+  {
+   "date": "2026-08-06",
+   "change": "add-lead validates and canonicalizes `segment` against config/icp.yaml instead of taking whatever string it is handed. A new canonical_segment() maps case-insensitively onto the four lead_segments names, maps the four legacy short keys earlier runs wrote (tourism, healthcare, anc, other) onto their canonical names rather than rejecting real history, and returns None for everything else. add-lead refuses a None, prints the four valid names, writes nothing and exits 2. Fuzzy matching is deliberately absent, because a near miss filed silently under the wrong segment is the defect this exists to stop.",
+   "evidence": "This run wrote \"Healthcare\" where the ICP says \"Independent healthcare and elder care\", and the ledger took it without a word. `ledger.py stats` then reported EIGHT segment buckets for four real segments: tourism 5 alongside Tourism and visitor industry 1, healthcare 1 alongside Healthcare 1, anc 4 alongside Alaska Native corporations 2, other 2 alongside other labor-scarce 2. Every by-segment cut was silently split in half, including ledger.py scoreboard, whose entire job is telling us which segments answer. The model caught it by eye at the last second while reading stats, which is exactly the class of check CLAUDE.md says is computed in code and never eyeballed, the same rule that governs dedupe and ROI arithmetic.",
+   "verified_how": "POSITIVE, canonical_segment resolves the exact canonical name, a case-mangled variant, a whitespace-padded variant, and all four legacy short keys, including the literal \"Healthcare\" this run wrote, which now auto-corrects rather than fragmenting. Re-adding today's real lead is still an idempotent upsert, still 18 leads, and the shipped row now carries the canonical name. NEGATIVE, four rejections that must not leak through, a near miss (\"Health care\"), a partial (\"Healthcare and elder care\"), an empty string and a null, plus an end-to-end add-lead with segment \"Fishing\" which exited 2, printed the four valid names, and left the md5 of ledger/leads.json byte-identical, so a reject cannot half-write.",
+   "files": [
+    "scripts/ledger.py"
+   ]
+  },
+  {
+   "date": "2026-08-06",
+   "change": "retro_check's negative-case detector stops false-flagging gates that signal with anything other than exit 1. The literal token \"exits 1\" is replaced by a regex over any NON-ZERO exit, exit/exits/exited/exiting, optionally with or code, and zero is deliberately excluded because exit 0 is the passing case and counting it would make the warning fire for nobody. The signal list also gained the shape a verification note is actually written in, a labelled NEGATIVE, section, plus rejected, refuses, refused, must not leak and still fails. The matching moved out of an inline any() into a named tested_a_negative() so it is unit-testable rather than only reachable through a full run.",
+   "evidence": "Caught by this run's own retro. retro_check warned 'no negative case evident' against the segment-validation upgrade whose verification described four rejection cases and an end-to-end refusal that exited 2 and left ledger/leads.json byte-identical. The gate under test signals with exit 2, and the detector only knew the literal string 'exits 1'. This file's own docstring says every gate written on 2026-08-05 had false positives on its first attempt and that it should assume it is wrong before assuming the run is, so a false positive here is the failure mode it was warned about. A warning that fires on thorough work is how a warning gets ignored, and this one guards the difference between a gate and something that only looks like coverage.",
+   "verified_how": "POSITIVE, five verification texts that really did run the failing case now all detect: this run's exits-2 entry, an exits-1 entry, the 2026-08-05 'caught all five reconstructions' style, an 'injected' style, and an 'exits with code 3' style that the first regex missed and which forced the with/code groups apart. NEGATIVE, five texts that show no failing case still detect nothing and still warn, a pure happy-path note, a note whose only exit code is the passing exit 0, a note claiming the change is obviously correct with no test, an empty string and a null. REGRESSION, all thirteen entries in ledger/upgrades.json were judged under the old token list and the new detector and compared: exactly ONE verdict changed, the false positive this fixes. The eleven pre-existing 2026-08-05 entries are untouched.",
+   "files": [
+    "scripts/retro_check.py"
    ]
   }
  ]

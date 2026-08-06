@@ -1,0 +1,424 @@
+{
+ "meta": {
+  "company": "Anchorage Neighborhood Health Center",
+  "domain": "anhc.org",
+  "segment": "Community health center",
+  "place": "Anchorage, Alaska",
+  "date": "August 6th 2026",
+  "prepared_for_first": true
+ },
+ "thesis": "You already put AI into clinical production. Your front door still ends in a callback.",
+ "brief": "You have done the hard part already. An ambient AI tool drafts your clinicians' visit notes and your Chief Medical Officer talks about it publicly. Nothing like it appears on the pages we checked at Mat-Su, Interior and Southcentral Foundation.\n\nSo we looked at your front door. Someone who registers online waits, in your own words, \"Within 1-2 business days\" for a text with the intake form links. Then, again in your words, \"Within 1-2 business days\" for a call to schedule. Anyone not seen by an ANHC provider in 36 months re-enters that loop. On the same afternoon, a Providence clinic on Huffman shows new patients open appointment times on screen, which is not a switch you alone could throw, because your portal link resolves to an Epic MyChart login run for Providence.\n\nHere is what we could not find, and it turned out to be the finding. Nobody publishes how long that loop takes, how many people fall out of it, or what it costs, and from outside there is no way to tell whether it is tracked internally. A published process with an unmeasured cost is one you can't defend to a board.\n\nWhat we would build is mostly not AI. When we scored the options the version with no model in it beat the version with one, so phase one is timestamps plus an automatic send and contains no model at all.\n\nThe ask is 9,500 dollars, one fixed fee for the organization, never per clinician and never per seat. On recovered staff time alone the conservative case gives back about 35 percent of what this costs you over five years, fee plus your own hours plus running it plus a contingency we added to our own side, and never pays back. We lead with that rather than bury it. What the money buys is three measurements you do not have, a permanent fix to the first published wait, and a written yes or no on the larger model work decided on your numbers rather than ours, for roughly a fifth of what one of your posted front office roles costs in a year.\n\nWhat we could not verify is listed at the end, and one thing matters most. Your pages say the intake links arrive within one to two business days and never say why. If somebody is checking identity or looking for a duplicate chart in that window, an instant send would be the wrong build, and we would rather learn that in week one from your staff than assume our way past it.",
+ "found": {
+  "title": "Your own pages describe a front door that always ends in a callback",
+  "lede": "Two published waits, and a competitor across town that books on screen.",
+  "body": "Your new patient page sets out the sequence plainly. After someone registers, \"Within 1-2 business days, you will receive a text with links to complete the following forms.\" After the forms, \"Within 1-2 business days, you will receive a call to schedule your first appointment.\" Each is published as a range rather than a moment, and the page does not say what happens inside it. The population hitting that loop refreshes continuously, because your own definition counts anyone not seen by an ANHC provider in the last 36 months as new.\n\nWe are describing your published service level, not a failure. A one to two business day promise is a real commitment and plenty of clinics publish nothing at all. The point is narrower. First contact does not produce an appointment, and what happens inside those windows nobody outside can see.",
+  "callout_big": "1-2 business days",
+  "callout_note": "Twice, in your own words, on your own new patient page. Once for the forms and once for the scheduling call.",
+  "body_2": "For contrast on the same day in the same city, Providence's Huffman page offers new patients open appointment times on screen. We are not holding that up as a standard you failed. Providence is a large system with a different balance sheet, and it is simply the alternative an Anchorage patient has in front of them at the moment they choose."
+ },
+ "costing": {
+  "title": "The real cost is that nobody can say what the loop costs, including us",
+  "lede": "Three numbers that decide this, and none of them published anywhere.",
+  "body": "We went looking for how long your intake loop takes in practice and could not find it. Not in your annual report, not on your site, not in any filing. No measure of the median hours from registration to the intake forms coming back complete, none for the hours to a confirmed appointment, and none for the share of registrations that never reach one.\n\nThat last one is the number we would want first. A person who registers and is never booked leaves no trace in a schedule, so nothing surfaces them unless something is counting. For scale, 9,500 dollars is roughly a fifth of what one Patient Financial Services Representative II costs in a year at the floor of your posted range on a 2,080 hour year.",
+  "callout_big": "Three measures, none published",
+  "callout_note": "Median hours to forms returned, median hours to a confirmed appointment, and the share of registrations that never reach one. We could find no published figure for any of the three.",
+  "body_2": "You have shown what the difference looks like. Your CMO can describe a before and an after in his own words, which is more than anyone outside can do for the front door, and it is a description rather than a measurement."
+ },
+ "opportunity": {
+  "title": "What changes is that the first wait stops depending on when somebody gets to it",
+  "lede": "One registration, walked step by step.",
+  "outcome_body": "The outcome is a change in what happens, not a tool. Someone registers on a Sunday night and the intake links reach their phone before they put it down. Read the fourth row twice, it is the one we deliberately left alone.",
+  "before_after": {
+   "headline": "A single new patient registration at ANHC, today and after phase one",
+   "before_title": "Today",
+   "after_title": "After",
+   "note": "Row four is unchanged on purpose. Deciding a sliding fee discount stays with a person and a document, because your own policy already requires submitted documentation for a one year discount. Software should compute the dates, never the determination.",
+   "rows": [
+    {
+     "today": "Patient completes the online registration on Sunday evening.",
+     "after": "Patient completes the online registration on Sunday evening. Nothing about this step changes.",
+     "gone": false
+    },
+    {
+     "today": "Registration waits out the published window. Your own page says 1 to 2 business days and does not say what happens inside it.",
+     "after": "The registration event fires the send at once, or the moment your own check clears if there is one.",
+     "gone": true
+    },
+    {
+     "today": "The text with the intake form links goes out, somewhere inside the published window. Who or what sends it is not published.",
+     "after": "Intake form links reach the patient's phone, with the sliding fee application in the four languages you already publish it in.",
+     "gone": true
+    },
+    {
+     "today": "A person reviews the sliding fee application against submitted documentation and makes the determination.",
+     "after": "A person reviews the sliding fee application against submitted documentation and makes the determination.",
+     "gone": false
+    },
+    {
+     "today": "Nothing published says how long any of this took, or how many people stopped partway.",
+     "after": "Each step is timestamped, reported split by channel, as a query your own staff can re-run without us.",
+     "gone": true
+    }
+   ]
+  },
+  "after_body": "The row we did not change is worth reading twice. The one trigger in your sliding fee rules that is pure arithmetic is the expiry date, so that date is computed in tested code and the judgement stays where you put it. The last row outlasts us. Whatever you decide about a second phase, the measurement stays with you."
+ },
+ "build": {
+  "title": "What we would build, and there is no AI in the part we are asking you to buy",
+  "lede": "A trigger, a send log, a date calculator, and a screen where a person confirms.",
+  "plain_parts": "A trigger that notices your online registration form has been submitted. A message send with fixed reminders and a log your staff can read. A date calculator that knows your sliding fee rules and has tests. A screen where a staff member confirms what is on a form before it is filed. A kill switch that puts everything back the way it is today. That is phase one, and there is no model anywhere in it.",
+  "what_it_does": "When a registration arrives, the intake form links go out at once instead of waiting out the published window. Reminders follow on a fixed clock and flag anything that stalls, so staff see who stopped partway, which today nothing counts. The three measurements run from day one, split by channel, because a text and web path can't reach the people your mobile clinic reaches at shelters and a blended number would flatter this.",
+  "feasibility": "We should tell you what our own scoring said, because it argues against the thing we sell. We scored five candidate builds against your published process, and the version with no model in it came out ahead of the version with one by a wide margin. We did not explain that away. Firing a text when a form arrives is a rules problem, so phase one is rules only. Two model steps sit in a later phase, reading what a patient types into candidate values on a form, and answering the narrow set of administrative questions you already publish. Both sit behind a person confirming every packet, and neither gets funded unless the measured result below clears. The measured wins in your field are real. Across 8,581 clinicians at five academic health systems, independent work found ambient documentation associated with about 13 fewer minutes of record time. OCHIN, the EHR collaborative a community health center belongs to, reports 14 percent less note time a day per active clinician at that member, closer to your setting though it is a collaborative reporting on its own member rather than an outside audit. Neither was measured at a single site health center in Alaska, so applying either to you is an assumption and we name it as one. The clause that belongs beside both is that the same study found time outside work hours did not move significantly. Three things we would not do at any phase. We would not modify or replace your ambient scribe, which is working and is not ours to disturb. We would not do live spoken interpretation, because the review that supports written AI translation concludes in the same paper that human interpreters remain essential for complex, emotionally charged or high stakes clinical communication. We would not build clinical triage, because a false negative on a message about self harm has no ceiling and no data exists to estimate how often it would happen.",
+  "build_vs_buy": "We would buy the commodity and build only what is yours. Bought: message delivery, hosting, staff sign-in through whatever your people already use, and human translation of your four published forms once, which then becomes a static file. Built: the trigger, the reminders, the sliding fee date rules with their tests, and the review screen. One thing we would deliberately not buy is a patient engagement platform, because they are sold per provider per seat, and safety net leaders told the California Health Care Foundation plainly that those pricing models do not work for them. Buying one would also leave the integration work undone, which the same research says is what a clinic without data scientists on staff is short of.",
+  "architecture": {
+   "nodes": [
+    {
+     "id": "patient",
+     "label": "New patient",
+     "kind": "user"
+    },
+    {
+     "id": "registration",
+     "label": "Your online registration form",
+     "kind": "external"
+    },
+    {
+     "id": "flow",
+     "label": "Trigger, reminders, sliding fee dates",
+     "kind": "build"
+    },
+    {
+     "id": "sms",
+     "label": "Message delivery",
+     "kind": "external"
+    },
+    {
+     "id": "model",
+     "label": "Reads free text, later phase",
+     "kind": "ai"
+    },
+    {
+     "id": "store",
+     "label": "Packet store",
+     "kind": "data"
+    },
+    {
+     "id": "console",
+     "label": "Staff review screen",
+     "kind": "build"
+    },
+    {
+     "id": "staff",
+     "label": "Your intake staff, who book the appointment",
+     "kind": "user"
+    }
+   ],
+   "edges": [
+    {
+     "from": "patient",
+     "to": "registration"
+    },
+    {
+     "from": "registration",
+     "to": "flow"
+    },
+    {
+     "from": "flow",
+     "to": "sms"
+    },
+    {
+     "from": "sms",
+     "to": "patient"
+    },
+    {
+     "from": "patient",
+     "to": "flow"
+    },
+    {
+     "from": "flow",
+     "to": "model"
+    },
+    {
+     "from": "model",
+     "to": "store"
+    },
+    {
+     "from": "flow",
+     "to": "store"
+    },
+    {
+     "from": "store",
+     "to": "console"
+    },
+    {
+     "from": "staff",
+     "to": "console"
+    }
+   ],
+   "caption": "Phase one is everything except the model box, which stays switched off. The trigger, the reminder ladder and the sliding fee date rules are ours to build, the packet store keeps the patient's own words beside every value, and the review screen is where a person confirms before anything is filed. Nothing here writes to a scheduling system, so your staff book the appointment exactly as they do now. On any failure the patient receives the same links and the same callback they get today."
+  }
+ },
+ "roi": {
+  "title": "On staff time alone the conservative case does not pay, so what 9,500 dollars buys is the decision",
+  "lede": "Here is the arithmetic that argues against us.",
+  "lede_body": "We do not know how many people register with you in a month, so we assumed a figure and asked what it would have to be. Conservatively this has to touch about 289 arriving registrations a month to pay for itself on recovered staff time. We assumed 101. It recovers about a third of its five year cost and never pays back. The case for spending the 9,500 dollars sits underneath the table, and it is not a labour saving.",
+  "table_caption": "Recovered staff time only, five year view. Costs are ours and identical in all three columns because the fee is fixed, so every difference between columns is an assumption about you.",
+  "table_head": [
+   "",
+   "Conservative",
+   "Most likely",
+   "Aggressive"
+  ],
+  "table": [
+   {
+    "label": "Arriving registrations a month needed to break even",
+    "cells": [
+     "288.6",
+     "134.8",
+     "72.2"
+    ],
+    "emphasis": true,
+    "mark": "modelled"
+   },
+   {
+    "label": "Arriving registrations a month we assumed",
+    "cells": [
+     "101",
+     "190",
+     "317"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Reachable by text or web",
+    "cells": [
+     "80%",
+     "85%",
+     "90%"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Admin minutes touched per registration",
+    "cells": [
+     "8",
+     "10",
+     "12"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Minutes we credit, as a percentage of those touched",
+    "cells": [
+     "40%",
+     "50%",
+     "60%"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Published hourly range for the role this work sits in",
+    "cells": [
+     "$23.98 to $35.97",
+     "$23.98 to $35.97",
+     "$23.98 to $35.97"
+    ],
+    "mark": "verified"
+   },
+   {
+    "label": "Loaded hourly rate credited, after a 30 percent uplift",
+    "cells": [
+     "$31.17",
+     "$38.97",
+     "$46.76"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Fixed fee for phase one, set by us, the whole ask",
+    "cells": [
+     "$9,500",
+     "$9,500",
+     "$9,500"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Annual value of the time freed",
+    "cells": [
+     "$1,613",
+     "$6,294",
+     "$19,213"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Five year total cost, your hours and run cost and contingency",
+    "cells": [
+     "$20,124",
+     "$20,124",
+     "$20,124"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Share of that five year cost recovered",
+    "cells": [
+     "35%",
+     "141%",
+     "439%"
+    ],
+    "emphasis": true,
+    "mark": "modelled"
+   }
+  ],
+  "table_note": "Every driver that varies by column is in the table, and the annual value row is the product of the five rows above it as printed, so a hand check reproduces it exactly. Costs are identical everywhere: the fee, 40 hours of your people's time charged at the loaded ceiling of 46.76 dollars in all three columns, 1,200 dollars a year of run cost over four and a half years, and a 20 percent contingency, so the cost side never gets a cheaper assumption. Volume is assumed at 8, 15 and 25 percent of the 15,203 unique patients your 2024 report gives, and those percentages are arbitrary, because your registration count is not published and a stock of patients is not a flow of registrations. The reachable share is assumed. We chose 80 percent for the conservative column and set the demonstration to match it, so the two tell the same story, and neither is a measurement. We credit only 40 percent of the touched minutes conservatively, because until your staff say what happens inside the published window we do not know how much of that time is a send and how much is a check that stays. The hourly rate is your posted range with an assumed 30 percent payroll uplift, credited at the floor conservatively, the midpoint most likely and the ceiling aggressively. Year one is credited at 40, 50 and 60 percent for a ninety day ramp, and the break even row is the assumed volume divided by the recovered share, both as printed. Every minute here assumes a person does that send and that chase today. If your staff tell us in week one it is already automated, this benefit line goes to zero and we would say so before you spend anything. The time recovered is capacity, not cash. It becomes money only if you redeploy it, defer a hire or avoid a backfill, and we assumed avoid-a-backfill, which is our assumption about your hiring rather than a fact.",
+  "payback_big": "35%",
+  "payback_range": "of five year cost recovered in the conservative case, which is a long way short. Most likely reaches 141 percent and pays back around month 40, aggressive 439 percent around month 14. The argument for the 9,500 dollars is not in that table. It is three measurements you do not have, a published wait removed for good, and a written yes or no on a second phase we would price at 60,000 to 90,000 dollars, decided before you spend it.",
+  "base_rate_note": "The honest prior for any AI proposal, including this one, is that it will not pay. MIT's NANDA report put only about 5 percent of enterprise AI pilots at rapid revenue acceleration. That figure is directional and contested, its denominator is argued over, and it counts pilots that did not move a number rather than technology that does not work, so we use it to frame rather than to bludgeon. It points the same way as the survey below, where even the best scoring category succeeded for about half of respondents. What puts phase one on the other side is that most of it is not AI, it degrades to your current process on any failure, and it needs no write access to a scheduling system you do not fully control.",
+  "value_owner": "Your Chief Operations Officer should own the number, with a variance check 90 days after go live against the baseline collected before the send is switched on, split by channel. The pass condition, the same wherever it appears, is that a second phase is fundable only if the median hours from registration to forms returned falls by at least half and no channel gets worse. Below that we would tell you not to spend it."
+ },
+ "roadmap": {
+  "title": "You can stop at any of three gates and keep what it produced",
+  "lede": "Three gates, each one your off-ramp, and you keep something real at every one.",
+  "body": "Phase one is the whole ask. It runs roughly five to eight weeks from the day access is granted, of which our building is about three to five weeks. The gap is not padding. It is an agreement in legal, a translation turnaround, and a board that typically meets on the last Wednesday of the month. We plan around that cadence rather than push on it, and nothing here expires.",
+  "now": [
+   {
+    "item": "Answer why the 1 to 2 business day window exists, in one session with the staff who own that step, before any code",
+    "metric": "A written answer, countersigned, naming what happens inside the window. Zero lines of send code before it exists."
+   },
+   {
+    "item": "Put timestamps on the registration path and read the three measures, split by channel",
+    "metric": "Three baselines with a stated sample and a minimum of 30 registrations each, re-runnable by your staff without us in the room."
+   },
+   {
+    "item": "The automatic send and the reminder ladder, with a send log and a one click revert",
+    "metric": "Median hours from registration to the links reaching the patient, against the baseline, over 30 consecutive days of real registrations."
+   }
+  ],
+  "next": [
+   {
+    "item": "A labelled set of 200 to 300 of your own past intakes, which is yours permanently",
+    "metric": "Agreement measured between labellers on a double labelled tenth of it, before any model work starts."
+   },
+   {
+    "item": "Two supervised model steps, behind a person confirming every packet, funded only if the median hours to forms returned halves and no channel gets worse",
+    "metric": "Field level match against staff confirmed answers, at a target agreed before the build, and review minutes measured against today's call."
+   },
+   {
+    "item": "Your four published forms translated once by people into more languages, shipped as static files",
+    "metric": "Published form languages up from four, each signed off by a named reviewer."
+   }
+  ],
+  "later": [
+   {
+    "item": "Renewal reminders on the sliding fee clock, which carries the only real deadline in your operation",
+    "metric": "First the answer to whether you already send them. Nothing here is priced before that."
+   },
+   {
+    "item": "A sampling audit of scribe notes from visits that ran through an interpreter, because a 2026 study found scribes carrying interpreter errors into notes in simulated encounters",
+    "metric": "An agreed sampling rate and a measured discrepancy rate, as a check you own and run."
+   },
+   {
+    "item": "Measure abandonment and hold time on your main line, which you can do without buying anything",
+    "metric": "Two numbers that do not exist today, before anyone proposes anything for that channel."
+   }
+  ],
+  "gates": "You can stop at any gate and keep what it produced. Stop after the first conversation and you keep a written map of your own front door. Stop after phase one and you keep three measurements you did not have and an automatic send running on rules you own, with tests, a log and a documented way back to today. Nothing to renew, nothing that stops working when we leave, no model and no subscription. Stop at the phase two decision and you keep the answer itself, a yes or no on a 60,000 to 90,000 dollar build decided on your numbers. The second phase opens only on measurements, never on argument, and only if the median hours to forms returned halves while no channel gets worse. If your logs carry the timestamps we read that baseline from history in week one. If not, the baseline is the 30 days before the send is switched on, which moves the decision by about a month and changes nothing else.",
+  "need_from_you": "Thirty minutes with the staff who run the new patient loop. Read access to the registration and message logs, or a straight answer that the timestamps are not captured, which is equally useful. One named decision owner. A business associate agreement before any patient data moves. Later, and only if the gate clears, staff hours to label past intakes."
+ },
+ "honest": {
+  "title": "Four ways this is a bad buy, and the first is that the window might not be a lag at all",
+  "lede": "Four ways this is a bad buy, and we would rather you found them here.",
+  "body": "The window might not be a lag at all. Your pages say the intake links arrive within one to two business days and never say why, so if somebody is verifying identity or checking for a duplicate chart in there, an instant send is the wrong build. That is question one in week one, before any code, and if a check exists the build becomes a same day service level with the check kept, at the same fee. The discovery is what you are buying, so that outcome costs you nothing.\n\nThe automatic send might move almost nothing. If it does, the bottleneck sits where we can't see it, most likely in appointment supply, which this build never touches and makes no claim about. We would write that up as a recommendation against the second phase. You would keep the send, the tested rules and three numbers, and stop spending on a theory your own data just disproved.\n\nThis build structurally can't reach some of your patients. A text and web path is no use to someone without a stable number or a device, which includes people your mobile clinic reaches at shelters. Worse, the completion numbers could improve while exactly those patients are untouched. That is why every measure is reported split by channel, and why the guardrail fails if any channel gets worse.\n\nThe evidence here is more modest than the noise suggests. In a survey of 43 health systems, 77 percent named immature tools as a top barrier, and even clinical documentation, the highest scoring category, drew a high degree of success from only 53 percent of respondents. That is why the part we are asking you to buy has no model in it."
+ },
+ "next_step_title": "One number from you turns our assumptions into your answer",
+ "next_step": "One reply telling us roughly how many people register with you in a month. That number turns the table above from our assumptions into your answer, and you can send it without committing to anything.",
+ "sources": [
+  {
+   "claim": "Your new patient page, on the two 1 to 2 business day windows and the 36 month rule",
+   "url": "https://www.anhc.org/new-patients"
+  },
+  {
+   "claim": "Your sliding fee page, on the one year and six month validity, the 30 day temporary form and the three reapplication triggers",
+   "url": "https://www.anhc.org/sliding-fee-discount-program"
+  },
+  {
+   "claim": "Your contact page, on the main line, the text channel and the separate after hours number",
+   "url": "https://www.anhc.org/contact"
+  },
+  {
+   "claim": "Your leadership page, where we found the address we wrote to",
+   "url": "https://www.anhc.org/leadership"
+  },
+  {
+   "claim": "Your board pages, on the patient majority requirement and the monthly meeting",
+   "url": "https://www.anhc.org/board"
+  },
+  {
+   "claim": "Your 2024 annual report summary, including the 15,203 unique patients",
+   "url": "https://www.anhc.org/blog/anhc-2024-annual-report"
+  },
+  {
+   "claim": "The Alaska Primary Care Association on your ambient AI tool, where your CMO is quoted",
+   "url": "https://alaskapca.org/anhc-ai/"
+  },
+  {
+   "claim": "Your Form 990 filings as published by ProPublica Nonprofit Explorer",
+   "url": "https://projects.propublica.org/nonprofits/organizations/920047965"
+  },
+  {
+   "claim": "The posted hourly range for a Patient Financial Services Representative II",
+   "url": "https://www.indeed.com/q-anchorage-neighborhood-health-center-jobs.html"
+  },
+  {
+   "claim": "Providence Huffman primary care, on new patient online scheduling",
+   "url": "https://www.providence.org/locations/ak/primary-care-huffman"
+  },
+  {
+   "claim": "Mat-Su Health Services, the nearest Alaska FQHC peer",
+   "url": "https://www.mshsak.org/"
+  },
+  {
+   "claim": "Interior Community Health Center scheduling, on the 48 hour online rule",
+   "url": "https://www.interiorcommunityhealth.org/contents/scheduling"
+  },
+  {
+   "claim": "Southcentral Foundation primary care",
+   "url": "https://www.southcentralfoundation.com/services/primary-care-clinics/"
+  },
+  {
+   "claim": "JAMA, ambient AI scribes across 8,581 clinicians, including no change in after hours EHR time",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41920565/"
+  },
+  {
+   "claim": "PLOS Digital Health, on where AI translation holds and where it does not",
+   "url": "https://journals.plos.org/digitalhealth/article?id=10.1371%2Fjournal.pdig.0001295"
+  },
+  {
+   "claim": "JMIR Medical Informatics, on scribes carrying interpreter errors into notes in simulated encounters",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42520279/"
+  },
+  {
+   "claim": "JAMIA, the survey of 43 health systems, on tool maturity and success rates",
+   "url": "https://academic.oup.com/jamia/article/32/7/1093/8125015"
+  },
+  {
+   "claim": "California Health Care Foundation, on why safety net pricing models do not work",
+   "url": "https://www.chcf.org/resource/ai-tools-promise-better-care-challenge-safety-net-providers/"
+  },
+  {
+   "claim": "MIT NANDA's State of AI in Business 2025, on how few enterprise AI pilots reach measurable impact",
+   "url": "https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/"
+  },
+  {
+   "claim": "OCHIN, the community health center collaborative, measuring ambient documentation at one of its member health centers",
+   "url": "https://ochin.org/member-spotlights/leading-responsible-ai-community-healthcare/"
+  },
+  {
+   "claim": "Your published portal link, which resolves to an Epic MyChart login operated for Providence Health and Services Alaska",
+   "url": "https://ak.myonlinechart.org/affiliate/Authentication/Login"
+  }
+ ]
+}

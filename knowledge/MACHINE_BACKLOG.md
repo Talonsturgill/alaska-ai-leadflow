@@ -12,12 +12,35 @@ from it.
 
 ## OPEN
 
-Nothing. Items 1 through 7 all shipped on 2026-08-05 and are recorded below.
+- **2026-08-06, item 8, the 54 against 12 measurement figure has no primary
+  source we could reach.** BLOCKED ON A HUMAN DECISION, not on effort.
 
-An empty backlog is a snapshot, never a finding. The next run's Phase 10 retro
-is expected to fill it again, and a retro that adds nothing here should say so
-in as many words rather than leaving silence to stand in for a judgement. The
-rules at the top still bind: evidence from a dated run, no speculative "would
+  EVIDENCE. The 10b frontier scan checked whether ROI_METHOD's outside-view base
+  rate is still current. It is: MIT 95 percent and RAND 80 percent both still
+  read as the standing numbers in August 2026, so nothing there needed changing.
+  The scan did surface one figure that would be genuinely useful to us, that AI
+  projects with quantified success metrics defined upfront succeed at 54 percent
+  against 12 percent for those without, attributed everywhere to a 2025 MIT Sloan
+  study. It is the outside-view argument for the exact thing this routine keeps
+  selling as phase one, instrumentation and baselines before any model, and this
+  run had to make that argument entirely on its own reasoning.
+
+  WHY IT IS NOT SHIPPED. Every page carrying it inside the timebox was a
+  secondary content-marketing restatement. No primary paper was located. A number
+  in knowledge/ROI_METHOD.md is a number every future study is allowed to cite,
+  and HONESTY says a fact traces to a page that was fetched, so putting an
+  untraced figure into the file that governs our honesty is precisely backwards.
+
+  WHAT UNBLOCKS IT. Someone locating the primary study, or the maintainer
+  deciding a well-attributed secondary source is acceptable for a base-rate
+  anchor. A run cannot make that second call for itself, because ROI_METHOD is a
+  bar this routine is judged against.
+
+  A related figure from the same scan, that 61 percent of enterprise AI projects
+  are approved on projected ROI nobody ever measures after launch, has the same
+  problem and the same fix.
+
+The rules at the top still bind: evidence from a dated run, no speculative "would
 be nice", and a run may add but may never quietly delete.
 
 ---

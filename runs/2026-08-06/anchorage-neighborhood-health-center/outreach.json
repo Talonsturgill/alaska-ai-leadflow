@@ -1,0 +1,27 @@
+{
+ "subject": "Field study on the ANHC new patient intake loop",
+ "body": "An AI tool already drafts your clinicians' visit notes and nothing like it shows up at the other Alaska health centers we checked. Your new patient front door still ends in a callback and nobody publishes what that loop costs.\n\nWe already did the study on measuring it.\n\nhttps://alaskaaihq.com/awesomeproposal/anchorage-neighborhood-health-center/\n\nTell us if it's useful.",
+ "to": "executiveassistant@anhc.org",
+ "to_name": null,
+ "title_note": "Executive Assistant and Board Liaison, Anchorage Neighborhood Health Center. Published on two separately fetched ANHC pages and the only staff email rendered on either. She is a ROUTER, not the buyer, and her published job is relaying to leadership and the patient-majority governing board. No ANHC executive publishes a verifiable address anywhere, so the email names nobody, assumes no prior thread, and is written to survive a forward with the subject stripped.",
+ "link": "https://alaskaaihq.com/awesomeproposal/anchorage-neighborhood-health-center/",
+ "opens_on": "Their own blog and the Alaska Primary Care Association confirm ANHC runs an ambient AI tool that drafts clinicians' visit notes, and no Alaska community health center peer checked publishes anything comparable, while their own new patient page still ends the intake path in a scheduling phone call.",
+ "lead_critic": "ship on round 1. Verdict: 53 words, 0 commas, no tells, no problems, no fix offered. The rounds went into the BRIEF before the writer ever ran, which is where the contract's fourth-round diagnosis says the defect usually lives. The brief named the exact opening fact, said in writing why that fact and not the two published 1-2 business day windows (a wait-time opening reads as 'your process is slow' and fails the nod test), banned urgency outright for a patient-majority board that meets monthly, and listed the only facts that could be used.",
+ "word_count_prose": 53,
+ "comma_count": 0,
+ "industry_proof": "Offered in the brief and deliberately not used in the body. The independent tier is about 13 fewer minutes of record time per clinician across 8,581 clinicians at five academic health systems, with after-hours time unmoved. Carrying it would have pushed the body past sixty words and the study already carries it in full.",
+ "roi_in_email": "None, by design, and this is the honest call rather than an omission. The conservative case on recovered staff time alone returns about 35 percent of five year cost and never pays back, which is the study's own headline. A number that shape needs the study's framing around it to read as candour rather than as a reason to stop reading, and the alternative, a friendlier number, is the hero number the gate exists to prevent. The email carries no money at all so nothing in it can be read as a projection.",
+ "personalization_gate": {
+  "this_company_only_fact": "An ambient AI tool already drafting their clinicians' visit notes, verified on ANHC's own blog and the Alaska Primary Care Association, set against a new patient path their own site ends in a callback. No other Alaska health center checked can be described this way.",
+  "hero_number": false,
+  "kill_list_hits": [],
+  "em_or_en_dashes": 0,
+  "colons_semicolons_in_prose": 0,
+  "cannot_used": false,
+  "sentence_openers": ["An", "Your", "We", "Tell"],
+  "links": 1,
+  "self_reference": "none, the email never says who or what produced the study",
+  "passes": true
+ },
+ "voice_delta_note": "No voice_diff was run this cycle. The 2026-08-05 Fountainhead email was SENT UNCHANGED at 22:54Z, the first unedited send on record, so there was no edit to learn from and nothing in the voice was changed for this one."
+}

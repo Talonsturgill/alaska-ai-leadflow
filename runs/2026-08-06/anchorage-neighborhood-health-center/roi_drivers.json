@@ -1,0 +1,71 @@
+{
+ "scenarios": {
+  "conservative": {
+   "registrations_per_month": 101,
+   "reachable_share": 0.8,
+   "pursuits_per_year": 970,
+   "benefit_lines": [
+    {
+     "label": "Admin minutes recovered on the registration path, capacity",
+     "hours_per_pursuit": 0.133333,
+     "rate": 31.17,
+     "cut": 0.4
+    }
+   ],
+   "avoided_cost_lines": [],
+   "implementation": 9500,
+   "training": 1870.4,
+   "run_cost_per_year": 1200,
+   "run_cost_years": 4.5,
+   "contingency": 0.2,
+   "year1_ramp": 0.4,
+   "years": 5
+  },
+  "most_likely": {
+   "registrations_per_month": 190,
+   "reachable_share": 0.85,
+   "pursuits_per_year": 1938,
+   "benefit_lines": [
+    {
+     "label": "Admin minutes recovered on the registration path, capacity",
+     "hours_per_pursuit": 0.166667,
+     "rate": 38.97,
+     "cut": 0.5
+    }
+   ],
+   "avoided_cost_lines": [],
+   "implementation": 9500,
+   "training": 1870.4,
+   "run_cost_per_year": 1200,
+   "run_cost_years": 4.5,
+   "contingency": 0.2,
+   "year1_ramp": 0.5,
+   "years": 5
+  },
+  "aggressive": {
+   "registrations_per_month": 317,
+   "reachable_share": 0.9,
+   "pursuits_per_year": 3424,
+   "benefit_lines": [
+    {
+     "label": "Admin minutes recovered on the registration path, capacity",
+     "hours_per_pursuit": 0.2,
+     "rate": 46.76,
+     "cut": 0.6
+    }
+   ],
+   "avoided_cost_lines": [],
+   "implementation": 9500,
+   "training": 1870.4,
+   "run_cost_per_year": 1200,
+   "run_cost_years": 4.5,
+   "contingency": 0.2,
+   "year1_ramp": 0.6,
+   "years": 5
+  }
+ },
+ "break_even": {
+  "unit_key": "registrations_per_month",
+  "note": "Counted in registrations ARRIVING per month, the number ANHC can count, with the reachable share applied inside the benefit."
+ }
+}

@@ -1,10 +1,10 @@
 {
- "version": 1,
- "note": "Consecutive runs that could not check INBOUND FIRST. The opt-in queue is a GitHub issue queue labelled scan-opt-in on this repo. If it cannot be read, consented inbound leads go invisible and a cold lead ships in their place, so this counter makes that cost visible instead of silent.",
- "consecutive_skips": 0,
- "first_skipped": null,
- "last_skipped": "2026-07-29",
- "last_checked": "2026-08-05",
- "reason": null,
- "updated": "2026-08-05"
+  "version": 1,
+  "note": "Consecutive runs that could not check INBOUND FIRST. The opt-in queue is a GitHub issue queue labelled scan-opt-in on this repo. If it cannot be read, consented inbound leads go invisible and a cold lead ships in their place, so this counter makes that cost visible instead of silent.",
+  "consecutive_skips": 0,
+  "first_skipped": null,
+  "last_skipped": "2026-07-29",
+  "last_checked": "2026-08-06",
+  "reason": null,
+  "updated": "2026-08-06"
 }

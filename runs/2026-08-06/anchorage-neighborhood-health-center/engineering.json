@@ -1,0 +1,581 @@
+{
+ "prd": {
+  "problem": "ANHC's own new patient page tells a person who has just decided to establish care exactly what happens next. \"Within 1-2 business days, you will receive a text with links to complete the following forms.\" \"Within 1-2 business days, you will receive a call to schedule your first appointment.\" Two separate waits, each one starting when a staff member gets to it, before somebody who came to ANHC has an appointment. Anyone who has not been seen by an ANHC provider in the last 36 months re-enters that same loop as a new patient, so the population hitting it refreshes continuously. Across town on the same day, a Providence primary care clinic on Huffman shows new patients open appointment times to pick from on screen. That is one Anchorage person, on one afternoon, choosing between a booking screen and a callback promise, against a published mission to be \"a trusted partner in every person's wellness, regardless of ability to pay.\" Here is the part that matters more, and it is the reason we would start where we would start. Nobody can currently say how much that loop costs, including us. How many hours it really takes for intake forms to come back complete, how many hours until an appointment is confirmed, and what share of people register and are never booked at all are three numbers that appear nowhere in the public record, and we found no sign they are reported internally either. A published process with an unmeasured cost can't be argued about at a board meeting, can't be defended to a funder, and can't be improved with any confidence that the improvement was real. ANHC has already done the harder version of this once. An ambient AI documentation tool is running in clinical production and the CMO talks publicly about spending 25 minutes with the patient and five reviewing the note, which is further than any Alaska FQHC peer we checked has gone in public. The clinical side got instrumented and changed. The front door did not.",
+  "after_state": "Somebody registers with ANHC at nine on a Sunday night, the intake form links land on their phone before they put it down, staff open Monday to a queue that is already moving instead of one they have to start, and for the first time ANHC can say from its own logs how long the loop actually takes and how many people fall out of it.",
+  "goals": [
+   "Remove the first published window so the intake form links leave the moment a registration lands rather than when a staff member reaches it, conditional on the week one answer to why that window exists today.",
+   "Produce the three numbers that don't exist anywhere today, from ANHC's own logs, split by channel, as a query ANHC staff can re-run without us in the room.",
+   "Hand ANHC a written go or no-go on the model phase, decided against a stated break even threshold using ANHC's own measured registration volume and admin minutes, one board cycle before any second ask.",
+   "Leave ANHC better off even when the answer is no. The auto send, the reminder ladder, the tested sliding fee date rules and the measurement stay with ANHC whatever the decision.",
+   "Fit the buying shape rather than fight it. One fixed organization fee, no per seat and no per clinician licence, with the integration work carried by us rather than assumed to sit with staff who have other jobs.",
+   "Disturb nothing that is already working, specifically the same day promise for established patients, the dedicated after hours line, the TEXT ME channel on the main line, and the ambient scribe in clinical production."
+  ],
+  "non_goals": [
+   {
+    "item": "Any AI at all in phase one.",
+    "reason": "Our own prioritisation scored the no-AI version of this build above the AI version, 5.95 against 3.27, and we didn't explain that result away. Firing a text when a form is submitted is a rules problem and it deserves a rules fix. A model earns a place on top of a measured baseline or it doesn't get built."
+   },
+   {
+    "item": "Anything that changes appointment supply, and any claim that this shortens the wait to be seen.",
+    "reason": "Nothing in the record says whether the two published windows are a communications constraint or a schedule capacity constraint. Until ANHC answers that from the inside, a claim about time to be seen would be unsupported, so we won't make one and no metric here rests on it."
+   },
+   {
+    "item": "Booking appointments, or any write access to a scheduling system.",
+    "reason": "ANHC's published portal link resolves to an Epic MyChart login operated for Providence Health and Services Alaska, so scheduling write access isn't ANHC's alone to grant. Phase one asks for no write access to anything, which is why the one unverified integration in the whole picture stays untouched."
+   },
+   {
+    "item": "Live spoken interpretation, in phase one or ever.",
+    "reason": "The PLOS Digital Health review that supports written AI translation concludes in the same paper that professional human interpreters remain essential for complex, emotionally charged or high stakes clinical communication. This is a permanent non goal, not a deferred feature."
+   },
+   {
+    "item": "Clinical triage, urgency ranking, or anything that decides how sick somebody is.",
+    "reason": "A false negative on a message about self harm is unbounded in cost, and no ANHC message volume or labelled corpus exists to measure recall against. If ANHC wants urgent flagging sooner, the honest first answer is a keyword escalation list a safety committee can read end to end, which costs nothing and isn't AI."
+   },
+   {
+    "item": "Runtime translation of anything a patient reads and acts on.",
+    "reason": "The four published sliding fee forms are fixed documents, so more languages is a one time human reviewed translation that becomes a static file lookup. The same PLOS review found Russian accuracy at roughly 89 percent for GPT-4 and 80 percent for Google Translate, with up to 6 percent of instruction sets containing potentially harmful errors, so a model generating patient facing instruction at runtime is the wrong tool at any price."
+   },
+   {
+    "item": "Determining anyone's sliding fee discount.",
+    "reason": "ANHC's own policy already requires submitted documentation for a one year discount, so a person and a document sit between any software output and a determination. Phase one computes dates and triggers, never eligibility, and that doesn't change in phase two."
+   },
+   {
+    "item": "The ambient scribe already in clinical production.",
+    "reason": "It is running, it is ahead of every Alaska FQHC peer we checked, and there's no build for us there. The one thing worth doing near it is an audit rather than a replacement, and that sits in the later lane."
+   },
+   {
+    "item": "The main patient line and the after hours line.",
+    "reason": "No ANHC call volume, hold time or abandonment rate exists anywhere we could verify, so any phone build would be aimed at an unmeasured problem. Established patients already have a dedicated after hours number reaching an answering service, which is the highest cost of error surface in the operation and is already routed to people."
+   }
+  ],
+  "metrics": [
+   {
+    "metric": "Time from a completed online registration to the intake form links reaching the patient, reported as median and 95th percentile.",
+    "baseline": "UNKNOWN AS A MEASURED NUMBER, and saying so is more useful than guessing. The new patient page publishes a service level of within 1 to 2 business days, which is a promise rather than a measurement, and no median exists in the public record. We pull the real figure in week one from the registration record and the outbound message log. If those logs don't carry both timestamps, the week one finding is that the figure can't be reconstructed from history, and writing those timestamps becomes the first build rather than a hidden assumption.",
+    "target": "Median under 15 minutes, 95th percentile under 60 minutes, for every registration that arrives with a mobile number. This target is CONDITIONAL on the week one answer to why the current window exists. If a person verifies identity or checks for a duplicate chart inside it, that window is a policy rather than a lag, instant send is the wrong build, and the target changes in writing to a same business day service level with the check kept, before any code is written.",
+    "timeframe": "Baseline in week one. Target measured across eight consecutive weeks after the auto send goes live, reported weekly."
+   },
+   {
+    "metric": "Median hours from online registration to the intake forms coming back complete, split by channel.",
+    "baseline": "DOES NOT EXIST in the public record and we found no sign it exists in a report. Pulled in week one from ANHC's own logs, covering the twelve weeks before we touch anything.",
+    "target": "The median falls by at least 80 percent of the measured baseline send lag, which is the only part of this number an auto send can honestly move. We commit the exact figure in hours in writing at the end of week two, once the baseline exists, so the target is a number rather than a direction. If the median doesn't move by that much, phase one failed this metric and it says so in the same report that carries the other two.",
+    "timeframe": "Twelve weeks after the auto send is live, compared against the twelve weeks before it."
+   },
+   {
+    "metric": "Share of online registrations that never reach a booked appointment, reported split by channel.",
+    "baseline": "DOES NOT EXIST anywhere we could verify. Pulled in week one from ANHC's own logs. Split by channel in the first report and every report after, because a text and web build structurally can't reach the population behind the 314 mobile clinic visits at shelters across Anchorage, and a single blended number would flatter this build rather than test it.",
+    "target": "A GUARDRAIL in phase one rather than a promise. The twelve week figure after launch must be no worse than the measured baseline in any channel, because faster form delivery must never push anybody out of the loop. The reduction target that would justify the model phase is set in writing at the end of week two, chosen from ANHC's measured baseline instead of from our expectations.",
+    "timeframe": "Baseline week one, guardrail checked weekly, held across the twelve weeks after launch."
+   },
+   {
+    "metric": "A written go or no-go on the model phase, resting on ANHC's own measured numbers against a stated break even threshold.",
+    "baseline": "Today this decision has no data under it. No ANHC registration volume and no admin minutes per registration exist in the public record, and no staffing figure exists that we were willing to verify, so nobody could price this decision honestly, us included. The one verified labour anchor is a Patient Financial Services Representative II posted at 23.98 to 35.97 dollars an hour, so the threshold is priced per hour of admin time and never per position.",
+    "target": "One page carrying the three measured numbers, the measured admin minutes per registration, and a yes or no against the threshold, delivered to a named decision owner. If we can't produce that page, phase one hasn't delivered, whatever else it shipped.",
+    "timeframe": "Within twelve weeks of start, and at least one board cycle before any phase two ask would reach a last Wednesday meeting."
+   }
+  ],
+  "phase1_must": [
+   "Week one, with the intake staff who run the process today, a written answer to why the 1 to 2 business day window exists. Nothing gets built until that answer is on paper and signed off, because it decides whether the correct build is an instant send or a same day service level with a check preserved.",
+   "Instrumentation on ANHC's registration path producing the three numbers, split by channel, delivered as a query ANHC can re-run on its own without us.",
+   "The deterministic auto send. Intake form links fire the moment a registration lands, in the four languages ANHC already publishes forms in, with no model and no inference anywhere in the path.",
+   "A fixed reminder ladder and an incomplete flag, so staff see who has stalled instead of discovering it on the scheduling call.",
+   "A send log staff can read and a one click kill switch that reverts to today's process, because the build has to be able to degrade to the current process and never below it.",
+   "The sliding fee date rules as plain code with unit tests, covering the three published reapplication triggers and the 30 day temporary self declaration that can be used only once every twelve months. Rules and tests only in phase one, since acting on them depends on read access we haven't confirmed.",
+   "The break even threshold table, filled in with ANHC's own registration volume and admin minutes rather than ours, so ANHC can check the phase two case against its own numbers in an afternoon.",
+   "The written go or no-go, delivered to the named decision owner one board cycle ahead of any further ask."
+  ],
+  "phase1_later": [
+   "LATER, and only if the measured numbers clear the gate. The two supervised model steps, reading what a patient writes in their own words into candidate field values, and an allowlisted answerer over the administrative questions ANHC already publishes, both behind a human review on every packet with no sampling exception.",
+   "LATER. The evaluation set of 200 to 300 historical completed intakes, de-identified, stratified by language and channel, labelled by the intake staff who do this work today. This does not exist and building it is the first month of the model phase, not a footnote inside it.",
+   "LATER. Outbound sliding fee renewal reminders on the tested clock, gated on two answers, whether ANHC already sends them and whether the discount issue dates are readable from the system that holds them.",
+   "LATER. Translating the four published forms into more languages as a one time human reviewed project that becomes a static file, never a model translating at runtime.",
+   "LATER. A sampling audit of ambient scribe notes from encounters that ran through an interpreter, following the JMIR finding that scribes propagated interpreter errors into notes in simulated encounters. This is advisory and governance work rather than a build, and the study is simulated rather than live clinical, so it is a question worth asking rather than a finding about ANHC.",
+   "LATER, and deliberately not first. Anything touching the main line. A measured abandonment rate and hold time baseline on 907-743-7200 comes before any conversation about that channel, and ANHC can take that measurement without buying anything from anyone."
+  ],
+  "need_from_you": [
+   "Week one, thirty minutes with the intake staff who actually run the new patient loop, to answer why the 1 to 2 business day window exists. This is the single load bearing unknown in the whole proposal and no amount of outside research resolves it.",
+   "Read access to the online registration records and the outbound message log, or a straight answer that the timestamps aren't captured. Either answer is useful. The second one changes what week two looks like and we would rather find it in week one than in month three.",
+   "A named decision owner with authority to accept the phase two gate, plus a note on which board meeting would see this and what that meeting needs in advance. The board meets on the last Wednesday of the month with a patient majority, so the calendar sets the pace and we will plan around it rather than push on it.",
+   "A signed BAA and a written no training on our data term before any patient data moves, including in phase one where no model is involved. Also the consent posture ANHC already uses for the existing text channel, since household income and household size over SMS is a different sensitivity from a refill request.",
+   "A written answer on whether a third party's data governance sits in the path, given that the published portal link resolves to an Epic MyChart login operated for Providence Health and Services Alaska. Phase one needs no access there and asks for none, and we still need to know who else is in the room before phase two is discussed.",
+   "Whether ANHC already sends sliding fee renewal reminders today, and which system holds the discount issue dates. This one question decides whether the renewal work is most of a value case or almost none of it.",
+   "Intake staff hours to label 200 to 300 historical intakes, and this is the longest lead item in the whole engagement, which is why it is named now rather than at the point it blocks something. It is not needed unless the phase two gate clears, and it can't be compressed once it is.",
+   "A slot in the standing staff training window on the second or fourth Tuesday for whoever will watch the send log, so the rollout uses a habit that already exists instead of asking for a new one."
+  ],
+  "risks": [
+   {
+    "risk": "The 1 to 2 business day window turns out to be a deliberate check rather than a queue. If somebody verifies identity or looks for a duplicate chart in that window, instant auto send is unsafe and the headline part of phase one is wrong as specified. Nothing in 89 verified facts about ANHC resolves this, and we would rather say that plainly than assume our way past it.",
+    "mitigation": "It is question one of week one, asked of ANHC staff before a line of code. If the answer is that a check exists, the build changes shape in writing to a same day service level with the check kept, the fixed fee doesn't change, and the three measurements go ahead exactly as scoped. The discovery is the point of buying phase one, so this outcome costs ANHC nothing extra."
+   },
+   {
+    "risk": "A text and web build structurally excludes the people reached by the 314 mobile clinic visits at shelters across Anchorage. Somebody without a stable number or device gets nothing from this, and worse, the completion metric can improve at the same time the hardest to reach patients are untouched, which would make the build look better than it is.",
+    "mitigation": "Every metric is reported split by channel from the first week, so a blended number can never hide it, and the guardrail metric fails if any channel gets worse. Nothing in phase one removes or degrades the existing phone and in person paths. We are not claiming this build serves that population, because it doesn't."
+   },
+   {
+    "risk": "The logs may not carry the timestamps, in which case the twelve week before and after comparison can't be built from history and the honest baseline starts on the day instrumentation lands.",
+    "mitigation": "Then measurement is itself the first build and we say so on the day we find it, not at the end. The auto send still ships, the fixed fee doesn't move, and the comparison window shifts forward rather than disappearing. This is exactly why phase one buys instrumentation before it buys anything clever."
+   },
+   {
+    "risk": "The human review gate in phase two is not free. Staff time to review a pre-filled packet is a real cost, and counting the time saved on data gathering as pure gain would be dishonest arithmetic.",
+    "mitigation": "The comparison we measure is review time against today's data gathering call, never against zero, and it is measured on ANHC's staff with ANHC's forms. If reviewing a filled packet isn't faster than gathering one, the model phase doesn't get funded, and phase one has already paid for itself in the auto send and the numbers."
+   },
+   {
+    "risk": "Phase one might show that the auto send moves almost nothing, which would mean the bottleneck sits somewhere we can't see from outside, most likely in appointment supply.",
+    "mitigation": "That is a legitimate result of a fixed fee decision project and we would write it down as the recommendation, including a recommendation against phase two. ANHC keeps the auto send, the reminder ladder, the tested date rules and three numbers it didn't have, and it stops spending on a theory that its own data just falsified. A no is a cheaper outcome here than anywhere later."
+   },
+   {
+    "risk": "Decision latency. A material new system is board visible, the board meets monthly with a patient majority, and a proposal that leans on urgency reads badly in that room.",
+    "mitigation": "Phase one is deliberately sized to be a decision a named owner can make, with all material delivered a full cycle ahead of any meeting that needs it. There is no dated deadline in this proposal because the evidence doesn't contain one, and manufacturing one would be a tell rather than an argument."
+   },
+   {
+    "risk": "This is PHI, and the paperwork has real elapsed time in it. A BAA, a written no training on our data term and the consent posture for income and household information over SMS are scope items, not admin to handle later, and a third party's governance may sit in the path.",
+    "mitigation": "All of it starts in week one alongside the discovery interview rather than at the point it blocks a launch. Phase one is designed to need no model vendor at all, which removes the hardest part of that conversation from the critical path entirely."
+   },
+   {
+    "risk": "Delivered work can die on handover. Safety net leaders have said plainly that a community clinic may not have data scientists on staff to implement AI, and something ANHC can't run without us isn't an asset.",
+    "mitigation": "We carry the integration work, and the three numbers ship as a query ANHC staff can run themselves on any Tuesday. The success test we would accept is somebody at ANHC pulling the numbers with us out of the room."
+   },
+   {
+    "risk": "The general evidence for health AI is more modest than the market noise suggests. In a survey of 43 health systems, 77 percent named lack of tool maturity as a top barrier, and even clinical documentation, the best evidenced category, drew a high degree of success from only 53 percent.",
+    "mitigation": "That is precisely why phase one contains no AI. The model steps are two, they are narrow, they sit behind a human gate ANHC's own policy already requires, and they only get funded if ANHC's measured numbers say they should."
+   }
+  ],
+  "open_questions": [
+   {
+    "q": "Why does the 1 to 2 business day window before the intake text exist? Nothing in the verified record states a cause, and the answer decides whether the correct build is an instant send or a same day service level with a check preserved.",
+    "owner": "ANHC intake staff, in a week one session with us. This is the one question we would not proceed past."
+   },
+   {
+    "q": "Do the registration and outbound messaging systems record both timestamps, so a twelve week baseline can be reconstructed from history?",
+    "owner": "Whoever administers the online registration form and the messaging channel at ANHC, with us doing the pull."
+   },
+   {
+    "q": "Are the two published windows a communications constraint or a schedule capacity constraint? Everything anyone might later want to claim about time to be seen rests on this, and no outside source can answer it.",
+    "owner": "ANHC operations leadership."
+   },
+   {
+    "q": "Does ANHC already send sliding fee renewal reminders today? The size of the gap being closed by the renewal work swings from most of its value to almost none on this single answer.",
+    "owner": "ANHC patient financial services."
+   },
+   {
+    "q": "Which system holds sliding fee discount issue dates, household size and prior income, and can it be read? A model doesn't rescue this one, the gap is access rather than intelligence.",
+    "owner": "ANHC, with whoever administers that system."
+   },
+   {
+    "q": "What share of online registrations are genuinely new patients versus people re-entering under the 36 month rule? The 2024 report gives 15,203 unique medical and dental patients served, and the new patient share isn't published, so reach today is bounded rather than measured.",
+    "owner": "ANHC, from its own records, during the week one pull."
+   },
+   {
+    "q": "Given the portal link resolves to an Epic MyChart login operated for Providence Health and Services Alaska, whose data governance sits in the path, and who would need to be at the table before any phase two conversation?",
+    "owner": "ANHC leadership, possibly jointly with Providence. Phase one is designed so this answer isn't needed to start."
+   },
+   {
+    "q": "How many online registrations arrive in a month, and roughly how many admin minutes does each one consume today? These are the two inputs the break even threshold needs, and neither exists in the public record.",
+    "owner": "ANHC, checked against the threshold table we would bring."
+   },
+   {
+    "q": "Who signs the BAA, and how long does that path typically take at ANHC?",
+    "owner": "The named ANHC decision owner."
+   }
+  ]
+ },
+ "design": {
+  "one_liner": "A deterministic intake workflow that fires ANHC's own intake form links the moment an online registration lands instead of within 1 to 2 business days (C10), runs ANHC's published sliding fee clock as tested code (C16, C17, C18), and hands intake staff a pre filled packet with the patient's own words sitting beside every extracted field, so the second staff contact becomes a booking call rather than a data gathering call (C11).",
+  "architecture": {
+   "nodes": [
+    {
+     "id": "patient",
+     "label": "New patient at ANHC",
+     "kind": "user"
+    },
+    {
+     "id": "registration",
+     "label": "ANHC online new patient registration",
+     "kind": "external"
+    },
+    {
+     "id": "flow",
+     "label": "Intake Flow Service, rules only. Auto send, reminder ladder, sliding fee clock, patient intake form",
+     "kind": "system"
+    },
+    {
+     "id": "sms",
+     "label": "SMS gateway on ANHC's main line, under a BAA",
+     "kind": "external"
+    },
+    {
+     "id": "model",
+     "label": "Gated Field Reader, the only model in the build",
+     "kind": "ai"
+    },
+    {
+     "id": "store",
+     "label": "Intake Packet Store, encrypted. Every field written beside the patient's verbatim words",
+     "kind": "data"
+    },
+    {
+     "id": "console",
+     "label": "Staff Review Console, one human gate before anything is filed",
+     "kind": "system"
+    },
+    {
+     "id": "staff",
+     "label": "ANHC intake staff, who book the appointment by hand",
+     "kind": "user"
+    }
+   ],
+   "edges": [
+    {
+     "from": "patient",
+     "to": "registration",
+     "label": "submits ANHC's existing online registration, unchanged"
+    },
+    {
+     "from": "registration",
+     "to": "flow",
+     "label": "registration event, async with retry"
+    },
+    {
+     "from": "flow",
+     "to": "sms",
+     "label": "form links and a fixed reminder ladder, every send logged"
+    },
+    {
+     "from": "sms",
+     "to": "patient",
+     "label": "text with links, wording from a static human reviewed file"
+    },
+    {
+     "from": "patient",
+     "to": "flow",
+     "label": "answers in their own words over a signed single use link"
+    },
+    {
+     "from": "flow",
+     "to": "model",
+     "label": "one extraction call, free text and field schema only, no name, no date of birth"
+    },
+    {
+     "from": "model",
+     "to": "store",
+     "label": "candidate field values, each beside the verbatim source text (C63)"
+    },
+    {
+     "from": "flow",
+     "to": "store",
+     "label": "send log, reminder state, sliding fee dates computed in tested code"
+    },
+    {
+     "from": "store",
+     "to": "console",
+     "label": "pre filled packet and the patient's original wording, side by side"
+    },
+    {
+     "from": "staff",
+     "to": "console",
+     "label": "confirms or corrects every field, then files"
+    },
+    {
+     "from": "console",
+     "to": "store",
+     "label": "filed packet plus a per field accept, edit or reject record"
+    }
+   ],
+   "caption": "Nearly all of this is rules. One box is a model, it runs on what the patient wrote, and a person confirms every field before anything is filed. Nothing in this design writes to a scheduling system. Staff receive a finished packet and book the appointment themselves. On any failure the patient gets blank form links and today's callback, which is exactly the current process."
+  },
+  "build_vs_buy": [
+   {
+    "component": "Intake Flow Service, the registration trigger, the fixed reminder ladder and the send log",
+    "decision": "build",
+    "why": "This is the differentiator and it is small. It encodes ANHC's own published process (C10, C11). Off the shelf patient engagement platforms are sold per provider per seat, the exact shape CHCF safety net leaders said does not work for them (C64), and buying one would still leave the integration work undone, which is the thing a community clinic without data scientists on staff is actually purchasing (C65)."
+   },
+   {
+    "component": "Sliding Fee Clock, the date engine for the three reapplication triggers",
+    "decision": "build",
+    "why": "It is arithmetic against records ANHC already keeps, so a model would be slower, cost more per run and can't be tested exhaustively. New patient is a lookup inside 36 months (C12). Discount expiry is an issue date plus twelve or six months (C16). It ships with a named unit test, test_temporary_declaration_leaves_twelve_month_tail, for the C17 edge where a 30 day temporary self declaration usable only once every twelve months leaves a patient with a gap and no second declaration available."
+   },
+   {
+    "component": "Patient Intake Web Form, mobile first, signed single use link",
+    "decision": "build",
+    "why": "It has one requirement no form builder gives us, it must persist the patient's raw typed text alongside whatever gets structured from it, and it must work on a phone over a text message link with no account to create."
+   },
+   {
+    "component": "Staff Review Console, the one human gate",
+    "decision": "build",
+    "why": "This is the safety surface and the reason the design survives feasibility. It shows the patient's original wording next to every candidate value so the reviewer checks the source rather than a laundered version, the design lesson from C63. Its per field accept, edit and reject log is also the production eval signal."
+   },
+   {
+    "component": "Allowlist policy layer for the administrative answerer",
+    "decision": "build",
+    "why": "The build is the default deny, the citation back to the page the answer came from, and the refusal that routes anything clinical to 907-743-7200 (C14). That refusal policy is ANHC specific and is the acceptance criterion the study commits to."
+   },
+   {
+    "component": "Retrieval index for the answerer",
+    "decision": "build",
+    "why": "Build in the trivial sense, and worth saying plainly. We do not buy a vector database. The corpus is a few dozen published pages that fit in memory, so it is a keyed file lookup with the source page cited on every answer. Embeddings here would add cost, latency and a failure surface for a corpus this small, which is the just point RAG at your documents pattern on the AI_SCOPING kill list."
+   },
+   {
+    "component": "Evaluation set and eval harness, 200 to 300 de identified historical completed intakes",
+    "decision": "build",
+    "why": "It does not exist and nobody can sell it. Field level exact match against staff confirmed gold, stratified by language and channel, labeled by the intake staff who do this work today, plus an adversarial set of clinical questions phrased administratively. This is the first month of the model phase rather than a hidden assumption."
+   },
+   {
+    "component": "Baseline instrumentation for the three outcome metrics",
+    "decision": "build",
+    "why": "None of the three has a baseline anywhere in the public record. This is the deliverable of phase one, not a side effect, and it is reported split by channel because a text and web path structurally excludes the population behind 314 mobile clinic visits at shelters (C30)."
+   },
+   {
+    "component": "Translated versions of the four published forms",
+    "decision": "buy",
+    "why": "Buy human translation as a one time service, then it becomes a static file lookup we own. C19 shows four written languages against a homepage figure of 56 translated (C20). The evidence says exactly why this may not be a runtime model, C59 and C60 sit in one sentence, and C61 found back translation retaining only 36 to 76 percent of meaning for certain non European languages."
+   },
+   {
+    "component": "SMS delivery",
+    "decision": "buy",
+    "why": "Commodity, and ANHC already runs a text channel on 907-743-7200 (C14). First choice is ANHC's incumbent provider if that contract already carries a BAA. Fallback is a standard provider under a signed BAA. Which one is a week one question, not a design fork."
+   },
+   {
+    "component": "Base language model",
+    "decision": "buy",
+    "why": "Commodity, and the failure data says buying specialised capability succeeded about twice as often as internal builds. Served through a HIPAA eligible cloud so it sits under the same BAA as the database and no customer data trains the underlying model. That collapses two vendor agreements into one, which matters because the BAA is real elapsed time on the critical path."
+   },
+   {
+    "component": "Data store and hosting",
+    "decision": "buy",
+    "why": "Managed PostgreSQL and containers in a single HIPAA eligible region with customer managed keys. Running our own database for a single tenant clinic workload would be cost and risk with no upside."
+   },
+   {
+    "component": "Staff authentication",
+    "decision": "buy",
+    "why": "ANHC's existing staff identity provider over SAML or OIDC. Never build auth, and never create a second password for staff to manage. Roles stay in ANHC's directory so offboarding removes access without us being told."
+   },
+   {
+    "component": "Observability and error tracking",
+    "decision": "buy",
+    "why": "Structured logs and exception tracking with PHI scrubbing on. Commodity, and a bespoke logging stack is pure cost."
+   }
+  ],
+  "cross_cutting": {
+   "auth": "Staff sign in through ANHC's existing identity provider over SAML or OIDC, with two roles. Reviewer can open a packet and file it, admin can change the reminder ladder and the allowlist. Filing requires the reviewer role and is recorded against a named person, so there are no shared accounts and no service account can file. Patients get no account at all. The intake link is a single use signed token bound to the phone number the registration carried, expiring in 72 hours, reissued only by SMS to that same number, which keeps identity proofing exactly where ANHC already has it. Our own team gets no standing production access, break glass access is named, time boxed, logged and covered by the BAA.",
+   "data_security": "This is PHI and the paperwork is scope with elapsed time, not an afterthought. Before any real patient data moves, a signed BAA with the SMS provider and the cloud provider, plus a written no training on our data term, both dated and in the contract. TLS 1.2 or better in transit, AES-256 at rest under customer managed keys, with field level encryption on household income, household size and date of birth. Minimum necessary is enforced at the model boundary, the extraction call carries the free text span and the field schema and nothing else, no name, no date of birth, no chart identifier, and the prompt log is redacted the same way. Retention is short and deliberate, a filed packet purges from our store on an agreed clock after it reaches ANHC's system of record, because the record of authority is ANHC's and this build must not become a second permanent home for PHI. An append only audit log records every view, every field edit and every file action. SMS consent gets its own screen before any income or household question, with a plain path to finish on paper or in person instead. One thing has to be asked rather than assumed, C81 verifies only that ANHC's portal link resolves to an Epic MyChart login operated for Providence Health and Services Alaska, so a third party's data governance may sit in the path.",
+   "observability": "Three outcome metrics are instrumented before any feature ships, and all three are reported split by channel, because the completion metric can improve while the hardest to reach patients are untouched and an unsplit number would flatter the build (C30). Operationally the system tracks send attempts and carrier delivery receipts, reminder ladder state, per field accept, edit and reject rates from the console, which is the production accuracy signal, refusal rate and unsupported answer rate on the allowlisted answerer, model latency and cost per packet, and the sliding fee clock unit suite running on every commit. Staff review minutes per packet is measured on purpose, because the honest comparison is review time against today's data gathering call and never against zero. A named owner at ANHC reviews a one page weekly report.",
+   "failure_modes": "Registration event missed, the webhook is queued with retry and a nightly reconciliation sweep compares the registration table against the send log, so a dropped event surfaces within a day rather than never. SMS undeliverable to a landline or a wrong number, the packet is flagged and drops straight into today's staff callback queue. Model unavailable, slow or low confidence, the patient receives the blank form links and the existing callback, which is the current process, so the build degrades to status quo and never below it. Extraction wrong, it is caught at the console, and because every field shows the patient's own words next to it the reviewer checks the source rather than a laundered version (C63). Clinical question in the administrative channel, default deny, refuse and route to 907-743-7200 (C14), measured against an adversarial set with a target of 100 percent refusal. Sliding fee clock wrong, unit tests cover the rules including the C17 twelve month tail, and a nightly job reconciles the reminder log against the source discount record so a wrong date is caught by the system and not by a patient who made a wasted trip. Human gate becomes the bottleneck, review minutes are measured from day one, and if reviewing a pre filled packet is not faster than gathering the same data on a call, the build has failed its own test and we say so rather than counting the saved gathering time as free."
+  },
+  "goals": [
+   "Produce three numbers that do not exist anywhere today, median hours from registration to intake forms returned complete, median hours to a confirmed appointment, and the share of registrations that never reach a booked appointment, each reported split by channel.",
+   "Remove the published 1 to 2 business day wait for the intake form links (C10), gated on the week one answer to why that window exists.",
+   "Make the second staff contact a booking call rather than a data gathering call (C11), by handing staff a packet that is already filled in.",
+   "Enforce ANHC's published sliding fee rules as tested code, including the 36 month new patient lookup (C12), the twelve and six month validity split (C16), the 30 day temporary declaration and its once every twelve months limit (C17), and the three reapplication triggers (C18).",
+   "Keep every sliding fee determination a human one. ANHC's own policy already requires submitted documentation for a one year discount (C16), so no model output is ever final.",
+   "Store what the patient actually wrote beside every extracted value, so a reviewer today and an auditor later sees the source rather than a cleaned up version (C63).",
+   "Deliver a system ANHC owns and can run without us, priced as a fixed organization fee with the integration work carried on our side (C64, C65).",
+   "Fail into today's process. Every failure path lands the patient on blank form links and the existing callback."
+  ],
+  "non_goals": [
+   {
+    "item": "Does not touch appointment supply and makes no claim about the wait to be seen",
+    "reason": "Nothing in the verified record says whether ANHC's two published windows are a communications constraint or a schedule capacity constraint, and the only wait figure available is an outside op ed writer's 2 to 3 weeks from October 2024, in a sentence that also records a 10 day actual experience (C88). A claim we can't ground is a claim we don't make."
+   },
+   {
+    "item": "Does not book appointments and holds no write path to any scheduling system",
+    "reason": "C81 verifies only that ANHC's portal link resolves to an Epic MyChart login operated for Providence Health and Services Alaska. The Epic Community Connect inference was killed, so the integration is unknown and is not ANHC's alone to grant. The design needs no write access, which is why the one unverified integration in the whole map stays untouched. Staff book."
+   },
+   {
+    "item": "No live spoken interpretation, ever, at any phase",
+    "reason": "The PLOS Digital Health review concludes professional human interpreters remain essential for complex, emotionally charged or high stakes clinical communication (C62), and its accuracy findings for Russian sit in the same sentence as up to 6 percent of instruction sets containing potentially harmful errors (C59, C60). This is a permanent non goal, not a later phase."
+   },
+   {
+    "item": "No clinical triage, no symptom checking and no clinical question answering",
+    "reason": "The answerer is an allowlist of administrative topics ANHC already publishes, with a default deny and a route to 907-743-7200. The message triage candidate was killed because its decisive metric, recall on the urgent class, has no data to estimate it against and a false negative on the class Providence's CMO names is unbounded (C78). A build whose safety metric can't be estimated before contract is not scoped, so it is not sold."
+   },
+   {
+    "item": "No model generated patient facing instruction in any language at runtime",
+    "reason": "The four sliding fee forms are fixed documents published in English, Spanish, Tagalog and Samoan (C19). Adding languages is a one time human reviewed translation that becomes a static file lookup. The model's language job is comprehending inbound free text for staff, never generating something a patient reads and acts on."
+   },
+   {
+    "item": "Does not replace the phone or the text line as the front door",
+    "reason": "907-743-7200 stays exactly as it is (C14). A text and web path structurally excludes people reached by the 314 mobile clinic visits at shelters across Anchorage (C30), who by definition may lack a stable number or device, so this build is an added lane and never a replacement lane."
+   },
+   {
+    "item": "Does not touch, replace or evaluate ANHC's existing ambient documentation tool",
+    "reason": "Different workflow, clinical rather than administrative, already in production and ahead of every Alaska FQHC peer checked (C34). It is not ours to disturb and there is no honest reason to."
+   },
+   {
+    "item": "No model anywhere in the sliding fee determination itself",
+    "reason": "All three triggers are computable from records ANHC already keeps, so plain code with unit tests is faster, cheaper per run and exhaustively testable, which a model is not. This is the where not to use AI line and it is a design constraint, not a preference."
+   },
+   {
+    "item": "No per seat entitlement model in the software",
+    "reason": "CHCF focus groups with 45 California safety net leaders found the pricing models do not work for the safety net (C64). Building seat counting into the product would build the wrong commercial shape into the code. One organization tenant, roles from ANHC's own directory."
+   }
+  ],
+  "riskiest_assumption": "That the 1 to 2 business day window in C10 is a processing lag rather than a policy. Nothing in 89 verified claims says why it exists. The page states the window, it does not state the cause. If a human verifies identity, checks for a duplicate chart, or confirms the phone number belongs to the person who registered during that window, then instant auto send is unsafe, the cheapest and highest scoring piece of the whole recommendation is wrong, and the correct build is a same day service level with the check preserved rather than a zero second send. Everything else in this design survives a wrong answer here. This one does not.",
+  "spike_to_retire_it": "Week one, before a line of production code, time boxed to 3 to 5 working days elapsed. Three artifacts and all three are cheap. FIRST, one 60 to 90 minute working session with the intake staff who run that queue today plus the revenue cycle lead, walking three real registrations end to end on their screens, asking what happens between a registration landing and the text going out, who touches it, what they check, and what would go wrong if the text fired in 30 seconds. SECOND, a data pull of the last 90 days of registrations against the send log, so the published window is checked against the observed distribution, which also answers the second week one question, whether those logs carry the timestamps the three baseline metrics need. THIRD, a one page written answer signed off by the intake lead, which becomes the design decision record. Both outcomes are already designed for. If it is a lag, the auto send fires on receipt of the registration event. If it is a check, the auto send fires the moment the check completes, published to patients as a same day service level with the check kept, and the build instruments the check's own queue time instead, which is still a removal of the published window and still ships. If ANHC can't answer it, or the logs lack the timestamps, that is itself the finding, measurement becomes a larger piece of phase one, and the estimate moves before money is committed rather than after.",
+  "delivery": {
+   "walking_skeleton": "One registration, one real handset, end to end, with the hard parts on crutches. A test registration fires the webhook into the Intake Flow Service, which sends one templated SMS to a staff owned test phone. The tester opens the signed single use link, types one free text answer on a phone, and the model step is STUBBED as a pass through that copies the text into a single candidate field, so there is no AI in the skeleton at all. The Intake Packet Store writes the candidate value and the verbatim source text as two columns. The Staff Review Console shows them side by side, a reviewer signed in through ANHC's identity provider confirms the field, and the packet is marked filed with an audit row. The Sliding Fee Clock is present as one real function with its real unit test file, including test_temporary_declaration_leaves_twelve_month_tail for the C17 edge. It runs in a locked staging environment on synthetic patients only, with no PHI, so it can be demonstrated while the BAA and the no training term are still in legal. The deliverable is a demo ANHC's intake lead watches on her own phone, and every node in the diagram has run at least once.",
+   "then_mvp": "Flesh out to phase one production, which is the ask, and it contains no AI. Instrumentation on the live registration path emitting the three baselines split by channel, the full reminder ladder with delivery receipts and a nightly reconciliation sweep, the four published forms as static human reviewed files, the sliding fee clock wired to the reminder log with its own nightly reconciliation, staff SSO and roles from ANHC's directory, the append only audit log, and the auto send shipped behind whatever the week one spike says that window is for. Phase one ends with a measured baseline and a go or no go on model work decided on ANHC's own numbers. Only then the model MVP, and its first month is the eval set, 200 to 300 de identified historical completed intakes, labeled by the intake staff who do this work today, with the field level exact match target and the 100 percent clinical refusal target agreed before the build rather than after. The two supervised steps then ship shadow first, the model runs and staff can't see it while we score it against their confirmations, and only then assisted, always behind the same console gate with no sampling exception.",
+   "estimate_range": "Week one spike, 3 to 5 working days elapsed, high confidence, and the range is scheduling the session and the data pull rather than any work of ours. Walking skeleton, 6 to 9 working days of our build, moderate to high confidence, 6 if ANHC's registration path emits a webhook or a queryable table on day one, 9 if we have to poll an export. Phase one production, a further 12 to 18 working days of our build, moderate confidence, where 18 is driven by two named risks, registration logs without usable timestamps making measurement its own build (3 to 5 of those days) and staff SSO provisioning through ANHC's IT. Total build for phase one, roughly 21 to 32 working days. Calendar for phase one, roughly 5 to 8 weeks from the day access is granted, and the gap between our build days and that calendar is deliberate rather than padding. It is the BAA and the written no training term in legal, the translation vendor turnaround, and a board that sees any material system and meets on the last Wednesday of the month (C35, C36). The pilot ends on registration volume, not on a date. Phase two model work, roughly three person months, stated deliberately at week grain and low confidence, because the eval set that would sharpen it does not exist yet.",
+   "what_narrows_it": "Five answers, four of them available in week one at no cost. The written answer on why the 1 to 2 business day window exists, which is the single biggest swing in the whole estimate. Whether the registration path emits an event or a queryable table, and whether the registration and send logs carry timestamps, which one look at the schema collapses the 6 to 9 day skeleton range to a point. Which SMS provider carries the TEXT ME line on 907-743-7200 today and whether that contract already includes a BAA. Which identity provider ANHC staff already sign in to. The date the BAA and the no training term are signed, because that is elapsed time nobody on either side controls once it is with counsel. Monthly registration volume also matters twice, it sizes the pilot window and it is the input the break even table needs. For phase two, nothing narrows it until 200 to 300 labeled intakes exist, so building that eval set IS the estimate, and any tighter number quoted before it exists would be invented."
+  }
+ },
+ "roadmap": {
+  "now": [
+   {
+    "item": "Answer the one question that decides the whole build, why does the 1 to 2 business day window before the intake form text exists (C10). Asked of ANHC's own intake staff, in a single working session, before a line of code. If a human verifies identity or checks for a duplicate chart inside that window, the window is a POLICY rather than a lag, instant auto send is unsafe, and the correct build is a same day service level with that check preserved.",
+    "metric": "A written answer on the record, countersigned by whoever owns intake, naming what actually happens inside the window and which of the two builds it selects. Delivered back in writing within two business days of the session. The hard measure is zero lines of send code written before that document exists.",
+    "why_first": "Nothing in 89 verified claims says WHY that window exists. C10 states it, it does not explain it. This is the single load bearing unknown sitting under the cheapest and highest scoring piece of the recommendation, so it costs one conversation to retire and a wrong guess would ship an unsafe instant send into the front door of a safety net clinic. Cost of delay over size is extreme here, the size is one meeting."
+   },
+   {
+    "item": "Instrumentation on ANHC's own registration path, producing three numbers that exist nowhere today. Median hours from online registration to intake forms returned complete, median hours from registration to a confirmed appointment, and the share of registrations that never reach a booked appointment. Each one reported split by channel, because a text and web path structurally excludes the population behind 314 mobile clinic visits at shelters across Anchorage (C30) and a blended number would flatter the build.",
+    "metric": "Three baselines published with a stated sample window and a stated n, reproducible by ANHC's own staff from the same query we ran. Done is ANHC re-running them without us. If the registration and messaging logs do not carry the timestamps, the finding that the timestamps do not exist IS the deliverable, and creating them becomes the build, stated out loud rather than quietly assumed.",
+    "why_first": "No baseline for any of the three exists in the public record or anywhere else we could find. Every funding gate, every phase two decision and every honest ROI figure downstream rests on these numbers, so measuring is the product before any feature is. It is also the part ANHC keeps regardless of what they decide about anything else."
+   },
+   {
+    "item": "The deterministic auto send, gated on the week one answer. Intake form links fire the moment an online registration lands rather than within 1 to 2 business days (C10), on a fixed reminder ladder, with incomplete packets flagged for staff. In the policy case it becomes a same day service level with the identity or duplicate chart check preserved and timed. No AI anywhere in this phase, no model, no inference, no write access to the Epic MyChart instance operated for Providence Health and Services Alaska (C81).",
+    "metric": "Median hours from registration to form links reaching the patient, measured against the phase one baseline, targeting under one hour in the no check case or inside the agreed same day service level in the policy case. Secondary measure is the share of packets returned complete without a staff chase, against the same baseline. Done is 30 consecutive days on real registrations with an auditable send log and a documented fallback to today's manual text.",
+    "why_first": "This is the walking skeleton and the arithmetic chose it, the no AI control scored 5.95 against 3.27 for the AI candidate, and that result was not explained away. It is end to end, it touches every component the later phases need, it needs no write access to anything, and its failure mode is today's process rather than something worse. It removes a published wait outright, which is a permanent process fix ANHC owns whether or not a second phase is ever funded."
+   }
+  ],
+  "next": [
+   {
+    "item": "The eval corpus, 200 to 300 historical completed intakes from ANHC's own records, de identified, stratified by language and by channel, labeled by the intake staff who do this work today. It does not exist yet, so building it is the first work of phase two rather than a hidden assumption, and it is ANHC's asset permanently.",
+    "metric": "A corpus at n between 200 and 300 exists, with inter labeler agreement measured on a double labeled 10 percent subset and reported. Hard rule, no model work starts and no accuracy target is quoted before that number is on the table."
+   },
+   {
+    "item": "Model step one, comprehending what a patient writes in their own words into candidate field values for the intake and sliding fee packet, with human review on every packet before anything is filed, no sampling exception. Every extracted field stores the patient's original text verbatim beside it, so a reviewer or a later auditor sees the source rather than a laundered version, which is the design lesson from interpreter errors propagating into ambient notes in simulated encounters (C63). A model output is never a final determination, because ANHC's own rule already requires submitted documentation for a one year discount (C16).",
+    "metric": "Field level exact match against staff confirmed gold on a held out set, with the acceptance target agreed in writing before the build rather than after. The decisive commercial measure is median staff minutes to review a pre filled packet against the measured minutes of today's data gathering call, taken in phase one. Review time is not free, so the comparison is against the real call and never against zero."
+   },
+   {
+    "item": "Model step two, an allowlisted answerer over the narrow set of administrative questions ANHC already publishes, default deny, citing the page it answered from, refusing everything else to the main line 907-743-7200 (C14). It is not a general assistant over the site and it never touches clinical questions.",
+    "metric": "100 percent refusal on an adversarial set of clinical questions phrased administratively, measured before a patient ever sees it and re-measured monthly thereafter. Anything under 100 percent is a stop, not a tuning note. Secondary measure is the share of answered questions where the cited page actually contains the answer."
+   },
+   {
+    "item": "One time, human reviewed translation of the four published sliding fee forms (C19) into more of the languages behind the homepage figure of 56 translated (C20). This becomes a static file lookup, never a model generating patient facing instruction at runtime, because Russian accuracy fell to about 89 percent for GPT-4 and about 80 percent for Google Translate with up to 6 percent of instruction sets containing potentially harmful errors (C59, C60). Live spoken interpretation is a permanent non goal (C62).",
+    "metric": "Published form languages up from four, each release signed off by a named human reviewer with the back translation review recorded per language. Outcome measure is completion rate on returned packets split by language against the phase one baseline. Hard measure, we never generate anything a patient reads and acts on at runtime with a model. The translation is done once by people and shipped as a static file, rather than produced on demand."
+   },
+   {
+    "item": "The PHI groundwork that has real elapsed time and belongs in scope rather than in a footnote. A signed BAA with any model vendor, a written no training on our data term, and the consent posture for household income and household size over SMS.",
+    "metric": "Signed BAA and the written no training term on file, dated, before any patient text touches a model. The measure is binary and it is a gate, zero model calls on PHI before that date."
+   }
+  ],
+  "later": [
+   {
+    "item": "The Coverage Continuity Engine, the deterministic sliding fee clock and renewal reminders. A discount runs one year with documentation or six months with a self declaration (C16), the 30 day temporary self declaration can be used only once every twelve months so a miss carries a twelve month tail (C17), and there are three stated reapplication triggers (C18). This carries the strongest genuine cost of delay in the whole map because it is the only pocket with a real clock, and it is blocked on exactly one unanswered question, whether ANHC already sends renewal reminders. That question is worth asking early even though the build is late.",
+    "metric": "First the answer, in writing, because the size of the gap being closed is unknown until someone at ANHC says so. Then the share of sliding fee discounts that lapse before a renewal application is on file, and the count of patients who reach day 31 after a temporary self declaration with no documentation filed. Nothing here gets sized, priced or sold before the reminder question is answered."
+   },
+   {
+    "item": "The interpreter note sampling audit, advisory work rather than a build. A JMIR study found ambient AI scribes propagated interpreter errors into clinical notes in SIMULATED English and Spanish encounters, not live clinical ones (C63), and ANHC runs an ambient scribe in clinical production today (C34). Said plainly, the absence of a public governance document is not evidence that no governance exists at ANHC, and this is offered as a check ANHC may already be running.",
+    "metric": "An agreed sampling rate and a measured discrepancy rate between the generated note and the source encounter for interpreter mediated visits, reported per quarter. Success is a written governance artifact ANHC owns and runs itself. No model is the deliverable here."
+   },
+   {
+    "item": "Two measurements on the main line that ANHC can take without buying anything from anyone, a measured abandonment rate and median hold time on 907-743-7200 (C14, C86), and a written yes or no on whether scheduling write access into the Epic MyChart instance operated for Providence Health and Services Alaska is even available (C81). Stated flatly, nothing in this roadmap books an appointment or writes to any scheduling system, and no voice agent is proposed. The honest first move on that line is published call reason routing and a callback offer, which is not AI.",
+    "metric": "An abandonment rate and a median hold time exist where neither exists today, plus a one line written answer on write access. Those two numbers are what would make any future front door conversation evidence based instead of a guess."
+   },
+   {
+    "item": "Referral closure tracking after the June 2nd, 2026 mammography change (C26). ANHC states it remains committed to breast cancer screening through referral and follow up, and nothing in the verified record describes how referral closure is tracked today, so this stays deliberately unsized.",
+    "metric": "Share of external referrals with a documented result returned inside a window ANHC sets. Unsized on purpose, because no evidence exists to size it and inventing one would be the failure mode this whole process exists to avoid."
+   },
+   {
+    "item": "Paperwork preparation behind the insurance enrollment navigator, never in front of the patient. The homepage shows 2,929 health insurance assists (C23) and the 2024 report 2,198 (C30), with Medicaid reportedly about 34 percent of revenue per Alaska Public Media (C38), so coverage continuity is financially material. Eligibility judgment and trust work stay with the navigator.",
+    "metric": "Navigator minutes per assist against a measured baseline, with assist counts held flat or better. The measure that governs is that nothing changes about who talks to the patient."
+   },
+   {
+    "item": "Reporting definitions, one number that means one thing when the board or a funder asks. The homepage band carries figures with no period label (C21 to C25) and the 2024 annual report reports 53,021 total visits against the homepage's 47,783 (C27, C31). Said carefully and once, this is a definitional mismatch and not a measured decline, and it costs ANHC nothing today, which is why it sits last.",
+    "metric": "Every published figure carries a stated period and a stated definition, and the two visit counts either reconcile or are labeled as different measures. Lowest priority in the lane by design."
+   },
+   {
+    "item": "The population a digital front door structurally excludes, reached by 314 mobile clinic visits at shelters across Anchorage (C30), people who by definition may lack a stable number or device. This is a fuzzy bet on purpose, any real answer here is offline and relational rather than software.",
+    "metric": "Every phase one and phase two number stays reported split by channel, with the shelter and mobile path reported separately and never merged into a headline. The measure of integrity is that the completion rate can't improve on paper while the hardest to reach patients go untouched."
+   }
+  ],
+  "gates": "GATE ZERO, before any code and before any invoice for build work. Trigger is 45 minutes with ANHC intake staff, which ANHC schedules. Our work after it is one day to write the answer up. If the answer is that a human verifies identity or checks for a duplicate chart inside the window, the scope changes in writing to a same day service level with that check preserved, at the same fee, and we tell ANHC before we build rather than after. YOUR OFF RAMP, stop here and you keep the written answer and the process map of your own front door. Cost is one conversation.\n\nGATE ONE, phase one to phase two, and this is the only gate that releases money for model work. It opens on measurements, never on argument. Three things have to be on the table. All three baselines reproducible by ANHC's own staff and reported split by channel. The auto send live and measured, under one hour to form links in the no check case or inside the agreed service level in the policy case, after 30 consecutive days on real registrations. And a measured figure for the staff minutes spent today gathering data on the scheduling call, which is the denominator phase two has to beat. If any one of the three is missing, phase two does not start, and it restarts when the missing measurement arrives rather than when someone makes a better case. THE BAR PHASE TWO HAS TO CLEAR, the measured share of registrations that never reach a booked appointment and the measured share of returned packets that are incomplete together have to be large enough that a first pass extraction landing near 81 to 90 percent, with a human reviewing every packet, beats the measured cost of that review. If phase one shows the auto send already closed most of the gap, the honest recommendation is to stop, and we will write that down and say it to the board ourselves.\n\nYOUR OFF RAMP AT GATE ONE, and this is the real one. Stop after phase one and you keep three numbers you did not have, a deterministic auto send that removes the first published window, running on rules ANHC owns, with unit tests, an auditable send log, and a documented fallback to today's manual text. Nothing to renew, nothing that stops working when we leave, no model, no vendor subscription, no write access into anyone's scheduling system.\n\nGATE TWO, phase two to anything after it. Opens only on the eval numbers, field level exact match against staff confirmed gold at the target agreed BEFORE the build, 100 percent refusal on the adversarial clinical set, and review minutes per packet measured lower than today's gathering call. YOUR OFF RAMP, stop after phase two and you keep the labeled eval corpus, which is yours, de identified, and reusable with any vendor forever, the translated forms as static files, and the extraction and answerer with their eval harness. Every Later lane item gets its own gate and its own answer first, and the Coverage Continuity Engine specifically is not sized, priced or sold until someone at ANHC answers whether renewal reminders already go out.\n\nTHREE TIMEFRAME LANES, kept separate because blending them is how proposals lie. OUR WORK, instrumentation runs 3 to 6 working days once we have read access to the registration and messaging logs, the auto send runs 4 to 8 working days once the week one answer is written. That is roughly two to three weeks of building, in days rather than months, because this slice is small greenfield rules work and we will not pad it for gravitas. WAITING ON YOU, the 45 minute intake staff session, read access to the logs, and one named owner. This is where the schedule actually lives and the first slip will live here rather than in the engineering. WATCH IT RUN, 30 consecutive days on real registrations, sized by events rather than preference, and if registration volume runs low the window extends until at least 30 real registrations have gone through the new path. We will say which of the two ended it.\n\nBUFFER, and only against named risks. If the week one answer comes back POLICY, add 3 to 5 working days to rebuild the send as a same day service level with the check preserved. If the registration log lacks the timestamps, add 5 to 8 working days, because creating them becomes the first build and we will say so out loud rather than assume instrumentation exists. There is no unnamed slack anywhere in this plan.\n\nBOARD CADENCE IS A SCHEDULE FACT, not a risk we are hedging against. A majority of ANHC board members must be ANHC patients (C35), the board runs 11 to 17 members and meets from 4 to 6 in the afternoon on the last Wednesday of each month (C36). A material new system is board visible, so a decision that needs the board waits for the next meeting, and we plan around that rather than push against it. We will never ask for a decision faster than that cadence allows.\n\nPRICING SHAPE, because it is part of the gate structure rather than a separate conversation. Phase one is the whole ask, priced as a fixed organization fee and never per clinician per seat, since safety net leaders report that pricing models don't work for the safety net (C64) and enterprise scribe subscriptions run 200 to 600 dollars per clinician per month (C54). Delivery carries the integration work itself, because a community clinic may lack the data scientists on staff needed to implement AI (C65), and that integration work is the actual thing being bought.",
+  "high_integrity_dates": [
+   "The written answer to why the 1 to 2 business day window exists goes back to ANHC within two business days of the session with intake staff, in writing, and no line of send code is written before it lands. We stake the firm's name on that order, not on a delivery date.",
+   "The phase one result pack, all three baselines plus the measured auto send performance, is in the Executive Assistant and Board Liaison's hands at least seven calendar days before whichever last Wednesday board meeting ANHC chooses to consider phase two at (C02, C36). Board members read the numbers themselves rather than hear them summarized. That is the one date on this roadmap that genuinely matters, and ANHC picks it.",
+   "The auto send does not go live on real registrations until a written fallback to today's manual text and a send log ANHC's own staff can audit are both in place. If either one is missing on the day we planned to switch on, we do not switch on, and we say why in writing.",
+   "No date anywhere in this roadmap is a deadline we set for ANHC. Nothing in this proposal expires, no price is held open for a limited time, and no phase is offered at a discount for deciding sooner. If the board takes three meetings, it takes three meetings."
+  ]
+ },
+ "roi": {
+  "cost_note": "Five year total cost of ownership, not sticker price, and every line is named. ONE FIXED ORGANIZATION FEE of 9,500 dollars for Phase One, identical in all three scenarios because a fixed fee does not move with headcount, which is the whole point of the shape. It is not per clinician and not per seat, because safety net leaders told CHCF the pricing models don't work for the safety net (C64), and because the enterprise ambient scribe benchmark of 200 to 600 dollars per clinician per month (C54) sits against one vendor's published list floor of 39 to 119 (C55), so a per seat quote to an FQHC lands somewhere in a 15x spread that has nothing to do with the work. IMPLEMENTATION AND INTEGRATION IS INSIDE THAT FEE and is the largest part of it, because CHCF's other finding is that a community clinic may lack the data scientists on staff needed to implement AI (C65), so delivery carries the integration or the buyer is buying a shelf. TRAINING AND CHANGE MANAGEMENT IS PRICED IN ANHC HOURS, not called included, 48 hours conservative, 40 most likely, 32 aggressive, covering discovery interviews with intake staff, log and timestamp access and validation, two staff training sessions across shifts, and the go or no go readout. Those hours are charged at 46.76 dollars, the TOP of the published Patient Financial Services Representative II band (35.97, C89) with a 30 percent loaded uplift, while recovered minutes are credited at the BOTTOM of the same band in the conservative case, 31.17 dollars. Same band, deliberately asymmetric, so nobody can accuse the case of picking the flattering end twice. RUN COST is 1,500, 1,200 and 900 dollars a year across 4.5 of the five years, covering hosting the trigger and send log, monitoring and alerting, and an annual re-verification that the trigger still matches ANHC's registration form. THERE IS NO INFERENCE COST IN PHASE ONE, because Phase One contains no model, which is a real cost advantage and also the reason it can't fail for model reasons. THE ONGOING HUMAN REVIEW IS NOT OMITTED and it is not free, the staff time to scan the send log is netted out inside the benefit cut rather than hidden, so only 40 percent of touched minutes are credited in the conservative case, not 100. CONTINGENCY of 20, 18 and 15 percent sits on top of everything, because most failures come from organizational factors rather than software.",
+  "benefits": [
+   {
+    "benefit": "Admin minutes recovered on ANHC's own new patient registration path, once the deterministic auto send replaces the manual send that today carries a published 1 to 2 business day window (C10)",
+    "kind": "capacity",
+    "basis": "registrations per month, times admin minutes touched per registration, times the share of those minutes the auto send actually removes, times a loaded hourly rate built from the ONLY verified labour anchor in the record, the Patient Financial Services Representative II band of 23.98 to 35.97 dollars an hour (C89), with a 30 percent loaded uplift. Priced PER HOUR OF ADMIN TIME and never per FTE, because no ANHC headcount exists in the verified record at all, it was killed outright by the fact-checker, so no staff count is an input to anything here.",
+    "note": "LABELLED CAPACITY, NOT CASH, AND IT STAYS CAPACITY UNTIL ANHC SAYS OTHERWISE. It converts to cash only by one of the three tests, redeploy the recovered minutes to a queue ANHC currently under-serves such as the insurance enrollment assists it reported at 2,198 for 2024 (C30), defer a future backfill on a patient facing administrative posting, or avoid one. ANHC picks which, or none. Counting the recovered gathering time as pure gain is the freed hours error and the cut of 0.40 to 0.60 is already net of the send log review time, so the comparison is against today's manual send and not against zero. No registration volume exists in the verified record, so the volume is an ASSUMED SHARE of ANHC's own published 15,203 unique medical and dental patients for 2024 (C28), stated as a range with a confidence, never a vendor or industry average."
+   },
+   {
+    "benefit": "Phase two spend that is avoided or materially rescoped because the go or no go is decided on ANHC's own measured numbers rather than on a hypothesis",
+    "kind": "cash",
+    "basis": "the phase two spend at risk, times the probability that a measured baseline changes the decision. Phase two is roughly three person months of model work plus the eval corpus that does not exist yet, priced here at 60,000, 75,000 and 90,000 dollars as a stated assumption. The probability that measurement changes the answer is set at 0.25, 0.35 and 0.45, and it is not a guess pulled from nowhere, none of the three outcome metrics have a baseline anywhere in the public record, and one load bearing question is still unanswered, why the 1 to 2 business day window exists at all. If that window turns out to be a policy check rather than a lag, the premise of the larger build changes.",
+    "note": "THIS IS THE HONEST CORE OF THE PHASE ONE RETURN and it is the reason the conservative case clears. It is a genuine one time cash effect, so in the driver file it is annualized across the horizon by setting events_per_year to 1 divided by the ramp multiplier, which makes it count EXACTLY ONCE over five years rather than five times. A reader can reverse that in one line. The cost of that modelling choice is that the computed payback month treats a month 3 to 4 decision as if it dripped in evenly for five years, so the printed payback is the latest possible date and never the earliest."
+   },
+   {
+    "benefit": "QUARANTINED, NOT IN THE FORMULA, COUNTED AT ZERO. Removing the published 1 to 2 business day window as a patient facing service level, and the three instrumented measures ANHC keeps permanently whatever the go or no go says",
+    "kind": "capacity",
+    "basis": "no dollar value is assigned and none is claimed. Median hours from registration to intake forms returned complete, median hours to a confirmed appointment, and the share of registrations that never reach a booked appointment are three numbers that do not exist anywhere today, and ANHC owns them afterwards for board and funder reporting.",
+    "note": "Deliberately excluded from every scenario and every computed figure. This build does NOT touch appointment supply and no claim that it shortens the wait to be seen is supportable, because nothing in the record says whether the two published windows are a communications constraint or a schedule capacity constraint. The measures must also be reported SPLIT BY CHANNEL, because a text and web path structurally excludes the population reached by 314 mobile clinic visits at shelters across Anchorage (C30), and an unsplit metric would flatter the build while the hardest to reach patients stay untouched."
+   }
+  ],
+  "benefit_phasing": "No day one benefit anywhere in this model. Phase One is roughly three weeks of delivery, week one discovery and the load bearing question asked of ANHC's own intake staff before a line of code, week two instrumentation and the deterministic send and reminder ladder, week three staff training, stabilization and the measurement readout. A ninety day stabilization ramp then sits on top of go live. Year one is therefore credited at 40 percent of run rate in the conservative case, 50 percent most likely, 60 percent aggressive. Year two onward is full run rate, and there is no year three compounding claimed for Phase One because a deterministic send does not learn and saying it does would be hype. The compounding lives in phase two and phase two is not what is being asked for. The one time decision value lands at the month 3 to 4 readout in reality, and is spread evenly across the horizon in the arithmetic so it is counted once, which pushes the computed payback later than the real one and never earlier.",
+  "scenarios": {
+   "conservative": "9,500 dollar fixed fee, 48 ANHC training hours at 46.76 dollars loaded, 1,500 a year run cost over 4.5 years, 20 percent contingency, 40 percent year one ramp. Volume assumed at 101 new registrations a month, about 8 percent of ANHC's own published 15,203 unique medical and dental patients for 2024 (C28), at 8 admin minutes touched each, 40 percent of them removed net of send log review, credited at 31.17 dollars an hour, the FLOOR of the published band (C89) with a 30 percent uplift. Phase two at risk 60,000 dollars with a 0.25 chance the measurement changes the decision. THIS CLEARS, and it clears on the decision data plus the permanent process fix, not on a modelled labour saving. THE LIMIT OF THAT, STATED PLAINLY, if ANHC will not redeploy or defer or avoid anything, the capacity line never becomes cash, and the decision value alone still exceeds the 9,500 dollar fee but does NOT cover the full five year TCO including ANHC's own hours and 4.5 years of run cost. That is the honest edge of the fallback.",
+   "most_likely": "Same 9,500 dollar fixed fee, 40 training hours, 1,200 a year run cost over 4.5 years, 18 percent contingency, 50 percent year one ramp. Volume 190 a month, about 15 percent of the 2024 unique patient count, 10 admin minutes each, 50 percent removed, credited at 38.97 dollars, the MIDPOINT of the band with the same uplift. Phase two at risk 75,000 with a 0.35 chance measurement changes the decision.",
+   "aggressive": "Same 9,500 dollar fixed fee, 32 training hours, 900 a year run cost over 4.5 years, 15 percent contingency, 60 percent year one ramp. Volume 317 a month, about 25 percent of the 2024 unique patient count, 12 admin minutes each, 60 percent removed, credited at 46.76 dollars, the CEILING of the band. Phase two at risk 90,000 with a 0.45 chance measurement changes the decision. TREAT THIS CASE AS ILLUSTRATIVE ONLY. It stacks the top of every band at once, which is exactly the pattern this method exists to catch, and no decision should rest on it."
+  },
+  "conservative_clears": true,
+  "payback_range": "Two dates and they answer different questions, so both are printed. THE REAL DECISION POINT IS MONTH 3 TO 4, at the go or no go readout, where a 9,500 dollar fixed fee stands against 15,000 dollars of expected avoided phase two spend in the conservative case, 26,250 most likely. THE COMPUTED FIVE YEAR BREAK EVEN, which spreads that one time value evenly across the horizon and is therefore the LATEST possible date rather than the earliest, lands around month 55 conservative, month 20 most likely, and month 9 aggressive. State the range as month 9 to month 55 and say why the conservative end is late, it is a modelling artefact of counting a month 4 decision as a five year annuity, not a real four and a half year wait. Anyone who prefers a single honest sentence, Phase One either pays for itself inside the first quarter or it tells ANHC not to spend the larger money, and both of those are the return.",
+  "base_rate_note": "The outside view first, and it is not flattering. MIT's finding is that about 95 percent of enterprise AI pilots show no measurable P and L impact, and RAND puts roughly 80 percent of AI projects as failures, which is about twice the failure rate of non AI IT projects. The correct prior for any AI proposal put in front of a board is that it will not pay. Five design choices put Phase One in the small share that does, and every one of them is checkable rather than asserted. ONE, MOST OF IT IS NOT AI. Phase One contains no model at all, the deterministic control outscored every AI candidate in the RICE arithmetic at 5.95 against 3.27, so the pilot can't fail for the reasons AI pilots fail. TWO, IT DEGRADES TO TODAY. If the trigger does not fire, the patient receives the existing manual text inside the published 1 to 2 business days (C10), so the floor of this build is the status quo and never below it. THREE, IT NEEDS NO INTEGRATION WRITE ACCESS. The one unverified integration in the whole map, the Epic MyChart instance operated for Providence Health and Services Alaska (C81), is untouched by design, so the most common cause of a stalled healthcare pilot is designed out rather than negotiated. FOUR, IT IS MEASURED BEFORE IT IS SCALED. The three baselines are the deliverable, the larger spend is gated on them, and the gate is ANHC's own numbers rather than ours. FIVE, ADOPTION HAS A NAMED OWNER AND A DATED CHECK. THE HONEST COUNTERWEIGHT, one question is unanswered and it sits under the cheapest and highest scoring part of this. C10 states the 1 to 2 business day window, it does not state WHY. If a human verifies identity or checks for a duplicate chart in that window, the window is a policy and not a lag, instant auto send is unsafe, and the right deliverable becomes a same day service level with the check kept. That question is asked in week one before any code, and it is precisely why the conservative case does not lean on the process fix to clear.",
+  "value_owner": "The Chief Operations Officer seat at ANHC, held by Randee Shafer, LCSW per ANHC's own leadership page (C06), because new patient intake operations and the staff who run the registration queue report into operations rather than into IT. ONE seat owns the number, not a committee. THE VARIANCE CHECK, 90 days after the auto send goes live, the same three instrumented measures are pulled again and compared against the week one baseline that Phase One created, actual against baseline, on ANHC's own send log so the denominator is theirs and not ours. The check is REPORTED SPLIT BY CHANNEL, web and text separately from the shelter outreach path (C30), or it will flatter the build. Two named ways it can read as a failure and both are written down in advance, if median hours from registration to forms returned does not move, the bottleneck was never the send and phase two should not be funded, and if the split shows web improving while the outreach population is untouched, the honest report says so. Board cadence is monthly with a patient majority board (C35, C36), so the readout is built to be read in one meeting.",
+  "assumptions": [
+   "NO REGISTRATION VOLUME EXISTS IN THE VERIFIED RECORD, so every volume here is assumed, not measured. The assumption is stated as a share of ANHC's OWN published 15,203 unique medical and dental patients for 2024 (C28), given that ANHC counts anyone not seen by an ANHC provider in the last 36 months as a new patient (C12). Conservative 8 percent, most likely 15 percent, aggressive 25 percent annual new registration inflow, offered as a roughly 70 percent band and NOT as a 90 percent one, because untrained estimators' 90 percent ranges hold the truth about half the time. This is the single driver ANHC can replace with a real number in an afternoon, and instrumenting it is literally what Phase One buys.",
+   "NO ANHC HEADCOUNT OR FTE FIGURE EXISTS AT ALL, it was killed outright by the fact-checker, so no staff count is an input to any figure in this section and no per FTE saving is modelled anywhere. Pricing is per hour of admin time only.",
+   "The loaded hourly rate is the published Patient Financial Services Representative II band of 23.98 to 35.97 dollars an hour (C89) with an ASSUMED 30 percent loaded uplift for employer payroll taxes, benefits and paid leave. ANHC's actual burden rate is not public and this uplift is a stated assumption, not a fact. Recovered minutes are credited at 31.17 conservative, 38.97 most likely, 46.76 aggressive, and ANHC staff hours charged to the project are costed at 46.76 in ALL THREE scenarios, the top of the band, on purpose.",
+   "Admin minutes touched per registration, 8 conservative, 10 most likely, 12 aggressive, are ASSUMED. Nothing in the verified record measures the manual send task. The share of those minutes the auto send removes, 0.40, 0.50 and 0.60, is NET OF the ongoing send log review, so the comparison is against today's manual send rather than against zero.",
+   "Phase two spend at risk of 60,000, 75,000 and 90,000 dollars is our own stated price for roughly three person months of model work plus the labelled eval corpus of 200 to 300 historical intakes that does not exist yet. It is an assumption about our pricing, not a claim about ANHC's budget.",
+   "The probability that a measured baseline changes the phase two decision, 0.25, 0.35 and 0.45, is a stated judgement. It rests on two documented facts, none of the three outcome metrics have a baseline anywhere in the public record, and the reason for the published 1 to 2 business day window (C10) is unknown.",
+   "The one time decision value is annualized in the driver file by setting events_per_year to 1 divided by the ramp multiplier, so it is counted exactly once across the five year horizon and not five times. This is auditable in one multiplication and it makes the computed payback month later than reality, never earlier.",
+   "The fixed organization fee of 9,500 dollars does NOT vary between scenarios, because it is a fixed fee. All scenario variance therefore sits on ANHC's side of the ledger, which is the opposite of how a per seat quote behaves.",
+   "Five year horizon with run cost accruing over 4.5 of those years, matching a mid year one go live. No year three compounding is claimed for Phase One, because a deterministic send does not learn.",
+   "ANHC's finances are read as of the two most recent filings, revenue 31,234,658 against expenses 29,601,126 for the year ending June 2025 (C39, C40) after 28,822,081 against 26,339,049 for June 2024 (C41), per the Form 990 as published by ProPublica Nonprofit Explorer. Two consecutive surplus years. The FY2023 deficit (C42) is three years old, is followed by both of those surplus years, and is history rather than a current condition, so it is used nowhere in this section.",
+   "ANHC ALREADY RUNS AN AMBIENT AI DOCUMENTATION TOOL IN CLINICAL PRODUCTION (C34), ahead of every Alaska FQHC peer checked. Nothing in this ROI section models them as an AI novice or as behind, because they are neither.",
+   "NOT ASSUMED AND EXPLICITLY EXCLUDED, any effect on appointment supply or on time to be seen, any throughput or revenue lift, any ambient scribe economics, and any benefit derived from a vendor or industry average. The published ambient scribe economics in the record are roughly break even at best on throughput anyway, 3,044 dollars per physician per year against 200 to 600 dollars per clinician per month (C52, C54), and none of it is ANHC's baseline."
+  ]
+ },
+ "showrunner_note": "The four agent objects above are VERBATIM as returned, with two showrunner corrections recorded in feasibility.json and the run log: one roadmap metric reworded so it carries its own refusal when read alone, and the pick renamed on the feasibility engineer own naming-honesty flag. Derived ROI figures are computed by scripts/roi_math.py from out/2026-08-06/roi_drivers.json and are never narrated.",
+ "roi_computed": [
+  {
+   "scenario": "conservative",
+   "annual_run_rate_benefit": 5424,
+   "cumulative_benefit_5yr": 23865,
+   "tco_5yr": 22193,
+   "percent_of_tco_recovered": 108,
+   "payback_month": 55
+  },
+  {
+   "scenario": "most_likely",
+   "annual_run_rate_benefit": 13238,
+   "cumulative_benefit_5yr": 59569,
+   "tco_5yr": 19789,
+   "percent_of_tco_recovered": 301,
+   "payback_month": 20
+  },
+  {
+   "scenario": "aggressive",
+   "annual_run_rate_benefit": 30149,
+   "cumulative_benefit_5yr": 138687,
+   "tco_5yr": 17303,
+   "percent_of_tco_recovered": 802,
+   "payback_month": 9
+  },
+  {
+   "scenario": "conservative_labour_only_threshold",
+   "annual_run_rate_benefit": 5047,
+   "cumulative_benefit_5yr": 22207,
+   "tco_5yr": 22193,
+   "percent_of_tco_recovered": 100,
+   "payback_month": 60
+  }
+ ]
+}
