@@ -1,0 +1,430 @@
+{
+ "company": {
+  "what_they_do": "Anchorage Neighborhood Health Center (ANHC) is a Federally Qualified Health Center in Anchorage, Alaska. Its own about page states: 'Anchorage Neighborhood Health Center is a Federally Qualified Health Center.' Mission (verbatim): 'To be a trusted partner in every person's wellness by providing integrated, compassionate, and high-quality health care, regardless of ability to pay.' Vision (verbatim): 'Accessible care for a healthy Anchorage.' History (verbatim): 'Anchorage Neighborhood Health Center began in 1974 as a handful of clinicians providing care out of a trailer in Fairview.' [FACT: https://www.anhc.org/about] Service lines listed on its services page: Medical, Dental, Pharmacy, Lab and X-Ray, Telehealth, Night Clinic, Mammography, Behavioral Health, Nutrition, Health Insurance Assistance, Sliding Fee Discount, Care Coordination [FACT: https://www.anhc.org/services]. Homepage adds Pediatrics, Women's Health, Prenatal Care, Substance Use Disorder, HIV/AIDS Care, and Language Support [FACT: https://www.anhc.org/]. Behavioral health is integrated into primary care, with 'Up to four sessions of brief targeted therapy' and 'longer-term therapy (typically up to 12 sessions) for complex conditions', delivered by 'BHCs, Psychiatric NPs, patient navigators, medical providers, nurses, and clinic staff' [FACT: https://www.anhc.org/blog/advancing-integrated-behavioral-health].",
+  "size": "LinkedIn company page states company size '201-500 employees', with 119 employees listed on the platform. Exact FTE count NOT confirmed from Form 990. Patients and volume: ANHC's 2024 Annual Report blog summary states verbatim '15,203 unique medical and dental patients served' and '53,021 total visits across services', plus '6,052 cancer screenings delivered', '314 mobile clinic visits at shelters across Anchorage', '2,198 assists with insurance enrollment', '193 babies welcomed into the world by our OB providers', '95.7% patient satisfaction rate', '$5.7 million in care provided regardless of ability to pay', and '2x evening clinic hours to better serve working families' [FACT: https://www.anhc.org/blog/anhc-2024-annual-report]. The CURRENT homepage statistics band reads, verbatim: '56 languages translated', '47,783 patient visits', '2,929 health insurance assists', '95% patient satisfaction', '$7.1 million in uncompensated care', '52 years of service to our community' [FACT: https://www.anhc.org/]. Financially roughly a 30M dollar per year organization; fiscal years end in June. ProPublica Nonprofit Explorer (EIN 92-0047965, 501(c)(3) since March 1975) shows FY2025 (June) total revenue 31,234,658, expenses 29,601,126, assets 40,894,146, liabilities 2,960,884; FY2024 revenue 28,822,081, expenses 26,339,049; FY2023 revenue 23,297,103 against expenses 25,603,422 (a deficit year); FY2022 revenue 26,912,154; FY2021 21,811,619; FY2020 19,868,272; FY2019 17,594,528 [FACT: https://projects.propublica.org/nonprofits/organizations/920047965]. Highest-paid FY2025: Barbara Piromalli, Physician, 287,561; Casey Gokey, CMO, 275,609; Ghazal Ringler, Chief Dental Officer, 256,110; Charles Procknow, Physician, 252,159; Ann Jennings, Physician, 237,664; Rachel Samuelson, Physician, 237,097; Lisa Aquino, CEO, 219,613; Allan Alberton, Physician, 213,673; Vadette Fowler, CFO, 192,527; Stephen Woodard, Director of Pharmacy, 165,972 [FACT: same URL].",
+  "locations": [
+   "Main clinic: 4951 Business Park Blvd, Anchorage, AK 99503 (the hours page prints ZIP 99645, which appears to be a typo; the sliding fee page and contact page both give 99503) [FACT: https://www.anhc.org/hours-and-location ; https://www.anhc.org/sliding-fee-discount-program ; https://www.anhc.org/contact]",
+   "Mobile clinic outreach at shelters in Anchorage: the 2024 Annual Report cites '314 mobile clinic visits at shelters across Anchorage' [FACT: https://www.anhc.org/blog/anhc-2024-annual-report]",
+   "A third-party aggregator citing HRSA UDS 2024 lists ANHC as having 1 service site [FACT that it says so: https://www.fqhctalent.com/intelligence/state/alaska]",
+   "UNVERIFIED / STALE listings not confirmed: a Yelp listing at 903 W Northern Lights Blvd (HTTP 403), and a Healthgrades directory entry at 1217 E 10th Ave which reads as an outdated record"
+  ],
+  "revenue_model": "Nonprofit FQHC. Money comes from three stacked sources. (1) Patient service revenue billed to insurers: 'We offer a sliding fee scale and accept most insurance plans, including Medicare and Medicaid' [FACT, CEO Lisa Aquino op-ed, ADN, 2024-08-02, republished on ANHC's blog: https://www.anhc.org/blog/opinion-a-strong-foundation-for-a-healthy-community]. Rep. Andrew Gray's op-ed, also republished on ANHC's blog, states 'they accept all private and public insurances. If a patient doesn't have insurance, they are charged on a sliding scale based on their income' [FACT: https://www.anhc.org/blog/opinion-a-high-quality-anchorage-health-care-option-50-years-running]. (2) Medicaid is the single largest payer concentration: Alaska Public Media reported, of Medicaid as a share of clinic revenue, 'At Anchorage Neighborhood Health Clinic, it's 34%' [FACT, 2025-03-11: https://alaskapublic.org/news/health/2025-03-11/how-major-cuts-to-medicaid-could-be-catastrophic-even-for-alaskans-with-private-insurance]. (3) Federal and philanthropic grants: HRSA Health Center Program funding (HRSA 'Access Enhancer' and 'Health Disparities Reducer' badges for 2024) [FACT: https://www.anhc.org/blog/anhc-earns-2024-hrsa-badges], Ryan White HIV funding, 500,000 dollars in Congressionally Directed Spending secured by Sen. Lisa Murkowski for a Dental Assistant Training Apprenticeship [FACT: https://www.anhc.org/blog/graduation-dental-assistant-training-program-2025], and a 5,000 dollar Alaska Community Foundation grant for an EKG machine [FACT: https://www.anhc.org/blog/acf-grant-ekg-machine]. They also protect 340B. NOTE ON FISCAL CALENDAR: ANHC's own fiscal year ends June 30th, NOT September 30th [FACT: ProPublica filing years all labeled 'June']. The grants-vs-program-service revenue split could NOT be verified.",
+  "pains": [
+   {
+    "pain": "Clinical documentation burden and after-hours charting, stated by their own Chief Medical Officer. This is the most explicit operational pain ANHC has published about itself, and it is stated as ALREADY BEING ADDRESSED by a deployed AI scribe.",
+    "evidence_quote": "\"Before, I'd spend 10 minutes charting after a 20-minute visit. Now I can spend 25 minutes with my patient and five minutes reviewing the note.\" and \"There's a high mental load in primary care. AI lightens that. It helps with retention because it makes the day-to-day work more sustainable. It reduces what we call 'pajama time' - that after-hours charting so many of us have done for years.\" - Dr. Casey Gokey, Family Physician and Chief Medical Officer",
+    "source_url": "https://www.anhc.org/blog/ai-in-anhc",
+    "kind": "fact"
+   },
+   {
+    "pain": "A new patient's first contact does not produce an appointment. Registration triggers a 1-2 business day callback or text loop before scheduling even begins.",
+    "evidence_quote": "\"Within 1-2 business days, you will receive a text with links to complete the following forms:\" and, for paper registration, \"Within 1-2 business days, you will receive a call to schedule your first appointment.\"",
+    "source_url": "https://www.anhc.org/new-patients",
+    "kind": "fact"
+   },
+   {
+    "pain": "Wait for a new primary care appointment reported at 2-3 weeks, published on ANHC's own blog by an outside author (Rep. Andrew Gray, PA, ADN op-ed 2024-10-28). Third-party claim, and dated, but ANHC chose to republish it.",
+    "evidence_quote": "\"Anchorage Neighborhood Health Center is accepting new primary care patients\" with the wait time given as \"2-3 weeks\" (the author noted his husband was seen in 10 days)",
+    "source_url": "https://www.anhc.org/blog/opinion-a-high-quality-anchorage-health-care-option-50-years-running",
+    "kind": "fact"
+   },
+   {
+    "pain": "Incomplete referrals are a named, standing workstream, serious enough to be written into a job description they are actively recruiting for.",
+    "evidence_quote": "\"Manages referral process from start to finish, including follow up on incomplete referrals.\" Also: \"Coordinates care for panel patients before visits, after visits, and between visits\" and follows up \"with high-risk patients regarding missed appointments.\" Requirements are modest: \"1-2 years' health-related or customer service experience\", \"High School Diploma or GED\".",
+    "source_url": "https://www.indeed.com/viewjob?jk=d47535aa4bf92581",
+    "kind": "fact"
+   },
+   {
+    "pain": "Fifteen roles open simultaneously as of 2026-08-06, weighted toward patient-facing administrative and revenue-cycle work, plus two open senior roles and open clinician seats.",
+    "evidence_quote": "Open postings listed: Referral Coordinator; RN Care Manager HIV Care and Prevention (part-time); Patient Financial Services Representative II ($23.98 - $35.97 an hour); Pharmacy Technician; Nurse Educator - RN; Patient Services Representative Dental; Patient Financial Services Representative III ($26.38 - $39.57 an hour); Dentist; Ryan White - Medical Case Manager Tiers I, II, or III ($60,356 - $95,437 a year); Accounting Payroll Specialist; Senior Human Resources Generalist; Director of Pharmacy; Physician - Family Practice; Systems Technician II; Dental Hygienist ($42.21 - $63.32 an hour)",
+    "source_url": "https://www.indeed.com/q-anchorage-neighborhood-health-center-jobs.html",
+    "kind": "fact"
+   },
+   {
+    "pain": "Workforce shortage is named by ANHC as the reason they stood up their own training pipeline. The first cohort graduated two people.",
+    "evidence_quote": "The program was created to \"address Alaska's health care workforce shortages\"; funding was 500,000 dollars in Congressionally Directed Spending secured by Sen. Lisa Murkowski \"for ANHC to establish a Dental Assistant Training Apprenticeship\"; the first cohort's named graduates are Ronald Bares and Lindsey Medina.",
+    "source_url": "https://www.anhc.org/blog/graduation-dental-assistant-training-program-2025",
+    "kind": "fact"
+   },
+   {
+    "pain": "Clinician recruitment is constrained by Alaska cost-of-living factors, and ANHC lobbied the state on it in February 2026.",
+    "evidence_quote": "ANHC \"discussed the necessity of housing and childcare support for clinician recruitment, expanding Graduate Medical Education opportunities, and developing Teaching Health Center pathways to keep physicians in Alaska.\" On money: \"Ensuring accurate Medicaid payment is essential to sustaining this work\" and they asked for \"timely regulatory action to support needed Medicaid rate corrections.\" On access: they sought \"implementation flexibility around new Medicaid work requirements\" and \"improved eligibility processing.\" Fly-in dates: February 25-26, 2026.",
+    "source_url": "https://www.anhc.org/blog/anhc-participates-in-apca-juneau-legislative-fly-in",
+    "kind": "fact"
+   },
+   {
+    "pain": "One phone number carries nearly the entire front door. 907-743-7200 handles general patient questions, prescription refills, lab results, new patient registration, sliding fee applications, form delivery, and mammography referrals. After hours it drops to an answering service.",
+    "evidence_quote": "\"Call 907-743-7200; your call will be answered by ANHC's answering service and routed to an on-call provider if appropriate.\" Contact page: \"907-743-7200\" - call or text \"TEXT ME\" for \"general patient questions, prescription refills, lab results, and more during business hours.\" Sliding fee page: apply by \"Texting 'TEXT ME' to 907-743-7200 for an online form.\" Homepage mammography notice directs patients to \"Contact 907-743-7200 for referrals.\"",
+    "source_url": "https://www.anhc.org/contact",
+    "kind": "fact"
+   },
+   {
+    "pain": "Sliding fee eligibility is a recurring paperwork cycle with short expiries, generating repeat administrative work per patient.",
+    "evidence_quote": "Discounts expire after \"one year with documentation or six months with self-declaration\"; a temporary self-declaration form \"is valid for 30 days\"; patients must reapply \"after household or income changes, before discount expiration... or if newly enrolling at ANHC.\" Proof of income is required for all household members. Forms are offered in English, Spanish, Tagalog, and Samoan.",
+    "source_url": "https://www.anhc.org/sliding-fee-discount-program",
+    "kind": "fact"
+   },
+   {
+    "pain": "Their own historical record of what a systems change costs them operationally. When they cut over their EHR in 2022 they warned patients about phone and appointment delays.",
+    "evidence_quote": "\"Your referrals may take up to a week to process.\" Patients were told they might encounter longer phone wait times and appointment delays while staff learned the new system (post dated April 30, 2022; the EHR product is never named in the post)",
+    "source_url": "https://www.anhc.org/blog/new-ehr-system",
+    "kind": "fact"
+   },
+   {
+    "pain": "Clinic access hours are reduced twice a month for staff training, on top of a same-day-access promise.",
+    "evidence_quote": "Access promise: \"We'll make every effort to see you on the day you contact us.\" Hours page: the facility opens late on the second and fourth Tuesdays monthly for staff training (8:30 a.m. and 9:00 a.m. respectively).",
+    "source_url": "https://www.anhc.org/blog/primary-care-er",
+    "kind": "fact"
+   },
+   {
+    "pain": "A service line was shut down in the last three months, with the downstream work shifted to referral, coordination and follow-up.",
+    "evidence_quote": "\"Anchorage Neighborhood Health Center (ANHC) has discontinued onsite screening mammography services effective June 2, 2026.\" ANHC states it remains committed to breast cancer screening through referrals, outreach, care coordination, and follow-up support.",
+    "source_url": "https://www.anhc.org/",
+    "kind": "fact"
+   },
+   {
+    "pain": "Reported visit volume on the current homepage is lower than the 2024 Annual Report figure while uncompensated care rose. FLAGGED as a possible definitional mismatch, not a proven decline, because the homepage band carries no period label.",
+    "evidence_quote": "2024 report: \"53,021 total visits across services\" and \"$5.7 million in care provided regardless of ability to pay\". Current homepage: \"47,783 patient visits\" and \"$7.1 million in uncompensated care\". Insurance assists moved from \"2,198\" to \"2,929\"; satisfaction from \"95.7%\" to \"95%\".",
+    "source_url": "https://www.anhc.org/blog/anhc-2024-annual-report",
+    "kind": "inference"
+   }
+  ],
+  "notable_context": "SYSTEMS THEY PUBLICLY USE (all verified by fetching the page or destination). (1) Epic MyChart, and specifically NOT their own Epic instance. ANHC's patient portal link points to https://ak.myonlinechart.org/affiliate/Authentication/Login, and the guest-pay link to the same host [FACT: https://www.anhc.org/my-account]. That login page carries Epic branding, 'MyChart licensed from Epic Systems Corporation 1999 - 2026', and the login prompt references logging in 'for Providence Health and Services Alaska' [FACT: https://ak.myonlinechart.org/affiliate/Authentication/Login]. The '/affiliate/' path plus the Providence-hosted domain is consistent with an Epic Community Connect arrangement, i.e. ANHC riding a larger system's Epic install. THAT LAST STEP IS INFERENCE, not stated anywhere by ANHC. Portal capabilities per ANHC: view results, message the care team, request refills, schedule appointments, make payments, access records. (2) RxLocal for prescription refills: the refill link goes to https://patient.rxlocal.com/login [FACT: https://www.anhc.org/my-account]. (3) Paycom for HR and applicant tracking [FACT: https://www.anhc.org/careers]. (4) An unnamed AI ambient documentation tool ALREADY IN PRODUCTION clinically, recording visits with patient permission, generating notes and 'patient-friendly after-visit summaries'. No vendor is named in either ANHC's post or the original APCA article [FACT: https://www.anhc.org/blog/ai-in-anhc and https://alaskapca.org/anhc-ai/, published 2025-04-23]. (5) An after-hours answering service, with a separate on-call number 907-330-3267 [FACT: https://www.anhc.org/contact]. (6) Website runs on Squarespace. (7) SMS as a real intake channel, 'TEXT ME' to 907-743-7200 [FACT: https://www.anhc.org/contact].\n\nACCESS AND HOURS (verbatim from https://www.anhc.org/hours-and-location): Medical 'Monday-Thursday: 7:30 a.m. - 9:00 p.m. | Friday: 7:30 a.m. - 5:00 p.m.'; Dental 'Monday-Friday: 7:30 a.m. - 5:00 p.m.'; Pharmacy 'Monday-Friday: 8:00 a.m. - 6:00 p.m.'; Lab 'Monday-Thursday: 8:00 a.m. - 8:00 p.m. | Friday: 8:00 a.m. - 5:30 p.m.'; X-ray 'Monday-Friday: 8:00 a.m. - 5:00 p.m.' After hours per the contact page: on-call after 9:00 PM Mon-Thu, after 5:30 PM Fri, anytime Sat-Sun. New patient definition, verbatim: 'If you have not scheduled your first appointment or have not been seen by an ANHC provider in the last 36 months, you are considered a new patient.' First appointments 'may last up to 45 minutes' [FACT: https://www.anhc.org/new-patients].\n\nLEADERSHIP. Lisa DH Aquino, MHS, CEO; Sarah Dewane, PhD, ABPP, Chief Health Integration Officer; Vadette 'DeeDee' Fowler, CPA, CFO; Casey Gokey, MD, CMO; Melissa Pearl, MBA, MLS (ASCP), CPHRM, Chief Risk and Compliance Officer; Ghazal Ringler, DMD, Chief Dental Officer; Randee Shafer, LCSW, COO. To reach leadership, 'send an email to executiveassistant@anhc.org or call 907-743-7368' [FACT: https://www.anhc.org/leadership]. TWO OF SEVEN C-SUITE SEATS WERE FILLED VERY RECENTLY: Melissa Pearl appointed CRCO announced 2026-01-05 and Randee Shafer welcomed as COO announced 2026-01-26 [FACT: https://www.anhc.org/blog]. Other published addresses seen on fetched pages: feedback@anhc.org, patientprivacy@anhc.org, billing@anhc.org, hr@anhc.org, communications@anhc.org, prescriptions@anhc.org, dentalxrays@anhc.org.\n\nGOVERNANCE. FQHC patient-majority board: 'As a Federally Qualified Health Center (FQHC), ANHC's Board of Directors represents our unique community. Anyone is welcome to join, although a majority of members must be ANHC patients.' Board is 11-17 members, three-year terms with a max of three consecutive terms, meeting monthly, typically 4:00-6:00 p.m. on the last Wednesday [FACT: https://www.anhc.org/board].\n\nPOSITIONING AND SEASONALITY. Unlike most Alaska businesses, ANHC is NOT tourism-seasonal. Its cycles are the June 30th fiscal year end, the January-May Alaska legislative session, the calendar-year HRSA UDS report, and August's National Health Center Week. They describe themselves as 'Alaska's longest-standing CHC'. Context they cite: FQHCs serve roughly 1 in 6 Alaskans while Medicaid covers about 1 in 4 state residents [FACT: https://www.anhc.org/blog/anhc-participates-in-apca-juneau-legislative-fly-in].\n\nOTHER OPERATIONAL EVENTS ON RECORD. Geneva Woods Pharmacy closed permanently 2024-03-29 and ANHC wrote 'This closure affects a significant number of our patients, most of whom are Medicaid recipients receiving medisets' [FACT: https://www.anhc.org/blog/geneva-woods-closure]. ANHC discontinued a patient transportation offering [FACT: https://www.anhc.org/blog/transportation]. Language access is a real load: '56 languages translated' on the homepage and free telephonic interpretation, with patient forms published in English, Spanish, Tagalog, and Samoan [FACT: https://www.anhc.org/ and https://www.anhc.org/forms].\n\nWHAT COULD NOT BE VERIFIED, stated plainly. (a) The FY2025 Annual Report PDF (compressed, text not extractable). (b) Yelp and Glassdoor both returned HTTP 403. A search snippet surfaced a Yelp review reading 'It's hard to get someone to answer a phone call' along with a complaint about conflicting messages on medication refills. NOT treated as verified and MUST NOT be cited downstream without independent confirmation. (c) Exact employee/FTE count from the Form 990. (d) The per-center HRSA UDS record directly from data.hrsa.gov. (e) The exact grants-vs-program-service revenue split. (f) The name of the AI documentation vendor and the name of the EHR product, neither of which ANHC publishes anywhere found.",
+  "confidence": "HIGH on identity, mission, service lines, sites, hours, access model, leadership names and titles, published contact addresses, systems in use, current open roles, and multi-year financials, all from pages fetched directly. MEDIUM on patient and visit volumes: the two ANHC-published figures (53,021 visits in the 2024 report vs 47,783 on today's homepage) are not labeled with periods and are not reconcilable from public pages. MEDIUM on the Epic Community Connect inference. LOW / UNVERIFIED on patient-voice complaints, since Yelp and Glassdoor blocked the fetcher, and on the contents of the FY2025 Annual Report. The 2-3 week appointment wait is a real quote from a fetched page but the author is an outside op-ed writer and the figure is from October 2024, so it is dated third-party color rather than a current ANHC metric."
+ },
+ "people": {
+  "leaders": [
+   {
+    "name": "Lisa DH Aquino, MHS",
+    "role": "Chief Executive Officer",
+    "source_url": "https://www.anhc.org/leadership"
+   },
+   {
+    "name": "Randee Shafer, LCSW",
+    "role": "Chief Operations Officer",
+    "source_url": "https://www.anhc.org/leadership"
+   },
+   {
+    "name": "Vadette \"DeeDee\" Fowler, CPA",
+    "role": "Chief Financial Officer",
+    "source_url": "https://www.anhc.org/leadership"
+   },
+   {
+    "name": "Casey Gokey, MD",
+    "role": "Chief Medical Officer",
+    "source_url": "https://www.anhc.org/leadership"
+   },
+   {
+    "name": "Sarah Dewane, PhD, ABPP",
+    "role": "Chief Health Integration Officer",
+    "source_url": "https://www.anhc.org/leadership"
+   },
+   {
+    "name": "Melissa Pearl, MBA, MLS (ASCP), CPHRM",
+    "role": "Chief Risk & Compliance Officer",
+    "source_url": "https://www.anhc.org/leadership"
+   },
+   {
+    "name": "Ghazal Ringler, DMD",
+    "role": "Chief Dental Officer",
+    "source_url": "https://www.anhc.org/leadership"
+   },
+   {
+    "name": "Terri Lomax",
+    "role": "Board Chair",
+    "source_url": "https://www.anhc.org/board-of-directors"
+   },
+   {
+    "name": "Jasmine Boyle",
+    "role": "Board Vice Chair",
+    "source_url": "https://www.anhc.org/board-of-directors"
+   },
+   {
+    "name": "Caroline Storm",
+    "role": "Board Treasurer",
+    "source_url": "https://www.anhc.org/board-of-directors"
+   },
+   {
+    "name": "Leroy Williams",
+    "role": "Board Secretary",
+    "source_url": "https://www.anhc.org/board-of-directors"
+   }
+  ],
+  "best_contact": {
+   "type": "email",
+   "value": "executiveassistant@anhc.org",
+   "source_url": "https://www.anhc.org/leadership"
+  },
+  "contact_is": "ROUTER, not buyer",
+  "notes": "Re-verified by fetching https://www.anhc.org/leadership directly. The address appears there in this exact sentence: 'To contact a member of ANHC's leadership team, please send an email to executiveassistant@anhc.org or call 907-743-7368.' Corroborated on two further fetched pages, https://www.anhc.org/board-of-directors and the 2022 Annual Report PDF. ROUTER NOT BUYER, so anything written to it must survive a forward and must still make sense stripped of context. Most likely routes to Lisa DH Aquino (CEO since December 2020, per https://www.anhc.org/blog/meet-ceo dated 2021-07-23) and for an operations topic to Randee Shafer, COO. NO NAMED-LEADER DIRECT ADDRESS EXISTS PUBLICLY; the leadership page, CEO profile, homepage, contact page and annual report were all checked and none carries one. No address was pattern-guessed and the RocketReach-style aggregator result was deliberately not used. GOVERNANCE: ANHC is an FQHC with a fifteen-member governing board, and its own board page states 'Federal regulations and ANHC bylaws require that a majority of Board members be ANHC patients, ensuring the Board reflects the community we serve.' A material new system is therefore board-visible, so urgency pressure reads badly here. OTHER REAL ADDRESSES read on https://www.anhc.org/contact and none of them the right door: feedback@anhc.org, billing@anhc.org, hr@anhc.org, dentalxrays@anhc.org, communications@anhc.org (media). Main line 907-743-7200, leadership line 907-743-7368, 4951 Business Park Blvd, Anchorage, AK 99503. CURRENTLY OPERATING, confirmed from two independent fetched pages; the homepage carries a service notice that ANHC 'has discontinued onsite screening mammography services effective June 2, 2026.' LinkedIn returned HTTP 999 and is cited for nothing.",
+  "confidence": "high"
+ },
+ "competitors": {
+  "competitors": [
+   {
+    "name": "Providence Alaska (Providence Medical Group + Providence ExpressCare, Anchorage)",
+    "note": "The largest ambulatory competitor for the same Anchorage patient. Runs primary care clinics plus ExpressCare urgent care sites (Huffman, Tikahtnu, Eagle River, Midtown) and virtual urgent care statewide. Competes with ANHC for insured and Medicaid primary care, and its ExpressCare/urgent care network absorbs the same-day walk-in demand ANHC's phone-and-callback intake cannot take. Verified real-time patient self-scheduling: the Huffman primary care page offers new patients 'See All Open Times' online self-scheduling, established-patient scheduling via MyChart, and ExpressCare Virtual video visits 7 days a week, plus a scheduling app.",
+    "ai_usage": "DEPLOYED, multiple. Evidence strength: OPERATOR-REPORTED to an independent news outlet, no measured results published. Providence chief medical officer Serene Perkins told Alaska Public Media (published 2025-03-06) Providence uses (1) an AI tool that triages inbound patient messages and surfaces highest-risk ones first, quoted as 'Things like suicidal ideation. We need to get that to the top of the inbox,' described as HIPAA-compliant and built in 18 days; (2) AI transcription of doctor-patient conversations; (3) a recently started wearable glucose monitor plus AI program for diabetes. Article states Providence limits AI use to diabetes and heart health management pending outcome validation. No published numbers, no independent measurement.",
+    "source_url": "https://alaskapublic.org/news/health/2025-03-06/providence-medical-group-addresses-role-of-artificial-intelligence-in-healthcare"
+   },
+   {
+    "name": "Southcentral Foundation (Anchorage Native Primary Care Center)",
+    "note": "Alaska Native nonprofit health system, Anchorage-based, the single biggest overlap on ANHC's patient mix by count. PARTIAL competitor. SCF's own page states it 'provides healthcare and related services to Alaska Native and American Indian people.' So SCF competes for exactly the urban Alaska Native and American Indian patient who could otherwise walk into ANHC, and does not compete at all for the non-Native uninsured, immigrant, or homeless population that is the rest of ANHC's panel.",
+    "ai_usage": "NONE DEPLOYED THAT IS PUBLICLY DOCUMENTED. Evidence strength: PEER-REVIEWED, RESEARCH PHASE ONLY. SCF was 27 percent of attendees at the 2025 Artificial Intelligence in Alaska Native Health Care Systems symposium in Anchorage alongside ANTHC (38 percent), Maniilaq (15 percent) and Stanford. That paper reports one tribal health organization had 'recently approved an organisational policy on the use of generative AI scribes in primary care visits' and a RURAL tribal health organization already running 'Cerner AI Scribe in primary care visits', neither attributed to SCF. SCF's own primary care and news pages show no AI, no chatbot, no online self-scheduling, only 'Log on to MyHealth to request an appointment.'",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13202658/"
+   },
+   {
+    "name": "Alaska Regional Hospital (HCA Healthcare), Anchorage",
+    "note": "Single Anchorage campus at 2801 DeBarr Road. Not a primary care competitor, but a real competitor for ANHC's uninsured and unassigned patients at the point where they default to an emergency department instead of a health center.",
+    "ai_usage": "NONE FOUND AT THE ALASKA SITE LEVEL. Fetched alaskaregional.com and found online registration for pre-planned procedures, a Consult-A-Nurse telephone line, MyChart, and online bill pay. No chatbot, no symptom checker, no real-time appointment self-scheduling, no AI mentioned. Parent-level only, evidence strength VENDOR/TRADE-PRESS WITH NO NUMBERS. Treat HCA AI as unproven at Alaska Regional until an Alaska page says otherwise.",
+    "source_url": "https://www.alaskaregional.com/"
+   },
+   {
+    "name": "Mat-Su Health Services, Inc. (Wasilla, Palmer, Big Lake)",
+    "note": "The nearest true peer, another Alaska FQHC on the same federal Section 330 model with the same sliding-fee, uninsured and underinsured patient. Four clinics. Same service lines as ANHC: family medicine, behavioral health, dental, women's health, medication assisted treatment. Became an FQHC in October 2005.",
+    "ai_usage": "NONE FOUND. Fetched the site: InteliChart patient portal, InstaMed quick-pay, an appointments page, and a phone-first instruction (907-376-2411). No chatbot, no AI, no ambient documentation, no automated intake, nothing labelled AI anywhere on the site.",
+    "source_url": "https://www.mshsak.org/"
+   },
+   {
+    "name": "Interior Community Health Center (Fairbanks) and Peninsula Community Health Services of Alaska (Soldotna/Kenai)",
+    "note": "The two other significant Alaska FQHC peers outside Southcentral, the statewide benchmark ANHC is measured against by HRSA, the Alaska Primary Care Association and the same funders.",
+    "ai_usage": "NONE FOUND AT EITHER. Interior CHC does have portal-based online scheduling for established patients, with a hard constraint quoted on its own page: 'Online appointments must be made 48 hours in advance, and cannot be canceled or rescheduled within 48 hours of the appointment time,' and same-day and walk-in appointments require a phone call. Peninsula CHS shows an eClinicalWorks patient portal, online bill pay and telehealth, appointments require a call, and no online scheduling, chatbot or AI visible.",
+    "source_url": "https://www.interiorcommunityhealth.org/contents/scheduling"
+   }
+  ],
+  "where_target_is_behind": "Correcting the likely assumption first, because it runs the other way on documentation. ANHC is NOT behind on clinical AI. ANHC has already deployed an ambient AI scribe that records visits with patient permission, transcribes them into clinical notes and generates patient-friendly after-visit summaries, published on its own blog 2025-04-25 and profiled by the Alaska Primary Care Association, with Chief Medical Officer Dr. Casey Gokey quoted saying 'Before, I'd spend 10 minutes charting after a 20-minute visit. Now I can spend 25 minutes with my patient and five minutes reviewing the note.' Evidence strength is OPERATOR-REPORTED ANECDOTE, no vendor named publicly, no measured metric, no before/after data. Against that, no Alaska FQHC peer verified above shows any AI at all, so ANHC is the documented Alaska community health center leader on ambient documentation and APCA is holding it up as the example. Where ANHC IS genuinely behind is the front door, and only against Providence. ANHC's own new-patient page describes intake as text or call 907-743-7200, then 'Within 1-2 business days, you will receive a text with links to complete the following forms,' then 'Within 1-2 business days, you will receive a call to schedule your first appointment,' with a paper packet fallback returned in person or by mail. The homepage offers 'Request an Appointment' via Luma Health, a request, not a booking. Providence, for the same Anchorage patient on the same day, publishes real-time open time slots to new patients online, MyChart self-scheduling to established ones, and ExpressCare Virtual video urgent care seven days a week. Providence is also ahead on AI triage of the inbound patient message queue by clinical risk. Second-order exposure: Interior CHC, a smaller FQHC peer, has portal-based online scheduling for established patients that ANHC does not appear to offer, and SCF is building AI governance through a peer-reviewed community-engaged framework with tribal data sovereignty baked in.",
+  "where_target_could_lead": "Stating only what is empty in the verified field, not what anyone should build. First, patient-facing AI in Alaska is a vacuum. Across all five competitors, not one page fetched shows a chatbot, a symptom checker, an AI phone line, an automated intake agent, or AI-assisted scheduling. Providence's three documented AI uses are all clinician-facing or clinical. SCF has nothing deployed. Alaska Regional's Anchorage site is a phone number and a portal. Mat-Su and Peninsula are phone-first with a portal bolted on. Second, language access is entirely unautomated statewide by the evidence available. ANHC's own homepage claims services 'in 56 languages translated' and human interpretation, and no competitor page fetched mentions translation technology, AI translation, or multilingual digital intake at all. Third, ANHC holds a first-mover position it has not converted into evidence. It is the only Alaska community health center with a documented AI deployment, and APCA has already amplified it, yet the published claim is one CMO's anecdote with no vendor named and no measured number. Every competitor's AI claim in this field suffers the same defect, so the first Alaska health organization to publish an actual measured result rather than a quote takes the credibility ground uncontested. Fourth, the uninsured-access lane around ANHC is human-brokered and slow. Anchorage Project Access runs free specialty, dental and mental health care for uninsured Anchorage residents through volunteer providers, gated on eligibility screening and provider referral. Nothing in that chain, or in ANHC's own sliding fee scale discount application flow, shows any automation on any page fetched.",
+  "confidence": "MEDIUM-HIGH on the competitor set and on the FQHC peers' absence of AI. Every organization named was verified from a page actually fetched, and every AI claim traces to a fetched page and is labelled by evidence strength. Three honest weaknesses. One, absence of evidence is not evidence of absence: SCF in particular is a sophisticated organization publishing peer-reviewed AI governance work, so an internally deployed tool that never reached a public page is plausible. Two, Alaska Regional's AI posture is inferred from an empty Alaska site plus HCA parent-level statements with zero numbers, so it is the weakest cell in the table. Three, ANHC's own scribe deployment has no named vendor, no start date and no measured result in either published source, so any comparison of ANHC's documentation maturity against Providence's rests on two anecdotes and cannot be scored.",
+  "sources_seen": [
+   "https://www.anhc.org/",
+   "https://www.anhc.org/new-patients",
+   "https://www.anhc.org/blog/ai-in-anhc",
+   "https://alaskapca.org/anhc-ai/",
+   "https://alaskapublic.org/news/health/2025-03-06/providence-medical-group-addresses-role-of-artificial-intelligence-in-healthcare",
+   "https://www.providence.org/locations/ak/primary-care-huffman",
+   "https://www.providence.org/virtual-care/alaska",
+   "https://www.southcentralfoundation.com/services/primary-care-clinics/",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC13202658/",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC12009764/",
+   "https://www.alaskaregional.com/",
+   "https://www.aha.org/news/blog/2025-10-16-smarter-safer-hospitals-how-hca-healthcare-using-ai-redefine-patient-safety",
+   "https://www.mshsak.org/",
+   "https://www.interiorcommunityhealth.org/contents/scheduling",
+   "https://www.pchsak.org/",
+   "https://anchorageprojectaccess.org/services/"
+  ]
+ },
+ "industry": {
+  "industry": "Community health centers and independent outpatient primary care (FQHCs, FQHC look-alikes, safety-net and small independent primary care groups), single-metro non-profit scale",
+  "in_production": [
+   {
+    "who": "Neighborhood Healthcare, FQHC, San Diego and Riverside counties CA, ~100,000 patients/year, 220 clinicians, eClinicalWorks EHR",
+    "what_ai": "Nabla ambient AI scribe, rolled out to all clinicians April 2025 after a four-month pilot. Custom templates for general medicine, dental, behavioral health, pediatrics, women's health and podiatry.",
+    "outcome": "TIER: operator_reported (trade press interview with the CIO) plus vendor_case_study for the same figures. 34,000 notes generated in and after the pilot, 76 percent of notes rated 4 or 5 out of 5 by providers, average note rating 4.3/5, 2 percent of notes required editing. One nurse practitioner seeing 16 to 20 patients a day went from 'an hour or two at home' to closing notes same-day. The 2 percent edit rate is a provider-reported pilot statistic, not an audit of note accuracy.",
+    "source_url": "https://www.techtarget.com/healthtechanalytics/feature/How-an-FQHC-is-using-ambient-AI-to-reduce-clinician-burden",
+    "reliability": "vendor_claim"
+   },
+   {
+    "who": "Signature Health, Ohio, ~30,000 patients across 6 clinics and 4 residential facilities, an OCHIN Epic member",
+    "what_ai": "DAX Copilot from 2023, Abridge added July 2025. Ambient documentation across medical and behavioral care settings.",
+    "outcome": "TIER: operator_reported, measured by OCHIN (the health center EHR collaborative, a third party to both vendors) using Epic Signal dashboards. By January 2026 ambient AI generated 15 percent of all clinical notes, 6,942 of 45,565. 14 percent less time on notes per day, about eight minutes. 6 percent reduction in after-hours charting per scheduled day. OCHIN's October 2025 evaluation put returns at about 5 to 5.50 dollars for every 1 dollar invested; OCHIN publishes no method for it, so it is directional.",
+    "source_url": "https://ochin.org/member-spotlights/leading-responsible-ai-community-healthcare/",
+    "reliability": "proven"
+   },
+   {
+    "who": "Five US academic health systems (Mass General Brigham, Emory, UCSF, Yale New Haven, UC Davis), 8,581 ambulatory clinicians, 1,809 of them AI scribe adopters",
+    "what_ai": "Ambient AI scribes (Ambience, Nuance DAX Copilot, Abridge), June 2023 to August 2025",
+    "outcome": "TIER: independent_measurement, peer-reviewed, JAMA April 2026, Rotenstein et al. 13.4 fewer minutes of total EHR time (95% CI 9.1 to 17.7) and 16.0 fewer minutes of documentation time (95% CI 13.7 to 18.3) per 8 scheduled patient hours. 0.49 additional weekly visits (95% CI 0.17 to 0.81). NO significant change in EHR time outside scheduled hours. Largest benefit went to primary care clinicians, advanced practice clinicians, and people who used it in 50 percent or more of visits. Authors call the effects 'modest' and say findings may not generalize beyond academic settings. THIS IS A LARGE-SYSTEM STUDY, transfer to a single-metro health center is an assumption.",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/41920565/",
+    "reliability": "proven"
+   },
+   {
+    "who": "Six academic and community-based US health systems, 263 ambulatory clinicians completing both surveys (49.7 percent primary care), February to October 2024",
+    "what_ai": "A single ambient AI scribe platform, 30-day use",
+    "outcome": "TIER: independent_measurement, peer-reviewed, JAMA Network Open 2025;8(10):e2534976. Self-reported burnout fell from 51.9 percent to 38.8 percent (OR 0.26, 95% CI 0.13 to 0.54). Cognitive task load improved 2.64 points on a 10-point scale. After-hours documentation time down 0.90 hours. Pre/post quality-improvement design with self-report, not a randomized trial. It is the strongest evidence in the field for the RETENTION argument rather than the throughput argument.",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/41037268/",
+    "reliability": "proven"
+   },
+   {
+    "who": "UCSF Health, 1,565 physicians (698 adopters, 867 non-adopters), 1,202,734 ambulatory encounters, January 2023 to April 2025",
+    "what_ai": "Two commercial ambient AI scribe tools",
+    "outcome": "TIER: independent_measurement, peer-reviewed, JAMA Network Open January 2026, Holmgren et al. 1.81 more RVUs per week (95% CI 0.86 to 2.75), 0.80 more encounters per week, 0.04 more RVUs per encounter, and NO difference in claim denial rate. Authors translate this to 3,044 dollars per physician per year at 2025 Medicare rates. The accompanying commentary notes subscription fees run 200 to 600 dollars per month, so the direct financial return is roughly break-even, and warns the RVU gain may be more complete coding rather than more service.",
+    "source_url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2843524",
+    "reliability": "proven"
+   },
+   {
+    "who": "Capital Area Health Network, 34-provider FQHC, metropolitan Richmond VA, 3 medical centers, 1 dental center, 1 mobile unit",
+    "what_ai": "eClinicalWorks healow Genie, AI contact center handling routine questions, practice information, medication refill requests and appointment questions by voice, text and chatbot, 24/7",
+    "outcome": "TIER: vendor_case_study with a named customer and a named CEO on the record. healow Genie manages 80 percent of total patient call volume against roughly 450 patient calls a day, replacing 30 to 45 minute hold times. Published 2026-05-21. No independent audit, no before/after abandonment rate, no cost disclosed.",
+    "source_url": "https://www.businesswire.com/news/home/20260521676616/en/eClinicalWorks-and-healow-Genie-Help-Capital-Area-Health-Network-Transform-Patient-Call-Experience-Eliminating-45-Minute-Wait-Times",
+    "reliability": "vendor_claim"
+   },
+   {
+    "who": "Hope Family Care Center, FQHC look-alike, Kansas City MO, 3,000+ patients, small care team",
+    "what_ai": "eClinicalWorks healow Genie for after-hours call handling, appointment scheduling and refill requests; consolidated from 30+ vendors onto one platform",
+    "outcome": "TIER: vendor_case_study with a named customer and named CEO. 90 percent of after-hours calls handled by the AI, 60 percent reduction in administrative burden, staff retention reported improving from 21 percent to 100 percent, seven key quality measures achieved within 6 months. Published 2026-07-16. The retention and quality numbers are confounded by the simultaneous 30-vendor consolidation.",
+    "source_url": "https://www.eclinicalworks.com/eclinicalworks-and-healow-genie-help-hope-family-care-center-cut-after-hours-call-burden-by-90-while-driving-significant-cost-savings/",
+    "reliability": "vendor_claim"
+   },
+   {
+    "who": "Total Health Care Inc, 50-provider FQHC, Baltimore MD, ~30,000 patients",
+    "what_ai": "healow no-show prediction model on eClinicalWorks EHR data, used to trigger proactive outreach on high-risk appointments",
+    "outcome": "TIER: vendor_case_study with a named customer and named CMO. 34 percent decrease in the no-show rate among patients flagged high-risk, 309 additional appointments in 45 days, model accuracy stated at 90 percent. Published 2023-09-14. Baseline no-show rate not disclosed, and the 90 percent accuracy figure is unqualified by class balance.",
+    "source_url": "https://www.eclinicalworks.com/50-provider-fqhc-significantly-reduces-patient-no-show-rate-by-implementing-healow-no-show-prediction-ai-model/",
+    "reliability": "vendor_claim"
+   },
+   {
+    "who": "Urban Health Plan, 26 centers in the Bronx, Corona, Queens and Central Harlem NY, 984 associates and providers, 82,000+ patients",
+    "what_ai": "healow no-show prediction model plus eClinicalMessenger voice/text/email reminders, TeleVisit conversion and open-access rescheduling",
+    "outcome": "TIER: vendor_case_study with a named customer and named CMIO. 154 percent increase in completed visits among patients flagged high no-show probability, and a record ~42,000 patient visits in March 2023. Published 2023-05-04. The intervention is a bundle, so the model alone is not the cause.",
+    "source_url": "https://www.eclinicalworks.com/urban-health-plan-inc-significantly-reduces-patient-no-show-rate-leveraging-eclinicalworks-ehr-and-healow-prediction-ai-model/",
+    "reliability": "vendor_claim"
+   },
+   {
+    "who": "Southwest Care, FQHC look-alike serving Santa Fe and Albuquerque NM",
+    "what_ai": "Onpoint Healthcare Partners Iris Medical Agent platform, covering note sign-off, coding, refills and referral processing",
+    "outcome": "TIER: vendor_case_study with a THIRD-PARTY ROI VALIDATION by KLAS Research announced 2026-06-12, the strongest financial evidence found from an organization of this size and type. Note sign-off time 3.26 to 0.52 minutes (84 percent cut). Charge lag 4.4 to 2.7 days, a 42,000 dollar one-time gain. Pay per claim 133.55 to 141.58 dollars (6.0 percent). HCC patient recapture 77.3 to 83.6 percent. 209 coder work hours saved per month. 177.8 documentation hours eliminated per month. Refills, 5 minutes each across 3,555 monthly refills, 296.3 hours per month. Referrals, about 30 minutes saved per referral across about 400 per month. Zero burnout-related provider departures since deployment. KLAS itself flags that this reflects one organization's validated experience.",
+    "source_url": "https://www.einpresswire.com/article/919235534/klas-research-validates-real-world-roi-of-onpoint-s-iris-medical-agent-ai-platform-a-true-workforce-extension",
+    "reliability": "vendor_claim"
+   },
+   {
+    "who": "Community Clinic NWA, FQHC, 27 locations in Northwest Arkansas, 300 staff, 70,000+ patients a year",
+    "what_ai": "No Barrier real-time AI medical interpretation embedded in the clinical workflow, deployed September 2025; top languages Spanish and Burmese",
+    "outcome": "TIER: vendor_case_study with a named customer and named CEO on the record. 63 percent reduction in interpretation costs, 1.5 minutes saved per patient encounter. No independent verification, no accuracy or adverse-event measurement published.",
+    "source_url": "https://www.nobarrier.ai/case-study-federally-qualified-health-center",
+    "reliability": "vendor_claim"
+   },
+   {
+    "who": "Family Health Centers, 76-provider FQHC, Louisville KY, 40 percent non-English-speaking patients",
+    "what_ai": "Sunoh.ai ambient scribe inside eClinicalWorks, capturing Spanish conversation and producing English documentation",
+    "outcome": "TIER: vendor_case_study with a named customer. Providers using it for over 95 percent of patient visits, published 2026-05-07. Qualitative outcomes only. Coverage rate is the only hard number, and coverage is not benefit.",
+    "source_url": "https://www.businesswire.com/news/home/20260507935954/en/eClinicalWorks-and-Sunoh.ai-Empower-Family-Health-Centers-76-Provider-FQHC-to-Accelerate-Efficiency-and-Improve-Documentation-Quality",
+    "reliability": "vendor_claim"
+   },
+   {
+    "who": "Ritter Center, FQHC in San Rafael CA, and Kern Family Health Care, a Medi-Cal managed care plan in Bakersfield CA",
+    "what_ai": "Careforce 'Angelica' AI voice outreach agent, 29 languages, used for Medi-Cal renewal/redetermination outreach and for hypertension follow-up",
+    "outcome": "TIER: operator_reported, published by the California Health Care Foundation 2026-07-16, WITH A DISCLOSED CONFLICT, CHCF has a 500,000 dollar investment in Careforce. Ritter Center, blood pressure control 62 percent to 73 percent of patients. Kern Family Health Care, 96 percent renewal rate in the first year against 38 percent before, across 270,000 members. The Kern figure is a health plan, not a clinic, so it does not transfer directly. Ritter is the FQHC-scale data point and it is a clinical outcome.",
+    "source_url": "https://www.chcf.org/blog/2026/07/16/how-ai-powered-outreach-is-helping-californians-keep-their-medi-cal-coverage/",
+    "reliability": "proven"
+   },
+   {
+    "who": "A community-based outpatient behavioral health clinic in the US, 47 adults randomized 23 to the AI platform and 24 to treatment as usual",
+    "what_ai": "An AI platform supporting delivery of individual cognitive behavioral therapy",
+    "outcome": "TIER: independent_measurement in form (peer-reviewed RCT, JMIR, 2023-07-10, PMID 37428547), weak in power. Depression symptoms reduced 34 percent in the AI group versus 20 percent for treatment as usual, anxiety reduced 29 percent versus 8 percent. n=47 at a single clinic is small. It is the only randomized clinical-outcome evidence found in a community behavioral health setting.",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37428547/",
+    "reliability": "proven"
+   },
+   {
+    "who": "Alliance Health Centers, FQHC look-alike, Fort Wayne IN (co-development partner and pilot site)",
+    "what_ai": "Perenna Health Medicaid Coverage Navigation Platform, launched 2026-07-22. Self-updating worklists surfacing patients at risk of coverage loss, drafted and automated SMS outreach, document collection, case tracking, aimed at the January 2027 work-requirement and six-month redetermination rules",
+    "outcome": "TIER: vendor_marketing. Named pilot site, named co-development partners, but NO measured outcome published yet. Included because eligibility navigation is a category that is about to get much larger for every health center, not because it is proven.",
+    "source_url": "https://www.insideindianabusiness.com/articles/perenna-health-launches-ai-platform-to-help-prevent-medicaid-coverage-loss",
+    "reliability": "vendor_claim"
+   }
+  ],
+  "state_of_play": "Eleven categories were worked and are named so the coverage is visible: ambient clinical documentation and scribing, patient call handling and scheduling, no-show prediction and outreach, translation and interpretation, revenue cycle and coding and denials, eligibility and benefits screening and Medicaid redetermination, prior authorization, referral loop closure, quality and UDS-style measure reporting, inbox and results management, plus dental imaging AI and behavioral health.\n\nTHREE POCKETS ARE SOLID GROUND FOR AN ORGANIZATION THIS SIZE.\n1. Ambient clinical documentation is the most evidenced AI capability in outpatient primary care, and unusually for AI it is evidenced at FQHC scale and not only at academic centers. Independent tier: a five-site JAMA study of 8,581 clinicians found 13.4 fewer minutes of EHR time and 16.0 fewer minutes of documentation time per eight scheduled patient hours; a six-system JAMA Network Open study of 263 clinicians found burnout falling 51.9 to 38.8 percent in 30 days; a UCSF cohort of 1.2 million encounters found 1.81 more RVUs per week with no rise in claim denials. FQHC-specific tier: OCHIN measured its own member Signature Health at 14 percent less note time per day and 6 percent less after-hours charting, and Neighborhood Healthcare ran 34,000 notes through Nabla before going to all 220 clinicians. A 2024 survey of 43 US health systems in JAMIA found ambient notes was the ONLY use case with 100 percent adoption activity and the highest reported success rate at 53 percent, ahead of imaging, which had 90 percent deployment but only 19 percent reported success.\n2. Patient call handling and the front door is where the FQHC-specific case studies concentrate. The evidence tier is lower, vendor case studies with named customers and named executives and no independent audit, but the customers are real health centers of exactly this size: a 34-provider FQHC in Richmond handling 80 percent of ~450 daily calls, a 3,000-patient FQHC look-alike in Kansas City handling 90 percent of after-hours calls.\n3. No-show prediction plus targeted outreach is a mature, boring, deterministic-adjacent capability with multiple named FQHC deployments going back to 2023, all through the eClinicalWorks/healow stack. Published numbers are large but all vendor-published and all describe bundles.\n\nTWO POCKETS ARE PROMISING BUT THINLY EVIDENCED. Revenue cycle, coding and referral processing has exactly one rigorous data point at this scale, Southwest Care, a vendor announcement carrying a third-party KLAS ROI validation. Eligibility and redetermination outreach has one FQHC clinical outcome (Ritter Center), one health plan result that does not transfer, and one just-launched platform with no results yet.\n\nTHREE POCKETS ARE CURRENTLY VENDOR MARKETING FOR THIS SEGMENT, meaning no named safety-net customer with a measured outcome was found, NOT that the technology does not work elsewhere. Prior authorization AI has substantial named results but at health systems, payers and specialty groups. Care-gap closure and UDS/HEDIS measure automation returned almost entirely vendor blog content with modeled ROI. Dental imaging AI has real DSO deployments and FDA clearances but no FQHC dental deployment was found.\n\nONE POCKET HAS EVIDENCE POINTING THE OTHER WAY. AI-drafted replies to patient portal messages is the clearest disappointment in this field. A randomized quality improvement trial of 52 primary care physicians found a 21.8 percent INCREASE in message read time, no significant change in reply time, and 17.9 percent longer replies. A Dartmouth analysis of 146,000 portal conversations between 10,105 patients and their primary care physicians, presented at ACL in July 2026, found AI drafts frequently added extraneous detail and skipped relevant follow-up questions, with co-author Tim Burdick putting it plainly, if you have to edit 75 percent of a message you may be spending more time than writing it fresh. The same team got a 33 percent accuracy improvement and 26 percent editing reduction by adapting drafts to individual physician style, so the capability is unfinished rather than dead, and it needs per-clinician tuning a small organization is unlikely to fund.\n\nWHAT ADOPTION ACTUALLY LOOKS LIKE. In the five-site JAMA study, 79 percent of clinicians offered an ambient scribe declined to use it, and only 32 percent of adopters used it in half or more of their visits, which is the threshold where the benefits concentrate. After-hours EHR time did not move at all in that study even though documentation time did. Neighborhood Healthcare's own account says the largest barrier was completing initial sign-in, setup and customization. The tool is the small part. The rollout is the project.",
+  "the_gap": "FOUR GAPS BETWEEN WHERE A HEALTH CENTER WOULD EXPECT AI TO PAY AND WHERE IT MEASURABLY DOES.\n\n1. THE CLINICAL/ADMINISTRATIVE GAP. A safety-net clinic under-resourced on clinicians instinctively looks for AI that helps with care. Almost every measured win in this segment is administrative: documentation, the phone, scheduling, coverage paperwork and coding. The one randomized clinical-outcome study found in a community setting is n=47. The one strong clinical-quality result, Ritter Center's blood pressure control moving 62 to 73 percent, came from an AI OUTREACH agent, not an AI clinical tool. AI improved the outcome by getting hold of patients, not by knowing medicine.\n\n2. THE RETENTION/THROUGHPUT GAP, the most expensive misunderstanding available to buy. The financial case for ambient documentation as extra billable throughput is weak: UCSF's 1.2 million-encounter study gives about 3,044 dollars per physician per year against subscription fees the JAMA commentary puts at 200 to 600 dollars per month, roughly break-even, and the commentary warns payer downcoding could erase it. The strong case is the other one, burnout falling 51.9 to 38.8 percent in 30 days across six systems, and Southwest Care reporting zero burnout-related provider departures since deployment. In a market where a single primary care vacancy costs months of recruiting and locum spend, the win is that people stay, not that the schedule grows. An organization that funds an ambient scribe on a throughput business case will probably miss its number and kill a tool that was actually working.\n\n3. THE LANGUAGE GAP, which cuts directly against the marketing every multilingual clinic is being shown. Multilingual capability is the headline feature in nearly every FQHC-facing AI pitch. The independent evidence says it holds for Spanish and degrades sharply outside it. A PLOS Digital Health review published 2026-03-12 found AI translation non-inferior to human translation for Spanish written discharge instructions with sentence-level accuracy above 90 percent, but more errors and lower fluency for Chinese, Vietnamese and Somali, Russian accuracy dropping to roughly 89 percent for GPT-4 and 80 percent for Google Translate with UP TO 6 PERCENT OF INSTRUCTION SETS CONTAINING POTENTIALLY HARMFUL ERRORS, and back-translation retaining only 36 to 76 percent of original meaning for some non-European languages. It draws a hard line: low-risk written material that a human reviews is safe, real-time spoken interpretation in complex or emotionally sensitive conversations is not. Separately, a JMIR Medical Informatics study published 2026-07-28 found that in simulated English/Spanish encounters ambient AI scribes PROPAGATED INTERPRETER ERRORS INTO THE CLINICAL NOTE. A clinic whose language mix runs well past Spanish should assume the vendor's language count is a list of what the model will attempt, not a list of what it does safely.\n\n4. THE PRICING-MODEL GAP. CHCF's focus groups with 45 California safety-net leaders (August to October 2024) found the blocker is not appetite, it is that per-user and per-visit pricing models are built for well-funded systems and do not work for the safety net, and that small clinics lack the data-science staff the tools assume. NACHC and CHAI cite 60 percent of all community health centers and 70 percent of rural ones naming expense as the implementation challenge. The buying question in this segment is not which model is best, it is which vendor will price per site or per organization rather than per clinician, and who does the integration work when there is no internal data team.",
+  "grounding_facts": [
+   {
+    "fact": "In a five-site study of 8,581 ambulatory clinicians (1,809 adopters) published in JAMA in April 2026, ambient AI scribes were associated with 13.4 fewer minutes of total EHR time and 16.0 fewer minutes of documentation time per 8 scheduled patient hours, and 0.49 more weekly visits, but NO significant change in EHR time outside scheduled hours. Authors describe the effects as modest and note they may not generalize beyond academic settings.",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/41920565/",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "Only 32 percent of ambient scribe adopters used the tool in 50 percent or more of visits, the threshold where the largest benefits were seen, and 79 percent of clinicians offered the tool declined to use it. Adoption, not model quality, is the binding constraint.",
+    "source_url": "https://www.statnews.com/2026/04/01/ai-ambient-scribes-modest-time-savings-clinical-documentation/",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "In a six-system quality improvement study of 263 ambulatory clinicians (49.7 percent primary care), 30 days of ambient AI scribe use was associated with self-reported burnout falling from 51.9 percent to 38.8 percent (OR 0.26, 95% CI 0.13-0.54), cognitive task load improving 2.64 points on a 10-point scale, and after-hours documentation falling 0.90 hours. JAMA Network Open 2025;8(10):e2534976.",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/41037268/",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "Across 1,202,734 ambulatory encounters and 1,565 physicians at UCSF Health, ambient scribe adopters generated 1.81 more RVUs per week (95% CI 0.86-2.75) and 0.80 more encounters per week, with no difference in claim denial rate, which the authors translate to 3,044 dollars per physician per year at 2025 Medicare rates. They state they cannot determine whether the RVU gain reflects more services, more accurate documentation, or higher coding levels.",
+    "source_url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2843524",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "The JAMA Network Open commentary on that study states ambient scribe subscription fees run 200 to 600 dollars per month, warns that increased throughput risks reintroducing the pressures the tools were meant to relieve, notes recent downcoding policies by Aetna and Cigna as a headwind, and argues the clinician-retention value (against turnover costs of 500,000 to 1,000,000 dollars) may exceed the direct financial return.",
+    "source_url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2843526",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "A survey of 43 US health systems (fall 2024, published JAMIA July 2025) covering 37 AI use cases found ambient notes was the only category with 100 percent of respondents reporting adoption activity and the highest success rate, 53 percent reporting a high degree of success. Imaging/radiology had 90 percent at least partial deployment but only 19 percent reporting high success. Top barrier was immature AI tools (77 percent), then financial concerns (47 percent).",
+    "source_url": "https://academic.oup.com/jamia/article/32/7/1093/8125015",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "A randomized waiting-list quality improvement trial of 52 primary care physicians found generative AI-drafted replies to patient portal messages were associated with a 21.8 percent INCREASE in message read time (95% CI 5.2-41.0), no statistically significant change in reply time, and 17.9 percent longer replies.",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/38619840/",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "A Dartmouth analysis of 146,000 portal conversations between 10,105 patients and primary care physicians, presented at the Association for Computational Linguistics on 2026-07-07, found AI drafts frequently too long, missing relevant follow-up questions, and carrying irrelevant medical detail. Adapting drafts to individual physician communication style improved accuracy 33 percent and reduced editing 26 percent. Co-author Tim Burdick: editing 75 percent of a message may cost more time than writing it from scratch.",
+    "source_url": "https://home.dartmouth.edu/news/2026/07/ai-mistakes-can-cost-doctors-time-when-writing-patients",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "A PLOS Digital Health review published 2026-03-12 on AI-mediated health language interpretation found AI translation non-inferior to human translation for Spanish and above 90 percent sentence-level accuracy for Spanish and Chinese discharge instructions, but more errors and lower fluency for Chinese, Vietnamese and Somali, Russian accuracy of roughly 89 percent (GPT-4) and 80 percent (Google Translate) with up to 6 percent of instruction sets containing potentially harmful errors, and back-translation retaining only 36 to 76 percent of original meaning for some non-European languages. It identifies low-risk reviewable written material as safe and real-time spoken interpretation in complex or emotionally sensitive conversations as not safe.",
+    "source_url": "https://journals.plos.org/digitalhealth/article?id=10.1371%2Fjournal.pdig.0001295",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "A JMIR Medical Informatics study published 2026-07-28 (PMID 42520279) found that in simulated English and Spanish clinical encounters, ambient AI scribes propagated interpreter errors into the clinical note, with patterns varying by speaker role and error type.",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42520279/",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "CHCF and the California Health and Human Services Agency ran three focus groups with 45 California safety-net leaders (August to October 2024). The headline barrier was pricing, per-usage and per-provider-visit models are prohibitively expensive for safety-net organizations, followed by the absence of in-house data science staff, and decision paralysis among organizations already carrying infrastructure work.",
+    "source_url": "https://www.chcf.org/resource/ai-tools-promise-better-care-challenge-safety-net-providers/",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "In a CHAI and NACHC joint announcement, 60 percent of all community health centers and 70 percent of rural community health centers cite expenses as an implementation challenge for AI. NACHC and CHAI are fielding an inaugural national survey of CHC technology and AI use, so segment-level adoption data does not yet exist publicly.",
+    "source_url": "https://www.prnewswire.com/news-releases/chai-and-nachc-join-forces-to-prioritize-community-health-centers-in-ai-adoption-302529390.html",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "OCHIN, the community health center EHR collaborative (more than 43,000 providers, nearly 8 million people, over 2,200 care delivery sites), measured its member Signature Health at 15 percent of all clinical notes generated by ambient AI by January 2026 (6,942 of 45,565), 14 percent less time on notes per day (about eight minutes), and a 6 percent reduction in after-hours charting per scheduled day. Its October 2025 evaluation reported a return of about 5 to 5.50 dollars per 1 dollar invested. The ROI method is not published.",
+    "source_url": "https://ochin.org/member-spotlights/leading-responsible-ai-community-healthcare/",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "Published self-serve ambient scribe pricing as of August 2026, one named vendor: Freed lists Starter at 39 dollars per clinician per month (40 notes), Core at 79 dollars (unlimited notes), Premier at 104 dollars annual / 119 dollars monthly (adds EHR push, patient instructions/letters/referrals, ICD-10 and CPT coding), with Groups at custom pricing. This is list price published by the vendor.",
+    "source_url": "https://www.getfreed.ai/pricing",
+    "reliability": "vendor"
+   },
+   {
+    "fact": "Neighborhood Healthcare, a California FQHC, reports its largest deployment barrier was completing initial sign-in, setup and customization, and that training and hands-on experience were essential to staff buy-in even though the organization had previously used live human scribes.",
+    "source_url": "https://www.techtarget.com/healthtechanalytics/feature/How-an-FQHC-is-using-ambient-AI-to-reduce-clinician-burden",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "Prior authorization AI results published as of August 2026 are concentrated at large systems, payers and specialty groups, not community health centers. Named examples include R1 Prior Authorization (68 percent of orders cleared in one hour) and Optum Digital Auth Complete (45 percent of manual touches eliminated). No FQHC or small independent primary care customer with a measured prior-authorization outcome was found.",
+    "source_url": "https://www.ehrsource.com/articles/prior-authorization-reform-automation/",
+    "reliability": "vendor"
+   },
+   {
+    "fact": "AI care-gap closure and HEDIS/UDS measure automation aimed at FQHCs is marketed with modeled returns (for example 'most FQHCs see 3:1 ROI within 90 days') on vendor blogs with no named health center and no published before/after. Treat this category as unevidenced for this segment until a named customer publishes measure-level results.",
+    "source_url": "https://linear.health/blog/fqhc-care-gap-closure-ai",
+    "reliability": "vendor"
+   },
+   {
+    "fact": "Dental imaging AI (Overjet, Pearl) has FDA clearances and named DSO and group-practice deployments, but a peer-reviewed review notes a significant lack of studies evaluating their effectiveness, and no FQHC dental deployment with published results was found.",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11937414/",
+    "reliability": "authoritative"
+   }
+  ],
+  "confidence": "HIGH on ambient clinical documentation, the best-evidenced AI capability in outpatient primary care, evidenced at both academic scale and FQHC scale. HIGH on the failure and adoption qualifiers, which come from peer-reviewed and academic sources, not from vendors. HIGH on the language finding, two independent 2026 peer-reviewed sources point the same way. MEDIUM on patient call handling and no-show prediction, real named health centers of the right size but every number is vendor-published with no independent audit and no disclosed baselines. MEDIUM on revenue cycle and coding, one organization with a third-party KLAS validation. LOW on eligibility and redetermination, prior authorization, referral loop closure, and quality/UDS measure automation, and that means no named safety-net customer with a measured outcome was found inside the segment, which is a statement about the published record reachable, not a verdict that the technology fails here. Three sources wanted and not fetchable: the Commonwealth Fund's 2026 three-part series on digital innovation at community health centers (403), NACHC's September 2025 AI Action Guide (403), and a Providertech case study on Piedmont Health Services whose numbers were therefore not reported."
+ },
+ "meta": {
+  "company": "Anchorage Neighborhood Health Center",
+  "domain": "anhc.org",
+  "segment": "healthcare",
+  "location": "Anchorage, Alaska",
+  "run_date": "2026-08-06",
+  "fit_total": 24
+ }
+}

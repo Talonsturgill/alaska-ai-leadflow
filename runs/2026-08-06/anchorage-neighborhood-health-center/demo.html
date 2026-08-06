@@ -371,7 +371,7 @@ footer ul{list-style:none;padding:0;margin:14px 0 0;font-family:var(--mono);font
 <section>
   <span class="secn">03 &nbsp;/&nbsp; THE DATE CALCULATOR</span>
   <h2>Your sliding fee rules, computed instead of remembered</h2>
-  <p class="lede">Every trigger in your published sliding fee policy is arithmetic on a date. That makes it a rules problem, so it gets a rules fix, with tests. Change the inputs and watch it work.</p>
+  <p class="lede">The expiry trigger in your published sliding fee policy is arithmetic on a date. That makes it a rules problem, so it gets a rules fix, with tests. Change the inputs and watch it work.</p>
 
   <div class="calc">
     <div class="panel">
@@ -506,7 +506,7 @@ var SC = [
 
    {clock:"MON 7:30 A.M.", cap:"The medical clinic opens.",
     today:{k:"wait", t:"The clinic opens. Where this registration sits inside your published window is not something we can see from outside."},
-    after:{k:"act", t:"Staff open a list that already moved overnight, with a completed form attached to this one. This one is on the ready list with a completed form attached to it."}},
+    after:{k:"act", t:"Staff open a list that already moved overnight, with a completed form attached to this one."}},
 
    {clock:"MON, IN THE WINDOW", cap:"Inside your published 1 to 2 business day promise.",
     today:{k:"wait", t:"The text with the form links goes out, somewhere inside the published window. The second published window, the scheduling call, starts after the forms come back."},
