@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Never-contact list. Companies disqualified at a gate, competitors, and anyone who said no.",
-  "updated": "2026-08-04",
+  "updated": "2026-08-06",
   "suppressions": [
     {
       "company": "Bering Straits Native Corporation",
@@ -68,6 +68,18 @@
       "domain": "koniag.com",
       "reason": "values/reputation: ICE Enforcement and Removal Operations contracting. On 2026-07-29, six days before this run, Koniag Services, Inc. was awarded GSA OASIS SB task order 70CDCR26FR0000034 by U.S. Immigration and Customs Enforcement for support services to ERO's 287(g) National Coordination Center, reported at a 63,035,230.95 ceiling. CONFIRMED against USASpending, not taken from the trade aggregator that first surfaced it: award 70CDCR26FR0000034, recipient KONIAG SERVICES, INC., awarding sub-agency U.S. Immigration and Customs Enforcement, description 'THE PURPOSE OF THIS TASK ORDER IS TO PROVIDE SUPPORT SERVICES IN SUPPORT OF ENFORCEMENT AND REMOVAL OPERATIONS'. Same rule that suppressed beringstraits.com, nana.com, ahtna.com and doyon.com, and the Bering Straits reasoning applies with unusual force here because our offer to this company would have been AI for its federal capture and proposal pipeline, which accelerates exactly this line of work. Disqualified at the Phase 2 research gate, never contacted, no email drafted. NOTE: Koniag is a separate entity from Afognak Native Corporation and Alutiiq LLC and this record is its own. Also note Koniag Brillient LLC holds a USCIS records-operations contract, which is immigration BENEFITS processing and was not the basis for this suppression.",
       "date": "2026-08-04"
+    },
+    {
+      "company": "Tlingit Haida Tribal Business Corporation",
+      "domain": "thtbc.com",
+      "reason": "values/reputation: subsidiary KIRA holds a US Navy port operations and waterfront contract at Guantanamo Bay running to February 2028, just under 40 million across two awards, at a base being used to hold migrants. THTBC issued a public statement on December 8th denying Bureau of Prisons, INS and ICE contracts after its own tribal citizens raised concerns. Same enforcement-adjacent rule that suppressed beringstraits.com, nana.com, ahtna.com, doyon.com and koniag.com. Screened out at Phase 1 by the ANC lead-scout on 2026-08-06, never contacted. Source: https://tlingitandhaida.gov/news/tlingit-haida-tribal-business-corporation-issues-statement-on-federal-contracting-activities/",
+      "date": "2026-08-06"
+    },
+    {
+      "company": "Kikiktagruk Inupiat Corporation",
+      "domain": "kikiktagruk.com",
+      "reason": "values: documented federal-contracting fraud directly on point with the proposal and compliance work we would propose. KIC and subsidiary KIC Development LLC paid 2,025,000 dollars in May 2019 to settle False Claims Act allegations that three employees paid kickbacks and bribes, including flights, hotels, vacations and payments to family, to a US Army Corps of Engineers contract worker to steer a Fort Bliss set-aside construction contract. Two employees served five-year sentences. Same rule that suppressed alutiiq.com, capefoxcorp.com and eyakcorporation.com. Screened out at Phase 1 on 2026-08-06, never contacted. Source: https://www.adn.com/alaska-news/crime-courts/2019/05/03/alaska-company-pays-2m-in-army-post-kickback-bribery-suit/",
+      "date": "2026-08-06"
     }
   ]
 }
