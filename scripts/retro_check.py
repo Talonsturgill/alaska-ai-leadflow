@@ -45,6 +45,7 @@ import argparse
 import datetime
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -66,9 +67,28 @@ def run_date():
 NEGATIVE_SIGNALS = (
     "negative case", "negative test", "false positive", "false negative",
     "injected", "reconstruct", "caught all", "confirmed it caught",
-    "fails when", "failed when", "exits 1", "does fire", "did fire",
+    "fails when", "failed when", "does fire", "did fire",
     "regression", "before and after", "without the fix",
+    # 2026-08-06. "negative" as its own labelled section, which is how a
+    # verification note that leads NEGATIVE, ... is actually written.
+    "negative,", "negative:", "negative ",
+    "must not leak", "rejected", "refuses", "refused", "still fails",
 )
+
+# A NON-ZERO exit is the tell that someone ran the failing case. Zero is not,
+# because exit 0 is the passing case, and the old literal "exits 1" missed every
+# gate that signals with any other code. This run's own segment gate exits 2 and
+# was flagged as untested while its verification described four rejections and an
+# end-to-end refusal, which is the false positive this file's docstring says to
+# assume before assuming the run is at fault.
+NONZERO_EXIT = re.compile(r"exit(?:s|ed|ing)?\s+(?:with\s+)?(?:code\s+)?[1-9]\d*",
+                          re.IGNORECASE)
+
+
+def tested_a_negative(verified_how):
+    """True when the verification text shows the failing case was actually run."""
+    low = (verified_how or "").lower()
+    return any(s in low for s in NEGATIVE_SIGNALS) or bool(NONZERO_EXIT.search(low))
 
 
 def git(repo, *args):
@@ -180,8 +200,7 @@ def main():
         if len(vh) < 40:
             fails.append("UPGRADE HAS NO REAL VERIFICATION\n        {}\n"
                          "        A change that is not tested does not ship.".format(tag))
-        elif (any(f.endswith(".py") for f in named)
-              and not any(s in vh.lower() for s in NEGATIVE_SIGNALS)):
+        elif any(f.endswith(".py") for f in named) and not tested_a_negative(vh):
             # Only asked of upgrades that touch executable code. A change to the
             # run contract or a knowledge file has no negative case to test, and
             # demanding one there trains the reader to ignore this warning, which

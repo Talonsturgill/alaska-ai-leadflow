@@ -132,6 +132,15 @@
    "files": [
     "scripts/ledger.py"
    ]
+  },
+  {
+   "date": "2026-08-06",
+   "change": "retro_check's negative-case detector stops false-flagging gates that signal with anything other than exit 1. The literal token \"exits 1\" is replaced by a regex over any NON-ZERO exit, exit/exits/exited/exiting, optionally with or code, and zero is deliberately excluded because exit 0 is the passing case and counting it would make the warning fire for nobody. The signal list also gained the shape a verification note is actually written in, a labelled NEGATIVE, section, plus rejected, refuses, refused, must not leak and still fails. The matching moved out of an inline any() into a named tested_a_negative() so it is unit-testable rather than only reachable through a full run.",
+   "evidence": "Caught by this run's own retro. retro_check warned 'no negative case evident' against the segment-validation upgrade whose verification described four rejection cases and an end-to-end refusal that exited 2 and left ledger/leads.json byte-identical. The gate under test signals with exit 2, and the detector only knew the literal string 'exits 1'. This file's own docstring says every gate written on 2026-08-05 had false positives on its first attempt and that it should assume it is wrong before assuming the run is, so a false positive here is the failure mode it was warned about. A warning that fires on thorough work is how a warning gets ignored, and this one guards the difference between a gate and something that only looks like coverage.",
+   "verified_how": "POSITIVE, five verification texts that really did run the failing case now all detect: this run's exits-2 entry, an exits-1 entry, the 2026-08-05 'caught all five reconstructions' style, an 'injected' style, and an 'exits with code 3' style that the first regex missed and which forced the with/code groups apart. NEGATIVE, five texts that show no failing case still detect nothing and still warn, a pure happy-path note, a note whose only exit code is the passing exit 0, a note claiming the change is obviously correct with no test, an empty string and a null. REGRESSION, all thirteen entries in ledger/upgrades.json were judged under the old token list and the new detector and compared: exactly ONE verdict changed, the false positive this fixes. The eleven pre-existing 2026-08-05 entries are untouched.",
+   "files": [
+    "scripts/retro_check.py"
+   ]
   }
  ]
 }
