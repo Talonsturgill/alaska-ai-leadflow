@@ -40,6 +40,57 @@ from it.
   are approved on projected ROI nobody ever measures after launch, has the same
   problem and the same fix.
 
+- **2026-08-07, the prose budget is enforced without being addressable.**
+  BIGGER THAN ONE RUN, and it damaged the deliverable rather than merely
+  costing time.
+
+  EVIDENCE. study_qa reports a single prose word count and the study failed it
+  on almost every iteration, so this run made roughly twenty seven separate
+  trimming passes to hold 3,000 words across five critic rounds. The count is
+  computed from the RENDERED HTML by subtracting table cells, sources and
+  captions, so nothing tells the showrunner which study.json field contributes
+  what. Every trim was therefore a guess, and most landed five to ten words
+  short of useful, which is why there were so many.
+
+  The cost was not the passes. In EVERY critic round a caveat was lost or
+  garbled in the cutting, and the critics named it each time. Round two lost the
+  sentence that kept eleven job openings from reading as distress. Round three
+  lost the positive half of the industry evidence and left three orphaned
+  citations behind, all three of which cut against our own recommendation.
+  Round four lost the sentence naming what the CMMC certification actually
+  constrains. Round five did not delete a caveat but GARBLED two, a verb that
+  captured its object and an appositive that no longer resolved, which the
+  critic correctly called harder to see because the words are still on the page.
+  Trimming removes qualifying clauses first, because qualifiers read as slack,
+  and that is a mechanism rather than an accident.
+
+  WHY IT IS NOT SHIPPED. The obvious fix, a per-field prose contribution report,
+  needs the builder to attribute rendered text back to its source key, which is
+  a real change to build_study_page rather than a helper beside it. Doing it
+  badly would produce a number that looks authoritative and is wrong, which is
+  the failure mode of the word count itself. The deeper question, whether a
+  study that has to be cut twenty seven times is too long or the budget is too
+  tight for a document carrying this many honesty disclosures, is a maintainer
+  call and not a run's to make.
+
+- **2026-08-07, the shell working directory drifts and nothing notices.**
+  SMALL BUT IT ALMOST LOST THE RUN'S REPLACEMENT QUEUE.
+
+  EVIDENCE. Phase 1 wrote selection.md, shortlist.json and all four scout
+  outputs to /home/user/out/2026-08-07/ instead of the repo, because an earlier
+  command had cd'd to the sibling checkout and the working directory persisted.
+  Every write succeeded, nothing warned, and it was only caught at Phase 8 when
+  the archive step could not find selection.md. Three later commands failed
+  outright with FileNotFoundError for the same reason. Had the run crashed
+  before the archive, the shortlist and the entire replacement queue would have
+  been outside the repo and invisible to a resume.
+
+  WHAT WOULD FIX IT. Either every phase writes through a helper that resolves
+  paths against the repo root rather than the cwd, or the run contract says to
+  use absolute paths for every artifact write. The second is a contract change
+  and the first touches every write in the run, so neither belongs in the tail
+  of a run that has already shipped.
+
 The rules at the top still bind: evidence from a dated run, no speculative "would
 be nice", and a run may add but may never quietly delete.
 

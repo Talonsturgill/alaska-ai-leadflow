@@ -199,17 +199,45 @@ def check_roi(study, drivers, fail, warn, drivers_path=None):
     WANT = {
         "annual":    ("annual value", "annual benefit", "annual "),
         "tco":       ("total cost", "five-year total", "5-year total", " tco"),
-        "recovered": ("recovered", "recovery", "share of"),
+        "recovered": ("cost recovered", "of five year cost", "recovered", "recovery", "share of"),
         "breakeven": ("break-even", "break even", "breakeven"),
     }
 
     def cell(frags, i):
-        """The cell for a figure, plus the label it matched. None when nothing did."""
+        """The cell for a figure, plus the label it matched. None when nothing did.
+
+        MOST SPECIFIC MATCH WINS, not first match. This used to take the first
+        row in table order whose label contained any fragment, and on 2026-08-07
+        that cost three separate fix rounds in one run. A driver row called
+        "Share of that time removed" shadowed the output row "Share of five year
+        cost recovered" because both contain "share of" and the driver came
+        first, so the gate compared a 40 percent cut against a 119 percent
+        recovery and failed a study whose arithmetic was correct. Renaming the
+        driver row made it pass, which is the study bending to the checker
+        rather than the other way round.
+
+        Ranking by the LENGTH of the matched fragment fixes it, because the
+        specific phrase ("cost recovered") is always longer than the generic one
+        ("share of"). When two rows still tie, that is genuine ambiguity in the
+        table and it is reported rather than silently resolved.
+        """
+        hits = []
         for lab, r in rows.items():
-            if any(f in lab for f in frags):
-                cells = r.get("cells") or []
-                if i < len(cells):
-                    return str(cells[i]), lab
+            best = max((f for f in frags if f in lab), key=len, default=None)
+            if best is not None:
+                hits.append((len(best), lab, r))
+        if not hits:
+            return None, None
+        top = max(h[0] for h in hits)
+        tied = [h for h in hits if h[0] == top]
+        if len(tied) > 1:
+            warn("ROI ROW AMBIGUOUS: " + ", ".join(repr(h[1]) for h in tied)
+                 + " all match equally well, so the check picked "
+                 + repr(tied[0][1]) + ". Give one of them a distinct label.")
+        _, lab, r = tied[0]
+        cells = r.get("cells") or []
+        if i < len(cells):
+            return str(cells[i]), lab
         return None, None
 
     def num(s):

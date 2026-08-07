@@ -1,0 +1,29 @@
+{
+ "subject": "Checking R&M pay estimates before they go out",
+ "body": "Nearly 95% of your work is for public clients so every pay estimate goes to an agency reviewer. A required document that never made the file is a reimbursement question.\n\nWe already did the study on flagging what's missing before the package goes out and there's no AI in it.\n\nhttps://alaskaaihq.com/awesomeproposal/rm-consultants/\n\nNo strings, we're here if you want a hand.",
+ "to": "lstory@rmconsult.com",
+ "to_name": "Len Story",
+ "title_note": "Chief Executive Officer, R&M Consultants, Inc. Address is a live mailto on his own bio page at https://www.rmconsult.com/our-people/len-story/, re-fetched and confirmed by the fact-checker twice today, with the title reading 'to his current position as Chief Executive Officer' in the present tense. He is the BUYER, not a router. NOTE: he must never be called Board President, that string was rejected as not on the cited page. Third-party aggregators still list a CEO who retired in 2019 and none were used.",
+ "link": "https://alaskaaihq.com/awesomeproposal/rm-consultants/",
+ "opens_on": "Their own Who We Are page states verbatim 'Nearly 95% of our work is for public clients', so every pay estimate they send goes to a public agency reviewer before it is paid. That figure is theirs and no other firm shares it, and it sets up the recommended build instead of arriving from somewhere else.",
+ "lead_critic": "ship on round 3. Rounds 1 and 2 were both rejected and BOTH REJECTIONS WERE BRIEF FAILURES RATHER THAN WRITING FAILURES, which is the Phase 7 ladder firing early rather than at round four. Round 1 opened on a verbatim quote from two of their job postings; the critic said that read as a machine diffing two pages and failed the meeting test, since OUTREACH_CRAFT holds that a duplicated posting line is evidence and evidence stays in the study. Round 2 opened on 'your senior engineers write proposal sections on top of billable work'; it passed the meeting test and failed specificity outright, because it is true of every mid-size Anchorage engineering firm. That second rejection condemned the FACT rather than the sentences, so the opening fact was changed rather than the wording patched. Round 3 shipped with zero problems and zero tells.",
+ "word_count_prose": 59,
+ "comma_count": 1,
+ "subject_chars": 45,
+ "industry_proof": "Deliberately NOT carried, and this is a judgement rather than an omission. The strongest independent number in their industry is the Louisiana state transportation department's 28 percent on daily work report creation and submission. It belongs to the spring 2027 roadmap item rather than to phase one, and the study says so in terms. Putting it in a sixty word email would have read as a promise about what we would deliver, which OUTREACH_CRAFT forbids. The honest finding that proposal automation is the loudest marketed and thinnest measured corner of the industry was carried in rounds 1 and 2 and was cut when the opening fact changed, because the critic ruled that restraint belongs in the study where the Allen Marine send taught us it belongs.",
+ "roi_in_email": "None, by design. The conservative case pays back in month 47 and recovers 119 percent, and under one plausible sensitivity it never pays back at all. A number that shape needs the study's framing around it, and the friendlier alternative is exactly the hero number the gate exists to prevent. The email carries no money at all so nothing in it can be read as a projection.",
+ "personalization_gate": {
+  "this_company_only_fact": "Nearly 95% of their work is for public clients, verbatim from their own page, carried straight into the operational consequence that every pay estimate goes to an agency reviewer.",
+  "hero_number": false,
+  "kill_list_hits": [],
+  "em_or_en_dashes": 0,
+  "colons_semicolons_in_prose": 0,
+  "cannot_used": false,
+  "sentence_openers": ["Nearly", "A", "We", "No"],
+  "links": 1,
+  "self_reference": "none, the email never says who or what produced the study",
+  "implies_a_problem_they_have_had": false,
+  "passes": true
+ },
+ "voice_delta_note": "The close was written in the register VOICE_DELTAS flags as READY TO PROMOTE. `lengthened` now stands at SIX separate sends, where a clipped ask keeps being replaced by hand with something warmer offering help without strings. 'No strings, we're here if you want a hand.' is that register written in rather than left for Talon to add. The delivery summary carries the drafted OUTREACH_CRAFT diff for a human to approve."
+}

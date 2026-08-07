@@ -12,20 +12,33 @@ That promotion is a human decision, never automatic.
 
 ## Recurring patterns
 
-- **lengthened**, in 6 send(s), 8 time(s) total  <- READY TO PROMOTE
-- **added**, in 5 send(s), 7 time(s) total
-- **reworded**, in 3 send(s), 3 time(s) total
+- **lengthened**, in 7 send(s), 9 time(s) total  <- READY TO PROMOTE
+- **added**, in 6 send(s), 8 time(s) total
+- **reworded**, in 4 send(s), 4 time(s) total
+- **shortened**, in 2 send(s), 2 time(s) total
 - **deleted**, in 2 send(s), 2 time(s) total
 - **agent-team framing cut**, in 1 send(s), 2 time(s) total
-- **presumption cut**, in 1 send(s), 1 time(s) total
-- **shortened**, in 1 send(s), 1 time(s) total
 - **cta softened**, in 1 send(s), 1 time(s) total
 - **contraction**, in 1 send(s), 4 time(s) total
+- **presumption cut**, in 1 send(s), 1 time(s) total
 
 The writer keeps making these and Talon keeps undoing them. Fix the brief,
 not the individual email.
 
 ## Log
+
+### 2026-08-06, Anchorage Neighborhood Health Center
+
+- `shortened`
+  - drafted: Your new patient front door still ends in a callback and nobody publishes what that loop costs.
+  - sent:    Your new patient front door still ends in a callback though.
+- `reworded`
+  - drafted: We already did the study on measuring it.
+  - sent:    We just finished our study on measuring it.
+- `added` not drafted, added by hand: We also did a deep dive into ANHC and how AI could impact you, you'll want to take a look.
+- `lengthened`
+  - drafted: Tell us if it's useful.
+  - sent:    No strings, here if you want support with this.
 
 ### 2026-08-04, Tyonek Native Corporation
 

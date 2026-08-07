@@ -31,6 +31,7 @@ Usage:
 import argparse
 import html
 import json
+import re
 import os
 import subprocess
 import sys
@@ -380,7 +381,11 @@ def _depth(nodes, edges):
     return depth
 
 
+DIAGRAM_LABEL_OVERFLOW = []
+
+
 def render_diagram(arch):
+    DIAGRAM_LABEL_OVERFLOW.clear()
     nodes = [n for n in (arch.get("nodes") or [])
              if has(n.get("id")) and has(n.get("label"))]
     edges = [e for e in (arch.get("edges") or []) if has(e.get("from")) and has(e.get("to"))]
@@ -478,6 +483,16 @@ def render_diagram(arch):
                 cur = (cur + " " + w).strip()
         if cur:
             lines.append(cur)
+        # THE CAP IS SILENT UNLESS SOMEONE MAKES IT LOUD. The label wraps to a
+        # fixed width and only three lines are drawn, so on 2026-08-07 a set of
+        # seven-word node labels rendered as truncated fragments and the diagram
+        # would have shipped reading "Gap checker, plain deterministic" with the
+        # word "rules" simply gone. Nothing failed, nothing warned, and the only
+        # reason it was caught was an unrelated audit firing on a different
+        # heuristic. Dropped words are collected here and reported by the caller.
+        if len(lines) > 3:
+            DIAGRAM_LABEL_OVERFLOW.append(
+                (str(n.get("id") or label), label, " ".join(lines[3:])))
         for i, ln in enumerate(lines[:3]):
             out.append(f'<text class="{cls}" x="{x:.0f}" y="{y+41+i*17:.0f}">'
                        f'{esc(ln)}</text>')
@@ -759,6 +774,20 @@ def audit(study, rendered):
     """
     missing = []
 
+    # THE PROBE HAS TO SURVIVE THE PAGE'S OWN LINE BREAKS. It looks for the
+    # first six words as one contiguous string, and a diagram node label is
+    # emitted as several <text> elements, one per wrapped line, so those six
+    # words are never contiguous in the markup even though every one of them is
+    # on the page. On 2026-08-07 that reported five node labels as content that
+    # "never reached the page" while all five were rendering correctly, and the
+    # showrunner spent a round rewriting them and mis-measured the wrap width
+    # while doing it. A false positive in an audit is worse than a quiet one,
+    # because the next real warning gets read as noise. Stripping tags and
+    # collapsing whitespace before probing makes the check test what a reader
+    # sees rather than how the markup happens to be chunked.
+    flat = re.sub(r"<[^>]+>", " ", rendered)
+    flat = " ".join(flat.split())
+
     def walk(node, path):
         if isinstance(node, dict):
             for k, v in node.items():
@@ -768,7 +797,7 @@ def audit(study, rendered):
                 walk(v, path + [str(i)])
         elif isinstance(node, str) and len(node.split()) >= 6:
             probe = esc(" ".join(node.split()[:6]))
-            if probe not in rendered:
+            if probe not in rendered and probe not in flat:
                 missing.append(".".join(path))
 
     for key, val in study.items():
@@ -869,6 +898,15 @@ def main():
         print("WARNING: content in study.json never reached the page:", file=sys.stderr)
         for d in dropped:
             print(f"  - {d}", file=sys.stderr)
+
+    if DIAGRAM_LABEL_OVERFLOW:
+        print("WARNING: diagram label(s) truncated, the words below are NOT on the page:",
+              file=sys.stderr)
+        for node_id, full, lost in DIAGRAM_LABEL_OVERFLOW:
+            print(f"  - node {node_id!r} loses {lost!r}  (full label: {full!r})",
+                  file=sys.stderr)
+        print("  Shorten the label in study.json. The caption carries detail, the node carries a name.",
+              file=sys.stderr)
 
     os.makedirs(os.path.dirname(os.path.abspath(args.out)) or ".", exist_ok=True)
     with open(args.out, "w", encoding="utf-8") as fh:
