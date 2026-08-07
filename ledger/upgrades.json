@@ -2,7 +2,7 @@
  "version": 1,
  "note": "The automation-change trail. Every machine upgrade a run makes to itself lands here, with the evidence that earned it and how it was verified. Surfaced in the delivery summary so a change to the machine is never invisible. An upgrade with no evidence line is not an upgrade, it is a preference, and it does not belong here.",
  "guard": "A run may NEVER edit knowledge/OUTREACH_CRAFT.md, CLAUDE.md, or any quality bar it is judged against. Those are hand-authored on purpose, because a routine that rewrites the rules it is graded by is grading its own homework. A run PROPOSES those in the delivery summary and a human decides.",
- "updated": "2026-08-06",
+ "updated": "2026-08-07",
  "upgrades": [
   {
    "date": "2026-08-05",
@@ -140,6 +140,36 @@
    "verified_how": "POSITIVE, five verification texts that really did run the failing case now all detect: this run's exits-2 entry, an exits-1 entry, the 2026-08-05 'caught all five reconstructions' style, an 'injected' style, and an 'exits with code 3' style that the first regex missed and which forced the with/code groups apart. NEGATIVE, five texts that show no failing case still detect nothing and still warn, a pure happy-path note, a note whose only exit code is the passing exit 0, a note claiming the change is obviously correct with no test, an empty string and a null. REGRESSION, all thirteen entries in ledger/upgrades.json were judged under the old token list and the new detector and compared: exactly ONE verdict changed, the false positive this fixes. The eleven pre-existing 2026-08-05 entries are untouched.",
    "files": [
     "scripts/retro_check.py"
+   ]
+  },
+  {
+   "date": "2026-08-07",
+   "run": "R&M Consultants",
+   "change": "study_lint's ROI row matcher takes the MOST SPECIFIC match instead of the first one in table order, and says so out loud when two rows tie. cell() used to walk the rows in insertion order and return the first whose label contained any fragment of the wanted figure, so a driver row printed above an output row could shadow it entirely. Candidates are now ranked by the LENGTH of the fragment they matched, which is what makes the specific phrase win over the generic one, and a genuine tie emits an ROI ROW AMBIGUOUS warning naming both labels rather than silently picking one. The 'recovered' fragment list also gained 'cost recovered' and 'of five year cost' ahead of the bare 'recovered' and 'share of' so it has something specific to win with.",
+   "evidence": "This cost THREE separate fix rounds in one run. A driver row 'Share of that time removed' shadowed the output row 'Share of five year cost recovered' because both contain 'share of', so the gate compared a 40 percent cut against a 119 percent recovery and failed a study whose arithmetic was correct. It happened again on 'Hours recovered a year' shadowing the same output row, and a third time on 'Year one share of full benefit'. Each time the study was renamed to suit the checker, which is the artifact bending instead of the gate, and the third rename ('Year one adoption ramp') is still in the shipped study for no reason other than this bug.",
+   "verified": "Reconstructed the exact collision by renaming the driver row back to 'Share of that time removed' and confirmed the gate now exits 0 instead of failing. NEGATIVE CASE: injected a genuinely wrong printed recovery of 999 percent against a computed 119 and confirmed the gate still exits 1 and names the right row, so the fix did not blind it. The shipping study re-runs clean.",
+   "files": [
+    "scripts/study_lint.py"
+   ]
+  },
+  {
+   "date": "2026-08-07",
+   "run": "R&M Consultants",
+   "change": "build_study_page's content audit stops false-flagging text that the page renders across a line break. The audit probes for a string's first six words as one contiguous run inside the raw markup, and a diagram node label is emitted as one <text> element per wrapped line, so those six words are never contiguous in the HTML even when every word is visibly on the page. The probe now also runs against a tag-stripped, whitespace-collapsed copy of the output, which is what a reader actually sees.",
+   "evidence": "On this run the builder reported five architecture node labels as content that 'never reached the page' while all five were rendering correctly. The showrunner believed it, spent a round rewriting every label, and mis-measured the diagram's wrap width by a factor of nearly three while doing so, concluding the labels were being truncated when they were not. A false positive in an audit is worse than no audit, because the next real warning gets read as noise.",
+   "verified": "Restored the long wrapped labels and confirmed the audit no longer reports them. NEGATIVE CASE: added a study.json key the renderer does not read at all and confirmed the audit still reports it as missing, so the check is not simply passing everything. Also caught a real bug in the first attempt at this fix, a missing 'import re' that made the builder crash rather than warn, which two earlier test cases had reported as passes because the crash produced no output.",
+   "files": [
+    "scripts/build_study_page.py"
+   ]
+  },
+  {
+   "date": "2026-08-07",
+   "run": "R&M Consultants",
+   "change": "build_study_page now WARNS when a diagram node label overflows the three lines the renderer draws, naming the node and quoting the exact words that are not on the page. The cap itself is unchanged and correct, since a node label that needs four lines is a label that should be shorter, but it used to apply in complete silence.",
+   "evidence": "A latent defect rather than one that shipped, found while investigating the audit false positive above. The renderer wraps a label to a fixed width and then draws lines[:3], discarding anything past that with no error, no warning and no mark on the page. A future study with a long node label would render a truncated fragment as though it were the whole name, and the only thing that would catch it is a human reading the SVG. FIELD_STUDY_SPEC already says to keep the diagram small, so this makes the renderer enforce what the spec asks for instead of silently mangling the label.",
+   "verified": "Fed a node label long enough to genuinely overflow and confirmed the warning fires and quotes the dropped words verbatim. NEGATIVE CASE: confirmed the shipping study's own six labels produce no warning at all, so it is not noise on every run.",
+   "files": [
+    "scripts/build_study_page.py"
    ]
   }
  ]

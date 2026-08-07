@@ -373,7 +373,8 @@
       "roi_summary": "12,000 fixed fee, Phase 1 only, split 4,000 at Gate A and 8,000 at Gate B. RESIZED DOWN FROM 18,000 mid-run after roi_math showed the conservative case recovered only 97 percent and never paid back. At 12,000 the conservative case recovers 119 percent and pays back month 47, most likely 384 percent and month 15. Two sensitivities printed: one person doing both roles drops it to 99 percent and no payback; a fifth overrun on run cost drops it to 109 percent and month 53.",
       "draft_subject": "Checking R&M pay estimates before they go out",
       "notes": "study-critic SHIP on round 6, lead-critic SHIP on round 3. Both email rejections were BRIEF failures rather than writing failures, so the opening fact was changed twice rather than the sentences patched. Fact-checked twice against live pages; 19 rejections applied across both passes. Michael Baker's Titan blog returned 503 on four attempts across two agents, so the claim that it targets proposals was DROPPED entirely and the competitive section rests on the PR Newswire release. HDL Engineering could not be read and is recorded unassessed, not clean.",
-      "run_date": "2026-08-07"
+      "run_date": "2026-08-07",
+      "gmail_draft_id": "r3522794532675219951"
     }
   ]
 }
