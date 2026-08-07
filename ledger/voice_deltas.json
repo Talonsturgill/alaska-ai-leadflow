@@ -430,6 +430,80 @@
           ]
         }
       ]
+    },
+    {
+      "run_date": "2026-08-06",
+      "company": "Anchorage Neighborhood Health Center",
+      "deltas": [
+        {
+          "kinds": [
+            "shortened"
+          ],
+          "before": "Your new patient front door still ends in a callback and nobody publishes what that loop costs.",
+          "after": "Your new patient front door still ends in a callback though.",
+          "dropped": [
+            "and",
+            "costs",
+            "loop",
+            "nobody",
+            "publishes",
+            "that",
+            "what"
+          ],
+          "added": [
+            "though"
+          ]
+        },
+        {
+          "kinds": [
+            "reworded"
+          ],
+          "before": "We already did the study on measuring it.",
+          "after": "We just finished our study on measuring it.",
+          "dropped": [
+            "already",
+            "did",
+            "the"
+          ],
+          "added": [
+            "finished",
+            "just",
+            "our"
+          ]
+        },
+        {
+          "kinds": [
+            "added"
+          ],
+          "before": null,
+          "after": "We also did a deep dive into ANHC and how AI could impact you, you'll want to take a look.",
+          "dropped": [],
+          "added": []
+        },
+        {
+          "kinds": [
+            "lengthened"
+          ],
+          "before": "Tell us if it's useful.",
+          "after": "No strings, here if you want support with this.",
+          "dropped": [
+            "it's",
+            "tell",
+            "us",
+            "useful"
+          ],
+          "added": [
+            "here",
+            "no",
+            "strings",
+            "support",
+            "this",
+            "want",
+            "with",
+            "you"
+          ]
+        }
+      ]
     }
   ]
 }
