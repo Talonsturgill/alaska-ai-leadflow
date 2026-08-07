@@ -1,0 +1,118 @@
+{
+ "scenarios": {
+  "conservative": {
+   "pursuits_per_year": 60,
+   "benefit_lines": [
+    {
+     "label": "Pre submittal documentation reconciliation, time recovered (CAPACITY)",
+     "hours_per_pursuit": 2.0,
+     "rate": 95,
+     "cut": 0.4
+    },
+    {
+     "label": "Second reviewer completeness check before submittal, time recovered (CAPACITY)",
+     "hours_per_pursuit": 0.75,
+     "rate": 95,
+     "cut": 0.35
+    }
+   ],
+   "avoided_cost_lines": [
+    {
+     "label": "Project closeout documentation assembly (CAPACITY)",
+     "events_per_year": 8,
+     "cost_per_event": 1140,
+     "reduction": 0.3
+    },
+    {
+     "label": "Internal rework at an owner agency record review (CASH, zeroed by construction)",
+     "events_per_year": 0,
+     "cost_per_event": 4000,
+     "reduction": 0.35
+    }
+   ],
+   "implementation": 12000,
+   "training": 2850,
+   "run_cost_per_year": 2800,
+   "run_cost_years": 4.5,
+   "contingency": 0.2,
+   "year1_ramp": 0.45,
+   "years": 5
+  },
+  "most_likely": {
+   "pursuits_per_year": 90,
+   "benefit_lines": [
+    {
+     "label": "Pre submittal documentation reconciliation, time recovered (CAPACITY)",
+     "hours_per_pursuit": 3.0,
+     "rate": 110,
+     "cut": 0.45
+    },
+    {
+     "label": "Second reviewer completeness check before submittal, time recovered (CAPACITY)",
+     "hours_per_pursuit": 1.0,
+     "rate": 110,
+     "cut": 0.4
+    }
+   ],
+   "avoided_cost_lines": [
+    {
+     "label": "Project closeout documentation assembly (CAPACITY)",
+     "events_per_year": 10,
+     "cost_per_event": 2200,
+     "reduction": 0.35
+    },
+    {
+     "label": "Internal rework at an owner agency record review (CASH, assumed frequency)",
+     "events_per_year": 2,
+     "cost_per_event": 4000,
+     "reduction": 0.35
+    }
+   ],
+   "implementation": 12000,
+   "training": 2850,
+   "run_cost_per_year": 2800,
+   "run_cost_years": 4.5,
+   "contingency": 0.2,
+   "year1_ramp": 0.55,
+   "years": 5
+  },
+  "aggressive": {
+   "pursuits_per_year": 110,
+   "benefit_lines": [
+    {
+     "label": "Pre submittal documentation reconciliation, time recovered (CAPACITY)",
+     "hours_per_pursuit": 3.5,
+     "rate": 120,
+     "cut": 0.5
+    },
+    {
+     "label": "Second reviewer completeness check before submittal, time recovered (CAPACITY)",
+     "hours_per_pursuit": 1.0,
+     "rate": 120,
+     "cut": 0.45
+    }
+   ],
+   "avoided_cost_lines": [
+    {
+     "label": "Project closeout documentation assembly (CAPACITY)",
+     "events_per_year": 12,
+     "cost_per_event": 2800,
+     "reduction": 0.4
+    },
+    {
+     "label": "Internal rework at an owner agency record review (CASH, assumed frequency)",
+     "events_per_year": 3,
+     "cost_per_event": 5000,
+     "reduction": 0.4
+    }
+   ],
+   "implementation": 12000,
+   "training": 2850,
+   "run_cost_per_year": 2800,
+   "run_cost_years": 4.5,
+   "contingency": 0.2,
+   "year1_ramp": 0.65,
+   "years": 5
+  }
+ }
+}

@@ -1,0 +1,277 @@
+{
+ "company": "R&M Consultants, Inc.",
+ "domain": "rmconsult.com",
+ "as_of": "2026-08-07",
+ "fact_checker_verdict": "fix, applied. Every rejected quotation below has been corrected to what the page actually says, every over-scoped negative narrowed to what was fetched, and every unverified claim removed rather than softened.",
+ "drift_pattern_to_watch": "The fact-checker found two directional patterns and BOTH flatter the pitch. FIRST, EVERY MISQUOTE TIGHTENED THE SOURCE into better prose while leaving the quotation marks on. SECOND, EVIDENCE WAS UPGRADED A HALF-STEP AT EVERY JOINT: a preprint became peer-reviewed, a ranking-share statistic became a severity level, a scoped productivity figure lost its scope, a negative confirmed on two pages became a negative about a whole site. Nothing downstream may re-tighten a quote or re-upgrade a source. Quote long and exact or do not quote.",
+ "contact": {
+  "name": "Len Story, PLS",
+  "role": "Chief Executive Officer",
+  "role_warning": "ADDRESS HIM AS CHIEF EXECUTIVE OFFICER AND NOTHING MORE. The 'Board President' string is NOT on the cited page and was rejected. Do not use it anywhere.",
+  "email": "lstory@rmconsult.com",
+  "contact_source": "https://www.rmconsult.com/our-people/len-story/",
+  "contact_ok": true,
+  "verification": "Re-fetched by the fact-checker. lstory@rmconsult.com renders as a live mailto on R&M's own domain, and the page reads 'to his current position as Chief Executive Officer' in the present tense. Corroborated by the Zweig 2026 article, which separately titles him 'PLS, R&M's Chief Executive Officer'. Third-party aggregators still list a CEO who retired in 2019; none were used.",
+  "buyer_or_router": "BUYER"
+ },
+ "about_them": [
+  {
+   "claim": "Nearly 95% of our work is for public clients",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/who-we-are/"
+  },
+  {
+   "claim": "Founded in 1969, R&M is an Alaska-based, employee-owned professional services consulting firm",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/who-we-are/"
+  },
+  {
+   "claim": "The Who We Are page carries a '100+ Employees' figure and 'Founded 1969'. NO precise headcount is published anywhere. Zweig placed the firm in the 100-199 bracket for 2026 and in the 50-99 bracket for 2023.",
+   "verbatim": false,
+   "url": "https://www.rmconsult.com/who-we-are/"
+  },
+  {
+   "claim": "Eleven positions are open at once across four offices: Land Surveyor; Project Civil Engineer - Construction Administration; Project Civil Engineer - Surface Transportation; Project Civil Engineer - Utilities; Project Geotechnical Engineer; Senior Environmental Geologist or Engineer; Senior Land Surveyor; Senior Project Civil Engineer - Surface Transportation; Senior Project Civil Engineer - Utilities; Staff Civil Engineer - Water Resources; Staff Surveyor. NO POSTING DATES ARE SHOWN, so how long any role has been open is genuinely unknowable from outside.",
+   "verbatim": false,
+   "url": "https://www.rmconsult.com/join-us/open-positions/"
+  },
+  {
+   "claim": "Conduct research and write technical portions of proposals to assist in bringing in new work.",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/job-posting/senior-land-surveyor/",
+   "note": "THE LOAD-BEARING QUOTE OF THE STUDY. This exact bullet appears on the Senior Land Surveyor posting (Geomatics) AND the Senior Project Civil Engineer posting (Engineering). Two departments, same duty. Quote it in full. The shortened form 'technical proposal portions' was REJECTED as a misquote."
+  },
+  {
+   "claim": "Conduct research and write technical portions of proposals to assist in bringing in new work.",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/job-posting/senior-project-engineer/",
+   "note": "Second department. Actual posting title is 'Senior Project Civil Engineer - Surface Transportation'."
+  },
+  {
+   "claim": "Developing proposals.",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/job-posting/senior-environmental-geologist-or-engineer/",
+   "note": "A third senior seat, alongside 'Producing cost estimates.' and 'Writing technical reports and analyzing data.'"
+  },
+  {
+   "claim": "Review designs, plan drawings, engineering reports and other contract deliverables for feasibility, technical accuracy and quality.",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/job-posting/senior-project-engineer/"
+  },
+  {
+   "claim": "15 or more years of experience in civil design work, with emphasis in highway and street design",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/job-posting/senior-project-engineer/",
+   "note": "CORRECTED. The tighter resume-style paraphrase was rejected."
+  },
+  {
+   "claim": "Administer project documentation and audit trails to ensure funding participation",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/job-posting/project-engineer-construction-administration/"
+  },
+  {
+   "claim": "Travel within Alaska will be required, and the ideal candidate must be willing to work in project locations throughout the state for extended periods of time during construction season.",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/job-posting/project-engineer-construction-administration/",
+   "note": "This posting is classified 'Seasonal, Full-Time, Hourly'."
+  },
+  {
+   "claim": "R&M achieved CMMC Level 2 certification, announced December 22nd 2025, with Stratus Services. 'CMMC Level 2 includes 110 controls based on NIST Special Publication 800-171 Revision 2'",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/news-and-views/rm-achieves-cmmc-level-2-certification-with-guidance-from-stratus-services/"
+  },
+  {
+   "claim": "The certification positions R&M to continue delivering high-quality infrastructure solutions for clients such as the U.S. Army Corps of Engineers and other federal agencies under the purview of the Department of Defense, while ensuring their systems, data and client information remain secure.",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/news-and-views/rm-achieves-cmmc-level-2-certification-with-guidance-from-stratus-services/",
+   "note": "CORRECTED. Three separate rewrites of this sentence were rejected. Use it whole or not at all."
+  },
+  {
+   "claim": "Cybersecurity is essential to the work we do, especially when supporting federal clients. With Stratus' expertise, we were able to implement the required controls and confirm that we're doing the right things to keep our data secure.",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/news-and-views/rm-achieves-cmmc-level-2-certification-with-guidance-from-stratus-services/",
+   "note": "Jere Fisher, Group Manager of IT. Contiguous."
+  },
+  {
+   "claim": "The biggest challenge is time. If your in-house team lacks the required expertise, bring in outside support to get you started.",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/news-and-views/rm-prepares-for-federal-cybersecurity-standards-with-cmmc-compliance/",
+   "note": "Jere Fisher, Group Manager of IT. Contiguous."
+  },
+  {
+   "claim": "The process can feel overwhelming, but it ultimately strengthens a firm's security posture and ensures we can continue supporting DoD projects while safeguarding critical information.",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/news-and-views/rm-prepares-for-federal-cybersecurity-standards-with-cmmc-compliance/",
+   "note": "Jere Fisher, Group Manager of IT. Contiguous."
+  },
+  {
+   "claim": "On July 14th 2026 R&M announced Siobhan Johansen hired as Proposal Manager into the Marketing Group and Carly Guthrie as Human Resources Generalist into Business Services.",
+   "verbatim": false,
+   "url": "https://www.rmconsult.com/news-and-views/new-marketing-and-human-resources-professionals-join-rms-business-services-department/"
+  },
+  {
+   "claim": "She specializes in marketing and strategic planning, market research, communications and proposal development.",
+   "verbatim": true,
+   "url": "https://www.rmconsult.com/our-people/andrea-story/",
+   "note": "Andrea Story, FSMPS, CPSM, Chief Marketing & Administrative Officer. CORRECTED, the compressed 'marketing strategy' version was rejected. She became Alaska's first Certified Professional Services Marketer in 2001, Fellow in 2021, 29 years of industry experience."
+  },
+  {
+   "claim": "Zweig Group 2026 Best Firms To Work For: #10 in the 100-199 Employees category, #11 in the Civil Engineering category, marking R&M's 15th consecutive year on the list.",
+   "verbatim": false,
+   "url": "https://www.rmconsult.com/news-and-views/rm-named-one-of-zweig-groups-2026-best-firms-to-work-for/",
+   "note": "The article separately titles Len Story 'PLS, R&M's Chief Executive Officer', which is the currency corroboration for the contact."
+  },
+  {
+   "claim": "The What We Do page lists 24 service lines: Airports, Construction Administration, Contaminated Sites, Geology, Geotechnical, GIS, Grant Writing, Hydrographic, Hydrology, Land Development, Land Surveying, Materials Testing, NEPA, Parks & Trails, Permitting, Planning, Public Involvement, Remote Sensing, Right of Way, Site Development, Special Inspections, Surface Transportation, Utilities, Waterfront.",
+   "verbatim": false,
+   "url": "https://www.rmconsult.com/what-we-do/"
+  },
+  {
+   "claim": "NARROWED NEGATIVE, and it must be stated at exactly this scope. The words artificial intelligence, AI, machine learning, automation and automated appear nowhere on R&M's What We Do page, nor on the twelve items shown on page one of their news index. The news index is PAGINATED, so this is NOT a claim about the whole site and must never be written as one.",
+   "verbatim": false,
+   "url": "https://www.rmconsult.com/what-we-do/",
+   "note": "Second page checked: https://www.rmconsult.com/news-and-views/category/news/ . The fact-checker rejected the whole-site version specifically because a single older post would make the study wrong in a way the recipient discovers first."
+  },
+  {
+   "claim": "email@rmconsult.com is rendered on the Who We Are page. astory@rmconsult.com, jobs@rmconsult.com and email@rmconsult.com are all rendered on the open-positions page.",
+   "verbatim": false,
+   "url": "https://www.rmconsult.com/who-we-are/"
+  }
+ ],
+ "competitors": [
+  {
+   "claim": "Titan brings together the world's leading frontier models in a single secure interface, strengthening AI-enhanced service delivery through unprecedented access to knowledge for more than 6,000 engineers, architects and scientists.",
+   "verbatim": true,
+   "url": "https://www.prnewswire.com/news-releases/michael-baker-international-unveils-titan-an-enterprise-ai-platform-powering-a-new-way-of-working-302745052.html",
+   "note": "Michael Baker International, announced April 16th 2026. Michael Baker has a principal office at 3900 C St in Anchorage and bids the same agency work."
+  },
+  {
+   "claim": "a no-code/low-code agent builder that allows any Michael Baker expert to create purpose-built AI agents tailored to their discipline and then publish those agents to an internal library accessible across the enterprise",
+   "verbatim": true,
+   "url": "https://www.prnewswire.com/news-releases/michael-baker-international-unveils-titan-an-enterprise-ai-platform-powering-a-new-way-of-working-302745052.html"
+  },
+  {
+   "claim": "an enterprise operating layer, providing unified, secure access to the world's most advanced large language models",
+   "verbatim": true,
+   "url": "https://www.prnewswire.com/news-releases/michael-baker-international-unveils-titan-an-enterprise-ai-platform-powering-a-new-way-of-working-302745052.html",
+   "note": "Reach also stated as 'more than 120 office locations'."
+  },
+  {
+   "claim": "DROPPED AND MAY NOT BE USED. The claim that Michael Baker's Titan carries 'a program manager's proposal analysis tool accessible to every capture team in the firm' came from a blog page that returned HTTP 503 on four separate attempts across two agents. The press release, which DID load, does not mention proposals, pursuits or capture teams at all. The showrunner confirmed this absence directly. NOTHING downstream may claim Michael Baker has aimed AI at proposal or pursuit work.",
+   "verbatim": false,
+   "url": null
+  },
+  {
+   "claim": "Prohibit the use of generative AI for use in any final work product",
+   "verbatim": true,
+   "url": "https://www.hdrinc.com/artificial-intelligence-informational-statement",
+   "note": "HDR, which has an Anchorage office. HDR states it uses AI 'in support of our internal operations and in the service of our clients and communities', names six principles (Accountability, Transparency, Privacy, Fairness, Responsibility, Sustainability), states 'Clients always retain ownership of their data', and names a 'Generative Artificial Intelligence Usage Policy'. NO named tool, NO named project, NO measured result on that page."
+  },
+  {
+   "claim": "Big data, machine learning, and AI all have nearly limitless untapped potential to change the way we live and work",
+   "verbatim": true,
+   "url": "https://www.dowl.com/news/our-geobusiness-future-big-data-machine-learning-and-ai/",
+   "note": "DOWL, July 16th 2020, by Brad Melocik and Teresa Patterson, from a Geoprofessional Business Association workshop. The source sentence continues ', and the emergence of these concepts is being hailed as the Fourth Industrial Revolution.' The article makes NO claim that DOWL deploys any of it."
+  },
+  {
+   "claim": "NARROWED NEGATIVE. The ten news items on page one of DOWL's news index, spanning April 15th 2024 to February 4th 2026, contain no mention of AI, machine learning or automation. The index is paginated 1 through 5, so this is page one, NOT the site. DOWL's homepage was not fetched and no claim is made about it.",
+   "verbatim": false,
+   "url": "https://www.dowl.com/company/news/"
+  },
+  {
+   "claim": "NARROWED NEGATIVE. CRW Engineering Group's homepage contains no occurrence of artificial intelligence, AI, machine learning, automation or automated. The single technology string is a PROJECT TITLE on that homepage, 'Whittier City Park Master Plan, Unmanned Aerial Vehicle (UAV) 3D Modeling'. Nothing on the page says it was used for surveying, so do not say so.",
+   "verbatim": false,
+   "url": "https://www.crweng.com/"
+  },
+  {
+   "claim": "UNASSESSED, NOT CLEAN. HDL Engineering Consultants of Anchorage, Palmer and Kenai is a genuine head-to-head Alaska competitor whose site returned an empty body on three fetch attempts. Any sentence about 'no Alaska firm' must account for this or be scoped to the firms actually checked: DOWL, CRW and PDC/RESPEC.",
+   "verbatim": false,
+   "url": null
+  },
+  {
+   "claim": "PDC Engineers was acquired by RESPEC on May 8th 2020. RESPEC's Data & Technology expertise page names Software Services, Strategy & Advisory, Staffing, and Data Insight & Innovation, covering data engineering, analytics, modeling, geospatial systems, SCADA and IoT, with no mention of artificial intelligence or machine learning on that page.",
+   "verbatim": false,
+   "url": "https://www.respec.com/expertise/data-technology/"
+  }
+ ],
+ "industry": [
+  {
+   "claim": "Inspectors using HeadLight experienced a 28 percent increase in productivity when creating and submitting daily work reports (DWRs).",
+   "verbatim": true,
+   "url": "https://rosap.ntl.bts.gov/view/dot/56247",
+   "tier": "INDEPENDENT",
+   "note": "THE FULL SENTENCE IS MANDATORY. Louisiana DOTD / LTRC, FHWA co-sponsored, Rupnow Coco White Yamaura 2020, 50+ construction projects. Quoting the prefix alone was REJECTED because it drops the clause that bounds the number. Also verbatim: 'Inspectors collected and shared 1.9 times more observations while increasing the number of photo and other media observations'; 'The increase in productivity for Department-wide adoption is estimated to exceed 117,000 hours per year'; 'submission rate improvements up to 66 percent completed within 24 hours and up to 82 percent completed within 72 hours.' NOTE: the winning system is workflow and capture automation with light ML, NOT a large language model."
+  },
+  {
+   "claim": "coding agents could save 1-5 hours per subsection, up to roughly a 15% reduction in drafting time",
+   "verbatim": true,
+   "url": "https://www.gend.co/blog/draftnepabench-ai-federal-permitting",
+   "tier": "BENCHMARK WITH EXPERT EVALUATION",
+   "note": "DraftNEPABench, a national-lab benchmark assessed by '19 subject matter experts familiar with NEPA review' across tasks from 18 federal agencies. A MODEL VENDOR IS A CO-AUTHOR, so 15% is a CEILING under favourable conditions. The authors' own caveat is verbatim: 'if references are incomplete or out of date, models may not reliably identify those discrepancies unless explicitly instructed'."
+  },
+  {
+   "claim": "RAG-based approaches substantially outperform PDF document contexts",
+   "verbatim": true,
+   "url": "http://arxiv.org/abs/2407.07321v3",
+   "tier": "PREPRINT, NOT PEER-REVIEWED",
+   "note": "CORRECTED. Calling this peer-reviewed was REJECTED, arXiv is a preprint server. NEPAQuAD/MAPLE, PNNL with Iowa State, submitted July 10th 2024, revised June 12th 2025, five frontier LLMs. Models 'consistently achieve their highest performance when provided with the gold passage as context'. No absolute accuracy percentage in the abstract. THE VISIBLE PAGE MAY NOT SAY 'RAG', that word is banned by FIELD_STUDY_SPEC. Say what it means in plain words."
+  },
+  {
+   "claim": "INDOT with Purdue, Sensors, April 22nd 2023, 3,549 images (2,350 cracked, 1,199 non-cracked). Crack detection 'average classification accuracy was approximately 0.94'. Sealed-crack detection approximately 0.93. Crack-type classification approximately 0.84. But 'the average IoU was approximately 0.61' and 'average crack pixel detection recall and precision were 0.68 and 0.35, respectively'.",
+   "verbatim": true,
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10181228/",
+   "tier": "INDEPENDENT PEER-REVIEWED",
+   "note": "CORRECTED. Two sub-figures (0.93 precision, 0.94 recall at the detection step) were NOT confirmed and have been dropped. The argument does not need them. The authors recommend manual-AI collaboration rather than full automation. This is the cleanest published proof in the industry that coarse detection works and fine measurement does not."
+  },
+  {
+   "claim": "The civil engineer must maintain responsibility for project planning, designing, building, operations, maintenance, and the protection of the public health, safety, and welfare",
+   "verbatim": true,
+   "url": "https://www.asce.org/advocacy/policy-statements/ps573---artificial-intelligence-and-engineering-responsibility",
+   "tier": "AUTHORITATIVE",
+   "note": "ASCE Policy Statement 573, adopted July 18th 2024. Also verbatim: 'AI cannot serve as a replacement for the professional judgement of a licensed Professional Engineer' and 'AI cannot be held accountable, nor can it replace the training, experience, and judgement of a professional engineer.' WARNING: these quotes contain the word 'cannot'. They are QUOTED SOURCE TEXT. Do not paraphrase them into our own voice, and do not let our own prose use that word."
+  },
+  {
+   "claim": "With 80% of insurers viewing AI adoption by design firms as a potential disruptor, Maxwell noted that its use must be supported by disciplined controls, transparency and accountability.",
+   "verbatim": true,
+   "url": "https://www.insurancebusinessmag.com/us/news/construction/most-aande-liability-insurers-plan-rate-hikes-in-2026--ames-and-gough-566403.aspx",
+   "tier": "AUTHORITATIVE",
+   "note": "Ames & Gough 2026 survey of 15 leading A&E professional liability insurers. Also verified: '73% are planning modest rate increases, largely in the single-digit range' and '60% reported higher claim severity in 2025, up from 53% the prior year and 41% in 2023'."
+  },
+  {
+   "claim": "CORRECTED AND HANDLE WITH CARE. The Ames & Gough discipline figures are SHARES OF INSURERS NAMING a discipline as highest-severity, NOT severity levels and NOT claim rates. The source says '80% of respondents ranking structural engineering as the highest-severity discipline, followed by civil engineering at 73% and architecture at 60%.' Writing '73% claim severity in civil engineering' was REJECTED as a metric error that drifts toward alarm, and civil engineering is R&M's own discipline, so it is the number most likely to be quoted back at us.",
+   "verbatim": false,
+   "url": "https://www.insurancebusinessmag.com/us/news/construction/most-aande-liability-insurers-plan-rate-hikes-in-2026--ames-and-gough-566403.aspx",
+   "tier": "AUTHORITATIVE"
+  },
+  {
+   "claim": "ISO/Verisk released three OPTIONAL generative-AI exclusion endorsements effective January 2026 for commercial general liability: CG 40 47 (Coverage A and B), CG 40 48 (Coverage B only) and CG 35 08 (products/completed operations). Each carrier chooses whether to attach them. Definition verbatim: 'a machine-based learning system or model that is trained on data with the ability to create content or responses, including but not limited to text, images, audio, video or code.'",
+   "verbatim": false,
+   "url": "https://www.independentagent.com/vu_resource/verisk-to-roll-out-new-general-liability-exclusions-for-generative-ai-exposures/",
+   "tier": "AUTHORITATIVE",
+   "note": "CORRECTED. The quoted form TITLE for CG 40 47 was not confirmed, so do not put quotation marks around a form title. The word OPTIONAL is load-bearing and must survive into the study."
+  },
+  {
+   "claim": "UNVERIFIED BY THIS DESK, DO NOT CITE AS CHECKED. The fact-checker could not reach, within its priority list: the GovTech Honolulu CivCheck piece, the GovTech Massachusetts GrantWell piece, both PNNL releases, the Microsoft Kimley-Horn and WSP case studies, Carahsoft/Bentley, Bluebeam, BST Global, ACEC, AASHTO, natlawreview, permitting.innovation.gov, the Nature citation-integrity piece and rfpm.ai. Their content sits in research.json for the room's understanding, but NONE of it may appear as a cited fact in the study.",
+   "verbatim": false,
+   "url": null
+  },
+  {
+   "claim": "THE INDUSTRY'S OWN EVIDENCE GAP, and it is the most important calibration in this package. The industry-analyst worked vendor case-study pages, comparison sites, SMPS and ACEC channels and the trade press, and found NO named firm of any size attached to a measured proposal-productivity number with a stated method. Proposal and SF330 automation is the LOUDEST MARKETED pocket in this industry and the THINNEST MEASURED one. Every circulating figure (20% faster, 60% less duplicate content, 75% time savings, 44% win rates) is vendor-published and mostly anonymised. Where the measured evidence actually is: field documentation, and cited human-approved drafting.",
+   "verbatim": false,
+   "url": null,
+   "tier": "ANALYST FINDING, stated as such, not as a cited number"
+  }
+ ],
+ "what_we_could_not_verify": [
+  "Any revenue figure for R&M. No page carried one, rocketreach returned 403, and R&M did not appear in the fetched Alaska Business Top 49ers list. NO revenue number may appear anywhere.",
+  "A precise headcount. The firm says 100+ and Zweig places it in the 100-199 bracket. No exact number exists publicly.",
+  "How long any of the eleven roles has been open. No posting dates are published. The stale-posting argument is NOT available.",
+  "Any proposal volume, win rate, pursuit count, or hours spent on proposals at R&M. Nothing of the kind is published. Every driver of that shape is an ASSUMPTION and must be labelled one.",
+  "Whether R&M uses AI internally today. The narrowed negative covers two published pages only. A firm can run AI internally and publish nothing, which is common in this sector.",
+  "Michael Baker's Titan blog, HTTP 503 on four attempts across two agents. The proposal and capture-team claim is dropped entirely.",
+  "HDL Engineering Consultants, empty body on three attempts. Unassessed, not clean.",
+  "Employee sentiment. Glassdoor returned 403 and Indeed carries only 7 reviews at 4.4 out of 5, so the two negative review quotes are a weak minority signal and MUST NOT be characterised as a pattern or used at all.",
+  "Any State of Alaska policy on consultant AI use in submittals. None was located. Alaska HB 306's final status could not be verified because legiscan returned 403, so no claim about its passage may be made.",
+  "That any federal solicitation requires AI-use disclosure in an A/E proposal. NO blanket rule was found. Do not imply one exists."
+ ]
+}
