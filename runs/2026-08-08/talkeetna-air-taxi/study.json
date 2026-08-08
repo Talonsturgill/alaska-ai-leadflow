@@ -1,0 +1,449 @@
+{
+ "meta": {
+  "company": "Talkeetna Air Taxi",
+  "domain": "talkeetnaair.com",
+  "segment": "Tourism and visitor industry",
+  "place": "Talkeetna, Alaska",
+  "date": "August 8th, 2026",
+  "prepared_for_first": true
+ },
+ "thesis": "Every booked guest is told to phone in on the day, and the page they would look at instead is gone.",
+ "brief": "We spent a day on Talkeetna Air Taxi from the outside, reading only what you publish, before asking you for anything.\n\nYour flightseeing FAQ tells every customer the same thing, \"please call us the day you are flying to inquire about weather\". That is a published policy and it works, and it also means a season's worth of guests are pointed at the one number you publish. Your careers page describes who picks it up, one role checking in scenic passengers and climbers, taking payments, answering the phone and working the inbox.\n\nTwo things make that call harder than it needs to be. Three of your pages publish three different staffed-hours answers, and your flightseeing index shows \"From $304 per Adult\" for the Southside Explorer while the tour's own page shows $275. Separately, talkeetnaair.com/denali-webcam/ returns a redirect to your homepage and serves no camera, so a guest has nowhere on your site to look. K2 links a live camera at the top of its FAQ.\n\nWhat we would build is deliberately small and has no AI in it. One record holding every fact a customer asks about, with every page rendering from it. One mobile page at that dead webcam address showing public FAA camera pictures, the current observation and the forecast, next to one current status your counter can flip that expires by itself back to your own sentence. No verdict and no prediction. That decision stays at your counter, with a person, where you put it.\n\nOn cost and return. Phase one is 24,000 dollars fixed, staged so you can stop after 9,500. Across five years the conservative case recovers 44 percent of total cost and never pays back. The middle case recovers 133 percent and pays back in month 45. Break-even sits at roughly one retained seat every other staffed day. We would rather print that than something friendlier.\n\nNobody has measured how many of those calls you take, so every volume figure below is an assumption we have labelled. We also could not confirm which FAA cameras see the routes you fly.\n\nThe ask is a week with a notepad before September 15th, counting those calls. If the number is small, do not buy the page.",
+ "found": {
+  "title": "Your own policy sends every guest to the phone, and the page that would answer them is dead",
+  "lede": "We read your published pages the way a customer would, then read your competitors' the same way.",
+  "body": "Your flightseeing FAQ carries the instruction plainly. \"please call us the day you are flying to inquire about weather\". Read as a policy it is defensible, because Alaska Range weather moves faster than any page can and your briefing at check-in is where the judgement happens. You are also one of only four operators awarded a Denali glacier landing concession for 2020 to 2029, so demand is not the problem here. Read as a workload it is a season of guests pointed at the one number you publish.\n\nThe person who answers it is described on your own careers page as \"Greeting and checking in scenic passengers and climbers, collecting payments, answering phone calls, taking reservations as well as responding to email inquiries, processing online reservations\". The same page says \"Customer Service is our #1 priority.\" Both are true at once.",
+  "callout_big": "301",
+  "callout_note": "talkeetnaair.com/denali-webcam/ returns a redirect to your homepage. No camera is served, so every old link and bookmark pointing at it is dead.",
+  "body_2": "Three of your pages publish three different answers to one question. The climbing support FAQ says the office is staffed \"7 AM until 7 PM after May 1st until September 15th\". A second FAQ page says \"7 AM until 9 PM\" over the identical window. A third gives \"daily from 7:30 am to 6:30 pm\", scoped to a summer and shoulder window running through September 30th rather than to the same season as the other two. Your flightseeing index shows \"From $304 per Adult\" for the Southside Explorer, and that tour's own page shows 275 dollars for adults. The gap reconciles to the 7.5 percent Federal Transportation Tax and 3 percent Borough Tax you publish on the climbing page, though no page of yours says so, and we modelled that rather than reading it.\n\nNone of this is a criticism of how you run the counter. It is a website that grew a page at a time, and a customer who can't settle a published fact settles it by calling."
+ },
+ "costing": {
+  "title": "The cost is a season of day-of calls, and nobody has counted them",
+  "lede": "We will not pretend to a number we did not measure, so here is the shape of it instead.",
+  "body": "Your season runs May 1st to September 15th, which is 138 staffed days, and the shorter of the two answers scoped to that season still has the office open twelve hours a day inside it. That window is the whole year for this part of the business. Whatever the daily count is, it lands on a desk that is also running a check-in queue opening 45 minutes before every departure and an ordered climber intake of park check-in, then gear weighing, then payment.\n\nWe could find no published figure for how many of those calls you take, and we are not going to invent one. That gap decides whether the page is worth buying.",
+  "callout_big": "138",
+  "callout_note": "Staffed days between May 1st and September 15th. Every day-of contact is multiplied by this number, and none of them have been counted.",
+  "body_2": "The counted version costs a notepad and about five weeks remain. One week at the desk, a tally mark for every contact whose first question is weather or whether a flight is going, plus a one-word note on the weather so next year compares honestly. That week is worth more than anything else here."
+ },
+ "opportunity": {
+  "title": "What changes is where the guest looks first, and nothing about who decides",
+  "lede": "The point of this build is to give the day-of question somewhere else to go, not to answer it.",
+  "outcome_body": "One marginal July morning, from a guest waking in Anchorage with a Southside Explorer booked at noon.",
+  "before_after": {
+   "headline": "One marginal July morning, today and after",
+   "before_title": "Today",
+   "after_title": "After",
+   "note": "The first and last rows are deliberately identical. The briefing is the product, not the bottleneck, so we left it exactly where you put it.",
+   "rows": [
+    {
+     "today": "Guest wakes in Anchorage, wants to know if it is worth the drive",
+     "after": "Guest wakes in Anchorage, wants to know if it is worth the drive",
+     "gone": false
+    },
+    {
+     "today": "Checks your site, finds the FAQ line telling them to call on the day",
+     "after": "Checks your site, finds the link to your conditions page on that same FAQ line",
+     "gone": true
+    },
+    {
+     "today": "Looks for a webcam, the address redirects to the homepage",
+     "after": "Sees FAA camera pictures, each labelled by site and by how far it sits from the route",
+     "gone": true
+    },
+    {
+     "today": "Looks elsewhere, since the live camera link we found sits on a competitor's FAQ",
+     "after": "Reads the current observation and the forecast, attributed to the Weather Service",
+     "gone": true
+    },
+    {
+     "today": "Calls the counter at 7am, which is also checking in a climbing party",
+     "after": "Reads your counter's current status, stamped with the time it was set",
+     "gone": true
+    },
+    {
+     "today": "Counter looks up hours on a page, a second page says something different",
+     "after": "Every page answers from one record, so there is one answer",
+     "gone": true
+    },
+    {
+     "today": "Drives up, checks in 45 minutes early, gets the conditions briefing, decides",
+     "after": "Drives up, checks in 45 minutes early, gets the conditions briefing, decides",
+     "gone": false
+    }
+   ]
+  },
+  "after_body": "Two properties of that page matter more than anything on it. It carries no prediction about your departure time, so nothing on it promises anyone a flight. The one exposure it creates runs the other way, a Holding left sitting after the weather has lifted, which is why the field carries the current hour only and times out fast. When every feed dies or nobody touches the status, it expires back to your own sentence about calling on the day, so the worst it can do is exactly what your website does now.\n\nThe half we rest the case on is the pictures, because they need nobody to do anything. The status field is the weak part and we would rather say so. It gets flipped on calm mornings and goes untouched on the busy marginal ones, which are the mornings guests look hardest."
+ },
+ "build": {
+  "title": "What we would build has no AI in it, and that is the finding",
+  "lede": "We checked every place a model could have earned its keep here, and none of them needed one.",
+  "plain_parts": "Two things. A record holding every fact a customer asks about, hours, fares, the glacier add-on, the park fee, the gear allowance, the base camp fee, the two taxes, the passenger minimums and the check-in window. A page at your dead webcam address showing camera pictures, the current observation, the forecast, and one status your counter sets.",
+  "what_it_does": "Every page renders its facts from the record, so a change happens once, and the build fails if a fact goes six months without a review.\n\nThe page pulls public FAA camera frames and Weather Service data every few minutes and stamps the age on every picture. A frame that stops arriving shows its real age, then says the camera is unavailable. Whether a picture is any good is left to the person looking at it, because deciding that in software would need exactly the guessing this build refuses to do.",
+  "feasibility": "You do not need AI for this, and we would be selling you something worse if we said otherwise. Reconciling three published hours is a decision only you can make, and a model asked to do it would guess. Every fee on your price list is a published rule, so the arithmetic belongs in code where it is testable. Camera staleness is subtraction on two timestamps.\n\nThe go/no-go call is the one we most deliberately left alone. A 2025 benchmark asked models to estimate how far you can see, in miles, from a camera picture. Across 147,182 images from 444 FAA sites none reached the accuracy bar the paper measures against, the best averaging about 1.8 statute miles of error. MIT Lincoln Laboratory's system answers a narrower question, whether visibility is low or not, and on that question it was \"more than 90 percent accurate\" against the instruments beside the cameras. It is still shown \"alongside the camera imagery itself\" rather than instead of it. Neither one is a flyability verdict and nobody should sell you one.\n\nThere is one seat where AI would genuinely earn its place later, and it is not facing your guests. An assistant for the person at your counter, looking answers up in your own material and showing the page each came from. The best measurement we found, across 5,179 support agents, was 14 percent more issues resolved per hour and 34 percent for the newest workers, and a counter that re-staffs every April is exactly that population. It is blocked until the facts record has held through a winter and until real counter questions have been captured from a live season. We are not selling it now.",
+  "build_vs_buy": "Hosting, scheduling, the sign-in for your counter's status control and the weather data are all bought or free, and we generate none of it.\n\nWe would also tell you the cheaper option out loud. K2 links out to a third-party camera from its FAQ and that costs a few minutes. What you give up is the labelling, the frame age and the attribution, which is most of what makes the page honest. If you do not want to fund the page, do that instead.",
+  "architecture": {
+   "nodes": [
+    {
+     "id": "guest",
+     "label": "Guest on a phone",
+     "kind": "user"
+    },
+    {
+     "id": "counter",
+     "label": "Your counter",
+     "kind": "user"
+    },
+    {
+     "id": "faa",
+     "label": "FAA weather cameras",
+     "kind": "external"
+    },
+    {
+     "id": "nws",
+     "label": "Weather Service data",
+     "kind": "external"
+    },
+    {
+     "id": "collector",
+     "label": "Collector, fetch and stamp only",
+     "kind": "build"
+    },
+    {
+     "id": "spine",
+     "label": "The facts record",
+     "kind": "data"
+    },
+    {
+     "id": "board",
+     "label": "Conditions page",
+     "kind": "build"
+    },
+    {
+     "id": "site",
+     "label": "talkeetnaair.com",
+     "kind": "system"
+    }
+   ],
+   "edges": [
+    {
+     "from": "faa",
+     "to": "collector"
+    },
+    {
+     "from": "nws",
+     "to": "collector"
+    },
+    {
+     "from": "collector",
+     "to": "spine"
+    },
+    {
+     "from": "spine",
+     "to": "board"
+    },
+    {
+     "from": "spine",
+     "to": "site"
+    },
+    {
+     "from": "counter",
+     "to": "board"
+    },
+    {
+     "from": "board",
+     "to": "guest"
+    },
+    {
+     "from": "site",
+     "to": "guest"
+    }
+   ],
+   "caption": "Eight pieces, no model in any of them. The collector copies pictures and timestamps and makes no judgement about either."
+  }
+ },
+ "roi": {
+  "title": "The conservative case does not pay back, so we staged the ask instead",
+  "lede": "Every volume number below is an assumption, because nobody has measured the thing this build exists to reduce.",
+  "lede_body": "Phase one is 24,000 dollars fixed for about four and a half person-weeks, staged. 9,500 buys the facts record and the camera coverage check. 14,500 buys the conditions page, and you release it only if your own counted week says it is worth it. The tally sheet is not billed, it is yours either way.\n\nAcross five years the conservative case recovers 44 percent of total cost and never pays back. We have not modelled a return on the 9,500 and we will not pretend to one. It repairs a defect already visible on your own site and buys the number that decides everything after it. The return we modelled is for the page, and it is in the table.",
+  "table_caption": "Five year total cost of ownership against retained seats, computed from the drivers below. All three volume figures are assumed.",
+  "table_head": [
+   "",
+   "Conservative",
+   "Most likely",
+   "Aggressive"
+  ],
+  "table": [
+   {
+    "label": "Retained seats per staffed day",
+    "cells": [
+     "0.25",
+     "0.50",
+     "1.00"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Contribution per retained seat",
+    "cells": [
+     "$135",
+     "$180",
+     "$220"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Staffed days per season",
+    "cells": [
+     "138",
+     "138",
+     "138"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Lowest published adult fare",
+    "cells": [
+     "$275",
+     "$275",
+     "$275"
+    ],
+    "mark": "verified"
+   },
+   {
+    "label": "Build, fixed price",
+    "cells": [
+     "$24,000",
+     "$24,000",
+     "$24,000"
+    ],
+    "mark": "assumed"
+   },
+   {
+    "label": "Five year total cost",
+    "cells": [
+     "$45,240",
+     "$40,946",
+     "$38,123"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Five year benefit",
+    "cells": [
+     "$20,027",
+     "$54,648",
+     "$138,138"
+    ],
+    "mark": "modelled"
+   },
+   {
+    "label": "Share of cost recovered",
+    "cells": [
+     "44%",
+     "133%",
+     "362%"
+    ],
+    "emphasis": true,
+    "mark": "modelled"
+   },
+   {
+    "label": "Payback",
+    "cells": [
+     "never",
+     "month 45",
+     "month 19"
+    ],
+    "emphasis": true,
+    "mark": "modelled"
+   },
+   {
+    "label": "Counter minutes recovered, share of cost",
+    "cells": [
+     "2%",
+     "11%",
+     "47%"
+    ],
+    "mark": "modelled"
+   }
+  ],
+  "table_note": "Assumptions, stated so you can disagree with them. Retained seats per staffed day is the driver that moves this answer most and it has never been measured, which is why it is run as a break-even rather than a forecast. Contribution is assumed at 50 to 80 percent of your lowest published adult fare of $275, because we have no cost data. The 138 staffed days is a calendar count of your published May 1st to September 15th window. Year one runs at 30 to 55 percent of full benefit for shakeout and because a page nobody knows about deflects nothing at first. Contingency is held against a working session slipping, not against our engineering, since the build price is fixed. Run cost is 2,400 dollars a year conservative, 1,800 most likely and 1,500 aggressive, accruing over four and a half years, not five, because the build lands in the shoulder season. Contingency is 20 percent conservative, 18 most likely and 15 aggressive. Training and change management is 16 hours of our time and 16 of yours, carried at 2,900 dollars conservative, 2,600 most likely and 2,400 aggressive, and it is stated rather than folded into the build price. Our cost model carries no line for model hosting, evaluation or review, because there is no model in the build. Every total above is build plus training plus run cost, then contingency, so you can rebuild all three columns from this paragraph.\n\nEvery retained seat above is attributed to the pictures, the observation and the forecast, which need nobody to do anything. The status field is valued at ZERO in all three columns, because it gets flipped on calm mornings and skipped on the marginal ones. The counter minutes row is NOT added into the benefit above it, and it is the row we would point at hardest. Recovered counter minutes never cover this build at any believable call volume. Anyone selling you a tool on hours-saved arithmetic is quoting a number your own staffed-day count will not support, and the loudest such figures in your industry come from a vendor formula, monthly website visitors times 0.015 times 4.5 minutes, presented as if it were measured.",
+  "payback_big": "0.56",
+  "payback_range": "Retained seats per staffed day at which phase one covers its five year cost, on the most expensive cost case. Roughly one seat every other staffed day. At 0.50 it recovers 89 percent, at 0.75 it recovers 133 percent.",
+  "base_rate_note": "The outside view first, in your industry rather than in general. A March 2026 survey of 505 operators run by GetYourGuide with Arival found 56 percent still find AI tools overwhelming and 44 percent have been given inaccurate information by one. Both are interested parties and we would rather say so than lean on the number.\n\nPhase one has no model in it, so the model half of that failure pattern does not apply. That exemption is narrow. The larger half is organisational, no owner, no baseline, no place in the workflow, and it applies in full. This build answers it directly. It sits on the exact contact your own FAQ creates, a named person owns the record, the baseline is counted before anything is built, and the half we rest the money on needs nobody to do anything.",
+  "value_owner": "Courtney Shaffer, General Manager, owns the number. The record needs a fact decided rather than found, and only someone with authority to say which hours are true can decide it. The 2026 tally is the baseline, the same week in 2027 is the check, and if it comes back flat then it did not pay and nothing further gets funded."
+ },
+ "roadmap": {
+  "title": "Your calendar sets this order, and a build landing in June 2027 has missed 2027",
+  "lede": "Your calendar decides this sequence more than we do.",
+  "body": "The office is staffed May 1st to September 15th and pilots sit a week of ground school in the last half of April. Anything not live and settled before that window misses a whole operating year, so a build landing in June 2027 has missed 2027. That is why the free thing comes first and why the working session belongs in the shoulder season, when the person who owns these facts can give you half a day.",
+  "now": [
+   {
+    "item": "One week of tally marks at the desk before September 15th. A mark for every contact whose first question is weather or whether a flight is going, plus a word on the day's weather.",
+    "metric": "A counted 2026 baseline. Roughly five weeks remain to take it, and without it any before and after slides to 2028."
+   },
+   {
+    "item": "One record holding every customer-facing fact, with every page rendering from it, and one named owner and a review date on each.",
+    "metric": "Zero contradictions across the site, down from three pages publishing three different staffed-hours answers today."
+   },
+   {
+    "item": "A content working session outside the staffed season, where the three hours answers become one.",
+    "metric": "Held between September 16th 2026 and March 31st 2027, every fact decided, owned and dated."
+   },
+   {
+    "item": "One day checking which FAA camera sites actually see the routes you fly, and whether the webcam address can be recovered.",
+    "metric": "A written site list with distances, and a yes or no on the path, both before the page is priced."
+   },
+   {
+    "item": "The conditions page at that recovered address, with one current status your counter can flip. The page has to keep about one seat every other staffed day to cover itself, so if your count is small enough that this looks implausible against it, we will tell you in writing not to buy the page, and you keep the record. This item is the one you can decline without losing the rest.",
+    "metric": "Live before the last half of April 2027, old links resolving, and the same tally week re-run against 2026."
+   }
+  ],
+  "next": [
+   {
+    "item": "Read the 2027 tally against 2026, including the version where it did not move.",
+    "metric": "If the count did not move, nothing further gets funded. That is written here rather than discovered later."
+   },
+   {
+    "item": "Check the record survived a winter of edits instead of drifting back into three answers.",
+    "metric": "Zero contradictions on a re-audit at the April 2027 spin-up, with the named owner still in the seat."
+   },
+   {
+    "item": "Start capturing real counter questions with the answers a person would give.",
+    "metric": "A labelled set big enough to score an assistant before one goes anywhere near a live counter. Those questions only exist while the counter is open."
+   },
+   {
+    "item": "An assistant for the counter only, looking answers up in your own material, showing the page each came from and saying plainly when it does not know.",
+    "metric": "Scored against that captured set first, then measured on a first-season hire in April. It never talks to a guest and it refuses anything weather shaped."
+   },
+   {
+    "item": "A session on what actually runs behind your counter for climbers and charters, then a quote engine with no model in it.",
+    "metric": "A written answer and a counted volume before any estimate hardens. Seven of your form's eight fields already arrive as separate boxes, so nothing has to be read out of a paragraph."
+   }
+  ],
+  "later": [
+   {
+    "item": "Ask where your safety management system stands against the up to three years reported in April 2024. We hold no evidence about your current state, so we are asking rather than claiming, and we are not the right people to build it.",
+    "metric": "An answer on the call, either way. No build attached."
+   },
+   {
+    "item": "Watch what your booking vendor's assistant is allowed to say in your name. If it starts answering whether it is flying today, the one decision you keep human has been automated in a channel you do not control.",
+    "metric": "A reviewed decision each season on which questions it may answer, with that one off the list."
+   },
+   {
+    "item": "Count how often a party stands down on a weather day and how many seats it involves. Count it, do not automate it, because nothing verified says it is worth anything.",
+    "metric": "A tallied count per staffed week, which either makes it a real question later or retires it honestly."
+   },
+   {
+    "item": "Several parts of this business have nothing worth selling and saying so is the useful answer. The channel 1 broadcast and the basecamp relay are limited by connectivity on a glacier. Weight and balance, dispatch and maintenance records are regulated and stay where they are.",
+    "metric": "No metric, and that is the point. The measurable outcome is money not spent."
+   }
+  ],
+  "gates": "Three gates and each one is your off-ramp rather than ours. Before the conditions page is bought, your counted week. The page has to keep about one seat every other staffed day to cover itself, so if your count is small enough that this looks implausible against it, we will tell you in writing not to buy the page, and you keep the record. The record is gated on nothing but your willingness to fix a defect already visible on your own site. Before the page is committed, the camera check and the hosting answer, and if the only honest cameras look at the valley rather than the routes, the record ships alone at a reduced price. Before anything after phase one, the 2027 tally against 2026. If it did not move, phase two does not happen and you keep the record and the page.",
+  "need_from_you": "Five minutes to decide which of the three published hours answers is right, because only you know. One sentence confirming the index price is the fare plus your published taxes. Hosting access for the webcam address, or the name of whoever holds it. One named owner for the facts. Half a day for the content session, outside the season. The counted week, which costs a notepad. One honest answer from whoever would flip the status about whether it is worth ten seconds mid-queue. If it is not, we ship the page without it."
+ },
+ "honest": {
+  "title": "What would make us wrong",
+  "lede": "Four things, and we would rather raise them than have you find them.",
+  "body": "The cameras might not see what matters. Nothing we read tells us which FAA sites sit near the Ruth, the Kahiltna, Tokositna West, the Root Canal or the Kichatna Spires, and a clear picture of the valley is not a clear picture of a mountain tens of miles away. That is one day of checking inside the first stage. If the honest answer is valley only, we say so and you take the record alone at a lower price.\n\nThe volume might not be there. Nobody has counted the calls this exists to reduce, so the whole return could be smaller than the build. The counted week happens before we build the page for exactly that reason, and if it comes back small the right answer is that you should not buy it.\n\nThe status field might go unused. It is one more thing to do for the person this build exists to unload, and it will get flipped on quiet mornings and skipped on busy ones. That is why the money rests on the pictures and why the field expires back to your own sentence.\n\nThe expensive mistake runs opposite to instinct. Your unconditional refund is more generous than either competitor policy we could read, and it is an asset that also sets the direction here. A page saying flying when it is marginal costs goodwill and some counter time. A page saying holding at 9am on a day that clears by 11 turns a paid seat into a refund plus a seat you can no longer sell. That is why the field carries the current hour only, and why it times out fast."
+ },
+ "next_step_title": "The next step",
+ "next_step": "Take the counted week before September 15th. It costs a notepad and it is yours either way. If the number is small, tell us and we will put that in writing.",
+ "sources": [
+  {
+   "claim": "Their flightseeing FAQ tells customers to call on the day, gives the check-in briefing and the 100 percent refund, states the passenger minimums and the 45 minute check-in, and publishes a third set of office hours",
+   "url": "https://www.talkeetnaair.com/flightseeing-faq/"
+  },
+  {
+   "claim": "The customer service role stacks check-in, payments, phone, reservations, email and online bookings on one person, and pilots sit a week of ground school in the last half of April",
+   "url": "https://www.talkeetnaair.com/employment/"
+  },
+  {
+   "claim": "The climbing support FAQ states the office is staffed 7 AM until 7 PM after May 1st until September 15th, and that a team must be at basecamp before a return flight is scheduled",
+   "url": "https://talkeetnaair.com/climbing-support-faq/"
+  },
+  {
+   "claim": "Their helicopter FAQ states the office is staffed 7 AM until 9 PM over the identical May to September window",
+   "url": "https://www.talkeetnaair.com/hiking/faq/"
+  },
+  {
+   "claim": "The flightseeing index shows From $304 per Adult for the Southside Explorer",
+   "url": "https://www.talkeetnaair.com/flightseeing/"
+  },
+  {
+   "claim": "The Southside Explorer page shows Adults $275 for the one hour flight",
+   "url": "https://www.talkeetnaair.com/southside-explorer/"
+  },
+  {
+   "claim": "The 7.5 percent Federal Transportation Tax, the 3 percent Borough Tax, the 125 pound gear allowance, the $2 per pound overweight rate and the $40 base camp fee",
+   "url": "https://www.talkeetnaair.com/climbing-support/"
+  },
+  {
+   "claim": "The glacier landing adds about 30 minutes and $125 per person, plus a $15 park entrance fee at the time of the flight",
+   "url": "https://www.talkeetnaair.com/glacier-landings/"
+  },
+  {
+   "claim": "The published fleet is seven de Havilland DHC-3 at ten passengers, one Cessna 185 and two R44 helicopters",
+   "url": "https://www.talkeetnaair.com/our-fleet/"
+  },
+  {
+   "claim": "The team page names the staff with their start years, and no individual staff email address appears as text",
+   "url": "https://www.talkeetnaair.com/team-tat/"
+  },
+  {
+   "claim": "The webcam address returns a 301 redirect to the homepage and serves no camera",
+   "url": "https://www.talkeetnaair.com/denali-webcam/"
+  },
+  {
+   "claim": "The climber intake is park check-in, then weigh gear, then pay, and field weather goes out twice daily on channel 1",
+   "url": "https://www.talkeetnaair.com/logistics/"
+  },
+  {
+   "claim": "The reservation form collects eight fields with no payment step and no availability display",
+   "url": "https://www.talkeetnaair.com/flight-reservation/"
+  },
+  {
+   "claim": "River access is not bookable online and routes to a call, at $1,800 per load to the Upper Talkeetna River",
+   "url": "https://www.talkeetnaair.com/river-access/"
+  },
+  {
+   "claim": "K2 Aviation carries a live webcam link at the top of its FAQ and publishes that it does its best to inform customers of conditions",
+   "url": "https://www.flyk2.com/faq/"
+  },
+  {
+   "claim": "Sheldon Air Service publishes instant confirmation online booking, no fees for changes and a 30 minute arrival window",
+   "url": "https://sheldonairservice.com/policies/"
+  },
+  {
+   "claim": "The National Park Service awarded four Denali glacier landing concessions for 2020 to 2029, one of them to Talkeetna Air Taxi",
+   "url": "https://www.nps.gov/dena/learn/news/air-taxi-operators-announced.htm"
+  },
+  {
+   "claim": "MIT Lincoln Laboratory's visibility algorithm was more than 90 percent accurate at detecting low visibility, and is shown alongside the camera imagery itself",
+   "url": "https://news.mit.edu/2020/algorithm-eye-visibility-helps-pilots-alaska-0106"
+  },
+  {
+   "claim": "An independent 2025 benchmark of 147,182 images from 444 FAA camera sites found no model reached the FAA's accuracy threshold, best average error about 1.8 statute miles",
+   "url": "https://arxiv.org/html/2506.20939"
+  },
+  {
+   "claim": "A study of 5,179 support agents found 14 percent more issues resolved per hour and 34 percent for novice workers",
+   "url": "https://www.nber.org/papers/w31161"
+  },
+  {
+   "claim": "A March 2026 GetYourGuide and Arival survey of 505 tour and activity operators found 56 percent find AI tools overwhelming and 44 percent have received inaccurate information from them",
+   "url": "https://www.getyourguide.press/blog/tettspring2026"
+  },
+  {
+   "claim": "The vendor hours-saved formula, monthly website visitors times 0.015 times 4.5 minutes",
+   "url": "https://blog.yonderhq.com/yonders-blog/post/how-much-time-can-chatbots-really-save-you-as-a-tourism-operator"
+  },
+  {
+   "claim": "Trade press reported charter operators have up to three years to implement a proactive safety system",
+   "url": "https://www.ainonline.com/aviation-news/business-aviation/2024-04-23/faa-issues-sms-rules-part-135-operators"
+  },
+  {
+   "claim": "FareHarbor announced a guest communication assistant on April 27th 2026, rolling out to a select group of operators",
+   "url": "https://fareharbor.com/blog/meet-fareharbor-agent-ai-powered-guest-communication-for-tour-operators/"
+  }
+ ]
+}

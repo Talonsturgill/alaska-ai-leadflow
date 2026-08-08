@@ -1,0 +1,35 @@
+{
+ "subject": "Field study on the day-of weather calls and one published number",
+ "body": "You hold one of four Denali glacier landing concessions and tell every customer to call the morning they fly about weather. That's a season landing on one published number. No air tour operator publishes a measured AI result. We just wrapped up our study on that morning call at Talkeetna Air.\n\nhttps://alaskaaihq.com/awesomeproposal/talkeetna-air-taxi/\n\nNo strings, here if you want a hand.",
+ "to": "info@talkeetnaair.com",
+ "to_name": "Talkeetna Air Taxi",
+ "title_note": "The company's own general inbox, DECODED from Cloudflare email-protection obfuscation on three of their own pages, the contact page, the team page and the employment page. It is NOT a fallback. The team page publishes no individual staff addresses at all, so this is the address the company itself publishes as the way to reach its named leaders, including General Manager Courtney Shaffer and Operations Director Paul Roderick. courtney@talkeetnaair.com was surfaced by an aggregator with the local part masked and was REJECTED, never used, because it was never on a page anyone fetched.",
+ "link": "https://alaskaaihq.com/awesomeproposal/talkeetna-air-taxi/",
+ "opens_on": "They hold one of only four National Park Service Denali glacier landing concessions awarded for 2020 to 2029, and their own flightseeing FAQ instructs every customer to call the day they fly about weather. The concession is true of four operators in the world and of no one else, which is what the first version of this email lacked. The weather-call policy alone would have fitted K2 Aviation or Sheldon Air Service equally well.",
+ "word_count_prose": 59,
+ "comma_count": 1,
+ "subject_chars": 64,
+ "kill_list_hits": [],
+ "lead_critic": "ship on round 3. Round 1 was rejected on two grounds and both were real. It carried 'one phone line', which the study-critic had already made us cut as unverified, and stripped of that phrase its opening fact was true of every Denali flightseeing operator rather than of this one. Round 2 fixed the opening with the concession and the honest industry finding, and the critic then OVERRULED ITS OWN round 1 flag on naming the company, on the evidence that Talon adds the name by hand on four consecutive sends. Its round 2 fix was sharper than its round 1 one, that he never drops the study's TOPIC when he adds the name, and that he shortens the name every time, RM, Tyonek, ANHC, Medical Park, so the full formal name in a mail to that company reads as a merge field.",
+ "industry_proof": "Carried, and it is the honest thin-evidence finding rather than a borrowed statistic. No air tour or flightseeing operator anywhere was found publishing an AI deployment with a measured outcome, while the products aimed at this kind of operator are marketed hard and the loudest hours-saved numbers come from a vendor estimating formula rather than a measurement. OUTREACH_CRAFT holds that this finding stated plainly beats a statistic, and here it also sets up the study's central move, that the recommended build has no AI in it.",
+ "roi_in_email": "None, by design. The conservative case recovers 44 percent of five-year cost and never pays back, the middle case pays back in month 45. That shape needs the study's framing around it, and carrying only the friendlier half would be exactly the hero number the gate exists to prevent.",
+ "voice_delta_note": "`lengthened` stands at EIGHT separate sends and is READY TO PROMOTE. This email writes that register in rather than leaving it for Talon. The study line uses 'just wrapped up', which appears verbatim on 2026-08-07 and 2026-08-04, keeps the study's topic beside the name as he always does, and shortens 'Talkeetna Air Taxi' to 'Talkeetna Air' the way he shortens R&M to RM and Anchorage Neighborhood Health Center to ANHC. The close ships in the warm no-strings register he did not touch on the last send. NOTE, 'deep dive' is the one thing he adds that the writer may never write, because it is on the kill-list.",
+ "personalization_gate": {
+  "this_company_only_fact": "One of only four National Park Service Denali glacier landing concessions for 2020 to 2029, paired with their own published instruction that every customer calls the morning they fly.",
+  "hero_number": false,
+  "kill_list_hits": [],
+  "em_or_en_dashes": 0,
+  "colons_semicolons_in_prose": 0,
+  "cannot_used": false,
+  "sentence_openers": [
+   "You",
+   "That's",
+   "No",
+   "We",
+   "No"
+  ],
+  "links": 1,
+  "self_reference": "none, the email never says who or what produced the study",
+  "passes": true
+ }
+}

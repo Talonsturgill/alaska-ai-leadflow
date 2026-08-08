@@ -1,0 +1,432 @@
+{
+ "company": {
+  "what_they_do": "Talkeetna Air Taxi, Inc. is a Talkeetna, Alaska based air taxi and flightseeing operator working out of Talkeetna State Airport, at 14212 E Second Street, Talkeetna, AK 99676. It runs seven distinct lines of business off one counter and one ramp. (1) Fixed-wing Denali flightseeing, five named tours: Southside Explorer, Mountain Voyager, Grand Denali, Summit Tour, Winter Explorer. (2) Glacier landings in Denali National Park as a paid add-on, branded as their identity, 'more glacier landings than any other company in the world' and 'The Glacier Landing Company'. (3) Mountaineering expedition support, flying climbers to and from Kahiltna, Ruth, Root Canal, Tokositna and Kichatna glaciers, plus bunkhouse, gear staging, fuel, sled and radio rental. (4) Helicopter services on two Robinson R44 II Ravens, heli sightseeing, heli hiking, remote access, and certified sling loads, described on their own page as 'the area's only commercial helicopter operator'. (5) Iditarod tours in March. (6) River access, raft and kayak drop-offs by Otter and helicopter. (7) Ground logistics for climbers including joint operation of the Denali Base Camp at 7,200 ft on the southeast fork of the Kahiltna Glacier, May through early July.",
+  "size": "FLEET, their own page: 7 x de Havilland Canada DHC-3 (10 passengers, 2,000 lb payload), 1 x Cessna 185 (4 passengers, 990 lb), 2 x Robinson R44 (3 passengers, 600 lb). Ten airframes. They also claim 'TAT has the only IFR ski and oxygen equipped aircraft providing access to the Alaska Range'. DISCREPANCY: Wikipedia states that as of August 2024 the fleet was 8 aircraft and 2 helicopters including 1 Cessna 208B Grand Caravan and 6 DHC-3 Otters. Their own page does not list a Grand Caravan. Treat the company page as authoritative and the Wikipedia composition as unconfirmed. STAFF: the team page lists exactly 21 named humans, of whom 2 are marked retired (Annie Duquette, Retired General Manager 1999-2025, and Dennis Hospodar, Retired TAT Ramper 2011-2025), plus two hangar cats. That leaves 19 named active people. Ten of the 21 are pilots including Chief Pilot Will Boardman since 2006. The page carries NO company-wide headcount, and NO published figure was found for total seasonal headcount, annual passengers, or revenue. REVIEW VOLUME as a proxy for scale: 4.9 stars across 2,577 Google reviews.",
+  "locations": [
+   "Headquarters and passenger terminal, 14212 E Second Street, Talkeetna, AK 99676, described on their site as 'a unique two story log building' on 2nd Street after the railroad tracks",
+   "Talkeetna State Airport",
+   "Denali Base Camp, 7,200 ft, southeast fork of the Kahiltna Glacier, jointly operated May through early July",
+   "Authorized glacier landing sites in Denali National Park under an NPS concession contract",
+   "Published drop-off glaciers: Kahiltna 7,200', Ruth Glacier 5,600', Ruth Gorge 4,500', Root Canal 7,300', Tokositna-East 7,300'-8,200', Kichatna Spires"
+  ],
+  "revenue_model": "Per-seat and per-load charter revenue, collected largely at or near the point of service, with a 100 percent refund exposure on the tour side. FLIGHTSEEING priced per adult with a child rate. Southside Explorer product page: '1 Hour Flight (Flight Only): Adults $275 | Children $192.50' and '1 Hour 30 min Flight (with Glacier Landing): Adults $400 | Children $280'. The flightseeing index shows tax-inclusive figures for the same tours, Southside Explorer '$304 per Adult', Mountain Voyager '$387', Grand Denali '$476', Summit Tour '$547'. Those index prices reconcile to base fare plus the 10.5 percent they publish on the climbing page, '7.5% Federal Transportation Tax + 3% Borough Tax applied to all flights'. GLACIER LANDING is a $125 per person add-on costing 'an additional 30 minutes (approximately 15 minutes on the glacier and 15 minutes for landing and takeoff)', plus a National Park Pass at '$15 per person' for ages 16 and over. CLIMBING priced per person per glacier: Ruth Glacier and Ruth Gorge $650, Kahiltna $675, Root Canal $725, Tokositna-East $750, Kichatna Spires $1,200, with a Base Camp Fee of $40 per person, 125 lb of gear included and '$2 per pound' over, plus sled rental $10, Coleman fuel $25/gallon, wands $10 per set of 25, FRS radios $45 each, glacier shuttle inspection $225 per person. HELICOPTER hourly, remote access from $785, sling loads $850/hour, heli sightseeing from $412. RIVER ACCESS per load, '$1,800 per load' for the Upper Talkeetna River by plane, helicopter $785/hour plus 3 percent tax. IDITAROD from $550 to $7,500. CHANNELS: tours book online through FareHarbor, embed URL https://fareharbor.com/embeds/book/talkeetnaair/. Phone (907) 733-2218 and email info@talkeetnaair.com in every page footer. Climbers and custom charters use a manual web form capturing name, email, phone, drop-off location, expedition name, climber count, preferred date and free-text comments, WITH NO PAYMENT STEP. River access is not bookable online at all, 'Please call or contact us directly'. SEPARATELY, airline software vendor Takeflite published in April 2019 that it built their site plus 'a fully integrated online Tour Package booking solution' into its own platform. The live booking button today points at FareHarbor, not Takeflite. What runs behind the counter now could not be verified.",
+  "pains": [
+   {
+    "pain": "They have written down, as policy, that they do not proactively notify customers of weather cancellations or changes, and they push the customer to phone them on the day of the flight. This is a published instruction to every booked passenger to call the same office that is also checking in climbers and taking new reservations.",
+    "evidence_quote": "Due to the dynamic weather changes in the Alaska Range, we cannot notify customers in advance of cancellations or modifications. If you are coming to Talkeetna specifically for the flight, please call us the day you are flying to inquire about weather.",
+    "source_url": "https://www.talkeetnaair.com/flightseeing-faq/",
+    "kind": "fact",
+    "SHOWRUNNER_NOTE": "This quote contains the word 'cannot', which scripts/study_qa.py hard-fails on ANYWHERE in the rendered page, quotations included. The quotable half that carries the same finding and passes the gate is 'please call us the day you are flying to inquire about weather'. Use that verbatim and paraphrase the first clause."
+   },
+   {
+    "pain": "The go/no-go decision is handed to the customer verbally at the counter, one party at a time, at check-in. Every flight is a live conversation, not a system decision.",
+    "evidence_quote": "To fly or not to fly? When you check in for your flightseeing tour, we will give a briefing on visibility and current conditions. It is then your decision whether to fly or not. If we cancel or you decide not to fly due to weather conditions you always receive a 100% refund.",
+    "source_url": "https://www.talkeetnaair.com/flightseeing-faq/",
+    "kind": "fact"
+   },
+   {
+    "pain": "Unconditional refund exposure. Revenue booked is not revenue kept, and every cancellation is a refund transaction someone processes.",
+    "evidence_quote": "You can book with confidence knowing that you can get a 100% refund of your payment for any reason.",
+    "source_url": "https://www.talkeetnaair.com/flightseeing-faq/",
+    "kind": "fact"
+   },
+   {
+    "pain": "Two of their tours can't depart without a minimum number of paying passengers on the same departure, which makes reshuffling and filling seats a manual daily job during weather churn.",
+    "evidence_quote": "Our Summit Tours require a 4-passenger minimum. Our Winter Explorer Tours require a 2-passenger minimum.",
+    "source_url": "https://www.talkeetnaair.com/flightseeing-faq/",
+    "kind": "fact"
+   },
+   {
+    "pain": "Tight check-in window enforced by hand, with a written right to bump a late party. A no-show or a slow party rolls into the next departure.",
+    "evidence_quote": "You are required to check in 45 minutes prior to flight departure. Talkeetna Air Taxi reserves the right to reschedule your reservation if you have not arrived and fully checked in within 15 minutes of your tour's departure.",
+    "source_url": "https://www.talkeetnaair.com/flightseeing-faq/",
+    "kind": "fact"
+   },
+   {
+    "pain": "The counter job as they themselves describe it is a stacked multi-channel role. One person greets and checks in both tourists and climbers, takes payment, answers the phone, takes reservations, answers email and works the online bookings, in a fast-paced setting.",
+    "evidence_quote": "Greeting and checking in scenic passengers and climbers, collecting payments, answering phone calls, taking reservations",
+    "source_url": "https://www.talkeetnaair.com/employment/",
+    "kind": "fact"
+   },
+   {
+    "pain": "They state the priority explicitly on their careers page, which is the same page that lists an open customer service req.",
+    "evidence_quote": "Customer Service is our #1 priority.",
+    "source_url": "https://www.talkeetnaair.com/employment/",
+    "kind": "fact"
+   },
+   {
+    "pain": "The climber intake is a manual, ordered, in-person sequence before anyone gets on a flight list. Nothing about it is self-serve.",
+    "evidence_quote": "Check in with NPS / Weigh your gear / Pay for your flight",
+    "source_url": "https://www.talkeetnaair.com/logistics/",
+    "kind": "fact"
+   },
+   {
+    "pain": "Weather backlog on the climbing side is handled by telling teams to be standing by at a fixed hour the next morning, which implies a manually rebuilt daily flight list every time the weather closes.",
+    "evidence_quote": "be ready to fly at 8:00 AM the following day",
+    "source_url": "https://www.talkeetnaair.com/logistics/",
+    "kind": "fact"
+   },
+   {
+    "pain": "Return flights off the glacier are coordinated by a human relay, base camp manager to office, and can't be scheduled until every member of a team is physically at base camp.",
+    "evidence_quote": "If you are traveling to Kahiltna Basecamp, you must contact the basecamp manager to arrange your pick up. Your whole team must be at basecamp before scheduling your return flight and she will contact our office.",
+    "source_url": "https://talkeetnaair.com/climbing-support-faq/",
+    "kind": "fact"
+   },
+   {
+    "pain": "Field weather distribution is a twice-daily voice broadcast on family band radio, not a data feed.",
+    "evidence_quote": "Base Camp Manager broadcasts conditions via family band radio at 8 AM and 8 PM daily",
+    "source_url": "https://www.talkeetnaair.com/logistics/",
+    "kind": "fact"
+   },
+   {
+    "pain": "The office is staffed 12 hours a day for a defined four and a half month window, and the phone is also the emergency and in-field contact channel for climbers on the mountain.",
+    "evidence_quote": "Our office is staffed 7 AM until 7 PM after May 1st until September 15th.",
+    "source_url": "https://talkeetnaair.com/climbing-support-faq/",
+    "kind": "fact"
+   },
+   {
+    "pain": "Their own site publishes two different office-hours statements for the same window. The climbing FAQ says 7 AM to 7 PM, the flightseeing FAQ says 7 AM to 9 PM, both May 1 to September 15.",
+    "evidence_quote": "Office staffing runs 7 AM to 9 PM, May 1 through September 15.",
+    "source_url": "https://talkeetnaair.com/flightseeing/faq/",
+    "kind": "fact",
+    "SHOWRUNNER_NOTE": "EVIDENCE ONLY. OUTREACH_CRAFT bans a website-inconsistency as the email's opening. This may appear inside the study as cheap-to-settle proof, never as the headline."
+   },
+   {
+    "pain": "Their own site also publishes two different prices for the same tour. The flightseeing index shows tax-inclusive figures and the individual product pages show pre-tax figures, with no label on the index explaining the difference.",
+    "evidence_quote": "Southside Explorer, '$304 per Adult' on the index versus '1 Hour Flight (Flight Only): Adults $275' on the product page",
+    "source_url": "https://www.talkeetnaair.com/flightseeing/",
+    "kind": "fact",
+    "SHOWRUNNER_NOTE": "EVIDENCE ONLY, same rule as above. It also has an innocent explanation, the 10.5 percent tax they publish elsewhere, so it is weak evidence and probably not worth the words."
+   },
+   {
+    "pain": "Pilot hiring bar is high and the training window is a hard calendar constraint, one week of ground school in late April plus check rides, right before the May 1 season open.",
+    "evidence_quote": "One week of ground school in Talkeetna during the last half of April",
+    "source_url": "https://www.talkeetnaair.com/employment/",
+    "kind": "fact"
+   },
+   {
+    "pain": "Deep institutional knowledge left in 2025. The General Manager of 26 years and a 14-year ramper both retired the same year, and the current General Manager has been in seat since 2017.",
+    "evidence_quote": "Annie Duquette, Retired General Manager (1999-2025) / Dennis Hospodar, Retired TAT Ramper (2011-2025)",
+    "source_url": "https://www.talkeetnaair.com/team-tat/",
+    "kind": "fact"
+   },
+   {
+    "pain": "Non-tour revenue is not bookable online at all and routes straight to a human. River access and custom expeditions are phone-and-form only.",
+    "evidence_quote": "Please call or contact us directly",
+    "source_url": "https://www.talkeetnaair.com/river-access/",
+    "kind": "fact"
+   },
+   {
+    "pain": "The climber and charter reservation form collects intent but no payment and no availability, so every one of those requests becomes a manual back-and-forth.",
+    "evidence_quote": "Flight reservation form fields: Name, email, and phone contact information; Drop-off location selection; Expedition name and number of climbers; Preferred date and Additional comments section",
+    "source_url": "https://www.talkeetnaair.com/flight-reservation/",
+    "kind": "fact"
+   },
+   {
+    "pain": "Weather is the recurring theme in customer complaints, specifically around downgraded tours and the price difference owed back.",
+    "evidence_quote": "UNVERIFIED. Search results surface TripAdvisor reviews titled 'Beware of the importance of weather' and 'Timing is everything', but tripadvisor.com, tripadvisor.in and yelp.com all returned HTTP 403 to the fetcher, so NO review text here is page-verified.",
+    "source_url": "https://www.tripadvisor.com/ShowUserReviews-g31136-d659237-r176139117-Talkeetna_Air_Taxi-Talkeetna_Alaska.html",
+    "kind": "inference"
+   }
+  ],
+  "regulatory_shape": "They hold one of four National Park Service glacier landing concession contracts for Denali, awarded to 'Fly Denali Inc., Rust Air Inc., Sheldon Air Service, LLC, Talkeetna Air Taxi, Inc.' for 'the years 2020-2029' (https://www.nps.gov/dena/learn/news/air-taxi-operators-announced.htm). The prospectus specifies 'up to four concession contracts' running 'January 1, 2020 through December 31, 2029' on 'glaciers within the boundaries of the 1980 south side park and preserve additions', with scenic air tour glacier landings limited to four landing locations. Their own page states the NPS 'awarded Talkeetna Air Taxi a concession for landing on the glaciers of Denali National Park'. They also state helicopters are barred from park landings, 'No, helicopters are not permitted to land in the National Park'. NO published FAA Part 135 certificate number or operations specification document was found for this operator. DO NOT ASSERT ONE.",
+  "history_and_ownership": "Their own team page says only 'The heritage of Talkeetna Air Taxi dates back to the early days of flying in Alaska. Today we continue to lead the way in exploring the Alaska Range and Denali National Park', and names Lowell Thomas Jr., former Alaska lieutenant governor, among prior operators. Wikipedia says it was 'established in 1947 as Talkeetna Air Service' by Don Sheldon (THIRD PARTY). Paul Roderick is listed on their own page as Operations Director 'Since 1996' and was described by a 2010 aviation interview as 'owner and Director of Operations of Talkeetna Air Taxi in Alaska' (THIRD PARTY). Talkeetna community radio KTNA reported in June 2026 that 'The current owners of Talkeetna Air Taxi, K2 Aviation and the Alaska Mountaineering School, are all celebrating 30 years of assisting climbers in the Alaska Range' (https://ktna.org/denali-report-for-june-26th-2026/), consistent with a 1996 ownership date. NO record of a change of ownership since was found.",
+  "season": "Winter Explorer runs 'October 1st - April 30th'. Iditarod tours hang on a race that 'begins every year, on the first Saturday in March'. Denali climbing is 'Mid April to Mid July is the common time frame for climbing Denali'. Base camp runs May through early July. Climbing office hours begin May 1 and the staffed window ends September 15. River access is the one line they call year-round. A CoolWorks result states they are recruiting for May 1 2026 to September 15 2026, but every CoolWorks URL returned 404 to the fetcher, so that claim is UNVERIFIED.",
+  "market_context": "Denali climber volume, KTNA, June 26th 2026: 'There are currently 981 climbers registered to climb Denali this year. As of mid-week, 128 of them are on the mountain and 853 have finished their expeditions. There are currently 19 climbers registered to climb Mt. Foraker' (https://ktna.org/denali-report-for-june-26th-2026/). NPS registrant totals for recent seasons, Denali plus Foraker: 2025 was 610 US and 333 international, 2024 was 639 and 362, 2023 was 670 and 351, 2022 was 743 and 389 (https://www.nps.gov/dena/planyourvisit/annual-mountaineering-summaries-2020s.htm). Park visitation was '498,722' in 2023. NPS publishes NO flightseeing or glacier landing passenger counts.",
+  "public_record_including_the_unflattering_parts": {
+   "1_2015_midair": "MAY 31, 2015. A Talkeetna Air Taxi Cessna 185 carrying four passengers collided in midair with a Cessna 172 flown solo by a student pilot near Talkeetna. The student pilot, 27-year-old Cole Hagge of Eagle River, 'was injured'. The Talkeetna Air Taxi pilot and passengers 'escaped with only minor injuries'. The NTSB preliminary report found both aircraft 'heard transmitting position reports in relation to the airport traffic pattern' on the same common traffic advisory frequency. Source: https://www.adn.com/aviation/article/ntsb-report-pilots-talkeetna-mid-air-crash-were-same-radio-frequency/2015/06/08/",
+   "2_2020_r44": "FEBRUARY 20, 2020. A Talkeetna Air Taxi Robinson R44 crashed near the Sheldon Chalet on the Ruth Glacier in Denali National Park. NPS initially reported no injuries; an NTSB official said 'one passenger reported a minor injury'. The company's own statement was that the helicopter 'contacted the glacial surface of the runway area, settling in deep snow' shortly after takeoff. Source: https://www.adn.com/alaska-news/2020/02/22/none-injured-after-helicopter-crashes-at-ruth-glacier-in-denali-national-park/ . A search snippet gives the NTSB number as ANC20CA023 but the NTSB report could not be fetched, so treat that number as UNVERIFIED.",
+   "3_NOT_THEIRS_DO_NOT_ATTRIBUTE": "TWO WELL-KNOWN DENALI ACCIDENTS ARE NOT THEIRS. The August 4, 2018 fatal flightseeing crash on Thunder Mountain that killed pilot Craig Layson and four Polish passengers was a K2 AVIATION flight. The July 12, 2024 forced landing near the Tokositna Glacier of an aircraft carrying nine people was also K2 AVIATION, per the NPS release which names the operator and states 'There were no reported injuries'. Source: https://nps.gov/dena/learn/news/flightseeing-tour-makes-emergency-landing-july-2024.htm",
+   "4_enforcement": "FAA ENFORCEMENT, LAWSUITS, LABOR DISPUTES, STATE COMPLAINTS: searched and found NONE naming this operator. THAT IS AN ABSENCE OF FOUND RECORD, NOT A CERTIFIED CLEAN RECORD. The NTSB CAROL PDF reports could not be opened and aviation-safety.net returned 403, so the full NTSB history for this operator was NOT enumerated, only the two events verified through fetched news pages."
+  },
+  "what_customers_say": "Aggregate is strong. 4.9 stars across 2,577 Google reviews as displayed on Birdeye, with recent reviews such as Louie Playford, 'If you come to Talkeetna and don't go flightseeing, you're missing out big time!' and Alexander McClymont, 'Pretty darn awesome. This is the best experience you will have on your trip to Alaska.' The Mat-Su visitor bureau lists them as voted 'Best Flying Service' by Alaska Magazine readers. Indeed carries only 2 employee reviews, both 5 star, one saying 'The office environment is professional, friendly, welcoming and adaptable. They treat you like complete family.' TripAdvisor and Yelp could NOT be fetched. Search results indicate roughly 3,333 TripAdvisor reviews at #1 of 36 Talkeetna tours and 91 Yelp reviews, but neither figure is page-verified and NEITHER SHOULD BE USED.",
+  "tech_stack_signals": "Booking runs through FareHarbor today. Their website and an integrated tour booking flow were built in 2019 by Takeflite, an airline operations software vendor, whose post claims the integration lets 'the Talkeetna Air team to focus on the passenger experience and not the paper work' (THIRD PARTY, https://tflite.com/2019/04/New-Talkeetna-Air-Taxi-website-designed-by-Takeflite-now-live/). Site is WordPress behind Cloudflare, with Cloudflare email obfuscation. There is no blog and no news section anywhere in their sitemap. They list Facebook, Instagram, TripAdvisor and X in their footer.",
+  "verified_contact": "Phone (907) 733-2218 and email info@talkeetnaair.com, both in the footer of the contact page. Fax 907-733-1434 on the employment page. A base camp InReach address exists on the climbing FAQ but is masked by Cloudflare email protection and was NOT read. DO NOT PATTERN-INVENT ANY ADDRESS.",
+  "confidence": "HIGH on everything sourced to talkeetnaair.com; 16 of their own pages were fetched including the full sitemap, every service page, both FAQs, the fleet page, the employment page, the reservation form and the team page, and the operational and pricing quotes are verbatim. HIGH on the NPS concession, both NPS releases fetched. HIGH on the two accidents reported and HIGH on the negative finding that the 2018 fatal crash and the 2024 forced landing belong to K2 Aviation. MEDIUM on ownership. MEDIUM on fleet composition, their own page and Wikipedia disagree and both are reported. LOW and FLAGGED on three things: customer review CONTENT (TripAdvisor and Yelp 403), the CoolWorks 2026 hiring season dates (404), and the complete NTSB history (PDF renderer unavailable, aviation-safety.net 403). NO published figure was found for annual passengers, annual revenue, total seasonal headcount, or glacier landings per year, and no FAA certificate document. THOSE GAPS ARE REAL AND MUST BE TREATED AS UNKNOWN, NOT ESTIMATED."
+ },
+ "people": {
+  "leaders": [
+   {
+    "name": "Paul Roderick",
+    "role": "Operations Director since 1996. Company's own bio says he \"started with Talkeetna Air Taxi in 1992 before he took over in 1996\".",
+    "source_url": "https://www.talkeetnaair.com/team-tat/"
+   },
+   {
+    "name": "Paul Roderick",
+    "role": "Called \"owner and Director of Operations of Talkeetna Air Taxi in Alaska\", third-party corroboration of ownership, 2010",
+    "source_url": "https://oddballpilot.com/2010/10/interview-paul-roderick/"
+   },
+   {
+    "name": "Courtney Shaffer",
+    "role": "General Manager since 2017. \"Courtney's held numerous roles at TAT, most recently accepting the position as our General Manager\"",
+    "source_url": "https://www.talkeetnaair.com/team-tat/"
+   },
+   {
+    "name": "Annie Duquette",
+    "role": "Retired General Manager, 1999 to 2025",
+    "source_url": "https://www.talkeetnaair.com/team-tat/"
+   },
+   {
+    "name": "Heidi Knudsvig",
+    "role": "Office Manager since 2018",
+    "source_url": "https://www.talkeetnaair.com/team-tat/"
+   },
+   {
+    "name": "Mindy Knapp",
+    "role": "Fiscal Administrator since 2023",
+    "source_url": "https://www.talkeetnaair.com/team-tat/"
+   },
+   {
+    "name": "Chris Campbell",
+    "role": "Director of Maintenance since 2010",
+    "source_url": "https://www.talkeetnaair.com/team-tat/"
+   },
+   {
+    "name": "Will Boardman",
+    "role": "Chief Pilot since 2006",
+    "source_url": "https://www.talkeetnaair.com/team-tat/"
+   }
+  ],
+  "best_contact": {
+   "type": "email",
+   "value": "info@talkeetnaair.com",
+   "source_url": "https://www.talkeetnaair.com/team-tat/",
+   "how_it_appeared": "decoded from Cloudflare email-protection obfuscation present on the page. Corroborated by the same decode on https://www.talkeetnaair.com/contact/ and https://www.talkeetnaair.com/employment/.",
+   "whose": "The company's general inbox, and the address behind EVERY named leader's contact link on the team page, including the General Manager's and the Operations Director's."
+  },
+  "contact_verification": "DECODED, NOT GUESSED. Every 'email' link on the team page is a Cloudflare /cdn-cgi/l/email-protection# string, first byte the XOR key and each following byte XORed with it. Paul Roderick's link (key 0x4b), Courtney Shaffer's (key 0x13) and Heidi Knudsvig's (key 0x20) all decode to the identical 21-byte payload info@talkeetnaair.com. The contact page carries it double-obfuscated (Cloudflare XOR wrapping HTML numeric entities, key 0xa7) and the employment page carries it again (key 0xfc). The literal string is not present as visible text on any page, it exists only as obfuscation that decodes to it.",
+  "the_finding_that_matters": "There are NO individual staff email addresses on the team page. Every named leader's contact link points at the one general inbox. So info@talkeetnaair.com is not a fallback, it is the address the company itself publishes as the way to reach its named leaders.",
+  "other_real_addresses_found_not_recommended": [
+   {
+    "value": "diana@talkeetnaair.com",
+    "source_url": "https://www.talkeetnaair.com/employment/",
+    "decode_key": "0xc6",
+    "why_not": "published as the destination for customer service job applications. 'Diana' does not appear on the team page and no leadership role is stated for her anywhere fetched."
+   },
+   {
+    "value": "chiefpilot@talkeetnaair.com",
+    "source_url": "https://www.talkeetnaair.com/employment/",
+    "decode_key": "0xad",
+    "why_not": "published as the destination for pilot applications. It is Will Boardman's role mailbox, and Chief Pilot is a flight-ops role, not the buyer for business software."
+   }
+  ],
+  "ownership": {
+   "established_from_fetched_pages": "The company's own team page says Paul Roderick 'started with Talkeetna Air Taxi in 1992 before he took over in 1996'. oddballpilot.com's 2010 interview page states 'owner and Director of Operations of Talkeetna Air Taxi in Alaska' and lists 'How he became the owner of TAT' as a topic. Wikipedia gives Donald Sheldon as founder of the 1947 predecessor Talkeetna Air Service and lists no subsequent sale.",
+   "NOT_established": "The state corporate filing. Search snippets reported Talkeetna Air Taxi, Inc., corporation no. 57314D, incorporated 12/21/1995, registered agent Paul Roderick, but the record could not be opened. commerce.alaska.gov 403, alaskacompanydir.com 403, opencorporates 403, opengovus did not contain it. TREAT THE CORPORATION NUMBER, THE INCORPORATION DATE AND THE REGISTERED-AGENT LINE AS UNVERIFIED SEARCH-SNIPPET MATERIAL, NOT FETCHED FACT. No page fetched shows a change of hands, a shareholder list, or an ownership percentage."
+  },
+  "decision_maker_facts_only": "Two names carry the operational authority per the company's own titles. Courtney Shaffer, General Manager since 2017. Paul Roderick, Operations Director since 1996 and the person third-party press calls owner. Heidi Knudsvig (Office Manager) and Mindy Knapp (Fiscal Administrator) hold the administrative and finance titles. NO PAGE STATES WHO SIGNS OFF ON SOFTWARE OR VENDOR PURCHASES.",
+  "rejected_do_not_use": "ZoomInfo surfaced 'Courtney Shaffer, Email: c***@talkeetnaair.com' and a search-engine summary asserted 'courtney@talkeetnaair.com'. That address was never on a fetched page, the aggregator itself masks it, and the pattern is exactly the inference that is forbidden. NOT USED.",
+  "other_routes": "Contact form at https://www.talkeetnaair.com/contact/ with name, phone, email, message and a CAPTCHA. Phone (907) 733-2218, toll free (800) 533-2219, fax (907) 733-1434. Mailing address 14212 E Second Street, Talkeetna, AK 99676. No LinkedIn profile URL for any named leader was verified.",
+  "confidence": "high on the contact address and on every name and title, all read or decoded from fetched pages. Medium on ownership, since Paul Roderick as owner rests on the company's 'took over in 1996' plus a 2010 third-party interview rather than a state filing that could be opened. Low on corporate registration details, which could not be fetched at all."
+ },
+ "competitors": {
+  "competitors": [
+   {
+    "name": "K2 Aviation (Rust Air Inc., Talkeetna)",
+    "note": "Direct head to head. Same street as the target, 14052 E 2nd St, Talkeetna. One of the four NPS glacier landing concessionaires for 2020 to 2029. Owned by the Rust family since May 1996, sister company to Rust's Flying Service in Anchorage, roughly 22 aircraft across the two, so this is the one competitor backed by a larger multi base tourism aviation group. Tours priced from $305 (Denali Experience) to $510 (Top of the World).",
+    "ai_usage": "No AI or chatbot found on any page fetched. Page-verified software: FareHarbor online booking with a FLIGHT SCHEDULE link into FareHarbor, plus a persistent header link reading LIVE WEBCAM pointing at a third party Skaping camera at the Talkeetna Alaskan Lodge. A dedicated weather contingency product page sells three named bad-weather alternates (Bush Plane Adventure $205+, Talkeetna Experience $305+, Chugach Flyer $370+). FAQ verbatim: 'We do our best to inform you about current weather conditions at your flight time. If the weather prevents you from flightseeing, we will give you options that include cancelling, rescheduling, or receiving a full refund of your deposit.' Deposit terms verbatim: 'All that is required to secure a reservation is a 50% deposit per person, fully refundable with 48-hour notice or inclement weather.' OTA distribution (GetYourGuide, Viator) surfaced in search but both returned HTTP 403, so NOT page verified. No multilingual support. No live chat.",
+    "source_url": "https://www.flyk2.com/faq/"
+   },
+   {
+    "name": "Sheldon Air Service (Talkeetna)",
+    "note": "Direct head to head, 22703 South Terminal Avenue, Talkeetna, phone (907) 733-2321. Second of the four NPS glacier landing concessionaires. Locally owned by year round Talkeetna residents, Part 135 carrier. Product overlaps the target almost exactly. Southside Sheldon from $340, Denali Mountaineer from $430, Grand Adventure from $525, Bear Viewing private from $4,100.",
+    "ai_usage": "No AI or chatbot found. FareHarbor online booking, described verbatim as 'Book online (instant confirmation via email) or call +1 (907) 733-2331.' Online booking carries a percentage fee that phone reservations avoid, and online booking is available 24/7 against staffed phone hours of 8am to 6pm summer and 9am to 5pm winter. The published weather and change policy is the most explicit in the market, verbatim: 'Reschedule at a time that works, or full refund to your original payment method', 'We're happy to help, no fees for changes we will do our best to re-accommodate the same day if conditions allow', and 'If the mountains or weather say not today, we'll reschedule or refund 100%, your choice.' Their own Denali Cam is DOWN and the page says so, and it redirects visitors to FAA Weather Cameras (Talkeetna and McKinley South), the NPS Wonder Lake webcam, the Talkeetna Airport GA parking camera and the Talkeetna Alaskan Lodge cam. No multilingual support. No live chat.",
+    "source_url": "https://sheldonairservice.com/policies/"
+   },
+   {
+    "name": "Fly Denali, Inc. (Healy / Denali Park entrance)",
+    "note": "Same product, different gateway. Third NPS glacier landing concessionaire, Healy River Airport, 2.2 Healy Spur Rd, Healy, phone 907-683-2359. Markets itself verbatim as 'Denali National Park Entrance's ONLY Glacier Landing Concessionaire.' Core product is a 100 minute Denali Glacier Landing plus charters.",
+    "ai_usage": "No AI or chatbot found. Booking runs on a DIFFERENT platform from the Talkeetna cluster, theflybook.com (The Flybook). No weather status, webcam, waitlist, notification or cancellation policy found on the pages fetched. No multilingual support.",
+    "source_url": "https://www.flydenali.com/"
+   },
+   {
+    "name": "N2 Alaska (Talkeetna)",
+    "note": "Small single pilot Talkeetna operator, pilot David Hicks, 'over 30 years of flying in and out of the Alaskan wilderness.' Not an NPS glacier landing concessionaire, so it sells the flightseeing and charter half of the target's business without in-park glacier landings. PO Box 184, Talkeetna.",
+    "ai_usage": "No AI or chatbot found. FareHarbor online booking, plus a phone line listed for call OR TEXT at (907) 616-1010 and email fly@n2alaska.com. Text as a published booking channel is the one thing here the three concessionaires do not advertise. No published weather policy, webcam, live availability statement, waitlist or notifications found. No multilingual support.",
+    "source_url": "https://www.n2alaska.com/"
+   },
+   {
+    "name": "Denali Air (Denali Park entrance)",
+    "note": "Named by NPS as a permitted operator distinct from the four glacier landing concessionaires, verbatim 'Denali Air, (907) 683-2261, Operates out of the Denali area, provides flightseeing tours and air taxi services to the Kantishna Airstrip.' Over 40 years operating, twin engine fixed wing from a private airstrip minutes south of the park road entrance.",
+    "ai_usage": "None found. Could NOT page verify how Denali Air takes bookings, whether availability is live, or whether any weather or notification tooling exists. denaliair.com was not successfully fetched, so no claim is made.",
+    "source_url": "https://www.nps.gov/dena/planyourvisit/flightseeing.htm"
+   }
+  ],
+  "observed_differences_where_target_is_behind": {
+   "1_weather_communication_direction": "Talkeetna Air Taxi publishes a CUSTOMER-INITIATED model. Its flightseeing FAQ states they can't notify customers in advance of cancellations or modifications, and instructs verbatim 'If you are coming to Talkeetna specifically for the flight, please call us the day you are flying to inquire about weather' (https://www.talkeetnaair.com/flightseeing/flightseeing-faq/). K2 Aviation publishes an OPERATOR-INITIATED model on the same question, verbatim 'We do our best to inform you about current weather conditions at your flight time' (https://www.flyk2.com/faq/), and Sheldon publishes verbatim 'we will do our best to re-accommodate the same day if conditions allow' (https://sheldonairservice.com/policies/). Same weather, same mountain, opposite published direction of the phone call.",
+   "2_live_visual_weather_on_the_site": "K2 carries a persistent header LIVE WEBCAM link to https://www.skaping.com/talkeetna-alaskan-lodge, present on tour and weather pages. Sheldon keeps a Denali Cam page live even though its own camera is down, and routes visitors to FAA and NPS cameras. Talkeetna Air Taxi's own webcam URL, https://www.talkeetnaair.com/denali-webcam/, returns a 301 redirect to the homepage, so no camera is served. The target is the only one of the three Talkeetna concessionaires with no working webcam path on its site.",
+   "3_published_booking_and_change_terms": "Sheldon publishes instant confirmation and a fee free change promise verbatim, 'Book online (instant confirmation via email) or call +1 (907) 733-2331' and 'no fees for changes'. K2 publishes a numeric deposit and refund rule verbatim, '50% deposit per person, fully refundable with 48-hour notice or inclement weather'. The target's equivalent published terms lean toward what the customer owes it, verbatim 'You are required to check in 45 minutes prior to flight departure' and 'Talkeetna Air Taxi reserves the right to reschedule your reservation if you have not arrived and fully checked in within 15 minutes of your tour's departure'. The target's 45 minute check in is the longest published in the field, against Sheldon's 'arrive 30 minutes before your flight'."
+  },
+  "where_nobody_leads_verified_across_all_five": {
+   "a_no_ai_anywhere": "NO CHATBOT, AI ASSISTANT, OR AI BRANDED FEATURE OF ANY KIND EXISTS ON ANY OF THEM. talkeetnaair.com, flyk2.com, sheldonairservice.com, flydenali.com and n2alaska.com were all fetched and none carries a chat widget, an assistant, or an AI claim. A targeted news search for a Talkeetna air operator using AI or a chatbot returned nothing.",
+   "b_no_outbound_notification_published_anywhere": "Every operator's published mechanism is a human phone call, either the customer's (the target) or the operator's best effort (K2). No SMS alert, email status, waitlist or self service reschedule link is offered by anyone in the field.",
+   "c_no_non_english_content_on_any_of_the_five": "No language switcher, no translated tour page, no multilingual support statement was found on any operator, including the target, in a market whose customer base arrives largely by cruise and international tour.",
+   "d_booking_rails_are_commoditized": "Four of the five, the target, K2, Sheldon and N2 Alaska, all run the same third party platform, FareHarbor, verified on each site (the target's own embed URL appears on its homepage as https://fareharbor.com/embeds/book/talkeetnaair/). Fly Denali runs The Flybook. Nobody in this field owns anything on the customer facing software layer the others do not also rent."
+  },
+  "target_asymmetries_that_are_product_not_software": "The target operates a Robinson R44 II Raven helicopter for scenic tours and wilderness landings alongside its fixed wing fleet (https://www.talkeetnaair.com/helicopter-tours/), and no other Talkeetna operator fetched offers a helicopter product. Its published staffing is also the deepest in the field, ten plus pilots, a chief pilot, a director of maintenance, an office manager, a fiscal administrator and a hospitality specialist. That team page describes the office layer in explicitly manual terms, verbatim 'Heidi came to TAT in March of 2018 where her ability to accurately forecast the weather quickly made her indispensable!' and 'Mindy enjoys supporting TAT operations from the office crow's nest with spreadsheets, financial software, and a satisfyingly large calculator.'",
+  "market_shape": "A hard four-operator oligopoly by federal contract. NPS awarded 2020 to 2029 glacier landing concessions to exactly four firms, Fly Denali Inc., Rust Air Inc. (K2), Sheldon Air Service LLC and Talkeetna Air Taxi Inc. Denali Air is permitted separately for Kantishna, and non-concessionaires like N2 Alaska sell scenic flights without in-park glacier landings. Concentration is highest in Talkeetna, where three of the four sit within about two blocks of each other on E 2nd St and South Terminal Ave. K2 is the only competitor owned by a larger group. One prior Talkeetna name, Talkeetna Aero Services, still shows Good Standing in the Alaska company directory but its talkeetnaaero.com domain now serves an unrelated offshore gambling page, so its trading status is UNRESOLVED and it is excluded from the list.",
+  "confidence": "HIGH on booking platform, published policies, webcam status, absence of chatbots and absence of multilingual content, all read off fetched pages and quoted verbatim. HIGH on market shape. MEDIUM on volume leadership, the target's own site claims it performs more glacier landings than any other company in the world and schedules 35 flightseeing tours a day April to August, but that is SELF-REPORTED and no independent operator-by-operator volume figure was found. LOW and explicitly unverified on OTA distribution, GetYourGuide and Viator both returned HTTP 403 so no comparative claim is built on them. NOT DETERMINED: how any competitor takes bookings on its back office side, what any of them do internally with automation, and how Denali Air takes bookings."
+ },
+ "industry": {
+  "industry": "Small-operator commercial aviation (FAR Part 135 air taxi, air tour and flightseeing) and the tour/activity businesses that sell its seats. Scale reference: a few aircraft, ten-plus pilots, a few dozen staff, seasonal demand.",
+  "in_production": [
+   {
+    "who": "High Country Adventure (rafting and tubing, Provo, Utah). Owner-operated adventure company, close to this prospect's size.",
+    "pocket": "guest contact converting to booked seats",
+    "what_ai": "TOMIS AI ChatBot on the website, connected to the reservation system, deployed spring 2021.",
+    "outcome": "Verbatim over a three-month period: 4,531 customer messages handled, 185 tours booked directly in the bot, $43,976 in revenue generated. Owner quote: 'I really like the TOMIS chat! Way better than Chekkit and better than Podium.' The single most operator-sized, dollar-denominated chatbot result found in this industry.",
+    "source_url": "https://tomis.tech/blog/ai-chatbot-2021/",
+    "reliability": "vendor_case_study"
+   },
+   {
+    "who": "AJ Hackett Bungy (New Zealand). Adventure operator with a reservations team.",
+    "pocket": "booking conversion",
+    "what_ai": "Upgrade from a scripted chatbot to Yonder's GPT-powered chatbot.",
+    "outcome": "Verbatim: website conversion rate increased from 13% to 23% year over year, with a shift from call-centre sales to online bookings. CAVEAT: no isolation of the chatbot from other site changes in the same period, and the vendor published it.",
+    "source_url": "https://www.yonderhq.com/case-study/elevating-sales-and-efficiency-aj-hackett-bungys-website-evolution-with-yonders-gpt-powered-chatbot",
+    "reliability": "vendor_case_study"
+   },
+   {
+    "who": "Black Cat Cruises (Akaroa and Lyttelton, New Zealand). Two-location day-cruise and ferry operator.",
+    "pocket": "guest contact / pre-booking inquiry",
+    "what_ai": "Yonder AI chatbot named 'Kiri', tied to the booking system.",
+    "outcome": "Verbatim: ~500 conversations monthly, saves staff 10 hours per month, answers around 60% of customer questions, roughly 15 clickthroughs to booking per month. Only 10% leave an email address. The booking-value figure is POTENTIAL, not confirmed revenue.",
+    "source_url": "https://www.yonderhq.com/case-study/black-cat-cruises-chatbot-answers-immediately-24-7",
+    "reliability": "vendor_case_study"
+   },
+   {
+    "who": "Redwoods Treewalk (NZ) and Skydive Tecumseh (Michigan).",
+    "pocket": "staff time on repetitive guest questions",
+    "what_ai": "Yonder AI chatbot.",
+    "outcome": "Verbatim: Redwoods Treewalk 'saved over 274 hours of staff time in 90 days.' Skydive Tecumseh 'deflected over 300 phone calls in just four months.' IMPORTANT QUALIFIER, the same page shows the savings are MODELLED, not measured: 'Monthly website visitors x 0.015 = Estimated monthly chat conversations' then 'x 4.5 minutes = Minutes saved per month'. A vendor formula, not a stopwatch.",
+    "source_url": "https://blog.yonderhq.com/yonders-blog/post/how-much-time-can-chatbots-really-save-you-as-a-tourism-operator",
+    "reliability": "vendor_case_study"
+   },
+   {
+    "who": "505 tour and activity operators worldwide, surveyed March 2026 by GetYourGuide with Arival, the independent research body for the experiences sector.",
+    "pocket": "whole-business AI adoption",
+    "what_ai": "Mixed, self-reported use of general AI tools.",
+    "outcome": "Verbatim: '64% of travel experience operators are using AI more than they did a year ago.' Strong positive impact for product descriptions (84%), web and blog content (81%), SEO content (74%). Counterweights from the same survey: 56% 'still say AI tools feel overwhelming' and 44% 'have received inaccurate or misleading information from AI tools.' THE SHAPE IS THE FINDING, the use cases operators report paying off are writing and search content, not the operations layer.",
+    "source_url": "https://www.getyourguide.press/blog/tettspring2026",
+    "reliability": "independent"
+   },
+   {
+    "who": "5,179 customer-support agents at a Fortune 500 software firm. Brynjolfsson (Stanford), Li (MIT), Raymond.",
+    "pocket": "AI assisting humans on customer contact rather than replacing them",
+    "what_ai": "Generative-AI conversational assistant suggesting responses to human agents.",
+    "outcome": "Verbatim: 'Access to the tool increases productivity, as measured by issues resolved per hour, by 14% on average, including a 34% improvement for novice and low-skilled workers but with minimal impact on experienced and highly skilled workers.' Also improved customer sentiment and employee retention. Peer reviewed, Quarterly Journal of Economics May 2025, NBER WP 31161. THE SEASONAL READ, the gain concentrates on NEW staff, which is the profile of a front desk rehired every May.",
+    "source_url": "https://www.nber.org/papers/w31161",
+    "reliability": "independent"
+   },
+   {
+    "who": "FAA Weather Camera Program, statewide in Alaska. MIT Lincoln Laboratory.",
+    "pocket": "pre-flight weather decision support, the go/no-go call",
+    "what_ai": "VEIA, Visibility Estimation through Image Analytics. Edge-detection image analytics turning existing FAA weather-camera feeds into a numeric visibility estimate every 10 minutes by comparing current frames to clear-day reference images.",
+    "outcome": "Verbatim from MIT News: the algorithm 'was more than 90 percent accurate in detecting low-visibility conditions when compared to co-located ASOS data.' FAA targeted full operations in fall 2023, Alaska first. Design constraint stated by FAA: camera images 'are always displayed too, so any user can give VEIA data a sanity check', so it supplements rather than replaces the human look. IT IS FREE AND ALREADY LIVE ON INFRASTRUCTURE THIS INDUSTRY ALREADY USES.",
+    "source_url": "https://news.mit.edu/2020/algorithm-eye-visibility-helps-pilots-alaska-0106",
+    "reliability": "independent"
+   },
+   {
+    "who": "Ohio University researchers (Mourning, Wang, Murray), funded in part by NASA, the Ohio Federal Research Network and the FAA.",
+    "pocket": "the honest ceiling on camera-based AI visibility",
+    "what_ai": "AIR-VIEW benchmark, 147,182 images collected April 9 2024 to May 17 2025 from 444 FAA weather camera sites with co-located visibility sensors.",
+    "outcome": "Verbatim finding: NO model achieved the FAA's 20% MAPE threshold. Best performers, Li Integrated Model MAE 1.77 mi at 77% ASTM Tier I compliance, VisNet MAE 1.83 mi. THIS IS THE COUNTERWEIGHT to any vendor selling AI weather certainty, the state of the art is still roughly two statute miles of average error.",
+    "source_url": "https://arxiv.org/html/2506.20939",
+    "reliability": "independent"
+   },
+   {
+    "who": "Peek Pro operator base (Crystal River Kayak, Wild Florida, French Quarter Phantoms, King's Landing, North Shore Landing, Dylan's Tours).",
+    "pocket": "the boundary between plain booking software and AI",
+    "what_ai": "Two separate things, and the split is the point. Conventional deterministic booking-software features (abandoned-cart recovery, dynamic pricing rules, digital check-in) versus 'Peek Copilot' AI.",
+    "outcome": "The NON-AI features carry the real numbers: French Quarter Phantoms 'recapture around 25% of lost sales', King's Landing 'recaptures 24% more lost bookings', North Shore Landing 'reduced check-in time from 20 minutes to 5', Dylan's Tours 'saves hundreds of labor hours a year'. The AI product carries ONE unquantified story. USEFUL FINDING FOR ANY OWNER, in this software category the measured wins so far belong to deterministic automation, not to the AI layer sold on top of it.",
+    "source_url": "https://www.peekpro.com/stories",
+    "reliability": "vendor_case_study"
+   },
+   {
+    "who": "FareHarbor, the largest booking platform in tours and activities, and the platform this prospect already runs.",
+    "pocket": "guest messaging across phone, email, chat, SMS, social",
+    "what_ai": "FareHarbor Agent, an AI assistant that checks live availability, recommends experiences and guides guests through the reservation flow.",
+    "outcome": "As of the April 27 2026 announcement it is 'currently rolling out to a select group of operators.' No named customers, no measured outcomes, no published pricing. TIMING NOTE, the incumbent res-system is building this into the platform, which changes the buy-versus-wait calculation on a standalone chat vendor.",
+    "source_url": "https://fareharbor.com/blog/meet-fareharbor-agent-ai-powered-guest-communication-for-tour-operators/",
+    "reliability": "vendor_marketing"
+   },
+   {
+    "who": "Surf Air Mobility / Surf Air Technologies, with Palantir Foundry and AIP.",
+    "pocket": "the flagship 'AI operating system' aimed at Part 135 operators",
+    "what_ai": "SurfOS. BrokerOS commercially live since December 2025. OperatorOS, the piece built for 'small and mid-sized Part 135 scheduled and charter air operators', is 'Launching Second Half of 2026'.",
+    "outcome": "Read the attribution carefully: '32% increase in bookings for top-performing brokers', '57% faster quote-to-close cycles', '40% more payments processed on-platform' are Surf On Demand's INTERNAL SALES TEAM figures for the BROKER product, NOT third-party Part 135 operators using OperatorOS. THE HONEST READ, the most heavily capitalised AI product for this exact segment ($26M invested) has not shipped to operators yet.",
+    "source_url": "https://www.businesswire.com/news/home/20260506007455/en/Surf-Air-Mobility-Announces-Details-of-SurfOS-Commercial-Launch-Plan",
+    "reliability": "vendor_marketing"
+   },
+   {
+    "who": "Bluetail (aircraft records platform serving Part 91 and Part 135 operators).",
+    "pocket": "maintenance records, logbooks, conformity",
+    "what_ai": "Released June 4 2026, a rebuilt 'AI-powered Aircraft Records Management System' with AI-powered querying, AI-generated logbooks and a compliance check.",
+    "outcome": "Trade press coverage states the features 'free up maintenance teams for more critical work' but contains NO measured numbers, NO named customers and NO stated caveat about accuracy or human review. FLAG AS HYPE UNTIL MEASURED.",
+    "source_url": "https://www.ainonline.com/aviation-news/business-aviation/2026-06-04/bluetail-releases-ai-powered-aircraft-records-system",
+    "reliability": "vendor_marketing"
+   },
+   {
+    "who": "Klarna (fintech, ~700 agents' worth of workload).",
+    "pocket": "the qualifier on full-autonomy guest contact",
+    "what_ai": "OpenAI-built customer service assistant that at February 2024 handled 75% of customer chats, ~2.3 million conversations monthly.",
+    "outcome": "CEO Sebastian Siemiatkowski on the record: the AI produced 'lower quality' output, and 'Really, investing in the quality of human support is the way of the future for us'. Klarna reopened hiring after a 12-month freeze. WHY IT QUALIFIES EVERYTHING ABOVE, every measured tour-operator win in this report is a DEFLECTION or ASSIST result with a human path behind it. The one large public attempt at replacement was walked back on quality grounds.",
+    "source_url": "https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396",
+    "reliability": "independent"
+   },
+   {
+    "who": "Sikorsky (S-92 fleet ~300 aircraft) and Airbus Helicopters (FlyScan).",
+    "pocket": "predictive maintenance on rotorcraft",
+    "what_ai": "Machine-learning analysis of 15+ years of HUMS vibration and usage data.",
+    "outcome": "Sikorsky reports '5 to 10 percent better fleet availability over the last 10 years.' Airbus targets '7 percent cost saving in unscheduled maintenance'. HARD LIMITS STATED IN THE SAME ARTICLE: an Airbus executive said in-flight data transmission has 'limited relevance to rotary-wing operations' because legs are short and satcom is expensive, and adding new sensors is 'expensive and impractical for existing aircraft.' SIZE-GATED, this pocket runs on HUMS hardware that light fleets do not carry.",
+    "source_url": "https://verticalmag.com/features/predictive-maintenance-future-proof/",
+    "reliability": "independent"
+   }
+  ],
+  "the_gap": "AI IS BEING MARKETED AT THE COCKPIT, THE HANGAR AND THE COMPLIANCE BINDER. IT IS BEING MEASURED AT THE FRONT DESK.\n\nEvery product aimed at this segment's aviation side sells the same promise, an AI operating system for your fleet, AI records, AI compliance, AI dispatch. Going category by category, NOT ONE of them produced a named third-party Part 135 customer with a published number. Bluetail: none. SurfOS OperatorOS: not shipping until H2 2026. FL3XX: self-published only. CoachAir: future tense. Meanwhile the guest-contact side of the same business produced a dozen named operators with numbers in an afternoon of searching.\n\nA SECOND GAP SITS INSIDE THE SOFTWARE THE INDUSTRY ALREADY OWNS. Peek Pro's own case-study page is the cleanest evidence in this report: the quantified wins (25% of lost sales recaptured, check-in cut from 20 minutes to 5, hundreds of labour hours a year) all belong to conventional DETERMINISTIC features, and the AI product carries one unquantified story. In aviation paperwork the same pattern holds, Web Manuals' measured savings came from document automation, not from its AI search layer. An owner told that AI is the upgrade is being sold the wrong noun.\n\nA THIRD GAP IS DIRECTIONAL AND FAVOURS THE OPERATOR. The AI that is measurably improving weather-driven decisions for Alaska flying is ALREADY PAID FOR BY THE FAA and already on the cameras this industry checks every morning. Any vendor pitching proprietary AI weather certainty is competing with a free federal tool that publishes its accuracy, and against an independent 2025 benchmark in which NO model met the FAA's 20% MAPE threshold and the best average error was about 1.8 statute miles. NOBODY SHOULD BE SOLD AN AI GO/NO-GO CALL.\n\nFOURTH, THE AUTONOMY GAP. Every measured win in this report is deflection or assist with a human path behind it. The one famous attempt at replacement, Klarna's, was publicly walked back on quality by its own CEO in May 2025. Where an operator's brand rests on a small-town phone voice, that is the relevant precedent, not the 12x ROI slide.",
+  "regulatory_grounding_facts": [
+   {
+    "fact": "AI can NEVER sign off maintenance. 14 CFR 43.9(a) requires each maintenance record entry to carry 'The signature, certificate number, and kind of certificate held by the person approving the work', and 'The signature constitutes the approval for return to service only for the work performed.' Any AI in this pocket is a drafting, retrieval and organisation aid feeding a certificated human's signature, and scoping it as anything else is not legal.",
+    "source_url": "https://www.law.cornell.edu/cfr/text/14/43.9",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "Electronic records and signatures under Part 135 require FAA authorisation, not just a software purchase. AC 120-78B, issued December 11 2024, supersedes AC 120-78A. It covers load manifests, dispatch releases, aircraft maintenance documentation, pilot training records and airworthiness releases, and describes 'an acceptable means, but not the only means' of compliance. Use is optional, but a certificate holder that elects it is authorised via OpSpec A025.",
+    "source_url": "https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/1043396",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "The FAA has a ROADMAP for AI, not operational guidance. The FAA published its first Roadmap for Artificial Intelligence Safety Assurance on August 22 2024, which 'recommends AI safety assurance strategies'. A category-by-category search found NO FAA SAFO or InFO giving operators guidance on using AI or large language models in flight operations. PRACTICALLY: nothing forbids a Part 135 operator using AI in back-office and guest-facing work, and nothing yet blesses AI in a safety-critical or certification path.",
+    "source_url": "https://www.ainonline.com/aviation-news/futureflight/2024-08-21/faa-issues-first-artificial-intelligence-roadmap",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "There is a hard compliance clock on this segment's paperwork. AIN, April 23 2024, verbatim headline and standfirst: 'FAA Issues SMS Rules for Part 135 Operators' and 'Charter operators will have up to three years to implement a proactive safety system.' Secondary sources put the compliance date at May 28 2027 and extend the rule to Part 91.147 air tour operators, but the primary Federal Register text could NOT be fetched, so ONLY the three-year window is verified here. DO NOT ASSERT THE MAY 28 2027 DATE AS VERIFIED.",
+    "source_url": "https://www.ainonline.com/aviation-news/business-aviation/2024-04-23/faa-issues-sms-rules-part-135-operators",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "The FAA weather camera network is growing and getting a machine-vision layer. FAA, verbatim: 299 FAA weather camera sites currently, with plans to add 64 new sites by end of 2028 and a further 160 by 2031, plus 60 new VWOS sites by end of 2028. Cameras 'update every 10 minutes'. The Don Young Alaska Aviation Safety Initiative page confirms VWOS operational at Eek, Tatitlek, Healy River and Palmer, with 'Standards development underway for Part 91 and Part 135 operators to use VWOS data for flight planning'.",
+    "source_url": "https://www.faa.gov/alaska/dyaasi",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "What an operator this size can actually BUY today for guest contact, with real prices. Yonder publishes USD list pricing: AI Chatbot at $95/mo for 80 chats, $195/mo for 200 chats, $295/mo for 500 chats. Setup is a separate conversation-design engagement priced at demo. This is the ONLY vendor in the category found publishing transparent pricing, which is itself a signal. FareHarbor, TOMIS, Peek Copilot and Bluetail all publish no pricing.",
+    "source_url": "https://www.yonderhq.com/pricing",
+    "reliability": "vendor"
+   },
+   {
+    "fact": "Machine-learned weather forecasting is now operational at the source, not experimental. ECMWF took AIFS into operations on 25 February 2025 alongside the physics-based IFS, with gains 'of up to 20%' on some measures and about a 1,000x reduction in energy per forecast. ECMWF explicitly positions it as complementary rather than a replacement.",
+    "source_url": "https://www.ecmwf.int/en/about/media-centre/news/2025/ecmwfs-ai-forecasts-become-operational",
+    "reliability": "authoritative"
+   },
+   {
+    "fact": "NO air tour, flightseeing or seaplane operator anywhere was found publishing an AI deployment with a measured outcome. Searching helicopter and air tour operators specifically (Blue Hawaiian, Maverick, Papillon) returned no verifiable AI deployment. The transferable evidence in this industry comes from rafting, bungy, skydive, cruise and zipline operators, which share the weather-dependent, seasonal, high-inquiry, capacity-constrained shape but NOT the certificate.",
+    "source_url": "https://www.bluehawaiian.com/en",
+    "reliability": "authoritative"
+   }
+  ],
+  "what_was_searched_and_not_found": "Stated so nobody assumes it exists. No air tour, flightseeing or seaplane operator anywhere publishing an AI deployment with a measured outcome. No measured AI result for Part 135 crew scheduling, duty/rest tracking, load planning or weight and balance. No independent measurement of AI in SMS hazard-report classification at any operator below airline scale. No credible measured AI result in small-business bookkeeping or seasonal hiring, both searches returned vendor marketing exclusively and those numbers are deliberately absent.",
+  "confidence": "HIGH on the shape of the field, MEDIUM on the magnitude of any single number. Ten operational categories were worked, roughly 40 searches and 35 page fetches, and every number quoted came from a page that was fetched rather than a search snippet. CONFIDENT that the measured named-operator evidence sits in guest contact, booking conversion and content, and that the aircraft-facing AI products aimed at this segment have not published a single named third-party Part 135 customer with a number. Confident on the regulatory hard edges (43.9 signature, AC 120-78B, OpSpec A025) and on VEIA being live, federal, free and accuracy-published. NOT CONFIDENT on any vendor conversion or hours-saved figure, several are modelled rather than stopwatched and none isolate the AI from other changes in the same season, so none should appear as a forecast for a specific business, only as evidence the pocket is real. Federal Register and eCFR would not fetch, so the May 28 2027 SMS date rests on secondary sources while the three-year window is verified."
+ }
+}

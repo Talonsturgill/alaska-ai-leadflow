@@ -1,0 +1,7 @@
+{
+ "scenarios": {
+  "conservative": {"pursuits_per_year":138,"benefit_lines":[{"label":"Counter minutes recovered, imagery half only (CAPACITY, NOT CASH)","hours_per_pursuit":0.30,"rate":28,"cut":0.20}],"avoided_cost_lines":[],"implementation":24000,"training":2900,"run_cost_per_year":2400,"run_cost_years":4.5,"contingency":0.20,"year1_ramp":0.30,"years":5},
+  "most_likely": {"pursuits_per_year":138,"benefit_lines":[{"label":"Counter minutes recovered, imagery half only (CAPACITY, NOT CASH)","hours_per_pursuit":0.80,"rate":32,"cut":0.30}],"avoided_cost_lines":[],"implementation":24000,"training":2600,"run_cost_per_year":1800,"run_cost_years":4.5,"contingency":0.18,"year1_ramp":0.40,"years":5},
+  "aggressive": {"pursuits_per_year":138,"benefit_lines":[{"label":"Counter minutes recovered, imagery half only (CAPACITY, NOT CASH)","hours_per_pursuit":2.00,"rate":36,"cut":0.40}],"avoided_cost_lines":[],"implementation":24000,"training":2400,"run_cost_per_year":1500,"run_cost_years":4.5,"contingency":0.15,"year1_ramp":0.55,"years":5}
+ }
+}

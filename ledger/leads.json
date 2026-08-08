@@ -1,7 +1,7 @@
 {
   "version": 2,
   "note": "The record of authority for every lead. Structured fields live here. Large documents (the study object, the dossier, the rendered page, the demo) live as files under runs/<date>/<slug>/ and are referenced by study_path, because git stores documents better than a jsonb column does.",
-  "updated": "2026-08-07",
+  "updated": "2026-08-08",
   "leads": [
     {
       "company": "Goldbelt, Incorporated",
@@ -122,7 +122,7 @@
       "segment": "anc",
       "location": "Anchorage",
       "run_date": null,
-      "status": "drafted",
+      "status": "sent",
       "study_path": null,
       "source": "reconstructed from publish history + explicit owner exclusion 2026-07-29",
       "fit_score": 24,
@@ -134,7 +134,8 @@
       "recommended_build": "Capture Memory, a governed retrieval layer over BBNC's own past-performance library, generation-light, nothing auto-submitted.",
       "roi_summary": "Conservative ~$11.8k/yr capacity vs ~$133k 5yr TCO, clears as decision data. Most-likely ~$26.6k/yr payback ~45mo. Aggressive ~$59.9k/yr payback ~14mo.",
       "draft_subject": "The Field Study we built on Bristol Bay's proposal engine",
-      "gmail_draft_id": "r-3128017030108765274"
+      "gmail_draft_id": "r-3128017030108765274",
+      "sent_at": "2026-07-28T23:39:57Z"
     },
     {
       "company": "Allen Marine Tours",
@@ -161,7 +162,8 @@
       "sent_from": "docket@alaskaaihq.com",
       "sent_note": "Sent by Talon by hand after review, with light edits to voice and the closing ask. The routine drafted only.",
       "gmail_draft_id": null,
-      "notes": "SENT BY HAND by Talon after review with light edits. The routine drafted only."
+      "notes": "SENT BY HAND by Talon after review with light edits. The routine drafted only.",
+      "sent_at": "2026-07-29T13:15:40Z"
     },
     {
       "company": "Bering Straits Native Corporation",
@@ -194,7 +196,7 @@
       "domain": "abrinc.com",
       "segment": "other labor-scarce or paperwork-heavy Alaska SMBs",
       "location": "Fairbanks and Anchorage, Alaska",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 23,
       "run_date": "2026-07-30",
       "why_picked": "Employee-owned environmental research and consulting firm. Won a four-way tie at fit_total 23 on the substance of the verified contact path.",
@@ -208,14 +210,15 @@
       "roi_summary": "Conservative 24 percent recovered, no payback in five years. Most likely 106 percent, month 57. Aggressive 389 percent, month 19. No row marked verified.",
       "outcome": "Study shipped, build NOT recommended at observable volume. Break-even needs about 31 past-performance-bearing submissions a year.",
       "reconciled_note": "Recovered from Supabase on 2026-07-31. The 2026-07-30 run shipped its draft but left PR #21 unmerged, so this row never reached the git ledger.",
-      "draft_subject": "Field study for ABR on the machine learning you already do"
+      "draft_subject": "Field study for ABR on the machine learning you already do",
+      "sent_at": "2026-07-30T14:12:16Z"
     },
     {
       "company": "Calista Corporation",
       "domain": "calistacorp.com",
       "segment": "Alaska Native corporations and tribal enterprises",
       "location": "Anchorage and the Yukon-Kuskokwim Delta, Alaska",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 24,
       "run_date": "2026-07-31",
       "why_picked": "Won a three-way tie at fit_total 24 on tie-break (c), a segment we already have proof in. Values pre-screen ran before the room was spent and came back clean on detention contracting and False Claims Act history.",
@@ -228,7 +231,8 @@
       "roi_summary": "Conservative 32 percent recovered, never pays back. Most likely 118 percent, month 44. Aggressive 263 percent, month 14. No row marked verified.",
       "outcome": "Study shipped after eleven study-critic rounds. Both segment-reflex builds killed on evidence. Roster count corrected in code from 213/217 to 127, which made our own case smaller.",
       "draft_subject": "Calista's Address Unknown list and the study we did on it",
-      "gmail_draft_id": "r6795905765709933533"
+      "gmail_draft_id": "r6795905765709933533",
+      "sent_at": "2026-07-31T12:14:53Z"
     },
     {
       "company": "Medical Park Family Care",
@@ -236,7 +240,7 @@
       "segment": "healthcare",
       "location": "Anchorage",
       "run_date": "2026-08-01",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 24,
       "why_picked": "Tied at 24 with three others across all four segments and alone at reachability 5, a general business email published on its own contact page. First healthcare lead in the ledger, a segment the market notes call the highest-ROI domain in the state.",
       "contact_name": null,
@@ -248,14 +252,15 @@
       "recommended_build": "Rules-first pre-call access kit plus a structured callback queue, two weeks fixed at $13,500.",
       "roi_summary": "Conservative 1.7x over five years, 50 percent covered by cash alone, payback month 48. Zero verified rows.",
       "gmail_draft_id": "r7719449938830381340",
-      "draft_subject": "Field study for Medical Park Family Care on your morning phone peak"
+      "draft_subject": "Field study for Medical Park Family Care on your morning phone peak",
+      "sent_at": "2026-08-01T11:51:38Z"
     },
     {
       "company": "North Country Charters",
       "domain": "northcountrycharters.com",
       "segment": "tourism",
       "location": "Homer, Alaska (Homer Spit)",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 22,
       "why_picked": "Highest ICP total of 21 page-verified candidates, tied at 22 with Alaska Escrow and Title and won on the contract tiebreak, reachability level at 5 and offer_fit 5 against 4. Their own FAQ publishes the finding, that voicemails and emails aren't always seen right away and every minute counts, sitting in a paragraph that also promises to resell cancelled seats and return the deposit.",
       "contact_name": null,
@@ -268,14 +273,15 @@
       "roi_summary": "Ask is $2,800 for the measurement fortnight, not the build. Conservative recovers 104 percent counting the whole commitment avoided, 83 percent counting year one only. Both printed.",
       "gmail_draft_id": "r4069284968970934362",
       "run_date": "2026-08-02",
-      "draft_subject": "Field study on the cancellation paragraph in your FAQ"
+      "draft_subject": "Field study on the cancellation paragraph in your FAQ",
+      "sent_at": "2026-08-02T10:24:55Z"
     },
     {
       "company": "Ryan Air, Inc.",
       "domain": "ryanalaska.com",
       "segment": "other labor-scarce or paperwork-heavy Alaska SMBs (rural air cargo)",
       "location": "Anchorage HQ, with bush stations at Aniak, Bethel, Emmonak, Kotzebue, Nome, St. Mary's and Unalakleet",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 24,
       "why_picked": "Highest fit_total of the day at 24, the only candidate above 23, so no tiebreak was needed. Reachability scored the highest mark any candidate earned. A shape we had never worked, and the season is real, Western Alaska freight runs through October.",
       "contact_name": "Stefanie Miller",
@@ -288,14 +294,15 @@
       "roi_summary": "Two week measurement at Bethel. Conservative recovers 217 percent, payback month 28. The six week build it gates recovers only 57 percent conservatively and never pays back, which is why the ask shrank.",
       "gmail_draft_id": "r8074858835552895385",
       "run_date": "2026-08-03",
-      "draft_subject": "Your storage clock starts at the written notice not at the landing"
+      "draft_subject": "Your storage clock starts at the written notice not at the landing",
+      "sent_at": "2026-08-03T10:46:53Z"
     },
     {
       "company": "Tyonek Native Corporation",
       "domain": "tyonek.com",
       "segment": "Alaska Native corporations and tribal enterprises",
       "location": "Anchorage, Alaska",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 22,
       "why_picked": "Next on the replacement queue after Koniag was disqualified on ICE contracting. ANCSA village corporation, 22 federal registrations under one parent UEI with near duplicate names across states, a verified named-human contact read in clear, and a dated this-company-only finding in GAO decision B-424364.",
       "contact_name": "Stephanie Deemer",
@@ -308,14 +315,15 @@
       "roi_summary": "The ask returns $2.75 per dollar conservatively. The gated Phase 1 build recovers 4, 18 and 78 percent of five year cost and pays back in cash in NO scenario.",
       "gmail_draft_id": "r1437136797899123975",
       "run_date": "2026-08-04",
-      "draft_subject": "Tyonek affiliate past performance counts only when the documentation is attached"
+      "draft_subject": "Tyonek affiliate past performance counts only when the documentation is attached",
+      "sent_at": "2026-08-04T20:27:22Z"
     },
     {
       "company": "Fountainhead Hotels",
       "domain": "fountainheadhotels.com",
       "segment": "Tourism and visitor industry",
       "location": "Fairbanks, Alaska",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 24,
       "why_picked": "Highest ICP total in a three-way tie at 24, broken on reachability. The only one of the three with a named human and a published business email rendered as a live mailto on a page a scout actually fetched.",
       "contact_name": "Becky Kunkle",
@@ -330,14 +338,15 @@
       "live_url": "https://alaskaaihq.com/awesomeproposal/fountainhead-hotels/",
       "run_date": "2026-08-05",
       "draft_subject": "A field study on the Fountainhead summer front desks",
-      "notes": "Draft of record r6162210636023396010. Supersedes r-5102924268035691663, which opened on two of their own pages disagreeing about a date. The maintainer killed that opening as a gotcha rather than an insight, and website-defect openings are now banned in OUTREACH_CRAFT.md. Delete the superseded draft."
+      "notes": "Draft of record r6162210636023396010. Supersedes r-5102924268035691663, which opened on two of their own pages disagreeing about a date. The maintainer killed that opening as a gotcha rather than an insight, and website-defect openings are now banned in OUTREACH_CRAFT.md. Delete the superseded draft.",
+      "sent_at": "2026-08-05T10:15:41Z"
     },
     {
       "company": "Anchorage Neighborhood Health Center",
       "domain": "anhc.org",
       "segment": "Independent healthcare and elder care",
       "location": "Anchorage, Alaska",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 24,
       "why_picked": "Top ICP total of 24 across 24 page-verified candidates from four segment scouts. A 31.2M dollar FQHC with two consecutive surplus years, a published operational pain in its own words, and a verified staff contact. Two other Anchorage candidates were suppressed on the values screen before any contact.",
       "contact_name": null,
@@ -352,14 +361,15 @@
       "live_url": "https://alaskaaihq.com/awesomeproposal/anchorage-neighborhood-health-center/",
       "run_date": "2026-08-06",
       "draft_subject": "Field study on the ANHC new patient intake loop",
-      "notes": "THE FACT THAT SHAPED THE RUN: ANHC already runs an ambient AI documentation tool in clinical production, ahead of every Alaska FQHC peer checked. They are not behind and not AI novices, and any future touch that implies either is factually wrong. Patient-majority board meets monthly, so decision latency runs in months and urgency reads badly to that governance. Fiscal year ends June 30th, not September 30th. Draft of record r107419310266212095, nothing superseded. study-critic shipped on round 5, lead-critic on round 1."
+      "notes": "THE FACT THAT SHAPED THE RUN: ANHC already runs an ambient AI documentation tool in clinical production, ahead of every Alaska FQHC peer checked. They are not behind and not AI novices, and any future touch that implies either is factually wrong. Patient-majority board meets monthly, so decision latency runs in months and urgency reads badly to that governance. Fiscal year ends June 30th, not September 30th. Draft of record r107419310266212095, nothing superseded. study-critic shipped on round 5, lead-critic on round 1.",
+      "sent_at": "2026-08-06T11:59:54Z"
     },
     {
       "company": "R&M Consultants, Inc.",
       "domain": "rmconsult.com",
       "segment": "Other labor-scarce or paperwork-heavy Alaska SMBs",
       "location": "Anchorage, Alaska",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 24,
       "why_picked": "Highest and unshared fit total of 23 page-verified candidates across four segments. Only candidate scoring 5 on reachability, which is the criterion that most often sinks a strong lead at Phase 2. Employee-owned Alaska engineering and surveying firm, 100+ staff, four offices, nearly 95 percent public-client work, CMMC Level 2 certified.",
       "contact_name": "Len Story",
@@ -374,7 +384,29 @@
       "draft_subject": "Checking R&M pay estimates before they go out",
       "notes": "study-critic SHIP on round 6, lead-critic SHIP on round 3. Both email rejections were BRIEF failures rather than writing failures, so the opening fact was changed twice rather than the sentences patched. Fact-checked twice against live pages; 19 rejections applied across both passes. Michael Baker's Titan blog returned 503 on four attempts across two agents, so the claim that it targets proposals was DROPPED entirely and the competitive section rests on the PR Newswire release. HDL Engineering could not be read and is recorded unassessed, not clean.",
       "run_date": "2026-08-07",
-      "gmail_draft_id": "r3522794532675219951"
+      "gmail_draft_id": "r3522794532675219951",
+      "sent_at": "2026-08-07T11:40:50Z"
+    },
+    {
+      "company": "Talkeetna Air Taxi",
+      "domain": "talkeetnaair.com",
+      "segment": "Tourism and visitor industry",
+      "location": "Talkeetna, Alaska",
+      "status": "drafted",
+      "fit_score": 24,
+      "why_picked": "Top of 23 page-verified candidates across four segments, after a 24-24 tie with The Kuskokwim Corporation broken on reachability-as-evidenced. talkeetnaair.com renders and names its decision-makers, kuskokwim.com serves an empty body to a fetcher and so does its subsidiary tumeq.com, so every Kuskokwim fact traced to a third party page. One of only four NPS Denali glacier landing concessionaires for 2020 to 2029, ten aircraft, 21 named staff, a May 1 to September 15 season.",
+      "contact_name": "Talkeetna Air Taxi general inbox",
+      "contact_role": "The address the company itself publishes as the way to reach its named leaders. Its team page carries no individual staff addresses at all, and every leader's contact link is Cloudflare-obfuscated to this one inbox.",
+      "contact_email": "info@talkeetnaair.com",
+      "contact_source": "https://www.talkeetnaair.com/contact/ , decoded from Cloudflare email-protection obfuscation and corroborated on the team page and the employment page. courtney@talkeetnaair.com was surfaced by an aggregator with the local part masked and was REJECTED, never used.",
+      "study_path": "runs/2026-08-08/talkeetna-air-taxi/",
+      "live_url": "https://alaskaaihq.com/awesomeproposal/talkeetna-air-taxi/",
+      "outcome": "Phase one contains NO AI AT ALL, and that is the finding rather than a hedge. The conscience cut both ways, killing the guest-facing assistant AND a model the strategist had smuggled into a different build where seven of eight verified form fields were already structured. The full 24,000 dollar phase one's conservative case does NOT pay back, recovering 44 percent of five-year cost, and the study prints that rather than tuning an assumption. The ask is staged at 9,500 with the page released only by the prospect's own counted week, and the study says outright that no return was modelled on the first stage.",
+      "recommended_build": "The Facts Spine first, then the Conditions Board, shipped as one thing. A structured record holding every customer-facing fact, since three of their pages publish three different staffed-hours answers, plus a mobile conditions page at talkeetnaair.com/denali-webcam/, an address that currently 301s to their homepage and serves no camera. Public FAA camera frames with an age stamped on every one, the current observation, the Weather Service forecast attributed on the face of the page, and ONE current status the counter flips that auto-expires back to the company's own FAQ sentence. No model anywhere. The go/no-go call stays with a person at check-in.",
+      "roi_summary": "Break-even at roughly one retained seat every other staffed day, computed in roi_math.py. Conservative 44 percent of five-year cost recovered with NO payback, most likely 133 percent with payback in month 45, aggressive 362 percent in month 19. Counter minutes recovered cover only 2 to 47 percent and are printed precisely because they argue against us, rebutting the vendor hours-saved formula this industry is sold. No verified call volume exists anywhere, so every volume driver is labelled assumed and the case is a break-even rather than a projection.",
+      "gmail_draft_id": "r9090092739872712372",
+      "subject": "Field study on the day-of weather calls and one published number",
+      "run_date": "2026-08-08"
     }
   ]
 }

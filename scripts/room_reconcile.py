@@ -340,17 +340,94 @@ def main():
             return REFUSAL + BUY_REFUSAL
         return REFUSAL
 
+    def kill_subjects():
+        """The killed capabilities, whatever shape the conscience returned them in.
+
+        On 2026-08-08 this crashed the whole script with an AttributeError,
+        because the ai-feasibility-engineer returned kill_list entries as
+        {"capability": ..., "why": ...} objects rather than bare strings, which
+        is a more useful shape and one its own `# OUTPUT` block does not forbid.
+        A gate that dies on a legitimate output is worse than a gate that fails,
+        because the run in front of it is under pressure and will skip it.
+
+        Accept both shapes. Take the capability text and drop the reason, since
+        only the subject is matched against.
+        """
+        out = []
+        raw = (feas or {}).get("kill_list") or []
+        if isinstance(raw, dict):          # a mapping of capability -> why
+            raw = list(raw.keys())
+        for k in raw:
+            if isinstance(k, str):
+                out.append(k)
+            elif isinstance(k, dict):
+                # Prefer the documented key, then any obvious synonym, and fall
+                # back to the longest string value rather than silently skipping
+                # an entry, because a dropped kill is a kill that stops binding.
+                v = (k.get("capability") or k.get("item") or k.get("kill")
+                     or k.get("subject") or k.get("what"))
+                if not v:
+                    vals = [s for s in k.values() if isinstance(s, str)]
+                    v = max(vals, key=len) if vals else None
+                if v:
+                    out.append(v)
+        return out
+
+    killed = kill_subjects()
+
+    # A kill list that is missing or empty makes check 1 examine nothing while
+    # still reporting success, which is the exact failure mode this script was
+    # written to stop. Say so out loud rather than passing quietly.
+    if not killed:
+        notes.append("NO KILL LIST. feasibility.json carries no kill_list entries, so "
+                     "the killed-capability check examined nothing this run. That is "
+                     "either a conscience that killed nothing, which is rare, or a "
+                     "shape this reader did not understand.")
+
+    # A string's PATH can make it a refusal by construction, and ignoring that
+    # made this check unusable on 2026-08-08. It raised 27 failures and every
+    # single one was a false positive of the same shape: a non-goal recorded as
+    # {"item": "<the killed thing>", "reason": "<why we refuse it>"}. The item
+    # field NAMES the capability with no hedge in it, because the hedge is the
+    # sibling reason field and because sitting in a non_goals list IS the hedge.
+    #
+    # That is the opposite of the defect this check exists to catch, and the
+    # run contract explicitly demands non-goals be stated that way. A gate that
+    # fails a document for obeying the contract teaches the next run to skip
+    # the gate, so the path is now part of the reading.
+    #
+    # Narrow on purpose. Only these containers, and a non_goals entry still has
+    # to carry a reason, or it is a bare refusal nobody justified and it warns.
+    REFUSING_CONTAINERS = ("non_goals", "non_goal", "not_doing", "out_of_scope",
+                           "kill_list", "killed", "excluded")
+    ASKING_CONTAINERS = ("open_questions", "questions", "risks", "assumptions")
+
+    def container_of(path):
+        return re.findall(r"\.([A-Za-z_]+)", path or "")
+
     def scan_for_killed(label, section):
         for path, text in strings(section):
             low = norm(text)
-            for k in ((feas or {}).get("kill_list") or []):
-                subject = k.split(".")[0]
+            parts = container_of(path)
+            in_refusing = any(p in REFUSING_CONTAINERS for p in parts)
+            in_asking = any(p in ASKING_CONTAINERS for p in parts)
+            for subject in killed:
                 if not mentions(low, subject, need=3):
                     continue
+                if in_refusing:
+                    notes.append(f"{label} names the killed item inside a refusing "
+                                 f"section ({parts[0] if parts else '?'}), which is "
+                                 f"compliance: {subject[:56]}")
+                    continue
+                if in_asking:
+                    notes.append(f"{label} raises the killed item as a question or a "
+                                 f"risk rather than a promise: {subject[:56]}")
+                    continue
                 markers = refusal_markers(subject)
-                # The hedge must sit in THIS string, not merely somewhere in the
-                # section. One correct refusal elsewhere must not immunise a
-                # promise here, which is exactly the bug this check shipped with.
+                # Outside those containers the hedge must sit in THIS string, not
+                # merely somewhere in the section. One correct refusal elsewhere
+                # must not immunise a promise here, which is the bug this check
+                # shipped with.
                 if any(h in low for h in markers):
                     notes.append(f"{label} references the killed item and refuses it "
                                  f"in place: {subject[:64]}")

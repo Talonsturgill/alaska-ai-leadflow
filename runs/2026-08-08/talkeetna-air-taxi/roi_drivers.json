@@ -1,0 +1,8 @@
+{
+ "mapping_note": "Two separate driver sets, and they are NEVER summed. scenarios is CASH ONLY and is what produces TCO, percent recovered and payback. capacity_scenarios is the counter-minutes line and is printed under its own CAPACITY heading with an explicit note that it is not money. For the cash set pursuits_per_year is staffed_days_per_season, and the avoided_cost_line reads events_per_year as staffed days, cost_per_event as contribution dollars per retained seat, and reduction as retained SEATS PER STAFFED DAY.",
+ "scenarios": {
+  "conservative": {"pursuits_per_year":138,"benefit_lines":[],"avoided_cost_lines":[{"label":"Flightseeing seats retained on marginal-weather mornings (CASH)","events_per_year":138,"cost_per_event":135,"reduction":0.25}],"implementation":24000,"training":2900,"run_cost_per_year":2400,"run_cost_years":4.5,"contingency":0.20,"year1_ramp":0.30,"years":5},
+  "most_likely": {"pursuits_per_year":138,"benefit_lines":[],"avoided_cost_lines":[{"label":"Flightseeing seats retained on marginal-weather mornings (CASH)","events_per_year":138,"cost_per_event":180,"reduction":0.50}],"implementation":24000,"training":2600,"run_cost_per_year":1800,"run_cost_years":4.5,"contingency":0.18,"year1_ramp":0.40,"years":5},
+  "aggressive": {"pursuits_per_year":138,"benefit_lines":[],"avoided_cost_lines":[{"label":"Flightseeing seats retained on marginal-weather mornings (CASH)","events_per_year":138,"cost_per_event":220,"reduction":1.00}],"implementation":24000,"training":2400,"run_cost_per_year":1500,"run_cost_years":4.5,"contingency":0.15,"year1_ramp":0.55,"years":5}
+ }
+}
