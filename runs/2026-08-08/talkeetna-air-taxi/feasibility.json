@@ -1,0 +1,186 @@
+{
+ "audit_of": "Talkeetna Air Taxi, run 2026-08-08",
+ "posture": "The strategist's restraint is largely correct and is NOT performed. It survives the ladder on its merits. Two findings cut the other way, one build has a model smuggled into it that does not need to be there, and one has a model on a node that is already structured. Three spec defects on the provisional pick would have shipped.",
+ "per_candidate": [
+  {
+   "candidate": "A. The Conditions Board",
+   "lowest_tier": "rules",
+   "ladder_walk": "Rules and deterministic software clears it. Retrieval buys nothing, there is no corpus to search. A single LLM call has no job here, the imagery is the product. A workflow is unnecessary, the page is a fetch and a render on a timer. An agent is absurd. LOWEST TIER THAT CLEARS THE BAR IS TIER 1.",
+   "is_it_actually_model_free": "Mostly yes, and the claim is honest at the level the strategist meant it, the build owns no model. It is loose at the level an engineer will read it, because the PAGE carries third party model output and four places invite a model to sneak in. The NWS forecast is numerical weather prediction plus a human forecaster, so it is model output republished under TAT's domain, and must be attributed on the face of the page. A derived visibility estimate rendered unlabelled would import someone else's model and present it as fact. Camera health must be timestamp arithmetic, not image classification. Decoding a raw observation is a formal grammar parse, never an LLM. Site selection must be a fixed configured list.",
+   "cost_of_error": "The strategist analysed one direction and missed the expensive one. FALSE FLYING costs goodwill and counter time and does NOT create new refund liability, because the published refund is already unconditional at 100 percent. FALSE DOWN OR STALE HOLDING is the direction that costs money, because a customer who reads Holding at 9 AM and stands down on a day that cleared by 11 converts a paid seat into a refund plus a seat that can no longer be sold, on a 10 seat DHC-3 at 275 to 547 dollars a seat. The confusion matrix is asymmetric and the asymmetry runs AGAINST the direction the strategist guarded. GEOGRAPHY IS THE SHARPEST EXPOSURE. A camera in the Talkeetna valley reports the valley. J1 is about the mountain, 40 to 60 miles away, and a customer reading a clear valley camera as a green light for a Summit Tour has been given exactly the implied promise this build was supposed to avoid.",
+   "spec_defect_found": "The strategist specifies one field the counter flips PER TOUR BLOCK. A status on a 2 PM block set at 10 AM is a forward looking statement published on their own domain, by name. That is a forecast wearing a status field's clothes. CHANGE, the field carries CURRENT status only, stamped as of a clock time, never a future block.",
+   "staleness_finding": "The auto expiry is honest and the default is correct, because it expires to their own existing FAQ sentence, so the board's degraded state EQUALS today's behaviour and it can never be worse than the status quo. That property is what makes it safe to ship. The risk it moves rather than removes is different from the one named. The board does not go stale and lie, it goes BLANK, and it goes blank exactly when it matters, on a marginal weather morning with a queue at the desk. DEFLECTION IS NEGATIVELY CORRELATED WITH NEED. CONSEQUENCE, no ROI may be modelled on the status field. Model the value on the imagery half, which needs no human input and works hardest on the worst days.",
+   "data_readiness": "Best in the file and still not clean. Public FAA camera feeds, public observations and public NWS forecasts need nothing extracted from TAT. Two real gaps. This package contains NO verified claim about which FAA camera sites exist near Talkeetna or the Alaska Range, so coverage for the Ruth, Kahiltna, Tokositna West, Root Canal and Kichatna Spires is UNVERIFIED and is a one day pre build check. Recovering the /denali-webcam/ path requires hosting or DNS access nobody has confirmed.",
+   "compounding_error": "Not applicable in the agent sense. Two machine steps, fetch and render, both deterministic, both retryable, failure mode is a visible stale timestamp rather than a wrong answer.",
+   "verdict": "SURVIVES",
+   "change_or_reason": "Keeps, with four binding changes. Current status only, never a future block. Cameras labelled by site and by distance from the route. No derived visibility estimate unless labelled with provenance and error bar. Camera health by timestamp only. ROI modelled on the imagery half alone."
+  },
+  {
+   "candidate": "B. The Facts Spine",
+   "lowest_tier": "rules",
+   "ladder_walk": "Tier 1 and it never leaves tier 1. One structured record per fact, every page renders from it. This is a database and a template. A model asked to reconcile three published hours would be guessing at a fact only the owner knows.",
+   "cost_of_error": "Lowest in the file and the errors are visible and reversible. The one real risk is that single sourcing propagates a mistake everywhere at once, handled by a dated last reviewed stamp per fact and one named owner.",
+   "data_readiness": "The contradiction is verified across three separately fetched pages. The data does not need to be FOUND, it needs to be DECIDED, and only they can decide it. That is the dependency and it is on them.",
+   "compounding_error": "None. Deterministic render, testable exhaustively.",
+   "verdict": "SURVIVES",
+   "change_or_reason": "Keeps unchanged and should be named as the FIRST deliverable rather than build A's warm up. It is the only item that pays for itself even if everything else is rejected, and it is the hard prerequisite for C. Schedule the content working session in the shoulder season, because asking the counter for a working session between May 1 and September 15 is asking the wrong person at the wrong time."
+  },
+  {
+   "candidate": "C. The Counter Copilot",
+   "lowest_tier": "retrieval",
+   "ladder_walk": "Rules alone fails, the question space at a counter is open language over a few hundred facts. Retrieval over a bounded corpus with citations is the LOWEST TIER THAT CLEARS. A workflow is unearned. An agent is flatly rejected.",
+   "cost_of_error": "Moderate on policy questions, severe on three classes that must be blocked DETERMINISTICALLY rather than trusted to model caution. Any number goes to the calculator and the retrieval side is forbidden from emitting a figure at all. Anything weather or flyability shaped is refused outright. The climber intake sequence is refused, because NPS check in then weigh gear then pay is an ordered regulated intake. Enforce all three at a deterministic intent allowlist on the way IN, not by asking one model to police itself.",
+   "data_readiness": "THE BINDING CONSTRAINT, AND THE STRATEGIST GATED ON THE WRONG THING. It gates C on whether contact volume is material. Volume decides whether C is WORTH it, the corpus decides whether it WORKS, and only the second is a blocker. Worse is maintenance. The corpus is edited over winter when the business is least staffed and goes live in April to a counter that is fully novice by design, so a stale corpus plus a novice user plus confident retrieval makes the error undetectable at the point of use. There is also a sequencing fact nobody stated. The eval set has to be built from REAL counter questions, and those only arrive while the counter is open, so an eval set started after September 15 2026 cannot exist before May 2027 and C is a 2028 build unless question capture starts in the weeks remaining this season.",
+   "compounding_error": "Shallow by design. At a realistic 90 percent retrieval hit rate and roughly 92 percent faithful generation, correct and cited end to end is about 0.83 on in-corpus questions. The human checkpoint is only real if the human can tell, and a first week April hire cannot. The citation is therefore the control, and any answer with no source is SUPPRESSED rather than generated.",
+   "transfer_honesty": "The NBER mechanism genuinely transfers, a workforce that resets every April is permanently the population where the effect was largest. The MAGNITUDE almost certainly does not. That study measured a large support organisation with logged transcripts. TAT has no transcripts asserted anywhere and a self-contradictory corpus. FOURTEEN PERCENT OF A NUMBER NOBODY HAS MEASURED IS NOT A BUSINESS CASE.",
+   "verdict": "DOWNSCOPE",
+   "change_or_reason": "Keeps as phase 2 and stays OUT of the current commitment, with the gate rewritten. TWO gates. Gate one, build B shipped and the corpus held single sourced through a full off season with a named owner. Gate two, an eval set of real counter questions with human labelled answers, captured from a live season. The volume tally is a sizing input, not a blocker."
+  },
+  {
+   "candidate": "D. The Expedition and Charter Desk",
+   "lowest_tier": "rules",
+   "ladder_walk": "The strategist walked to workflow with a model on one node and stopped. The ladder stops LOWER. The verified form fields are Name, Email, Phone, Drop Off Location, Expeditions Name, Number of Climbers, Date, Additional Comments. SEVEN OF EIGHT FIELDS ARE ALREADY STRUCTURED. The node where a model was said to earn its keep is one free text comments box. Version one is a pure rules engine, TIER 1, NO MODEL.",
+   "cost_of_error": "High per unit and asymmetric. A wrong figure on a 1,200 dollar Kichatna Spires drop is a refund and a reputation hit in a town with four concessionaires. REGULATED BOUNDARY, the proposed gear and weight worksheet is one careless step from a load sheet. Billable weight against the 125 pound allowance is commercial arithmetic and is fine. Aircraft loading, centre of gravity or aircraft assignment is a regulated flight operations function and is KILLED.",
+   "data_readiness": "Weakest integration picture in the file and the guardrails forbid guessing at it. Twelve person weeks against an unknown integration surface is a placeholder, not an estimate.",
+   "compounding_error": "For the version with the parse, eight fields at roughly 90 percent per field gives all eight correct at about 0.43. The honest framing is that the model would reduce TYPING, not errors, and the human review is the control rather than a formality. In version one, with no parse, none of this arises.",
+   "verdict": "DOWNSCOPE",
+   "change_or_reason": "Strip the LLM parse from version one entirely. Version one becomes a deterministic quote engine plus a tracked pipeline plus a mandatory human send, and the estimate should fall well below 12 weeks. Stays in the Next lane behind a discovery session. Quote send stays human, always. Gear worksheet outputs billable weight only."
+  },
+  {
+   "candidate": "E. The Guest Assistant",
+   "lowest_tier": "single_llm",
+   "ladder_walk": "Irrelevant, the build fails before the ladder is walked, on build versus buy and on cost of error.",
+   "cost_of_error": "The worst in the file, because the highest frequency guest question is is it flying today, the exact question the operation deliberately routes to a human briefing. A wrong answer costs a customer their day and TAT a seat under an unconditional 100 percent refund, with no human checkpoint anywhere in the loop.",
+   "build_versus_buy": "Their own booking platform announced FareHarbor Agent on April 27 2026, rolling out now. Yonder lists 95 to 295 dollars a month. Selling roughly 8 person weeks for a commodity the incumbent may hand them free is the anti-pattern named in the scoping doc.",
+   "verdict": "KILL",
+   "change_or_reason": "Killed as a build, kept as a WATCH ITEM with the reason INVERTED, and this is the most valuable sentence we can hand them. FareHarbor Agent is not only a reason for TAT not to buy from us, it is a RISK TO THEM. If their own booking vendor's assistant starts answering is it flying today in TAT's name, the vendor will have automated the single decision TAT's reputation rests on keeping human, inside a channel TAT does not control, under a 100 percent refund policy TAT pays for."
+  }
+ ],
+ "kill_list": [
+  {
+   "capability": "Any model generated flyability, go/no-go or should-you-fly verdict, in any build, staff facing or guest facing",
+   "why": "The independent 2025 benchmark of 147,182 images across 444 FAA camera sites found no model reaching the FAA accuracy threshold, best average error about 1.8 statute miles, and the decision is deliberately handed to the customer after a human briefing."
+  },
+  {
+   "capability": "Rendering a derived visibility estimate as TAT's own figure",
+   "why": "That imports a third party model's output and republishes it as fact under their domain. Label it with provenance and error bar or drop it."
+  },
+  {
+   "capability": "A vision model classifying whether a camera image is usable, clear, or obscured",
+   "why": "This is the exact place a model sneaks into a build described as model free. Camera health is timestamp arithmetic."
+  },
+  {
+   "capability": "An LLM decoding raw observation or METAR text into plain English",
+   "why": "It is a formal grammar with a fixed lookup table. A parser is exhaustively testable and free."
+  },
+  {
+   "capability": "Model selected or dynamically chosen camera sites",
+   "why": "The site list is a fixed configured decision made once by a human."
+  },
+  {
+   "capability": "A forward looking per tour block status published as fact",
+   "why": "A status set on a future block is a forecast, and a forecast published on their own domain is the implied promise the build exists to avoid."
+  },
+  {
+   "capability": "Automated advance notification of a weather cancellation to customers",
+   "why": "Their published policy is that they do not notify in advance and instruct customers to call. Automating a notification changes a policy into a promise and manufactures refunds when it is wrong."
+  },
+  {
+   "capability": "Any price, fee, tax, weight, allowance or duration figure generated by a model",
+   "why": "Every one is a published rule and every one is checkable by the customer. Arithmetic goes in code."
+  },
+  {
+   "capability": "Retrieval answers on the climber NPS check in, gear weighing and payment sequence",
+   "why": "It is an ordered regulated intake and a novice being told the wrong order is a real world failure at the counter."
+  },
+  {
+   "capability": "Any retrieval answer emitted without a source citation",
+   "why": "The citation is the control that makes a novice's review real. No source means suppress, never generate."
+  },
+  {
+   "capability": "The LLM parse node in the expedition desk version one",
+   "why": "Seven of the eight verified form fields are already structured. The model was placed on a node that does not need one."
+  },
+  {
+   "capability": "Autonomous quote sending, date holding or payment taking",
+   "why": "High value irreversible action at 650 to 1,800 dollars a unit. Human send, always."
+  },
+  {
+   "capability": "Any weight and balance, load sheet, centre of gravity or aircraft assignment output",
+   "why": "Regulated flight operations, unrecoverable when wrong, and we hold no operational data. The quote worksheet emits billable weight only."
+  },
+  {
+   "capability": "Any maintenance record, airworthiness determination or return to service artifact",
+   "why": "14 CFR 43.9 makes a certificated person's signature the only thing that returns an aircraft to service. Nothing we build goes near it."
+  },
+  {
+   "capability": "Dispatch or flight release decisions of any kind",
+   "why": "Safety critical, regulated, and no verified operational data exists in this package."
+  },
+  {
+   "capability": "Guest facing chatbot or voice agent, on the site or the phone line",
+   "why": "Commodity their incumbent platform is already rolling out, thin operator evidence, and it would answer the one question that costs a refund with no human in the loop."
+  },
+  {
+   "capability": "A Part 135 safety management system build",
+   "why": "No verified claim describes their current SMS state, so proposing it invents a need. It stays a question to ask, not a gap to claim."
+  },
+  {
+   "capability": "Any review, sentiment, reputation or content build",
+   "why": "TripAdvisor and Yelp returned 403 and Birdeye was never fetched. No usable review data exists."
+  },
+  {
+   "capability": "A hiring or recruiting tool",
+   "why": "No claim describes a recruiting bottleneck. Ground school and check rides are the constraint and neither is software shaped."
+  },
+  {
+   "capability": "Anything touching the family band radio broadcast or the basecamp voice relay",
+   "why": "Constrained by connectivity on a glacier, not by software. There is nothing honest to sell here."
+  },
+  {
+   "capability": "Standby, waitlist or seat recovery automation, AI or otherwise, in this engagement",
+   "why": "Zero verified evidence about how often a weather walk off happens or how many seats it involves. Proposing it would be inventing a need."
+  },
+  {
+   "capability": "Multilingual or translation features",
+   "why": "No verified claim establishes an international share, and no language switcher was found on any of the three sites checked."
+  }
+ ],
+ "recommended_pick": {
+  "name": "The Facts Spine first, then the Conditions Board, shipped as one thing",
+  "differs_from_strategist": "No on substance, yes on emphasis and on three spec corrections. The order is flipped in the naming so the spine is the deliverable rather than the warm up, the board's value case rests on the imagery half rather than the human status field, and the status field carries current status only.",
+  "why_it_survives": "It is the lowest tier on the ladder that clears the bar, and it clears it. Three separately verified facts converge on the target rather than one inferred pain. The build has no model to be wrong, no verdict to argue with in a refund conversation, and a degraded state that is literally their current published behaviour, so its worst case equals today. It strengthens the human briefing they built their reputation on rather than replacing it. It is the cheapest thing on the list and it fits inside the only window that matters, live and shaken out before the last half of April 2027.",
+  "the_free_action_available_right_now": "The single highest leverage item in this whole study costs a notepad. The 2026 season is open until September 15, roughly five weeks from today. One week of tally marks at the desk NOW, counting day-of conditions contacts and hours or price questions, gives a real 2026 baseline, lets the board ship for the 2027 season with a genuine before and after, and starts the question capture that the copilot's eval set later depends on. Waiting until 2027 to take the baseline pushes the comparison to 2028.",
+  "binding_conditions": [
+   "Verify FAA camera coverage for the actual routes before committing. This package contains no verified claim about which sites exist near Talkeetna or the Alaska Range. One day of checking, not a risk to bury.",
+   "Confirm hosting or DNS access for the /denali-webcam/ path recovery before the estimate hardens.",
+   "Label every camera by site and by its relation to the tour route. A clear valley camera is not a clear mountain.",
+   "Attribute the NWS forecast on the face of the page. It is third party model output republished under their name.",
+   "Expiry copy is their own existing FAQ sentence, so the degraded board equals the status quo.",
+   "Schedule the content working session outside May 1 to September 15."
+  ]
+ },
+ "where_not_to_use_AI": "No model touches the go/no-go call, the fee stack, the weight sheet or the office hours. The launch decision stays with a person at check in because the best independent benchmark in this exact domain found no model reaching the FAA's accuracy threshold across 147,182 images from 444 camera sites, every number a customer could check is computed in code where it can be tested exhaustively rather than generated where it can be plausible, and one correct answer per published fact is a content problem a database solves outright and a model only guesses at.",
+ "honest_ai_case": {
+  "verdict": "AI genuinely earns its place in exactly one seat in this business, staff facing at the counter, and the strategist is right to want it and right not to sell it yet.",
+  "where": "A retrieval copilot for the person on the counter, not for the customer. The pattern has the strongest independent measurement in the whole package behind it, 5,179 support agents, 14 percent more issues resolved per hour on average and 34 percent for novice and low skilled workers. A counter that re-staffs every April is permanently the novice population where that effect was largest, so the fit is specific rather than generic.",
+  "what_would_have_to_be_true_first": [
+   "One source of truth holding through a full off season with a named owner and a dated last reviewed stamp per fact.",
+   "An eval set of real counter questions with human labelled correct answers, captured from a live season. THIS IS THE SEQUENCING TRAP. Those questions only arrive while the counter is open, which makes the remaining weeks of 2026 the cheapest window available.",
+   "A measured baseline showing the contact volume is material. No verified figure for call volume exists anywhere in this package.",
+   "Hard architectural separation, retrieval answers policy and procedure, a deterministic calculator answers money, and the two never blend."
+  ],
+  "what_we_would_not_pretend": "We would use a model ourselves to read their pages and produce the contradiction diff that starts the Facts Spine. That is us using AI to do the work, which is not the same thing as selling them AI as the work, and the difference is the whole point of this study."
+ },
+ "honest_flags": [
+  "THE GO/NO-GO PROTECTION STANDS ON FOUR LEGS, NOT ONE. The 2025 benchmark measures visibility ESTIMATION from camera images. The thing being protected is a flight DECISION, which also involves ceiling, turbulence, glacier surface, route and passenger mix. The benchmark is necessary evidence, not sufficient. The protection stands on the negative benchmark, a cost of error that is a customer's day plus a full refund, the fact that the handoff of the decision to the customer IS the product, and VEIA showing its estimate alongside the imagery rather than instead of it.",
+  "VEIA at more than 90 percent and the 2025 benchmark finding no model reaches the threshold are NOT in contradiction and must never be presented as either a contradiction or as mutually reinforcing without naming the task each measured. One is binary detection of a low visibility condition, the other is continuous visibility estimation against an accuracy bar.",
+  "The board's deflection is NEGATIVELY CORRELATED WITH NEED on its human half. State this in the study, do not hide it, and rest the ROI on the imagery half.",
+  "Under an unconditional 100 percent refund the expensive error direction is a FALSE DOWN, not a false flying.",
+  "No verified claim describes call volume, flightseeing volume, TAT's share of the 981 registered 2026 Denali climbers, their booking software behind the counter, or their current SMS state. Every one is a question to ask on the call, and none may be inferred into a number.",
+  "FAA camera site coverage for the Alaska Range routes is unverified in this package. The pick depends on it and the study must say so rather than assume it.",
+  "Nothing recommended touches a regulated function.",
+  "Seasonality is a hard gate, not a preference. A build landing in June is a build that missed 2027.",
+  "The drift_pattern warning was respected. Nothing in this audit characterises TAT as primitive or troubled. The manual parts read as deliberate choices, and the unconditional refund and the NPS concession are carried as the counterweights they are."
+ ]
+}

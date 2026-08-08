@@ -1,0 +1,688 @@
+{
+ "prd": {
+  "problem": "Your flightseeing FAQ tells every customer the same thing. \"please call us the day you are flying to inquire about weather\". That one sentence is a published policy, and it manufactures a contact for every booked guest on every day of a season the site describes as running May 1 to September 15. Your careers page describes who takes that contact. One role, doing \"Greeting and checking in scenic passengers and climbers, collecting payments, answering phone calls, taking reservations as well as responding to email inquiries, processing online reservations & being a team player.\" The same person is working a check-in queue that opens 45 minutes before every departure and an ordered climber intake of NPS check-in, then weigh gear, then pay.\n\nThat contact is harder to answer well than it needs to be, because your own pages disagree with each other. Three of them publish three different staffed-hours answers, 7 AM until 7 PM on the climbing support FAQ, 7 AM until 9 PM on the flightseeing FAQ at the second URL, and 7:30 am to 6:30 pm with a 9:00 am to 3:00 pm winter on the third. Your flightseeing index shows \"From $304 per Adult\" for the Southside Explorer while the Southside Explorer page itself shows $275 for adults. That gap reconciles almost exactly to the 7.5 percent Federal Transportation Tax plus the 3 percent Borough Tax you publish on the climbing support page, though we modelled that reconciliation and no page of yours states it. A customer who can't settle a published fact settles it by phoning, and that lands back on the same desk.\n\nThe page a customer would look at instead is currently gone. talkeetnaair.com/denali-webcam/ returns a 301 to your homepage and serves no camera, so every old link and bookmark pointing at it is dead. K2 carries a live webcam link at the top of its FAQ page, pointing at the Talkeetna Alaskan Lodge camera. The operator with one of only four federal Denali glacier landing concessions for 2020 to 2029, and the most generous published refund policy in town at an unconditional 100 percent, is the one telling customers to phone in for conditions while a competitor links someone else's picture.\n\nNone of this is a criticism of how you run the counter. The briefing at check-in, given face to face, with the decision handed to the customer, is the product rather than a bottleneck, and your office manager's own bio credits her ability to forecast the weather rather than any system. Those are assets and they read as deliberate choices. The problem is narrower than it looks and it sits on your website, not at your desk. The contact volume is manufactured by published facts that contradict each other and by a policy sentence with nothing behind it to point at.\n\nThe timing is the sharpest part of it. Your season closes September 15, roughly five weeks out, and your pilots attend one week of ground school in Talkeetna in the last half of April. Anything not live and shaken out before that April window misses a whole operating year, and the only chance to measure what today actually costs closes with the season.",
+  "after_state": "By the time the counter opens for the 2027 season, a guest with a flight booked that morning wakes up in Anchorage, opens talkeetnaair.com/denali-webcam/ on a phone, sees the actual camera pictures and the current observations rather than anyone's verdict, and drives up already knowing what the sky is doing. Every page they read on the way gives the same answer to the same question, and the price they see is the price plus a tax line they can follow. The visibility briefing still happens face to face at check-in and the decision is still theirs, exactly as your FAQ says today. The one thing that changed is how much of the day the person at the desk spends re-answering questions your own website could have answered.",
+  "goals": [
+   "One published answer per customer-facing fact. Staffed hours, tour fares, the $125 glacier landing add-on, the $15 park entrance fee, the 125 pound gear allowance and the $2 per pound overweight rate, the $40 base camp fee, the two tax lines, the 4 and 2 passenger minimums, and the 45 minute check-in window all live in one record, and every page renders from it.",
+   "A page you own, at the /denali-webcam/ path that currently 301s, showing public FAA weather camera imagery, current observations and the NWS forecast side by side, so a customer has somewhere to look before they drive and the counter has a link to send instead of a conversation to have.",
+   "Recover the dead /denali-webcam/ URL so every old link and bookmark pointing at it resolves again.",
+   "Protect the check-in briefing and the human go/no-go call by design, not by promise. Nothing in this build states or implies whether a flight will go.",
+   "Produce a real 2026 baseline for day-of conditions contacts before the season closes on September 15, and repeat the identical measurement in 2027, so you can decide whether any further phase is worth funding from your own numbers rather than from ours.",
+   "Live and shaken out before the last half of April 2027, because a build landing in June is a build that missed the operating year."
+  ],
+  "non_goals": [
+   {
+    "item": "Any go/no-go, flyability or should-you-fly verdict, model generated or otherwise, guest facing or staff facing",
+    "reason": "An independent 2025 benchmark of 147,182 images from 444 FAA weather camera sites found no model reached the FAA's accuracy threshold, with best average error about 1.8 statute miles. Beyond that, your FAQ already hands the decision to the customer after a human briefing, so the decision is the product. We are not touching it in any phase."
+   },
+   {
+    "item": "A forward-looking per tour block status, for example setting the 2 PM block at 10 AM",
+    "reason": "A status set on a future block is a forecast, and a forecast published on your own domain under your own name is an implied promise. The status field carries current conditions only, stamped with the clock time it was set."
+   },
+   {
+    "item": "A guest-facing chatbot or voice agent, on the site or the phone line",
+    "reason": "Three reasons, each sufficient. FareHarbor announced FareHarbor Agent on April 27 2026 and it is rolling out to a select group of operators, so your incumbent platform may hand you this for free. A March 2026 survey of 505 tour and activity operators found 44 percent had received inaccurate or misleading information from AI tools and 56 percent found them overwhelming. Most importantly, the highest frequency guest question is whether it is flying today, which is the one question your operation deliberately routes to a person."
+   },
+   {
+    "item": "Automated advance notification of a weather cancellation to customers",
+    "reason": "Your published policy is that you do not notify in advance and that customers should call on the day. Automating a notification turns a policy into a promise, and a wrong one converts a paid seat into a refund under your unconditional 100 percent policy plus a seat that can no longer be sold."
+   },
+   {
+    "item": "Any price, fee, tax, weight, allowance or duration figure generated by a model",
+    "reason": "Every one of those is a published rule and every one is checkable by the customer. Arithmetic goes in code where it can be tested exhaustively, never where it can merely be plausible."
+   },
+   {
+    "item": "Any weight and balance, load sheet, centre of gravity, aircraft assignment, dispatch or flight release output",
+    "reason": "Regulated flight operations, unrecoverable when wrong, and we hold no operational data of yours. Nothing we build goes near it."
+   },
+   {
+    "item": "Any maintenance record, airworthiness determination or return to service artifact",
+    "reason": "14 CFR 43.9 makes a certificated person's signature the only thing that returns an aircraft to service. There is no software gap here to fill."
+   },
+   {
+    "item": "A vision model classifying whether a camera image is clear, usable or obscured",
+    "reason": "This is the exact place a model sneaks into a build described as model free. Camera health is timestamp arithmetic, and a stale panel is marked stale by the clock, not by an opinion about the picture."
+   },
+   {
+    "item": "Rendering a derived visibility estimate as your own figure",
+    "reason": "That imports a third party's model output and republishes it as fact under your domain. If any such estimate appears at all, it carries its source and its error bar, or it does not appear."
+   },
+   {
+    "item": "A language model reading raw observation or METAR text into plain English",
+    "reason": "It is a formal grammar with a fixed lookup table. A parser is exhaustively testable and costs nothing to run."
+   },
+   {
+    "item": "Model-selected or dynamically chosen camera sites",
+    "reason": "The site list is a fixed configuration decision made once by a person, reviewed by you, and labelled by site name and distance from the route."
+   },
+   {
+    "item": "The staff-facing counter copilot, even though we think it is the one place AI genuinely earns a seat in your business",
+    "reason": "It is a later phase and it is deliberately outside this commitment. It is hard-blocked on the facts record existing and holding through a full off season, and on an evaluation set of real counter questions with human-labelled correct answers that can only be captured while the counter is open. Selling it now would be selling something whose prerequisites do not exist yet."
+   },
+   {
+    "item": "The expedition, charter and river quoting desk",
+    "reason": "The structural gap is verified, the eight-field form takes no payment and shows no availability, while its size is not. We hold no measurement of how many of those inquiries you get or what runs behind your counter for them. Twelve weeks against an unknown integration surface is the wrong first commitment. It rides the Next lane behind a discovery session."
+   },
+   {
+    "item": "Booking, payment, holding a date, or sending any quote autonomously",
+    "reason": "High value irreversible actions at $650 to $1,800 a unit. A human sends, always. Your tour booking already runs through a FareHarbor embed and we are not touching it."
+   },
+   {
+    "item": "A Part 135 safety management system build",
+    "reason": "Trade press reported in April 2024 that charter operators have up to three years to implement a proactive safety system, so the driver is real and dated. We hold no evidence at all about your current state, so proposing a build would be inventing a need. It stays a question we ask you."
+   },
+   {
+    "item": "Standby, waitlist or weather-day seat recovery automation",
+    "reason": "We have zero evidence about how often a party walks away from a weather day or how many seats that involves. Proposing it would be inventing a need."
+   },
+   {
+    "item": "Anything touching the family band radio broadcast at 8:00 AM and 8:00 PM on channel 1, or the basecamp manager's voice relay",
+    "reason": "Those are constrained by connectivity on a glacier, not by software. There is nothing honest to sell there."
+   },
+   {
+    "item": "Any review, sentiment, reputation or content build, and any multilingual or translation feature",
+    "reason": "TripAdvisor and Yelp returned 403 to us and we never fetched Birdeye, so we hold no usable review data and will not characterise something we could not open. No verified fact establishes an international share, and no language switcher appeared on any of the three operator sites we checked."
+   },
+   {
+    "item": "A hiring or recruiting tool",
+    "reason": "Nothing we found describes a recruiting bottleneck. Ground school in the last half of April and check rides are the constraint, and neither is software shaped."
+   },
+   {
+    "item": "Deciding for you which of the three published staffed-hours answers is correct",
+    "reason": "No software can know this and a model asked to reconcile them would be guessing at a fact only you hold. It is a five minute human decision and it is the one thing we genuinely need from you before the record can exist."
+   },
+   {
+    "item": "A site redesign, a rebrand, or any change to your refund, minimum, or check-in policies",
+    "reason": "Your unconditional 100 percent refund is more generous than either competitor policy we could read, and it is a competitive asset. We are changing what your pages say to each other, not what they say to a customer about your terms."
+   }
+  ],
+  "metrics": [
+   {
+    "metric": "Day-of conditions contacts per staffed day. One tally mark per phone call, email or walk-up whose first question is about weather, visibility, or whether a flight is going.",
+    "baseline": "UNKNOWN AND NOT YET COLLECTED. This is the honest weak point of the whole proposal and we would rather name it than model around it. There is no verified figure anywhere in our research for your call volume, your flightseeing volume, or your share of the 981 climbers registered for Denali in 2026 as of late June. We would collect the baseline the cheapest way there is, one week of tally marks at the desk before September 15 2026, on a one-page sheet we supply, alongside a one-word daily weather note so the two years can be compared honestly. Anything else would be a number we invented.",
+    "target": "In the same calendar week of the 2027 season, using the identical sheet and the identical counting rule, day-of conditions contacts per staffed day fall by at least the break-even deflection rate printed in this study's cost table, which is computed in code from the fixed price rather than narrated. If the 2026 tally itself comes back below that break-even, we will tell you phase one is not worth buying and we would rather say that than sell it.",
+    "timeframe": "Baseline collected in one week before September 15 2026. Repeat measurement in the matching week of 2027, read at the end of that season. Two caveats we would report rather than bury. Weather differs between years and will move this number for reasons that have nothing to do with us, which is why the daily weather note rides alongside the tally. Separately, the human status field's deflection is negatively correlated with need, since it gets flipped on calm days and goes blank on the busy marginal mornings when customers look hardest, so we rest the case on the imagery half of the page, which needs no human input at all."
+   },
+   {
+    "metric": "Contradictions between published customer-facing facts, counted by re-fetching every page and diffing each fact against the single record.",
+    "baseline": "VERIFIED TODAY, 2026-08-08, and the only baseline in this document we did not have to ask you for. At least two live contradictions. Three pages publish three different staffed-hours answers, 7 AM until 7 PM, 7 AM until 9 PM, and 7:30 am to 6:30 pm with a 9:00 am to 3:00 pm winter. The flightseeing index shows From $304 per Adult for the Southside Explorer against $275 on the product page, with no page explaining the difference.",
+    "target": "Zero contradictions across the full fact list, with the index from-price shown as fare plus the published 10.5 percent in taxes as a visible line rather than an unexplained jump. Every fact carries one named owner and a dated last-reviewed stamp. We re-run the diff and hand you the output, so this is checkable by you without taking our word for it.",
+    "timeframe": "Zero at delivery of phase one, and re-checked once at the end of the first off season, before the last half of April 2027, to prove the single record held through a winter of edits rather than only on the day we shipped it."
+   },
+   {
+    "metric": "The /denali-webcam/ path serves a working page, measured by an automated check every 5 minutes from outside your network.",
+    "baseline": "VERIFIED TODAY. The URL returns 301 Moved Permanently to your homepage and serves no camera, so it is at zero and every existing link to it is dead.",
+    "target": "HTTP 200 with real content on at least 99 percent of automated checks across the season. Every camera panel either shows imagery timestamped within its feed's stated refresh window or shows an explicit stale marker with the age of the last frame. A blank panel presented as current is a defect, not a degraded state. Each camera is labelled by site name and by its relation to the tour route, because a clear valley camera is not a clear mountain 40 to 60 miles away, and the NWS forecast is attributed on the face of the page as third-party output rather than yours.",
+    "timeframe": "Live by April 15 2027, ahead of ground school, and measured continuously from May 1 to September 15 2027."
+   },
+   {
+    "metric": "Whether the counter actually flips the current status field, measured from the page's own timestamps. Share of staffed days on which it was set at least once, and median seconds from opening the control to saving.",
+    "baseline": "ZERO BY DEFINITION, since the control does not exist. The acceptance bar is the honest one, flipping it has to cost the counter less time than the single contact it deflects. That is the weak point of the design and we would rather test it than assume it.",
+    "target": "Set at least once on 70 percent or more of staffed days in the first full month, with a median flip under 10 seconds. If it lands below half of staffed days, we turn the field off rather than leave a control that misleads by silence, and the board runs on imagery and observations alone, which is the half the value case rests on anyway.",
+    "timeframe": "First measured over May 1 to May 31 2027, with the on-or-off decision made by June 15 2027."
+   }
+  ],
+  "phase1_must": [
+   "The one-week tally at the desk, before September 15 2026. Costs a notepad, takes a tally sheet we supply, and it is the only chance to get a 2026 baseline. Waiting until next year pushes any real before-and-after to 2028.",
+   "A one-day pre-build check, done by us, of which FAA weather camera sites actually exist near Talkeetna and the Alaska Range and what each one sees. Nothing in our research verifies coverage for the Ruth, Kahiltna, Tokositna West, Root Canal or Kichatna Spires routes, so this happens before the estimate hardens, not after.",
+   "Confirmed hosting or DNS access for the /denali-webcam/ path, or a named contact at whoever holds it.",
+   "The facts record. One structured entry per customer-facing fact, covering staffed hours, tour fares, the $125 glacier add-on and its extra 30 minutes, the $15 park entrance fee, the 125 pound gear allowance and $2 per pound overweight, the $40 base camp fee, the 7.5 percent federal and 3 percent borough tax, the 4 passenger Summit and 2 passenger Winter Explorer minimums, and the 45 minute check-in window with the 15 minute reschedule right. Each entry carries a named owner and a dated last-reviewed stamp.",
+   "Every customer-facing page rendering from that record, including reconciling the two separate FAQ URLs so one question has one home.",
+   "The index from-price shown as fare plus the published taxes as a visible line, so $275 to $304 stops looking like two prices for one tour.",
+   "The conditions page at /denali-webcam/. A fixed, human-configured list of FAA camera sites, each labelled by site and by distance from the route, current observations decoded by a plain parser, and the NWS forecast attributed on the face of the page. Auto-refreshing, mobile first, camera staleness shown by timestamp arithmetic and nothing else.",
+   "One current status field, Flying, Holding or Down, stamped with the clock time it was set, expiring automatically back to your own existing FAQ sentence so a stale board can never say more than your website already says today. Current only, never a future block.",
+   "One plain line on the page saying the conditions briefing happens at check-in and the decision is the customer's, in wording you sign off, plus the link placed on the FAQ line that currently tells people to phone and in your confirmation template.",
+   "The 2027 repeat tally sheet and a one-page instruction, handed over at delivery, so the measurement happens next season whether or not we are involved."
+  ],
+  "phase1_later": [
+   "LATER, NOT NOW. The staff-facing counter copilot, a retrieval assistant over your own material with every answer carrying its source page and a visible I do not know. This is the one seat where we think AI genuinely earns its place, because a counter that re-staffs every April is permanently the novice population where the strongest study we found, across 5,179 support agents, measured its largest effect, 34 percent against a 14 percent average. It is gated on two things that do not exist yet, a single facts record that has held through a full off season with a named owner, and an evaluation set of real counter questions with human-labelled correct answers captured from a live season. Question capture can start in the weeks left this season at no cost.",
+   "LATER. The expedition, charter and river desk, version one, as a deterministic quote engine and a tracked pipeline with a mandatory human send and no model anywhere in it. Seven of your reservation form's eight fields are already structured, so the model we first sketched there was not earning its place. It needs a discovery session on what runs behind your counter before any estimate is real.",
+   "LATER, AS A QUESTION. Whatever your Part 135 safety management system posture is against the up-to-three-year implementation window reported in April 2024. We are asking, not claiming.",
+   "LATER. Spring onboarding for the counter, which is the multiplier under the copilot rather than a build of its own.",
+   "LATER, AS AN UNMEASURED HYPOTHESIS. Filling a seat a party walks away from on a weather day. We hold no evidence it is worth anything and will not pretend otherwise.",
+   "WATCH ITEM, NOT A BUILD. FareHarbor Agent, announced April 27 2026 and rolling out to a select group of operators with no named customers, outcomes or pricing published. This is the sentence we think is worth the most to you in this whole document, and it cuts against our own interest in selling you anything. If your own booking vendor's assistant starts answering is it flying today in your name, the vendor will have automated the single decision your reputation rests on keeping human, inside a channel you do not control, under a 100 percent refund policy you pay for."
+  ],
+  "need_from_you": [
+   "The office hours decision. Three of your pages publish three different answers and only you know which is right. Roughly five minutes of one person's time, and no software of ours can substitute for it. Nothing else in the facts record can be finalised until this is settled.",
+   "Confirmation on the from-price. We modelled that $304 is $275 plus your published 7.5 percent federal and 3 percent borough tax, because it reconciles to within a rounding. We did not read that stated anywhere on your site, so we need one sentence from you confirming or correcting it before we render it as a visible tax line.",
+   "Hosting or DNS access for talkeetnaair.com, at minimum for the /denali-webcam/ path, or the name of whoever holds it so we can arrange it. This is a genuine gate on the old-link recovery and we would rather raise it now than discover it in week two.",
+   "One named owner for the facts. A person whose name sits on the record and who receives the dated review prompt. Without a name, single sourcing quietly decays over a winter and we would have built something that goes stale.",
+   "One content working session, roughly half a day, with whoever owns the site content. Scheduled OUTSIDE May 1 to September 15, because asking the counter for half a day in July is asking the wrong person at the wrong time.",
+   "The one-week tally at the desk, done by your counter before September 15 2026. We supply the sheet and the counting rule. This is the single highest leverage thing available to you in this document and it costs a notepad.",
+   "A decision on who flips the status field, and their honest answer on whether it is worth ten seconds mid-queue. If the answer is no, tell us and we ship the page without it. That is a smaller build, not a failed one.",
+   "Sign-off on the exact wording of the line saying the briefing happens at check-in and the decision is the customer's. It is your policy in your voice, so we draft it and you own it.",
+   "Sight of one confirmation email template, so the link lands where a customer already looks rather than somewhere they have to be told about."
+  ],
+  "risks": [
+   {
+    "risk": "FAA weather camera coverage may not exist for the routes that actually matter. Our research contains no verified fact about which sites are near Talkeetna or the Alaska Range, and the tours are about a mountain 40 to 60 miles from town.",
+    "mitigation": "One day of checking before the estimate hardens and before you commit a dollar. If coverage turns out to be valley sites only, we say so plainly and give you two honest choices, ship the board labelled explicitly as a Talkeetna valley view, or drop it and take the facts record alone at a reduced price. We will not paper over thin coverage with a nicer layout."
+   },
+   {
+    "risk": "A customer reads a clear valley camera as a green light for a Summit Tour. That would hand them the implied promise this build exists to avoid.",
+    "mitigation": "Every camera labelled by site name and by its distance and relation to the tour route, no verdict text anywhere on the page, and the plain check-in line carried on the page itself. This is the risk we designed hardest against and it is the reason there is no model in the build to be wrong."
+   },
+   {
+    "risk": "The status field goes blank exactly when it matters most. It gets flipped on quiet, calm mornings and goes unset on the marginal ones with a queue at the desk, which are the mornings customers look hardest.",
+    "mitigation": "We state this as a limitation rather than hide it, and we rest the value case entirely on the imagery and observations half of the page, which needs no human input and works hardest on the worst mornings. The field expires to your own existing FAQ sentence, so a board nobody touched says exactly what your website says today and can never be worse than the status quo."
+   },
+   {
+    "risk": "The expensive error direction is a false Down, not a false Flying, and this runs opposite to intuition. Under your unconditional 100 percent refund, a false Flying costs goodwill and counter time without creating new refund liability, while a stale Holding read at 9 AM on a day that clears by 11 converts a paid seat into a refund plus a seat that can no longer be sold, on a 10 passenger aircraft at $275 to $547 a seat.",
+    "mitigation": "Current status only, never a future block. A visible clock stamp on the face of the field. Automatic expiry to the neutral FAQ sentence on a short interval, so the failure mode is silence rather than a wrong statement."
+   },
+   {
+    "risk": "It underperforms, and the 2027 tally does not clear the break-even. This is a real possibility because nobody has measured the contact volume this is meant to reduce.",
+    "mitigation": "Three things, in order. First, the 2026 tally happens before we build, so if the volume is small we tell you not to buy phase one and no money is spent. Second, if it is already built and 2027 does not clear, no later phase gets funded, and that gate is written here rather than discovered later. Third, the facts record repairs a defect that is verified today regardless of any volume figure, three pages giving three answers to one question, so the floor of this engagement is a real fix rather than a bet."
+   },
+   {
+    "risk": "Hosting or DNS access is not granted, or nobody currently knows who holds it.",
+    "mitigation": "The page can ship at a path we can reach instead, at the cost of the old-link recovery, and we would tell you the recovery was lost rather than quietly leave it out of the report. We raise this before the estimate hardens because unstated access dependencies are the ordinary cause of a blown timeline."
+   },
+   {
+    "risk": "One source of truth means one mistake propagates to every page at once, which is the flip side of the fix.",
+    "mitigation": "A dated last-reviewed stamp on every individual fact, one named owner, and a diff we re-run at delivery and again before April 2027 so drift is caught by a check rather than by a customer."
+   },
+   {
+    "risk": "The seasonal window is a hard gate, not a preference. Work that has not started by roughly the turn of the year collides with the season, and the working session then has to happen with the one person least able to give it.",
+    "mitigation": "We schedule the content session in the shoulder season by design, we treat the last half of April 2027 as the delivery deadline rather than a goal, and we say clearly that a build landing in June 2027 has missed the operating year and should be deferred to the following one rather than rushed."
+   },
+   {
+    "risk": "We are proposing the least impressive thing on our own list, and we know how that reads.",
+    "mitigation": "It is deliberate and we would rather be judged on it. The highest-ticket revenue line stays untouched for a season because its size is inferred rather than measured. Phase one has no model in it to be wrong, no verdict to argue with in a refund conversation, and a worst case that equals your behaviour today. If you want the ambitious version, the honest sequence still runs through this one, since the assistant we would eventually recommend fails outright against a corpus that gives three answers to one question."
+   }
+  ],
+  "open_questions": [
+   {
+    "q": "Which of the three published staffed-hours answers is the correct one, 7 AM to 7 PM, 7 AM to 9 PM, or 7:30 am to 6:30 pm with a 9:00 am to 3:00 pm winter?",
+    "owner": "You. Whoever owns the site content, likely the general manager. This is the one blocker we can't route around."
+   },
+   {
+    "q": "Do you want both FAQ URLs to survive, or should one retire into the other? Two separate FAQ pages exist and they disagree.",
+    "owner": "You, with a recommendation from us at the working session."
+   },
+   {
+    "q": "Is the flightseeing index from-price the product page fare plus the 7.5 percent federal and 3 percent borough tax? We modelled that reconciliation and did not read it stated on any page.",
+    "owner": "You. One sentence settles it."
+   },
+   {
+    "q": "Which FAA weather camera sites exist with useful views of the Talkeetna area and of the Ruth, Kahiltna, Tokositna West, Root Canal and Kichatna Spires routes, and how far is each from the routes you actually fly?",
+    "owner": "Us, in one day of checking, with your operations director's read on which views would be worth a customer looking at. The technical answer is ours to get, the judgement about which view means anything is yours."
+   },
+   {
+    "q": "Who holds hosting and DNS for talkeetnaair.com today, and will we get the access needed to serve a page at /denali-webcam/?",
+    "owner": "You to name the holder. Us to do the work once named."
+   },
+   {
+    "q": "How many contacts does the counter actually take on a staffed day whose first question is about weather or whether a flight is going, and how does that change between a clear morning and a marginal one?",
+    "owner": "You, through one week of tally marks before September 15 2026. Nobody can answer this without measuring it and we will not guess at it."
+   },
+   {
+    "q": "Who would flip the current status field during a busy check-in, and is it honestly worth ten seconds to them mid-queue?",
+    "owner": "Whoever runs the counter, not the owner. We would rather hear no from the person who would have to do it than build a control that goes unused."
+   },
+   {
+    "q": "What actually runs behind the counter for climber, charter and river bookings? Your live booking button loads a FareHarbor embed for tours, and we make no assertion beyond that.",
+    "owner": "You. This matters for the later expedition desk, not for phase one, so it is a call question rather than a gate."
+   },
+   {
+    "q": "Where does your Part 135 safety management system stand against the up-to-three-year implementation window reported in April 2024?",
+    "owner": "You. We hold no evidence about your current state and are explicitly not claiming a gap."
+   },
+   {
+    "q": "Has FareHarbor offered you FareHarbor Agent, and if it is switched on, would it answer is it flying today in your name?",
+    "owner": "You, to ask your vendor. We think this is the most consequential question in the document and it has nothing to do with buying anything from us."
+   },
+   {
+    "q": "Does your confirmation email today tell the customer to call on the day, and can we see the template?",
+    "owner": "You. It determines whether the link reaches the customer at the moment they need it."
+   }
+  ]
+ },
+ "design": {
+  "one_liner": "One structured source of truth for the facts customers call about, plus one mobile page on their own domain at /denali-webcam/ showing public FAA camera frames with an age stamped on every frame, the current observation, and the NWS forecast attributed to NWS, so the day-of weather call becomes a choice instead of the only way to find out, with no model anywhere in it.",
+  "architecture": {
+   "nodes": [
+    {
+     "id": "guest",
+     "label": "Guest on a phone, deciding whether to drive to Talkeetna",
+     "kind": "user"
+    },
+    {
+     "id": "counter",
+     "label": "TAT counter staff, the one person who flips the status",
+     "kind": "user"
+    },
+    {
+     "id": "faa",
+     "label": "FAA weather cameras, public imagery, fixed configured site list",
+     "kind": "external"
+    },
+    {
+     "id": "nws",
+     "label": "NWS API, current observations plus gridpoint forecast, free and keyless",
+     "kind": "external"
+    },
+    {
+     "id": "collector",
+     "label": "Conditions Collector, 5 minute cron, fetch and stamp only",
+     "kind": "build"
+    },
+    {
+     "id": "spine",
+     "label": "Facts Spine and Conditions Snapshot, facts and camera sites in git, snapshot and status record in KV",
+     "kind": "data"
+    },
+    {
+     "id": "board",
+     "label": "Conditions Board at /denali-webcam/ plus the Status Console",
+     "kind": "build"
+    },
+    {
+     "id": "site",
+     "label": "talkeetnaair.com, their existing pages, FareHarbor rail untouched",
+     "kind": "system"
+    }
+   ],
+   "edges": [
+    {
+     "from": "faa",
+     "to": "collector"
+    },
+    {
+     "from": "nws",
+     "to": "collector"
+    },
+    {
+     "from": "collector",
+     "to": "spine"
+    },
+    {
+     "from": "spine",
+     "to": "board"
+    },
+    {
+     "from": "spine",
+     "to": "site"
+    },
+    {
+     "from": "counter",
+     "to": "board"
+    },
+    {
+     "from": "board",
+     "to": "guest"
+    },
+    {
+     "from": "site",
+     "to": "guest"
+    },
+    {
+     "from": "guest",
+     "to": "counter"
+    }
+   ],
+   "caption": "Eight containers, no model in any of them. The Conditions Collector is a thin scheduled fetcher that copies timestamps and numbers and makes no judgement about any image. The Facts Spine is the reason the two halves ship as one thing. The board's expiry text is not a string a developer typed, it is the same fact record that renders their FAQ page, so the degraded board is byte identical to their current published behaviour and a CI check fails the build if those two ever drift apart."
+  },
+  "build_vs_buy": [
+   {
+    "component": "Hosting, CDN and edge compute",
+    "decision": "buy",
+    "why": "Cloudflare Pages and Workers. They are already behind Cloudflare, which is a fact from the research rather than a preference of ours, the free tier covers a page like this outright, and nobody should ever build hosting."
+   },
+   {
+    "component": "Scheduler for the 5 minute fetch",
+    "decision": "buy",
+    "why": "Cloudflare Cron Triggers, with a scheduled GitHub Actions workflow as the fallback if Worker access is not granted. Two lines of config against a build we would then have to keep alive."
+   },
+   {
+    "component": "Auth for the Status Console",
+    "decision": "buy",
+    "why": "Cloudflare Access with a one time PIN emailed to a short allowlist of TAT addresses. A counter that re-staffs every April is the worst possible place to put a shared password, and the free tier covers up to 50 users. We hold no user table and no credential."
+   },
+   {
+    "component": "Weather data itself",
+    "decision": "buy",
+    "why": "Free and public. api.weather.gov needs only an identifying User-Agent and the FAA weather camera service is public imagery. We generate no weather data of our own and that is the point."
+   },
+   {
+    "component": "State store",
+    "decision": "buy",
+    "why": "Workers KV for the snapshot and the status record, object storage only if frames must be cached. The entire live state is two small JSON documents, so a database would be a liability with a monthly bill attached."
+   },
+   {
+    "component": "Observation parser",
+    "decision": "buy",
+    "why": "Off the shelf would genuinely do here. api.weather.gov already returns decoded fields, so the parser is only a fallback for the raw message, and a pinned MIT licensed METAR library wrapped in golden file tests beats hand rolling a grammar. Either way it stays a formal parse against a fixed lookup table, and an unparseable group renders as the raw text verbatim rather than a guess."
+   },
+   {
+    "component": "Static site generator for the board",
+    "decision": "buy",
+    "why": "Eleventy or an equivalent. The board is one page, and its build step needs to be boring so the CI gates can be the interesting part."
+   },
+   {
+    "component": "Uptime monitoring and log sink",
+    "decision": "buy",
+    "why": "A hosted checker's free tier against a health endpoint, plus Workers logs. Building monitoring for a build this small would cost more than the build."
+   },
+   {
+    "component": "Conditions Collector",
+    "decision": "build",
+    "why": "This is a build because the product is the RESTRAINT, which nothing off the shelf sells. Per site staleness thresholds, route relation labels on every camera, the rule that a failed fetch never overwrites a good record and never carries a number forward unlabelled, and a flat refusal to derive a condition from an image. Every commercial weather widget on the market would cheerfully render a condition icon, which is precisely the kill listed behaviour."
+   },
+   {
+    "component": "Facts Spine schema, render pipeline and CI gates",
+    "decision": "build",
+    "why": "A CMS could hold the facts. No off the shelf tool gives the gate that fails the build when the board's expiry text drifts from the FAQ fact, or when a price fact goes 180 days without a review. That gate is the differentiator and it is about 300 lines."
+   },
+   {
+    "component": "Conditions Board front end",
+    "decision": "build",
+    "why": "Build, with the honest alternative named out loud. K2 Aviation links its FAQ out to a third party Talkeetna Alaskan Lodge camera, and that link out is a legitimate cheaper option that costs a few minutes. It publishes a valley camera with no route labelling, no frame age, no attribution and no fallback, which is the exact set of four properties the feasibility audit made binding. If TAT will not fund the build, the link out is what we would tell them to do instead."
+   },
+   {
+    "component": "Chat, assistant, notification or booking capability",
+    "decision": "buy",
+    "why": "Neither built nor bought by us. FareHarbor announced its own guest assistant on April 27 2026 and Yonder lists 95 to 295 dollars a month, so selling a commodity here would be the anti-pattern. Advance cancellation notification is not bought either, because their published policy is that they do not notify in advance."
+   }
+  ],
+  "cross_cutting": {
+   "auth": "The board is public, read only, and has no login, no account and no cookie, because a page whose job is to answer one question should not create a data protection surface. The Status Console is the only authenticated thing in the design and it uses Cloudflare Access with a one time PIN to an allowlist, so there is no shared counter password and access is revoked by editing a list rather than by rotating a secret. Three separate least privilege credentials do the writing. The collector token writes the snapshot and nothing else, the console token writes the status record and nothing else, and the Facts Spine changes only through a reviewed pull request. No component in this design holds any credential that can write to their main site, their DNS or their FareHarbor account. Every status flip appends an audit row carrying the identity, the value and the server timestamp. The console request schema has no client supplied time field at all, so a future stamped status is not rejected at validation, it is unrepresentable.",
+   "data_security": "No guest personal data is collected anywhere, so there is nothing to breach and no consent banner to argue about. A strict Content Security Policy pins scripts to self and images to self plus the FAA camera host, and no third party script rides this page, including the FareHarbor embed. Attribution is a data handling rule, not a style choice. The forecast panel carries NWS on its face as third party model output, the camera panel carries the FAA as the publisher of every frame, and no derived visibility estimate appears in phase one in any form. FAA imagery reuse terms and frame URL stability are confirmed in the spike, which is what decides hotlink versus snapshot, and hotlink is the preferred answer because it keeps us from republishing another agency's imagery under their domain. Time is stored as UTC everywhere and rendered only in America/Anchorage through the IANA database, never a hardcoded offset, because the off season build straddles the November change and a hardcoded offset would silently move every stamp by an hour. Frame age is computed against the server generated time with a client clock skew correction, so a guest phone set to the wrong time still sees a true age. Caching is explicit, the snapshot ships a 60 second max age with stale while revalidate, camera frames get a cache buster keyed to their capture timestamp so no browser serves an hour old frame as fresh, and the board polls every 60 seconds only while the tab is visible.",
+   "observability": "The collector emits one structured log line per source per run carrying the HTTP status, latency and outcome. A public health endpoint returns per source last success and consecutive failures, an uptime check hits it every 5 minutes, and three consecutive failures on any source pages Alaska AI, not the counter. That routing is deliberate. During May 1 to September 15 the counter is the person this build exists to unload, so they are never the first to hear that a feed died. TAT hears about it in two ways only, a weekly email to one named owner with per source uptime and board traffic, and an immediate escalation if the board would sit in its degraded state for more than 24 hours. The cheapest observability in the design is on the page itself, because every frame carries its age and every panel carries its source, so a guest and a counter agent can both see a dead feed without anyone opening a dashboard. Run cost is 0 to 5 dollars a month, realistically 0, since Cloudflare Pages, Workers cron, KV and Access all sit inside free tiers at this volume. The only recurring human cost is a pre-season Facts Spine review, half a person-day to one person-day a year, scheduled in the shoulder season.",
+   "failure_modes": "FAA weather cameras need HTTPS and a fixed configured site list and nothing else, no key and no account. A single stale camera shows its real age, and past the per site threshold, default 30 minutes, the tile swaps to camera unavailable with the last known age. Past twice that it is dropped from the grid. Every camera is labelled by site AND by its relation to the tour route, so a Talkeetna valley camera is captioned as the valley and never as the mountain 40 to 60 miles away. Health is timestamp arithmetic and only timestamp arithmetic, so a whiteout renders as a white frame with a fresh timestamp, and the page states plainly that a fresh frame can still be a white frame because a camera reports light rather than flyability. If every camera is gone, the imagery panel collapses to one attributed line linking to the FAA service. NWS needs an identifying User-Agent and no key. On an error or a timeout the last good record is shown with its age, capped at 2 hours for observations and 6 hours for the forecast, after which the panel says unavailable. Nothing is ever interpolated and no number is carried forward without its own timestamp. If the collector dies, the snapshot goes stale, the board detects a generated time older than 15 minutes and shows a full width banner saying the page is not updating with the office phone number, and the status expires on its own timer regardless. Status expiry is the safety property and it is designed so it can't be lost. The status record carries a server computed expiry, the renderer has no code path that prints status text without checking it, the fallback string is a required non empty field sourced from the FAQ fact, and two CI tests block the build, one asserting the expired board renders text byte identical to the FAQ sentence rendered on their own FAQ page, and one asserting that with every feed dead, JavaScript off and images off the page still renders that sentence and the phone number. The degraded state therefore equals their current published behaviour, which is the property that makes this safe to ship. If Cloudflare itself is down their whole site is down anyway, so the board adds no new single point of failure to their business, and we say that rather than pretending we add resilience. A misconfigured camera site is caught by review, since the site list changes only through a pull request and every entry carries who verified it and when, both rendered in a short about these cameras section. Facts going stale is caught by CI, which fails the build when any fact passes 365 days without review or any price, fee or tax fact passes 180."
+  },
+  "goals": [
+   "One record per customer-asked fact, and every page that shows that fact renders from it. First target is staffed hours, where three separately fetched pages currently publish 7 AM to 7 PM, 7 AM to 9 PM and 7:30 am to 6:30 pm for overlapping windows. Success is one answer, one owner, one dated last reviewed stamp.",
+   "A mobile page at their own /denali-webcam/ path, which today 301s to the homepage, showing public FAA camera frames, the current observation and the NWS forecast side by side, with NWS named on the face of the page as the source of the forecast.",
+   "Every camera labelled by site AND by its relation to the tour route, so the page claims only what the camera can see and a clear valley frame is never presentable as a clear mountain.",
+   "One CURRENT status field, stamped with a clock time, that the counter can flip in under 10 seconds on a phone, and that expires by itself to their own FAQ sentence.",
+   "The degraded board equals the status quo, proven by a blocking CI test rather than promised in a document. With every feed dead the page shows their existing sentence asking customers to call the day they fly, plus the phone number.",
+   "Mobile first and measurable. Under 150 KB of HTML, CSS and JavaScript excluding camera frames, usable at 320 px, largest contentful paint under 2.5 seconds on a 4G profile, no framework, and polling that stops when the tab is hidden so it does not eat a tourist's battery.",
+   "WCAG 2.2 AA. Every camera tile has a text row carrying site, route relation, view bearing and frame age, so the page is fully usable with images off or through a screen reader. Status is never colour alone. Alt text describes what the camera looks at and never what the weather is doing, because describing the weather would require exactly the classification this build refuses to do.",
+   "All times in America/Anchorage from the IANA database, rendered as an explicit clock time with the zone abbreviation, stored as UTC.",
+   "Live, soaked and handed over before March 31 2027, so the last half of April 2027 is ground school rather than debugging. Anything landing after that misses the whole May 1 to September 15 operating year."
+  ],
+  "non_goals": [
+   {
+    "item": "Any forward looking or per tour block status",
+    "reason": "A status set on a future block is a forecast published on their own domain under their own name. The console has no date control, no block selector and no client supplied timestamp, so this is unrepresentable rather than merely discouraged."
+   },
+   {
+    "item": "Any forecast of our own",
+    "reason": "We republish the NWS forecast with attribution. We do not produce weather."
+   },
+   {
+    "item": "Any derived visibility estimate, ours or a third party's, on the face of the page in phase one",
+    "reason": "The independent 2025 benchmark of 147,182 images across 444 FAA camera sites found no model reaching the FAA accuracy threshold, best average error about 1.8 statute miles. If such a figure ever appears it carries its provenance and its error bar and is explicitly not TAT's own number."
+   },
+   {
+    "item": "Image classification of any kind, including judging whether a frame is usable, clear or obscured",
+    "reason": "This is the exact seam where a model sneaks into a build described as model free. Camera health is timestamp arithmetic, which is free, exhaustively testable, and never confidently wrong."
+   },
+   {
+    "item": "Model selected or dynamically chosen camera sites",
+    "reason": "The site list is a fixed configured decision made once by a human, reviewed in a pull request and stamped with who verified it and when."
+   },
+   {
+    "item": "Automated advance notification of a weather cancellation, by SMS, email or push",
+    "reason": "Their published policy is that they do not notify in advance and instruct customers to call on the day. Automating a notice converts a policy into a promise and manufactures refunds when it is wrong, under a refund posture that is already unconditional at 100 percent."
+   },
+   {
+    "item": "Booking, availability, payment or any FareHarbor integration on this page",
+    "reason": "The page's job is to make one call optional, not to take a booking. Touching the booking rail widens the blast radius for no phase one benefit."
+   },
+   {
+    "item": "Anything touching weight and balance, load sheets, centre of gravity, aircraft assignment, dispatch, flight release or maintenance records",
+    "reason": "Regulated flight operations, unrecoverable when wrong, and we hold no operational data. 14 CFR 43.9 makes a certificated person's signature the only thing that returns an aircraft to service, so nothing we build goes near it."
+   },
+   {
+    "item": "A guest facing chatbot, assistant or voice agent, on the site or the phone line",
+    "reason": "Killed at the feasibility gate. It is a commodity their own platform announced on April 27 2026, and it would answer is it flying today with no human in the loop, which is the one decision their operation deliberately hands to a person at check in."
+   },
+   {
+    "item": "Any model anywhere in phase one",
+    "reason": "The ladder stops at tier one and it clears the bar there. Every step up costs reliability, money, latency and explainability, and here it would buy nothing."
+   },
+   {
+    "item": "Editing their existing site templates beyond the fact embeds and one link",
+    "reason": "No verified claim establishes what CMS runs talkeetnaair.com, so the design must not depend on knowing. The Facts Spine emits a hydration snippet plus generated HTML fragments a person can paste, which works either way."
+   },
+   {
+    "item": "Multilingual or translated content",
+    "reason": "No verified claim establishes an international share, and no language switcher was found on any of the three operator sites checked."
+   },
+   {
+    "item": "Standby, waitlist or weather day seat recovery",
+    "reason": "Zero verified evidence exists about how often a weather walk off happens or how many seats it involves. Building it would be inventing a need."
+   },
+   {
+    "item": "Any ROI claim resting on the human status field",
+    "reason": "Its deflection is negatively correlated with need, since it goes blank exactly on the marginal morning with a queue at the desk. The value case rests on the imagery half, which needs no human input and works hardest on the worst days."
+   }
+  ],
+  "riskiest_assumption": "That at least one public FAA weather camera site exists whose frames a TAT pilot will accept as reporting conditions on or toward the Ruth, Kahiltna, Tokositna West, Root Canal or Kichatna Spires route corridors, rather than only the Talkeetna valley 40 to 60 miles from the mountain the tours are about. This package contains no verified claim about which FAA camera sites exist near Talkeetna or the Alaska Range, so this is open, not assumed. It is the riskiest assumption rather than the hosting question because it has no fallback. The feasibility audit put the entire value case on the imagery half, and route relation labelling is binding, so if the only honest imagery is the valley, the board has nothing to show and no honest way to dress it up. Hosting has three fallbacks, this has none.",
+  "spike_to_retire_it": "SPIKE C1, THE CAMERA COVERAGE WALK. One engineer, 1 to 2 person-days spread across three calendar days, plus about 45 minutes of their operations director's time, and no vendor spend, since both the FAA camera service and the NWS API are free and keyless. Enumerate every FAA weather camera site within the corridor between Talkeetna and each of the five named glacier destinations, record each site's camera bearings, then capture frames at dawn, midday and evening for three days, logging capture timestamp, refresh cadence and observed staleness per site. Confirm frame URL stability and imagery reuse terms in the same pass, since that decides hotlink versus snapshot and is worth about two days of build either way. Then put a contact sheet in front of TAT's operations director or a line pilot and ask one question per site, does this frame tell you anything about that route. THE RESULT THAT KILLS THE BUILD. If no site produces a frame they will accept as reporting on or toward those corridors, or if the median frame age across every usable site is worse than about 60 minutes, the Conditions Board is cut. The Facts Spine ships alone at a reduced fixed price, the board is replaced by an attributed link out to the FAA site, and we put that in writing rather than shipping a valley camera dressed as a mountain report. SPIKE H1 RUNS ALONGSIDE, half a person-day. One question to whoever holds the Cloudflare account, can we have a Worker route on /denali-webcam/ and an Access policy for two counter users. A no there does not kill anything, it moves the board to a subdomain or to a page we host that their site links to, at a cost of 2 to 3 extra days, which is exactly why it is a second spike and not the riskiest assumption.",
+  "delivery": {
+   "walking_skeleton": "One thin slice that touches all eight containers and actually runs, on a temporary URL with the hard parts stubbed. ONE fact, the FAQ weather sentence, rendered from the real facts record through the real build pipeline. ONE FAA camera site from the real site list, showing a real frame with a real age computed from a real capture timestamp. ONE NWS observation field and the forecast headline with the NWS attribution already on the page. The real Conditions Collector on the real 5 minute cron, writing the real snapshot to the real store. The real Status Console behind real Cloudflare Access with one status value, and the real expiry timer actually expiring it back to that FAQ sentence in front of someone watching. The two CI gates are written in week one and green before anything is styled, the byte identity gate between the board's expiry text and the FAQ fact, and the everything dead gate proving the page still renders that sentence and the phone number with JavaScript off. Stubbed for now are the full site list, the full fact set, all styling, the accessibility pass and the /denali-webcam/ path. The skeleton exists to prove the safety property early, because that property is what makes the rest safe to ship.",
+   "then_mvp": "Flesh out in three passes, then the seasonal release. Pass one is the Facts Spine content working session with one named owner, scheduled deliberately outside May 1 to September 15, which produces the decided answer for staffed hours and the eleven fact families the pick names, hours, fares, the glacier add on, the park fee, the gear allowance and overweight rate, the base camp fee, the two tax lines, passenger minimums and the check in window, each with an owner and a dated last reviewed stamp. Pass two is the board fleshed out, every verified camera site with its route relation label, the observation parser with its golden file tests, all degradation states built and exercised, mobile performance and the WCAG 2.2 AA pass. Pass three is production wiring, the /denali-webcam/ path or its fallback, the health endpoint, the uptime check, alert routing to us and the weekly digest to their named owner. MVP is the pre-season shakedown, a two week soak on the real cron with real frames, a dry run at the counter with whoever will actually flip the field, and a deliberate fallback drill where we kill each feed in turn and confirm the board degrades to their own sentence. Handover is a one page runbook and the config, not a training course.",
+   "estimate_range": "Spikes C1 and H1, 1.5 to 2.5 person-days, 90 percent confidence, because a bounded investigation is the one thing that estimates well. Walking skeleton, 4 to 7 person-days, 75 percent confidence, conditional on C1 confirming usable cameras. Facts Spine, 5 to 9 person-days, 60 percent confidence, and this is the widest band on purpose because its top end is set by a prospect side dependency rather than by engineering. Conditions Board flesh out, 6 to 10 person-days, 65 percent confidence. Pre-season shakedown, 2 to 4 person-days spread over calendar weeks. PHASE ONE TOTAL, 18 to 32 person-days, which is 3.5 to 6.5 person-weeks, 60 to 70 percent confidence before the spikes land. The roughly 4.5 person-weeks quoted at the pick sits in the middle of that range, and the honest statement is that 4.5 is the centre of a real band rather than a promise we are hedging around. Run cost 0 to 5 dollars a month, plus a half to one person-day pre-season review each year. Calendar shape matters more than effort here. The work does not need to be continuous, it should start in the shoulder season between October 2026 and February 2027 and be live and soaked by March 31 2027, because a build landing in June has missed the whole 2027 season.",
+   "what_narrows_it": "Five decisions, in the order they buy the most. Spike C1's answer on how many usable sites exist and at what refresh cadence collapses the largest single band and also decides whether the board exists at all. Spike C1's second answer on FAA frame URL stability and reuse terms is the difference between zero and about two days of caching and storage work. A yes or no on a Worker route at /denali-webcam/ and an Access policy removes 2 to 3 days of fallback path contingency. A written decision from one named owner on the true staffed hours and the true price display BEFORE the content session rather than during it moves the Facts Spine band by roughly three days at the top end, since the engineering is small and the deciding is the slow part. Their answer on how many fact families are in scope, where each family beyond the eleven the pick names adds about half a person-day. One more thing narrows the value question rather than the estimate, and it costs a notepad. The 2026 season runs to September 15, so one week of tally marks at the desk now, counting day of conditions contacts, gives a real baseline to hold the break even against instead of an assumption."
+  }
+ },
+ "roadmap": {
+  "now": [
+   {
+    "item": "One week of tally marks at the desk before the 2026 season closes. The counter keeps a notepad and marks every day-of conditions contact and every hours or price question, and writes the question down verbatim when it takes more than a moment to answer. It costs a notepad and no money changes hands for it.",
+    "metric": "A written count of day-of conditions contacts and hours or price questions per staffed day across one full week, plus the verbatim questions logged. That count is the 2026 baseline every later gate in this roadmap is measured against, and it is the number to hold against the break-even contacts per staffed day the study prints.",
+    "why_first": "It is free, it is the highest leverage item in the whole study, and it has about five weeks of runway. The office is staffed only to September 15. Take the week now and 2027 has a genuine before and after. Wait and the comparison slides to 2028, because these questions only arrive while the counter is open. Nothing in this roadmap should be bought before this number exists, and if it comes back small we would rather say phase one is not worth buying than sell it anyway."
+   },
+   {
+    "item": "One published answer per fact, the Facts Spine. Staffed hours, tour fares, the 125 dollar glacier add-on, the 15 dollar park fee, the 125 pound gear allowance and the 2 dollar overweight rate, the 40 dollar base camp fee, the two tax lines, the passenger minimums and the check-in window live in one structured record, and every page renders from it. The index from-price shows as fare plus the published 10.5 percent in taxes as a visible line rather than an unexplained jump from 275 to 304.",
+    "metric": "Zero contradictions across the site on the facts held in the record, down from three fetched pages publishing three different staffed-hours answers today. Every fact carries a dated last-reviewed stamp and one named owner.",
+    "why_first": "The defect is already verified off their own three pages, so it needs no volume estimate to be worth fixing. It is the cheapest item on the list at roughly a person-week and a half, it removes a live source of the calls the board is about, and it is the hard prerequisite for anything assistant-shaped later. It pays for itself even if every other idea here is turned down. No model belongs anywhere in it, a model asked to reconcile three published hours would be guessing at a fact only the owner knows."
+   },
+   {
+    "item": "One content working session with whoever owns the site content, held outside the staffed season, where the three staffed-hours answers become one and every fact in the record gets a named owner and a review date.",
+    "metric": "Session held between September 16 2026 and March 31 2027, ending with every fact in the record decided, owned and dated. Nothing in the spine ships undecided, because deciding which hours are correct is their call and not ours.",
+    "why_first": "The only real input the spine needs is a decision we can't make for them, and asking the counter for a working session between May 1 and September 15 is asking the wrong person at the wrong time. Client sign-off and content decisions are what actually eat a calendar on work this size, so this one gets booked before any building starts."
+   },
+   {
+    "item": "A one day check of which public FAA weather camera sites genuinely cover the routes people fly, each site labelled by name and by its distance from the route, plus written confirmation of hosting or DNS control of the /denali-webcam/ path that currently 301s to the homepage.",
+    "metric": "A written site list with distances in hand, and a yes or no on path control, both settled before the board estimate hardens. If the cameras that exist look at the valley rather than the mountain, that is a finding we hand over and the board scope narrows or drops.",
+    "why_first": "The board's entire value rests on this and nothing in the research verified it, so it is checked rather than assumed. A clear valley camera is not a clear mountain, the tours are about a mountain 40 to 60 miles away, and a customer reading a valley camera as a green light for a Summit Tour has been handed exactly the implied promise this build exists to avoid. One day of checking beats burying it as a risk line."
+   },
+   {
+    "item": "The Conditions Board. One mobile page on their own domain at the recovered /denali-webcam/ path, showing public camera imagery for the labelled sites, current observations parsed by code, and the NWS forecast attributed on the face of the page as third party forecast output, side by side and auto-refreshing. Beside the imagery sits one CURRENT status field the counter flips, stamped with the clock time it was set and auto-expiring back to their own existing FAQ sentence about calling on the day.",
+    "metric": "Live and shaken out before the last half of April 2027, old /denali-webcam/ links resolving again, and the tally week re-run in the same week of the 2027 season against the 2026 baseline. The board publishes no flyability verdict, no visibility estimate of its own, and no status on a future tour block.",
+    "why_first": "Highest cost of delay over size anywhere in the map. The office is staffed May 1 to September 15 and the pilots sit one week of ground school in Talkeetna in the last half of April, so anything not live and settled before then misses a whole operating year. Its degraded state is literally their published behaviour today, which is what makes it safe to ship at all. Its value rests on the imagery half, which needs no human input and works hardest on the worst mornings. We do not rest a dollar on the status field, because its deflection is weakest exactly when the desk is busiest and it is needed most."
+   }
+  ],
+  "next": [
+   {
+    "item": "The 2027 measurement and the verdict that comes with it, including the honest version where the number did not move.",
+    "metric": "Change in tallied day-of conditions contacts and hours or price questions per staffed day, 2027 against the 2026 baseline, read against the break-even contacts per staffed day computed in the study. If phase one does not move that count, phase two is not funded, and that is stated here rather than buried in a footnote."
+   },
+   {
+    "item": "The single source of truth survives a full off season instead of drifting back into three answers. This is the thing that decides whether anything assistant-shaped can work here at all, and it is a maintenance question rather than a build question.",
+    "metric": "Zero contradictions on a re-audit of the record at the April 2027 spin-up, every fact carrying a last-reviewed date set inside the off season, and one named owner still in the seat."
+   },
+   {
+    "item": "Capture real counter questions with human-labelled correct answers across a live season, starting with the same notepad in the remaining weeks of 2026 and continuing through the 2027 season.",
+    "metric": "A labelled eval set of real counter questions with human-written correct answers, large enough to score retrieval before anything goes near a live counter. These questions exist only while the counter is open, which is the sequencing trap, an eval set started after September 15 2026 with no capture in between can't exist before May 2027."
+   },
+   {
+    "item": "The Counter Copilot, phase two, staff-facing only. A retrieval assistant over their own bounded corpus answering policy and procedure with the source page cited and a visible I don't know where the corpus is silent, with a deterministic calculator alongside it computing every number in code. It never talks to a customer, it refuses anything weather or flyability shaped, and it refuses the NPS check-in then weigh gear then pay sequence because that is an ordered regulated intake a novice must not be told wrong.",
+    "metric": "Scored against the captured eval set before it goes anywhere live, then measured at the April spin-up as counter contacts handled per staffed hour by a first-season hire against the prior season. Any answer with no source is suppressed rather than generated, and the suppression rate is reported as a number rather than hidden. The 14 percent average and 34 percent novice figures from the 5,179 agent study are the mechanism we expect to transfer, never the magnitude we promise."
+   },
+   {
+    "item": "A discovery session on the actual booking and quoting surface behind the counter for climbers and charters, which nobody has verified and which we refuse to guess at, followed by a deterministic quote engine with no model anywhere in it, a tracked pipeline, and a human hitting send on every quote. Seven of the eight fields on their own reservation form are already structured, so version one parses nothing.",
+    "metric": "A written answer on what actually runs behind the counter today, plus a counted volume and turnaround for expedition, charter, river and sling inquiries. No estimate hardens before both exist. Once built, the engine is measured on quote turnaround time and on arithmetic errors per hundred quotes against the published fee table. The gear worksheet emits billable weight against the 125 pound allowance and nothing that resembles a load sheet."
+   }
+  ],
+  "later": [
+   {
+    "item": "The Part 135 safety management system, carried as a question to ask and not as a gap we claim. Trade press reported in April 2024 that charter operators have up to three years to implement a proactive safety system. Nothing we fetched describes where Talkeetna Air Taxi stands on it, so we ask. We are also not the right people to build it, and no build for it is on offer here.",
+    "metric": "An answer on the call, either way. No build attached, no gap asserted, because asserting one on an unfetched page would be inventing a need."
+   },
+   {
+    "item": "Watch what their own booking vendor's assistant is permitted to say in their name. FareHarbor announced a guest communication assistant on April 27 2026, still rolling out to a select group of operators with no named customers, outcomes or pricing published. We are not selling a guest-facing assistant here and we think nobody should sell them one.",
+    "metric": "A reviewed decision each season on which questions the vendor's assistant may answer in their name, with is it flying today off that list. The risk worth watching is a channel they do not control answering the one question their reputation rests on keeping human, under a 100 percent refund policy they pay for."
+   },
+   {
+    "item": "The April spin-up itself. A counter that re-staffs every spring is permanently new to the fact set, which is the multiplier sitting under the copilot rather than a product of its own. No fetched page describes a recruiting bottleneck, so a hiring tool would be an invented need and is not proposed.",
+    "metric": "Time for a first-season counter person to answer the common question set unaided, tracked against the previous April once the record and the copilot exist."
+   },
+   {
+    "item": "Weather-day walk-offs. Count how often a party stands down and how many seats it involves. Count it, do not automate it. Nothing verified says how often this happens or how many seats are at stake, so no standby, waitlist or seat recovery automation is proposed here, with or without AI.",
+    "metric": "A tallied count of walk-offs and seats per staffed week, which either turns this into a real question later or retires it honestly. Their unconditional 100 percent refund is a competitive asset, more generous than either published competitor policy, and it is not something to touch."
+   },
+   {
+    "item": "The go/no-go call stays exactly where it is, with a person, at check-in, handed to the customer after a verbal briefing on visibility and current conditions. It appears on this list so it is on the record as protected rather than pending.",
+    "metric": "Zero model-generated flyability verdicts in anything we build, permanently. The independent 2025 benchmark of 147,182 images across 444 FAA camera sites found no model reaching the FAA accuracy threshold, best average error about 1.8 statute miles, and the handoff of that decision to the customer is the product rather than the bottleneck."
+   },
+   {
+    "item": "Several parts of this business have nothing worth selling, and saying so plainly is the useful answer. The 8 AM and 8 PM channel 1 broadcast and the basecamp voice relay are limited by connectivity on a glacier rather than by software. Weight and balance, load planning, dispatch and maintenance records are regulated flight operations and stay where they are. No usable review data could be opened, so no reputation or content work is proposed. No language switcher was found on any of the three operator sites checked and no verified claim establishes an international share, so no translation work either.",
+    "metric": "No metric, and that is the finding. The measurable outcome is money not spent, and the map is complete rather than quietly trimmed."
+   }
+  ],
+  "gates": "Five gates, each earned by something that will genuinely have been measured by the time it is checked, and each one framed as their off-ramp rather than ours. GATE 0, before anything at all is bought. One week of tally marks at the desk before September 15 2026, producing a count of day-of conditions contacts and hours or price questions per staffed day. If that count sits below the break-even figure the study prints, phase one is not worth buying and we will say so in writing. This gate costs them a notepad and it is the only gate that comes before any money moves. GATE 1, before the Conditions Board is committed. The one day camera coverage check and the hosting or DNS confirmation both come back written. If the usable cameras look at the valley rather than the routes, or the /denali-webcam/ path can't be recovered, the Facts Spine ships alone and the board narrows or drops. They keep a working single source of truth either way. GATE 2, before phase two is funded at all. The tally week re-run in the same week of the 2027 season, against the 2026 baseline. Said plainly, if phase one does not move the tallied contact count, phase two does not get funded. That is not a formality and it is not renegotiated afterwards. They keep the record and the live page and owe nothing further. GATE 3, two conditions and both are required before the Counter Copilot is built. One, the record held single-sourced through a full off season with a named owner and dated last-reviewed stamps, verified by re-audit at the April spin-up. Two, an eval set of real counter questions with human-labelled correct answers captured from a live season, which is why the notepad starts in 2026 rather than after a contract. Volume decides whether the copilot is worth it, the corpus and the eval set decide whether it works, and only the second pair blocks. GATE 4, on the expedition and charter desk. No estimate hardens and no work is sold before a discovery session establishes what actually runs behind the counter today and a counted inquiry volume exists. The structural gap in their form is verified, the size of the prize is not, and we will not price against an unknown integration surface. Every gate is measured against something already being collected by the time it is read, and no gate rests on a number nobody is counting.",
+  "high_integrity_dates": [
+   "September 15 2026, a hard commitment because it is theirs rather than ours. The 2026 staffed season closes and the tally week has to be finished before it. Miss it and the 2026 baseline does not exist, the before and after slides to 2028, and the eval set capture loses a whole season of real questions.",
+   "The content working session happens between September 16 2026 and March 31 2027, deliberately outside May 1 to September 15, because the counter can't give a working session in the middle of a staffed season and that is when the person who owns these facts is least available.",
+   "Live and shaken out before the last half of April 2027. This is the one hard commitment we make on our own work in this roadmap. Pilots sit one week of ground school in Talkeetna in the last half of April and the counter spins up behind them, so anything not live and settled by then misses a whole operating year. A build landing in June is a build that missed 2027.",
+   "Nothing else in this roadmap carries a date. Every other item is sequenced by confidence and by what has actually been measured, and none of it should be read as a calendar promise."
+  ]
+ },
+ "roi": {
+  "cost_note": "Five-year total cost of ownership for phase one, not sticker price, and the ask is deliberately staged so the owner can stop after Stage A. FIXED-PRICE BUILD, 24,000 dollars total for roughly 4.5 person-weeks, split into Stage A at 9,500 (the Facts Spine, one structured record per published fact, every page rendering from it, plus the FAA camera coverage check and the hosting or DNS check the feasibility audit made binding, plus the tally protocol) and Stage B at 14,500 (the Conditions Board on the /denali-webcam/ path). Fixed price means the person-week overrun risk sits with us rather than with them, so implementation carries no scenario padding, which is why the same 24,000 appears in all three scenarios. IMPLEMENTATION AND INTEGRATION is the whole of that line because there is no licence and no subscription to buy. TRAINING AND CHANGE MANAGEMENT, stated in hours rather than called included, 16 hours of our facilitation (an 8 hour content working session, a 4 hour counter walkthrough, a 4 hour pre-season refresh) plus 16 hours of their staff time (10 hours of GM and office manager time, 6 hours across counter staff), their hours priced at an ASSUMED loaded rate because no wage figure is verified anywhere. The working session is scheduled outside May 1 to September 15. ONGOING RUN COST, 1,800 dollars a year at the most-likely figure, covering hosting, feed monitoring and the timestamp-based camera health check, one content review pass a year with a dated last-reviewed stamp per fact, and repair when an FAA camera endpoint moves. There is NO inference or token line, no model monitoring line, no evaluation line and no human-in-the-loop review line, because phase one contains no model. That absence is the largest single reason this run cost is small, and it is the honest reason, not a discount. CONTINGENCY of 15 to 20 percent is still applied even against a fixed price, because the reserve exists for the organisational failure modes, a working session that slips, a fact nobody can decide, a second content pass, not for our engineering.",
+  "benefits": [
+   {
+    "benefit": "Flightseeing seats retained on marginal-weather mornings, where a customer who can see the mountain on their phone decides to come in rather than stand down",
+    "kind": "cash",
+    "basis": "THE ONLY LINE IN THE PAYBACK ARITHMETIC, and it is presented as a BREAK-EVEN, never as a projection. Unit price is anchored to a verified figure, the published Southside Explorer adult fare of 275 dollars, which is the LOWEST adult tour fare on their own product pages and already net of the 7.5 percent Federal Transportation Tax and 3 percent Borough Tax they publish separately. Contribution per retained seat is ASSUMED at 50 percent of that fare in the conservative case. The volume driver, seats retained per staffed day, is ASSUMED across a deliberately wide range because it has never been measured, which is exactly why it is run as a break-even and handed to the owner as a test.",
+    "note": "The direction is set by the feasibility audit. Under an unconditional 100 percent refund a false Flying creates no new refund liability while a false Down or a stale Holding converts a paid seat into a refund plus a seat that can no longer be sold. That asymmetry is why the value sits on the imagery half of the board, and why NO return is modelled on the counter-flipped status field, whose deflection is negatively correlated with need."
+   },
+   {
+    "benefit": "Counter minutes recovered on day-of conditions contacts, the calls their own FAQ manufactures by telling customers to call the day they fly",
+    "kind": "capacity",
+    "basis": "Computed from ASSUMED contacts per staffed day, an ASSUMED deflection share, ASSUMED minutes per contact and an ASSUMED loaded hourly cost, against a staffed-day count modelled from the verified May 1 to September 15 window and the verified 7 AM to 7 PM staffing. Every one of those four drivers is assumed, and no verified call volume figure exists anywhere in this package.",
+    "note": "CAPACITY, NOT CASH, and it never converts. No hire is deferred, no backfill is avoided and nobody is redeployed, because the role verified on their own careers page already stacks greeting, check-in, payments, phone, reservations, email and online bookings on one person. Computed and printed SEPARATELY and never added to the cash line. State the result plainly even though it is unflattering to us, counter minutes at any believable contact volume recover only 2 to 47 percent of five-year TCO, so anyone who sells this operator a tool on hours-saved arithmetic is selling a number their own staffed-day count will not support. The vendor formula in the research is exactly that pattern, monthly visitors times 0.015 times 4.5 minutes, an estimate presented as a measurement."
+   },
+   {
+    "benefit": "One verified defect repaired, three pages publishing three different staffed-hours answers collapse to one",
+    "kind": "cash",
+    "basis": "QUARANTINED FROM THE FORMULA AT ZERO DOLLARS. The defect is verified across three separately fetched pages. What is not verified is how often a customer acts on the wrong one, so it carries no modelled dollar and it stays out of the arithmetic.",
+    "note": "This is the reason Stage A is worth buying at zero deflection. Fixing something already known to be wrong needs no volume estimate to justify, and it is the hard prerequisite for everything in the Next lane. The residual risk is named rather than hidden, single sourcing propagates a mistake everywhere at once, handled by one named owner and a dated last-reviewed stamp per fact."
+   },
+   {
+    "benefit": "A measured 2026 baseline that gates every later dollar, taken with a notepad in the weeks the season has left",
+    "kind": "cash",
+    "basis": "QUARANTINED FROM THE FORMULA AT ZERO DOLLARS. Its value is decision quality rather than a cash flow. One week of tally marks at the desk before September 15 2026 produces the contact-volume figure that this entire package lacks, and it costs nothing but attention.",
+    "note": "This is the honest reason a low-five-figure phase one is the right size of ask. If the tally comes back small, the correct answer is that Stage B is not worth buying, and we would rather write that sentence than sell around it."
+   }
+  ],
+  "benefit_phasing": "No day-one benefit anywhere, and here seasonality bites harder than the usual ninety-day stabilisation. The build lands in the shoulder season and the clock only runs during the 138 staffed days between May 1 and September 15, so a slip past mid-April costs a whole year rather than a quarter. Year one is a partial season at an ASSUMED ramp of 30 percent conservative, 40 percent most likely and 55 percent aggressive. That ramp is doing two jobs, the usual shakeout of a new page against real traffic, and an awareness curve, because a conditions page nobody knows about deflects nothing in its first weeks. Year two is the first full run-rate season. Year three onward is flat rather than compounding, and that is deliberate. There is no network effect and no learning loop in a static page reading public feeds, so claiming compounding here would be inventing a curve.",
+  "scenarios": {
+   "conservative": "SCOPE THIS SENTENCE CAREFULLY. The conservative case for the FULL phase one, both stages, DOES NOT CLEAR. At an assumed 0.25 retained seats per staffed day it recovers 44 percent of five-year TCO and never crosses cumulative cost inside the horizon. We are saying that in the study rather than tuning a driver until it goes away. WHAT THE CONSERVATIVE CASE DOES CLEAR is the RECOMMENDED ask, which is smaller than the full build. Stage A at 9,500 dollars fixed, priced honestly as decision data plus one verified defect repaired, clears on its own terms with no volume estimate in it anywhere. Stage B is not committed at signature, it is released only if the owner's own tally week puts him above the break-even line the study prints.",
+   "most_likely": "Clears, on assumptions that are still assumptions. 0.50 retained seats per staffed day, which is one seat every other staffed day, at 180 dollars contribution. Recovers 133 percent of five-year TCO with payback in month 45, which is late in the horizon rather than early, and that is what a small fixed-price build against an unmeasured volume should look like. Read this as the middle of a wide band, not as a forecast.",
+   "aggressive": "Clears comfortably and should be treated as the ceiling of the band rather than the target. 1.00 retained seat per staffed day at 220 dollars contribution recovers 362 percent with payback in month 19. Nothing in this package establishes that this case is the true one, and the spread between it and the conservative case is the honest measure of how little anyone currently knows about the volume."
+  },
+  "conservative_clears": true,
+  "conservative_clears_scope": "SCOPED, AND THE SCOPE MUST SURVIVE INTO THE PAGE. The full 24,000 dollar phase one does NOT clear its conservative case. The RECOMMENDED ASK, Stage A at 9,500 dollars priced as decision data plus one verified defect repaired, does. Stage B is released by their own measured week, not at signature.",
+  "payback_range": "Reported as a range and computed in code, never as a point. At the conservative seat-retention assumption there is NO PAYBACK INSIDE THE FIVE-YEAR HORIZON and 44 percent of TCO is recovered. At the most-likely assumption payback lands in month 45. At the aggressive assumption it lands in month 19. The break-even sits between 0.50 and 0.75 retained seats per staffed day on the most expensive honest cost stack, which is roughly one retained seat every other staffed day. The counter-minutes ladder recovers 2 to 47 percent of TCO across the same three cases and never pays back, which is the most useful number in the section because it rebuts the hours-saved arithmetic this industry is sold.",
+  "base_rate_note": "The outside view first, stated straight. Most AI pilots show no P&L impact, MIT put it at about 95 percent and RAND at about 80 percent of AI projects failing, and the population evidence for this specific industry runs the same way, a March 2026 survey of 505 tour and activity operators found 56 percent still finding AI tools overwhelming and 44 percent reporting they had received inaccurate or misleading information from them. The unusual thing here has to be said precisely rather than used as a free pass. PHASE ONE CONTAINS NO MODEL, so the model-specific half of that base rate does not apply to it, no hallucination, no eval debt, no drift, no inference cost, no retrieval failure. That is a real exemption and it is narrow. The OTHER half, which is the larger half, applies in full, because most of those failures are organisational rather than technical, no owner, no measured baseline, no workflow embedding, thin adoption, scope creep. This design attacks those four directly. It is workflow-embedded because it sits on the exact contact their own published FAQ manufactures. It is adoption-owned because a named person owns the number and because the half the ROI rests on needs no human action at all. It is measured because the baseline is taken BEFORE the build with a notepad. Its degraded state is its safest property, the board auto-expires to their own existing FAQ sentence, so a failed board equals today rather than something worse. Removing the model removes the most-cited cause of failure and it also removes any claim to an AI premium, which is why the ask is small and why saying so is the pitch.",
+  "value_owner": "Courtney Shaffer, General Manager, named on their own team page since 2017, owns the number. She is the right owner for a structural reason rather than a seniority one, the Facts Spine does not need data found, it needs a fact DECIDED, and the staffed-hours contradiction can only be resolved by someone with authority to say which answer is true. She owns one dated last-reviewed stamp per fact and the annual pre-season content pass. The office manager owns the daily tally sheet during the measurement weeks. Paul Roderick as Operations Director owns the camera-to-route labelling call, since a clear valley camera is not a clear mountain and only operations can say which site speaks for which route. VARIANCE CHECK, three gates, each comparing actual against a baseline that exists before the spend. Gate one, the 2026 tally week taken before September 15 2026. Gate two, at the end of the 2027 season, the same tally in the same calendar week with the board live, alongside server-side page views which are counted rather than asserted. Gate three, that 2027 variance gates any phase two commitment. A case with no owner and no post-hoc measurement is fantasy by construction, so if the 2027 comparison comes back flat the correct conclusion is that the board did not pay and the Next lane does not open.",
+  "assumptions": [
+   "VERIFIED, the season window runs May 1 to September 15, quoted from their climbing FAQ.",
+   "VERIFIED, the office is staffed 7 AM to 7 PM, quoted from that same climbing FAQ. Their site publishes two other answers for the identical window. We used the narrowest of the three, which is the conservative choice, and repairing that contradiction is itself Stage A's deliverable.",
+   "MODELLED, 138 staffed days per season, a calendar count of the verified window.",
+   "VERIFIED, the published Southside Explorer adult fare is 275 dollars for the one hour flight and 400 dollars with a glacier landing, and the glacier add-on is 125 dollars per person. We anchored the cash line to the LOWEST of those.",
+   "VERIFIED, the published fares are net of the 7.5 percent Federal Transportation Tax and 3 percent Borough Tax the company publishes separately, so no tax is double counted.",
+   "VERIFIED, the refund posture is unconditional at 100 percent, which is what makes a false Down the expensive error direction rather than a false Flying.",
+   "ASSUMED, contribution per retained seat at 135, 180 and 220 dollars. No cost data exists for this operator.",
+   "ASSUMED, retained seats per staffed day at 0.25, 0.50 and 1.00. This is the single driver that moves the answer most and it has never been measured.",
+   "ASSUMED, contacts per staffed day at 6, 12 and 24. NO VERIFIED CALL VOLUME FIGURE EXISTS ANYWHERE, and none was inferred from the 981 registered 2026 Denali climbers because their share of those climbers is also unverified.",
+   "ASSUMED, deflection share at 20, 30 and 40 percent, applied to the imagery half of the board only.",
+   "ASSUMED, minutes per conditions contact at 3, 4 and 5.",
+   "ASSUMED, loaded hourly cost of the person at the counter at 28, 32 and 36 dollars. No wage figure for this employer is verified anywhere.",
+   "ASSUMED, year-one ramp at 30, 40 and 55 percent.",
+   "ASSUMED, no compounding after year two. A static page over public feeds has no learning loop.",
+   "QUOTED, implementation at 24,000 dollars fixed, staged 9,500 for the Facts Spine and 14,500 for the Conditions Board.",
+   "CONDITION, NOT ASSUMPTION. FAA weather camera coverage for the Ruth, the Kahiltna, Tokositna West, the Root Canal and the Kichatna Spires is UNVERIFIED. It is one day of checking inside Stage A and it happens before Stage B is priced. If coverage is thin the Conditions Board shrinks or dies, and the ROI dies with it.",
+   "CONDITION, NOT ASSUMPTION. Hosting or DNS access to recover the /denali-webcam/ path is unconfirmed. Also inside Stage A.",
+   "EXCLUDED ON PURPOSE, no benefit is modelled for standby or seat recovery automation, for a guest-facing assistant, or for the counter copilot.",
+   "QUALITATIVE AND QUARANTINED, carrying zero dollars in the formula. The counter keeps the go/no-go conversation the business is known for. Their office manager's forecasting judgement is reinforced rather than replaced. Staff onboarding in the last half of April gets easier once one true answer per fact exists."
+  ],
+  "computed_by_roi_math": {
+   "cash": [
+    {
+     "scenario": "conservative",
+     "annual_run_rate_benefit": 4658,
+     "cumulative_benefit_5yr": 20027,
+     "tco_5yr": 45240,
+     "percent_of_tco_recovered": 44,
+     "payback_month": null,
+     "pays_back_within_horizon": false
+    },
+    {
+     "scenario": "most_likely",
+     "annual_run_rate_benefit": 12420,
+     "cumulative_benefit_5yr": 54648,
+     "tco_5yr": 40946,
+     "percent_of_tco_recovered": 133,
+     "payback_month": 45,
+     "pays_back_within_horizon": true
+    },
+    {
+     "scenario": "aggressive",
+     "annual_run_rate_benefit": 30360,
+     "cumulative_benefit_5yr": 138138,
+     "tco_5yr": 38123,
+     "percent_of_tco_recovered": 362,
+     "payback_month": 19,
+     "pays_back_within_horizon": true
+    }
+   ],
+   "capacity": [
+    {
+     "scenario": "conservative",
+     "percent_of_tco_recovered": 2,
+     "pays_back_within_horizon": false
+    },
+    {
+     "scenario": "most_likely",
+     "percent_of_tco_recovered": 11,
+     "pays_back_within_horizon": false
+    },
+    {
+     "scenario": "aggressive",
+     "percent_of_tco_recovered": 47,
+     "pays_back_within_horizon": false
+    }
+   ],
+   "break_even_seat_ladder": [
+    {
+     "seats_per_staffed_day": 0.25,
+     "percent_of_tco_recovered": 44
+    },
+    {
+     "seats_per_staffed_day": 0.5,
+     "percent_of_tco_recovered": 89
+    },
+    {
+     "seats_per_staffed_day": 0.75,
+     "percent_of_tco_recovered": 133
+    },
+    {
+     "seats_per_staffed_day": 1.0,
+     "percent_of_tco_recovered": 177
+    },
+    {
+     "seats_per_staffed_day": 1.25,
+     "percent_of_tco_recovered": 221
+    }
+   ],
+   "break_even_statement": "Between 0.50 and 0.75 retained seats per staffed day on the most expensive honest cost stack. Roughly one retained seat every other staffed day."
+  }
+ }
+}

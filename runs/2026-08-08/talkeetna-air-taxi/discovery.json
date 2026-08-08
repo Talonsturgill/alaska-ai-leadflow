@@ -1,0 +1,378 @@
+{
+ "company": "Talkeetna Air Taxi",
+ "run_date": "2026-08-08",
+ "citation_discipline": "Every statement traces to a verified_claims entry in out/2026-08-08/claims.json. Where a claim is marked self_reported or modelled it is said inline. HARD_GUARDRAILS obeyed. The drift_pattern warning is treated as a live constraint, so the manual parts of this operation are read as deliberate choices unless a fetched page says otherwise.",
+ "opportunity_map": [
+  {
+   "area": "1. Public information and pre-arrival (site, FAQ pages, hours, prices, webcam)",
+   "what_is_true": "The FAQ instructs every customer to 'please call us the day you are flying to inquire about weather'. Three pages publish three different staffed-hours answers, 7 AM to 7 PM, 7 AM to 9 PM, and 7:30 am to 6:30 pm with a winter 9 to 3. Two separate FAQ URLs exist. The flightseeing index shows 'From $304' for the Southside Explorer while the product page shows $275 adult, a gap that reconciles to the published 7.5 percent Federal Transportation Tax plus 3 percent Borough Tax (modelled, the site does not state it). Their own /denali-webcam/ URL returns a 301 to the homepage and serves no camera.",
+   "what_ai_could_change": "Almost nothing here needs a model. This is a single-source-of-truth problem and deterministic software solves it exhaustively and testably. The one genuine AI-adjacent play is aggregating public FAA weather camera imagery and ASOS observations onto a page they own, and even there the imagery is the product, not a model.",
+   "what_ai_could_not_change": "A model can't invent the correct office hours. Someone has to decide which of the three published answers is right. That is a five minute human decision, not a build."
+  },
+  {
+   "area": "2. Booking, flightseeing tours",
+   "what_is_true": "The site's booking button loads a FareHarbor embed under the talkeetnaair account. We checked talkeetnaair.com, flyk2.com and sheldonairservice.com and did not find a chat widget, AI assistant or language switcher on the pages fetched. Sheldon publishes instant confirmation online booking and a 30 minute arrival window. Two tours carry passenger minimums, four for Summit and two for Winter Explorer.",
+   "what_ai_could_change": "FareHarbor announced FareHarbor Agent on April 27 2026, currently rolling out to a select group of operators with no named customers, outcomes or pricing. That is their incumbent platform bundling the obvious build. Anything we put here is a commodity their vendor is already shipping.",
+   "what_ai_could_not_change": "Passenger minimums are a load economics rule, not a prediction problem. A four-passenger Summit minimum is arithmetic against a published fleet, and it should stay arithmetic."
+  },
+  {
+   "area": "3. Booking, expeditions, charter, river access and sling loads",
+   "what_is_true": "The climber and charter reservation form collects eight fields with no payment step and no availability display. River access is not bookable online and routes to a call at $1,800 per load to the Upper Talkeetna River. Glacier drop-offs run $650 per person for the Ruth to $1,200 for the Kichatna Spires. Helicopter from $412 sightseeing, from $785 remote access, $850 per hour sling loads.",
+   "what_ai_could_change": "The strongest paperwork-engine shape in the business. An inbound form or forwarded email is unstructured text, the one node where a model earns its place. Everything downstream of the parse is deterministic arithmetic and must be computed in code.",
+   "what_ai_could_not_change": "The river conversation about coordinates and gear requirements is a judgement conversation with real consequences at $1,800 a load into a place with no road out. Automating the conversation would destroy the thing the customer is buying. Draft the quote, never the judgement."
+  },
+  {
+   "area": "4. Front counter, check-in and the conditions briefing",
+   "what_is_true": "The customer service role stacks greeting, check-in for both tourists and climbers, payments, phone, reservations, email and online bookings on one person. Check-in is 45 minutes before departure with a right to reschedule a party not checked in within 15 minutes. Climber intake is an ordered in-person sequence, NPS check-in, weigh gear, pay. At check-in the company gives a briefing on visibility and current conditions and the decision is the customer's.",
+   "what_ai_could_change": "The load on the person, not the ritual. A staff-facing retrieval assistant over their own published facts is the one pattern in this file with independent measurement behind it, the NBER study of 5,179 support agents showing 14 percent more issues resolved per hour and 34 percent for novice workers. A seasonal counter staffed fresh each spring is the exact population that study found benefits most.",
+   "what_ai_could_not_change": "The briefing and the handoff of the decision to the customer is the product, not a bottleneck. A company whose stated mission is to respond 'in a caring, patient and heartfelt way' and whose published refund is an unconditional 100 percent is making a deliberate trust choice. Putting a machine in that seat is value destruction wearing an efficiency costume. Gear weighing is a physical scale in a fixed NPS sequence and stays that way."
+  },
+  {
+   "area": "5. The go/no-go weather judgement",
+   "what_is_true": "The office manager's own bio credits her personal forecasting ability. MIT Lincoln Laboratory's VEIA produces visibility estimates from FAA camera images every 10 minutes, was more than 90 percent accurate at detecting low visibility against co-located ASOS, and is presented alongside the camera imagery rather than replacing it. An independent 2025 benchmark of 147,182 images from 444 FAA camera sites found no model reached the FAA's accuracy threshold, best average error about 1.8 statute miles.",
+   "what_ai_could_change": "Assemble the inputs a human already wants in one place. That is it. The clearest measured-versus-marketed line in the whole file, and it points at decision support, never decision making.",
+   "what_ai_could_not_change": "The call itself. The best independent benchmark in this exact domain says the models are not accurate enough, and the best deployed system in Alaska deliberately shows its estimate next to the picture rather than instead of it. Anyone selling TAT an automated flyability verdict is selling something the published evidence says does not exist yet."
+  },
+  {
+   "area": "6. Flight operations, dispatch, load planning and weight and balance",
+   "what_is_true": "Published fleet is seven DHC-3 (10 passengers, 2,000 lb payload), one Cessna 185 (4 passengers, 990 lb) and two Robinson R44 (3 passengers, 600 lb). Flights include 125 pounds of gear per climber with additional gear at $2 per pound.",
+   "what_ai_could_change": "Nothing we should touch. Payload against gear weight is deterministic and safety critical.",
+   "what_ai_could_not_change": "Weight and balance is a regulated function where a wrong answer is unrecoverable, and we have no access to their operational data. Cost of error rules this out on its own."
+  },
+  {
+   "area": "7. Climber field support on the mountain",
+   "what_is_true": "Field weather goes out as a twice-daily voice broadcast on family band radio at 8:00 AM and 8:00 PM on channel 1. Weather-delayed teams are told to be ready to fly at 8:00 AM the following day. Return flights can't be scheduled until the whole team is at basecamp and the basecamp manager relays that to the office by voice. 981 climbers were registered for Denali in 2026 as of late June.",
+   "what_ai_could_change": "Only the office side of the relay, logging what the basecamp manager passes down and keeping the standby list straight. Small.",
+   "what_ai_could_not_change": "The radio broadcast and the voice relay are constrained by physics and connectivity on a glacier, not by software. This is a place to say plainly that there is nothing to sell."
+  },
+  {
+   "area": "8. Pricing, fees, taxes and quote arithmetic",
+   "what_is_true": "A quote stacks a per-person or per-load base, a $125 glacier landing add-on at about 30 extra minutes, a $15 park entrance fee at time of flight, 125 lb included gear with $2 per pound over, a $40 base camp fee, 7.5 percent federal and 3 percent borough tax.",
+   "what_ai_could_change": "Nothing, and that is the finding. This is a rules engine. Any number a customer could check must be computed in code, never generated by a model.",
+   "what_ai_could_not_change": "A model that does arithmetic is a liability here, because a wrong fee on a $1,200 per person Kichatna Spires drop is a refund and a reputation hit in a town with four operators."
+  },
+  {
+   "area": "9. Refunds, weather walk-offs and seat recovery",
+   "what_is_true": "Their published refund is unconditional at 100 percent, more generous than K2's 50 percent deposit refundable with 48-hour notice or inclement weather, and more generous than Sheldon's no change fees with same-day re-accommodation.",
+   "what_ai_could_change": "In principle, filling a seat a party walks away from via a standby or waitlist notification. In practice we have zero verified evidence about how often that happens or how many seats it involves, so proposing it would be inventing a need.",
+   "what_ai_could_not_change": "The policy itself is a competitive asset and should not be touched. Flagged as an unmeasured hypothesis, not an opportunity."
+  },
+  {
+   "area": "10. Safety and regulatory",
+   "what_is_true": "Trade press reported in April 2024 that charter operators have up to three years to implement a proactive safety management system under new FAA Part 135 rules. Two verified incidents exist, a May 31 2015 midair where the NTSB found both aircraft transmitting on the same common traffic advisory frequency and TAT occupants had only minor injuries, and a February 20 2020 R44 that settled into deep snow on the Ruth Glacier with one reported minor injury.",
+   "what_ai_could_change": "SMS is document work, hazard reports, risk assessments, a manual, and an audit trail. Genuinely a paperwork engine shape with a dated regulatory driver.",
+   "what_ai_could_not_change": "We hold no verified evidence about TAT's current SMS state, so we can't claim a gap. Regulator-facing output also carries a cost of error that demands human sign-off on every artifact. Later lane with a question mark, not a pick."
+  },
+  {
+   "area": "11. Hiring and seasonal onboarding",
+   "what_is_true": "All pilots attend one week of ground school in Talkeetna in the last half of April and pass check rides before employment is finalized. The office is staffed across a May 1 to September 15 window. The team page lists 21 named people including two marked retired in 2025, and publishes no company headcount.",
+   "what_ai_could_change": "The hidden multiplier under the counter copilot. A workforce that re-spins up every April is permanently novice at the fact set, precisely where the NBER study measured its largest effect at 34 percent. The onboarding calendar also sets the install deadline for everything else.",
+   "what_ai_could_not_change": "Ground school, check rides and the judgement that comes with a season on the ramp. No claim describes a recruiting bottleneck, so proposing a hiring tool would be an invented need."
+  },
+  {
+   "area": "12. Marketing, reputation and distribution",
+   "what_is_true": "No usable review data exists. TripAdvisor and Yelp returned 403 and Birdeye was never fetched, so no customer quote, sentiment theme or review count may be used and none is used. The company's own positioning claims are self reported.",
+   "what_ai_could_change": "Nothing we can responsibly scope. Any content or reputation build would rest on data we were unable to fetch.",
+   "what_ai_could_not_change": "We can't assess a review or content problem we could not open. Saying so is the honest move, and the drift_pattern warning makes it the required one."
+  },
+  {
+   "area": "13. Competitive position",
+   "what_is_true": "The NPS awarded four Denali glacier landing concession contracts for 2020 to 2029, one to Talkeetna Air Taxi. K2 publishes an operator-initiated weather posture and carries a live webcam link on its FAQ. Sheldon publishes instant confirmation online booking and same-day re-accommodation with no change fees.",
+   "what_ai_could_change": "Not much directly, though this is the sharpest framing available. A concession-protected operator with the most generous published refund in town is currently the one telling customers to phone in for conditions while a competitor links a live camera, and TAT's own camera URL is dead.",
+   "what_ai_could_not_change": "The concession itself is the moat and no software touches it."
+  },
+  {
+   "area": "14. Maintenance and fleet management",
+   "what_is_true": "Ten aircraft published across three types. Nothing else about maintenance was fetched.",
+   "what_ai_could_change": "Unknown, and honestly unknowable from this package.",
+   "what_ai_could_not_change": "Zero verified claims exist here. Out of scope, named so the map is complete rather than silently trimmed."
+  }
+ ],
+ "outcome": "By the time the counter opens for the 2027 season, the same one person can hold a 7 AM to 7 PM day with a measurably smaller share of it spent re-answering the day-of conditions, price and gear questions their own FAQ tells every customer to phone in, and every page a customer reads gives the same answer, with the go/no-go briefing still made face to face by a human at check-in.",
+ "outcome_notes": "A behaviour change with a baseline they can take in one week of tally marks at the desk, not a feature. It deliberately excludes any change to who decides whether a flight goes. The seasonal window is part of the outcome, because a build landing in June is a build that missed the year.",
+ "pays_off": true,
+ "pays_off_note": "Yes, though not first and not the build they are most likely to be offered. The strongest opportunity here is served by deterministic software with no model in it, and saying that plainly is the honest answer. The AI step that follows, a staff-facing retrieval copilot for a counter that is novice by design every April, rests on the single best-measured claim in the package, 14 percent more issues resolved per hour and 34 percent for novice workers across 5,179 agents. That step pays off only after the corpus stops contradicting itself and only if a one-week tally shows the contact volume is material, and if that tally comes back small we should say so and stop at phase one.",
+ "jobs_to_be_done": [
+  {
+   "id": "J1",
+   "job": "When I have a flight booked for today, I want to know whether it is actually going to fly before I drive to Talkeetna, so I don't burn a day of my Alaska trip.",
+   "their_words": "please call us the day you are flying to inquire about weather",
+   "pain_source": "https://www.talkeetnaair.com/flightseeing-faq/ , plus https://www.talkeetnaair.com/denali-webcam/ returning a 301 with no camera, plus K2 carrying a live third party webcam link at https://www.flyk2.com/faq/",
+   "current_workaround": "Phone the office in office hours. Or find the competitor's linked Talkeetna Alaskan Lodge webcam and guess."
+  },
+  {
+   "id": "J2",
+   "job": "When I am the person on the counter in July, I want to answer the same conditions, price, minimum and gear questions without stopping what I am already doing at the desk.",
+   "their_words": "Greeting and checking in scenic passengers and climbers, collecting payments, answering phone calls, taking reservations as well as responding to email inquiries, processing online reservations",
+   "pain_source": "https://www.talkeetnaair.com/employment/ , season and hours from https://talkeetnaair.com/climbing-support-faq/",
+   "current_workaround": "One person context-switching between a check-in queue, a phone and an inbox for four and a half months, holding the fact set in their head."
+  },
+  {
+   "id": "J3",
+   "job": "When I am organising an expedition, a charter or a river drop, I want a firm price and a held date without a round of emails.",
+   "their_words": "Please call or contact us directly to discuss specific coordinates and gear requirements for your river expedition.",
+   "pain_source": "https://www.talkeetnaair.com/river-access/ and https://www.talkeetnaair.com/flight-reservation/ . Comparator, Sheldon publishes 'Book online (instant confirmation via email)' at https://sheldonairservice.com/policies/",
+   "current_workaround": "A form that lands as a message, then a phone call, then email back and forth while a human works the fee stack by hand."
+  },
+  {
+   "id": "J4",
+   "job": "When I quote a climber or a charter, I want every number right the first time.",
+   "their_words": "All flight costs include 125 pounds of gear per climber; Additional gear is charged $2 per pound; Base Camp Fee - $40 per person",
+   "pain_source": "https://www.talkeetnaair.com/climbing-support/ , plus the $125 glacier add-on and $15 park fee at https://www.talkeetnaair.com/glacier-landings/",
+   "current_workaround": "Manual arithmetic across a five or six line fee stack, per party, at a counter that is also running a check-in queue."
+  },
+  {
+   "id": "J5",
+   "job": "When a customer looks up our hours or our price, I want them to find one answer.",
+   "their_words": "Our office is staffed 7 AM until 7 PM ... / Our office is staffed 7 AM until 9 PM ... / Summer/shoulder season operates 7:30 am to 6:30 pm daily.",
+   "pain_source": "Three fetched pages, https://talkeetnaair.com/climbing-support-faq/ , https://talkeetnaair.com/flightseeing/faq/ , https://www.talkeetnaair.com/flightseeing-faq/",
+   "current_workaround": "Each page edited on its own over time. The customer resolves the contradiction by phoning, which lands back on J2."
+  },
+  {
+   "id": "J6",
+   "job": "When I put a new counter person on in April, I want them fluent in the whole fact set fast.",
+   "their_words": "Customer Service is our #1 priority.",
+   "pain_source": "https://www.talkeetnaair.com/employment/ . Evidence for the lift, https://www.nber.org/papers/w31161",
+   "current_workaround": "Shoulder-to-shoulder training in the first weeks of a compressed season, while the season is already running."
+  },
+  {
+   "id": "J7",
+   "job": "When my team is off the mountain, I want the pickup scheduled without a game of telephone.",
+   "their_words": "Your whole team must be at basecamp before scheduling your return flight and she will contact our office.",
+   "pain_source": "https://talkeetnaair.com/climbing-support-faq/ , plus the twice-daily channel 1 broadcast at https://www.talkeetnaair.com/logistics/",
+   "current_workaround": "Voice relay from the basecamp manager, family band radio at 8 AM and 8 PM, 8 AM standby the next morning."
+  },
+  {
+   "id": "J8",
+   "job": "When the FAA Part 135 safety management system rules bite, I want the documentation and the process already running.",
+   "their_words": "Charter operators will have up to three years to implement a proactive safety system",
+   "pain_source": "https://www.ainonline.com/aviation-news/business-aviation/2024-04-23/faa-issues-sms-rules-part-135-operators",
+   "current_workaround": "Unknown. No page in this package describes their current SMS state, so we can't characterise it."
+  },
+  {
+   "id": "J9",
+   "job": "When I decide whether to launch, I want the best available read on the mountain.",
+   "their_words": "we will give a briefing on visibility and current conditions. It is then your decision whether to fly or not.",
+   "pain_source": "https://www.talkeetnaair.com/flightseeing-faq/ , plus https://www.talkeetnaair.com/team-tat/",
+   "current_workaround": "Experienced human judgement, pilot input, and a face to face briefing. Listed so it can be explicitly PROTECTED, not solved."
+  }
+ ],
+ "opportunity_scores": {
+  "method": "Ulwick, score = Importance + max(Importance - Satisfaction, 0) on a 1 to 10 scale, which weights importance double. Satisfaction judged from fetched evidence only. Torres cross-check on sizing, market position, strategy fit, and care versus satisfaction follows each row.",
+  "rows": [
+   {
+    "id": "J1",
+    "job": "Know whether today's flight is going before driving to Talkeetna",
+    "importance": 9,
+    "satisfaction": 3,
+    "working": "9 + max(9-3,0) = 15",
+    "opportunity_score": 15,
+    "torres_check": "Sizing, every booked guest every day of a May 1 to September 15 season, and the one contact their own FAQ instructs all of them to make. Market position, K2 already publishes an operator-initiated posture and a live webcam link while TAT's own webcam URL 301s. Strategy fit high, it feeds the human briefing rather than replacing it. Care versus satisfaction, they care enormously (a $275 to $547 ticket and a day of an Alaska trip) and are served only by a phone call inside office hours."
+   },
+   {
+    "id": "J2",
+    "job": "Answer the repeat day-of questions without leaving the desk",
+    "importance": 9,
+    "satisfaction": 4,
+    "working": "9 + max(9-4,0) = 14",
+    "opportunity_score": 14,
+    "torres_check": "Sizing, the whole in-season contact volume funnels through one role as they describe it. Market position, no operator we checked has anything here. Strategy fit high if staff-facing, low if guest-facing, because their stated mission is a caring human response. Satisfaction is 4 not 2, they clearly do this well, it just consumes the person. HONEST CAVEAT, no verified figure for call volume exists anywhere in this package."
+   },
+   {
+    "id": "J3",
+    "job": "Get a firm price and a held date for an expedition, charter or river drop",
+    "importance": 8,
+    "satisfaction": 3,
+    "working": "8 + max(8-3,0) = 13",
+    "opportunity_score": 13,
+    "torres_check": "Sizing, the high-ticket line, $650 to $1,200 per person on glacier drops, $1,800 per river load, against 981 climbers registered for Denali in 2026 shared across four concessionaires. Market position, weakest published of the three. Strategy fit strong, revenue not just cost. The structural gap is verified even though the turnaround time itself is inferred."
+   },
+   {
+    "id": "J9",
+    "job": "Best available read on the mountain before launching",
+    "importance": 10,
+    "satisfaction": 8,
+    "working": "10 + max(10-8,0) = 12",
+    "opportunity_score": 12,
+    "torres_check": "Highest importance in the business and among the best served, by a named person whose own bio credits the ability. DELIBERATELY EXCLUDED as a target. The independent 2025 benchmark found no model reached the FAA accuracy threshold, best average error about 1.8 statute miles, so the technology can't beat the incumbent here. High score, wrong target."
+   },
+   {
+    "id": "J4",
+    "job": "Get the fee stack arithmetic right first time",
+    "importance": 7,
+    "satisfaction": 4,
+    "working": "7 + max(7-4,0) = 10",
+    "opportunity_score": 10,
+    "torres_check": "Rides inside J3 rather than standing alone. Pure rules engine, no model belongs anywhere near it."
+   },
+   {
+    "id": "J5",
+    "job": "One published answer per fact",
+    "importance": 6,
+    "satisfaction": 2,
+    "working": "6 + max(6-2,0) = 10",
+    "opportunity_score": 10,
+    "torres_check": "Lowest importance on its own, lowest satisfaction of any row, and the data-readiness prerequisite for every assistant-shaped build. A self-contradictory corpus means the cleanup is the project's first phase, not an optional tidy-up."
+   },
+   {
+    "id": "J6",
+    "job": "Spin a new counter person up fast each April",
+    "importance": 7,
+    "satisfaction": 4,
+    "working": "7 + max(7-4,0) = 10",
+    "opportunity_score": 10,
+    "torres_check": "Understated by the raw score. A workforce that resets every April is permanently novice, the exact population where the NBER study measured 34 percent. The multiplier under J2, not a separate target."
+   },
+   {
+    "id": "J7",
+    "job": "Schedule the pickup once the team is at basecamp",
+    "importance": 8,
+    "satisfaction": 6,
+    "working": "8 + max(8-6,0) = 10",
+    "opportunity_score": 10,
+    "torres_check": "Constrained by connectivity on a glacier, not by software. Radio and voice relay is the right answer, and there is nothing honest to sell here."
+   },
+   {
+    "id": "J8",
+    "job": "Have the Part 135 safety management system running before the deadline",
+    "importance": 8,
+    "satisfaction": null,
+    "working": "NOT SCORED. Satisfaction is unknowable from this package, so any score would be invented.",
+    "opportunity_score": null,
+    "torres_check": "Real dated driver. Carried to the Later lane as a question to ask them, never as an assumed gap. Scoring an unmeasured need is exactly the drift this package warns about."
+   }
+  ]
+ },
+ "target_opportunity": {
+  "job": "J1 with J2 as its mirror image. The day-of conditions and logistics contact, answered without consuming the counter and without anyone but a human making the go/no-go call.",
+  "why": "Top of the Ulwick ranking at 15 and 14, and unusually the customer side and the operator side of the same event, so one build moves both. Three independently verified facts converge on it rather than one loud one. J9 scores 12 and is deliberately excluded because it is already well served and the independent 2025 FAA camera benchmark says no model reaches the accuracy threshold. J3 scores 13 and is the strongest runner-up, held for the Next lane because its magnitude is inferred from a form's structure rather than measured.",
+  "forces": "Push, their own published policy manufactures the call volume, the office runs long days for four and a half months, and there is currently nothing to point a customer at. Pull, a page they own that they can drop into every confirmation, plus the competitive sting that K2 already links someone else's webcam. Anxiety, real and specific, a fear that any published conditions view becomes an implied promise and a refund argument, plus the finding that 44 percent of 505 surveyed tour and activity operators report receiving inaccurate or misleading information from AI tools and 56 percent find them overwhelming. Habit, strong, 'call us the day you are flying' is written into the FAQ, into the counter ritual, and into a named person's reputation. VERDICT, push plus pull clears anxiety plus habit ONLY IF the build is explicitly non-predictive, shows raw imagery and observations rather than a verdict, and routes the decision to the check-in briefing. A build that answers 'should you fly' fails the forces test and would be rejected on arrival."
+ },
+ "candidate_builds": [
+  {
+   "name": "A. The Conditions Board",
+   "our_build": "Deterministic software, NO MODEL. Workflow automation plus a public page.",
+   "what_it_is": "One mobile-first page on their own domain, served at the /denali-webcam/ path that currently 301s to the homepage so old links resolve again. It shows public FAA weather camera imagery for Talkeetna and the nearest Alaska Range sites, current observations, and the NWS forecast, side by side and auto-refreshing. Beside them sits one field the counter flips per tour block, Flying, Holding, or Down, stamped with the time it was last set and auto-expiring back to 'call us' after a set interval so a stale board can never lie. The page carries a single plain line that the conditions briefing happens at check-in and the decision is the customer's. It gets linked from every confirmation and from the FAQ line that currently says to phone in.",
+   "what_it_does_not_do": "It does not predict. It does not estimate visibility. It does not say whether to fly. It does not book, take payment, or talk. It does not touch dispatch, weight and balance, or any flight operations system.",
+   "why_this_shape": "The best deployed system in this exact domain, MIT Lincoln Laboratory's VEIA, shows its estimates alongside the camera imagery rather than replacing it, and the independent 2025 benchmark across 444 FAA camera sites found no model reaching the FAA accuracy threshold. When the measured evidence says the model is not good enough and the imagery is the value, ship the imagery.",
+   "roughly_what_it_takes": "About 3 person-weeks. Public FAA and NWS feeds, their web hosting or DNS access, and one decision from them about who flips the status field and when. No data they own has to be extracted from anywhere.",
+   "main_risk": "The human status field going stale, which is worse than no board. Mitigated by the visible timestamp and the automatic expiry to 'call us'."
+  },
+  {
+   "name": "B. The Facts Spine",
+   "our_build": "Deterministic content operations, NO MODEL. The cheapest thing on this list.",
+   "what_it_is": "One structured source of truth for the facts customers ask about, staffed hours, tour fares, the glacier add-on, the park fee, the gear allowance and overweight rate, the base camp fee, the two tax lines, passenger minimums and the check-in window. Every page renders from it, so three pages stop publishing three different staffed-hours answers and the duplicate FAQ URLs reconcile. The index from-price is shown as fare plus the published 10.5 percent in taxes as a visible line rather than an unexplained jump from $275 to $304.",
+   "what_it_does_not_do": "It does not decide which hours are correct, that is their five minute call. It does not redesign the site, add AI, or change any policy.",
+   "why_this_shape": "The data-readiness prerequisite for anything assistant-shaped, and it removes a live source of the calls that J1 and J2 are about. It is also the one item that pays for itself even if every other idea here is rejected.",
+   "roughly_what_it_takes": "About 1.5 person-weeks plus one working session with whoever owns the content.",
+   "main_risk": "Almost none technically. The risk is that it is unglamorous enough to get skipped, which then quietly caps the ceiling of build C."
+  },
+  {
+   "name": "C. The Counter Copilot",
+   "our_build": "Retrieval assistant over their own files, STAFF-FACING ONLY, with a deterministic quote calculator bolted on.",
+   "what_it_is": "A retrieval assistant scoped to a bounded corpus of their own published and internal material. A counter person asks in plain language and gets an answer with the source page cited and a visible 'I don't know' when the corpus does not cover it. Alongside it sits a quote calculator that computes the fee stack in code so no number is ever generated by a model.",
+   "what_it_does_not_do": "It does not talk to customers, on the phone or on the web. It does not make or hint at weather calls. It does not book, take payment, or write to any system of record. It does not touch flight operations.",
+   "why_this_shape": "The only build in this file with independent measurement behind its exact pattern. The NBER study of 5,179 support agents found 14 percent more issues resolved per hour and 34 percent for novice and low-skilled workers, and TAT's counter is novice by design every April. Staff-facing keeps the human voice on the customer side, which their own mission statement demands.",
+   "roughly_what_it_takes": "About 8 person-weeks, HARD-BLOCKED on build B, because a corpus that currently gives three answers to one question will produce confidently wrong retrieval. Needs an eval set of real counter questions with human-labelled correct answers before it goes anywhere near a live season.",
+   "main_risk": "Confident wrong answers on the long tail, and the corpus going stale. The second risk is why B is a prerequisite rather than a companion."
+  },
+  {
+   "name": "D. The Expedition and Charter Desk",
+   "our_build": "Workflow automation plus a paperwork engine, with a model on exactly one node.",
+   "what_it_is": "Turns the eight-field reservation form and the river and charter phone inquiries into a tracked pipeline. Inbound unstructured text gets parsed for party size, dates, drop-off point and gear estimate, the one place a model earns its keep. A deterministic engine then prices it off the published table and drafts a complete quote with a gear and weight worksheet for a human to review and send in one click.",
+   "what_it_does_not_do": "It does not send a quote autonomously, hold a date, take payment, or replace the in-person gear weigh. It does not have the coordinates-and-gear conversation for a river drop, because that conversation is the product at $1,800 a load.",
+   "why_this_shape": "Highest revenue leverage in the file and the strongest published competitive gap. The arithmetic stays in code because it is checkable by the customer.",
+   "roughly_what_it_takes": "About 12 person-weeks, with a genuinely open integration question. The live booking button loads a FareHarbor embed for tours, and we make no assertion about what runs behind the counter for climbers and charters, so a discovery session comes before any estimate hardens.",
+   "main_risk": "Unknown integration surface and unverified volume. The structural gap is verified, the size of the prize is not."
+  },
+  {
+   "name": "E. The Guest Assistant (included to be compared, and to be beaten)",
+   "our_build": "Voice or front-desk agent. The obvious build, scored honestly.",
+   "what_it_is": "A guest-facing assistant on the site and the phone line answering hours, prices, what to wear, minimums, and the question everyone actually asks, whether it is flying today.",
+   "what_it_does_not_do": "Nothing it would do is unique to them, which is the problem.",
+   "why_it_loses": "Four separate reasons, each sufficient alone. Their own booking platform announced FareHarbor Agent on April 27 2026, already rolling out to a select group of operators, so this is a commodity the incumbent is bundling and the honest build-versus-buy answer is wait and evaluate. The published operator evidence is thin, Yonder's hours-saved figures rest on a vendor estimating formula rather than measurement, and the strongest counter-example is a vendor blog. The highest-frequency question is the one where a wrong answer costs a customer their day and TAT a full-refund seat under an unconditional 100 percent policy, and 44 percent of 505 surveyed operators report getting inaccurate information from AI tools. Last, it puts a machine between the customer and a company whose stated mission is to respond 'in a caring, patient and heartfelt way'.",
+   "roughly_what_it_takes": "About 8 person-weeks, for something Yonder lists at $95 to $295 a month plus configuration and FareHarbor may hand them for free."
+  }
+ ],
+ "rice_and_cod": {
+  "scales": "Reach is scored 1 to 10 as the share of a season's customer contacts the build touches. It is NOT a headcount, because this package carries no verified flightseeing volume at all. Inventing a call count to make RICE look precise would be exactly the drift this file warns about. Impact is 3 massive, 2 high, 1 medium, 0.5 low. Confidence is a percentage, cut hard where evidence is thin. Effort is person-weeks. Score = Reach x Impact x Confidence / Effort.",
+  "rows": [
+   {
+    "candidate": "A. The Conditions Board",
+    "reach": "9. Their own FAQ directs every day-of customer to make this contact.",
+    "impact": "2. Removes the reason for the most common contact and gives the counter a link to send instead of a conversation to have. It does not remove every call.",
+    "confidence": "80 percent. The policy, the dead webcam URL and the competitor's webcam link are all directly verified. The call volume it would deflect is not measured anywhere, which is the 20 percent haircut.",
+    "effort": "3 person-weeks",
+    "working": "9 x 2 x 0.80 / 3 = 4.80",
+    "score": 4.8
+   },
+   {
+    "candidate": "B. The Facts Spine",
+    "reach": "6. Everyone who reads a page before contacting them.",
+    "impact": "1. Medium on its own. Removes a source of avoidable contacts and a trust wobble at the point of price comparison.",
+    "confidence": "90 percent. The contradiction is verified across three separate fetched pages.",
+    "effort": "1.5 person-weeks",
+    "working": "6 x 1 x 0.90 / 1.5 = 3.60",
+    "score": 3.6
+   },
+   {
+    "candidate": "C. The Counter Copilot",
+    "reach": "8. Every phone call and email the counter handles passes through the person using it.",
+    "impact": "2. High and measured, though not transformative. 14 percent average, with the 34 percent novice figure landing at spring spin-up.",
+    "confidence": "70 percent. The NBER study is the strongest evidence in the file and directly on-pattern, so the haircut is not about the mechanism. It is about transfer, that study measured a large support organisation with logged transcripts, not a four-person counter, and TAT's corpus is currently self-contradictory.",
+    "effort": "8 person-weeks",
+    "working": "8 x 2 x 0.70 / 8 = 1.40",
+    "score": 1.4
+   },
+   {
+    "candidate": "D. The Expedition and Charter Desk",
+    "reach": "3. Expedition, charter, river and sling inquiries only, a minority of contacts, though the high-ticket ones.",
+    "impact": "3. Massive per contact, revenue on $650 to $1,200 per person drops and $1,800 river loads, against a competitor publishing instant confirmation.",
+    "confidence": "60 percent. The structural gap in the form is verified. The turnaround pain is inferred from that structure, not measured, and the integration surface is genuinely unknown.",
+    "effort": "12 person-weeks",
+    "working": "3 x 3 x 0.60 / 12 = 0.45",
+    "score": 0.45
+   },
+   {
+    "candidate": "E. The Guest Assistant",
+    "reach": "7. Site visitors and callers.",
+    "impact": "1. Medium at best, and NEGATIVE on the one question that matters most if it answers it.",
+    "confidence": "40 percent. This is where the Confidence lever does its job. The operator evidence is a vendor estimating formula and a vendor blog. FareHarbor Agent has no named customers, no outcomes and no pricing published. Surf Air's OperatorOS has not launched, and its impressive numbers belong to the vendor's own internal broker sales team, not to any Part 135 operator.",
+    "effort": "8 person-weeks",
+    "working": "7 x 1 x 0.40 / 8 = 0.35",
+    "score": 0.35
+   }
+  ],
+  "ranking": "A 4.80, B 3.60, C 1.40, D 0.45, E 0.35.",
+  "cost_of_delay": [
+   {
+    "item": "A and B",
+    "note": "Hardest deadline in the file. The office is staffed May 1 to September 15 and pilots sit ground school in the last half of April, so anything not live and shaken out before late April misses a whole operating year. Delay here is measured in seasons, not weeks. On top of that the /denali-webcam/ URL is returning a 301 today, so every old link pointing at it is already dead. Build B is 1.5 weeks against the same seasonal gate, the highest cost of delay over size of anything on the list."
+   },
+   {
+    "item": "C",
+    "note": "Its largest measured benefit, the 34 percent novice effect, only lands if the tool is in staff hands before the April spin-up. Missing that window does not just delay the value, it skips the single moment in the year when the value is highest."
+   },
+   {
+    "item": "D",
+    "note": "Expedition inquiries arrive through winter and early spring for a season that peaks May to July, so the quoting window closes before the flying window opens. Watch item rather than a rush, Surf Air's OperatorOS is targeted at small and mid-sized Part 135 operators in the second half of 2026, which could commoditise part of this."
+   },
+   {
+    "item": "E",
+    "note": "NEGATIVE urgency, and this is the useful finding. FareHarbor Agent is rolling out now with no published pricing. Waiting costs nothing and may cost zero dollars. Delay is the correct decision."
+   },
+   {
+    "item": "J8, Part 135 safety management system",
+    "note": "The only dated regulatory driver in the file. Not a candidate because we hold no evidence about their current state, so it is a question to ask rather than a gap to claim."
+   }
+  ]
+ },
+ "provisional_pick": {
+  "name": "The Conditions Board, with the Facts Spine as its first ten days",
+  "scope": "Build B then build A, shipped as one thing. The spine is the data layer the board renders from, so hours, prices, fees and minimums live in one place and the board and every page read from it. Phase 2, the Counter Copilot, reads from the same spine and is DELIBERATELY NOT part of this commitment.",
+  "why_over_others": "It wins on the arithmetic, 4.80 and 3.60 against 1.40, 0.45 and 0.35, and on the reasoning underneath it. It is the only opportunity where three separately verified facts converge instead of one inferred pain. It is the cheapest thing on the list at about 4.5 person-weeks combined. It clears the Four Forces test because it lowers anxiety by design, there is no model to be wrong and no verdict to be argued with in a refund conversation, and it strengthens rather than replaces the counter briefing they built their reputation on. It fits the season. It beats C because C is hard-blocked on B anyway. It beats D because D's structural gap is verified while its magnitude is not, and 12 person-weeks against an unknown integration surface is the wrong first commitment. It beats E decisively.",
+  "how_it_is_measured": "One week of tally marks at the desk BEFORE anything is built, counting day-of conditions contacts and hours or price questions. Same tally in the same week of the following season. If the board does not move that number, phase 2 does not get funded. That gate is stated up front on purpose.",
+  "what_this_pick_gives_up": "It leaves the highest-ticket revenue line untouched for a season, and it is the least impressive thing we could propose. Both accepted deliberately. Build D and build C ride to the Next lane, and the safety management system question, the hiring and onboarding angle and the weather-day seat recovery hypothesis ride to Later, so nothing found in the map is wasted.",
+  "provisional_because": "The feasibility engineer audits this next and may find FAA camera coverage near the Alaska Range is thinner than the board needs, or that hosting access makes the /denali-webcam/ path recovery harder than it looks. The bigger honest exposure is that the contact volume this pick exists to reduce is nowhere measured in this package, which is precisely why the baseline tally comes before the build rather than after it."
+ }
+}

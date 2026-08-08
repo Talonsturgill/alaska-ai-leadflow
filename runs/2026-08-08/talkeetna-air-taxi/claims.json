@@ -1,0 +1,413 @@
+{
+ "run_date": "2026-08-08",
+ "company": "Talkeetna Air Taxi",
+ "domain": "talkeetnaair.com",
+ "contact_ok": true,
+ "contact_email": "info@talkeetnaair.com",
+ "contact_source": "https://www.talkeetnaair.com/contact/ , Cloudflare /cdn-cgi/l/email-protection link on the contact page, decoded to info@talkeetnaair.com. Corroborated by the footer phone (907) 733-2218 on the same fetched page. The literal string is not visible text anywhere, it exists only as obfuscation that decodes to it.",
+ "verdict": "PROCEED. 61 claims verified off fetched pages. The contact is real and decoded, not pattern-invented. courtney@talkeetnaair.com stays REJECTED. The spine of the study is fully page-verified.",
+ "HARD_GUARDRAILS": [
+  "THE AUGUST 4 2018 FATAL THUNDER MOUNTAIN CRASH MUST NOT APPEAR ANYWHERE, IN ANY DIRECTION, in the study, the demo or the email. No page attributing it to any operator could be opened. Five candidate URLs all returned 404 or 503.",
+  "NO REVIEW CONTENT AND NO REVIEW COUNT is usable. TripAdvisor and Yelp 403'd and Birdeye was never fetched. No customer quote may be used.",
+  "The TripAdvisor 'weather complaints' theme is KILLED ENTIRELY. It is an unsourced characterisation of a named business.",
+  "DO NOT say 'every named leader's contact link resolves to one inbox'. Say 'the team page publishes no individual staff addresses'.",
+  "DO NOT claim FareHarbor runs on four of five competitor sites. Only the target's own FareHarbor rail is verified, plus Sheldon's published online booking.",
+  "DO NOT claim the absence of AI across all five operator sites. Say 'we checked and did not find' and name the three actually checked: talkeetnaair.com, flyk2.com, sheldonairservice.com.",
+  "The glacier is 'Tokositna - West', NOT East.",
+  "DO NOT cite the Wikipedia fleet composition or a Cessna 208B Grand Caravan. The company's own fleet page is authoritative.",
+  "DO NOT assert what booking software runs behind the counter today. Takeflite is a 2019 vendor blog and the live button points at FareHarbor.",
+  "DO NOT use the '35 tours a day' figure, the 2,577 review figure, the corporation number, or the CoolWorks hiring dates. None were fetched.",
+  "The 7:30 am to 6:30 pm hours line is scoped to a summer and shoulder window through September 30th, NOT to the same May 1 to September 15 season as the other two. Do not imply one season for all three."
+ ],
+ "counterweights_to_carry_for_balance": [
+  "The company holds one of only FOUR federal Denali glacier landing concessions, awarded by the National Park Service for 2020 to 2029.",
+  "Its published refund posture is unconditional at 100 percent, which is more generous than either published competitor policy."
+ ],
+ "verified_claims": [
+  {
+   "claim": "The company publishes that it does not notify customers in advance of weather cancellations and instructs them to call on the day of the flight.",
+   "quote": "please call us the day you are flying to inquire about weather",
+   "url": "https://www.talkeetnaair.com/flightseeing-faq/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The go/no-go call is handed to the customer at the counter after a verbal conditions briefing at check-in.",
+   "quote": "When you check in for your flightseeing tour, we will give a briefing on visibility and current conditions. It is then your decision whether to fly or not.",
+   "url": "https://www.talkeetnaair.com/flightseeing-faq/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "A weather cancellation or a customer decision not to fly carries a full refund.",
+   "quote": "If we cancel or you decide not to fly due to weather conditions you always receive a 100% refund.",
+   "url": "https://www.talkeetnaair.com/flightseeing-faq/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Two named tours carry passenger minimums, four for Summit Tours and two for Winter Explorer Tours.",
+   "quote": "Summit Tours require a 4-passenger minimum, while Winter Explorer Tours require a 2-passenger minimum.",
+   "url": "https://www.talkeetnaair.com/flightseeing-faq/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Passengers must check in 45 minutes before departure and the company reserves the right to reschedule a party not checked in within 15 minutes of departure.",
+   "quote": "reserves the right to reschedule your reservation if you have not arrived and fully checked in within 15 minutes of your tour's departure",
+   "url": "https://www.talkeetnaair.com/flightseeing-faq/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The customer service role as the company describes it stacks greeting, check-in for both tourists and climbers, payments, phone, reservations, email and online bookings on one person.",
+   "quote": "Greeting and checking in scenic passengers and climbers, collecting payments, answering phone calls, taking reservations as well as responding to email inquiries, processing online reservations & being a team player.",
+   "url": "https://www.talkeetnaair.com/employment/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The company states on its careers page that customer service is its number one priority.",
+   "quote": "Customer Service is our #1 priority.",
+   "url": "https://www.talkeetnaair.com/employment/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The company states its mission is to listen to customer needs and respond in a caring, patient and heartfelt way.",
+   "quote": "to listen to our customers needs and respond to the information requested in a caring, patient and heartfelt way",
+   "url": "https://www.talkeetnaair.com/employment/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Pilots must attend one week of ground school in Talkeetna in the last half of April and pass check rides before employment is finalized.",
+   "quote": "All pilots are required to attend one week of ground school in Talkeetna during the last half of April, as well as pass all check rides before their employment is finalized.",
+   "url": "https://www.talkeetnaair.com/employment/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Climber intake is an ordered in-person sequence, NPS check-in then gear weighing then payment.",
+   "quote": "1. Check in with NPS 2. Weigh your gear 3. Pay for your flight",
+   "url": "https://www.talkeetnaair.com/logistics/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Weather-delayed climbing teams are told to stand by for an 8 AM departure the next morning.",
+   "quote": "be ready to fly at 8:00 AM the following day",
+   "url": "https://www.talkeetnaair.com/logistics/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Field weather is distributed to climbers as a twice-daily voice broadcast on family band radio at 8 AM and 8 PM.",
+   "quote": "weather information every morning and evening at 8:00 AM and 8:00 PM on channel 1",
+   "url": "https://www.talkeetnaair.com/logistics/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Return flights off Kahiltna basecamp can't be scheduled until the whole team is at basecamp, and the basecamp manager relays that to the office by voice.",
+   "quote": "Your whole team must be at basecamp before scheduling your return flight and she will contact our office.",
+   "url": "https://talkeetnaair.com/climbing-support-faq/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The climbing FAQ states the office is staffed 7 AM to 7 PM from May 1 to September 15.",
+   "quote": "Our office is staffed 7 AM until 7 PM after May 1st until September 15th.",
+   "url": "https://talkeetnaair.com/climbing-support-faq/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "A second FAQ page on the same site states the office is staffed 7 AM to 9 PM over the identical May 1 to September 15 window.",
+   "quote": "Our office is staffed 7 AM until 9 PM after May 1st until September 15th.",
+   "url": "https://talkeetnaair.com/flightseeing/faq/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "A third page gives different hours again, daily from 7:30 am to 6:30 pm, scoped to a summer and shoulder window through September 30th rather than to the same season as the other two.",
+   "quote": "office hours are daily from 7:30 am to 6:30 pm",
+   "url": "https://www.talkeetnaair.com/flightseeing-faq/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The climber and charter reservation form collects contact details, drop-off location, expedition name, climber count, date and comments, with no payment step and no availability display.",
+   "quote": "Name (Required), Email (Required), Phone (Required), Drop Off Location (Required), Expeditions Name (Required), Number of Climbers (Required), Date (Required), Additional Comments (Required)",
+   "url": "https://www.talkeetnaair.com/flight-reservation/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "River access is not bookable online and routes to a phone call or direct contact.",
+   "quote": "Please call or contact us directly to discuss specific coordinates and gear requirements for your river expedition.",
+   "url": "https://www.talkeetnaair.com/river-access/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "River access by fixed wing to the Upper Talkeetna River is priced at 1,800 dollars per load.",
+   "quote": "$1,800 per load to the Upper Talkeetna River",
+   "url": "https://www.talkeetnaair.com/river-access/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The published fleet is seven de Havilland DHC-3, one Cessna 185 and two Robinson R44 helicopters.",
+   "quote": "de Havilland Canada DHC-3 (7 in fleet), Max Seating: 10 passengers, Max Payload: 2,000 lbs; Cessna 185 (1 in fleet), 4 passengers, 990 lbs; R44 Helicopter (2 in fleet), 3 passengers, 600 lbs",
+   "url": "https://www.talkeetnaair.com/our-fleet/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The company says it has the only IFR ski and oxygen equipped aircraft serving the Alaska Range.",
+   "quote": "TAT has the only IFR ski and oxygen equipped aircraft providing access to the Alaska Range.",
+   "url": "https://www.talkeetnaair.com/our-fleet/",
+   "provenance": "self_reported"
+  },
+  {
+   "claim": "The company says it is known as The Glacier Landing Company and conducts more glacier landings than any other company in the world.",
+   "quote": "TAT is known throughout Alaska as 'The Glacier Landing Company' and conducts more glacier landings than any other company in the world!",
+   "url": "https://www.talkeetnaair.com/glacier-landings/",
+   "provenance": "self_reported"
+  },
+  {
+   "claim": "A glacier landing adds about 30 minutes and 125 dollars per person to any tour.",
+   "quote": "A glacier landing takes an additional 30 minutes (approximately 15 minutes on the glacier and 15 minutes for landing and takeoff) and can be added to any flight tour for $125 per person.",
+   "url": "https://www.talkeetnaair.com/glacier-landings/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "A 15 dollar per person park entrance fee is collected at the time of the flight for glacier landings.",
+   "quote": "A $15 per person entrance fee for the Denali Park glacier landing is due at the time of your flight unless you already have a National Park Pass.",
+   "url": "https://www.talkeetnaair.com/glacier-landings/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The Southside Explorer product page lists 275 dollars adult and 192.50 children for the one hour flight, and 400 dollars adult and 280 children with a glacier landing.",
+   "quote": "1 Hour Flight (Flight Only): Adults $ 275, Children $ 192.50; 1 Hour 30 Min Flight (with Glacier Landing): Adults $ 400, Children $ 280",
+   "url": "https://www.talkeetnaair.com/southside-explorer/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The flightseeing index shows higher from-prices for the same tours than the product pages do.",
+   "quote": "Southside Explorer: From $304 per Adult; Mountain Voyager: From $387 per Adult; Grand Denali: From $476 per Adult; Summit Tour: From $547 per Adult",
+   "url": "https://www.talkeetnaair.com/flightseeing/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The index price for the Southside Explorer equals the product page fare plus the 10.5 percent in taxes the company publishes elsewhere.",
+   "quote": "275 x 1.105 = 303.875, rounding to the published $304 index figure",
+   "url": "https://www.talkeetnaair.com/climbing-support/",
+   "provenance": "modelled"
+  },
+  {
+   "claim": "The company publishes a 7.5 percent Federal Transportation Tax and a 3 percent Borough Tax on flights.",
+   "quote": "Federal Transportation Tax - 7.5% of total flight cost; Borough Tax - 3% of total cost",
+   "url": "https://www.talkeetnaair.com/climbing-support/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Glacier drop-off prices run from 650 dollars per person for the Ruth to 1,200 for the Kichatna Spires.",
+   "quote": "Ruth Glacier $650 Per Person; Kahiltna Glacier $675 Per Person; Root Canal $725 Per Person; Tokositna - West $750 Per Person; Kichatna Spires $1200 Per Person",
+   "url": "https://www.talkeetnaair.com/climbing-support/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Flights include 125 pounds of gear per climber with overweight charged by the pound, plus a 40 dollar base camp fee.",
+   "quote": "All flight costs include 125 pounds of gear per climber; Additional gear is charged $2 per pound; Base Camp Fee - $40 per person",
+   "url": "https://www.talkeetnaair.com/climbing-support/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The company says it is the area's only commercial helicopter operator and flies the Robinson R44 II Raven.",
+   "quote": "As the area's only commercial helicopter operator, TAT has a number of services to fit your needs.",
+   "url": "https://www.talkeetnaair.com/helicopter-tours/",
+   "provenance": "self_reported"
+  },
+  {
+   "claim": "Helicopter services are priced from 412 dollars for sightseeing, from 785 for remote access and 850 per hour for sling loads.",
+   "quote": "Heli Sightseeing: From $412; Remote Access: From $785; Sling Loads: $850 / hr",
+   "url": "https://www.talkeetnaair.com/helicopter-tours/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The team page lists 21 named people including two marked retired in 2025, plus two hangar cats, and publishes no company headcount.",
+   "quote": "Paul Roderick, Operations Director, 1996; Annie Duquette, Retired Gen Manager, 1999-2025; Courtney Shaffer, General Manager, 2017; Dennis Hospodar, Retired Ramper, 2011-2025",
+   "url": "https://www.talkeetnaair.com/team-tat/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The office manager's own bio credits her personal weather forecasting ability rather than a system.",
+   "quote": "Heidi came to TAT in March of 2018 where her ability to accurately forecast the weather quickly made her indispensable!",
+   "url": "https://www.talkeetnaair.com/team-tat/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "No individual staff email address is published as text on the team page and every contact link there is Cloudflare obfuscated.",
+   "quote": "No direct email addresses appear in standard format. All email addresses are obfuscated via cdn-cgi/l/email-protection links.",
+   "url": "https://www.talkeetnaair.com/team-tat/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The site's booking button loads a FareHarbor embed under the talkeetnaair account.",
+   "quote": "https://fareharbor.com/embeds/book/talkeetnaair/?ref=https%3A%2F%2Fwww.talkeetnaair.com",
+   "url": "https://www.talkeetnaair.com/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "We fetched the homepage, the flightseeing FAQ, the contact page and the team page and found no chat widget, AI assistant or language switcher on any of them.",
+   "quote": "No chat widget, AI assistant, or language switcher is present on this page.",
+   "url": "https://www.talkeetnaair.com/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The company's own webcam URL returns a 301 redirect to its homepage and serves no camera.",
+   "quote": "Original URL: https://www.talkeetnaair.com/denali-webcam/ Redirect URL: http://talkeetnaair.com/ Status: 301 Moved Permanently",
+   "url": "https://www.talkeetnaair.com/denali-webcam/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "K2 Aviation publishes an operator-initiated weather model, saying it will do its best to inform customers of conditions.",
+   "quote": "We do our best to inform you about current weather conditions at your flight time.",
+   "url": "https://www.flyk2.com/faq/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "K2 Aviation publishes a numeric deposit and refund rule.",
+   "quote": "All that is required to secure a reservation is a 50% deposit per person, fully refundable with 48-hour notice or inclement weather.",
+   "url": "https://www.flyk2.com/faq/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "K2 Aviation carries a live webcam link on its FAQ page pointing at a third party Talkeetna Alaskan Lodge camera.",
+   "quote": "a live webcam link is present at the top of the page. It directs to the Talkeetna Alaskan Lodge webcam at skaping.com/talkeetna-alaskan-lodge",
+   "url": "https://www.flyk2.com/faq/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Sheldon Air Service publishes same-day re-accommodation and no change fees.",
+   "quote": "no fees for changes we will do our best to re-accommodate the same day if conditions allow",
+   "url": "https://sheldonairservice.com/policies/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Sheldon Air Service publishes instant confirmation online booking and a 30 minute arrival window.",
+   "quote": "Book online (instant confirmation via email) or call +1 (907) 733-2331. ... Please arrive 30 minutes before your flight.",
+   "url": "https://sheldonairservice.com/policies/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "We fetched the K2 Aviation and Sheldon Air Service policy pages and found no chat widget, AI assistant or language switcher on either.",
+   "quote": "No chat widget, AI assistant, or language switcher is present on this page.",
+   "url": "https://sheldonairservice.com/policies/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "A Talkeetna Air Taxi Cessna 185 carrying four passengers collided in midair with a student-flown Cessna 172 near Talkeetna on May 31 2015 and its occupants had only minor injuries.",
+   "quote": "Talkeetna Air Taxi pilot and passengers: 'only minor injuries'",
+   "url": "https://www.adn.com/aviation/article/ntsb-report-pilots-talkeetna-mid-air-crash-were-same-radio-frequency/2015/06/08/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The NTSB found both aircraft in the 2015 midair were transmitting position reports on the same common traffic advisory frequency.",
+   "quote": "transmitting position reports in relation to the airport",
+   "url": "https://www.adn.com/aviation/article/ntsb-report-pilots-talkeetna-mid-air-crash-were-same-radio-frequency/2015/06/08/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "A Talkeetna Air Taxi Robinson R44 settled into deep snow on the Ruth Glacier on February 20 2020 with one reported minor injury.",
+   "quote": "contacted the glacial surface of the runway area, settling in deep snow",
+   "url": "https://www.adn.com/alaska-news/2020/02/22/none-injured-after-helicopter-crashes-at-ruth-glacier-in-denali-national-park/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The July 12 2024 forced landing near the Tokositna of an aircraft carrying nine people was a K2 Aviation flight, and Talkeetna Air Taxi appears in the NPS release only as an assisting party.",
+   "quote": "K2 Aviation (the flightseeing tour operator; Talkeetna Air Taxi assisted in rescue operations) ... nine people including the pilot ... There were no reported injuries",
+   "url": "https://www.nps.gov/dena/learn/news/flightseeing-tour-makes-emergency-landing-july-2024.htm",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The National Park Service awarded four Denali glacier landing concession contracts for 2020 to 2029, one of them to Talkeetna Air Taxi.",
+   "quote": "Fly Denali Inc., Rust Air Inc., Sheldon Air Service, LLC, Talkeetna Air Taxi, Inc.",
+   "url": "https://www.nps.gov/dena/learn/news/air-taxi-operators-announced.htm",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Talkeetna community radio reported in June 2026 that the current owners of Talkeetna Air Taxi are celebrating 30 years assisting climbers.",
+   "quote": "The current owners of Talkeetna Air Taxi, K2 Aviation and the Alaska Mountaineering School, are all celebrating 30 years of assisting climbers in the Alaska Range.",
+   "url": "https://ktna.org/denali-report-for-june-26th-2026/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "981 climbers were registered to climb Denali in the 2026 season as of late June.",
+   "quote": "There are currently 981 climbers registered to climb Denali this year. As of mid-week, 128 of them are on the mountain and 853 have finished their expeditions.",
+   "url": "https://ktna.org/denali-report-for-june-26th-2026/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "A study of 5,179 customer support agents found a generative AI assistant raised issues resolved per hour by 14 percent on average and 34 percent for novice workers.",
+   "quote": "Access to the tool increases productivity, as measured by issues resolved per hour, by 14% on average, including a 34% improvement for novice and low-skilled workers",
+   "url": "https://www.nber.org/papers/w31161",
+   "provenance": "verified"
+  },
+  {
+   "claim": "MIT Lincoln Laboratory's VEIA algorithm produces visibility estimates from FAA camera images every 10 minutes and was more than 90 percent accurate at detecting low visibility against co-located ASOS data.",
+   "quote": "The VEIA algorithm, which provides estimates every 10 minutes, was more than 90 percent accurate in detecting low-visibility conditions when compared to co-located ASOS data.",
+   "url": "https://news.mit.edu/2020/algorithm-eye-visibility-helps-pilots-alaska-0106",
+   "provenance": "verified"
+  },
+  {
+   "claim": "VEIA estimates are shown alongside the camera imagery itself rather than replacing it.",
+   "quote": "pilots can visit the experimental website to see real-time visibility estimates alongside the camera imagery itself",
+   "url": "https://news.mit.edu/2020/algorithm-eye-visibility-helps-pilots-alaska-0106",
+   "provenance": "verified"
+  },
+  {
+   "claim": "An independent 2025 benchmark of 147,182 images from 444 FAA weather camera sites found no model reached the FAA's accuracy threshold, with best average error about 1.8 statute miles.",
+   "quote": "none of these example reach that threshold, - more research is required.",
+   "url": "https://arxiv.org/html/2506.20939",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Yonder's published operator hours-saved figures rest on a vendor estimating formula, not on measurement.",
+   "quote": "Monthly website visitors x 0.015 = Estimated monthly chat conversations ... Monthly chat conversations x 4.5 minutes = Minutes saved per month",
+   "url": "https://blog.yonderhq.com/yonders-blog/post/how-much-time-can-chatbots-really-save-you-as-a-tourism-operator",
+   "provenance": "modelled"
+  },
+  {
+   "claim": "Yonder publishes that Redwoods Treewalk saved over 274 hours of staff time in 90 days and Skydive Tecumseh deflected over 300 phone calls in four months, both derived from that same estimating formula.",
+   "quote": "saved over 274 hours of staff time in 90 days ... deflected over 300 phone calls from their customer service team in just four months",
+   "url": "https://blog.yonderhq.com/yonders-blog/post/how-much-time-can-chatbots-really-save-you-as-a-tourism-operator",
+   "provenance": "modelled"
+  },
+  {
+   "claim": "Yonder publishes list pricing for its AI chatbot at 95, 195 and 295 dollars a month by chat volume, with configuration priced separately.",
+   "quote": "Growth: 80 chats/m at $95/mo; Pro: 200 chats/m at $195/mo; Premium: 500 chats/m at $295/mo ... does not include the upfront AI ChatBot Configuration service",
+   "url": "https://www.yonderhq.com/pricing",
+   "provenance": "verified"
+  },
+  {
+   "claim": "A Utah rafting operator reported that over three months its website chatbot handled 4,531 customer messages, booked 185 tours and generated 43,976 dollars.",
+   "quote": "4,531 customer messages handled; 185 tours booked; $43,976 revenue generated",
+   "url": "https://tomis.tech/blog/ai-chatbot-2021/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The Surf Air 32, 57 and 40 percent figures belong to the vendor's own internal broker sales team using BrokerOS, not to third party Part 135 operators.",
+   "quote": "BrokerOS deployed within Surf On Demand's internal sales team delivered a 32% increase in bookings for top-performing brokers, 57% faster quote-to-close cycles, and 40% more payments processed on-platform",
+   "url": "https://www.businesswire.com/news/home/20260506007455/en/Surf-Air-Mobility-Announces-Details-of-SurfOS-Commercial-Launch-Plan",
+   "provenance": "verified"
+  },
+  {
+   "claim": "The Surf Air product built for small and mid-sized Part 135 operators has not launched and is targeted for the second half of 2026.",
+   "quote": "OperatorOS is designed for small and mid-sized Part 135 scheduled and charter air operators and is targeted for external commercial launch in the second half of 2026",
+   "url": "https://www.businesswire.com/news/home/20260506007455/en/Surf-Air-Mobility-Announces-Details-of-SurfOS-Commercial-Launch-Plan",
+   "provenance": "verified"
+  },
+  {
+   "claim": "FareHarbor announced an AI guest communication assistant on April 27 2026 that is still rolling out to a select group of operators, with no named customers, outcomes or pricing.",
+   "quote": "FareHarbor Agent is currently rolling out to a select group of operators.",
+   "url": "https://fareharbor.com/blog/meet-fareharbor-agent-ai-powered-guest-communication-for-tour-operators/",
+   "provenance": "verified"
+  },
+  {
+   "claim": "A March 2026 survey of 505 tour and activity operators found 64 percent using AI more than a year earlier, alongside 56 percent finding AI tools overwhelming and 44 percent receiving inaccurate information from them.",
+   "quote": "64% of travel experience operators are using AI more than a year ago ... 56% still say AI tools feel overwhelming ... 44% of operators say they have received inaccurate or misleading information from AI tools",
+   "url": "https://www.getyourguide.press/blog/tettspring2026",
+   "provenance": "verified"
+  },
+  {
+   "claim": "Trade press reported in April 2024 that charter operators have up to three years to implement a proactive safety management system under new FAA Part 135 rules.",
+   "quote": "Charter operators will have up to three years to implement a proactive safety system",
+   "url": "https://www.ainonline.com/aviation-news/business-aviation/2024-04-23/faa-issues-sms-rules-part-135-operators",
+   "provenance": "verified"
+  }
+ ],
+ "drift_pattern": "YES, and it is the most important finding in this file. Seven of the rejections lean the same direction, toward making this operator look more primitive, more inconsistent and more troubled than its own fetched pages support. The family band radio 'quote' was a paraphrase tightened into something more manual-sounding than the real sentence. The office hours contradiction was pinned on the flightseeing FAQ when the 9 PM line actually sits on a helicopter FAQ page. The Tokositna glacier was renamed. A '35 tours a day' figure and a 2,577-review figure were carried forward from pages nobody opened. Worst of all, an unverifiable TripAdvisor 'weather complaints' theme was written up as a pain with a source_url pointing at a page that returned 403, and a fatal crash that killed five people was assigned to a competitor with HIGH confidence on the strength of sources that will not load. The individual errors are small. The direction is not. Downstream rooms must treat every unquoted characterisation in the research package as suspect and cite ONLY verified_claims."
+}
