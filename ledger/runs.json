@@ -1,7 +1,7 @@
 {
   "version": 2,
   "note": "The per-run audit, and the record of authority for whether a run already shipped. Migrated off Supabase on 2026-08-05, this file is now the only copy.",
-  "updated": "2026-08-07",
+  "updated": "2026-08-08",
   "runs": [
     {
       "run_date": "2026-07-16",
@@ -104,6 +104,12 @@
       "status": "success",
       "shortlist_count": 23,
       "notes": null
+    },
+    {
+      "run_date": "2026-08-08",
+      "status": "success",
+      "shortlist_count": 23,
+      "notes": "Talkeetna Air Taxi. Phase one has no AI in it. Three study-critic rounds and three lead-critic rounds. Three machine upgrades shipped: send_watch.py reconciled the ledger against the outbox and corrected 11 stale rows, room_reconcile was crashing and then failing 27 times for compliance, and prose_budget.py closed the repeat-offender backlog item on the unaddressable prose budget."
     }
   ]
 }

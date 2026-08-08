@@ -171,6 +171,39 @@
     "scripts/build_study_page.py"
    ],
    "verified_how": "Fed a node label long enough to genuinely overflow and confirmed the warning fires and quotes the dropped words verbatim. NEGATIVE CASE: confirmed the shipping study's own six labels produce no warning at all, so it is not noise on every run."
+  },
+  {
+   "date": "2026-08-08",
+   "run": "Talkeetna Air Taxi",
+   "change": "scripts/send_watch.py, a new reconciler that compares the ledger against what actually left the outbox. The showrunner reads Gmail, because only it has the connector, and this script does the MATCHING, which is the part that has to be computed rather than eyeballed. Two keys, the recorded contact_email matched EXACTLY first and normalized domain as a conservative fallback. Applied to the real ledger this run and corrected 11 rows.",
+   "evidence": "This run's own Phase 0. Step 7 searched Gmail, PROVED the 2026-08-07 R&M email had gone out, read the sent body back, diffed it and recorded a voice delta from it, then threw the fact of the send away because no step writes it down. `ledger.py stats` said `sent 1` while voice_diff.py said nine sends had been compared. `ledger.py scoreboard` said `outcome recorded 0` against 18 leads, so the outcome tracking shipped on 2026-08-05 had never received a single data point in three months and every cut it computes was blank, including the one that tests the honest-restraint thesis this routine is built on.",
+   "verified": "14 hermetic negative-case checks, and two of them found real bugs BEFORE this touched the ledger. The string '@alpha.com' has an at-sign and matched a live lead, so an empty local part is now rejected. A lead appearing twice in the outbox took whichever timestamp the loop saw last, so sent_at is now the earliest and no longer depends on Gmail's result order. Also asserted: absence never writes anything, `replied: false` is not recorded as no_reply because a reply can still arrive tomorrow, an existing outcome is never overwritten, and an exact address beats a competing domain so a send can never be attributed to the wrong company. Domain-only matching left five of twelve real sends unmatched, which is what bought the second key.",
+   "files": [
+    "scripts/send_watch.py",
+    "ledger/leads.json",
+    "out/2026-08-08/gmail_observed.json"
+   ]
+  },
+  {
+   "date": "2026-08-08",
+   "run": "Talkeetna Air Taxi",
+   "change": "scripts/room_reconcile.py hardened twice. It now reads a kill_list in any shape the conscience returns it in, bare strings, capability dicts, key synonyms, a capability-to-why mapping and mixed lists, and it says out loud when the kill list is missing or empty rather than printing an all-clear over a check that examined nothing. Separately, a string's PATH is now part of the reading, so non_goals, out_of_scope and kill_list are refusing containers and open_questions, risks and assumptions are asking containers.",
+   "evidence": "Two failures in this run's Phase 5, neither a judgement call. FIRST IT CRASHED with an AttributeError, because the ai-feasibility-engineer returned kill_list entries as objects rather than bare strings, a shape its own `# OUTPUT` block does not forbid since that block never mentions kill_list at all. A gate that dies on a legitimate output is worse than a gate that fails, because the run in front of it is under pressure and will route around it. THEN IT FAILED 27 TIMES AND ALL 27 WERE THE SAME FALSE POSITIVE, every one a non-goal recorded as {item, reason}, where the item field names the killed capability and the hedge is the sibling reason field. The run contract explicitly demands non-goals be stated that way, so the gate was failing a document for obeying the contract.",
+   "verified": "Ten hermetic checks on the shape reader including a missing kill_list, an entry with no strings at all and None entries. Twelve on the path classifier, and the eight that matter assert that a roadmap Now item, a Next item, a LATER item, a phase1_must, a goal, a delivery plan, a diagram caption and the gates prose ALL still count as promises. A checker that stops failing is not the same as a checker that stops being wrong. The real run then exited 0 with the four outputs agreeing.",
+   "files": [
+    "scripts/room_reconcile.py"
+   ]
+  },
+  {
+   "date": "2026-08-08",
+   "run": "Talkeetna Air Taxi",
+   "change": "scripts/prose_budget.py, which attributes the rendered prose word count back to the study.json field that produced it. It renders once for a baseline then once per field with that field replaced by a sentinel, so it re-implements neither the word counter nor the template and the number is measured through the real builder by the real gate. It also separates NOT ON PAGE from structure, and names the fields with enough slack to absorb a given overage.",
+   "evidence": "REPEAT OFFENDER, second appearance, so it stopped being a note. knowledge/MACHINE_BACKLOG.md recorded it on 2026-08-07 where a run made roughly twenty seven trimming passes across five critic rounds and lost or garbled a caveat in EVERY round, because trimming removes qualifying clauses first and qualifiers read as slack. It came back today. This run trimmed twice, guessed both times, and landed 19 words over on the second pass.",
+   "verified": "Ten hermetic checks, and testing on REAL DATA found two bugs in the first version, both of which would have produced an authoritative wrong number, which is the failure mode of the word count it replaces. It emptied each field, and the builder DROPS a section whose field is empty, so the delta swallowed sibling content and reported 568 words for a 107 word field. It also cried wolf, flagging roi.table_note and roadmap.gates as UNRENDERED when both render and are deliberately counted as structure. Negative cases now assert that a rendered table note is structure and never reported as missing, and that nothing is suggested when no field is big enough.",
+   "files": [
+    "scripts/prose_budget.py",
+    "knowledge/MACHINE_BACKLOG.md"
+   ]
   }
  ]
 }

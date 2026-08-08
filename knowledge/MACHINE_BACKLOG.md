@@ -40,39 +40,6 @@ from it.
   are approved on projected ROI nobody ever measures after launch, has the same
   problem and the same fix.
 
-- **2026-08-07, the prose budget is enforced without being addressable.**
-  BIGGER THAN ONE RUN, and it damaged the deliverable rather than merely
-  costing time.
-
-  EVIDENCE. study_qa reports a single prose word count and the study failed it
-  on almost every iteration, so this run made roughly twenty seven separate
-  trimming passes to hold 3,000 words across five critic rounds. The count is
-  computed from the RENDERED HTML by subtracting table cells, sources and
-  captions, so nothing tells the showrunner which study.json field contributes
-  what. Every trim was therefore a guess, and most landed five to ten words
-  short of useful, which is why there were so many.
-
-  The cost was not the passes. In EVERY critic round a caveat was lost or
-  garbled in the cutting, and the critics named it each time. Round two lost the
-  sentence that kept eleven job openings from reading as distress. Round three
-  lost the positive half of the industry evidence and left three orphaned
-  citations behind, all three of which cut against our own recommendation.
-  Round four lost the sentence naming what the CMMC certification actually
-  constrains. Round five did not delete a caveat but GARBLED two, a verb that
-  captured its object and an appositive that no longer resolved, which the
-  critic correctly called harder to see because the words are still on the page.
-  Trimming removes qualifying clauses first, because qualifiers read as slack,
-  and that is a mechanism rather than an accident.
-
-  WHY IT IS NOT SHIPPED. The obvious fix, a per-field prose contribution report,
-  needs the builder to attribute rendered text back to its source key, which is
-  a real change to build_study_page rather than a helper beside it. Doing it
-  badly would produce a number that looks authoritative and is wrong, which is
-  the failure mode of the word count itself. The deeper question, whether a
-  study that has to be cut twenty seven times is too long or the budget is too
-  tight for a document carrying this many honesty disclosures, is a maintainer
-  call and not a run's to make.
-
 - **2026-08-07, the shell working directory drifts and nothing notices.**
   SMALL BUT IT ALMOST LOST THE RUN'S REPLACEMENT QUEUE.
 
@@ -91,12 +58,46 @@ from it.
   and the first touches every write in the run, so neither belongs in the tail
   of a run that has already shipped.
 
+- **2026-08-08, the four Phase 4 agents can't write their own output, so the
+  showrunner retypes it.** BIGGER THAN A ONE-LINE CHANGE, because it touches
+  agent definitions rather than a script beside them.
+
+  EVIDENCE. The run contract says the room's four outputs go into
+  engineering.json VERBATIM, and room_reconcile fails the run if they do not,
+  because on 2026-08-05 a showrunner summary dropped six of nine keys from a
+  design and eight of nine from an ROI, and the fields it dropped were the
+  caveats. staff-engineer, product-manager, roi-analyst and delivery-lead all
+  carry `tools: Read`. demo-builder carries `tools: Read, Write`. So the four
+  agents whose output MUST be persisted verbatim are the only ones that cannot
+  persist it, and the showrunner transcribes roughly 40KB of JSON by hand.
+
+  That transcription IS the mechanism the 2026-08-05 defect came through. A
+  gate now catches the failure, which is better than nothing, and the cheaper
+  answer is to remove the step that produces it.
+
+  WHY IT IS NOT SHIPPED. Adding Write to four agent definitions is one line
+  each and it is not the risky part. The risky part is that every one of those
+  agents would then need a briefed output path, the showrunner would need to
+  handle a file that did not appear, and room_reconcile's shape check would be
+  reading files written by a different actor. Doing that in the tail of a run
+  that has already drafted is how a working pipeline breaks. It wants its own
+  session with the four agents exercised end to end.
+
 The rules at the top still bind: evidence from a dated run, no speculative "would
 be nice", and a run may add but may never quietly delete.
 
 ---
 
 ## SHIPPED
+
+- **2026-08-08, the prose budget is addressable.** scripts/prose_budget.py
+  attributes the rendered prose count back to the study.json field that
+  produced it, by rendering once per field with a sentinel substituted, so it
+  re-implements neither the word counter nor the template. It also separates
+  NOT ON PAGE from structure, which catches the renamed-key defect for free.
+  Closed on its SECOND appearance, per the rule that a twice-deferred item is
+  the work. Testing it on real data found two bugs in the first version, both
+  of which would have produced an authoritative wrong number.
 
 - **2026-08-05, item 1, study_qa counts prose separately from structure.** Table
   cells, source lines and figure labels are no longer charged against a
