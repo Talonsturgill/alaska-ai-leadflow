@@ -192,7 +192,7 @@
    "files": [
     "scripts/room_reconcile.py"
    ],
-   "verified_how": "Ten hermetic checks on the shape reader including a missing kill_list, an entry with no strings at all and None entries. Twelve on the path classifier, and the eight that matter assert that a roadmap Now item, a Next item, a LATER item, a phase1_must, a goal, a delivery plan, a diagram caption and the gates prose ALL still count as promises. A checker that stops failing is not the same as a checker that stops being wrong. The real run then exited 0 with the four outputs agreeing."
+   "verified_how": "NEGATIVE CASES FIRST, because the risk with this fix was making a gate stop failing rather than stop being wrong. Twelve path-classifier checks, and the EIGHT THAT MATTER assert the gate STILL FIRES: a roadmap Now item, a Next item, a LATER item, a phase1_must, a goal, a delivery plan, a diagram caption and the gates prose ALL still count as promises and would still fail on a killed capability. Ten more on the shape reader, including the NEGATIVE cases of a missing kill_list, an empty kill_list, an entry with no strings at all, and None entries, none of which may crash and none of which may silently drop a kill, because a dropped kill is a kill that stops binding. The real run then exited 0 with the four outputs agreeing."
   },
   {
    "date": "2026-08-08",
