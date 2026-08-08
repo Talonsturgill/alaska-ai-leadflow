@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "Never-contact list. Companies disqualified at a gate, competitors, and anyone who said no.",
-  "updated": "2026-08-06",
+  "updated": "2026-08-08",
   "suppressions": [
     {
       "company": "Bering Straits Native Corporation",
@@ -80,6 +80,42 @@
       "domain": "kikiktagruk.com",
       "reason": "values: documented federal-contracting fraud directly on point with the proposal and compliance work we would propose. KIC and subsidiary KIC Development LLC paid 2,025,000 dollars in May 2019 to settle False Claims Act allegations that three employees paid kickbacks and bribes, including flights, hotels, vacations and payments to family, to a US Army Corps of Engineers contract worker to steer a Fort Bliss set-aside construction contract. Two employees served five-year sentences. Same rule that suppressed alutiiq.com, capefoxcorp.com and eyakcorporation.com. Screened out at Phase 1 on 2026-08-06, never contacted. Source: https://www.adn.com/alaska-news/crime-courts/2019/05/03/alaska-company-pays-2m-in-army-post-kickback-bribery-suit/",
       "date": "2026-08-06"
+    },
+    {
+      "company": "Chenega Corporation",
+      "domain": "chenega.com",
+      "reason": "values/reputation: immigration enforcement and detention contracting. Chenega Sentinel 360 provides armed and unarmed guard and detention operation services, an ICE contract document (HSCEEC-08-A-00010, Chenega Integrated Systems) is hosted on ice.gov, Chenega Naswik International won a 72M DHS security contract and a Chenega subsidiary holds a 21M DHS CBP logistics contract. Same rule that suppressed beringstraits.com, nana.com, ahtna.com, doyon.com, koniag.com and thtbc.com. Screened out at Phase 1 by the ANC lead-scout on 2026-08-08, never contacted. Subsidiaries included. Source: https://www.ice.gov/doclib/foia/contracts/hsceec-08-a-00010-chenegaintegratedsystemsllc.pdf",
+      "date": "2026-08-08"
+    },
+    {
+      "company": "The Aleut Corporation",
+      "domain": "aleutcorp.com",
+      "reason": "values/reputation: immigration enforcement and detention contracting through part ownership. Aleut co-owns Akima LLC with NANA Regional Corporation, which is already suppressed on this same ground. Akima Global Services holds ICE guard services at Florence AZ, the Krome processing center, Batavia NY, and Guantanamo Bay migrant operations, and Akima is ICE's largest 8(a) recipient at nearly 60 percent of that agency's set-asides. Screened out at Phase 1 by the ANC lead-scout on 2026-08-08, never contacted. Source: https://alaskapublic.org/news/politics/2025-10-23/lucrative-ice-detention-centers-bring-money-and-anger-to-an-alaska-native-community",
+      "date": "2026-08-08"
+    },
+    {
+      "company": "Arctic Slope Regional Corporation",
+      "domain": "asrc.com",
+      "reason": "values/reputation: immigration enforcement contracting. ASRC Federal holds an 11M DHS CBP Operational Technology Mission Critical Technical Support contract and a USCIS Zero Trust Integration Services contract, and ASRC Federal Field Services markets federal facilities and logistics work with a stated DHS focus. NOTE FOR A HUMAN, this one is THINNER than the detention suppressions, no detention or removal operations were found, and it fires on CBP contracting alone. Flagged for Talon to reverse if he judges CBP technology support materially different from detention operations. Screened out at Phase 1 on 2026-08-08, never contacted. Source: https://www.asrcfederal.com/asrc-federal-wins-zero-trust-contract-for-u-s-citizenship-and-immigration-services/",
+      "date": "2026-08-08"
+    },
+    {
+      "company": "Sitnasuak Native Corporation",
+      "domain": "snc.org",
+      "reason": "values: federal contracting compliance misconduct directly on point with the 8(a) proposal and compliance build we would sell. SBA moved to bar a consultant paid more than 15M dollars by Sitnasuak for submitting false or misleading documents to the government, specifically 8(a) oversight forms disclosing use of representatives on federal contracts, filed on behalf of subsidiary SNCT during the period its Pentagon uniform revenue went from about 20M to 213M. Same rule that suppressed alutiiq.com, capefoxcorp.com, eyakcorporation.com and kikiktagruk.com. Screened out at Phase 1 on 2026-08-08, never contacted. Source: https://www.washingtonpost.com/business/economy/maryland-contractor-faces-being-barred-from-federal-work-over-sba-documentation/2011/02/25/ABxLiDJ_story.html",
+      "date": "2026-08-08"
+    },
+    {
+      "company": "Shee Atika, Incorporated",
+      "domain": "sheeatika.com",
+      "reason": "values: named as a co-defendant in a federal False Claims Act suit alleging Global Linguist Solutions and its subcontractors billed the government for millions in linguist services not actually performed, and court records in the same matter place Shee Atika personnel in Iraq war interrogation support. Two separate grounds, billing misstatement on federal work which is on point with the compliance build, and an interrogation-support reputation conflict. On paperwork alone this was the strongest fit found in the segment on 2026-08-08, nine government contracting companies and eight 8(a) subsidiaries out of Sitka, which is why the reason is recorded in full. Screened out at Phase 1, never contacted. Source: https://lastrealindians.com/native-news-desk/2020/2/17/court-records-show-shee-atika-and-tigerswan-both-aided-interrogations-during-iraq-war-by-frank-hopper",
+      "date": "2026-08-08"
+    },
+    {
+      "company": "Central Council Tlingit and Haida Indian Tribes of Alaska",
+      "domain": "ccthita.org",
+      "reason": "excluded by the upward subsidiary rule, not by its own conduct. Parent of Tlingit Haida Tribal Business Corporation (thtbc.com), already suppressed on 2026-08-06 for KIRA's US Navy port operations contract at Guantanamo Bay. The Afognak precedent established that the rule runs upward as well as downward. Screened out at Phase 1 on 2026-08-08, never contacted, and no independent conduct finding was made against the tribal government itself.",
+      "date": "2026-08-08"
     }
   ]
 }

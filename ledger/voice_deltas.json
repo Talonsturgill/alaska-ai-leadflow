@@ -504,6 +504,36 @@
           ]
         }
       ]
+    },
+    {
+      "run_date": "2026-08-07",
+      "company": "R&M Consultants, Inc.",
+      "deltas": [
+        {
+          "kinds": [
+            "lengthened"
+          ],
+          "before": "We already did the study on flagging what's missing before the package goes out and there's no AI in it.",
+          "after": "We just wrapped up the study on RM and flagging what's missing before the package goes out along with a deep dive on AI in your industry.",
+          "dropped": [
+            "already",
+            "did",
+            "it",
+            "no",
+            "there's"
+          ],
+          "added": [
+            "a",
+            "along",
+            "deep",
+            "dive",
+            "industry",
+            "just",
+            "rm",
+            "up"
+          ]
+        }
+      ]
     }
   ]
 }
