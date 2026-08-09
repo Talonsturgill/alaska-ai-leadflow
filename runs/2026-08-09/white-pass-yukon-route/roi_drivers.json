@@ -1,0 +1,137 @@
+{
+ "mapping_note": "Field names in scripts/roi_math.py are repurposed for this business and the study must state the mapping. 'pursuits_per_year' means GUEST CONTACTS TO THE RESERVATION DESK PER OPERATING SEASON, not per calendar year, because the railway runs April 30 to October 7, 2026 (c16). 'years': 5 therefore means five operating seasons. 'hours_per_pursuit' is the AVERAGE agent hours per contact across the whole contact population, not the hours on an affected contact only. 'cut' is the REALISABLE share of that time, already net of the avoid-backfill test described in the benefit notes, so it is not the theoretical time saved. A fourth scenario key, conservative_breakeven_probe, is NOT a forecast. It holds every conservative assumption fixed and varies only the season contact count, so the code prints the contact volume at which the pilot returns its full five-year cost. It exists to hand the reader the lever rather than an answer.",
+ "scenarios": {
+  "conservative": {
+   "note": "THE CASE TO READ, and it clears its bar without a single resold seat, without any decision-data value in the formula, and with cost padded rather than trimmed. THE BAR, stated plainly so nobody can call it moved afterwards. One, the pilot returns its full five-year cost from labour capacity converted on a named avoid-backfill test plus escalation cash alone. Two, it does that with zero dollars attributed to resold seats, to the four counters, or to any qualitative benefit. Three, the year-one cheque stays inside the 25 to 30 thousand dollar envelope the pre-check sized. All three hold at these drivers, and the code prints the recovery percentage and the payback month rather than this note asserting them. THE SENSITIVITY THE READER MUST SEE, the answer turns on the season contact count and on nothing else nearly as much. The breakeven probe below prints the contact volume at which the case returns exactly its cost, and if their own phone log and inbox come back under that number, the honest conclusion is that this build does not pay on labour and phase two should not be funded. Cost is padded here rather than trimmed, implementation is $2,000 above the most likely figure and run cost is $400 a season above it, so the conservative case is conservative on both sides of the ledger.",
+   "pursuits_per_year": 3600,
+   "benefit_lines": [
+    {
+     "label": "Desk handling time per guest contact, structured intake instead of reconstruction",
+     "hours_per_pursuit": 0.3,
+     "rate": 32,
+     "cut": 0.18
+    },
+    {
+     "label": "Repeat published-policy questions deflected by the governed policy source",
+     "hours_per_pursuit": 0.1,
+     "rate": 32,
+     "cut": 0.3
+    }
+   ],
+   "avoided_cost_lines": [
+    {
+     "label": "Guest escalations and card disputes from an unreachable office inside the 24 hour clock",
+     "events_per_year": 40,
+     "cost_per_event": 220,
+     "reduction": 0.3
+    }
+   ],
+   "implementation": 21000,
+   "training": 3000,
+   "run_cost_per_year": 3000,
+   "run_cost_years": 4.5,
+   "contingency": 0.2,
+   "year1_ramp": 0.25,
+   "years": 5
+  },
+  "most_likely": {
+   "note": "What we expect if the contact volume is what a phone-only change and cancellation channel usually produces at this scale, and if the desk adopts the queue rather than working around it. Volume rises to 6,000 contacts a season, the average handling time rises to 0.35 hours because a fuller sample includes the harder multi-passenger cases, the fully loaded rate rises to $36, and the realisable cuts rise to 25 and 40 percent. Escalations rise to 70 a season at $260 with a 40 percent reduction. Cost falls to the quoted build rather than the padded one. Nothing in this scenario depends on a resold seat either.",
+   "pursuits_per_year": 6000,
+   "benefit_lines": [
+    {
+     "label": "Desk handling time per guest contact, structured intake instead of reconstruction",
+     "hours_per_pursuit": 0.35,
+     "rate": 36,
+     "cut": 0.25
+    },
+    {
+     "label": "Repeat published-policy questions deflected by the governed policy source",
+     "hours_per_pursuit": 0.12,
+     "rate": 36,
+     "cut": 0.4
+    }
+   ],
+   "avoided_cost_lines": [
+    {
+     "label": "Guest escalations and card disputes from an unreachable office inside the 24 hour clock",
+     "events_per_year": 70,
+     "cost_per_event": 260,
+     "reduction": 0.4
+    }
+   ],
+   "implementation": 19000,
+   "training": 2500,
+   "run_cost_per_year": 2600,
+   "run_cost_years": 4.5,
+   "contingency": 0.2,
+   "year1_ramp": 0.3,
+   "years": 5
+  },
+  "aggressive": {
+   "note": "NOBODY SHOULD BUY ON THIS COLUMN AND THE STUDY SAYS SO IN THE TABLE. It assumes 7,000 contacts a season, a $40 fully loaded rate, 30 and 45 percent realisable cuts, 100 escalations at $300 with a 45 percent reduction, a clean build at $18,000, and a 40 percent year-one ramp that would need the system live well before the October 7 close. The recovery multiple this column prints will look very large, and the honest reason is arithmetic rather than performance, the ask is small relative to a seasonal desk's labour pool, so any real saving divides into a small denominator. It is capped where it is because the drivers already remove about a third of the assumed seasonal handling pool, and anything above that would be removing more work than the desk plausibly does. Contingency drops to 15 percent here, the bottom of the permitted band, which is part of why it is the aggressive column.",
+   "pursuits_per_year": 7000,
+   "benefit_lines": [
+    {
+     "label": "Desk handling time per guest contact, structured intake instead of reconstruction",
+     "hours_per_pursuit": 0.35,
+     "rate": 40,
+     "cut": 0.3
+    },
+    {
+     "label": "Repeat published-policy questions deflected by the governed policy source",
+     "hours_per_pursuit": 0.12,
+     "rate": 40,
+     "cut": 0.45
+    }
+   ],
+   "avoided_cost_lines": [
+    {
+     "label": "Guest escalations and card disputes from an unreachable office inside the 24 hour clock",
+     "events_per_year": 100,
+     "cost_per_event": 300,
+     "reduction": 0.45
+    }
+   ],
+   "implementation": 18000,
+   "training": 2200,
+   "run_cost_per_year": 2400,
+   "run_cost_years": 4.5,
+   "contingency": 0.15,
+   "year1_ramp": 0.4,
+   "years": 5
+  },
+  "conservative_breakeven_probe": {
+   "note": "NOT A SCENARIO AND NOT A FORECAST. It holds every conservative driver fixed and varies only the season contact count, so the code prints the volume at which this pilot returns its full five-year cost and nothing more. This is the lever, handed over rather than hidden. If their own phone log and info@wpyr.com inbox show fewer guest change, cancellation and question contacts a season than this figure, the conservative case does not clear and we would say so before they sign, not after.",
+   "pursuits_per_year": 2960,
+   "benefit_lines": [
+    {
+     "label": "Desk handling time per guest contact, structured intake instead of reconstruction",
+     "hours_per_pursuit": 0.3,
+     "rate": 32,
+     "cut": 0.18
+    },
+    {
+     "label": "Repeat published-policy questions deflected by the governed policy source",
+     "hours_per_pursuit": 0.1,
+     "rate": 32,
+     "cut": 0.3
+    }
+   ],
+   "avoided_cost_lines": [
+    {
+     "label": "Guest escalations and card disputes from an unreachable office inside the 24 hour clock",
+     "events_per_year": 40,
+     "cost_per_event": 220,
+     "reduction": 0.3
+    }
+   ],
+   "implementation": 21000,
+   "training": 3000,
+   "run_cost_per_year": 3000,
+   "run_cost_years": 4.5,
+   "contingency": 0.2,
+   "year1_ramp": 0.25,
+   "years": 5
+  }
+ }
+}

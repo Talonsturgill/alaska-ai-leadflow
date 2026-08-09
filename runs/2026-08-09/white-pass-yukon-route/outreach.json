@@ -1,0 +1,33 @@
+{
+ "subject": "White Pass cancellations outside office hours",
+ "body": "You take cancellations by phone only and the office runs Monday to Friday 7 to 3. The refund cutoff is live every day and a guest who misses it forfeits the fare. We just wrapped up our study on those unstaffed hours at White Pass.\n\nhttps://alaskaaihq.com/awesomeproposal/white-pass-yukon-route/\n\nNo strings. Worth a reply either way.",
+ "to": "bobb@surveypt.com",
+ "to_name": "Bob Berto",
+ "to_role": "President",
+ "title_note": "Read in plain text off the ADMINISTRATION directory on the company's own contact page, https://wpyr.com/company-info/contact-us/, independently by the people-finder and again by the fact-checker. Not obfuscated. The domain is surveypt.com rather than wpyr.com because Berto is also a director of Survey Point Holdings, the majority partner, and eight further named staff on the same page carry wpyr.com addresses, which makes the outlier a deliberate published address rather than a pattern guess. The visible first-initial-plus-surname pattern was deliberately NOT used to generate anything.",
+ "link": "https://alaskaaihq.com/awesomeproposal/white-pass-yukon-route/",
+ "opens_on": "Their cancellation page requires a phone call to cancel or alter a reservation with no online path, their Summit and Bennett product pages both publish the reservation office as Monday to Friday 7:00 AM to 3:00 PM Alaska Time, and their refund terms forfeit everything inside 24 hours. The refund clock runs 168 hours a week against a door open 40. Structural, published by them, and it passes both the nod test and the meeting test.",
+ "word_count_prose": 52,
+ "comma_count": 0,
+ "subject_chars": 45,
+ "kill_list_hits": [],
+ "lead_critic": "ship on round 5. Round 1 rejected on three grounds, all correct. Round 2 caught a defect that MOVED rather than died, naming Shoretime fixed the definite article and dropped the category noun. Round 3 caught the same defect moving a THIRD time and correctly diagnosed the cause as the BRIEF rather than the writing. Round 4 changed the brief, cutting the industry-proof requirement entirely. Round 5 shipped at 52 words with zero commas.",
+ "brief_change_at_round_4": "THE ESCALATION RULE FIRED AND IT WAS RIGHT. My brief mandated an industry-proof line. The only proof this run had was a negative vendor observation, that Shoretime makes no AI claim, which carries no measured number and no established relation to White Pass. Three separate writers' attempts all broke on the same sentence because the sentence could not be written cleanly at forty words. OUTREACH_CRAFT itself says a vendor observation is usually not worth the words at this length. I dropped the requirement and let the study carry the finding, and the freed words went to a verified cost line, that a guest who misses the cutoff forfeits the fare.",
+ "industry_proof": "NOT CARRIED, by deliberate decision at round 4, and this is a departure from the usual shape. The finding is real and it is in the study, where there is room for it. In the email it cost three rounds and never became intelligible cold.",
+ "roi_in_email": "None. The conservative case nets about $7,346 over five seasons and pays back in month 50, which needs the study's framing around it. Carrying only the friendlier half would be the hero number the gate exists to prevent.",
+ "one_departure_from_the_critic": "At round 3 the critic proposed 'the weekend calls hit a machine'. REFUSED. Nothing in this run verified what their line does outside office hours, so that would have invented a fact about their operation. Replaced with a verified consequence from their own published cancellation terms. The critic confirmed the refusal was right at round 4.",
+ "pushback_on_the_critic": "At round 4 the critic called 'We just wrapped up our study' a process-timing tell and wanted 'We already did the study'. I pushed back on the evidence and the critic accepted it. VOICE_DELTAS records Talon rewriting 'We already did the study' into 'We just wrapped up our study' BY HAND on 2026-08-07, 2026-08-06 and 2026-08-04. More decisively, the 2026-08-08 email went out COMPLETELY UNCHANGED, the only time that has ever happened, and its third sentence was 'We just wrapped up our study on that morning call at Talkeetna Air', carrying the phrase, the topic tag and the shortened company name all three. VOICE_DELTAS is evidence and it outranked a style preference here.",
+ "voice_delta_note": "`lengthened` stands at EIGHT separate sends and is still READY TO PROMOTE. This email writes that register in rather than leaving it for Talon, and it shortens the name to 'White Pass' the way he shortens every company name.",
+ "personalization_gate": {
+  "this_company_only_fact": "Cancellations by phone only into an office published Monday to Friday 7:00 AM to 3:00 PM Alaska Time, against a 24 hour refund cutoff that runs every day.",
+  "hero_number": false,
+  "kill_list_hits": [],
+  "em_or_en_dashes": 0,
+  "colons_semicolons_in_prose": 0,
+  "commas": 0,
+  "cannot_used": false,
+  "self_reference": "none, the email never says who or what produced the study",
+  "links": 1,
+  "passes": true
+ }
+}
