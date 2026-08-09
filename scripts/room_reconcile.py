@@ -81,6 +81,34 @@ def strings(obj, path=""):
             yield from strings(v, f"{path}[{i}]")
 
 
+def strings_with_parent(obj, path="", parent=None, key=None):
+    """Like strings(), plus the dict a string sits in and the key it sits under.
+
+    Added 2026-08-09. A killed capability is very often NAMED in a bare label
+    field whose SIBLING field carries the refusal, because that is the shape the
+    run contract asks for. The 2026-08-05 fix taught this script to read
+    non_goals entries that way, by special-casing the container. That was too
+    narrow, and on 2026-08-09 the identical shape appeared one field over: a
+    design's build_vs_buy entry named "Booking validation, lookup or any write
+    to tickets.wpyr.com" as its `component`, with its `why` reading "Neither, in
+    phase one ... It is on the kill list". The component field is a heading. The
+    refusal is its sibling. The gate failed a document for doing exactly what it
+    was told to do.
+
+    Reading the parent generalises the fix, so any label-plus-justification pair
+    is understood without adding another container name every time an agent
+    picks a new one.
+    """
+    if isinstance(obj, str):
+        yield path, obj, parent, key
+    elif isinstance(obj, dict):
+        for k, v in obj.items():
+            yield from strings_with_parent(v, f"{path}.{k}", obj, k)
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            yield from strings_with_parent(v, f"{path}[{i}]", parent, key)
+
+
 def norm(s):
     return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9 ]+", " ", (s or "").lower())).strip()
 
@@ -320,6 +348,10 @@ def main():
         "only if", "only when", "conditional", "gated on", "gate on",
         "until we", "before we", "would have to be earned", "measure first",
         "not priced", "not in phase one", "not phase one", "later lane",
+        # deferral verbs, added 2026-08-09. "Deferred, because ..." is a
+        # refusal in plain English and this list did not contain it.
+        "defer", "deferred", "postpone", "postponed", "parked", "on hold",
+        "out of phase one", "neither",
     )
 
     # A BUILD-IT-OURSELVES kill is refused by BUYING, and no amount of adding
@@ -401,16 +433,45 @@ def main():
     REFUSING_CONTAINERS = ("non_goals", "non_goal", "not_doing", "out_of_scope",
                            "kill_list", "killed", "excluded")
     ASKING_CONTAINERS = ("open_questions", "questions", "risks", "assumptions")
+    # Containers whose whole PURPOSE is to hold what is not being done now.
+    # Naming a killed capability inside one of these is a deferral, which is
+    # compliance, not a promise. phase1_later cost a false failure on
+    # 2026-08-09, where "Reply drafting ... Deferred" was read as a promise of
+    # the killed voice agent because "deferred" was not a refusal word and
+    # phase1_later was not a container this script knew about.
+    DEFERRING_CONTAINERS = ("phase1_later", "later", "deferred", "backlog",
+                            "next", "future", "not_now")
+    # Label fields that NAME a thing while a sibling field justifies it.
+    LABEL_KEYS = ("component", "item", "capability", "name", "kill", "subject",
+                  "what", "title", "q", "risk", "benefit")
 
     def container_of(path):
         return re.findall(r"\.([A-Za-z_]+)", path or "")
 
+    def sibling_refuses(parent, key, markers):
+        """Does a SIBLING field of this label carry the refusal?
+
+        The run contract asks agents to write {component, why} and {item,
+        reason}. In that shape the label names the killed thing with no hedge in
+        it, because the hedge is the sibling. Reading the label alone inverts
+        the check.
+        """
+        if not isinstance(parent, dict) or key not in LABEL_KEYS:
+            return None
+        for k, v in parent.items():
+            if k == key or not isinstance(v, str):
+                continue
+            if any(h in norm(v) for h in markers):
+                return k
+        return None
+
     def scan_for_killed(label, section):
-        for path, text in strings(section):
+        for path, text, parent, key in strings_with_parent(section):
             low = norm(text)
             parts = container_of(path)
             in_refusing = any(p in REFUSING_CONTAINERS for p in parts)
             in_asking = any(p in ASKING_CONTAINERS for p in parts)
+            in_deferring = any(p in DEFERRING_CONTAINERS for p in parts)
             for subject in killed:
                 if not mentions(low, subject, need=3):
                     continue
@@ -423,7 +484,17 @@ def main():
                     notes.append(f"{label} raises the killed item as a question or a "
                                  f"risk rather than a promise: {subject[:56]}")
                     continue
+                if in_deferring:
+                    notes.append(f"{label} names the killed item inside a deferring "
+                                 f"section ({parts[0] if parts else '?'}), which is a "
+                                 f"deferral rather than a promise: {subject[:56]}")
+                    continue
                 markers = refusal_markers(subject)
+                sib = sibling_refuses(parent, key, markers)
+                if sib:
+                    notes.append(f"{label} names the killed item in a `{key}` label "
+                                 f"whose sibling `{sib}` refuses it: {subject[:56]}")
+                    continue
                 # Outside those containers the hedge must sit in THIS string, not
                 # merely somewhere in the section. One correct refusal elsewhere
                 # must not immunise a promise here, which is the bug this check
