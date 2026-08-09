@@ -1,0 +1,220 @@
+{
+ "run_date": "2026-08-09",
+ "company": "White Pass & Yukon Route Railway",
+ "domain": "wpyr.com",
+ "segment": "tourism",
+ "location": "Skagway, Alaska, with depot offices in Carcross and Whitehorse, Yukon",
+
+ "company_analyst": {
+  "what_they_do": "A seasonal narrow-gauge tourist railway headquartered in Skagway, Alaska, with depot offices in Carcross, YT and Whitehorse, YT. Built 1898 during the Klondike Gold Rush, completed 1900, and operating exclusively as a historical tourist attraction since 1988. Passenger tourist transportation along parts of the 110 mile route from Skagway to Whitehorse.",
+  "quotes": [
+   {"q": "an historic, scenic railway headquartered in Skagway, Alaska, with Depot offices also located in Carcross, YT, and Whitehorse, YT", "url": "https://wpyr.com/company-info/jobs/"},
+   {"q": "The railway was completed in 1900 and has operated exclusively as a historical tourist attraction since 1988.", "url": "https://wpyr.com/company-info/klondike-holdings-llc/"}
+  ],
+  "products": [
+   {"name": "White Pass Summit Excursion", "detail": "2.5 to 2.75 hours, 40 mile round trip", "price_adult": 155, "price_child": 77.5, "url": "https://wpyr.com/excursions/"},
+   {"name": "Bennett Scenic Journey", "detail": "8 hours, 120 miles", "price_adult": 289, "price_child": 144.5, "url": "https://wpyr.com/excursions/"},
+   {"name": "Steam Summit Loop Excursion", "detail": "3 hours, 40 miles", "price_adult": 249, "price_child": 180, "url": "https://wpyr.com/excursions/"},
+   {"name": "Fraser one-way", "detail": "1.75 hours, 27.7 miles", "price_adult": 108, "url": "https://wpyr.com/excursions/"},
+   {"name": "Carcross one-way", "detail": "5 hours, 67.5 miles", "price_adult": 210, "url": "https://wpyr.com/excursions/"},
+   {"name": "Chilkoot / Denver / Laughton hiker services", "detail": "hiker drop and pick up", "price_adult": 60, "url": "https://wpyr.com/excursions/"},
+   {"name": "Whitehorse-Skagway One Day Combo", "price_adult": 175, "url": "https://wpyr.com/excursions/"}
+  ],
+  "season_2026": {
+   "summit_dates": "April 30 to October 7, 2026, with no service May 2-4, September 26-27, October 1 and 3-5",
+   "summit_url": "https://wpyr.com/excursions/product/summit-excursion/",
+   "bennett_dates": "May 26 to September 12, 2026",
+   "bennett_url": "https://wpyr.com/excursions/product/bennett-scenic-journey/",
+   "note_conflicting_dates": "FOUR different 2026 season ranges published across their own channels on the same day. Jobs page operating season April 27 to October 1. Jobs page hire preference window April 17 to October 2. CoolWorks May 1 to September 30. Summit product page April 30 to October 7."
+  },
+  "fleet": {
+   "detail": "20 diesel-electric locomotives (GE from the 1950s, ALCO from the 1960s), 2 steam locomotives (No. 73 a 1947 Baldwin 2-8-2 Mikado, No. 69 a Baldwin 2-8-0), 69 restored and replica passenger coaches averaging 49 years old, oldest car Lake Emerald built 1883. 110 miles of 3 foot narrow gauge, sea level to nearly 3,000 feet in 20 miles, grades of almost 3.9 percent.",
+   "url": "https://wpyr.com/history/wpyr-facts/",
+   "new_locomotives": "Six new 30-class locomotives from National Railway Equipment in service, seventh and eighth expected delivery in 2026",
+   "new_loco_url": "https://wpyr.com/company-info/125-year-anniversary-review/"
+  },
+  "size": {
+   "employees_total": 180,
+   "employees_quote": "The White Pass & Yukon Route Railroad employs 180 people, most of which are based in Skagway.",
+   "employees_url": "https://www.ktoo.org/2026/04/22/tour-guides-and-stockers-for-skagways-largest-tourist-attraction-vote-to-unionize/",
+   "largest_private_employer": "Described in KTOO reporting as Skagway's largest private employer",
+   "train_starts": "With almost 2,000 train starts throughout the summer season, we are the busiest we have ever been.",
+   "train_starts_url": "https://wpyr.com/company-info/125-year-anniversary-review/",
+   "per_train_capacity_quote": "Assist with loading and unloading up to 225 passengers on to each train at Carcross and Bennett",
+   "per_train_capacity_url": "https://wpyr.com/company-info/jobs/train-agent/",
+   "coolworks_quote": "We are looking for top candidates to help us tell our 125 year old history to over 500,000 guests this summer!",
+   "coolworks_url": "https://www.coolworks.com/white-pass-yukon-route/profile",
+   "passenger_volume_caveat": "THIN. The most recent passenger count they publish themselves is over 385,000 passengers in 2012 (https://wpyr.com/snapshot/), which is 14 years old. The 500,000 figure is recruiting-page copy, not an audited number. No year-round versus seasonal headcount split is published."
+  },
+  "leadership": [
+   {"name": "Bob Berto", "role": "President", "email": "bobb@surveypt.com", "phone": "907-983-9800"},
+   {"name": "Vickey Moy", "role": "Executive Director of Passenger Operations", "email": "vmoy@wpyr.com"},
+   {"name": "Mark Taylor", "role": "Superintendent of Rail Operations", "email": "mtaylor@wpyr.com"},
+   {"name": "Allyson Nannini", "role": "Manager of Reservations & Sales", "email": "anannini@wpyr.com", "phone": "907-983-9814"},
+   {"name": "Steven Wasiura", "role": "Manager of Train Operations", "email": "swasiura@wpyr.com"},
+   {"name": "Jacqueline Taylor-Rose", "role": "Manager of Marketing & Product Development", "email": "jtaylor-rose@wpyr.com"},
+   {"name": "Cynthia Tronrud", "role": "Controller", "email": "ctronrud@wpyr.com"},
+   {"name": "Becky Jensen", "role": "HR/Payroll Manager", "email": "bjensen@wpyr.com"},
+   {"name": "Lauren Taylor", "role": "Gift Shop Manager", "email": "ltaylor@wpyr.com"}
+  ],
+  "leadership_url": "https://wpyr.com/company-info/contact-us/",
+  "no_it_lead": "No CIO, IT director, IT manager or technology lead appears anywhere on their published directory. No COO, CEO, GM or Director of Operations title is published either. Treat the absence of an IT function as an UNVERIFIED INFERENCE about capability, never as a stated fact.",
+
+  "revenue_model": {
+   "channels": "Two channels. A cruise shore excursion channel sold through Princess, Holland America Line, Carnival and Norwegian shore excursion departments with dockside boarding, and a direct channel at wpyr.com and tickets.wpyr.com and by phone at 1-800-343-7373.",
+   "channel_url": "https://wpyr.com/excursions/product/summit-excursion/",
+   "price_gap_quote": "Tickets purchased online at least 24 hours in advance are $155 per adult and $77.50 per child for the 2 1/2- to 3-hour trip ... Norwegian's current prices listed online are $229 for adults and $149 for kids, a difference of nearly $80 for adults",
+   "price_gap_url": "https://thepointsguy.com/guide/skagway-white-pass-railroad-alaska-cruise/",
+   "hal_share": "Holland America Line reporting says the White Pass Scenic Railroad was the most-booked shore excursion across its global network, with nearly 44 percent of Holland America guests visiting Skagway in 2025 booking it, and over 73,000 Holland America guests visiting the Skagway area.",
+   "hal_url": "https://www.aol.com/articles/scenic-railroad-holland-america-line-104500235.html",
+   "port_lease_lost": "White Pass held a 55 year lease on the Port of Skagway which expired, with control reverting to the Municipality in March 2023. Revenue from mining dock fees now goes to Skagway rather than to White Pass.",
+   "port_lease_url": "https://alaskapublic.org/news/alaska-desk/2025-08-28/skagway-yukon-to-pursue-federal-permits-for-new-ore-dock"
+  },
+
+  "pains": [
+   {"pain": "The reservation office is published as weekdays only, 40 hours a week, while cruise ships call seven days a week. The window is repeated across multiple product pages so it is standing policy, not a one-page typo.", "quote": "Monday-Friday 7:00 AM - 3:00 PM Alaska Time", "url": "https://wpyr.com/excursions/product/bennett-scenic-journey/", "kind": "fact"},
+   {"pain": "Cancelling or altering a booking cannot be done online at all. It is a phone call to that same weekday-only office, and the clock that decides whether a guest gets money back is 24 hours before departure.", "quote": "Please call 1-800-343-7373 to speak with the reservation office to cancel or alter a reservation.", "url": "https://wpyr.com/company-info/cancellation-policy/", "kind": "fact"},
+   {"pain": "The online ticketing system was returning an unavailable message on 2026-08-09, a Sunday in peak season, when the reservation office is closed per published hours. The fallback message points customers at the phone line and an email inbox. Confirmed on two separate paths of the ticketing host by the analyst, and INDEPENDENTLY RE-VERIFIED BY THE SHOWRUNNER the same day.", "quote": "White Pass & Yukon Route Ticketing System is currently unavailable. Please contact the Reservations Office at 1-800-343-7373 or via email at info@wpyr.com.", "url": "https://tickets.wpyr.com/TixReservation/", "kind": "fact", "caveat": "An outage is a point in time observation and could be transient."},
+   {"pain": "Ships are in port on the days the reservation office is shut. Five cruise ships were listed arriving in Skagway on Sunday August 9th 2026.", "quote": "On August 9, 2026, five ships arrive (Carnival Miracle, Island Princess, Silver Moon, Disney Magic, and Viking Orion)", "url": "https://cruisedig.com/ports/skagway-alaska/arrivals", "kind": "fact", "caveat": "Third party schedule aggregator, medium confidence."},
+   {"pain": "Reservations work is manual re-keying plus an omnichannel inbox, and the same person is pulled onto the platform to load trains and act as a crossing guard.", "quote": "Entering reservations into ticketing system ... Answering questions via phone, email, and in person regarding White Pass products ... Assisting the Passenger Department with train loading, passenger transfers and crossing-guard duties", "url": "https://wpyr.com/company-info/jobs/reservation-agent/", "kind": "fact"},
+   {"pain": "Reservation Agent roles were still listed OPEN in Carcross and Whitehorse on August 9th 2026, with the season eight weeks from its published close. The page separates open from closed roles and the Skagway Reservation Agent is marked closed while both Yukon ones are open.", "quote": "Carcross, Yukon ... Open positions for 2026: Track Supervisor, Reservation Agent ... Whitehorse, Yukon ... Open positions for 2026: Reservation Agent", "url": "https://wpyr.com/company-info/jobs/", "kind": "fact"},
+   {"pain": "They state openly that they cannot get enough multilingual guest-facing staff and name the two languages they most need. The guests are off international cruise ships.", "quote": "We are actively seeking candidates who can speak other languages fluently, in particular Spanish and Japanese, however any foreign language skills are a plus.", "url": "https://wpyr.com/company-info/jobs/", "kind": "fact"},
+   {"pain": "The site's top-level nav item labelled FAQ does not go to an FAQ, it goes to the travel blog. Guests looking for a booking, weather or cruise-delay answer have nowhere on the site to find it and are funnelled back to the phone line.", "url": "https://wpyr.com/blog/", "kind": "fact"},
+   {"pain": "The checkout carries a hand-written warning telling the guest not to close the browser, the classic tell of a payment flow that can strand a booking mid-transaction.", "quote": "Do NOT close this window until you see 'Payment Success!'", "url": "https://tickets.wpyr.com/TixReservation/", "kind": "fact"},
+   {"pain": "Labour relations are live and expanding. About 40 onboard and guest-facing staff voted to unionize with SMART-TD on April 8th 2026, roughly doubling the local's membership, on top of about 35 existing SMART-TD members plus Teamsters. The 2023 operating-craft agreement is up for review in 2027.", "quote": "Our employees have the right to organize and we look forward to working with our onboard staff in this new capacity.", "url": "https://www.ktoo.org/2026/04/22/tour-guides-and-stockers-for-skagways-largest-tourist-attraction-vote-to-unionize/", "kind": "fact"},
+   {"pain": "Their busiest dock has been off-limits to pedestrians since summer 2022 because of rockslides, so guests reach town by water taxi and shuttle, adding a logistics layer between ship and depot that White Pass does not control.", "url": "https://alaskapublic.org/news/alaska-desk/2025-08-22/rockslides-have-battered-skagways-biggest-cruise-ship-dock-what-else-is-at-risk", "kind": "fact"},
+   {"pain": "Their public Updates page still carries a COVID-era notice cancelling Carcross and Fraser cross-border service while the excursions pages actively sell those trips today.", "url": "https://wpyr.com/updates/", "kind": "fact", "handling": "EVIDENCE ONLY, never a headline. A stale page is a website defect, and OUTREACH_CRAFT bans gotcha openings."},
+   {"pain": "The News page's most recent item is from October 2019.", "url": "https://wpyr.com/news/", "kind": "fact", "handling": "EVIDENCE ONLY, never a headline."},
+   {"pain": "The Dock Info page still presents White Pass as owner and operator of three Skagway deep-water docks after the lease reverted to the Municipality in March 2023.", "url": "https://wpyr.com/company-info/dock-info/", "kind": "fact", "handling": "EVIDENCE ONLY."}
+  ],
+
+  "WITHHELD_FROM_STUDY": {
+   "finding": "The company-analyst reported that a live reservation detail page on the ticketing host was reachable without authentication and indexed by a search engine, returning a specific booking's excursion, departure time, travel date, party composition and dollar total. No name or payment data was visible.",
+   "showrunner_decision": "DELIBERATELY EXCLUDED from study.json, demo.html, the carrier email and the published package. Three reasons. It is a third party's personal booking data and the study is published to a public URL, so printing it would AMPLIFY the exposure rather than report it, which cuts directly against the PRIVATE DATA law. It is a defect rather than a fact about how the business operates, which OUTREACH_CRAFT bans as a gotcha. Responsible disclosure of a security finding is a human decision and belongs in a private channel, never in a cold marketing document. The URL was NOT re-fetched by the showrunner and is NOT recorded here. It is surfaced to Talon in the delivery summary so a human can decide whether and how to tell them.",
+   "url_recorded": false
+  },
+
+  "ownership": {
+   "company_own_words": "Klondike Holdings, LLC is an ownership group formed of majority partner Survey Point Holdings and its affiliates and long time partners based in Seattle along with minority partner Carnival PLC.",
+   "company_own_url": "https://wpyr.com/company-info/klondike-holdings-llc/",
+   "purchase": "White Pass & Yukon Route was purchased by Klondike Holdings, LLC on August 1, 2018. Sold by TWC Enterprises Limited for US$290,000,000.",
+   "carnival_release_quote": "We are delighted that the Skagway port will continue to be locally owned and independently operated by an Alaskan company.",
+   "carnival_release_speaker": "Stein Kruse, Group CEO of Carnival Corporation & plc's Holland America Group and Carnival UK",
+   "carnival_release_url": "https://www.prnewswire.com/news-releases/carnival-corporation--plc-acquires-port-railroad-and-retail-operations-in-alaska-300661253.html",
+   "UNRESOLVED": "The company's own page says the majority partner's affiliates and long time partners are 'based in Seattle'. Carnival's release quotes its own executive calling it 'an Alaskan company'. These pull in opposite directions and NEITHER analyst resolved it. No Carnival stake percentage is published anywhere fetched. No page describes a Holland America Princess Alaska Tours stake.",
+   "SHOWRUNNER_RULING": "DO NOT call this an Alaska-owned company anywhere in the study or the email. The two documented, unambiguous descriptions are 'Skagway-operated' and 'Skagway's largest private employer', and only those may be used. Survey Point Holdings is corroborated as the management link by the President's own published address at surveypt.com."
+  },
+
+  "confidence": "HIGH on products, published prices, published season dates, leadership names and titles, fleet, headcount of 180, the union situation, and every booking and reservations pain, all from directly fetched pages, most of them the company's own. HIGH on the ticketing outage, verified twice by the analyst and once independently by the showrunner. MEDIUM on the channel mix. LOW and flagged: current annual passenger volume, trains per day at peak, the year-round versus seasonal split, the Carnival stake percentage, 2027 season dates. ZERO verbatim customer reviews, because TripAdvisor, Yelp, Cruise Critic and KHNS all returned HTTP 403 to every attempt. That is the single biggest hole and nothing is paraphrased from a snippet."
+ },
+
+ "people_finder": {
+  "best_contact": {
+   "value": "bobb@surveypt.com",
+   "person": "Bob Berto",
+   "role": "President, and a director of Survey Point Holdings, the majority owner",
+   "human_or_general": "named human",
+   "contact_source": "https://wpyr.com/company-info/contact-us/",
+   "verification": "Read directly off the ADMINISTRATION directory on the company's own Contact Us page. The page was fetched TWICE with two different prompts and both reads returned the identical name, title, phone 907-983-9800, fax and address. Not obfuscated, not Cloudflare protected, plain text in the page. The domain is surveypt.com rather than wpyr.com, which is consistent with Berto being a Survey Point director and is a strong authenticity signal, since a pattern-invented address would have been at wpyr.com."
+  },
+  "alternates_verified": [
+   {"value": "anannini@wpyr.com", "person": "Allyson Nannini, Manager of Reservations & Sales", "url": "https://wpyr.com/company-info/contact-us/"},
+   {"value": "vmoy@wpyr.com", "person": "Vickey Moy, Executive Director of Passenger Operations", "url": "https://wpyr.com/company-info/contact-us/"},
+   {"value": "info@wpyr.com", "person": null, "human_or_general": "general inbox", "url": "https://wpyr.com/company-info/contact-us/"}
+  ],
+  "decision_maker_reasoning": "Berto sits at the top of the only published org listing the company has and is also a director of Survey Point Holdings, the majority partner in Klondike Holdings LLC. That double seat means a technology decision does not have to travel from an operator up to an absentee owner, the operating decision and the ownership vote sit in the same person. For a company of 180 employees across three jurisdictions a technology spend is a President-level call. Allyson Nannini, Manager of Reservations & Sales, owns the funnel where any booking or inquiry automation would actually land day to day.",
+  "rejected": [
+   "No address was taken from any aggregator. A theorg.com listing appeared in search and was NOT fetched or used.",
+   "The wpyr.com staff addresses follow a visible first-initial-plus-surname pattern and that pattern was deliberately NOT used to generate any address. Every address listed was read off a fetched page.",
+   "Wikipedia names Gary Danielsen as president. That is STALE, from the early 2000s era. The company's own current Contact Us page names Bob Berto.",
+   "Two reads of the Contact Us page disagreed on whether Becky Jensen's row carries an email, so that page is NOT cited for it."
+  ],
+  "confidence": "high"
+ },
+
+ "competitor_analyst": {
+  "headline_finding": "Nobody in the Skagway shore-excursion field is doing anything measurable with AI. None of the seven Skagway operators fetched (Chilkoot Charters, Frontier Excursions, TEMSCO Helicopters, Klondike Tours, Alaska X, Beyond Skagway, Sockeye Cycle) has a chatbot, an AI assistant, an AI phone line or any AI feature visible on its site. Neither does Alaska Fjordlines or Klondike Electric Bicycles. The field's ceiling is off-the-shelf booking engines.",
+  "honest_limitation": "Chat widgets are usually JavaScript-injected and a markdown fetch will not always see them, so every 'none found' is a floor, not a proof of absence. The same method DID surface Alaska Railroad's assistant on three separate pages, which means it detects these when they render, and it detected exactly one across the whole field.",
+  "resellers_of_their_own_train": [
+   {"who": "Chilkoot Charters & Tours, Skagway", "detail": "Sells five Skagway shore excursions that wrap White Pass's own train inside a bus package and prices above the railway's direct fare. White Pass Summit Rail & Bus $200 adult, White Pass Summit Rail & Suspension Bridge $238 adult, Yukon Rail & Bus $270 adult, against White Pass's own $155 direct Summit fare.", "ai": "none found", "url": "https://www.chilkootcharters.com/"},
+   {"who": "Beyond Skagway Tours", "detail": "Runs a rail combo named Ride the Rail, same play, packages the train inside its own product.", "ai": "none found, reservations on FareHarbor", "url": "https://www.beyondskagwaytours.com/"},
+   {"who": "Sockeye Cycle Co.", "detail": "Runs a White Pass Train and Bike Tour, another operator reselling the railway inside its own branded package.", "ai": "none found", "url": "https://www.sockeyecycle.com/excursions/skagway/"}
+  ],
+  "the_language_finding": {
+   "detail": "A Skagway bus operator, unnamed on the cruise-line listing, sells a product built around White Pass's own train and adds automated multilingual narration. It retails at CAD $420.63 adult and $294.43 child for 3 hours 45 minutes.",
+   "quote": "This tour is presented in multiple foreign languages simultaneously ... Guests wear comfortable headphones that deliver GPS activated audio-cinematic tour narration in their chosen language.",
+   "languages": "German, French, Spanish, Dutch, Japanese, Mandarin, Portuguese and English",
+   "url": "https://www.ncl.com/ca/en/shore-excursions/SGY_99/White-Pass-Railroad-Klondike-Highway-Foreign-Language",
+   "labelling": "That is automation, not necessarily machine learning, and it is labelled as such.",
+   "NOT_VERIFIED": "The operator behind the product is not named on that listing, so it is not attributed to a company. It was NOT verified that White Pass narration is English-only, only that its own Summit page lists 'Knowledgeable onboard guides' with no language options stated."
+  },
+  "competitor_booking_stacks": [
+   {"who": "Frontier Excursions & Adventures, Skagway", "detail": "RezdyPay powers automated online booking on three of four tours, taking a $5 deposit at booking and auto-charging the balance on tour day. Unattended cash collection with no reservation agent in the loop. White Pass Summit & City $75.60 against White Pass's $155.", "url": "https://www.frontierexcursions.com/"},
+   {"who": "TEMSCO Helicopters, Skagway", "detail": "Integrated FareHarbor engine with a live availability calendar. Glacier Discovery from $439.", "url": "https://temscoair.com/skagway-helicopter-tours/"},
+   {"who": "Klondike Tours, Skagway", "detail": "Online booking via Peek.", "url": "https://www.klondiketours.com/tours"}
+  ],
+  "the_one_peer_that_shipped": {
+   "who": "Alaska Railroad Corporation",
+   "detail": "The only operator in either framing that has shipped a customer-facing AI product. A sitewide chatbot branded 'Ask Denali'. The string 'Need help? Ask Denali!' appears in a footer section labelled 'Chatbot' and was verified on three separate pages, so it is a site-level deployment and not a one-page test. It also runs a self-service availability calendar filterable across 2026 to 2027.",
+   "url": "https://www.alaskarailroad.com/travel-planning"
+  },
+  "heritage_rail_peers": [
+   {"who": "Grand Canyon Railway", "ai": "No operational AI. The only AI on the page is generative marketing art, disclosed as AI-generated.", "url": "https://www.thetrain.com/"},
+   {"who": "Napa Valley Wine Train", "ai": "None found. Positions explicitly against automation, marketing personalized service and staff who are 'extremely professional, warm and welcoming.'", "url": "https://www.winetrain.com/"}
+  ],
+  "white_pass_own_stack": {
+   "detail": "White Pass reservations are phone 1-800-343-7373 Monday to Friday 7 AM to 3 PM Alaska Time, plus info@wpyr.com and a contact form, with no chat widget of any kind on the contact page.",
+   "url": "https://wpyr.com/contact-us/"
+  },
+  "the_channel_risk": {
+   "detail": "Tripadvisor and Viator, the layer through which independent Skagway tours are discovered and booked, are now inside ChatGPT, Claude, Perplexity and Alexa+, per Tripadvisor's own April 23rd 2026 newsroom post. The Skagway independents are already in that index as bookable products.",
+   "quote": "get trusted experience and hotel recommendations directly inside a Claude conversation",
+   "url": "https://tripadvisor.mediaroom.com/"
+  },
+  "structural_fact": "White Pass's demand arrives pre-sold through cruise-line shore-excursion desks, while every independent in Skagway is building a direct, 24/7, instantly bookable relationship with the same passenger through FareHarbor, Peek and Rezdy. Captive demand is the strongest position in the port right now and the most brittle one if a ship reroutes, a call is cancelled, or the passenger books on their phone before the gangway drops.",
+  "cross_check": "The competitor set is cross-checked against the Skagway Chamber of Commerce tour operator directory, which lists 18 operators including White Pass itself, so this is the real in-market field and not a guess. URL https://skagwaychamber.org/business-by-type-tour-operator",
+  "confidence": "MEDIUM-HIGH on the competitor set and the no-AI-in-this-field finding. HIGH on every specific artifact, thirteen distinct pages fetched."
+ },
+
+ "industry_analyst": {
+  "headline": "Adoption in this industry is genuinely early, and that is measured rather than asserted. Heritage and excursion railways specifically are close to a blank page.",
+  "base_rates": [
+   {"fact": "Only 12 percent of tour, activity and attraction operators say they are actively using generative AI in their operations, with more than half of small operators doing nothing with AI at all. Arival Global Operator Landscape third edition, survey of more than 7,000 operators worldwide, published Oct 22 2024.", "url": "https://www.travolution.com/news/travel-sectors/tours-and-activities/arival-unveils-largest-ever-study-on-the-state-of-the-global-experiences-industry/", "tier": "authoritative"},
+   {"fact": "In a March 2026 poll of 505 travel-experience operators run by GetYourGuide with Arival, 64 percent said they use AI more than a year ago, 56 percent said AI tools feel overwhelming, and 44 percent reported receiving inaccurate information from AI tools. Actual use is dominated by content, 84 percent product descriptions, 81 percent web and blog content, 74 percent SEO.", "url": "https://www.getyourguide.press/blog/tettspring2026", "tier": "vendor"},
+   {"fact": "Phocuswright, surveying 1,570 qualified US leisure travellers Feb 8-17 2026 with a plus or minus 2.5 point margin of error, found 56 percent had used AI for at least one trip in the past 12 months, up from 43 percent in the second half of 2025, and 51 percent used AI for real-time in-destination activity recommendations.", "url": "https://travelprofessionalnews.com/majority-of-u-s-travelers-now-use-ai-for-trips-marking-fastest-behavioral-shift-in-a-decade-new-phocuswright-study-finds", "tier": "authoritative"},
+   {"fact": "The Railway Magazine's May 14 2025 survey of technology adoption across heritage railways names online booking, mobile apps, onboard WiFi, encrypted digital radios, AR trials, smart cards, QR ticketing and CRM, and names no AI system, no specific railway, and gives no measured outcomes.", "url": "https://www.railwaymagazine.co.uk/29024/how-heritage-railways-are-integrating-technology/", "tier": "authoritative"},
+   {"fact": "A peer-reviewed survey of AI-enabled predictive maintenance for railway infrastructure published Jan 30 2026 in Sensors concludes the field remains largely research-oriented rather than operationally deployed, and that existing practice remains largely reactive or relies on limited rule-based diagnostics.", "url": "https://www.mdpi.com/1424-8220/26/3/906", "tier": "authoritative"},
+   {"fact": "The only quantified passenger-rail revenue-management gain in the peer-reviewed literature is Amtrak's ARROW system at an average 3 to 5 percent additional revenue. SNCF's RailRev and Deutsche Bahn's PET are named as real deployments with no quantified gain published.", "url": "https://www.mdpi.com/2227-7390/11/4/857", "tier": "authoritative"}
+  ],
+  "the_measured_wins": [
+   {"who": "Chipotle Mexican Grill, Paradox conversational AI", "what": "Conversational AI handling the entire hourly hiring funnel, answering candidate questions, collecting information, scheduling interviews and sending offer letters, in English, Spanish, French and German.", "outcome": "COO Jason Kidd stated on June 2 2026 that application-to-first-day fell from 12 days to 4 days, and that about 30 percent of scheduling work now happens after hours so managers do not do it on overtime. He was explicit about the limit: 'At the end of the day, that applicant ends up working for a human. So how far can we push it?'", "tier": "OPERATOR-REPORTED, the strongest evidence in this whole report, spoken by an operating executive on the record with the vendor already named in a company press release eighteen months earlier.", "url": "https://fortune.com/2026/06/02/chipotle-hiring-ai-assistant-ava-cado-from-12-to-4-days/", "caveat": "Chipotle is enormous. The direction transfers, the magnitude does not."},
+   {"who": "Black Cat Cruises, Akaroa, New Zealand, Yonder chatbot", "what": "Website chatbot for a small two-location marine wildlife cruise operator. The closest thing found to a business genuinely the size and shape of an independent excursion operator.", "outcome": "Roughly 500 conversations a month, answers about 60 percent of customer questions, saves staff around 10 hours a month. The same case study notes only 10 percent of chat users leave an email address.", "tier": "VENDOR CASE STUDY WITH NAMED CUSTOMER", "url": "https://www.yonderhq.com/case-study/black-cat-cruises-chatbot-answers-immediately-24-7", "caveat": "The 10 hours a month is the number to trust. The dollar figure in the same case study is modeled, not banked."},
+   {"who": "South Sea Cruises, Fiji, Yonder", "what": "Chatbot across a multi-brand marine excursion group.", "outcome": "Claims 49+ hours a month saved for South Sea Cruises alone from 600+ conversations in 30 days.", "tier": "VENDOR CASE STUDY WITH NAMED CUSTOMER", "url": "https://www.yonderhq.com/case-study/south-sea-cruises-delivers-exceptional-customer-experiences-by-embracing-new-innovative-technologies"},
+   {"who": "Christmas Garden Deutschland with myticket AG and Smart Pricer", "what": "Demand-based dynamic ticket pricing run as a three-year controlled comparison across a ten-venue seasonal event series, dynamic at some venues and static at the rest.", "outcome": "Dynamic-pricing venues, revenue +25 percent versus +9 percent at static venues, off-peak attendance +60 percent versus -38 percent. The off-peak number is the interesting one, dynamic pricing moved demand into the empty days rather than only raising prices on the full ones.", "tier": "VENDOR CASE STUDY WITH NAMED CUSTOMER, but with a genuine control group, which puts it a cut above the rest of the pricing category.", "url": "https://www.smart-pricer.com/3-year-a-b-test-of-dynamic-pricing-shows-16-higher-revenue-7-more-visitors-and-strong-guest-acceptance/"},
+   {"who": "Alaska Airlines", "what": "Customer-service chatbot.", "outcome": "SVP Charu Jain said at APEX TECH on May 20 2025 that the newly launched chatbot reduced live-agent interaction by 34 percent. Her framing: 'We're embracing AI to enrich the experience, not remove the human element.'", "tier": "OPERATOR-REPORTED via trade press", "url": "https://apex.aero/articles/alaska-airlines-group-sets-innovation-path-at-apex-tech-2025-keynote/"}
+  ],
+  "the_risk_evidence": [
+   {"fact": "In Moffatt v. Air Canada, 2024 BCCRT 149, decided Feb 19 2024, the British Columbia Civil Resolution Tribunal held the airline liable for a negligent misrepresentation made by the chatbot on its own website, rejecting the argument that the chatbot was a separate entity and finding the airline did not take reasonable care to ensure its chatbot was accurate.", "url": "https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot", "tier": "authoritative", "implication": "For an operator whose cancellation and refund policy hinges on ship movements, that ruling is the design constraint. A bot may quote schedule and product facts and must not improvise policy."},
+   {"fact": "An experimental study of 467 participants (Wuest and Bremser, Hochschule Pforzheim, published Feb 21 2025) using a 2x3 between-subjects design across positive, neutral and negative booking situations found human agents significantly outperformed chatbots at maintaining purchase intent, with the steepest decline for chatbots in the negative scenario.", "url": "https://www.mdpi.com/2673-5768/6/1/36", "tier": "authoritative", "implication": "Chatbots hold up when the news is neutral or good and lose the customer when it is bad. Put the machine on the pre-season FAQ and put a person on the delayed-ship conversation."},
+   {"fact": "Consumer group Which? published research in July 2026 finding Tripadvisor's AI review summaries omitted serious complaints. Tripadvisor disputed the findings while withdrawing the summary in question.", "url": "https://traveltomorrow.com/tripadvisor-ai-summaries-accused-of-masking-negative-hotel-reviews/", "tier": "authoritative"}
+  ],
+  "the_negative_result_that_matters": {
+   "who": "Shoretime, the cloud platform built specifically to run cruise shore-excursion operations end to end, partnered with Norwegian Cruise Line Holdings since February 2024.",
+   "finding": "The Shoretime site makes NO artificial-intelligence claim anywhere. The purpose-built system for the exact workflow a cruise-fed excursion operator lives in is sold as automation, integration and yield forecasting, not AI. A specific search for AI handling of late-ship-arrival cancellation and rebooking found no product of any kind, AI or otherwise, that automates it.",
+   "url": "https://shoretime.net/",
+   "implication": "The people closest to this workflow, who would have every commercial incentive to say AI, are not saying it. That is a deterministic-workflow problem, and the honest advice is that the fix is integration and rules, with AI placed only on the messy nodes."
+  },
+  "vendor_marketing_flagged": {
+   "who": "FareHarbor Agent",
+   "finding": "FareHarbor's own page states Agent is 'currently rolling out to a select group of operators' with no named customer, no pricing and no measured outcome published. TIER: VENDOR MARKETING, not evidence. If a platform rep pitches Agent, ask for a named operator of your size and a before-and-after number, because as of this research none is published.",
+   "url": "https://fareharbor.com/blog/meet-fareharbor-agent-ai-powered-guest-communication-for-tour-operators/"
+  },
+  "buyable_today": {
+   "detail": "Guest-inquiry chat is a real, priced, off-the-shelf market at operator scale. Yonder publishes list pricing at 95 dollars a month for 80 chats, 195 for 200 chats, 295 for 500 chats, with combined chat-and-review bundles at 265 and 385 a month, no fixed-term contract, configuration handled by their team over one to four weeks.",
+   "url": "https://www.yonderhq.com/pricing",
+   "base_rate_note": "Buying rather than building is also the better base rate. MIT's NANDA work found purchased tools from specialised vendors succeeded roughly twice as often as internal builds."
+  },
+  "THE_GAP": "Three gaps, in order of how much money they save an owner. ONE, the loud pitch and the measured wins are in different departments. An operator in this industry is being sold guest-facing AI. The evidence for that is the weakest tier in this report, all vendor-published. The best-evidenced wins are unglamorous and internal. TWO, a cruise-fed railway does not have a demand forecasting problem, so it should not buy a demand forecasting product. Port call schedules are published a year ahead and berth assignments are known. Passenger volume is a lookup against a known schedule, not a prediction. Anyone selling ML demand forecasting into a business whose demand is printed in a public calendar is selling a model where a join would do. THREE, the hardest operational moment in this business, a ship arriving late or skipping a port, has no AI product at all, and that is a finding rather than a hole in the search.",
+  "confidence": "HIGH on the negative findings and the base rates, MEDIUM on the transferable wins, LOW-and-labelled on the vendor numbers. Explicitly excluded because they could not be verified: the BNSF 200-geometry-defects claim, Deutsche Bahn's DIANA 25 percent and 50 percent figures, and any Digonex figure other than the Morton Arboretum one."
+ }
+}

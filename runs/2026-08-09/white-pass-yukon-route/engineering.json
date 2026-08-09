@@ -1,0 +1,740 @@
+{
+ "prd": {
+  "problem": "Your own cancellation page says it plainly. Please call 1-800-343-7373 to speak with the reservation office to cancel or alter a reservation (c11). There is no online path. The reservation office runs Monday to Friday 7:00 AM to 3:00 PM Alaska Time, published on both the Summit and the Bennett product pages, so it is standing policy rather than a one-page typo (c10). The money runs on a different clock. A cancellation made up to 24 hours prior to departure receives a refund minus a $10.00 penalty per person, and if a cancellation is made within 24 hours of departure time the guest forfeits all rights to a refund (c12).\n\nPut those two together and the shape of the problem is arithmetic rather than opinion. The refund clock runs 24 hours a day, seven days a week. The only published route to act runs 40 hours a week. A guest holding a Sunday morning departure who decides on Saturday evening that they can't travel has nowhere to put that decision. The phone rings into a closed office. By the time Monday opens, the clock has run, the fare is forfeit, and the first anyone at White Pass hears of it is a guest who is already unhappy.\n\nWeekends are not quiet days in Skagway. Five ships were listed arriving on Sunday August 9, 2026 (c20). Weekdays are not quiet in the office either, because the Reservation Agent job description puts the same person on entering reservations into the ticketing system, answering questions via phone, email and in person regarding White Pass products, and assisting the Passenger Department with train loading, passenger transfers and crossing-guard duties (c30). The person who would take that call is often on the platform.\n\nA smaller version of the same gap sits on the pages themselves. The cancellation policy page states the phone requirement and states no hours at all (c11). The hours live on the product pages (c10). The contact page offers a phone number, an email address, a fax and a contact form, with no hours on it (c18). A guest who wants to do the right thing inside the window can read your cancellation policy end to end and still not learn when someone will pick up.\n\nThe honest last line of this problem is that nobody at White Pass can currently say how often any of it happens. No out-of-hours contact volume, no call volume and no email volume is published or recorded anywhere we could find. That is not a criticism. It is the first thing worth fixing, because the size of this gap is the number that decides what it is worth spending on it, and right now that number does not exist.",
+  "after_state": "Monday morning, the reservation office opens to a list instead of to a voicemail backlog and a guess. Every request that arrived over the weekend is sitting there with the minute it arrived written beside it in Alaska Time, and each one already shows whether that minute fell before or after that guest's own 24 hour cutoff. The agent works down a list rather than reconstructing what happened. A guest who gave up on the phone at 9pm on a Saturday has a receipt with a time on it, so the conversation on Monday is about applying your policy rather than about whose memory is right. By the season close you can answer a question nobody at White Pass can answer today, which is how many guests try to reach you when the office is shut, what they are asking for, what language they write in, and how many of them were still inside the refund window at the moment they asked.",
+  "goals": [
+   "Give every out-of-hours guest request a server-written arrival time in Alaska Time, so the moment a guest asked becomes a recorded fact rather than a memory, a voicemail or an argument.",
+   "Offer a working route to act on all three channels the guest already reaches for, the website, the 1-800 line and info@wpyr.com, so a cancellation or change request never depends on the office being open at that hour.",
+   "Put one governed source behind every guest-facing sentence about the cancellation terms, the $10.00 per person penalty and the office window, so the cancellation page, the product pages and the acknowledgements all say the same approved thing.",
+   "Change the reservation agent's Monday from reconstruction to triage, without adding a single review step, drafting task or new screen to the people who are also loading trains.",
+   "Produce the four counters that do not exist today, out-of-hours contact volume, arrival time relative to the 24 hour cutoff, language mix and intent mix, as a by-product of the work the agent already does, so the decision about what to spend next rests on your numbers instead of anyone's argument."
+  ],
+  "non_goals": [
+   {
+    "item": "No artificial intelligence anywhere in phase one.",
+    "reason": "That is the recommendation, not a caveat attached to one. A timestamp, a clock and a queue are deterministic and can be tested exhaustively. A model on this path would add failure modes to a surface where money moves and would buy nothing the form does not already deliver."
+   },
+   {
+    "item": "No generated answers about the cancellation policy, the 24 hour clock, the penalty or any refund outcome.",
+    "reason": "In Moffatt v. Air Canada the tribunal held the airline liable for what the chatbot on its own website said and rejected the argument that the chatbot was a separate entity (c44). Your policy carries two clauses that are opposites separated by a preposition, up to 24 hours prior and within 24 hours (c12). A paraphrase that flips those is a money misstatement on your own site. We serve your approved words verbatim with a link, or we hand off to a person."
+   },
+   {
+    "item": "No machine translation at runtime of any policy, price or refund text into Spanish or Japanese.",
+    "reason": "You state you are actively seeking candidates who speak Spanish and Japanese fluently (c31), which is evidence the capability is wanted rather than evidence it is present. Outbound text in a language nobody on the published staff list is confirmed to read back has no review path. The policy strings and the acknowledgements are translated once by a professional human translator and version controlled as fixed strings, re-reviewed only when the policy changes."
+   },
+   {
+    "item": "No voice agent on the 1-800 line, in this phase or as an upsell later in the season.",
+    "reason": "It was assessed and killed. The phone is the published route for the highest-stakes contact you have (c11), no call volume exists anywhere to size or evaluate it against, and eight weeks to the October 7, 2026 close would put it live at the busiest and thinnest-staffed moment of the year with no tuning window. The narrow real win on that channel is an out-of-hours greeting and a callback record, which is a phone system configuration carrying no model."
+   },
+   {
+    "item": "No reads or writes against the ticketing system. No booking lookup, no seat release, no reference validation.",
+    "reason": "tickets.wpyr.com is a hosted third party with no published API or integration surface, and that integration can't be assessed from outside your company by anyone, including us. We capture the booking reference as an unvalidated string the guest types, which needs no vendor at all. Assuming an integration we have never seen is the classic way a project like this blows its date."
+   },
+   {
+    "item": "No self-service cancellation or change desk in phase one.",
+    "reason": "It needs the same write access to the ticketing system. Its correct first step is not a build at all, it is a written feasibility assessment of your ticketing vendor's interface, run in the off season, with the build gated on that assessment coming back yes."
+   },
+   {
+    "item": "Nothing in this build decides whether a guest gets their money back.",
+    "reason": "The system records when a request arrived and flags whether that time fell before or after the cutoff. The refund decision stays with your agent and your policy. The acknowledgement a guest receives confirms receipt and the arrival time and never states a refund outcome."
+   },
+   {
+    "item": "Nothing that touches the terms, scheduling or monitoring of the represented workforce.",
+    "reason": "About 40 workers, including tour guides, announcers and workers who greet visitors as they leave their cruise ships, voted to join SMART-TD's local chapter on April 8 (c33). That is a negotiation before it is a deployment, and it is not ours to walk into."
+   },
+   {
+    "item": "No revenue management, dynamic pricing or yield work.",
+    "reason": "No passenger count, no load factors, no trains-per-day figure and no channel split are published anywhere, so there is no demand signal to model. Amtrak's ARROW achieved 3 to 5 percent additional revenue (c43), which is a real precedent and is not a substitute for your own data. Your pricing is also negotiated with cruise lines, one of whose parent is a minority partner in the ownership group (c5), so it is a commercial relationship before it is an algorithm."
+   },
+   {
+    "item": "No predictive maintenance on the locomotive fleet.",
+    "reason": "The entire evidence base available to us is that six 30-class engines are currently in Skagway with the seventh and eighth due in 2026 (c36). No telemetry, no failure history and no stated maintenance pain exists anywhere in what we could verify. Proposing it would be inventing a need."
+   },
+   {
+    "item": "No shadow-mode exercise asking your reservation agent to review machine drafts during the remaining 2026 season.",
+    "reason": "It adds work to the exact person this project exists to unload, on the days five ships are in port and they are on the platform (c30, c20). The proposal would contradict its own goal. The honest version ships no model this season and lets the agent's own resolution become the record for free."
+   },
+   {
+    "item": "We do not replace or compete with the phone.",
+    "reason": "The 1-800 line works during office hours and your guests already use it (c11, c13). We add a path only at the hours where the existing one dead ends, and the greeting on that same line points at the published window rather than away from it."
+   },
+   {
+    "item": "We do not build, resell or take a margin on a website chat widget.",
+    "reason": "That is an off-the-shelf commodity at published list pricing of $95 to $295 a month with no fixed-term contract (c48). Buying it is a reasonable separate decision and we are not paid for it. It is complementary rather than rival, because it answers website questions and does not create a timestamped work item against the 24 hour clock and does not touch info@wpyr.com, which is where this build lives."
+   }
+  ],
+  "metrics": [
+   {
+    "metric": "Out-of-hours guest requests reaching the reservation office with a server-written arrival time, counted per week and split by channel across the web form, the 1-800 callback record and info@wpyr.com.",
+    "baseline": "ASSUMED ABSENT, and we will not invent one. Zero are recorded today, and the true volume is unknown, because no out-of-hours contact volume, call volume or email volume is published anywhere and none is being captured. The baseline is established by measurement in the first two full weeks of live capture. It ships labelled a shoulder season sample, because Bennett closes September 12, 2026 (c17) and the Summit season carries no service dates on September 26 to 27 and October 1, 3 to 5 (c16), so a September figure describes a shoulder period and not a July peak.",
+    "target": "The volume target is set jointly at the end of week two, once the baseline exists. The decision rule is agreed in writing before go live so that it can't be moved afterwards. If two full weeks of live capture return fewer than 10 out-of-hours requests in total, the gap is smaller than the published policy implies, we write that down, and we do not propose a phase two.",
+    "timeframe": "Baseline at the end of week two of live capture. Target fixed at that point and reported again at the October 7, 2026 season close."
+   },
+   {
+    "metric": "Share of captured out-of-hours requests whose server-written arrival time falls before that guest's own 24 hour cutoff.",
+    "baseline": "ASSUMED ABSENT. This is the single number that decides whether the build is worth extending, and nothing published anywhere allows it to be estimated, so we do not estimate it. It becomes computable on day one of capture, because the arrival time is a server write and the departure date and product are on the request. First reported at the end of week two.",
+    "target": "Set once the baseline exists, with the funding gate stated in advance. Anything beyond phase one is funded only if this share is at least 25 percent across the capture period, meaning at least a quarter of out-of-hours requests were still live inside the refund window when they arrived. Below 25 percent, the honest conclusion is that the timing gap is narrower in practice than your own policy implies, and we say so in writing rather than proposing more work.",
+    "timeframe": "First computed at the end of week two of live capture, final figure at the October 7, 2026 season close."
+   },
+   {
+    "metric": "Guest-facing surfaces stating the cancellation terms, the $10.00 per person penalty or the reservation office window that render from one approved source file.",
+    "baseline": "MEASURED, and it is zero. Today the window of Monday to Friday 7:00 AM to 3:00 PM Alaska Time appears on the Summit and Bennett product pages (c10), the cancellation policy page states the phone requirement and carries no hours (c11), and the contact page carries the channels and no hours (c18). No single source governs any of them.",
+    "target": "100 percent. Every guest-facing surface and every acknowledgement template that states the cancellation terms, the penalty or the office window renders from the one file you signed off, and zero guest-facing sentences about policy exist that are not a verbatim span of that file. Verified by a string containment check in code, not by anyone reading the page.",
+    "timeframe": "At go live, then re-checked automatically on every deploy for the life of the build."
+   },
+   {
+    "metric": "Correctness of the 24 hour boundary and penalty computation in Alaska Time, measured as pass rate on an exhaustive test set.",
+    "baseline": "MEASURED, and it is not applicable today, because no computation exists. The boundary is applied by hand by a person during office hours, and there is no record of it being applied at all outside them.",
+    "target": "100 percent pass, with a single failing case blocking the release. The test set covers both sides of the 24 hour line, the $10.00 per person penalty arithmetic, the forfeiture clause, and conversion into Alaska Time from a browser or a ship clock set elsewhere. One hazard is removed by the calendar rather than by code, since the published Summit season of April 30 to October 7, 2026 (c16) sits entirely inside a single United States daylight saving period, so no transition falls within the season.",
+    "timeframe": "Before go live, and re-run on every change thereafter."
+   }
+  ],
+  "phase1_must": [
+   "A structured request form served from wpyr.com, with dropdowns for request type, departure date and product, a free text box, and a booking reference field captured as an unvalidated string. Served in English, Spanish and Japanese as human translated fixed strings.",
+   "A server-written arrival time in Alaska Time stamped on every request at intake, before anything else runs, and never editable afterwards by anyone including us.",
+   "A derived flag on each request showing whether that arrival time fell before or after that guest's own 24 hour cutoff. Visible to your agent as triage information, never shown to the guest as a refund outcome.",
+   "An out-of-hours greeting on 1-800-343-7373 that states the published window of Monday to Friday 7:00 AM to 3:00 PM Alaska Time and takes a callback request, producing the same timestamped record on the channel where the guest's habit already lives.",
+   "A timestamped ingest on info@wpyr.com that queues the raw message unchanged, with the original text always retained beside anything else.",
+   "One queue the reservation office works from, with the three channels labelled and the agent's own resolution recorded on each item.",
+   "One governed source file for the cancellation terms, the penalty and the office window, signed off by you, with a string containment check in code asserting that every guest-facing policy sentence is a verbatim span of it.",
+   "Acknowledgement templates, professionally human translated into Spanish and Japanese once and version controlled, that confirm receipt and the arrival time and never state a refund outcome.",
+   "The four counters exported as a plain file you own, out-of-hours contact volume, arrival time relative to the cutoff, language mix and intent mix, generated as a by-product of the agent's normal resolution at zero added workload.",
+   "An exhaustive test suite on the 24 hour boundary, the penalty arithmetic and the Alaska Time conversion, run before go live and on every change."
+  ],
+  "phase1_later": [
+   "The deterministic self-service change and cancellation desk. Gated on a written feasibility assessment of your ticketing vendor's interface, run in the off season, and it becomes a build only if that comes back yes. One standing instruction rides with it for its whole life, no model is ever placed on that path in any phase for any reason.",
+   "A single classifier on unstructured inbound email and on the form's free text box, to sort and extract from messages that arrive in whatever language the guest writes. Off season build, live before the 2027 opening, trained and evaluated on labels the 2026 season produces for free. It is not scoped today because no evaluation set exists and none can be bought, so shipping it in 2026 would be a demonstration rather than a system.",
+   "Reply drafting for the reservation agent. Deferred, because acceptance for a drafting aid is agent edit distance and time to send, and neither baseline exists yet.",
+   "Booking reference validation and booking context assembly. Blocked on the same unassessed ticketing integration, not on effort.",
+   "Any outbound Spanish or Japanese beyond the fixed human translated strings. Blocked until there is a verified reader on staff who can review it.",
+   "Anything in seasonal hiring. It has the strongest outside evidence and the weakest evidence local to you, and a union constraint sits across it.",
+   "First-party post-ride feedback capture. Worth doing and not now. Every review platform returned HTTP 403 to us, so we hold zero verbatim guest messages and nobody, including you, currently has a sample of how your own guests phrase things.",
+   "An off-the-shelf tourism chat widget at published list pricing of $95 to $295 a month with no fixed-term contract and one to four weeks of vendor configuration (c48). This is a buy recommendation we are not paid for and do not implement. Two conditions are not optional, it is configured to answer only published non-money content and to hand off on anything touching cancellation, refund or price, and you go in knowing that under Moffatt the liability for what it says on your site stays with you whoever built it (c44)."
+  ],
+  "need_from_you": [
+   "A POLICY DECISION THAT IS YOURS ALONE, AND THE ONE ITEM THAT CHANGES WHAT THIS IS WORTH. Is an out-of-hours request timestamped before the 24 hour cutoff honoured at that timestamp? Today the phone is the only published route (c11) and the office is shut at that hour (c10), so a Saturday evening request effectively lands on Monday, after the clock. We can record the minute a guest asked, to the second, defensibly. We can't decide for you whether that minute counts. Until you answer it, this build is honest measurement rather than a change in guest outcomes, and the answer also governs what the acknowledgement is allowed to say. We need it in writing, from a named owner, before go live.",
+   "Access to info@wpyr.com, or a forwarding rule onto an address we control. This is the longest-lead item on the list and the one most likely to move the date. The email path is one of the three capture channels and it can't be built against nothing.",
+   "A named owner of the queue, with an answer for the hard day. Who works it, at what hour, and what happens when five ships are in port and that person is on the platform for train loading and crossing-guard duty (c30, c20). A queue with no named owner becomes a second inbox, which is the failure mode this build exists to end.",
+   "A configuration change on 1-800-343-7373. Whoever administers that line sets the out-of-hours greeting and the callback capture. We need the vendor name, the administrator contact and a scheduled window. We have not seen your phone system and we will not price a guess.",
+   "Sign-off on the governed policy text. The exact wording of the cancellation terms, the $10.00 per person penalty and the office window, approved by whoever owns that language at White Pass. Under Moffatt the liability for what your site says stays with you (c44), so we will not write that sentence on your behalf. We serve the one you approve, verbatim, and we check in code that nothing else ever reaches a guest.",
+   "A professional Spanish and Japanese translator, engaged once, for the policy strings and the acknowledgement templates. Your recruiting states you are actively seeking candidates fluent in Spanish and Japanese (c31), which tells us the need is real and also tells us there may be nobody on staff today who can read a translation back. Translating once by a human and freezing the strings is the safe answer. It is a real cost and a real scheduling dependency, so it belongs on this list rather than in a footnote.",
+   "Written confirmation on the union question, before anything ships. About 40 workers voted to join SMART-TD's local chapter on April 8 (c33). Reservation Agents are not among the roles that article names, which is why this build appears clear of it. Absence from a list is not proof of non-representation, so we are asking you to confirm it rather than assuming it on your behalf.",
+   "Whoever administers wpyr.com, with a deploy path. The form is served from your site and the governed policy text has to render on your cancellation page. We need the platform, the access and an agreed way to publish.",
+   "One hour a week of the reservation office's time for four weeks after go live, to look at the queue and tell us where it is wrong. Nothing else. No drafts to review, no shadow exercise, no new screen to learn. Their normal resolution is the record we want and they already produce it.",
+   "Your sell-out rate by departure, if you hold it internally. It is the number that decides which way the short-run money runs on this build, and it is not published anywhere. If you do not hold it in usable form, say so and we will design the business case without it, which is how we have written it."
+  ],
+  "risks": [
+   {
+    "risk": "MAKING CANCELLATION EASIER CAN COST YOU MONEY IN THE SHORT RUN, and we would rather say it than have you find it. Today, a guest who can't reach anyone inside 24 hours forfeits all rights to a refund (c12) and the railway keeps that fare. The same guest, able to act at 9pm on a Saturday, converts a forfeiture into a refund minus a $10.00 per person penalty.",
+    "mitigation": "The offsetting gain is reselling the seat on a ride that usually sells out in advance (c14), plus fewer disputes and less goodwill damage. Which effect is larger depends on your sell-out rate by departure, which you do not publish and we do not have. So the business case we put in front of you does NOT lean on resold seats. It clears on the things that do not depend on that unpublished number, out-of-hours contacts captured that today bounce off a closed office, agent time not spent reconstructing a weekend while a train is loading, and the decision data itself. Phase one also measures the conversion directly, because every request carries the cutoff flag, so within one season you hold the real figure for your own railway rather than our estimate. If it comes back against you, the honest move is to stop, and the policy decision above is the lever you control."
+   },
+   {
+    "risk": "The volume may turn out to be small. No out-of-hours contact volume is published or recorded anywhere, so it is genuinely possible that few guests try to act outside office hours and the gap is more theoretical than the policy makes it look.",
+    "mitigation": "This is exactly why phase one is a measurement instrument before it is a saving, and why it is scoped as a small pilot rather than a platform. The decision rule is agreed before go live and written into the metrics above. If two full weeks of capture return fewer than 10 out-of-hours requests, we write that down and we do not propose a phase two. Losing that argument cheaply, on your numbers, is the point of running it in this order."
+   },
+   {
+    "risk": "The runway is short and the sample is not your peak. Eight weeks remain to the October 7, 2026 close, and the build, the inbox access and the phone configuration all come out of those same eight weeks, so usable observation time is meaningfully shorter than the calendar suggests. Bennett closes September 12 (c17) and the Summit season carries no service dates on September 26 to 27 and October 1, 3 to 5 (c16).",
+    "mitigation": "Every counter ships labelled as a shoulder season sample, so nobody designs 2027 on a September mix without knowing what it is. If access or the phone change slips past mid September, the honest call is to go live for the season close as a rehearsal and treat the 2027 opening as the real baseline. Starting in April 2027 for a full clean season is also a legitimate choice, and its only cost is a year of not knowing."
+   },
+   {
+    "risk": "Guests may not adopt a new path. Research on 467 German adults found booking intention significantly lower for automated agents than for human ones, with both main effects significant (c45).",
+    "mitigation": "That study tested a chatbot, and nothing here asks a guest to converse with a machine or to learn a new behaviour. A form with dropdowns is the most ordinary interaction on the internet, the phone greeting meets the habit exactly where it already is (c11), and the email path asks the guest to do precisely what they do today. The new route is offered at the one moment the old one dead ends. If adoption is still low, the counters say so within weeks and the finding costs you a pilot rather than a season."
+   },
+   {
+    "risk": "A guest could read an acknowledgement as a promise of a refund. That is close to the Moffatt fact pattern, where the tribunal held the airline responsible for a misrepresentation made by the chatbot on its own website and rejected the separate-entity argument (c44).",
+    "mitigation": "The acknowledgement confirms receipt and the arrival time and never states a refund outcome, which is a hard rule rather than a style guideline. Every guest-facing sentence about policy is a verbatim span of the file you signed off, asserted by a string containment check in code rather than by anyone's judgement on the day. No model writes a word of guest-facing text in phase one. The wording is yours and you approve it before it ships."
+   },
+   {
+    "risk": "The ticketing system is an unknown. On 2026-08-09 the online ticketing system returned a message stating it was currently unavailable and directing customers to the reservations office and to info@wpyr.com (c19).",
+    "mitigation": "That is a point-in-time observation, seen the same day by three of us independently, and it could be transient. We do not present it as a standing condition and no part of this recommendation depends on it being one. Nothing in phase one integrates with the ticketing system in either direction, which was a deliberate design choice rather than a convenience, so the build is unaffected whether that system is up, down or replaced. The one durable thing the observation tells us is that info@wpyr.com is an address your own systems point customers toward, which is part of why it is one of the three capture paths."
+   },
+   {
+    "risk": "The build lands on the person it is supposed to unload. Your Reservation Agent enters reservations into the ticketing system, answers questions by phone, email and in person, and assists with train loading, passenger transfers and crossing-guard duties (c30). A new tool mid season can easily become one more thing.",
+    "mitigation": "Phase one adds no review step, no drafting to approve and no shadow exercise, and we killed the version of this proposal that included one for exactly this reason. The agent's day changes by one thing, weekend items arrive as a list with times attached instead of as a Monday morning surprise. The four counters fall out of the resolution they already record, so the measurement costs them nothing."
+   },
+   {
+    "risk": "The union question is live. About 40 workers voted to join SMART-TD's local chapter on April 8 (c33), and the company's own response was that employees have the right to organize.",
+    "mitigation": "Reservation Agents are not among the roles that article names, which is why this build appears clear of it. Absence from a list is not proof of non-representation, so we treat it as a dependency to confirm in writing before anything ships rather than an assumption we quietly made for you. If Reservation Agents are inside that unit, the scope of anything touching their work is a conversation with the local before it is a deployment, and finding that out now costs nothing while finding it out at go live costs the schedule."
+   },
+   {
+    "risk": "IT UNDERPERFORMS. The counters come back thin, the share of requests inside the cutoff falls under the gate, and the forfeiture conversion runs against you.",
+    "mitigation": "Then phase two is not funded, and we say so in writing rather than repackaging the same idea at a smaller price. The engagement ends at phase one. You keep the governed policy file, the timestamp record, the queue and the counters, all of which are yours, run without us, and continue to be worth having on their own. The whole thing is deliberately sized so that a negative result costs one pilot and one shoulder season, and so that the result is unambiguous enough to act on. Note the wider context honestly, only 12 percent of tour, activity and attraction operators actively use AI in their operations, with most still experimenting or not using it at all (c42), which is one reason we put the measurement first and the model in a later phase that has to earn its way in."
+   }
+  ],
+  "open_questions": [
+   {
+    "q": "What share of departures actually sells out, by departure and by date? This is the question that decides whether easier cancellation costs you money or makes you money, because it decides whether a released seat resells. Third-party travel journalism reports the popular train rides usually sell out in advance, especially during peak cruise season (c14), which is a journalist's characterisation rather than your load factors. No passenger count, no load factor and no trains-per-day figure is published anywhere. If a released seat reliably resells, this build pays for itself on that alone. If it does not, the forfeiture revenue you give up is a real cost and the case has to stand without it, which is how we have deliberately written it.",
+    "owner": "White Pass, Manager of Reservations and Sales, from your own booking data. We compute the effect either way once the figure exists, and phase one measures the conversion side of it directly regardless."
+   },
+   {
+    "q": "Is an out-of-hours request timestamped before the 24 hour cutoff honoured at that timestamp? This is a business rule, not an engineering choice, and it is the single decision that turns this from a measurement exercise into a change in guest outcomes.",
+    "owner": "White Pass, the President, with whoever owns the cancellation policy language. Needed in writing before go live."
+   },
+   {
+    "q": "Are Reservation Agents inside the bargaining unit that about 40 workers voted to join on April 8? The article names tour guides, announcers and workers who greet visitors as they leave their cruise ships, and Reservation Agents are not among them (c33), which is not the same thing as confirmation.",
+    "owner": "White Pass, HR/Payroll Manager, in writing before anything ships."
+   },
+   {
+    "q": "Who administers 1-800-343-7373, and what does an out-of-hours greeting with callback capture cost to configure on that system? We have not seen the phone system, so any number we put on this today would be invented.",
+    "owner": "White Pass, plus your telephony vendor. We would rather have the vendor name and a 20 minute call than a line item nobody can defend."
+   },
+   {
+    "q": "What actually arrives at info@wpyr.com today, in what volume, and in which languages? Your recruiting names Spanish and Japanese specifically (c31), which is evidence the need is real rather than evidence of the mix. We hold zero verbatim guest messages, because every review platform returned HTTP 403 to every attempt, so the language mix and the intent mix are assumptions until the ingest measures them.",
+    "owner": "Joint. White Pass grants access, we measure it in weeks one and two and hand you the numbers."
+   },
+   {
+    "q": "Can your ticketing vendor expose an interface at all, and on what terms? Everything in the deferred lane, above all the self-service cancellation desk, turns entirely on this, and nobody can answer it from outside your company.",
+    "owner": "White Pass, with the ticketing vendor. Our recommendation is a written feasibility assessment in the off season before a single day of build is committed to that path."
+   },
+   {
+    "q": "What does a forfeited fare actually cost you today in dispute handling, chargebacks and goodwill? The forfeiture clause is published (c12), the downstream handling of an unhappy guest is not, and it sits on the other side of the ledger from the forfeiture revenue itself.",
+    "owner": "White Pass, Controller, alongside Reservations. If the figure is not tracked, say so and we will leave it out of the case rather than model it."
+   },
+   {
+    "q": "Was the ticketing system unavailability observed on 2026-08-09 transient, or is it a recurring condition? We saw it three times independently on one day (c19) and we have deliberately not built anything on top of that observation.",
+    "owner": "White Pass, whoever holds the ticketing vendor relationship. It changes nothing in phase one either way, which is why it is a question rather than a risk."
+   }
+  ]
+ },
+ "design": {
+  "one_liner": "A structured multilingual request desk plus an out of hours greeting on 1-800-343-7373 plus a timestamped ingest on info@wpyr.com, all writing into one queue with a server written arrival time, so a guest's cancellation or change request has a recorded position against the 24 hour refund clock even when the reservation office is shut, and so White Pass ends the season holding the four numbers nobody publishes today.",
+  "architecture": {
+   "nodes": [
+    {
+     "id": "guest",
+     "label": "Guest, in whatever time zone their ship or browser is in",
+     "kind": "user"
+    },
+    {
+     "id": "request_desk",
+     "label": "Request Desk, form and intake API on wpyr.com, English Spanish Japanese",
+     "kind": "build"
+    },
+    {
+     "id": "phone_1800",
+     "label": "1-800-343-7373, out of hours branch on Twilio Studio",
+     "kind": "external"
+    },
+    {
+     "id": "info_inbox",
+     "label": "info@wpyr.com, their published inbox",
+     "kind": "external"
+    },
+    {
+     "id": "policy_source",
+     "label": "Policy Source, one governed set of human translated fixed strings",
+     "kind": "data"
+    },
+    {
+     "id": "request_ledger",
+     "label": "Request Ledger, managed Postgres, arrival_at_utc written by the server",
+     "kind": "data"
+    },
+    {
+     "id": "triage_desk",
+     "label": "Triage Desk, the queue and the four counters",
+     "kind": "build"
+    },
+    {
+     "id": "reservation_office",
+     "label": "Reservation office, Monday to Friday 7:00 AM to 3:00 PM Alaska Time",
+     "kind": "user"
+    }
+   ],
+   "edges": [
+    {
+     "from": "guest",
+     "to": "request_desk",
+     "label": "submits a change or cancellation request, sync"
+    },
+    {
+     "from": "guest",
+     "to": "phone_1800",
+     "label": "calls outside the published window, sync"
+    },
+    {
+     "from": "guest",
+     "to": "info_inbox",
+     "label": "emails in whatever language they write, async"
+    },
+    {
+     "from": "policy_source",
+     "to": "request_desk",
+     "label": "supplies the hours block, the verbatim cancellation text and the fixed acknowledgement strings, read only"
+    },
+    {
+     "from": "request_desk",
+     "to": "request_ledger",
+     "label": "writes the request and the server arrival_at_utc, sync, no success page unless the row is stored"
+    },
+    {
+     "from": "phone_1800",
+     "to": "request_ledger",
+     "label": "webhook posts the callback request, caller ID and recording link with its arrival_at_utc, async"
+    },
+    {
+     "from": "info_inbox",
+     "to": "request_ledger",
+     "label": "ingest queues the raw message unchanged with its arrival_at_utc, async, mailbox never modified"
+    },
+    {
+     "from": "request_desk",
+     "to": "guest",
+     "label": "pre translated acknowledgement, receipt and timestamp only, never a refund outcome"
+    },
+    {
+     "from": "request_ledger",
+     "to": "triage_desk",
+     "label": "reads the queue, nearest to the 24 hour cutoff first, sync"
+    },
+    {
+     "from": "triage_desk",
+     "to": "reservation_office",
+     "label": "the agent opens the queue at 7:00 AM and resolves by phone or email as they do today"
+    },
+    {
+     "from": "reservation_office",
+     "to": "request_ledger",
+     "label": "writes the resolution and the intent label, sync, which is the free label phase two trains on"
+    }
+   ],
+   "caption": "Phase one has no model in it, so there is no AI node on this diagram and that is the recommendation rather than an omission. The hosted ticketing system at tickets.wpyr.com is absent on purpose. Phase one reads nothing from it and writes nothing to it, because that integration can't be assessed from outside the company, so the booking reference is captured as an unvalidated string the guest types. The one thing that decides whether a guest sits inside or outside the 24 hour cutoff is arrival_at_utc, and it is a server write on every one of the three intake edges."
+  },
+  "build_vs_buy": [
+   {
+    "component": "Out of hours telephony branch on 1-800-343-7373",
+    "decision": "buy",
+    "why": "Twilio Programmable Voice and Twilio Studio, reached by a carrier level time of day forward on the published number outside Monday to Friday 7:00 AM to 3:00 PM Alaska Time. Telephony is the definition of a commodity and nobody should hand build call routing in 2026. Built in transcription is switched OFF in phase one, because transcription is a model and the feasibility gate says phase one ships none."
+   },
+   {
+    "component": "Inbound and outbound email transport",
+    "decision": "buy",
+    "why": "Postmark, inbound webhook for the info@wpyr.com ingest and outbound send for the acknowledgement. One vendor covers both directions, delivery and bounce handling are solved problems, and the reservation office keeps seeing info@wpyr.com exactly as it looks today because the ingest takes a copy and never modifies the mailbox."
+   },
+   {
+    "component": "Runtime hosting and database",
+    "decision": "buy",
+    "why": "One managed container and one managed Postgres on a single provider such as Render, US region. Their published directory lists no CIO, IT director or technology lead, which is a statement about the directory and not a claim about the company, and it is the only use we make of it. It shapes delivery toward managed and low maintenance rather than anything they would have to babysit."
+   },
+   {
+    "component": "Agent console authentication",
+    "decision": "buy",
+    "why": "Clerk or their existing workplace identity provider if the office already signs into one, confirmed in the spike. Nobody should build session handling and password reset for a five seat internal tool."
+   },
+   {
+    "component": "Spanish and Japanese fixed strings",
+    "decision": "buy",
+    "why": "A professional human translator, one pass, on a small string set, re reviewed only when the policy changes. This is the direct replacement for the killed runtime machine translation. The company states it is actively seeking Spanish and Japanese speakers, which is evidence the capability is wanted and not evidence it is present, so an outbound string in those languages has no reviewer today unless a human translated it once and it was version controlled."
+   },
+   {
+    "component": "Error and uptime monitoring",
+    "decision": "buy",
+    "why": "Sentry for errors, Healthchecks.io for the ingest heartbeat. Commodity, and a silent ingest is the single most expensive failure this design has."
+   },
+   {
+    "component": "Website chat",
+    "decision": "buy",
+    "why": "Yonder at published list pricing of $95 a month for 80 chats, $195 for 200 and $295 for 500, no fixed term contract, vendor configured over one to four weeks. We are not paid for this and we recommend it anyway, configured to answer only published non money content and to hand off on anything touching cancellation, refund or price. Under Moffatt v. Air Canada the liability for what it says stays with White Pass whoever built it, and the tribunal explicitly rejected the separate entity argument. It is complementary rather than rival, since a chat widget does not create a timestamped work item against the 24 hour clock and does not touch info@wpyr.com."
+   },
+   {
+    "component": "Intake and Timestamp Service, and the Request Ledger schema",
+    "decision": "build",
+    "why": "This is the differentiator and it is the whole product. The honest alternative is Jotform plus Zapier, and it gets roughly seventy percent of the intake for a fraction of the money. What it does not get is the arrival timestamp living in a clock we control and can test, the hours to cutoff arithmetic computed in UTC and displayed in Alaska Time, the guarantee that every guest facing policy sentence is a verbatim span from the Policy Source, or the four counters. It also adds a third party processor holding guest names, booking references and free text. The cutoff arithmetic is money arithmetic, so it is code that can be tested exhaustively either side of the 24 hour line, and it is not something to rent."
+   },
+   {
+    "component": "Policy Source, the governed content set",
+    "decision": "build",
+    "why": "A content job with no model in it, held in Git with a named reviewer, rendering one hours block and one verbatim cancellation text into the form, the acknowledgement templates and the cancellation page together. It is a hard prerequisite rather than a nice to have, because today the cancellation page states no hours at all, the contact page carries no hours, the hours live only on product pages, and the nav link labelled FAQ points at the travel blog. No product sells this. It is two hundred lines of renderer plus an editorial pass and their own legal read."
+   },
+   {
+    "component": "Triage Desk console and the four counters",
+    "decision": "build",
+    "why": "A thin server rendered queue with hours to cutoff on every row, plus four SQL views. Three to five days. The counters are the funded deliverable and they have to be computed from the same server clock that wrote the timestamps, otherwise they are a second version of the truth. The honest alternative was considered, and if the spike shows the office would rather live in a labelled shared mailbox, phase one degrades to labels plus a weekly counters report and we take that cheaper path."
+   },
+   {
+    "component": "Booking validation, lookup or any write to tickets.wpyr.com",
+    "decision": "buy",
+    "why": "Neither, in phase one. Recorded here so nobody assumes it was forgotten. It is on the kill list, the vendor and integration surface are not published anywhere, and the reference is captured as an unvalidated string that needs no vendor at all."
+   }
+  ],
+  "cross_cutting": {
+   "auth": "Guest side is deliberately unauthenticated. There is no account, no login and no booking lookup, because an account is a barrier raised at the exact moment the old route already failed the guest, and because validating a booking reference would need the ticketing integration that phase one refuses to assume. Abuse control is Cloudflare Turnstile plus per IP and per email rate limits, which is the correct trade when the write is a work item rather than a money movement. Agent side is named accounts with SSO, no shared login, two roles only, agent and manager, and the manager role exists solely to read the counters and receive the Monday digest. There is no administrative path that writes to tickets.wpyr.com, because no such path is built.",
+   "data_security": "Collect the minimum that makes a work item actionable, name, contact email, contact phone, the booking reference as an unvalidated string, departure date, intent from a fixed dropdown, free text, language and channel. Never card data, and the form and the acknowledgement both say so in the fixed strings. TLS in transit, encryption at rest on the managed Postgres, US region, retention of twenty four months and then deletion, and access limited to named reservation office accounts with an audit row on every status change. The c44 control is mechanical rather than editorial, every guest facing sentence about policy is asserted in CI to be a verbatim span of the Policy Source, which is a string containment check in code and not a judgment call, so a build fails rather than a guest being misinformed. No machine translation appears anywhere on the outbound path, in any phase. Inbound machine translation for agent comprehension is allowed later with the original always retained beside it, because the direction is what makes it safe, an inbound aid has a human reader and an outbound string is an unreviewed statement.",
+   "observability": "Four counters as SQL views over the ledger, out of hours contact volume, arrival time relative to the 24 hour cutoff, language mix and intent mix, produced as a by product of the agent doing the job they already do and at zero added workload. A Monday morning digest to the Manager of Reservations and Sales. Sentry on every unhandled error. A Healthchecks.io heartbeat on the email ingest, because an ingest that stops quietly is worse than one that crashes loudly. An hourly synthetic canary that submits a test request through the form and places a test call through the Twilio flow, alerting if no ledger row appears within sixty seconds. A weekly reconciliation of message counts on info@wpyr.com against ledger rows, because a message that silently never became a row is the one failure that can cost a guest their fare. Every dashboard label carries the shoulder season caveat by default, since Bennett closes September 12th and the Summit season carries no service on September 26th to 27th and October 1st and 3rd to 5th, so a question mix measured in late September describes a shoulder period and not a July peak.",
+   "failure_modes": "TIMEZONE is the named hazard and it is handled by storing arrival_at_utc in UTC, doing all cutoff arithmetic in UTC, converting for display through the IANA America/Anchorage zone, and printing both the guest's local time and Alaska Time on the acknowledgement so a guest on a ship reading a phone set to another zone can't be misled by a bare clock reading. DAYLIGHT SAVING is removed by the calendar rather than by code for 2026, since the published Summit season of April 30th to October 7th, 2026 sits entirely inside a single United States daylight saving period, so no transition falls within the season. The tz library still does the work anyway, because the off season build and the April 2027 opening both cross transitions and a hazard removed by luck is not a hazard removed. LEDGER UNAVAILABLE AT SUBMIT, the form does not show a success page and never issues a timestamp it did not store, it shows 1-800-343-7373 and the published window instead, which is today's behaviour. TWILIO OR THE CARRIER FORWARD FAILS, the forward is configured to fail open to the line's current behaviour, so a broken branch is a normal call and never a dead number. EMAIL INGEST STOPS, the heartbeat and the weekly reconciliation catch it, and because the ingest only ever takes a copy, the reservation office's own view of info@wpyr.com remains authoritative and the channel degrades to exactly today. DUPLICATE CONTACT ACROSS CHANNELS, requests are linked on email and booking reference string and never merged automatically, because over escalation costs an agent seconds while a wrongly merged and closed request costs a guest a fare. A FOURTH LANGUAGE ARRIVES, the message is queued raw and unchanged with its timestamp and flagged for a human, and no outbound is generated. THE QUEUE IS NOT WORKED, the counters are the tell and the Monday digest is the escalation. In every one of these the floor is the same, a total failure of any new component degrades to today's behaviour plus a timestamp, and never below it."
+  },
+  "goals": [
+   "Every out of hours cancellation or change request arrives carrying a server written arrival_at_utc, so a guest's position against the 24 hour cutoff is a recorded fact rather than something reconstructed on Monday.",
+   "One governed source of policy text, so the cancellation page carries the same Monday to Friday 7:00 AM to 3:00 PM Alaska Time window the product pages carry, and every guest facing policy sentence is a verbatim span of it, enforced in CI.",
+   "The four counters exist and are trustworthy by the October 7th, 2026 close, out of hours contact volume, arrival time relative to the 24 hour cutoff, language mix and intent mix, none of which any published source contains today.",
+   "Zero added workload on the reservation agent. The queue replaces triage they already do, it never adds a review task, and it lands on the same people who get pulled onto the platform for train loading on days when five ships are listed arriving.",
+   "Guests reaching the closed office get a receipt in English, Spanish or Japanese that confirms what was received and when, in wording a human translated and their counsel approved, and that never states a refund outcome.",
+   "Every new component fails safe to today's behaviour, so the worst case of the whole build is the status quo plus a timestamp."
+  ],
+  "non_goals": [
+   {
+    "item": "Any model, classifier, LLM or machine translation in phase one",
+    "reason": "The feasibility gate ruled it out and this design honours the ruling. No eval set exists and none can be bought, since zero verbatim customer reviews were obtainable and every platform returned HTTP 403, so we hold no sample of how these guests actually phrase anything. The model arrives in phase two, off season, on one node, trained on labels the 2026 and 2027 seasons produce for free."
+   },
+   {
+    "item": "Booking reference validation, booking lookup, seat release or any write to tickets.wpyr.com",
+    "reason": "It is a hosted third party with no published API or integration surface and the integration can't be assessed from outside the company. Capturing the reference as an unvalidated string does the job of phase one with no vendor dependency at all, and the field says so plainly to the guest."
+   },
+   {
+    "item": "A voice agent on 1-800-343-7373",
+    "reason": "Killed outright. Moffatt liability lands harder on voice because the guest keeps no artifact to re read, the phone is the published route for the highest stakes contact they have, no call volume exists anywhere to size or evaluate against, per turn compounding and latency both stack against it, and eight weeks to the October 7th close would put it live at peak with no tuning window. What ships is a greeting and a callback capture, which is telephony configuration."
+   },
+   {
+    "item": "Actually cancelling, refunding or charging anything automatically",
+    "reason": "The $10.00 penalty per person and the forfeiture clause are money decisions and this design deliberately keeps AI and automation off the money. The desk creates a timestamped work item, a human decides the outcome."
+   },
+   {
+    "item": "Runtime translation of any policy, price or refund text",
+    "reason": "The cancellation policy carries two clauses that are opposites separated by a preposition, a refund up to 24 hours prior minus penalty and forfeiture of all rights within 24 hours of departure. A translation that swaps up to for within is a money misstatement on their own website, in a language no published staff member is confirmed to read back. Translate once, by a human, version control the strings."
+   },
+   {
+    "item": "Replacing the phone as the published route to cancel or alter a reservation",
+    "reason": "That the guest must call 1-800-343-7373 is their published policy and changing it is their decision with their legal review. Phase one adds a route that works when the office is shut and removes nothing."
+   },
+   {
+    "item": "A chat widget built by us",
+    "reason": "It is a commodity at $95 to $295 a month with no fixed term contract, and buying from specialised vendors succeeds about twice as often as building internally. We recommend they buy it and we are not paid for it."
+   },
+   {
+    "item": "Revenue management, dynamic pricing or predictive maintenance",
+    "reason": "No passenger count, no load factors, no trains per day and no channel split are published, so there is no demand signal to model, and pricing is a negotiated commercial relationship with cruise lines before it is an algorithm. On the fleet, six 30 class engines currently in Skagway with the seventh and eighth due in 2026 is the entire evidence base, with no telemetry, no failure history and no cited maintenance pain. Proposing either would be inventing a need."
+   },
+   {
+    "item": "Anything touching the terms, scheduling or monitoring of the represented workforce",
+    "reason": "About 40 workers voted to join SMART-TD's local chapter on April 8th. That is a negotiation before it is a deployment. Reservation Agents are not among the roles that article names, which is why this build appears clear of it, and absence from a list is not proof of non representation, so it is confirmed in writing before anything ships."
+   },
+   {
+    "item": "A 2027 season forecast built on phase one data",
+    "reason": "Bennett closes September 12th and the Summit season carries no service on September 26th to 27th and October 1st and 3rd to 5th, so anything measured before the October 7th close is a shoulder season sample. It describes a shoulder period and generalises to one, and it must be labelled that way before anyone designs 2027 on it."
+   },
+   {
+    "item": "Guest accounts, logins or a self service portal",
+    "reason": "These are one time guests on a two and a half to three hour excursion. An account is a barrier raised at the exact moment the old route already failed them."
+   },
+   {
+    "item": "Reporting beyond the four counters",
+    "reason": "Scope discipline. Four numbers that do not exist today are worth more than a dashboard nobody opens, and the counters are what gate the phase two spend."
+   }
+  ],
+  "riskiest_assumption": "That White Pass will treat the server written arrival timestamp as the moment the cancellation request was made for the purposes of the 24 hour clause. Everything in this design points at that one decision. If the answer is no, if a cancellation only counts when a guest speaks to an agent by phone, then the Request Ledger is a nicer contact form, the counters still get collected but the money meaning of arrival_at_utc evaporates, and the outcome this was funded for does not exist. This is a policy and legal decision that only they can make, it is invisible from outside the company, and no amount of engineering retires it. The secondary form of the same risk is the honest complication, that honouring an out of hours timestamp converts some forfeitures into refunds minus the $10.00 penalty per person, so the decision has a real cost side and they have to make it with that in front of them rather than after go live.",
+  "spike_to_retire_it": "A five business day, fixed fee, written artifact spike that happens BEFORE any code is written and before the rest of the money is committed. Deliverable one, a one page decision memo signed by the President and the Manager of Reservations and Sales stating whether an out of hours request timestamped at arrival counts against the 24 hour cutoff, containing the exact replacement wording for the cancellation page, reviewed by their own counsel, together with a plain statement of the forfeiture to refund conversion so the decision is made with the cost visible. Deliverable two, two access checks run the same week, whether the carrier behind 1-800-343-7373 can do a time of day forward to a Twilio number outside 7:00 AM to 3:00 PM Alaska Time and fail open to today's behaviour, and whether a copy of info@wpyr.com can be delivered to an ingest address without changing anything the reservation office sees today. Deliverable three, written confirmation of whether Reservation Agents sit inside the SMART-TD unit. Exit rule, if deliverable one comes back no, the build does not start and the remaining fee is not spent, which costs roughly three to four thousand dollars instead of the full phase one. If it comes back yes with different wording, their wording is what ships and the Policy Source is built around it.",
+  "delivery": {
+   "walking_skeleton": "One language, one channel, one row, one screen, running on the real hosting and the real domain path within one and a half to two and a half weeks of the spike closing. A guest submits the English form, the intake API writes arrival_at_utc to the real managed Postgres, Postmark sends the fixed English acknowledgement confirming receipt and the timestamp and nothing about a refund, and the row appears on the Triage Desk with hours to cutoff computed in UTC and shown in Alaska Time. Everything else is on crutches, the phone branch points at a test Twilio number rather than 1-800-343-7373, the ingest reads a test mailbox rather than info@wpyr.com, and the Policy Source holds a single hand checked string. It is thin on purpose and it is genuinely end to end, so the cutoff arithmetic, the timezone conversion and the never issue a timestamp you did not store rule are all exercised in week two rather than in week six.",
+   "then_mvp": "Flesh out in this order, because each step is gated on the one before it. Cut the real carrier forward over to the Twilio flow with fail open verified by placing real calls at 6:59 AM and 3:01 PM Alaska Time. Add the info@wpyr.com ingest with the heartbeat and the weekly reconciliation. Load the professionally translated Spanish and Japanese fixed strings and publish the governed hours block onto the cancellation page from the same source. Add the intent dropdown taxonomy the reservation office actually agreed to, which is the thing that makes the intent counter mean anything. Add the four counter views and the Monday digest. MVP is all three channels live, a one page runbook, a forty five minute training session for the office, and then the system is left alone to observe. Optional and not in the skeleton, human recorded Spanish and Japanese greetings on the phone branch, recorded by the same translation vendor, stating only the published window and the callback offer.",
+   "estimate_range": "PHASE ZERO, the spike, one calendar week, three to four thousand dollars, confidence about ninety percent, because it is a fixed fee written artifact rather than a build. PHASE ONE, the full three channel desk, the governed Policy Source, the translated fixed strings and the four counters, five to seven weeks of elapsed calendar from the spike start. Cost today, before the spike answers anything, honestly bands at twenty to forty thousand dollars, which is the Cone of Uncertainty at concept stage rather than a hedge. The economics pre check's twenty five to thirty thousand dollar ask sits inside that band and is the target we would hold to, with confidence about sixty percent of landing inside twenty five to thirty before the spike and about eighty five percent after it. Run cost after go live is roughly one hundred to two hundred and fifty dollars a month for hosting, database, Postmark, Twilio and Sentry, with no inference cost at all because there is no model, plus Twilio voice minutes against a call volume that is itself one of the four things this build exists to measure. THE CALENDAR, said plainly rather than buried. Eight weeks remain to the October 7th, 2026 close and that is calendar time and not usable observation time, because the spike, the build, the inbox access and the configuration all come out of the same eight weeks. Starting the spike the week of August 17th, 2026 puts go live around the week of September 21st to 28th, which leaves one to two weeks of observation, in a period when Bennett has already closed on September 12th and the Summit season carries no service on September 26th to 27th and October 1st and 3rd to 5th. That is a thin shoulder season sample and we will not dress it up as a season of data. Two honest options follow. OPTION A, ship inside 2026, accept a one to two week shoulder sample, and gain a working instrument that is already live and warm on April 30th, 2027. OPTION B, run the spike now, build through the off season, and go live before the 2027 opening, which is the same money against a calmer calendar and a full season of measurement. Run the spike now either way, because it is the gate on both and it costs a week. Phase two, the single classifier on unstructured inbound, is off season work in both options and is not priced here.",
+   "what_narrows_it": "Five things, in the order they move the number. One, the spike's answer on whether the timestamp counts against the 24 hour clause, which is the difference between building this and not building it. Two, whether the carrier behind 1-800-343-7373 supports a time of day forward, since a recorded greeting on their existing phone system instead is a different and possibly slower job. Three, whether a copy of info@wpyr.com can be delivered to an ingest address cleanly, since a workaround there is the most likely source of overrun. Four, the intent taxonomy the reservation office agrees to, because the number of dropdown options drives the form, the translated string count and the counter views together. Five, whether the Triage Desk is a built console or a labelled shared mailbox with a weekly counters report, which is three to five days of difference and a decision the office should make, not us. Answer those five and the band collapses from twenty to forty thousand onto a number we would hold a fixed price against."
+  }
+ },
+ "roadmap": {
+  "now": [
+   {
+    "item": "Walking skeleton. One out of hours request travels from a structured web form into the reservation office queue with a server written arrival time attached, end to end, English strings only. No model anywhere in it.",
+    "metric": "Share of requests submitted through the form that carry a server written arrival timestamp, baseline zero because no published path records one today (c11), target 100 percent. Second reading, median time from arrival to a queue item an agent can act on, measured by the system rather than reported by anyone.",
+    "why_first": "Highest cost of delay over the smallest job in the whole set. The guest's money sits on a 24 hour clock with a $10.00 per person penalty and forfeiture of all rights inside it (c12), while the only published route to act runs Monday to Friday, 7:00 AM to 3:00 PM Alaska Time and requires a phone call (c10, c11). Every night and weekend left in this season is capture nobody gets back. It is also the thinnest end to end slice, a form, a clock and a queue, so the whole path is proven before anything is added to it. OUR WORK, 3 to 5 working days, 3 if the field list and the queue destination are signed off at kickoff, 5 if the field list changes after the first look. WAITING ON YOU, one working session with Allyson Nannini or her delegate to fix the field list and the queue destination, then one sign off. WATCH IT RUN, sized in the counters item below rather than guessed at here. WHAT YOU PROVIDE, the field list, the queue destination, one named approver. TOP RISK, sign off lands on a five ship day when the approver is on the platform loading trains (c20, c30), which is the same collision the build exists to fix. MITIGATION, 3 business days of named slack against approver availability and nothing else, with the session booked before the build starts. YOUR OFF RAMP, stop here and you keep a working intake form, the timestamp and the queue, deterministic and running without us, with no licence and no per message cost."
+   },
+   {
+    "item": "A single governed source of the policy text, so the cancellation page, the product pages and every acknowledgement say the same thing about the hours, the 24 hour clock and the $10.00 per person penalty.",
+    "metric": "Number of published surfaces that disagree on the cancellation hours or the penalty, baseline at least one real gap today because the hours sit on the product pages while the cancellation page states none (c10, c11), target zero. Second reading, every guest facing sentence about policy is a verbatim span from the approved file, asserted by a string containment check in code rather than by anyone's judgment.",
+    "why_first": "It is a prerequisite rather than a nice to have, and there is no model in it at all. In Moffatt v. Air Canada the tribunal held the airline liable for what the automation on its own website said and rejected the argument that it was a separate entity (c44), so one governed source of policy text is the direct answer to that exposure. Point any answering layer at the site as it stands and the answer to when can I call to cancel is not on the cancellation page. OUR WORK, 2 to 3 working days to extract, structure and wire the file to the pages and the acknowledgement templates. WAITING ON YOU, one management or legal read of the extracted text, because we are republishing your policy and not writing one. WHAT YOU PROVIDE, the named owner of policy wording, plus any rule you apply in practice that the site does not carry. TOP RISK, the extract surfaces a rule that is applied and published nowhere, which turns a two day job into a policy decision that is yours and not ours. MITIGATION, we flag it in writing the day we find it and the build proceeds on the published text meanwhile. YOUR OFF RAMP, stop here and you keep the governed policy file and the corrected pages, which is worth having on its own even if nothing else is ever built."
+   },
+   {
+    "item": "An out of hours greeting on 1-800-343-7373 that states the published window and takes a callback request, producing the same timestamped record on the channel your guests' habit already lives on (c11). Telephony configuration, no model on the line.",
+    "metric": "Out of hours calls that leave a timestamped callback record, baseline zero, target every call that reaches the greeting. Reported weekly beside the web and email counts, which makes the out of hours channel mix visible for the first time.",
+    "why_first": "The phone is the published route for the highest stakes contact you have, so the cheapest real win on that channel is a greeting and a record rather than anything that talks back. A voice agent is refused outright and the refusal is written into the study rather than left implied. This item is small, independent and carries a third of the capture, so it ships in parallel with the form. OUR WORK, 1 to 2 working days of configuration. WAITING ON YOU, admin access to the phone system, or one call with whoever holds the carrier account. WHAT YOU PROVIDE, that access, and approval of the exact greeting wording, which we draft. TOP RISK, carrier side changes take as long as the carrier takes, and your phone provider is not something anyone outside the company can see, so we are estimating blind on that one edge. MITIGATION, 3 business days of named slack against carrier turnaround, and the web and email paths ship independently so this never blocks them. YOUR OFF RAMP, stop here and you keep the greeting and the callback log inside your own phone system."
+   },
+   {
+    "item": "A timestamped ingest on info@wpyr.com that queues the raw message unchanged, so an email arriving at 9pm on a Saturday carries a server written arrival time against the 24 hour cutoff.",
+    "metric": "Share of inbound messages to that inbox that reach the queue with a server written timestamp and the original text preserved, baseline zero, target 100 percent. This counter doubles as the first measure of out of hours email volume that anyone has.",
+    "why_first": "That inbox is where the unstructured survivor lives, and access to it is the longest pole in the whole phase, which is why the ask goes out on day one rather than when the build is ready for it. On the day we looked the ticketing system itself pointed customers at that inbox (c19), which is a point in time observation by three same day observers, could be transient, and is never presented as a standing condition. OUR WORK, 2 to 3 working days. WAITING ON YOU, a mail forwarding rule on info@wpyr.com set by whoever administers your mail. That is a small change on your side and the single item most likely to move the finish date. WHAT YOU PROVIDE, that rule, and a decision that raw guest messages may be stored unchanged. TOP RISK, mailbox access stalls and the remaining season runs out behind it. MITIGATION, we ask for a forwarding rule rather than credentials, we ask at kickoff, and the form and the greeting both capture without it. YOUR OFF RAMP, stop here and you keep the ingest and its log, and your inbox is untouched, because forwarding adds a copy rather than moving your mail."
+   },
+   {
+    "item": "Spanish and Japanese served as human translated fixed strings across the form, the greeting text and the acknowledgements, version controlled and re reviewed only when the policy changes.",
+    "metric": "Language mix of inbound out of hours requests, a counter that does not exist today, plus a hard zero on machine translated money strings. Target, every policy sentence in all three languages traces to a named human translation of an approved span.",
+    "why_first": "You state that you are actively seeking candidates fluent in Spanish and Japanese (c31), which is evidence the capability is wanted rather than evidence it is present, so there is no verified reader on your published directory to check an outbound machine translation. Runtime machine translation of any policy, price or refund text is therefore refused. c12 carries two clauses that are opposites separated by a preposition, a refund up to 24 hours prior minus the penalty and forfeiture within 24 hours, and a translation that swaps up to for within is a money misstatement on your own site in a language nobody on the published staff list is confirmed to read back. Inbound translation for agent comprehension stays allowed, with the original text always kept beside it, because the direction is what makes it safe. OUR WORK, 1 working day to wire the strings once they land. WAITING ON YOU, approval of the frozen string list, and a translator you trust or ours. WHAT YOU PROVIDE, that approval. TOP RISK, translator turnaround, 3 to 5 business days for a bounded string set and longer if the string list keeps growing. MITIGATION, the list is frozen before it goes out and English ships first, so capture starts without waiting on it. YOUR OFF RAMP, stop here and you keep the translated strings as files you own, usable anywhere on your site."
+   },
+   {
+    "item": "The four counters that do not exist today, produced as a by product of the agent doing the job they already do, at zero added workload, and labelled a shoulder season sample on the face of the readout.",
+    "metric": "Four readings. Out of hours contact volume per week and the share closed without an agent touching them. Arrival time relative to the 24 hour cutoff, against a baseline of zero because there is no way to record one today. Language mix. Intent mix. Every one of these has a baseline of nothing published, so the phase one target is that they exist and are trustworthy, not that they hit a level.",
+    "why_first": "The honest return of phase one is decision data first and cash second, and that ordering is the finding rather than a hedge. This is the item that makes the next spend computable instead of assumed. HOW THE WATCH IT RUN LANE IS SIZED, and this is the one place we can't hand you a number in advance. A pilot should be sized by real events rather than by round number weeks, and no contact volume is published anywhere for this company, no call count, no email count, no passenger count, no channel split, so anyone quoting you a pilot length in events today is inventing it. What we do instead. The first full week of live capture sets the run rate, we publish the event target the day that reading lands, and the first tuning pass is triggered by the earlier of the first 50 logged out of hours events or the second full week live. The window then closes on your own calendar, because the 2026 Summit season ends October 7, 2026 and there is not one more guest contact to observe after it until the next opening (c16). SHOULDER SEASON LABEL, and it rides with every number this phase produces. Bennett closes September 12, 2026 (c17), and the Summit season carries no service on May 2 to 4, on September 26 to 27, and on October 1 and 3 to 5 (c16), so a question mix measured this autumn describes a shoulder period and not a July peak. It may not be used to design 2027 without being re measured against the 2027 opening weeks, and that re measurement is written into the Next lane rather than left to good intentions. Note the eight weeks left to the close are calendar time, not observation time, because the build, the mailbox access and the phone configuration all come out of the same eight weeks. OUR WORK, 2 to 3 working days for the counters and the weekly readout. WAITING ON YOU, nothing beyond the agent resolving items the way they already do. WHAT YOU PROVIDE, that normal resolution, which is also the label, for free. TOP RISK, we read a shoulder season and someone treats it as the year. MITIGATION, the label is printed on the readout itself rather than in a footnote, and the 2027 re baseline is a gate condition."
+   },
+   {
+    "item": "Handoff and ownership. A runbook, the credentials, and a walkthrough with the reservation office, so the whole thing runs without us.",
+    "metric": "The reservation office completes one change to the form fields and one change to a policy string unaided, watched and timed, before phase one is called done. Done is that demonstration, not a feeling.",
+    "why_first": "Your published directory lists no technology lead, which is an absence rather than a fact about your capability, and its only legitimate use is to shape delivery toward managed, low maintenance builds rather than anything that assumes an in house engineer. So the phase ends with a system a non engineer can change. OUR WORK, 1 to 2 working days. WAITING ON YOU, one hour from the person who will own it. WHAT YOU PROVIDE, that person's name at kickoff rather than at the end. TOP RISK, the named owner is the same person the build exists to unload, and the walkthrough gets postponed into the season close. MITIGATION, the walkthrough is booked at kickoff onto one of your own published no service dates, September 26 or 27, or October 1, 3, 4 or 5 (c16), when no train is loading. YOUR OFF RAMP, there is nothing to stop after this one. You own everything built, with no licence, no model and no per message cost to keep it running."
+   }
+  ],
+  "next": [
+   {
+    "item": "Phase two, ONE model call on ONE node, classifying and extracting from the unstructured free text that arrives by email and in the form's free text box. Built in the off season, live before the 2027 opening. The arrival timestamp is written by the server before the model runs, so a total classifier failure degrades to today's behaviour plus a timestamp, a floor strictly above the status quo. No model ever states a refund outcome, prices anything or paraphrases the policy. The guest sees a verbatim span from the approved corpus or a human.",
+    "metric": "Recall on the time sensitive money class, measured against the agent labels the 2026 capture produced for free, with an explicitly accepted false positive rate, because a false alarm costs an agent seconds while a missed Saturday night cancellation costs the guest the fare. The acceptance bar is written and agreed before the model is built, not after it is demonstrated. GATE, no labelled corpus large enough to hold out an evaluation set means no phase two. It waits for the 2027 season to produce one and nothing is billed for it meanwhile. Shipping a classifier in 2026 with no eval set would be a demo."
+   },
+   {
+    "item": "A written feasibility assessment of the third party ticketing vendor's API, run in the off season. A document, not a build. It is the thing that stands between you and a multi month commitment against an integration nobody has looked at.",
+    "metric": "A yes or a no in writing, with the named auth method, the write scope, the rate limits and the vendor's stated support position. Delivered before the self service desk is scoped or priced, and the desk is neither until it comes back yes."
+   },
+   {
+    "item": "Re measure the four counters against the first weeks of the 2027 season before any 2026 reading is allowed to shape a 2027 design.",
+    "metric": "The gap between the 2026 shoulder readings and the 2027 opening readings, published rather than quietly absorbed. If the gap is large, the 2026 numbers are retired as a design input and the readout says so in those words."
+   },
+   {
+    "item": "Buy the commodity answering layer if it fits you. An off the shelf tourism chat widget at published list pricing of $95 a month for 80 chats, $195 for 200 and $295 for 500, no fixed term contract, vendor configuration over one to four weeks (c48). We are not paid for this, it does not sit on our critical path, and you can start it whenever you like, including this season.",
+    "metric": "A scripted probe set built from your own published pages, run before go live, asserting that every cancellation, refund and price question hands off to a human rather than answering it. Target, 100 percent handoff on those three classes. Two conditions ride with the recommendation and are not optional. One, it answers only published non money content. Two, under Moffatt the liability for what it says stays with you whoever built it (c44), and no vendor is going to open with that. Treat it as complementary rather than rival. It answers questions on the website, it does not create a timestamped work item against the 24 hour clock, and it does not touch info@wpyr.com, which is where the hard case lives. The named operator evidence is real and vendor published rather than independent, Black Cat Cruises reporting about 500 conversations a month, around 60 percent of questions answered and 10 hours a month saved (c47), where the 10 hours is the trustworthy figure, the modelled dollar number is never quotable as revenue, and Black Cat runs up to four daily departures against almost 2,000 train starts a season here (c7), so the direction transfers and the magnitude does not."
+   }
+  ],
+  "later": [
+   {
+    "item": "The deterministic self service change and cancellation desk. A guest opens a link, sees their departure, and changes or cancels it, with code applying your published rule exactly. No model is ever introduced onto this path, in any phase, for any reason, and that instruction attaches for the life of the build.",
+    "metric": "Share of change and cancellation requests completed by the guest without an agent touching them, against a baseline of zero because there is no online path today (c11). Acceptance is exhaustive rather than statistical, every case either side of the 24 hour line, the $10.00 per person penalty arithmetic, the Alaska Time conversion and the forfeiture clause, all as unit tests, with any exception degrading to a timestamped work item in the same queue rather than to a wrong refund. GATE, the written vendor API assessment in the Next lane comes back yes first. TWO HONEST CAVEATS THAT STAY ATTACHED. There is a reach cap, guests who bought at a shore excursion desk sit in the cruise line's booking record and not in yours (c13). And the economics can cut against you in the short run, since a guest who can't reach anyone inside 24 hours forfeits the fare today (c12), so easier cancellation converts some forfeitures into refunds minus the penalty, and whether the resold seat covers that depends on your sell out rate by departure, which is not published (c14). You know that number and we do not."
+   },
+   {
+    "item": "Seasonal recruiting and onboarding across the three depots in two countries, carried here with its evidence asymmetry stated plainly rather than hidden. It has the best measured outside evidence in the entire study and the weakest local evidence.",
+    "metric": "Time from application to a start date, which has no published baseline at this company, so the first work is measuring it rather than improving it. No time to hire, applicant volume, turnover figure or year round versus seasonal headcount split is published anywhere. The outside reading is Fortune reporting that Chipotle's time from application to first day dropped from 12 days to four after a conversational hiring assistant, with about 30 percent of scheduling work now happening after hours (c46), reported in Fortune's own voice rather than as an executive quote, and Chipotle is enormous so the direction transfers and the magnitude does not. HARD CONDITION, nothing here touches the terms, scheduling or monitoring of the roles inside the bargaining unit, because about 40 workers including tour guides, announcers and workers who greet visitors voted to join SMART-TD's local chapter on April 8 (c33), which is a negotiation before it is a deployment. Scope is confirmed against the unit in writing before any of it is designed."
+   },
+   {
+    "item": "First party post ride feedback capture, so what guests actually thought sits in your hands rather than on a platform you rent.",
+    "metric": "First party verbatim comments captured per departure and the themes derived from them. Honest framing of the baseline, we hold zero verbatim customer reviews for you because every review platform returned HTTP 403 to every attempt, which is a limit on our study rather than a finding about you, so the baseline here is our blindness and not your silence. ONE HARD BOUNDARY, themes at the product and route level only, never individual staff performance, because the onboard roles are the ones inside the bargaining unit (c33)."
+   },
+   {
+    "item": "Extend the governed policy file outward to the reseller and partner channels, so a season date or an exception date changes in one place and every desk shows it the same day.",
+    "metric": "Number of partner or reseller surfaces showing a season or exception date that disagrees with the governed file, baseline unknown. CONDITION, the reseller evidence was not re verified this pass (c50), so this starts with a re check of those pages rather than with a build, and any specific price from them is re checked before it is used. The corroborated half is your own product appearing on a cruise line shore excursion page (c13). Unglamorous, real, and mostly a content governance job rather than an AI one, which is why it sits here and not higher."
+   },
+   {
+    "item": "An internal reply drafting aid for the reservation office, deferred rather than dropped. A human sends every word, so there is no guest facing exposure on it.",
+    "metric": "Agent edit distance and time to send, both of which need a baseline that does not exist today, so phase one has to produce it first. TWO PERMANENT EXCLUSIONS. Outbound Spanish and Japanese generation stays off it, because a review path with no verified reviewer is an approval click rather than a review. Booking context assembly stays off it while the ticketing integration is unassessed. Worth naming the counter argument against this whole item, the biggest differentiator in the research is workflow redesign, which cuts against an assistant bolted beside an unchanged workflow."
+   },
+   {
+    "item": "Monitoring plus a deterministic fallback capture on the online buy door, so a guest who arrives at a closed door leaves a structured, priced, contactable intent instead of a bounce.",
+    "metric": "Bounced checkout sessions converted into a captured intent. CONDITION AND MANDATORY CAVEAT, on 2026-08-09 the ticketing system returned an unavailable message pointing customers at the phone line and info@wpyr.com while the same page rendered an order processing thank you (c19). That is a point in time observation by three same day observers, it could be transient, and it is never presented as a standing condition. This is only worth building if your own uptime record says it is a pattern, and AI is close to the wrong answer for all of it, which is why it is not proposed as one."
+   },
+   {
+    "item": "Train scheduling against ship arrivals, parked on the map with its reason rather than pitched.",
+    "metric": "None until a trains per day figure and a passenger count exist, and neither is published. Almost 2,000 train starts run through the summer season (c7) against five ships listed arriving in Skagway on one August Sunday (c20, a third party schedule aggregator at medium confidence), and this is a solver problem rather than an AI one. It stays here as a candidate for the day you can hand over that data."
+   },
+   {
+    "item": "Shore excursion settlement and reconciliation, a buy evaluation and not an Alaska AI build.",
+    "metric": "None from us, and that is the finding. Shoretime is built specifically to run cruise shore excursion operations end to end, partnered with Norwegian Cruise Line Holdings since February 20, 2024, and it makes no artificial intelligence claim anywhere on its site (c41). The people closest to this exact workflow, with every commercial incentive to say AI, are not saying it, so the measure is whether a purpose built platform beats anything we would write, and we think it does."
+   },
+   {
+    "item": "REFUSED, a voice agent on the 1-800 line. It is not in any lane of this roadmap, and it is not a later phase either.",
+    "metric": "No metric, because none can honestly be stated. No call volume is published to size or evaluate against, no recordings, transcripts or intent taxonomy exist, per turn compounding and latency both stack against it, and Moffatt exposure lands hardest on the highest stakes contact you publish (c44, c11). The narrow real win on that channel is the out of hours greeting in the Now lane, which is a phone system configuration and carries no model at all."
+   },
+   {
+    "item": "REFUSED for now, revenue management or dynamic pricing, with the condition that would ever change it written down.",
+    "metric": "No passenger count, no load factors, no trains per day and no channel split are published, so there is no demand signal to model, which makes this the largest theoretical upside in the map and the least buildable thing in it. Amtrak's ARROW achieved an average additional revenue of 3 to 5 percent (c43), a real precedent and not a substitute for your own data. CONDITION, it would need your own demand history first, and a commercial conversation before an algorithmic one, because pricing is negotiated with cruise lines one of whose parent is a minority partner in the ownership group (c5)."
+   },
+   {
+    "item": "REFUSED, predictive maintenance on the locomotive fleet. Proposing it would be inventing a need.",
+    "metric": "None. Six 30 class engines currently in Skagway with the seventh and eighth due in 2026 (c36) is the entire evidence base, and no telemetry, no failure history and no cited maintenance pain appears anywhere in this study. Predictive maintenance is a genuine rail category, which is exactly why it is worth saying out loud that there is not one line of evidence here to build it on."
+   },
+   {
+    "item": "REFUSED, anything touching the terms, scheduling or monitoring of the represented workforce. This is a guardrail on the map rather than an opportunity on it.",
+    "metric": "None, in any lane, at any phase. About 40 workers including tour guides, announcers and workers who greet visitors as they leave their cruise ships voted to join SMART-TD's local chapter on April 8 (c33). Reservation Agents are not among the roles that article names, which is why phase one appears clear of it, and absence from a list is not proof of non representation, so it is confirmed with you in writing at Gate 0 before anything ships."
+   }
+  ],
+  "gates": "Four gates, each one framed as YOUR off ramp rather than ours. You can stop at every one of them and keep what has been built, because nothing in phase one carries a licence, a model, an inference bill or a per message cost. GATE 0, before we build anything, and it costs nothing. Three confirmations. One, in writing, that Reservation Agents sit outside the SMART-TD unit, since absence from the roles named in the April article is not proof of non representation (c33). Two, a named policy owner and a named approver who is not on the platform when we need them. Three, your decision on the honest complication, which is the thing a proposal showing only the upside would bury. Today a guest who can't reach anyone inside 24 hours forfeits all rights to a refund and you keep the fare (c12). A path that lets that same guest cancel at 9pm on a Saturday converts some of those forfeitures into refunds minus the $10.00 per person penalty. The offsetting gain is the resold seat on a ride that usually sells out in advance (c14), plus fewer disputes and less goodwill damage, and which effect is larger depends on your sell out rate by departure, which is published nowhere, so you know it and we do not. If that trade is not one you want, the roadmap stops at Gate 0 and it has cost you nothing. GATE 1, the skeleton is live. The bar is three demonstrations, not an opinion. One real out of hours request travels from the form to the queue with a server written arrival time, one from the phone greeting, and one from the inbox. Your off ramp, stop here and you keep the form, the timestamp, the queue, the greeting, the ingest and the governed policy file, all deterministic, all yours, all running without us. GATE 2, the season close, and this is the funding gate for phase two with its bar stated in advance rather than negotiated afterwards. Three conditions, all measured. One, at least one full week of clean capture across all three intake points with no missing timestamps. Two, an agent resolution recorded on every captured item, which is the label, and it costs nothing extra because it is the work they already do. Three, a labelled corpus large enough to hold out an evaluation set, where the size that means is computed from the observed run rate after the first week rather than asserted today, because no contact volume is published for this company and a number quoted now would be invented. If the season closes without that corpus, phase two does not start and is not billed, it waits for the 2027 season to produce one. There is a fourth condition and it cuts against us, so it stays in. If the counters show that out of hours arrivals are rare and your published window already covers nearly everything, the readout says exactly that, the roadmap stops, and you keep phase one and the numbers that ended it. That is the right way for us to lose this argument if we are wrong. GATE 3, the ticketing vendor. The self service change and cancellation desk is not scoped, priced or promised until the written API assessment comes back yes with a named auth method, a write scope and rate limits. No yes, no build, no spend. WHAT PHASE ONE COSTS IN OUR DAYS, 12 to 19 working days of engineering across the seven Now items, decomposed rather than aggregated so you can see where each day goes. The ranges close toward the low end when the field list, the mail forwarding rule and the phone access all land in the first week, and toward the high end when approvals fall on five ship days. The only slack in the plan is 3 business days against carrier turnaround and 3 business days against approver availability. Both are named, and there is no unnamed padding anywhere in this document.",
+  "high_integrity_dates": [
+   "October 7, 2026, the published close of the 2026 Summit season (c16). This is your calendar rather than our promise, and it is the hardest constraint in the plan, because after it there is not one more guest contact to observe until the next opening. Our commitment staked against it, every capture surface is live before that date or the 2026 sample is zero, and the phase one measurement readout is in your hands within 5 working days of the close. The eight weeks between now and it are calendar time and not observation time, since the build, the mailbox access and the phone configuration all come out of the same eight weeks, and everything captured inside them is a shoulder season sample.",
+   "September 12, 2026, the published close of the Bennett Scenic Journey season (c17). Our commitment, every counter reading after that date is marked Summit only on the readout, so nobody later reads a Bennett number that could not have existed. The same treatment applies to your published no service dates, September 26 to 27 and October 1 and 3 to 5 (c16), which are excluded from any per day rate rather than silently averaged into one.",
+   "The 2027 opening date is deliberately NOT on this list, and the omission is the commitment. The 2026 Summit season opened April 30 (c16) and no 2027 opening date is published anywhere we could fetch, so a late April 2027 date from us would be an inference dressed up as a promise. What we stake instead, anything built for 2027 is in place and tested no later than 10 working days before your first published 2027 departure, and that clock starts the day you publish it."
+  ]
+ },
+ "roi": {
+  "mapping_note": "Field names in scripts/roi_math.py are repurposed for this business and the study must state the mapping. 'pursuits_per_year' means GUEST CONTACTS TO THE RESERVATION DESK PER OPERATING SEASON, not per calendar year, because the railway runs April 30 to October 7, 2026 (c16). 'years': 5 therefore means five operating seasons. 'hours_per_pursuit' is the AVERAGE agent hours per contact across the whole contact population, not the hours on an affected contact only. 'cut' is the REALISABLE share of that time, already net of the avoid-backfill test described in the benefit notes, so it is not the theoretical time saved. A fourth scenario key, conservative_breakeven_probe, is NOT a forecast. It holds every conservative assumption fixed and varies only the season contact count, so the code prints the contact volume at which the pilot returns its full five-year cost. It exists to hand the reader the lever rather than an answer.",
+  "cost_note": "Five-year total cost of ownership, not sticker price, and the ask and the TCO are two different numbers that the study states separately so neither hides the other. THE ASK IS THE YEAR ONE CHEQUE, implementation plus training plus contingency, which lands inside the 25 to 30 thousand dollar envelope the pre-check sized in all three scenarios and at the top of it in the conservative case, because the conservative case pads cost rather than trimming it. THE TCO IS LARGER because it carries four and a half further years of run cost, and the study prints both. WHAT IMPLEMENTATION BUYS, and it is the biggest line as ROI_METHOD says it usually is, the structured multilingual request form with dropdowns and an unvalidated booking reference field, the server-side arrival timestamp write, the work-item queue and the four counters, the timestamped ingest on info@wpyr.com, the out-of-hours greeting and callback capture configuration on the 1-800 line, the single governed source of policy text that fixes the cancellation page carrying no hours while the product pages do, professional human translation of the fixed strings and the acknowledgement templates into Spanish and Japanese, and exhaustive tests on the 24 hour boundary and the Alaska Time conversion. TRAINING AND CHANGE MANAGEMENT IS STATED IN HOURS, NEVER 'INCLUDED', 16 hours of their staff time in year one, 10 for the reservation desk, 4 for the Manager of Reservations and Sales, 2 for whoever administers the phone system, plus a written runbook and two facilitated sessions from us, and a further 4 hours at the start of each subsequent season for seasonal onboarding. RUN COST carries hosting, the telephony line item, monitoring and uptime, an annual re-review of the translated policy strings whenever the policy changes, and our in-season support. THERE IS NO INFERENCE OR TOKEN COST AND NO MODEL REFRESH LINE, because phase one carries no model at all, which is the single largest reason this TCO is small. HUMAN REVIEW IS NOT ADDED AS A RUN COST, because the queue is worked by the reservation agent who handles these contacts today, and that labour is netted inside the benefit lines rather than counted twice. CONTINGENCY IS 20 PERCENT in the conservative and most likely cases and 15 percent in the aggressive case, at the top of the 15 to 20 band, because ROI_METHOD is explicit that most failures come from organisational factors rather than software. PHASE 2 AND THE SELF-SERVICE CANCELLATION DESK ARE NOT PRICED HERE. Both are gated on measured results and neither appears anywhere in this cost stack or this benefit stack.",
+  "benefits": [
+   {
+    "benefit": "Reservation desk handling time per guest contact, a structured request that arrives complete instead of a voicemail or a free-text email that has to be reconstructed",
+    "kind": "capacity",
+    "basis": "ASSUMED, and every input is an assumption because nothing here is published. Conservative case assumes 3,600 guest change, cancellation and question contacts across one operating season, an average of 0.30 agent hours per contact today end to end including the round trip to establish intent, booking reference and departure, a fully loaded seasonal agent cost of $32 an hour, and a realisable 18 percent of that time removed. The only published volume anchor in the file is almost 2,000 train starts a season (c7). No call volume, no email volume, no channel split and no passenger count is published anywhere, so the contact count is an assumption and is the first driver the reader should challenge. The mechanism is grounded in the company's own pages, the Reservation Agent enters bookings and answers the same questions across phone, email and in person (c30), cancelling or altering a booking requires a phone call with no online path (c11), and the office runs Monday to Friday 7:00 AM to 3:00 PM Alaska Time (c10), which is 40 of the 168 hours in a week.",
+    "note": "CAPACITY, and it is in the formula only at the share that passes a stated conversion test. THE TEST MET IS AVOID-BACKFILL, not headcount reduction. The desk is seasonally staffed, the company publishes a May 1 to September 30 recruiting season (c35) and listed Reservation Agent openings for Carcross and Whitehorse in 2026 (c32), so a seasonal desk shift is re-decided every spring and hours removed can be realised as a shift not covered without a layoff and without touching the represented onboard workforce (c33). The 18 percent cut is the realisable share, not the theoretical one. THE OTHER USE OF THESE HOURS IS DELIBERATELY NOT COUNTED. The same agent is pulled onto the platform for train loading and crossing-guard duty (c30) on days when five ships were listed arriving (c20), so hours returned during a loading window get redeployed rather than banked, which is real and is quarantined out of the formula rather than converted."
+   },
+   {
+    "benefit": "Repeat published-policy questions answered by the governed policy source at the point of request, instead of by an agent",
+    "kind": "capacity",
+    "basis": "ASSUMED. Conservative case assumes an average of 0.10 agent hours per contact spent on repeat published-policy questions, the same $32 fully loaded hourly cost, and 30 percent of that removed by deflection. The defect it fixes is verified rather than inferred, the cancellation page itself states no office hours (c11 scope note), the contact page carries none either (c18), the hours live only on product pages (c10), and the navigation link labelled FAQ points at the travel blog (c34, used as evidence only and never as a headline). A guest asking when they can call to cancel currently has no page that answers it.",
+    "note": "CAPACITY, converted on the same AVOID-BACKFILL test and at the same stated realisable share. THIS LINE DOES NOT DOUBLE COUNT THE LINE ABOVE, and the study says so explicitly. The two mechanisms are disjoint. The first shortens a contact the agent still handles. The second removes a contact from the queue entirely. Together they remove about 302 agent hours from an assumed seasonal handling pool of about 1,440 hours in the conservative case, which the reader can check against the driver table. If a reader thinks the two overlap, zeroing this line is the correct test and the conservative case should be re-read with it at zero."
+   },
+   {
+    "benefit": "Guest escalations and card disputes that begin with an unreachable office inside the 24 hour refund clock",
+    "kind": "cash",
+    "basis": "ASSUMED, with the mechanism verified and the volume invented, and the study labels it that way. Conservative case assumes 40 escalations a season, a blended $220 per escalation covering agent and manager research and response time plus the discretionary goodwill portion, and a 30 percent reduction. The mechanism is the company's own published policy read together, a cancellation up to 24 hours prior gets a refund minus a $10.00 per person penalty and a cancellation within 24 hours forfeits all rights to a refund (c12), the only published route to act is a phone call (c11), and that route runs 40 hours a week (c10). Fares run $155 adult and $77.50 child on the Summit and $289 adult on Bennett (c15), so a forfeited family booking is a large and highly escalation-prone event. NO DISPUTE COUNT IS PUBLISHED AND WE HOLD NO SAMPLE, since zero verbatim customer reviews were obtainable and every review platform returned HTTP 403.",
+    "note": "CASH, because an escalation consumes manager time and sometimes a discretionary refund, both of which are real outflows rather than freed capacity. It is the weakest-evidenced line in the stack and it is the second line a skeptical reader should zero out as a test. It is also the smallest contributor in every scenario, which is deliberate. Note what is NOT in this line, a resold seat. Nothing anywhere in this case assumes the railway resells a seat that a newly reachable guest gives back."
+   }
+  ],
+  "qualitative_quarantine": [
+   "OUT-OF-HOURS CAPTURE ITSELF. Capturing a contact against a server-written arrival time when the office is shut is the whole mechanism of this build, and it carries no separate dollar line. Its value flows through the three quantified lines above and nowhere else. Counting it again as its own benefit would be double counting the same event.",
+   "THE FOUR COUNTERS, which are the primary return of this ask and are deliberately outside the formula. Out-of-hours contact volume, arrival time relative to the 24 hour cutoff, language mix and intent mix do not exist today and can't be bought. Phase one produces them as a by-product of the agent doing the job they already do, at zero added workload. Putting a one-time decision value into an annual run-rate line would inflate it five times over, so it is stated in prose and left out of the arithmetic.",
+   "REDEPLOYED AGENT HOURS during train loading. c30 says the reservation agent is pulled onto the platform for loading and crossing-guard duty, and c20 lists five ships arriving on a single August day. Hours returned inside a loading window are genuinely useful and they do not reduce a cost, so they are named and not converted.",
+   "CHANGE AND ADD REQUESTS captured out of hours that today die against a closed office. Excluded on purpose, because whether a seat exists to sell against a request depends on the sell-out rate by departure, and the trains usually sell out in advance (c14) with no rate published. That is the same unpublished number the resold-seat argument rests on, so it is excluded for the same reason.",
+   "RESOLD SEATS AFTER AN EASIER CANCELLATION, excluded entirely and in both directions. Today a guest who can't reach anyone forfeits the fare and the railway keeps it (c12). A build that lets that guest cancel at 9pm Saturday converts a forfeiture into a refund minus $10.00. Whether the resale plus the avoided dispute beats the kept fare depends on their sell-out rate by departure, which they do not publish, so easier cancellation is not unambiguously positive in the short run and this case shows neither side of it.",
+   "LEGAL EXPOSURE reduced by a single governed source of policy text. Under Moffatt v. Air Canada the company is responsible for what its own website says regardless of who built it, and the tribunal rejected the separate entity argument (c44). Real, and unquantifiable from outside.",
+   "GOODWILL AND CHANNEL STANDING with the cruise shore-excursion desks that sell this product (c13), one of whose parent is a minority partner in the ownership group (c5). No sample of guest sentiment was obtainable, so there is nothing honest to size it with."
+  ],
+  "benefit_phasing": "No day-one full benefit anywhere in this case. Year one is partial and the ramp is stated as a driver rather than described, 25 percent in the conservative case, 30 percent most likely, 40 percent aggressive, which encodes a ninety-day stabilisation on top of a hard calendar constraint that is specific to this company. THE 2026 SEASON CLOSES OCTOBER 7 (c16) AND TODAY IS AUGUST 9. The eight weeks remaining are calendar time and not usable observation time, because build, access to info@wpyr.com and telephony configuration all come out of the same eight weeks, so the honest year-one ramp here is thinner than a normal ninety-day ramp rather than fatter. Whatever is captured before the close is also a SHOULDER SEASON SAMPLE, since Bennett closes September 12 (c17) and the Summit season carries no service on September 26 to 27 and October 1 and 3 to 5 (c16), so a question mix measured in September describes a shoulder period and must be labelled that way before anyone designs 2027 on it. Year two is the first full operating season at run rate. Year three onward compounds only through the counters improving the routing rules and the governed policy text, not through any new capability, because no new capability is priced here. One honest rider on the shape of the curve, the arithmetic treats a year as an operating season while the railway runs roughly five months of the twelve, so benefit lands in a burst each season rather than evenly across the calendar, and a payback month printed by the model is a smoothed figure.",
+  "scenarios": {
+   "conservative": {
+    "note": "THE CASE TO READ, and it clears its bar without a single resold seat, without any decision-data value in the formula, and with cost padded rather than trimmed. THE BAR, stated plainly so nobody can call it moved afterwards. One, the pilot returns its full five-year cost from labour capacity converted on a named avoid-backfill test plus escalation cash alone. Two, it does that with zero dollars attributed to resold seats, to the four counters, or to any qualitative benefit. Three, the year-one cheque stays inside the 25 to 30 thousand dollar envelope the pre-check sized. All three hold at these drivers, and the code prints the recovery percentage and the payback month rather than this note asserting them. THE SENSITIVITY THE READER MUST SEE, the answer turns on the season contact count and on nothing else nearly as much. The breakeven probe below prints the contact volume at which the case returns exactly its cost, and if their own phone log and inbox come back under that number, the honest conclusion is that this build does not pay on labour and phase two should not be funded. Cost is padded here rather than trimmed, implementation is $2,000 above the most likely figure and run cost is $400 a season above it, so the conservative case is conservative on both sides of the ledger.",
+    "pursuits_per_year": 3600,
+    "benefit_lines": [
+     {
+      "label": "Desk handling time per guest contact, structured intake instead of reconstruction",
+      "hours_per_pursuit": 0.3,
+      "rate": 32,
+      "cut": 0.18
+     },
+     {
+      "label": "Repeat published-policy questions deflected by the governed policy source",
+      "hours_per_pursuit": 0.1,
+      "rate": 32,
+      "cut": 0.3
+     }
+    ],
+    "avoided_cost_lines": [
+     {
+      "label": "Guest escalations and card disputes from an unreachable office inside the 24 hour clock",
+      "events_per_year": 40,
+      "cost_per_event": 220,
+      "reduction": 0.3
+     }
+    ],
+    "implementation": 21000,
+    "training": 3000,
+    "run_cost_per_year": 3000,
+    "run_cost_years": 4.5,
+    "contingency": 0.2,
+    "year1_ramp": 0.25,
+    "years": 5
+   },
+   "most_likely": {
+    "note": "What we expect if the contact volume is what a phone-only change and cancellation channel usually produces at this scale, and if the desk adopts the queue rather than working around it. Volume rises to 6,000 contacts a season, the average handling time rises to 0.35 hours because a fuller sample includes the harder multi-passenger cases, the fully loaded rate rises to $36, and the realisable cuts rise to 25 and 40 percent. Escalations rise to 70 a season at $260 with a 40 percent reduction. Cost falls to the quoted build rather than the padded one. Nothing in this scenario depends on a resold seat either.",
+    "pursuits_per_year": 6000,
+    "benefit_lines": [
+     {
+      "label": "Desk handling time per guest contact, structured intake instead of reconstruction",
+      "hours_per_pursuit": 0.35,
+      "rate": 36,
+      "cut": 0.25
+     },
+     {
+      "label": "Repeat published-policy questions deflected by the governed policy source",
+      "hours_per_pursuit": 0.12,
+      "rate": 36,
+      "cut": 0.4
+     }
+    ],
+    "avoided_cost_lines": [
+     {
+      "label": "Guest escalations and card disputes from an unreachable office inside the 24 hour clock",
+      "events_per_year": 70,
+      "cost_per_event": 260,
+      "reduction": 0.4
+     }
+    ],
+    "implementation": 19000,
+    "training": 2500,
+    "run_cost_per_year": 2600,
+    "run_cost_years": 4.5,
+    "contingency": 0.2,
+    "year1_ramp": 0.3,
+    "years": 5
+   },
+   "aggressive": {
+    "note": "NOBODY SHOULD BUY ON THIS COLUMN AND THE STUDY SAYS SO IN THE TABLE. It assumes 7,000 contacts a season, a $40 fully loaded rate, 30 and 45 percent realisable cuts, 100 escalations at $300 with a 45 percent reduction, a clean build at $18,000, and a 40 percent year-one ramp that would need the system live well before the October 7 close. The recovery multiple this column prints will look very large, and the honest reason is arithmetic rather than performance, the ask is small relative to a seasonal desk's labour pool, so any real saving divides into a small denominator. It is capped where it is because the drivers already remove about a third of the assumed seasonal handling pool, and anything above that would be removing more work than the desk plausibly does. Contingency drops to 15 percent here, the bottom of the permitted band, which is part of why it is the aggressive column.",
+    "pursuits_per_year": 7000,
+    "benefit_lines": [
+     {
+      "label": "Desk handling time per guest contact, structured intake instead of reconstruction",
+      "hours_per_pursuit": 0.35,
+      "rate": 40,
+      "cut": 0.3
+     },
+     {
+      "label": "Repeat published-policy questions deflected by the governed policy source",
+      "hours_per_pursuit": 0.12,
+      "rate": 40,
+      "cut": 0.45
+     }
+    ],
+    "avoided_cost_lines": [
+     {
+      "label": "Guest escalations and card disputes from an unreachable office inside the 24 hour clock",
+      "events_per_year": 100,
+      "cost_per_event": 300,
+      "reduction": 0.45
+     }
+    ],
+    "implementation": 18000,
+    "training": 2200,
+    "run_cost_per_year": 2400,
+    "run_cost_years": 4.5,
+    "contingency": 0.15,
+    "year1_ramp": 0.4,
+    "years": 5
+   },
+   "conservative_breakeven_probe": {
+    "note": "NOT A SCENARIO AND NOT A FORECAST. It holds every conservative driver fixed and varies only the season contact count, so the code prints the volume at which this pilot returns its full five-year cost and nothing more. This is the lever, handed over rather than hidden. If their own phone log and info@wpyr.com inbox show fewer guest change, cancellation and question contacts a season than this figure, the conservative case does not clear and we would say so before they sign, not after.",
+    "pursuits_per_year": 2960,
+    "benefit_lines": [
+     {
+      "label": "Desk handling time per guest contact, structured intake instead of reconstruction",
+      "hours_per_pursuit": 0.3,
+      "rate": 32,
+      "cut": 0.18
+     },
+     {
+      "label": "Repeat published-policy questions deflected by the governed policy source",
+      "hours_per_pursuit": 0.1,
+      "rate": 32,
+      "cut": 0.3
+     }
+    ],
+    "avoided_cost_lines": [
+     {
+      "label": "Guest escalations and card disputes from an unreachable office inside the 24 hour clock",
+      "events_per_year": 40,
+      "cost_per_event": 220,
+      "reduction": 0.3
+     }
+    ],
+    "implementation": 21000,
+    "training": 3000,
+    "run_cost_per_year": 3000,
+    "run_cost_years": 4.5,
+    "contingency": 0.2,
+    "year1_ramp": 0.25,
+    "years": 5
+   }
+  },
+  "conservative_clears": true,
+  "payback_range": "A RANGE, computed in code, never narrated here. The study prints the band running from the conservative payback month to the most likely payback month as produced by scripts/roi_math.py from the drivers above, and it never prints a single hero month. Three riders travel with the band and all three ship. ONE, the conservative end is the one to plan against, and it is the only end that carries no resold seat, no decision-data value and no qualitative benefit. TWO, the arithmetic spreads a season's benefit evenly across twelve months while the railway operates roughly five months a year (c16), so a printed month is a smoothed figure and the benefit really arrives in a burst each season. THREE, the whole band collapses if the season contact count lands under the breakeven probe volume, in which case there is no payback inside the five-season horizon, the honest answer is that this does not pay on labour, and phase two does not get funded. Any payback shorter than six months would imply unusually high volume or a tiny scope, and if the printed conservative figure comes in that fast the right response is to distrust the volume assumption rather than celebrate it.",
+  "base_rate_note": "THE OUTSIDE VIEW, stated before the inside view and with a wrinkle that cuts against our own pitch. THE BASE RATE IS BAD. MIT's work puts roughly 95 percent of AI pilots at no measurable P&L impact and RAND puts around 80 percent of AI projects as failures, and reference-class forecasting says the correct starting assumption for a proposal like this one is that it joins them. In this specific industry the local reference class is thin as well, only 12 percent of tour, activity and attraction operators actively use AI in their operations, with most still experimenting or not using it at all, from Arival's survey of more than 7,000 operators published October 22, 2024 (c42). Thin adoption means there is no local proof this works and no local proof it does not, which is an argument for buying measurement before buying a model, not an argument that everyone else is behind. THE HONEST WRINKLE, AND IT CHANGES HOW THE BASE RATE APPLIES RATHER THAN EXEMPTING US FROM IT. Phase one contains no artificial intelligence at all. It is a form, a server-written timestamp, an inbox ingest, a phone greeting and a governed content file. The failure modes that generate the MIT and RAND numbers are mostly model-shaped, no evaluation set, no clean data, hallucination on a liability surface, inference cost, an integration nobody assessed, drift after launch, and almost none of them can reach a system with no model in it. What phase one keeps from that base rate is the part that has nothing to do with AI, adoption. A tool the desk works around is dead whether or not it has a model, and that is the risk this build actually carries. WHERE THE AI BASE RATE DOES APPLY IS PHASE TWO, the single-node classifier on inbound free text, and phase two is not funded by this ask. It is gated on counters phase one produces, on an evaluation set built from real 2026 traffic, and on an acceptance bar set before the model is built, which is the specific discipline the failed 95 percent skip. WHY THIS ONE IS DESIGNED TO BE IN THE SMALL SHARE THAT PAYS. It is workflow-embedded rather than bolted beside the workflow, the queue is the same work the reservation agent does today with an arrival time attached (c30). It is adoption-owned by a named person on their side. It is measured, and the measurement instrument is the deliverable rather than a promise about one. Its floor is strictly above the status quo, because the timestamp is a server write and a total failure of anything downstream degrades to today's behaviour plus a timestamp. AND THE PART A VENDOR WOULD NOT SAY, we are recommending they buy an off-the-shelf tourism chat widget at published list pricing of $95 to $295 a month (c48) that we are not paid for, with the warning that under c44 the liability for what it says stays with them. Reference-class evidence we are using is labelled by tier and never used as this company's baseline, the Black Cat Cruises figures are vendor published with 10 hours a month the trustworthy number, the modelled $3,750 never quotable as revenue, and only 10 percent of site visitors leaving an email address, which cuts against capture optimism (c47). Amtrak's ARROW at 3 to 5 percent is a real precedent for a different problem (c43). Chipotle's 12 days to four and 30 percent of scheduling after hours were reported by Fortune in its own voice, and Chipotle is enormous, so the direction transfers and the magnitude does not (c46). None of those is this company's baseline and none is used as one.",
+  "value_owner": "ALLYSON NANNINI, MANAGER OF RESERVATIONS AND SALES, owns the number. She is on the published leadership directory, she owns the desk this lands on, and she owns the queue and the four counters it produces. Executive sponsor is VICKEY MOY, EXECUTIVE DIRECTOR OF PASSENGER OPERATIONS, who owns the platform-side consequence when agents are pulled onto train loading. Approval sits with BOB BERTO, PRESIDENT, who is also named as a director of the majority partner, so the operating decision and the ownership vote sit with the same person and this does not have to travel to an absentee owner. One item is confirmed with the company before anything ships rather than assumed, about 40 workers voted to join SMART-TD's local chapter on April 8 (c33), Reservation Agents are not among the roles that article names, and absence from a list is not proof of non-representation. THE VARIANCE CHECK, and it has an unusual shape here because there is no baseline to vary against yet. Two weeks before go-live, the desk logs contacts by channel and by hour from its own phone log and inbox, which produces the pre-baseline the whole case is missing. The first 30 days after go-live produce the measured baseline from the counters themselves. Actual versus baseline is then read at 60 days, at 90 days and at season close on the four drivers that move the answer, contacts a season, average handling minutes a contact, deflection rate on published-policy questions, and escalations a season. Every one of those is compared against the driver table in this study, line by line, and the variance is published to Nannini, Moy and Berto whether it is good or bad. Two rules ride with it. The 2026 reading is a shoulder-season sample and is labelled one, because Bennett closes September 12 (c17) and the Summit season carries no service on several late dates (c16), so a September count understates a July peak and may not be annualised without saying so. And if the measured contact count lands under the breakeven probe volume, the correct outcome is that phase two is not funded and this pilot did its job by saying no.",
+  "assumptions": [
+   "EVERY VOLUME DRIVER IN THIS CASE IS AN ASSUMPTION, NOT A FACT. No channel split, no passenger count, no trains-per-day figure, no call or email volume and no year-round versus seasonal headcount split is published anywhere. The 500,000 figure is recruiting copy and the newest count the company publishes itself is 385,000 from 2012, and neither is used as a baseline anywhere in this case.",
+   "Guest contacts to the reservation desk per operating season, assumed at 3,600 conservative, 6,000 most likely, 7,000 aggressive. The only published volume anchor in the file is almost 2,000 train starts a season (c7). This is the single driver the answer turns on and their own phone log and info@wpyr.com inbox settle it in an afternoon.",
+   "Average agent hours per contact today, end to end including the round trip to establish intent, booking reference and departure, assumed at 0.30 conservative, 0.35 most likely, 0.35 aggressive. No handling-time baseline exists.",
+   "Average agent hours per contact spent on repeat published-policy questions, assumed at 0.10 conservative, 0.12 most likely, 0.12 aggressive.",
+   "Fully loaded hourly cost of a seasonal reservation agent, assumed at $32 conservative, $36 most likely, $40 aggressive, covering wage, payroll load and seasonal accommodation. No wage figure is published by the company and this is a modelled range, not a measurement.",
+   "Realisable share of handling time removed by structured intake, assumed at 18 percent conservative, 25 percent most likely, 30 percent aggressive. This is the realisable share and not the theoretical one, it is already net of the avoid-backfill test.",
+   "Realisable share of repeat policy questions deflected by the governed policy source, assumed at 30 percent conservative, 40 percent most likely, 45 percent aggressive.",
+   "Escalations and card disputes per season arising from an unreachable office inside the 24 hour clock, assumed at 40 conservative, 70 most likely, 100 aggressive, at a blended $220, $260 and $300 each, reduced 30, 40 and 45 percent. No dispute count is published, no goodwill-refund figure is published, and zero verbatim customer reviews were obtainable because every review platform returned HTTP 403, so we hold no sample of how these guests behave when this happens to them.",
+   "Capacity converts to cash on an AVOID-BACKFILL test and on no other test. The desk is seasonally staffed against a published May 1 to September 30 recruiting season (c35) with Reservation Agent openings listed for 2026 (c32), so hours removed can be realised as a seasonal shift not covered, without a layoff and without touching the represented onboard workforce (c33). No defer-hire and no redeploy dollars are claimed anywhere.",
+   "The two labour lines are asserted to be disjoint mechanisms, one shortening a handled contact and the other removing a contact from the queue. If a reader disagrees, zeroing the second line is the correct test and the conservative case should be re-read with it at zero.",
+   "Implementation assumed at $21,000 conservative, $19,000 most likely, $18,000 aggressive. Training and change management assumed at $3,000, $2,500 and $2,200, covering 16 hours of their staff time in year one and 4 hours per season after, with our materials and facilitation.",
+   "Run cost per season assumed at $3,000 conservative, $2,600 most likely, $2,400 aggressive, over 4.5 years. It carries no inference cost, no token cost and no model refresh, because phase one carries no model. Human review is not added as a run cost because the queue is worked by the agent who handles these contacts today, and that labour is netted inside the benefit lines rather than counted twice.",
+   "Contingency assumed at 20 percent conservative and most likely, 15 percent aggressive, inside the 15 to 20 band.",
+   "Year-one ramp assumed at 25 percent conservative, 30 percent most likely, 40 percent aggressive. The 2026 season closes October 7 (c16) and today is August 9, and build, inbox access and telephony configuration all come out of the same eight weeks, so the year-one ramp here is thinner than a standard ninety-day ramp rather than fatter.",
+   "Any 2026 measurement is a shoulder-season sample. Bennett closes September 12 (c17) and the Summit season carries no service on September 26 to 27 and October 1 and 3 to 5 (c16), so a question mix or contact count captured this season describes a shoulder period and may not be annualised without that label attached.",
+   "NOT ASSUMED ANYWHERE IN THIS CASE, a resold seat. Today a guest who can't reach anyone inside 24 hours forfeits all rights to a refund and the railway keeps the fare (c12), and a build that lets that guest cancel at 9pm Saturday converts a forfeiture into a refund minus a $10.00 per person penalty. Whether the resale plus the avoided dispute beats the kept fare depends on their sell-out rate by departure, the trains usually sell out in advance (c14) and no rate is published, so easier cancellation is not unambiguously positive in the short run and this case claims neither direction.",
+   "NOT ASSUMED ANYWHERE, any benefit from booking validation, booking lookup, a seat release or anything that writes to the ticketing system. That integration is out of phase one and can't be assessed from outside the company, and the booking reference is captured as an unvalidated string.",
+   "The observation that the ticketing system returned an unavailable message on 2026-08-09 (c19) is point-in-time, could be transient, is never presented as a standing condition, and carries no weight in any driver in this case.",
+   "The absence of a published IT lead on the company directory is an unverified inference about the directory and never a fact about the company. It shapes delivery toward a managed, low-maintenance build and is not used as a benefit driver.",
+   "Phase 2 and the self-service change and cancellation desk are NOT priced here, appear in no cost line and in no benefit line, and are gated on the counters this pilot produces."
+  ]
+ }
+}

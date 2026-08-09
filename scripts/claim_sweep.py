@@ -32,6 +32,9 @@ import json
 import re
 import sys
 from itertools import combinations
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from _paths import resolve  # repo-root path resolution, see _paths.py
 
 STOP = set("""a an and are as at be been but by can could do does for from had has have
 he her his how i if in into is it its me my no not of on or our out over she should so

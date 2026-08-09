@@ -1,7 +1,7 @@
 {
   "version": 2,
   "note": "The per-run audit, and the record of authority for whether a run already shipped. Migrated off Supabase on 2026-08-05, this file is now the only copy.",
-  "updated": "2026-08-08",
+  "updated": "2026-08-09",
   "runs": [
     {
       "run_date": "2026-07-16",
@@ -110,6 +110,12 @@
       "status": "success",
       "shortlist_count": 23,
       "notes": "Talkeetna Air Taxi. Phase one has no AI in it. Three study-critic rounds and three lead-critic rounds. Three machine upgrades shipped: send_watch.py reconciled the ledger against the outbox and corrected 11 stale rows, room_reconcile was crashing and then failing 27 times for compliance, and prose_budget.py closed the repeat-offender backlog item on the unaddressable prose budget."
+    },
+    {
+      "run_date": "2026-08-09",
+      "status": "success",
+      "shortlist_count": 24,
+      "notes": "White Pass & Yukon Route Railway, Skagway. Phase one build has no AI in it. Two study-critic rounds, five lead-critic rounds with a brief change at round 4. Two machine upgrades shipped."
     }
   ]
 }

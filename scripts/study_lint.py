@@ -53,6 +53,7 @@ import sys
 # runs, so the gate and the study can never be reconciling different formulas.
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import roi_math  # noqa: E402
+from _paths import resolve  # repo-root path resolution, see _paths.py
 
 # Negative assertions about the prospect's own operation. Each of these was
 # either shipped or nearly shipped, and none of them is knowable from outside.
@@ -387,6 +388,7 @@ def main():
     ap.add_argument("--strict", action="store_true",
                     help="treat warnings as failures too")
     a = ap.parse_args()
+    if getattr(a, 'study', None): a.study = resolve(a.study)
 
     study = json.load(open(a.study))
     d = os.path.dirname(a.study)

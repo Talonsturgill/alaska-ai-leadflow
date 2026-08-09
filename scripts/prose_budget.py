@@ -40,6 +40,9 @@ import re
 import subprocess
 import sys
 import tempfile
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from _paths import resolve  # repo-root path resolution, see _paths.py
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BUILDER = os.path.join(HERE, "build_study_page.py")
@@ -262,6 +265,7 @@ def main():
                     help="words to cut, so the report names fields that can absorb it")
     ap.add_argument("--self-test", action="store_true")
     args = ap.parse_args()
+    if getattr(args, 'study', None): args.study = resolve(args.study)
     if args.self_test:
         print()
         print("  PROSE BUDGET SELF TEST")
