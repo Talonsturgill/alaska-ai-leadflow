@@ -56,6 +56,9 @@ import json
 import os
 import re
 import sys
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from _paths import resolve  # repo-root path resolution, see _paths.py
 
 MONEY = re.compile(r"\$?\b(\d{1,3}(?:,\d{3})+|\d{4,6})\b(?:\s*(?:dollars|usd))?", re.I)
 # Phrases that mean a model is doing work, as opposed to describing one.
@@ -281,6 +284,7 @@ def main():
         os.path.abspath(__file__))), help="repo root, for .claude/agents")
     ap.add_argument("--strict", action="store_true")
     a = ap.parse_args()
+    if getattr(a, 'dir', None): a.dir = resolve(a.dir)
 
     def load(name):
         p = os.path.join(a.dir, name)

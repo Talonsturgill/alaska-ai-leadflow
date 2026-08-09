@@ -48,6 +48,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from room_reconcile import SECTION_AGENT, contracted_keys  # noqa: E402
+from _paths import resolve  # repo-root path resolution, see _paths.py
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FENCE = re.compile(r"^\s*```(?:json)?\s*(.*?)\s*```\s*$", re.S)
@@ -81,6 +82,8 @@ def main():
                     help="collect only these sections, repeatable")
     ap.add_argument("--repo", default=REPO_ROOT)
     a = ap.parse_args()
+    if getattr(a, 'room', None): a.room = resolve(a.room)
+    if getattr(a, 'dir', None): a.dir = resolve(a.dir)
 
     room = a.room or os.path.join(a.dir, "room")
     want = a.only or list(SECTION_AGENT)

@@ -35,6 +35,9 @@ import re
 import os
 import subprocess
 import sys
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from _paths import resolve  # repo-root path resolution, see _paths.py
 
 # ---------- helpers ----------
 
@@ -887,6 +890,8 @@ def main():
     ap.add_argument("--demo-embed", default=None,
                     help="relative src of the demo to embed, e.g. demo/index.html")
     args = ap.parse_args()
+    if getattr(args, 'out', None): args.out = resolve(args.out)
+    if getattr(args, 'study', None): args.study = resolve(args.study)
 
     with open(args.study, encoding="utf-8") as fh:
         study = json.load(fh)

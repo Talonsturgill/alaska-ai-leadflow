@@ -27,6 +27,9 @@ import json
 import re
 import sys
 import html as htmllib
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from _paths import resolve  # repo-root path resolution, see _paths.py
 
 # ---------- colour math ----------
 
@@ -226,6 +229,7 @@ def main():
     ap.add_argument("--html", required=True)
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args()
+    if getattr(args, 'html', None): args.html = resolve(args.html)
 
     doc = open(args.html, encoding="utf-8").read()
     css = " ".join(re.findall(r"<style[^>]*>(.*?)</style>", doc, flags=re.S))

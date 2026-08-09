@@ -35,6 +35,9 @@ Drivers file shape (one entry per scenario):
 import argparse
 import json
 import math
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from _paths import resolve  # repo-root path resolution, see _paths.py
 
 
 def _hu(x):
@@ -94,6 +97,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--drivers", required=True)
     args = ap.parse_args()
+    if getattr(args, 'drivers', None): args.drivers = resolve(args.drivers)
     with open(args.drivers) as f:
         drivers = json.load(f)
     out = [compute(n, s) for n, s in drivers["scenarios"].items()]

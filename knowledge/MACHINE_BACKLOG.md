@@ -40,8 +40,9 @@ from it.
   are approved on projected ROI nobody ever measures after launch, has the same
   problem and the same fix.
 
-- **2026-08-07, the shell working directory drifts and nothing notices.**
-  SMALL BUT IT ALMOST LOST THE RUN'S REPLACEMENT QUEUE.
+- ~~**2026-08-07, the shell working directory drifts and nothing notices.**~~
+  **CLOSED 2026-08-09 on its second appearance, see SHIPPED.** It recurred in the
+  middle of Phase 4 that day, exactly as described below.
 
   EVIDENCE. Phase 1 wrote selection.md, shortlist.json and all four scout
   outputs to /home/user/out/2026-08-07/ instead of the repo, because an earlier
@@ -58,9 +59,11 @@ from it.
   and the first touches every write in the run, so neither belongs in the tail
   of a run that has already shipped.
 
-- **2026-08-08, the four Phase 4 agents can't write their own output, so the
-  showrunner retypes it.** BIGGER THAN A ONE-LINE CHANGE, because it touches
-  agent definitions rather than a script beside them.
+- ~~**2026-08-08, the four Phase 4 agents can't write their own output, so the
+  showrunner retypes it.**~~ **CLOSED 2026-08-09 on its second appearance, see
+  SHIPPED.** One thing the fix taught us is written into the SHIPPED entry: agent
+  definitions are resolved from the registry loaded at SESSION START, so a
+  frontmatter change cannot take effect in the run that makes it.
 
   EVIDENCE. The run contract says the room's four outputs go into
   engineering.json VERBATIM, and room_reconcile fails the run if they do not,
@@ -89,6 +92,27 @@ be nice", and a run may add but may never quietly delete.
 ---
 
 ## SHIPPED
+
+- **2026-08-09, the room writes its own output.** scripts/room_collect.py plus
+  Write and a PERSIST block on the four Phase 4 agents. Closed on its SECOND
+  appearance. Verified with negatives first, a missing file and a 2-of-9-key
+  summary both refused while good sections still collected. IN-FLIGHT DISCOVERY
+  worth more than the fix, agent definitions load at session start, so the
+  frontmatter half could not take effect in the same session and the collector's
+  fallback carried the run. That is the negative case exercised for real.
+
+- **2026-08-09, room_reconcile failed two documents for obeying the contract.**
+  It now reads the parent object, so a killed capability named in a label field
+  whose sibling refuses it is compliance, and it understands deferral containers
+  and deferral verbs. Verified by confirming a genuine promise still fails, and
+  that a sibling which PROMISES rather than refuses still fails.
+
+- **2026-08-09, the shell working directory drift is now harmless.**
+  scripts/_paths.py resolve(), wired into the eight path-taking scripts. Closed on
+  its SECOND appearance, the day it bit a run for the second time. Verified by
+  running study_lint and room_reconcile from the sibling checkout with
+  repo-relative paths, both exit 0, then re-running from the repo root, both still
+  exit 0.
 
 - **2026-08-08, the prose budget is addressable.** scripts/prose_budget.py
   attributes the rendered prose count back to the study.json field that

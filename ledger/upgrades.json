@@ -2,7 +2,7 @@
  "version": 1,
  "note": "The automation-change trail. Every machine upgrade a run makes to itself lands here, with the evidence that earned it and how it was verified. Surfaced in the delivery summary so a change to the machine is never invisible. An upgrade with no evidence line is not an upgrade, it is a preference, and it does not belong here.",
  "guard": "A run may NEVER edit knowledge/OUTREACH_CRAFT.md, CLAUDE.md, or any quality bar it is judged against. Those are hand-authored on purpose, because a routine that rewrites the rules it is graded by is grading its own homework. A run PROPOSES those in the delivery summary and a human decides.",
- "updated": "2026-08-07",
+ "updated": "2026-08-09",
  "upgrades": [
   {
    "date": "2026-08-05",
@@ -204,6 +204,48 @@
     "knowledge/MACHINE_BACKLOG.md"
    ],
    "verified_how": "Ten hermetic checks, and testing on REAL DATA found two bugs in the first version, both of which would have produced an authoritative wrong number, which is the failure mode of the word count it replaces. It emptied each field, and the builder DROPS a section whose field is empty, so the delta swallowed sibling content and reported 568 words for a 107 word field. It also cried wolf, flagging roi.table_note and roadmap.gates as UNRENDERED when both render and are deliberately counted as structure. Negative cases now assert that a rendered table note is structure and never reported as missing, and that nothing is suggested when no field is big enough."
+  },
+  {
+   "date": "2026-08-09",
+   "run": "White Pass & Yukon Route Railway",
+   "change": "scripts/room_collect.py, plus Write and a PERSIST section on staff-engineer, product-manager, roi-analyst and delivery-lead. The four Phase 4 agents now write their own JSON to a briefed path and return the same object, and the collector assembles engineering.json from those files, validating each against the agent's own `# OUTPUT` block through room_reconcile.contracted_keys so the agent spec stays the single schema.",
+   "evidence": "REPEAT OFFENDER, second appearance. knowledge/MACHINE_BACKLOG.md recorded on 2026-08-08 that the four agents whose output MUST be persisted verbatim were the only ones that could not persist it, so the showrunner retyped roughly 40KB of JSON every run, and that transcription is the exact mechanism the 2026-08-05 defect came through, where a summary dropped six of nine keys from a design and eight of nine from an ROI. It came back today.",
+   "verified_how": "Negatives first. A missing file and a 2-of-9-key summary were both named and refused while the two good sections still collected. Bad JSON and a JSON list were both refused. A fence-wrapped file was unwrapped and accepted. An unknown section exited 2. --only merged onto existing sections without clobbering them. On the real run all four sections collected at full contracted key count, 10/10, 9/9, 5/5, 9/9. HONEST LIMIT FOUND IN FLIGHT: agent definitions are resolved from the registry loaded at SESSION START, so the frontmatter change could not take effect in the same session that made it. The agents reported having no Write tool and the collector's fallback path carried the run, which is exactly the negative case it was built for, exercised for real rather than synthetically. The fix lands next run.",
+   "files": [
+    "scripts/room_collect.py",
+    ".claude/agents/staff-engineer.md",
+    ".claude/agents/product-manager.md",
+    ".claude/agents/roi-analyst.md",
+    ".claude/agents/delivery-lead.md"
+   ]
+  },
+  {
+   "date": "2026-08-09",
+   "run": "White Pass & Yukon Route Railway",
+   "change": "room_reconcile.py now reads the PARENT object when deciding whether a killed capability is being promised. A killed thing named in a label key (component, item, capability, name, title) is compliance when a SIBLING string carries a refusal. Added a DEFERRING_CONTAINERS set (phase1_later, later, deferred, backlog, next) and the deferral verbs (defer, deferred, postponed, parked, on hold, out of phase one, neither).",
+   "evidence": "The gate raised two FALSE FAILURES on this run's engineering room, both the shape its own comments warn about, that a gate failing a document for obeying the contract teaches the next run to skip the gate. The design named a killed item as a build_vs_buy `component` whose sibling `why` read 'Neither, in phase one ... It is on the kill list'. The PRD deferred reply drafting inside phase1_later and was read as promising the killed voice agent. The 2026-08-05 fix had already taught the script to read non_goals {item, reason} that way, but by special-casing the container name, so the identical shape one field over was unprotected.",
+   "verified_how": "Negatives first, and they are the point. A roadmap item genuinely promising the voice agent still FAILS. A build_vs_buy entry whose sibling `why` PROMISES rather than refuses still FAILS, which proves the sibling check is not a blanket excuse for naming a killed thing. The real run then passes at exit 0 with four warnings, all read and judged benign.",
+   "files": [
+    "scripts/room_reconcile.py"
+   ]
+  },
+  {
+   "date": "2026-08-09",
+   "run": "White Pass & Yukon Route Railway",
+   "change": "scripts/_paths.py and its resolve(), wired into the eight scripts that take path arguments. A relative path is tried against the cwd first, so normal use is unchanged, and falls back to the repo root when that misses.",
+   "evidence": "REPEAT OFFENDER, second appearance, and it bit this run in the middle of Phase 4. knowledge/MACHINE_BACKLOG.md recorded on 2026-08-07 that Phase 1 wrote selection.md, shortlist.json and all four scout outputs outside the repo because an earlier command had cd'd to the sibling checkout and the working directory persisted, silently. Today a cd to the public repo to check its state left the shell there, and the next command reported that .claude/agents/staff-engineer.md did not exist and that this was not a git repository, which cost a confused diagnosis at exactly the wrong moment.",
+   "verified_how": "study_lint and room_reconcile were both run from /home/user/alaskaaicarousels with a repo-relative --study and --dir. Both exited 0 and read the right files, where before the fix they would have failed. Both were then re-run from the repo root and still exited 0, so normal use is unchanged. study_qa re-run clean at 19/19.",
+   "files": [
+    "scripts/_paths.py",
+    "scripts/study_lint.py",
+    "scripts/study_qa.py",
+    "scripts/claim_sweep.py",
+    "scripts/room_collect.py",
+    "scripts/room_reconcile.py",
+    "scripts/roi_math.py",
+    "scripts/build_study_page.py",
+    "scripts/prose_budget.py"
+   ]
   }
  ]
 }
