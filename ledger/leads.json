@@ -392,7 +392,7 @@
       "domain": "talkeetnaair.com",
       "segment": "Tourism and visitor industry",
       "location": "Talkeetna, Alaska",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 24,
       "why_picked": "Top of 23 page-verified candidates across four segments, after a 24-24 tie with The Kuskokwim Corporation broken on reachability-as-evidenced. talkeetnaair.com renders and names its decision-makers, kuskokwim.com serves an empty body to a fetcher and so does its subsidiary tumeq.com, so every Kuskokwim fact traced to a third party page. One of only four NPS Denali glacier landing concessionaires for 2020 to 2029, ten aircraft, 21 named staff, a May 1 to September 15 season.",
       "contact_name": "Talkeetna Air Taxi general inbox",
@@ -406,7 +406,8 @@
       "roi_summary": "Break-even at roughly one retained seat every other staffed day, computed in roi_math.py. Conservative 44 percent of five-year cost recovered with NO payback, most likely 133 percent with payback in month 45, aggressive 362 percent in month 19. Counter minutes recovered cover only 2 to 47 percent and are printed precisely because they argue against us, rebutting the vendor hours-saved formula this industry is sold. No verified call volume exists anywhere, so every volume driver is labelled assumed and the case is a break-even rather than a projection.",
       "gmail_draft_id": "r9090092739872712372",
       "subject": "Field study on the day-of weather calls and one published number",
-      "run_date": "2026-08-08"
+      "run_date": "2026-08-08",
+      "sent_at": "2026-08-08T11:41:33Z"
     },
     {
       "company": "White Pass & Yukon Route Railway",
@@ -414,7 +415,7 @@
       "segment": "Tourism and visitor industry",
       "location": "Skagway, Alaska",
       "run_date": "2026-08-09",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 23,
       "why_picked": "Highest of 24 page-verified candidates across four ICP segments. Only candidate scoring 5 on both ability to pay and reachability. 180 employees, almost 2,000 train starts a season, a named President with a published address on the company's own directory. Ownership checked before locking, majority partner Survey Point Holdings, minority Carnival plc, so not a chain outpost, though the study never claims Alaska ownership because the sources conflict.",
       "contact_name": "Bob Berto",
@@ -428,7 +429,8 @@
       "live_url": "https://alaskaaihq.com/awesomeproposal/white-pass-yukon-route/",
       "draft_subject": "White Pass cancellations outside office hours",
       "gmail_draft_id": "r-4423649038122694677",
-      "notes": "Feasibility gate killed ten capabilities including the voice agent and runtime translation of refund policy. Fact-checker returned FIX with eleven rejections and named a one-direction drift pattern. Study-critic took two rounds, 17 findings then 6, including an arithmetic error in the brief that disproved the study's own thesis. Lead-critic shipped on round 5 after a BRIEF change at round 4. WITHHELD: an unauthenticated customer booking record was found on their hosted ticketing system and deliberately excluded from everything published, surfaced to Talon privately instead."
+      "notes": "Feasibility gate killed ten capabilities including the voice agent and runtime translation of refund policy. Fact-checker returned FIX with eleven rejections and named a one-direction drift pattern. Study-critic took two rounds, 17 findings then 6, including an arithmetic error in the brief that disproved the study's own thesis. Lead-critic shipped on round 5 after a BRIEF change at round 4. WITHHELD: an unauthenticated customer booking record was found on their hosted ticketing system and deliberately excluded from everything published, surfaced to Talon privately instead.",
+      "sent_at": "2026-08-09T11:07:00Z"
     }
   ]
 }
