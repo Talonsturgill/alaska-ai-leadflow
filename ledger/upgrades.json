@@ -1,251 +1,275 @@
 {
- "version": 1,
- "note": "The automation-change trail. Every machine upgrade a run makes to itself lands here, with the evidence that earned it and how it was verified. Surfaced in the delivery summary so a change to the machine is never invisible. An upgrade with no evidence line is not an upgrade, it is a preference, and it does not belong here.",
- "guard": "A run may NEVER edit knowledge/OUTREACH_CRAFT.md, CLAUDE.md, or any quality bar it is judged against. Those are hand-authored on purpose, because a routine that rewrites the rules it is graded by is grading its own homework. A run PROPOSES those in the delivery summary and a human decides.",
- "updated": "2026-08-09",
- "upgrades": [
-  {
-   "date": "2026-08-05",
-   "change": "scripts/study_lint.py, a mechanical gate that runs before any critic sees the study. Every early return in the ROI check is LOUD.",
-   "evidence": "The study-critic returned twelve blocking items and at least five were mechanical: an unsourced claim, a verified mark on an absence, two unverifiable negatives about the prospect, and an ROI note whose arithmetic did not reconcile with its own table. Five expensive adversarial rounds spent on things a regex and some arithmetic catch in milliseconds.",
-   "verified_how": "Ran against the shipped study, clean with zero false positives. Then ran against five reconstructions of the actual defects that shipped or were blocked today, and it caught all five. Separately verified that a missing drivers file now FAILS rather than passing in silence, because a gate that skips its most valuable check quietly is the exact failure it exists to prevent.",
-   "files": [
-    "scripts/study_lint.py"
-   ]
-  },
-  {
-   "date": "2026-08-05",
-   "change": "study_qa splits prose words from structure words",
-   "evidence": "A study whose prose spine is 2,947 words reported 3,858 because table cells, source lines and figure labels were counted against a reading-time budget that only ever meant prose. Three trimming passes fought a number that did not mean what it said, while the critics were simultaneously demanding more disclosure.",
-   "verified_how": "The shipped study passes the prose gate at 2,947 with every honesty disclosure intact, 18/18.",
-   "files": [
-    "scripts/study_qa.py",
-    "knowledge/FIELD_STUDY_SPEC.md"
-   ]
-  },
-  {
-   "date": "2026-08-05",
-   "change": "ledger.py record-outcome and scoreboard",
-   "evidence": "Seventeen leads, one confirmed send, zero recorded outcomes. Every quality gate in this routine is tuned against a target nobody has measured, which makes the anti-hype thesis an article of faith.",
-   "verified_how": "Scoreboard runs and reports honestly that nothing is recorded yet, rather than implying a result it does not have.",
-   "files": [
-    "scripts/ledger.py"
-   ]
-  },
-  {
-   "date": "2026-08-05",
-   "change": "scripts/room_reconcile.py, cross-checks the engineering room's four parallel outputs before they become a study",
-   "evidence": "The product-manager wrote its PRD before the staff-engineer's design existed, flagged the problem itself, and said the two would need reconciling. They happened to agree and nothing checked. The four Phase 4 agents run in parallel and none can see the others' constraints.",
-   "verified_how": "Clean on the real run. Then validated against four injected contradictions, a roadmap promising the killed voice agent, a roadmap building what we said to buy, a PRD promising killed dictation, and a roadmap shipping the killed Arrival Desk. Caught 4 of 4. FOUR rounds of false positives were fixed on the way there: hedge words checked against a whole section instead of the local string, a refusal vocabulary too narrow to recognise BOUGHT or gated as refusals, matching that required every keyterm including our own words, and matching loose enough that desk plus build tripped everything.",
-   "files": [
-    "scripts/room_reconcile.py",
-    "prompts/routine_instructions.md"
-   ]
-  },
-  {
-   "date": "2026-08-05",
-   "change": "THE DIRECTION PASS, a named Phase 6 step with a required artifact",
-   "evidence": "The drift pattern is systemic, not a per-run accident. The fact-checker named it, the study-critic independently rediscovered it on the same study after a round of fixes, then found it AGAIN in milder form on round two. It is the pipeline's incentive gradient, a pitch is easier to write when the prospect is in trouble, so every agent shades a little and the errors compound because they all lean together.",
-   "verified_how": "Not a script, so it is verified by the artifact existing. out/<date>/direction_pass.md is the gate, a run that did not write the file did not do the pass. study_lint covers the greppable half, this covers tone and accumulation which a regex can't see.",
-   "files": [
-    "prompts/routine_instructions.md"
-   ]
-  },
-  {
-   "date": "2026-08-05",
-   "change": "Phase 10 made MANDATORY, repeat offenders prioritised, and an upgrade session added",
-   "evidence": "Maintainer's call. A retro that is optional is a retro that gets skipped on a long run, which is exactly when it is most needed. Repeat defects were being re-noted rather than fixed, which turns a backlog into a graveyard. And a routine that only fixes what breaks never gets better, it only stops getting worse.",
-   "verified_how": "Wired into the COMPLETION GATE, so a run without a retro entry has not completed. The upgrade session rotates focus and is explicitly allowed to conclude that nothing is worth changing.",
-   "files": [
-    "prompts/routine_instructions.md"
-   ]
-  },
-  {
-   "date": "2026-08-05",
-   "change": "Phase 7 gained an escalation ladder for the lead-critic loop, and a step that surfaces a READY TO PROMOTE voice pattern as a drafted OUTREACH_CRAFT diff instead of leaving it in a file nothing reads. Rounds one through three refine the email, unchanged. A fourth fix verdict redirects the work to the BRIEF rather than the sentences, keeping the draft in hand, and continued fix verdicts after that condemn the opening FACT rather than the writing.",
-   "evidence": "Today's email took three lead-critic rounds and round two found that round one's fix had MOVED the defect rather than killed it, which is the signature of a brief that is wrong rather than an email that is unfinished. Separately, VOICE_DELTAS has carried lengthened as READY TO PROMOTE across six sends and it was never surfaced at a moment anyone could act on it, because promotion is correctly a human decision and nothing put the decision in front of the human.",
-   "verified_how": "Read back against the Phase 7 text and the completion gate. The threshold was set at four rounds by the maintainer, over an earlier draft that escalated at two, on the grounds that forty words legitimately need a few passes and an early fix verdict says nothing. The escalation changes WHERE the run looks, never how many rounds it may spend, so the ITERATION LAW is untouched. The promote step is proposal-only and names OUTREACH_CRAFT.md as never-edit, per the guard on this file.",
-   "files": [
-    "prompts/routine_instructions.md"
-   ]
-  },
-  {
-   "date": "2026-08-05",
-   "change": "scripts/retro_check.py, and Phase 10 given a FLOOR of one shipped change per run instead of only a ceiling of three. The completion gate no longer accepts a reasoned 'nothing worth changing' from the retro, and an item on its SECOND appearance is barred from the backlog entirely, it is the one that gets fixed. Also repointed the CONTEXT list from the retired db/schema.sql to db/SCHEMA.md.",
-   "evidence": "The maintainer, on being shown a mandatory retro: 'when I said retro mandatory I meant it should actually make fixes, not just list them.' Phase 10 already said IMPLEMENT and VERIFY and still had a way out, because the completion gate accepted an entry in this file as proof and an entry is prose. Prose is exactly what a language model produces when it has not done anything, and writing a careful backlog note feels like doing the work.",
-   "verified_how": "retro_check compares each upgrade's named files against the files a commit really touched that day, which is the one thing prose cannot fake. Ran clean on the real ledger, zero false positives across nine file claims. Then ran five injected negative cases and it caught all five: a retro that did nothing, a described-but-not-made change naming a real but untouched file, a named file that does not exist, an entry with no evidence or verification, and an entry naming no files at all. It had a false positive first, and a total one: git's approxidate attaches the current time of day to a bare --since date, so it hid every commit made earlier that morning and reported nine failures against nine changes that had all really shipped.",
-   "files": [
-    "scripts/retro_check.py",
-    "prompts/routine_instructions.md"
-   ]
-  },
-  {
-   "date": "2026-08-05",
-   "change": "A code review of the whole pipeline, and fifteen fixes. Six gates were failing OPEN or inert: dedupe treated a missing leads.json as 'nobody has been contacted', the delivery gate never read the HTML body or checked the live link was in the email at all, study_lint counted scenarios it never compared a number in, room_reconcile's non-goal check had never examined anything and its refusal vocabulary excused real violations, study_qa's paragraph budget had never executed, and build_study_page shipped a stale PDF when a re-render failed. Also two clock bugs in retro_check, a mutated loop variable in claim_sweep, and a bare \\bno\\b that failed legitimate rows.",
-   "evidence": "Asked for a review of today's work and got one worth having. The theme was uniform and worth naming: every gate here was validated against the defect it was DESIGNED to catch and none was validated against its own plumbing failing, an input file missing, a key renamed, a label changed. So they printed PASS while examining nothing, and the contract treats exit 0 as proof. Confirmed by running the pre-fix code: delivery_check printed DELIVERY CHECK PASSED for an email containing no link at all, study_lint printed 'ok ROI reconciled across 3 scenario(s)' having compared zero numbers, ledger check printed 'clear' for a company already in the ledger, and try_pdf returned True with yesterday's PDF untouched after chromium exited 1.",
-   "verified_how": "Every fix carries two tests, not one: the defect it was built to catch is still caught, and the plumbing failing is now loud. Thirty negative cases across the ten scripts, all caught, plus false-positive guards where a fix risked over-firing. The whole real corpus stays clean afterwards, all ten gates exit 0 against runs/2026-08-05 and out/2026-08-05, ledger still 17 leads. Two fixes needed a second round because the first over-fired: room_reconcile's strong-refusal list rejected the roadmap's legitimate buy-instead-of-build line, fixed by deriving the refusal vocabulary from what was killed rather than pooling it, and the pick-drift check still could not fire until it used the proportional matcher instead of any(). One quality bar was CHANGED rather than fixed and is called out in the commit: study_qa's paragraph spacing read 1.5 * line-height, had never once executed, and is now one full line-height.",
-   "files": [
-    "scripts/ledger.py",
-    "scripts/delivery_check.py",
-    "scripts/study_lint.py",
-    "scripts/room_reconcile.py",
-    "scripts/retro_check.py",
-    "scripts/claim_sweep.py",
-    "scripts/study_qa.py",
-    "scripts/build_study_page.py"
-   ]
-  },
-  {
-   "date": "2026-08-05",
-   "change": "The htmlBody check from the review batch was UNSATISFIABLE and would have hard-failed every future run at the delivery gate. The Gmail connector cannot return an htmlBody, so the HTML is now verified from the payload the run passes to create_draft, tied to the draft by its plaintext so a payload from a different email fails rather than passing. The contract now saves out/<date>/draft_payload.json before creating the draft.",
-   "evidence": "Caught by the maintainer, who asked why a run was going to hit a failure I already knew about. Investigated instead of guessing: list_drafts with DRAFT_VIEW_FULL returns plaintextBody and no htmlBody on any of five real drafts, and get_thread, which does document htmlBody, is denied by this connector's scopes. The decisive evidence is the sibling carousel routine, which creates html-only drafts, and those come back from list_drafts with no body field at all, which is only possible if htmlBody is never returned.",
-   "verified_how": "Tested against the REAL read-back shape rather than a fixture, using the actual shipped Fountainhead draft. Passes with a reconstructed payload, fails with no payload and names the remedy, fails when the payload carries no htmlBody, and fails when the payload is a different email entirely, which is the check that stops payload verification being theatre. The eight earlier delivery negatives all still fail and the well-formed case still passes.",
-   "files": [
-    "scripts/delivery_check.py",
-    "prompts/routine_instructions.md"
-   ]
-  },
-  {
-   "date": "2026-08-05",
-   "change": "room_reconcile check 6, the shape check. Each engineering.json section is verified against the `# OUTPUT` block of the agent that contracts it, so the agent spec is the schema and no second copy can drift. A section keeping fewer than half its contracted keys fails as a rewrite, a missing non_goals fails outright because a check with no input passes and looks like coverage, and other missing keys warn. The contract now says to persist each agent's JSON VERBATIM and says why.",
-   "evidence": "Ran down the loose end from the review, that the PRD emitted non_goals: null. The null was a symptom. engineering.json was not the room's output at all, it was a showrunner summary: the PRD kept ZERO of product-manager's ten contracted keys, the ROI kept one of nine, the design three of nine. Two failures in one. Every downstream check reading a contracted key found nothing and passed in silence, which is why the non-goal check had never examined anything in its life. And the fields a summary drops are the caveats, non_goals, open_questions, assumptions, conservative_clears, base_rate_note, build_vs_buy, spike_to_retire_it. The drift pattern operating at the filing cabinet rather than in the prose, where it is worse, because dropped prose faces a critic and a dropped key is read by nobody.",
-   "verified_how": "Fires correctly on the real 2026-08-05 room, three rewrite failures naming exactly which keys were dropped. Then, deliberately, PROVED IT IS PASSABLE, because an unsatisfiable gate was the mistake made earlier the same day with the htmlBody check: a well-shaped room carrying every contracted key passes with zero failures and zero warnings. Four negatives, all caught, a rewrite, a missing non_goals, a missing non-load-bearing key which warns rather than fails, and an absent section.",
-   "files": [
-    "scripts/room_reconcile.py",
-    "prompts/routine_instructions.md"
-   ]
-  },
-  {
-   "date": "2026-08-06",
-   "change": "ledger.py stops printing a traceback when a reader closes the pipe. BrokenPipeError is caught at the entry point, stdout is redirected to devnull so the interpreter's shutdown flush cannot reprint the traceback that was just suppressed, and the process exits 141, the shell's 128+SIGPIPE convention. A pipeline still reports the reader's status, so `ledger.py stats | head` is exit 0 as it always was, and the 141 is only visible to anything that asks for PIPESTATUS.",
-   "evidence": "Observed at Phase 1 of this run. `python scripts/ledger.py stats | head -20` printed its stats correctly and then died with a full BrokenPipeError traceback out of cmd_stats. Any printing subcommand piped into head, grep -m or less does the same. This is the memory of record. A traceback on a command that actually SUCCEEDED teaches a reader to skim tracebacks from the one script whose tracebacks must never be skimmed, and it hands a false failure signal to any future gate that reads its exit code. The routine already reads ledger.py exit codes as load-bearing answers, exit 1 for excluded and exit 3 for unavailable, so a spurious non-zero from a successful command is not cosmetic here.",
-   "verified_how": "POSITIVE, `stats` piped into head prints clean with zero bytes on stderr, and unpiped still exits 0 with zero bytes on stderr. A subprocess whose stdout pipe is closed outright exits 141 with no traceback anywhere on stderr. NEGATIVE, the case that matters, a real failure still fails loudly and is unaffected: `check anhc.org` on a domain already in the ledger still exits 1 and still prints EXCLUDED, and `add-lead --json /nonexistent.json` still exits non-zero and still prints its error. The suppression is scoped to a closed pipe and nothing else.",
-   "files": [
-    "scripts/ledger.py"
-   ]
-  },
-  {
-   "date": "2026-08-06",
-   "change": "add-lead validates and canonicalizes `segment` against config/icp.yaml instead of taking whatever string it is handed. A new canonical_segment() maps case-insensitively onto the four lead_segments names, maps the four legacy short keys earlier runs wrote (tourism, healthcare, anc, other) onto their canonical names rather than rejecting real history, and returns None for everything else. add-lead refuses a None, prints the four valid names, writes nothing and exits 2. Fuzzy matching is deliberately absent, because a near miss filed silently under the wrong segment is the defect this exists to stop.",
-   "evidence": "This run wrote \"Healthcare\" where the ICP says \"Independent healthcare and elder care\", and the ledger took it without a word. `ledger.py stats` then reported EIGHT segment buckets for four real segments: tourism 5 alongside Tourism and visitor industry 1, healthcare 1 alongside Healthcare 1, anc 4 alongside Alaska Native corporations 2, other 2 alongside other labor-scarce 2. Every by-segment cut was silently split in half, including ledger.py scoreboard, whose entire job is telling us which segments answer. The model caught it by eye at the last second while reading stats, which is exactly the class of check CLAUDE.md says is computed in code and never eyeballed, the same rule that governs dedupe and ROI arithmetic.",
-   "verified_how": "POSITIVE, canonical_segment resolves the exact canonical name, a case-mangled variant, a whitespace-padded variant, and all four legacy short keys, including the literal \"Healthcare\" this run wrote, which now auto-corrects rather than fragmenting. Re-adding today's real lead is still an idempotent upsert, still 18 leads, and the shipped row now carries the canonical name. NEGATIVE, four rejections that must not leak through, a near miss (\"Health care\"), a partial (\"Healthcare and elder care\"), an empty string and a null, plus an end-to-end add-lead with segment \"Fishing\" which exited 2, printed the four valid names, and left the md5 of ledger/leads.json byte-identical, so a reject cannot half-write.",
-   "files": [
-    "scripts/ledger.py"
-   ]
-  },
-  {
-   "date": "2026-08-06",
-   "change": "retro_check's negative-case detector stops false-flagging gates that signal with anything other than exit 1. The literal token \"exits 1\" is replaced by a regex over any NON-ZERO exit, exit/exits/exited/exiting, optionally with or code, and zero is deliberately excluded because exit 0 is the passing case and counting it would make the warning fire for nobody. The signal list also gained the shape a verification note is actually written in, a labelled NEGATIVE, section, plus rejected, refuses, refused, must not leak and still fails. The matching moved out of an inline any() into a named tested_a_negative() so it is unit-testable rather than only reachable through a full run.",
-   "evidence": "Caught by this run's own retro. retro_check warned 'no negative case evident' against the segment-validation upgrade whose verification described four rejection cases and an end-to-end refusal that exited 2 and left ledger/leads.json byte-identical. The gate under test signals with exit 2, and the detector only knew the literal string 'exits 1'. This file's own docstring says every gate written on 2026-08-05 had false positives on its first attempt and that it should assume it is wrong before assuming the run is, so a false positive here is the failure mode it was warned about. A warning that fires on thorough work is how a warning gets ignored, and this one guards the difference between a gate and something that only looks like coverage.",
-   "verified_how": "POSITIVE, five verification texts that really did run the failing case now all detect: this run's exits-2 entry, an exits-1 entry, the 2026-08-05 'caught all five reconstructions' style, an 'injected' style, and an 'exits with code 3' style that the first regex missed and which forced the with/code groups apart. NEGATIVE, five texts that show no failing case still detect nothing and still warn, a pure happy-path note, a note whose only exit code is the passing exit 0, a note claiming the change is obviously correct with no test, an empty string and a null. REGRESSION, all thirteen entries in ledger/upgrades.json were judged under the old token list and the new detector and compared: exactly ONE verdict changed, the false positive this fixes. The eleven pre-existing 2026-08-05 entries are untouched.",
-   "files": [
-    "scripts/retro_check.py"
-   ]
-  },
-  {
-   "date": "2026-08-07",
-   "run": "R&M Consultants",
-   "change": "study_lint's ROI row matcher takes the MOST SPECIFIC match instead of the first one in table order, and says so out loud when two rows tie. cell() used to walk the rows in insertion order and return the first whose label contained any fragment of the wanted figure, so a driver row printed above an output row could shadow it entirely. Candidates are now ranked by the LENGTH of the fragment they matched, which is what makes the specific phrase win over the generic one, and a genuine tie emits an ROI ROW AMBIGUOUS warning naming both labels rather than silently picking one. The 'recovered' fragment list also gained 'cost recovered' and 'of five year cost' ahead of the bare 'recovered' and 'share of' so it has something specific to win with.",
-   "evidence": "This cost THREE separate fix rounds in one run. A driver row 'Share of that time removed' shadowed the output row 'Share of five year cost recovered' because both contain 'share of', so the gate compared a 40 percent cut against a 119 percent recovery and failed a study whose arithmetic was correct. It happened again on 'Hours recovered a year' shadowing the same output row, and a third time on 'Year one share of full benefit'. Each time the study was renamed to suit the checker, which is the artifact bending instead of the gate, and the third rename ('Year one adoption ramp') is still in the shipped study for no reason other than this bug.",
-   "files": [
-    "scripts/study_lint.py"
-   ],
-   "verified_how": "Reconstructed the exact collision by renaming the driver row back to 'Share of that time removed' and confirmed the gate now exits 0 instead of failing. NEGATIVE CASE: injected a genuinely wrong printed recovery of 999 percent against a computed 119 and confirmed the gate still exits 1 and names the right row, so the fix did not blind it. The shipping study re-runs clean."
-  },
-  {
-   "date": "2026-08-07",
-   "run": "R&M Consultants",
-   "change": "build_study_page's content audit stops false-flagging text that the page renders across a line break. The audit probes for a string's first six words as one contiguous run inside the raw markup, and a diagram node label is emitted as one <text> element per wrapped line, so those six words are never contiguous in the HTML even when every word is visibly on the page. The probe now also runs against a tag-stripped, whitespace-collapsed copy of the output, which is what a reader actually sees.",
-   "evidence": "On this run the builder reported five architecture node labels as content that 'never reached the page' while all five were rendering correctly. The showrunner believed it, spent a round rewriting every label, and mis-measured the diagram's wrap width by a factor of nearly three while doing so, concluding the labels were being truncated when they were not. A false positive in an audit is worse than no audit, because the next real warning gets read as noise.",
-   "files": [
-    "scripts/build_study_page.py"
-   ],
-   "verified_how": "Restored the long wrapped labels and confirmed the audit no longer reports them. NEGATIVE CASE: added a study.json key the renderer does not read at all and confirmed the audit still reports it as missing, so the check is not simply passing everything. Also caught a real bug in the first attempt at this fix, a missing 'import re' that made the builder crash rather than warn, which two earlier test cases had reported as passes because the crash produced no output."
-  },
-  {
-   "date": "2026-08-07",
-   "run": "R&M Consultants",
-   "change": "build_study_page now WARNS when a diagram node label overflows the three lines the renderer draws, naming the node and quoting the exact words that are not on the page. The cap itself is unchanged and correct, since a node label that needs four lines is a label that should be shorter, but it used to apply in complete silence.",
-   "evidence": "A latent defect rather than one that shipped, found while investigating the audit false positive above. The renderer wraps a label to a fixed width and then draws lines[:3], discarding anything past that with no error, no warning and no mark on the page. A future study with a long node label would render a truncated fragment as though it were the whole name, and the only thing that would catch it is a human reading the SVG. FIELD_STUDY_SPEC already says to keep the diagram small, so this makes the renderer enforce what the spec asks for instead of silently mangling the label.",
-   "files": [
-    "scripts/build_study_page.py"
-   ],
-   "verified_how": "Fed a node label long enough to genuinely overflow and confirmed the warning fires and quotes the dropped words verbatim. NEGATIVE CASE: confirmed the shipping study's own six labels produce no warning at all, so it is not noise on every run."
-  },
-  {
-   "date": "2026-08-08",
-   "run": "Talkeetna Air Taxi",
-   "change": "scripts/send_watch.py, a new reconciler that compares the ledger against what actually left the outbox. The showrunner reads Gmail, because only it has the connector, and this script does the MATCHING, which is the part that has to be computed rather than eyeballed. Two keys, the recorded contact_email matched EXACTLY first and normalized domain as a conservative fallback. Applied to the real ledger this run and corrected 11 rows.",
-   "evidence": "This run's own Phase 0. Step 7 searched Gmail, PROVED the 2026-08-07 R&M email had gone out, read the sent body back, diffed it and recorded a voice delta from it, then threw the fact of the send away because no step writes it down. `ledger.py stats` said `sent 1` while voice_diff.py said nine sends had been compared. `ledger.py scoreboard` said `outcome recorded 0` against 18 leads, so the outcome tracking shipped on 2026-08-05 had never received a single data point in three months and every cut it computes was blank, including the one that tests the honest-restraint thesis this routine is built on.",
-   "files": [
-    "scripts/send_watch.py",
-    "ledger/leads.json",
-    "runs/2026-08-08/talkeetna-air-taxi/gmail_observed.json"
-   ],
-   "verified_how": "14 hermetic negative-case checks, and two of them found real bugs BEFORE this touched the ledger. The string '@alpha.com' has an at-sign and matched a live lead, so an empty local part is now rejected. A lead appearing twice in the outbox took whichever timestamp the loop saw last, so sent_at is now the earliest and no longer depends on Gmail's result order. Also asserted: absence never writes anything, `replied: false` is not recorded as no_reply because a reply can still arrive tomorrow, an existing outcome is never overwritten, and an exact address beats a competing domain so a send can never be attributed to the wrong company. Domain-only matching left five of twelve real sends unmatched, which is what bought the second key."
-  },
-  {
-   "date": "2026-08-08",
-   "run": "Talkeetna Air Taxi",
-   "change": "scripts/room_reconcile.py hardened twice. It now reads a kill_list in any shape the conscience returns it in, bare strings, capability dicts, key synonyms, a capability-to-why mapping and mixed lists, and it says out loud when the kill list is missing or empty rather than printing an all-clear over a check that examined nothing. Separately, a string's PATH is now part of the reading, so non_goals, out_of_scope and kill_list are refusing containers and open_questions, risks and assumptions are asking containers.",
-   "evidence": "Two failures in this run's Phase 5, neither a judgement call. FIRST IT CRASHED with an AttributeError, because the ai-feasibility-engineer returned kill_list entries as objects rather than bare strings, a shape its own `# OUTPUT` block does not forbid since that block never mentions kill_list at all. A gate that dies on a legitimate output is worse than a gate that fails, because the run in front of it is under pressure and will route around it. THEN IT FAILED 27 TIMES AND ALL 27 WERE THE SAME FALSE POSITIVE, every one a non-goal recorded as {item, reason}, where the item field names the killed capability and the hedge is the sibling reason field. The run contract explicitly demands non-goals be stated that way, so the gate was failing a document for obeying the contract.",
-   "files": [
-    "scripts/room_reconcile.py"
-   ],
-   "verified_how": "NEGATIVE CASES FIRST, because the risk with this fix was making a gate stop failing rather than stop being wrong. Twelve path-classifier checks, and the EIGHT THAT MATTER assert the gate STILL FIRES: a roadmap Now item, a Next item, a LATER item, a phase1_must, a goal, a delivery plan, a diagram caption and the gates prose ALL still count as promises and would still fail on a killed capability. Ten more on the shape reader, including the NEGATIVE cases of a missing kill_list, an empty kill_list, an entry with no strings at all, and None entries, none of which may crash and none of which may silently drop a kill, because a dropped kill is a kill that stops binding. The real run then exited 0 with the four outputs agreeing."
-  },
-  {
-   "date": "2026-08-08",
-   "run": "Talkeetna Air Taxi",
-   "change": "scripts/prose_budget.py, which attributes the rendered prose word count back to the study.json field that produced it. It renders once for a baseline then once per field with that field replaced by a sentinel, so it re-implements neither the word counter nor the template and the number is measured through the real builder by the real gate. It also separates NOT ON PAGE from structure, and names the fields with enough slack to absorb a given overage.",
-   "evidence": "REPEAT OFFENDER, second appearance, so it stopped being a note. knowledge/MACHINE_BACKLOG.md recorded it on 2026-08-07 where a run made roughly twenty seven trimming passes across five critic rounds and lost or garbled a caveat in EVERY round, because trimming removes qualifying clauses first and qualifiers read as slack. It came back today. This run trimmed twice, guessed both times, and landed 19 words over on the second pass.",
-   "files": [
-    "scripts/prose_budget.py",
-    "knowledge/MACHINE_BACKLOG.md"
-   ],
-   "verified_how": "Ten hermetic checks, and testing on REAL DATA found two bugs in the first version, both of which would have produced an authoritative wrong number, which is the failure mode of the word count it replaces. It emptied each field, and the builder DROPS a section whose field is empty, so the delta swallowed sibling content and reported 568 words for a 107 word field. It also cried wolf, flagging roi.table_note and roadmap.gates as UNRENDERED when both render and are deliberately counted as structure. Negative cases now assert that a rendered table note is structure and never reported as missing, and that nothing is suggested when no field is big enough."
-  },
-  {
-   "date": "2026-08-09",
-   "run": "White Pass & Yukon Route Railway",
-   "change": "scripts/room_collect.py, plus Write and a PERSIST section on staff-engineer, product-manager, roi-analyst and delivery-lead. The four Phase 4 agents now write their own JSON to a briefed path and return the same object, and the collector assembles engineering.json from those files, validating each against the agent's own `# OUTPUT` block through room_reconcile.contracted_keys so the agent spec stays the single schema.",
-   "evidence": "REPEAT OFFENDER, second appearance. knowledge/MACHINE_BACKLOG.md recorded on 2026-08-08 that the four agents whose output MUST be persisted verbatim were the only ones that could not persist it, so the showrunner retyped roughly 40KB of JSON every run, and that transcription is the exact mechanism the 2026-08-05 defect came through, where a summary dropped six of nine keys from a design and eight of nine from an ROI. It came back today.",
-   "verified_how": "Negatives first. A missing file and a 2-of-9-key summary were both named and refused while the two good sections still collected. Bad JSON and a JSON list were both refused. A fence-wrapped file was unwrapped and accepted. An unknown section exited 2. --only merged onto existing sections without clobbering them. On the real run all four sections collected at full contracted key count, 10/10, 9/9, 5/5, 9/9. HONEST LIMIT FOUND IN FLIGHT: agent definitions are resolved from the registry loaded at SESSION START, so the frontmatter change could not take effect in the same session that made it. The agents reported having no Write tool and the collector's fallback path carried the run, which is exactly the negative case it was built for, exercised for real rather than synthetically. The fix lands next run.",
-   "files": [
-    "scripts/room_collect.py",
-    ".claude/agents/staff-engineer.md",
-    ".claude/agents/product-manager.md",
-    ".claude/agents/roi-analyst.md",
-    ".claude/agents/delivery-lead.md"
-   ]
-  },
-  {
-   "date": "2026-08-09",
-   "run": "White Pass & Yukon Route Railway",
-   "change": "room_reconcile.py now reads the PARENT object when deciding whether a killed capability is being promised. A killed thing named in a label key (component, item, capability, name, title) is compliance when a SIBLING string carries a refusal. Added a DEFERRING_CONTAINERS set (phase1_later, later, deferred, backlog, next) and the deferral verbs (defer, deferred, postponed, parked, on hold, out of phase one, neither).",
-   "evidence": "The gate raised two FALSE FAILURES on this run's engineering room, both the shape its own comments warn about, that a gate failing a document for obeying the contract teaches the next run to skip the gate. The design named a killed item as a build_vs_buy `component` whose sibling `why` read 'Neither, in phase one ... It is on the kill list'. The PRD deferred reply drafting inside phase1_later and was read as promising the killed voice agent. The 2026-08-05 fix had already taught the script to read non_goals {item, reason} that way, but by special-casing the container name, so the identical shape one field over was unprotected.",
-   "verified_how": "Negatives first, and they are the point. A roadmap item genuinely promising the voice agent still FAILS. A build_vs_buy entry whose sibling `why` PROMISES rather than refuses still FAILS, which proves the sibling check is not a blanket excuse for naming a killed thing. The real run then passes at exit 0 with four warnings, all read and judged benign.",
-   "files": [
-    "scripts/room_reconcile.py"
-   ]
-  },
-  {
-   "date": "2026-08-09",
-   "run": "White Pass & Yukon Route Railway",
-   "change": "scripts/_paths.py and its resolve(), wired into the eight scripts that take path arguments. A relative path is tried against the cwd first, so normal use is unchanged, and falls back to the repo root when that misses.",
-   "evidence": "REPEAT OFFENDER, second appearance, and it bit this run in the middle of Phase 4. knowledge/MACHINE_BACKLOG.md recorded on 2026-08-07 that Phase 1 wrote selection.md, shortlist.json and all four scout outputs outside the repo because an earlier command had cd'd to the sibling checkout and the working directory persisted, silently. Today a cd to the public repo to check its state left the shell there, and the next command reported that .claude/agents/staff-engineer.md did not exist and that this was not a git repository, which cost a confused diagnosis at exactly the wrong moment.",
-   "verified_how": "study_lint and room_reconcile were both run from /home/user/alaskaaicarousels with a repo-relative --study and --dir. Both exited 0 and read the right files, where before the fix they would have failed. Both were then re-run from the repo root and still exited 0, so normal use is unchanged. study_qa re-run clean at 19/19. NEGATIVE CASE, added after retro_check rightly warned there was none. resolve() must not silently mask a file that genuinely does not exist. Asked study_lint for out/2026-08-09/NOPE.json from the sibling checkout: it exits 1 and names the repo-root path it looked for, rather than resolving to something else or passing. The resolver removes the cwd trap without removing the error.",
-   "files": [
-    "scripts/_paths.py",
-    "scripts/study_lint.py",
-    "scripts/study_qa.py",
-    "scripts/claim_sweep.py",
-    "scripts/room_collect.py",
-    "scripts/room_reconcile.py",
-    "scripts/roi_math.py",
-    "scripts/build_study_page.py",
-    "scripts/prose_budget.py"
-   ]
-  }
- ]
+  "version": 1,
+  "note": "The automation-change trail. Every machine upgrade a run makes to itself lands here, with the evidence that earned it and how it was verified. Surfaced in the delivery summary so a change to the machine is never invisible. An upgrade with no evidence line is not an upgrade, it is a preference, and it does not belong here.",
+  "guard": "A run may NEVER edit knowledge/OUTREACH_CRAFT.md, CLAUDE.md, or any quality bar it is judged against. Those are hand-authored on purpose, because a routine that rewrites the rules it is graded by is grading its own homework. A run PROPOSES those in the delivery summary and a human decides.",
+  "updated": "2026-08-09",
+  "upgrades": [
+    {
+      "date": "2026-08-05",
+      "change": "scripts/study_lint.py, a mechanical gate that runs before any critic sees the study. Every early return in the ROI check is LOUD.",
+      "evidence": "The study-critic returned twelve blocking items and at least five were mechanical: an unsourced claim, a verified mark on an absence, two unverifiable negatives about the prospect, and an ROI note whose arithmetic did not reconcile with its own table. Five expensive adversarial rounds spent on things a regex and some arithmetic catch in milliseconds.",
+      "verified_how": "Ran against the shipped study, clean with zero false positives. Then ran against five reconstructions of the actual defects that shipped or were blocked today, and it caught all five. Separately verified that a missing drivers file now FAILS rather than passing in silence, because a gate that skips its most valuable check quietly is the exact failure it exists to prevent.",
+      "files": [
+        "scripts/study_lint.py"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "change": "study_qa splits prose words from structure words",
+      "evidence": "A study whose prose spine is 2,947 words reported 3,858 because table cells, source lines and figure labels were counted against a reading-time budget that only ever meant prose. Three trimming passes fought a number that did not mean what it said, while the critics were simultaneously demanding more disclosure.",
+      "verified_how": "The shipped study passes the prose gate at 2,947 with every honesty disclosure intact, 18/18.",
+      "files": [
+        "scripts/study_qa.py",
+        "knowledge/FIELD_STUDY_SPEC.md"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "change": "ledger.py record-outcome and scoreboard",
+      "evidence": "Seventeen leads, one confirmed send, zero recorded outcomes. Every quality gate in this routine is tuned against a target nobody has measured, which makes the anti-hype thesis an article of faith.",
+      "verified_how": "Scoreboard runs and reports honestly that nothing is recorded yet, rather than implying a result it does not have.",
+      "files": [
+        "scripts/ledger.py"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "change": "scripts/room_reconcile.py, cross-checks the engineering room's four parallel outputs before they become a study",
+      "evidence": "The product-manager wrote its PRD before the staff-engineer's design existed, flagged the problem itself, and said the two would need reconciling. They happened to agree and nothing checked. The four Phase 4 agents run in parallel and none can see the others' constraints.",
+      "verified_how": "Clean on the real run. Then validated against four injected contradictions, a roadmap promising the killed voice agent, a roadmap building what we said to buy, a PRD promising killed dictation, and a roadmap shipping the killed Arrival Desk. Caught 4 of 4. FOUR rounds of false positives were fixed on the way there: hedge words checked against a whole section instead of the local string, a refusal vocabulary too narrow to recognise BOUGHT or gated as refusals, matching that required every keyterm including our own words, and matching loose enough that desk plus build tripped everything.",
+      "files": [
+        "scripts/room_reconcile.py",
+        "prompts/routine_instructions.md"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "change": "THE DIRECTION PASS, a named Phase 6 step with a required artifact",
+      "evidence": "The drift pattern is systemic, not a per-run accident. The fact-checker named it, the study-critic independently rediscovered it on the same study after a round of fixes, then found it AGAIN in milder form on round two. It is the pipeline's incentive gradient, a pitch is easier to write when the prospect is in trouble, so every agent shades a little and the errors compound because they all lean together.",
+      "verified_how": "Not a script, so it is verified by the artifact existing. out/<date>/direction_pass.md is the gate, a run that did not write the file did not do the pass. study_lint covers the greppable half, this covers tone and accumulation which a regex can't see.",
+      "files": [
+        "prompts/routine_instructions.md"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "change": "Phase 10 made MANDATORY, repeat offenders prioritised, and an upgrade session added",
+      "evidence": "Maintainer's call. A retro that is optional is a retro that gets skipped on a long run, which is exactly when it is most needed. Repeat defects were being re-noted rather than fixed, which turns a backlog into a graveyard. And a routine that only fixes what breaks never gets better, it only stops getting worse.",
+      "verified_how": "Wired into the COMPLETION GATE, so a run without a retro entry has not completed. The upgrade session rotates focus and is explicitly allowed to conclude that nothing is worth changing.",
+      "files": [
+        "prompts/routine_instructions.md"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "change": "Phase 7 gained an escalation ladder for the lead-critic loop, and a step that surfaces a READY TO PROMOTE voice pattern as a drafted OUTREACH_CRAFT diff instead of leaving it in a file nothing reads. Rounds one through three refine the email, unchanged. A fourth fix verdict redirects the work to the BRIEF rather than the sentences, keeping the draft in hand, and continued fix verdicts after that condemn the opening FACT rather than the writing.",
+      "evidence": "Today's email took three lead-critic rounds and round two found that round one's fix had MOVED the defect rather than killed it, which is the signature of a brief that is wrong rather than an email that is unfinished. Separately, VOICE_DELTAS has carried lengthened as READY TO PROMOTE across six sends and it was never surfaced at a moment anyone could act on it, because promotion is correctly a human decision and nothing put the decision in front of the human.",
+      "verified_how": "Read back against the Phase 7 text and the completion gate. The threshold was set at four rounds by the maintainer, over an earlier draft that escalated at two, on the grounds that forty words legitimately need a few passes and an early fix verdict says nothing. The escalation changes WHERE the run looks, never how many rounds it may spend, so the ITERATION LAW is untouched. The promote step is proposal-only and names OUTREACH_CRAFT.md as never-edit, per the guard on this file.",
+      "files": [
+        "prompts/routine_instructions.md"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "change": "scripts/retro_check.py, and Phase 10 given a FLOOR of one shipped change per run instead of only a ceiling of three. The completion gate no longer accepts a reasoned 'nothing worth changing' from the retro, and an item on its SECOND appearance is barred from the backlog entirely, it is the one that gets fixed. Also repointed the CONTEXT list from the retired db/schema.sql to db/SCHEMA.md.",
+      "evidence": "The maintainer, on being shown a mandatory retro: 'when I said retro mandatory I meant it should actually make fixes, not just list them.' Phase 10 already said IMPLEMENT and VERIFY and still had a way out, because the completion gate accepted an entry in this file as proof and an entry is prose. Prose is exactly what a language model produces when it has not done anything, and writing a careful backlog note feels like doing the work.",
+      "verified_how": "retro_check compares each upgrade's named files against the files a commit really touched that day, which is the one thing prose cannot fake. Ran clean on the real ledger, zero false positives across nine file claims. Then ran five injected negative cases and it caught all five: a retro that did nothing, a described-but-not-made change naming a real but untouched file, a named file that does not exist, an entry with no evidence or verification, and an entry naming no files at all. It had a false positive first, and a total one: git's approxidate attaches the current time of day to a bare --since date, so it hid every commit made earlier that morning and reported nine failures against nine changes that had all really shipped.",
+      "files": [
+        "scripts/retro_check.py",
+        "prompts/routine_instructions.md"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "change": "A code review of the whole pipeline, and fifteen fixes. Six gates were failing OPEN or inert: dedupe treated a missing leads.json as 'nobody has been contacted', the delivery gate never read the HTML body or checked the live link was in the email at all, study_lint counted scenarios it never compared a number in, room_reconcile's non-goal check had never examined anything and its refusal vocabulary excused real violations, study_qa's paragraph budget had never executed, and build_study_page shipped a stale PDF when a re-render failed. Also two clock bugs in retro_check, a mutated loop variable in claim_sweep, and a bare \\bno\\b that failed legitimate rows.",
+      "evidence": "Asked for a review of today's work and got one worth having. The theme was uniform and worth naming: every gate here was validated against the defect it was DESIGNED to catch and none was validated against its own plumbing failing, an input file missing, a key renamed, a label changed. So they printed PASS while examining nothing, and the contract treats exit 0 as proof. Confirmed by running the pre-fix code: delivery_check printed DELIVERY CHECK PASSED for an email containing no link at all, study_lint printed 'ok ROI reconciled across 3 scenario(s)' having compared zero numbers, ledger check printed 'clear' for a company already in the ledger, and try_pdf returned True with yesterday's PDF untouched after chromium exited 1.",
+      "verified_how": "Every fix carries two tests, not one: the defect it was built to catch is still caught, and the plumbing failing is now loud. Thirty negative cases across the ten scripts, all caught, plus false-positive guards where a fix risked over-firing. The whole real corpus stays clean afterwards, all ten gates exit 0 against runs/2026-08-05 and out/2026-08-05, ledger still 17 leads. Two fixes needed a second round because the first over-fired: room_reconcile's strong-refusal list rejected the roadmap's legitimate buy-instead-of-build line, fixed by deriving the refusal vocabulary from what was killed rather than pooling it, and the pick-drift check still could not fire until it used the proportional matcher instead of any(). One quality bar was CHANGED rather than fixed and is called out in the commit: study_qa's paragraph spacing read 1.5 * line-height, had never once executed, and is now one full line-height.",
+      "files": [
+        "scripts/ledger.py",
+        "scripts/delivery_check.py",
+        "scripts/study_lint.py",
+        "scripts/room_reconcile.py",
+        "scripts/retro_check.py",
+        "scripts/claim_sweep.py",
+        "scripts/study_qa.py",
+        "scripts/build_study_page.py"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "change": "The htmlBody check from the review batch was UNSATISFIABLE and would have hard-failed every future run at the delivery gate. The Gmail connector cannot return an htmlBody, so the HTML is now verified from the payload the run passes to create_draft, tied to the draft by its plaintext so a payload from a different email fails rather than passing. The contract now saves out/<date>/draft_payload.json before creating the draft.",
+      "evidence": "Caught by the maintainer, who asked why a run was going to hit a failure I already knew about. Investigated instead of guessing: list_drafts with DRAFT_VIEW_FULL returns plaintextBody and no htmlBody on any of five real drafts, and get_thread, which does document htmlBody, is denied by this connector's scopes. The decisive evidence is the sibling carousel routine, which creates html-only drafts, and those come back from list_drafts with no body field at all, which is only possible if htmlBody is never returned.",
+      "verified_how": "Tested against the REAL read-back shape rather than a fixture, using the actual shipped Fountainhead draft. Passes with a reconstructed payload, fails with no payload and names the remedy, fails when the payload carries no htmlBody, and fails when the payload is a different email entirely, which is the check that stops payload verification being theatre. The eight earlier delivery negatives all still fail and the well-formed case still passes.",
+      "files": [
+        "scripts/delivery_check.py",
+        "prompts/routine_instructions.md"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "change": "room_reconcile check 6, the shape check. Each engineering.json section is verified against the `# OUTPUT` block of the agent that contracts it, so the agent spec is the schema and no second copy can drift. A section keeping fewer than half its contracted keys fails as a rewrite, a missing non_goals fails outright because a check with no input passes and looks like coverage, and other missing keys warn. The contract now says to persist each agent's JSON VERBATIM and says why.",
+      "evidence": "Ran down the loose end from the review, that the PRD emitted non_goals: null. The null was a symptom. engineering.json was not the room's output at all, it was a showrunner summary: the PRD kept ZERO of product-manager's ten contracted keys, the ROI kept one of nine, the design three of nine. Two failures in one. Every downstream check reading a contracted key found nothing and passed in silence, which is why the non-goal check had never examined anything in its life. And the fields a summary drops are the caveats, non_goals, open_questions, assumptions, conservative_clears, base_rate_note, build_vs_buy, spike_to_retire_it. The drift pattern operating at the filing cabinet rather than in the prose, where it is worse, because dropped prose faces a critic and a dropped key is read by nobody.",
+      "verified_how": "Fires correctly on the real 2026-08-05 room, three rewrite failures naming exactly which keys were dropped. Then, deliberately, PROVED IT IS PASSABLE, because an unsatisfiable gate was the mistake made earlier the same day with the htmlBody check: a well-shaped room carrying every contracted key passes with zero failures and zero warnings. Four negatives, all caught, a rewrite, a missing non_goals, a missing non-load-bearing key which warns rather than fails, and an absent section.",
+      "files": [
+        "scripts/room_reconcile.py",
+        "prompts/routine_instructions.md"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "change": "ledger.py stops printing a traceback when a reader closes the pipe. BrokenPipeError is caught at the entry point, stdout is redirected to devnull so the interpreter's shutdown flush cannot reprint the traceback that was just suppressed, and the process exits 141, the shell's 128+SIGPIPE convention. A pipeline still reports the reader's status, so `ledger.py stats | head` is exit 0 as it always was, and the 141 is only visible to anything that asks for PIPESTATUS.",
+      "evidence": "Observed at Phase 1 of this run. `python scripts/ledger.py stats | head -20` printed its stats correctly and then died with a full BrokenPipeError traceback out of cmd_stats. Any printing subcommand piped into head, grep -m or less does the same. This is the memory of record. A traceback on a command that actually SUCCEEDED teaches a reader to skim tracebacks from the one script whose tracebacks must never be skimmed, and it hands a false failure signal to any future gate that reads its exit code. The routine already reads ledger.py exit codes as load-bearing answers, exit 1 for excluded and exit 3 for unavailable, so a spurious non-zero from a successful command is not cosmetic here.",
+      "verified_how": "POSITIVE, `stats` piped into head prints clean with zero bytes on stderr, and unpiped still exits 0 with zero bytes on stderr. A subprocess whose stdout pipe is closed outright exits 141 with no traceback anywhere on stderr. NEGATIVE, the case that matters, a real failure still fails loudly and is unaffected: `check anhc.org` on a domain already in the ledger still exits 1 and still prints EXCLUDED, and `add-lead --json /nonexistent.json` still exits non-zero and still prints its error. The suppression is scoped to a closed pipe and nothing else.",
+      "files": [
+        "scripts/ledger.py"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "change": "add-lead validates and canonicalizes `segment` against config/icp.yaml instead of taking whatever string it is handed. A new canonical_segment() maps case-insensitively onto the four lead_segments names, maps the four legacy short keys earlier runs wrote (tourism, healthcare, anc, other) onto their canonical names rather than rejecting real history, and returns None for everything else. add-lead refuses a None, prints the four valid names, writes nothing and exits 2. Fuzzy matching is deliberately absent, because a near miss filed silently under the wrong segment is the defect this exists to stop.",
+      "evidence": "This run wrote \"Healthcare\" where the ICP says \"Independent healthcare and elder care\", and the ledger took it without a word. `ledger.py stats` then reported EIGHT segment buckets for four real segments: tourism 5 alongside Tourism and visitor industry 1, healthcare 1 alongside Healthcare 1, anc 4 alongside Alaska Native corporations 2, other 2 alongside other labor-scarce 2. Every by-segment cut was silently split in half, including ledger.py scoreboard, whose entire job is telling us which segments answer. The model caught it by eye at the last second while reading stats, which is exactly the class of check CLAUDE.md says is computed in code and never eyeballed, the same rule that governs dedupe and ROI arithmetic.",
+      "verified_how": "POSITIVE, canonical_segment resolves the exact canonical name, a case-mangled variant, a whitespace-padded variant, and all four legacy short keys, including the literal \"Healthcare\" this run wrote, which now auto-corrects rather than fragmenting. Re-adding today's real lead is still an idempotent upsert, still 18 leads, and the shipped row now carries the canonical name. NEGATIVE, four rejections that must not leak through, a near miss (\"Health care\"), a partial (\"Healthcare and elder care\"), an empty string and a null, plus an end-to-end add-lead with segment \"Fishing\" which exited 2, printed the four valid names, and left the md5 of ledger/leads.json byte-identical, so a reject cannot half-write.",
+      "files": [
+        "scripts/ledger.py"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "change": "retro_check's negative-case detector stops false-flagging gates that signal with anything other than exit 1. The literal token \"exits 1\" is replaced by a regex over any NON-ZERO exit, exit/exits/exited/exiting, optionally with or code, and zero is deliberately excluded because exit 0 is the passing case and counting it would make the warning fire for nobody. The signal list also gained the shape a verification note is actually written in, a labelled NEGATIVE, section, plus rejected, refuses, refused, must not leak and still fails. The matching moved out of an inline any() into a named tested_a_negative() so it is unit-testable rather than only reachable through a full run.",
+      "evidence": "Caught by this run's own retro. retro_check warned 'no negative case evident' against the segment-validation upgrade whose verification described four rejection cases and an end-to-end refusal that exited 2 and left ledger/leads.json byte-identical. The gate under test signals with exit 2, and the detector only knew the literal string 'exits 1'. This file's own docstring says every gate written on 2026-08-05 had false positives on its first attempt and that it should assume it is wrong before assuming the run is, so a false positive here is the failure mode it was warned about. A warning that fires on thorough work is how a warning gets ignored, and this one guards the difference between a gate and something that only looks like coverage.",
+      "verified_how": "POSITIVE, five verification texts that really did run the failing case now all detect: this run's exits-2 entry, an exits-1 entry, the 2026-08-05 'caught all five reconstructions' style, an 'injected' style, and an 'exits with code 3' style that the first regex missed and which forced the with/code groups apart. NEGATIVE, five texts that show no failing case still detect nothing and still warn, a pure happy-path note, a note whose only exit code is the passing exit 0, a note claiming the change is obviously correct with no test, an empty string and a null. REGRESSION, all thirteen entries in ledger/upgrades.json were judged under the old token list and the new detector and compared: exactly ONE verdict changed, the false positive this fixes. The eleven pre-existing 2026-08-05 entries are untouched.",
+      "files": [
+        "scripts/retro_check.py"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "run": "R&M Consultants",
+      "change": "study_lint's ROI row matcher takes the MOST SPECIFIC match instead of the first one in table order, and says so out loud when two rows tie. cell() used to walk the rows in insertion order and return the first whose label contained any fragment of the wanted figure, so a driver row printed above an output row could shadow it entirely. Candidates are now ranked by the LENGTH of the fragment they matched, which is what makes the specific phrase win over the generic one, and a genuine tie emits an ROI ROW AMBIGUOUS warning naming both labels rather than silently picking one. The 'recovered' fragment list also gained 'cost recovered' and 'of five year cost' ahead of the bare 'recovered' and 'share of' so it has something specific to win with.",
+      "evidence": "This cost THREE separate fix rounds in one run. A driver row 'Share of that time removed' shadowed the output row 'Share of five year cost recovered' because both contain 'share of', so the gate compared a 40 percent cut against a 119 percent recovery and failed a study whose arithmetic was correct. It happened again on 'Hours recovered a year' shadowing the same output row, and a third time on 'Year one share of full benefit'. Each time the study was renamed to suit the checker, which is the artifact bending instead of the gate, and the third rename ('Year one adoption ramp') is still in the shipped study for no reason other than this bug.",
+      "files": [
+        "scripts/study_lint.py"
+      ],
+      "verified_how": "Reconstructed the exact collision by renaming the driver row back to 'Share of that time removed' and confirmed the gate now exits 0 instead of failing. NEGATIVE CASE: injected a genuinely wrong printed recovery of 999 percent against a computed 119 and confirmed the gate still exits 1 and names the right row, so the fix did not blind it. The shipping study re-runs clean."
+    },
+    {
+      "date": "2026-08-07",
+      "run": "R&M Consultants",
+      "change": "build_study_page's content audit stops false-flagging text that the page renders across a line break. The audit probes for a string's first six words as one contiguous run inside the raw markup, and a diagram node label is emitted as one <text> element per wrapped line, so those six words are never contiguous in the HTML even when every word is visibly on the page. The probe now also runs against a tag-stripped, whitespace-collapsed copy of the output, which is what a reader actually sees.",
+      "evidence": "On this run the builder reported five architecture node labels as content that 'never reached the page' while all five were rendering correctly. The showrunner believed it, spent a round rewriting every label, and mis-measured the diagram's wrap width by a factor of nearly three while doing so, concluding the labels were being truncated when they were not. A false positive in an audit is worse than no audit, because the next real warning gets read as noise.",
+      "files": [
+        "scripts/build_study_page.py"
+      ],
+      "verified_how": "Restored the long wrapped labels and confirmed the audit no longer reports them. NEGATIVE CASE: added a study.json key the renderer does not read at all and confirmed the audit still reports it as missing, so the check is not simply passing everything. Also caught a real bug in the first attempt at this fix, a missing 'import re' that made the builder crash rather than warn, which two earlier test cases had reported as passes because the crash produced no output."
+    },
+    {
+      "date": "2026-08-07",
+      "run": "R&M Consultants",
+      "change": "build_study_page now WARNS when a diagram node label overflows the three lines the renderer draws, naming the node and quoting the exact words that are not on the page. The cap itself is unchanged and correct, since a node label that needs four lines is a label that should be shorter, but it used to apply in complete silence.",
+      "evidence": "A latent defect rather than one that shipped, found while investigating the audit false positive above. The renderer wraps a label to a fixed width and then draws lines[:3], discarding anything past that with no error, no warning and no mark on the page. A future study with a long node label would render a truncated fragment as though it were the whole name, and the only thing that would catch it is a human reading the SVG. FIELD_STUDY_SPEC already says to keep the diagram small, so this makes the renderer enforce what the spec asks for instead of silently mangling the label.",
+      "files": [
+        "scripts/build_study_page.py"
+      ],
+      "verified_how": "Fed a node label long enough to genuinely overflow and confirmed the warning fires and quotes the dropped words verbatim. NEGATIVE CASE: confirmed the shipping study's own six labels produce no warning at all, so it is not noise on every run."
+    },
+    {
+      "date": "2026-08-08",
+      "run": "Talkeetna Air Taxi",
+      "change": "scripts/send_watch.py, a new reconciler that compares the ledger against what actually left the outbox. The showrunner reads Gmail, because only it has the connector, and this script does the MATCHING, which is the part that has to be computed rather than eyeballed. Two keys, the recorded contact_email matched EXACTLY first and normalized domain as a conservative fallback. Applied to the real ledger this run and corrected 11 rows.",
+      "evidence": "This run's own Phase 0. Step 7 searched Gmail, PROVED the 2026-08-07 R&M email had gone out, read the sent body back, diffed it and recorded a voice delta from it, then threw the fact of the send away because no step writes it down. `ledger.py stats` said `sent 1` while voice_diff.py said nine sends had been compared. `ledger.py scoreboard` said `outcome recorded 0` against 18 leads, so the outcome tracking shipped on 2026-08-05 had never received a single data point in three months and every cut it computes was blank, including the one that tests the honest-restraint thesis this routine is built on.",
+      "files": [
+        "scripts/send_watch.py",
+        "ledger/leads.json",
+        "runs/2026-08-08/talkeetna-air-taxi/gmail_observed.json"
+      ],
+      "verified_how": "14 hermetic negative-case checks, and two of them found real bugs BEFORE this touched the ledger. The string '@alpha.com' has an at-sign and matched a live lead, so an empty local part is now rejected. A lead appearing twice in the outbox took whichever timestamp the loop saw last, so sent_at is now the earliest and no longer depends on Gmail's result order. Also asserted: absence never writes anything, `replied: false` is not recorded as no_reply because a reply can still arrive tomorrow, an existing outcome is never overwritten, and an exact address beats a competing domain so a send can never be attributed to the wrong company. Domain-only matching left five of twelve real sends unmatched, which is what bought the second key."
+    },
+    {
+      "date": "2026-08-08",
+      "run": "Talkeetna Air Taxi",
+      "change": "scripts/room_reconcile.py hardened twice. It now reads a kill_list in any shape the conscience returns it in, bare strings, capability dicts, key synonyms, a capability-to-why mapping and mixed lists, and it says out loud when the kill list is missing or empty rather than printing an all-clear over a check that examined nothing. Separately, a string's PATH is now part of the reading, so non_goals, out_of_scope and kill_list are refusing containers and open_questions, risks and assumptions are asking containers.",
+      "evidence": "Two failures in this run's Phase 5, neither a judgement call. FIRST IT CRASHED with an AttributeError, because the ai-feasibility-engineer returned kill_list entries as objects rather than bare strings, a shape its own `# OUTPUT` block does not forbid since that block never mentions kill_list at all. A gate that dies on a legitimate output is worse than a gate that fails, because the run in front of it is under pressure and will route around it. THEN IT FAILED 27 TIMES AND ALL 27 WERE THE SAME FALSE POSITIVE, every one a non-goal recorded as {item, reason}, where the item field names the killed capability and the hedge is the sibling reason field. The run contract explicitly demands non-goals be stated that way, so the gate was failing a document for obeying the contract.",
+      "files": [
+        "scripts/room_reconcile.py"
+      ],
+      "verified_how": "NEGATIVE CASES FIRST, because the risk with this fix was making a gate stop failing rather than stop being wrong. Twelve path-classifier checks, and the EIGHT THAT MATTER assert the gate STILL FIRES: a roadmap Now item, a Next item, a LATER item, a phase1_must, a goal, a delivery plan, a diagram caption and the gates prose ALL still count as promises and would still fail on a killed capability. Ten more on the shape reader, including the NEGATIVE cases of a missing kill_list, an empty kill_list, an entry with no strings at all, and None entries, none of which may crash and none of which may silently drop a kill, because a dropped kill is a kill that stops binding. The real run then exited 0 with the four outputs agreeing."
+    },
+    {
+      "date": "2026-08-08",
+      "run": "Talkeetna Air Taxi",
+      "change": "scripts/prose_budget.py, which attributes the rendered prose word count back to the study.json field that produced it. It renders once for a baseline then once per field with that field replaced by a sentinel, so it re-implements neither the word counter nor the template and the number is measured through the real builder by the real gate. It also separates NOT ON PAGE from structure, and names the fields with enough slack to absorb a given overage.",
+      "evidence": "REPEAT OFFENDER, second appearance, so it stopped being a note. knowledge/MACHINE_BACKLOG.md recorded it on 2026-08-07 where a run made roughly twenty seven trimming passes across five critic rounds and lost or garbled a caveat in EVERY round, because trimming removes qualifying clauses first and qualifiers read as slack. It came back today. This run trimmed twice, guessed both times, and landed 19 words over on the second pass.",
+      "files": [
+        "scripts/prose_budget.py",
+        "knowledge/MACHINE_BACKLOG.md"
+      ],
+      "verified_how": "Ten hermetic checks, and testing on REAL DATA found two bugs in the first version, both of which would have produced an authoritative wrong number, which is the failure mode of the word count it replaces. It emptied each field, and the builder DROPS a section whose field is empty, so the delta swallowed sibling content and reported 568 words for a 107 word field. It also cried wolf, flagging roi.table_note and roadmap.gates as UNRENDERED when both render and are deliberately counted as structure. Negative cases now assert that a rendered table note is structure and never reported as missing, and that nothing is suggested when no field is big enough."
+    },
+    {
+      "date": "2026-08-09",
+      "run": "White Pass & Yukon Route Railway",
+      "change": "scripts/room_collect.py, plus Write and a PERSIST section on staff-engineer, product-manager, roi-analyst and delivery-lead. The four Phase 4 agents now write their own JSON to a briefed path and return the same object, and the collector assembles engineering.json from those files, validating each against the agent's own `# OUTPUT` block through room_reconcile.contracted_keys so the agent spec stays the single schema.",
+      "evidence": "REPEAT OFFENDER, second appearance. knowledge/MACHINE_BACKLOG.md recorded on 2026-08-08 that the four agents whose output MUST be persisted verbatim were the only ones that could not persist it, so the showrunner retyped roughly 40KB of JSON every run, and that transcription is the exact mechanism the 2026-08-05 defect came through, where a summary dropped six of nine keys from a design and eight of nine from an ROI. It came back today.",
+      "verified_how": "Negatives first. A missing file and a 2-of-9-key summary were both named and refused while the two good sections still collected. Bad JSON and a JSON list were both refused. A fence-wrapped file was unwrapped and accepted. An unknown section exited 2. --only merged onto existing sections without clobbering them. On the real run all four sections collected at full contracted key count, 10/10, 9/9, 5/5, 9/9. HONEST LIMIT FOUND IN FLIGHT: agent definitions are resolved from the registry loaded at SESSION START, so the frontmatter change could not take effect in the same session that made it. The agents reported having no Write tool and the collector's fallback path carried the run, which is exactly the negative case it was built for, exercised for real rather than synthetically. The fix lands next run.",
+      "files": [
+        "scripts/room_collect.py",
+        ".claude/agents/staff-engineer.md",
+        ".claude/agents/product-manager.md",
+        ".claude/agents/roi-analyst.md",
+        ".claude/agents/delivery-lead.md"
+      ]
+    },
+    {
+      "date": "2026-08-09",
+      "run": "White Pass & Yukon Route Railway",
+      "change": "room_reconcile.py now reads the PARENT object when deciding whether a killed capability is being promised. A killed thing named in a label key (component, item, capability, name, title) is compliance when a SIBLING string carries a refusal. Added a DEFERRING_CONTAINERS set (phase1_later, later, deferred, backlog, next) and the deferral verbs (defer, deferred, postponed, parked, on hold, out of phase one, neither).",
+      "evidence": "The gate raised two FALSE FAILURES on this run's engineering room, both the shape its own comments warn about, that a gate failing a document for obeying the contract teaches the next run to skip the gate. The design named a killed item as a build_vs_buy `component` whose sibling `why` read 'Neither, in phase one ... It is on the kill list'. The PRD deferred reply drafting inside phase1_later and was read as promising the killed voice agent. The 2026-08-05 fix had already taught the script to read non_goals {item, reason} that way, but by special-casing the container name, so the identical shape one field over was unprotected.",
+      "verified_how": "Negatives first, and they are the point. A roadmap item genuinely promising the voice agent still FAILS. A build_vs_buy entry whose sibling `why` PROMISES rather than refuses still FAILS, which proves the sibling check is not a blanket excuse for naming a killed thing. The real run then passes at exit 0 with four warnings, all read and judged benign.",
+      "files": [
+        "scripts/room_reconcile.py"
+      ]
+    },
+    {
+      "date": "2026-08-09",
+      "run": "White Pass & Yukon Route Railway",
+      "change": "scripts/_paths.py and its resolve(), wired into the eight scripts that take path arguments. A relative path is tried against the cwd first, so normal use is unchanged, and falls back to the repo root when that misses.",
+      "evidence": "REPEAT OFFENDER, second appearance, and it bit this run in the middle of Phase 4. knowledge/MACHINE_BACKLOG.md recorded on 2026-08-07 that Phase 1 wrote selection.md, shortlist.json and all four scout outputs outside the repo because an earlier command had cd'd to the sibling checkout and the working directory persisted, silently. Today a cd to the public repo to check its state left the shell there, and the next command reported that .claude/agents/staff-engineer.md did not exist and that this was not a git repository, which cost a confused diagnosis at exactly the wrong moment.",
+      "verified_how": "study_lint and room_reconcile were both run from /home/user/alaskaaicarousels with a repo-relative --study and --dir. Both exited 0 and read the right files, where before the fix they would have failed. Both were then re-run from the repo root and still exited 0, so normal use is unchanged. study_qa re-run clean at 19/19. NEGATIVE CASE, added after retro_check rightly warned there was none. resolve() must not silently mask a file that genuinely does not exist. Asked study_lint for out/2026-08-09/NOPE.json from the sibling checkout: it exits 1 and names the repo-root path it looked for, rather than resolving to something else or passing. The resolver removes the cwd trap without removing the error.",
+      "files": [
+        "scripts/_paths.py",
+        "scripts/study_lint.py",
+        "scripts/study_qa.py",
+        "scripts/claim_sweep.py",
+        "scripts/room_collect.py",
+        "scripts/room_reconcile.py",
+        "scripts/roi_math.py",
+        "scripts/build_study_page.py",
+        "scripts/prose_budget.py"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "run": "Major Marine Tours (the 2026-08-10 run)",
+      "change": "scripts/dup_clause.py, new. Finds maximal repeated word runs inside a single EDIT UNIT, which is one line of markup or one string literal inside a script block. Cross-unit repetition is normal in a document and is not flagged. Default n=4.",
+      "evidence": "study-critic round 3 returned three CRITICALs that were one defect wearing three faces: a replacement clause inserted and the original left standing, in three separate visible strings of demo.html. Its own note named the remedy, sweep the file mechanically rather than re-reading it, because this happened three times. A reader is the wrong instrument for a mechanical failure mode.",
+      "verified_how": "Regression-tested against all three real defects: at n=4 it finds each one as ONE finding with the exact span, and at n=5 it misses the first, which is why 4 is the default. Then calibrated against four false positives it threw on the real artifacts, each fixed rather than tolerated. (1) String-literal granularity inside <script>, because line granularity flagged fired.push(...) four times and flagged two branches of a ternary that legitimately share wording. (2) Numerals kept as tokens, because dropping them collided 'up to 72 hours' with 'up to 24 hours' into a phantom duplicate, the exact opposite of the gate's purpose. (3) Spelled-out figures exempt, so naming the ask twice in one paragraph is not a finding. (4) Maximal runs rather than sliding windows, so one defect reports once instead of six times. Scope is documented as hand-edited sources only: run on the generated field-study.html it throws 45 findings, because that renderer emits the whole body on one line with inlined base64 fonts.",
+      "files": [
+        "scripts/dup_clause.py"
+      ],
+      "honest_limit": "A GREEN EXIT IS NOT A CLEAN DOCUMENT, and this is written into the tool's own docstring rather than left for the next run to discover. It compares strings inside one edit unit, so it cannot see the same CLAIM restated across two ADJACENT units. That is exactly where the duplication relocated once the within-string cases were fixed: demo.html 644 and 647 carried one claim in two string literals rendered inches apart in the same card, and the critic caught it by reading while this tool reported clean. It always will.",
+      "date_note": "DATE NOTE. This is the 2026-08-10 run, which started on the 10th Anchorage and crossed midnight during an eleven-round critic loop. The entry is dated 2026-08-11 because that is when the commits were authored, and retro_check verifies an upgrade against real commits rather than against prose, which is the whole point of the gate. The run field carries the company so the two facts stay joined."
+    },
+    {
+      "date": "2026-08-11",
+      "run": "Major Marine Tours (the 2026-08-10 run)",
+      "change": "scripts/quote_fidelity.py, new. Asserts every quoted span in the demo's SRC table is a substring of its claims.json quote, comparing on collapsed whitespace only, so punctuation, capitalisation, dashes and spelling must match character for character. An id with quoted spans and no quote in the fact file is reported rather than skipped.",
+      "evidence": "A round-8 fix asked for house date ordinals on the demo, and the honest way to apply that to thirty-odd strings is a bulk regex over the file. THAT FILE ALSO HOLDS EVERY VERBATIM QUOTATION THE DEMO SHOWS A READER. The sweep happened to be safe, because the pattern required a digit followed by whitespace or punctuation and the quoted dates already carried ordinals, but that was LUCK RATHER THAN DESIGN and I only checked it afterwards by hand. HONESTY names one unforgivable failure and the fact-checker named how it actually happens on this desk, a sharpening reflex where a quote rebuilt from memory comes back rebuilt toward the point it was supporting. A bulk edit over a file containing quotations needs a gate, not a spot check.",
+      "verified_how": "Tested both directions. Passes at 20 of 20 spans on the real demo. Then tampered: tidied c27's verbatim en dash into the word 'to', which is precisely the sharpening edit a house style rule would tempt, and it reports the drift with both strings side by side and exits 1.",
+      "files": [
+        "scripts/quote_fidelity.py"
+      ],
+      "honest_limit": "It can only compare against quotes that claims.json actually carries. It reports ids whose spans have no quote on file rather than passing them silently, but it cannot verify a quote the fact-checker never recorded.",
+      "date_note": "DATE NOTE. This is the 2026-08-10 run, which started on the 10th Anchorage and crossed midnight during an eleven-round critic loop. The entry is dated 2026-08-11 because that is when the commits were authored, and retro_check verifies an upgrade against real commits rather than against prose, which is the whole point of the gate. The run field carries the company so the two facts stay joined."
+    }
+  ]
 }
