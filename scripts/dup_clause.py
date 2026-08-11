@@ -12,6 +12,20 @@ looks for: a word n-gram repeating within a single line or a single JSON
 string value. Cross-line repetition is normal in a document (headings echo
 body copy on purpose) and is NOT flagged.
 
+THE BLIND SPOT, NAMED BY THE STUDY-CRITIC ON 2026-08-10, THE DAY THIS WAS
+WRITTEN. A CLEAN EXIT HERE IS NOT A CLEAN DOCUMENT. This compares STRINGS
+inside ONE edit unit. It can't see the same CLAIM restated across two adjacent
+units, and that is exactly where the duplication relocated once the
+within-string cases were fixed: demo.html line 644 said "a guest who parked
+their own car gets nothing from it at all" and line 647, rendered inches below
+it in the same card, said "a guest who drove and parked has nothing covering
+them at all". Two string literals, one claim, twice on screen. This tool
+reported CLEAN on that and always will.
+
+So run scripts/claim_sweep.py as well and read the artifact. A green exit here
+means one specific failure mode is absent, the one where a fix is applied by
+insertion and the original is left standing. It means nothing else.
+
 SCOPE. Run this on the artifacts a human or an agent EDITS by hand, which today
 means demo.html and study.json. Do not run it on a generated render such as
 field-study.html: build_study_page.py emits the whole body on one line with
