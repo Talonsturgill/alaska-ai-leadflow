@@ -436,6 +436,26 @@ def main():
     # to carry a reason, or it is a bare refusal nobody justified and it warns.
     REFUSING_CONTAINERS = ("non_goals", "non_goal", "not_doing", "out_of_scope",
                            "kill_list", "killed", "excluded")
+    # A CONTAINER WHOSE NAME IS ITSELF A NEGATION refuses everything inside it,
+    # and enumerating the names by hand does not scale. Added 2026-08-10 on the
+    # SECOND appearance of this defect class, per the retro rule that a
+    # twice-seen defect is the work rather than a note.
+    #
+    # The 2026-08-09 fix added `phase1_later` to DEFERRING_CONTAINERS after a
+    # delivery-lead invented a container name this script did not know. On
+    # 2026-08-10 a delivery-lead invented `not_on_any_lane`, listed seven
+    # killed capabilities in it with a refusal beside each, and the gate raised
+    # three failures against the single most compliant section in the document.
+    # Adding one more literal string would buy exactly one run, because the
+    # names are written fresh by an agent every time.
+    #
+    # So the rule is structural rather than lexical: if the container name
+    # STARTS with a negation, the container is a refusal. Anchored at the start
+    # on purpose. A substring match would swallow `cannot_confirm`, and worse it
+    # would read `roadmap_notes` as a refusal because it contains "not".
+    NEGATED_CONTAINER = re.compile(
+        r"^(not|no|non|never|wont|will_not|excluded|out_of|off_the|rejected|"
+        r"declined|refused|dropped)(_|$)")
     ASKING_CONTAINERS = ("open_questions", "questions", "risks", "assumptions")
     # Containers whose whole PURPOSE is to hold what is not being done now.
     # Naming a killed capability inside one of these is a deferral, which is
@@ -473,7 +493,8 @@ def main():
         for path, text, parent, key in strings_with_parent(section):
             low = norm(text)
             parts = container_of(path)
-            in_refusing = any(p in REFUSING_CONTAINERS for p in parts)
+            in_refusing = any(p in REFUSING_CONTAINERS
+                              or NEGATED_CONTAINER.match(p) for p in parts)
             in_asking = any(p in ASKING_CONTAINERS for p in parts)
             in_deferring = any(p in DEFERRING_CONTAINERS for p in parts)
             for subject in killed:
@@ -554,7 +575,16 @@ def main():
             low = norm(text)
             if not mentions(low, phrase, need=3):
                 continue
-            if any(h in low for h in REFUSAL):
+            # Same container rule as the killed-capability check above. A
+            # roadmap section whose NAME is a negation refuses everything in
+            # it, so naming a non-goal there is compliance rather than a
+            # promise. Without this, `not_on_any_lane` failed on 2026-08-10 for
+            # doing exactly what the contract asks, and the two checks
+            # disagreed with each other about the same string.
+            in_refusing_container = any(
+                p in REFUSING_CONTAINERS or NEGATED_CONTAINER.match(p)
+                for p in container_of(path))
+            if in_refusing_container or any(h in low for h in REFUSAL):
                 notes.append(f"roadmap references a non-goal and holds it in place: "
                              f"{phrase[:64]}")
             else:
