@@ -1,0 +1,35 @@
+{
+  "subject": "Your refund clocks and the phone desk",
+  "body": "Your refund clock is 72 hours on a cruise-only booking and 21 days once transportation is on it. The person answering the phone has to know which one applies before the guest hangs up. We already did the study on that. The first thing in it doesn't cost anything.\n\nhttps://alaskaaihq.com/awesomeproposal/major-marine-tours/\n\nWorth a reply either way.",
+  "to": "info@majormarine.com",
+  "to_name": null,
+  "to_role": "general business inbox, not attributable to a named person",
+  "link": "https://alaskaaihq.com/awesomeproposal/major-marine-tours/",
+  "opens_on": "their own published refund policy, which runs a different clock off what is inside the booking",
+  "word_count_prose": 54,
+  "comma_count": 0,
+  "subject_chars": 37,
+  "kill_list_hits": 0,
+  "lead_critic": "ship at round 3",
+  "critic_rounds": [
+    "r1 kill: subject carried the merge-field shape 'Field study for <Company>', and sentence 3 bolted the free-item clause onto the only sentence about us",
+    "r2 kill: the critic's own replacement subject echoed the opening line, four shared tokens on consecutive inbox rows. I flagged the echo and it agreed it was its error",
+    "r3 ship: subject names the topic and lets the opening sentence deliver the specifics underneath it"
+  ],
+  "three_things_refused": [
+    "did NOT sharpen 'which one applies' to name the third clock (c6, 7 days on a hotel package). The error leans in THEIR favour and the email claims no completeness, so sharpening it would only spend words making them look worse",
+    "did NOT add 'No strings.' before the close, though the 2026-08-09 send used it. A second reassurance on a 54 word email protests the point and the gift is already unconditional",
+    "did NOT add a signature block. The mailbox carries one and a drafted sign-off would sign twice"
+  ],
+  "what_the_email_refused_to_carry": [
+    "the parking contradiction and the stale 2020/2021 booking copy, both website defects banned from the email",
+    "the killed check-in and rail finding in any form",
+    "Whittier, Prince William Sound, or any second port",
+    "any implication that guests complain, since no negative verbatim was ever fetched",
+    "the 18,000 build, the 4,500 stage, the payback line and the refused voice agent, all of which live in the study where they have room and caveats"
+  ],
+  "numbers_verified_against_claims": {
+    "72 hours": "c4 verbatim",
+    "21 days": "c7 verbatim"
+  }
+}

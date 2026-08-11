@@ -1,0 +1,167 @@
+{
+  "segment": "Independent healthcare and elder care",
+  "candidates": [
+    {
+      "company": "Beacon Occupational Health & Safety Services, Inc.",
+      "domain": "beaconohss.com",
+      "location": "HQ Anchorage, AK, with clinics in Fairbanks, Wasilla (Mat-Su), Deadhorse/Prudhoe Bay, and roles posted in Tok",
+      "what_they_do": "Independent, privately held Alaska occupational health company. DOT and non-DOT physicals, drug and alcohol testing, audiograms, respirator mask fit testing, EKG, X-ray, lab, vaccinations, workers' comp evaluations, plus remote medical staffing, safety and training divisions serving employer clients including North Slope oilfield.",
+      "why_fit": "A four-site Alaska occupational medicine company whose entire product is repeating employer compliance paperwork, and most of that layer sits outside the clinical record.",
+      "scores": {"ai_solvable_pain": 5, "ability_to_pay": 5, "reachability": 3, "offer_fit": 5, "alaska_signal": 5},
+      "fit_total": 23,
+      "structural_pain": {
+        "finding": "They are hiring the front desk and the clinicians at the same time across five Alaska sites, including two remote ones, while inbound is split across at least five separate service queues.",
+        "quotes": [
+          {"quote": "Front Desk/Clinic Coordinator (Anchorage, AK)", "url": "https://www.beaconohss.com/work-at-beacon/", "note": "Posted alongside open Physician Assistant/Nurse Practitioner roles in Anchorage, Fairbanks, Wasilla and Tok, and a Paramedic role in Tok."},
+          {"quote": "Billing, Clinical Services, Customer Service, Drug & Alcohol Testing", "url": "https://www.beaconohss.com/contact/", "note": "The published subject dropdown on their own contact form, i.e. inbound is routed by hand into separate operational queues."},
+          {"quote": "Mon-Fri: 7:30 a.m. - 5:30 p.m. (Occupational Health); Mon-Fri: 7:30 a.m. - 7:00 p.m (Drug and Alcohol Testing)", "url": "https://www.beaconohss.com/locations/", "note": "Two different service clocks at one Anchorage front desk, while Deadhorse runs 6:00am-6:00pm or 6:00am-8:00pm depending on the day."}
+        ]
+      },
+      "decision_maker_evidence": {
+        "named_person": "None confirmed on a fetched page. Data-broker profiles (RocketReach, SignalHire) name Holly Hylen as President/CEO and Michael McDermott as CFO, but no first-party or authoritative page confirming either was fetched, so treat as unverified.",
+        "published_email": "info@beaconohss.com",
+        "email_url": "https://www.beaconohss.com/contact/",
+        "other": "Their careers page describes an internal promotion path from Clinical Coordinator to Vice President of Clinical Services since 2011, so a VP of Clinical Services role exists, unnamed. Directory listings at Alaska Support Industry Alliance and Alaska Chamber list no contact person."
+      },
+      "source_urls": [
+        "https://www.beaconohss.com/",
+        "https://www.beaconohss.com/locations/",
+        "https://www.beaconohss.com/contact/",
+        "https://www.beaconohss.com/work-at-beacon/",
+        "https://members.alaskaalliance.com/list/member/beacon-occupational-health-safety-srvs-825",
+        "https://business.alaskachamber.com/list/Details/beacon-occupational-hss-3490796",
+        "https://www.bbb.org/us/ak/anchorage/profile/medical-doctor/beacon-occupational-health-safety-services-1296-22049158"
+      ],
+      "reputation_screen": "FLAG. BBB rates them D-, not accredited, for failure to respond to 2 complaints filed against business (fetched BBB profile). No licensing board action, fraud settlement, malpractice pattern or people/billing litigation found. It is a responsiveness rating rather than misconduct, and it arguably corroborates the admin-overload thesis, but a brand pitching honesty should know it before writing and should not pretend it isn't there.",
+      "confidence": "High on existence, Alaska footprint and multi-site scale (three independent directories plus four first-party pages). Medium on ability_to_pay precision, the 201-500 employee figure comes only from data brokers and was not verified. Low on a named decision-maker, there is a real published business email but no named leader on any fetched page."
+    },
+    {
+      "company": "Alaska Sleep Clinic (Alyeska International, Inc. dba)",
+      "domain": "alaskasleep.com",
+      "location": "Anchorage, Fairbanks, Wasilla and Soldotna, AK",
+      "what_they_do": "Independent, veteran-owned diagnostic sleep medicine group. Four AASM-accredited labs plus in-lab and home sleep studies, CPAP titration, pediatric sleep testing, telemedicine, and a durable medical equipment and supply arm.",
+      "why_fit": "Four clinics running a ten-document intake packet and a fax-per-clinic physician referral pipeline, which is a paperwork engine problem with named, reachable owners.",
+      "scores": {"ai_solvable_pain": 5, "ability_to_pay": 4, "reachability": 3, "offer_fit": 4, "alaska_signal": 5},
+      "fit_total": 21,
+      "structural_pain": {
+        "finding": "Every new patient arrives through a ten-document packet, and every referring physician arrives through one of four separate clinic fax lines with no single intake front door.",
+        "quotes": [
+          {"quote": "Patient Registration Form, Financial Policy, Authorization for Release of Health Information, Private Health Information Disclosure, Notice of Privacy Practices, Patient Release Forms, Patient Questionnaire, Bed Partner Questionnaire, Sleep Diary, Instructions for Sleep Study", "url": "https://www.alaskasleep.com/forms-packets/", "note": "The published contents of their Complete Patient Packet. Ten documents per new patient, per clinic."},
+          {"quote": "Alaska Sleep Clinic is here to make your job easier and your patient's sleep better.", "url": "https://www.alaskasleep.com/physician-referrals/", "note": "Said on a page whose actual mechanism is four separate fax numbers, Anchorage 907-770-8965, Fairbanks 907-374-8872, Soldotna 907-420-0541, Wasilla 907-357-6672, plus a web-fillable or downloadable PDF referral form."}
+        ]
+      },
+      "decision_maker_evidence": {
+        "named_person": "Brent Fisher, MBA, FACHE, FACMPE, President and Chief Executive Officer. Faith Allard, MBA, Executive Director, identified on the same page as part owner of the veteran-owned small business. Mauricio Reinoso, MD, Medical Director. Harry Yuan, DO, Pediatric Medical Director.",
+        "named_person_url": "https://www.alaskasleep.com/get-to-know-us/",
+        "published_email": "None. No business email address appears on their homepage, locations page, get-to-know-us page, referrals page or forms page. Contact is by phone or per-clinic fax only. Do not invent one.",
+        "other": "An Alaska Legislature document surfaced in search lists a personal utexas.edu address for a Brent Alan Fisher of Anchorage. It was not fetched, it is a personal academic address rather than a business contact, and it must not be used."
+      },
+      "source_urls": [
+        "https://alaskasleep.com/",
+        "https://alaskasleep.com/locations/",
+        "https://www.alaskasleep.com/get-to-know-us/",
+        "https://www.alaskasleep.com/physician-referrals/",
+        "https://www.alaskasleep.com/forms-packets/",
+        "https://www.bbb.org/us/ak/anchorage/profile/sleep-center/alaska-sleep-clinic-1296-90009948"
+      ],
+      "reputation_screen": "Clean as far as verifiable. BBB A+, BBB Accredited since 4/29/2016 (fetched profile). No malpractice pattern, licensing board action, fraud settlement or litigation found in open search.",
+      "confidence": "High on existence, ownership, leadership names and the four-clinic footprint (five first-party pages plus a fetched BBB profile). The gap is reachability, there is a named CEO and a named part-owner but no published business email anywhere fetched, so first contact would have to be by phone or a verified LinkedIn."
+    },
+    {
+      "company": "Anchorage Veterinary Clinic and Urgent Care",
+      "domain": "anchoragevetclinic.com",
+      "location": "8811 Toloff Street, Anchorage, AK",
+      "what_they_do": "Owner-operated small animal veterinary clinic and same-day urgent care. Emergency stabilization, comprehensive medical care, surgery, dentistry and diagnostics, with in-house anesthesia monitoring, digital X-ray, ultrasound and on-site labs. Six named veterinarians, extended Thursday/Friday evening and Saturday hours.",
+      "why_fit": "Same-day urgent care capacity is rationed entirely by who gets through on the phone first thing in the morning, and veterinary keeps an honest build completely outside HIPAA.",
+      "scores": {"ai_solvable_pain": 4, "ability_to_pay": 3, "reachability": 5, "offer_fit": 5, "alaska_signal": 4},
+      "fit_total": 21,
+      "structural_pain": {
+        "finding": "They have deliberately closed the walk-in door, so the entire day's urgent care capacity is allocated through a morning phone scramble, and they have had to put money behind no-shows to protect the schedule.",
+        "quotes": [
+          {"quote": "Same day urgent care visits are offered on a daily basis, call early in the day after 8am to check availability", "url": "https://www.anchoragevetclinic.com/"},
+          {"quote": "we do not offer walk in services", "url": "https://www.anchoragevetclinic.com/"},
+          {"quote": "A no-show will automatically result in deposits being forfeited", "url": "https://www.anchoragevetclinic.com/"}
+        ],
+        "counter_evidence": "Their own homepage also states Currently we are fully staffed, so the labor-scarcity wedge is weaker here than elsewhere in the segment. The pain is call routing and schedule utilisation, not headcount, and the outreach must not claim otherwise."
+      },
+      "decision_maker_evidence": {
+        "named_person": "Dr. John Knudsen and Dr. Emily Mehlman, the husband-and-wife founder-owners. The about page states they had almost 10 years as veterinarians in Anchorage before starting their own clinic. Other named DVMs: Dr. Ginny Kunch, Dr. Cindy Richardson, Dr. Julie Stafford (joined January 2025), Dr. Sara Zimmerman.",
+        "named_person_url": "https://www.anchoragevetclinic.com/about-us",
+        "published_email": "info@anchoragevetclinic.com",
+        "email_url": "https://www.anchoragevetclinic.com/",
+        "other": "Best reachability in this segment set, named owners and a published business email on fetched pages."
+      },
+      "source_urls": [
+        "https://www.anchoragevetclinic.com/",
+        "https://www.anchoragevetclinic.com/about-us",
+        "https://akvma.org/find-a-veterinarian/"
+      ],
+      "reputation_screen": "Clean as far as verifiable. Listed in the Alaska Veterinary Medical Association find-a-veterinarian directory (fetched). No board action, litigation, fraud settlement or billing-practice complaint pattern found in open search. No BBB profile located.",
+      "confidence": "High on existence and reachability (two first-party pages plus the AKVMA member directory, named owners, published email). Medium-low on ability to pay, it is a single site with six DVMs, real payroll but a smaller budget than the multi-site names above, so size the ask accordingly."
+    },
+    {
+      "company": "Advanced Physical Therapy of Alaska, Inc.",
+      "domain": "aptak.com",
+      "location": "Anchorage, Wasilla, Fairbanks, Soldotna and Seward, AK",
+      "what_they_do": "Alaskan employee-owned outpatient orthopedic physical therapy group. Five clinical sites, direct access (no physician referral required), hands-on manual therapy, pelvic health, aquatic therapy, and a clinical site for the IAOM-US Fellowship Program.",
+      "why_fit": "Employee-owned, five Alaska communities, with a dedicated Billing Team Lead and Administrative Team Lead and a stated policy of paying clinicians for documentation time, which puts a dollar figure on the paperwork.",
+      "scores": {"ai_solvable_pain": 4, "ability_to_pay": 4, "reachability": 3, "offer_fit": 4, "alaska_signal": 5},
+      "fit_total": 20,
+      "structural_pain": {
+        "finding": "Documentation is a funded cost line in their own benefits package, not an afterthought, and they are carrying open clinician vacancies with sign-on bonuses in three of their five towns while running five separate phone and fax queues.",
+        "quotes": [
+          {"quote": "Paid time off & paid documentation time", "url": "https://aptak.com/career/", "note": "Listed as a recruiting benefit, so charting time is time they buy on payroll rather than absorb."},
+          {"quote": "Pelvic Health Physical Therapist: Sign-on bonus", "url": "https://aptak.com/career/", "note": "Posted three times, for Fairbanks, Anchorage and Wasilla, alongside a Pool/Aquatic PTA role in Wasilla. Sign-on bonuses on four of four open roles is a scarcity signal."},
+          {"quote": "New Patient / Inquiries, Current Patient, Other", "url": "https://aptak.com/contact/", "note": "Their published call routing, run across five separate clinic phone lines and five separate fax lines with no central business email."}
+        ]
+      },
+      "decision_maker_evidence": {
+        "named_person": "Valerie A. Phelps, PT, ScD, founder. Her own bio page states she founded the employee-owned Advanced Physical Therapy with locations spanning Anchorage, Fairbanks, the Mat-Su Valley, and the Kenai Peninsula. An independent NPI-based directory lists her title as Senior Director Clinical Owner. Administrative leadership named on their team page: Alexander Wielohorski (Operations Team Lead), Divida Pastorino (Administrative Team Lead), Michelle Ziegler (Billing Team Lead), Taylor Tapley (Executive Administrative Assistant), plus five named clinic managers.",
+        "named_person_url": "https://aptak.com/our-team/physical-therapists/valerie-phelps/",
+        "published_email": "None. No email address appears on their homepage, contact page, about page, team page, careers page or Anchorage clinic page. Contact form and per-clinic phone/fax only. Do not invent one.",
+        "other": "Michelle Ziegler, Billing Team Lead, is the most on-point operational buyer if a named route can be verified."
+      },
+      "source_urls": [
+        "https://aptak.com/",
+        "https://aptak.com/career/",
+        "https://aptak.com/contact/",
+        "https://www.aptak.com/meet-the-team",
+        "https://aptak.com/our-team/physical-therapists/valerie-phelps/",
+        "https://aptak.com/physical-therapy-clinic/anchorage-ak/",
+        "https://orthopedic.io/physio-clinic/advanced-physical-therapy-inc-anchorage-ak/"
+      ],
+      "reputation_screen": "Clean as far as verifiable. NPI 1437214459 active, Alaska primary physical therapist license (independent NPI-based directory, fetched). No licensing board discipline, malpractice pattern, fraud settlement or litigation found in open search.",
+      "confidence": "High on existence, employee ownership, five-site footprint and named leadership (six first-party pages plus an independent NPI registry listing). Medium on offer fit, PT documentation runs straight through the clinical record, so the clean, HIPAA-light build is intake, scheduling and insurance verification rather than charting. Low on reachability, real named leaders but zero published email."
+    },
+    {
+      "company": "Midnight Sun Animal Hospital + Emergency Care",
+      "domain": "midnightsunanimalhospital.com",
+      "location": "2545 East Tudor Road, Anchorage, AK",
+      "what_they_do": "Independent full-service veterinary hospital combining urgent care, emergency, general practice, surgery and internal medicine specialty services, open daily 8am to 8pm, seven days a week. Five named DVMs plus a practice administrator, licensed veterinary technicians, vet assistants, receptionists and kennel assistants.",
+      "why_fit": "An emergency-plus-general-practice front desk that is visibly rationing appointments through a timed morning phone window, and veterinary means an honest build never touches PHI.",
+      "scores": {"ai_solvable_pain": 4, "ability_to_pay": 3, "reachability": 4, "offer_fit": 5, "alaska_signal": 4},
+      "fit_total": 20,
+      "structural_pain": {
+        "finding": "Vaccine clinic capacity is released through a single timed phone window each morning, with the practice explicitly instructing callers not to call earlier, which is a published admission that the phone line is the bottleneck. Emergency, urgent care, general practice and specialty all share one front desk.",
+        "quotes": [
+          {"quote": "Phone lines for the vaccine clinic open the day of at 8:30am. Please call no earlier than 8:30am. Once you are placed on the vaccine clinic schedule, you will be given a specific time frame in which your pet(s) will be seen. Spots may be limited.", "url": "https://midnightsunanimalhospital.com/"},
+          {"quote": "a team of highly trained support staff, which includes a practice administrator, licensed veterinary technicians, vet assistants, receptionists, and kennel assistants to maintain efficient quality patient/client care 7 days a week", "url": "https://midnightsunanimalhospital.com/about-us/", "note": "One support org covering emergency, urgent care, general practice and internal medicine specialty across a seven-day week."}
+        ]
+      },
+      "decision_maker_evidence": {
+        "named_person": "Five named veterinarians on their about page: Cara Elton, DVM; Milissa Lewis, DVM; Grace Lund, DVM; Sophia Mallon, DVM; Nikki Wimmer Gonzalez, DVM. The same page confirms a practice administrator role exists but does not name the person. No fetched page names an owner.",
+        "named_person_url": "https://midnightsunanimalhospital.com/about-us/",
+        "published_email": "midnightsunah@outlook.com",
+        "email_url": "https://midnightsunanimalhospital.com/about-us/",
+        "other": "Published fax (907) 562-6737 and phone (907) 562-8384 on the same page. Note the business email is an outlook.com address rather than a domain mailbox, which is itself a small operational tell."
+      },
+      "source_urls": [
+        "https://midnightsunanimalhospital.com/",
+        "https://midnightsunanimalhospital.com/about-us/",
+        "https://www.bbb.org/us/ak/anchorage/profile/veterinarian/midnight-sun-animal-hospital-emergency-services-1296-22024148"
+      ],
+      "reputation_screen": "FLAG. BBB rates them B-, not accredited, for failure to respond to 1 complaint filed against business (fetched BBB profile), against 30 years in business since 1996. Open search also surfaces public reviews complaining about wait times and about how payment and cremation were handled at the time of a pet's death, which is emotionally charged territory. No veterinary board action, litigation or fraud settlement found. Not disqualifying on the evidence, but the grief-handling complaints are the kind of thing an honesty-first brand should read before writing a word.",
+      "confidence": "High on existence and operations (two first-party pages plus a fetched BBB profile, 30 years in business). Medium on reachability, there is a real published email and five named DVMs but no named owner or administrator on any fetched page. Medium-low on ability to pay, single site. Lowest-ranked of the five and the one to hold in reserve."
+    }
+  ]
+}

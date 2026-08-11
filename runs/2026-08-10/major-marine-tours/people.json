@@ -1,0 +1,89 @@
+{
+  "best_contact": {
+    "email": "info@majormarine.com",
+    "name_or_general": "general",
+    "role": "General company inbox, site-wide. Not attributable to a named person.",
+    "verbatim_context": "The literal string info@majormarine.com renders as readable text in the site footer/contact block on every page fetched, alongside 1412 4th Ave, Seward, Alaska 99664 USA, (907) 224-8030 and 800-764-7300. On the Employment page it also appears as the link text 'Send us an Email' in the line 'Questions? Send us an Email'.",
+    "url": "https://majormarine.com/contact-us/",
+    "also_seen_on": [
+      "https://majormarine.com/meet-the-team/",
+      "https://majormarine.com/employment/",
+      "https://majormarine.com/our-company/",
+      "https://majormarine.com/our_team/colby-lawrence/",
+      "https://majormarine.com/the-kenai-fjords-360-is-here-major-marine-tours-welcomes-new-vessel/"
+    ],
+    "rendered_in_plain_text": true,
+    "confidence": "high",
+    "verification_note": "Re-verified by the people-finder rather than trusted from the scout. Read as plain text in the fetched content of six separate pages on the company's own domain. Not Cloudflare-obfuscated, not JavaScript-injected."
+  },
+  "decision_maker": {
+    "name": "Colby Lawrence",
+    "role": "Vice President",
+    "url": "https://majormarine.com/meet-the-team/",
+    "why_this_person": "INFERENCE, labelled as such. Tom Tougas is owner and ultimate signature but runs a portfolio (Major Marine, Harbor 360 Hotel, a Hertz franchise) and sits on the First National Bank Alaska board, so he approves rather than evaluates. Lawrence is the single named VP and the number two. Kirsten McNeil (Director of Shoreside Operations) and Tayja Wright (Operations Manager) would use and validate the thing, so they are champions rather than approvers at this size.",
+    "escalation_path": "Tom Tougas, Owner",
+    "confidence": "medium-high on Lawrence as first contact, high on the roster and titles, medium on the budget-authority split which is inference"
+  },
+  "operating_leadership_verified_on_site": [
+    {"name": "Tom Tougas", "role": "Owner"},
+    {"name": "Colby Lawrence", "role": "Vice President"},
+    {"name": "Kori Goertz", "role": "Director of Sales"},
+    {"name": "Kirsten McNeil", "role": "Director of Shoreside Operations"},
+    {"name": "Tayja Wright", "role": "Operations Manager"},
+    {"name": "Rodney Roemmich", "role": "Maintenance Director"}
+  ],
+  "ownership": {
+    "summary": "Locally and family owned, based at 1412 4th Ave, Seward, AK 99664, with a seasonal South Harbor office at 1302-B 4th Ave. Tom Tougas is the current owner, listed as Owner on the company team page, named as owner on the Our Company page, quoted as owner in the company's own Kenai Fjords 360 vessel announcement, and independently confirmed by First National Bank Alaska's director bio page which states he owns Seward-based businesses Major Marine Tours, Harbor 360 Hotel and Hertz Rent-a-Car.",
+    "currency_check": "No news of a sale, acquisition or ownership change found for 2025 or 2026. Reported as no contrary evidence found, NOT as positive verification.",
+    "urls": ["https://majormarine.com/meet-the-team/", "https://majormarine.com/our-company/", "https://www.fnbalaska.com/team/tom-tougas/"]
+  },
+  "corporate_family": {
+    "parent_company": "None found. No parent or holding company disclosed on any page fetched.",
+    "affiliates_verified": [
+      {"name": "Harbor 360 Hotel, Seward", "relationship": "Same owner, per the FNB bio and harbor360hotel.com/our-company/ which presents both as award-winning, locally-owned Alaska businesses", "urls": ["https://www.fnbalaska.com/team/tom-tougas/", "https://harbor360hotel.com/our-company/"]},
+      {"name": "Hertz Rent-a-Car (Seward franchise)", "relationship": "Owned by Tougas per the FNB director bio. Not verified on any Major Marine page.", "urls": ["https://www.fnbalaska.com/team/tom-tougas/"]},
+      {"name": "Seward Gateway Hotel", "relationship": "UNCLEAR. Listed on majormarine.com/our-company/ as a lodging add-on. Whether common ownership or a commercial partnership is NOT verified. Do not assert ownership.", "urls": ["https://majormarine.com/our-company/"]}
+    ],
+    "explicitly_ruled_out": "Kenai Fjords Tours is a SEPARATE company and a direct competitor, part of the Alaska Collection with its own site footer reading 2025 Kenai Fjords Tours & Pursuit. Seward Windsong Lodge is in the same Pursuit portfolio. Alaska Heritage Tours / CIRI Alaska Tourism Corporation has no found relationship to Major Marine. Pursuit has no ownership or affiliate relationship to Major Marine.",
+    "ruled_out_url": "https://www.alaskacollection.com/day-tours/kenai-fjords-tours/"
+  },
+  "DO_NOT_USE_UNVERIFIED": [
+    "The commonly repeated story that Tom Tougas founded Kenai Fjords Tours in the 1970s before it passed to CIRI and later Pursuit. His FNB bio says only that he has helped manage numerous companies since he started in the tourism industry in the 1970s. NOT verifiable on any fetched page. MUST NOT appear in the study.",
+    "The third-party claim that VP Colby Lawrence previously worked at Kenai Fjords Tours. Broker and LinkedIn-snippet data only. Unverified.",
+    "Any personal email address for any named person at this company. None exists in verified form."
+  ],
+  "addresses_deliberately_not_generated": {
+    "statement": "A claimed email pattern was seen and REFUSED. No address in this output was constructed from it.",
+    "patterns_observed_and_refused": [
+      "LeadIQ publishes a claimed format of First@majormarine.com. colby@, tom@, kirsten@, kori@ and tayja@ were NOT generated and none should be treated as existing.",
+      "ZoomInfo shows masked stubs such as k***@majormarine.com for Kori Goertz and c***@majormarine.com for Rodney Roemmich. A masked first character is not an address. Note the ZoomInfo initial for Roemmich does not even match his first name, which illustrates why broker stubs are worthless as evidence.",
+      "RocketReach, Adapt.io, ContactOut, Wiza and VisualVisitor all claim paywalled personal addresses. None used.",
+      "sales@, groups@, reservations@ and press@ were NOT assumed despite being ordinary for a tour operator. Only info@majormarine.com was read on a page."
+    ]
+  },
+  "not_found": [
+    "Any email address for Tom Tougas, Colby Lawrence, Kori Goertz, Kirsten McNeil, Tayja Wright or Rodney Roemmich, on any page fetched.",
+    "A press or media contact address.",
+    "A travel-trade or group-sales address. majormarine.com/travel-professionals/ returned HTTP 404.",
+    "A Seward Chamber directory listing with contact details.",
+    "Direct fetch confirmation of any LinkedIn profile. LinkedIn returns HTTP 999 to this tool."
+  ],
+  "linkedin_probable_unconfirmed": [
+    {"name": "Colby Lawrence", "url": "https://www.linkedin.com/in/colby-lawrence-bb74178a/", "verification": "NOT FETCH-VERIFIED, LinkedIn HTTP 999"},
+    {"name": "Kirsten McNeil", "url": "https://www.linkedin.com/in/kirstenmcneil1", "verification": "NOT FETCH-VERIFIED, search-surfaced only"}
+  ],
+  "recommendation": "Draft to info@majormarine.com. A general inbox at a company with a published, named, six-person office roster is a routable inbox, not a dead end. Do not attempt a personal address for anyone here.",
+  "sources": [
+    "https://majormarine.com/meet-the-team/",
+    "https://majormarine.com/contact-us/",
+    "https://majormarine.com/employment/",
+    "https://majormarine.com/our-company/",
+    "https://majormarine.com/our_team/colby-lawrence/",
+    "https://majormarine.com/the-kenai-fjords-360-is-here-major-marine-tours-welcomes-new-vessel/",
+    "https://www.fnbalaska.com/team/tom-tougas/",
+    "https://harbor360hotel.com/our-company/",
+    "https://www.alaskacollection.com/day-tours/kenai-fjords-tours/",
+    "https://www.seward.com/listing/major-marine-tours/215/",
+    "https://theorg.com/org/major-marine-tours"
+  ]
+}

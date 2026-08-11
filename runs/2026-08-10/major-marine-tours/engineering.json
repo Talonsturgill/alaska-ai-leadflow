@@ -1,0 +1,1472 @@
+{
+ "prd": {
+  "title": "The Reservations Desk Answer Layer. A proposal for Major Marine Tours, Seward.",
+  "prepared_for": "Colby Lawrence, Vice President, and Tom Tougas, Owner",
+  "date": "2026-08-10",
+  "pr_faq_opening": "SEWARD, ALASKA. A guest calls the Major Marine desk on a Tuesday in June and asks whether they can move their cruise, whether the boat they booked takes a wheelchair, and whether the shuttle will pick them up at the hotel. The person answering was hired in March. They give the right answer to all three inside a minute, and they read the guest the sentence your own page already says, word for word. The one question your published rules don't actually cover goes straight to a named person instead of a guess.\n\nThat is the whole outcome. Nothing about it is new information to you. Every one of those answers is already written down on majormarine.com, correctly and precisely. The difference is where the answer lives at 4:40 p.m. on a Sunday in the first week of somebody's first season.\n\nQ. Why does this need attention at all, when the policies are already published and the reviews are good?\nA. Because the policies being right is not the same as the answer being fast and identical every time it is given, and because three of the four questions where a wrong answer costs the most have nobody downstream to catch a mistake before it reaches a guest or the bank.\n\nQ. What does it cost to find out whether that is even true at Major Marine?\nA. Nothing, and you can start this week. The first thing in this proposal is a sheet of paper on the desk. If the counting shows your desk barely escalates anything, that is a finding that saves you the entire project, and we would much rather find it in September than in March.",
+  "problem": "Your rules are written down and they are exact. A cruise-only reservation is refundable up to 72 hours prior to departure. Add a hotel and the clock becomes 7 days. Add motorcoach or train and it becomes 21 days. One date change is free up to 24 hours prior, then a re-booking fee of $15 per person applies, and a 3 percent card processing fee is retained on a cancellation. The shuttle needs an advance reservation and at least 24 hours notice, and it is not available for the 8:00 a.m. 6 Hour Kenai Fjords National Park Cruise. Wheelchair access depends on which vessel is running that departure, it is first deck inside the main cabin only, and no vessel takes a motorized wheelchair. A vegetarian sandwich has to be requested at the time of reservation, on the 6 Hour, 7.5 Hour and 8.5 Hour cruises only.\n\nEvery one of those is correct, published, and easy to verify when there is time to verify it. The desk is open 8:00 a.m. to 6:00 p.m., seven days a week, year round. On August 10th of this season, seven departures leave the Harbor 360 office in a single day. The answers are spread across your refund policy page, your FAQ and your Seward check-in page, roughly thirty public pages in total, and the person on the phone is often somebody hired inside your January 15th to April 15th window who is in their first weeks of their first season while a guest waits on the line.\n\nSo the problem is not that anything is wrong on your website. The problem is that four specific questions have a high cost when the answer is wrong, a finite number of correct answers, and no mechanism between a new hire's memory and a guest.",
+  "cost_of_being_wrong": "The refund clock is the one that costs cash. Quoting the 72 hour cruise-only clock to a guest who actually holds a 21 day transportation package means refunding money the company did not owe, on a booking whose motorcoach or train seat you may already be committed to. Nobody catches that in the moment. It surfaces after the money has moved, because the wrong clock sounds exactly as authoritative as the right one. The strict direction of the same error is worse in a different way, since refusing a refund the published policy grants is public, on a brand whose position is being the locally owned family company in that harbour.\n\nThe accessibility question has no catcher at all upstream of the dock. A guest builds a multi-day Alaska itinerary around a departure, and finds out at the gangway.\n\nThe shuttle question is the sharpest chain, and every link in it is your own published rule. A guest is told the shuttle covers the 8:00 a.m. 6 Hour cruise. It doesn't. The terminal loop runs 7:00 a.m. to 9:45 a.m. on a 15 minute headway, which is a partial fallback for a cruise ship guest and none at all for a guest who parked. The walk is 0.6 miles from Harbor 360 and 0.8 from the South Harbor office, with luggage, before an 8:00 a.m. boarding. A guest who misses the sailing is a no-show, and the no-show rule says a ticket not used at the time of sailing is completely non-refundable and may not be used on any other sailing. We want to be precise about that one, because it is easy to dress up as revenue and it isn't. You keep the fare. What that error costs you is goodwill and the reputation you have spent over thirty years building, which is the actual thing you sell against a NYSE-listed competitor in the same harbour.\n\nThe dietary question is low dollars and real guest experience, discovered in the galley on the day, when nothing can be fixed.",
+  "user": "The primary user is a first-season Customer Service and Sales agent, one of about 60 seasonal staff you hire in the January 15th to April 15th window, in weeks one through six on the phone. They are the whole target. Their failure is not an inability to read your policies, it is not knowing which of roughly thirty pages holds the answer while somebody waits.\n\nThe secondary user is whoever they currently interrupt. Right now the escalation path is a veteran, and the cost of a new hire's question is paid by an experienced person's time.\n\nWe are being deliberate about who this is NOT for. It is not aimed at Colby Lawrence at 22 years, Kirsten McNeil at 11 or Rodney Roemmich at 15. The strongest independent measurement available on tools of this kind, a field study of 5,179 support agents, found the gains concentrated in novices and close to nothing for experienced staff. We read that for direction and for who to aim at, never as a percentage we would attach to your desk. Rolling this out to everyone would dilute a real effect into an average that looks like failure, so the design and the measurement both aim at the March cohort only.\n\nThe buyer is the owner and the Vice President. The engagement also needs a named internal policy owner, which is a different person from the buyer and is named below.",
+  "reason_now": "Three reasons, all of them calendar, none of them ours.\n\nFirst, the observation window closes on October 11th. Your desk only exists while a season runs. There are roughly nine weeks left in the 2026 season, and the question mix changes inside them, since the 8.5 Hour ends September 7th, the 7.5 Hour ends September 13th, the 6 Hour ends September 21st, and the 4 Hour runs alone to October 11th. Miss these weeks and the next chance to count anything is March, by which time the decision to build has to already have been made.\n\nSecond, the people this is for are hired between January 15th and April 15th, and the 2027 season opens March 7th. Anything meant to help them has to be in their hands before then, which fixes the whole schedule by working backwards from a date you set, not one we picked.\n\nThird, two seasons are already live on your own pages at the same time. The 4 Hour Kenai Fjords Wildlife Cruise is $149 for 2026 and the 4 Hour Spring Wildlife Cruise is already published at $109 for March to May 2027. So what does the 4 Hour cost already has two correct answers, and that gets harder every year rather than easier.",
+  "after_state": "A first-season agent answers a refund, an accessibility, a shuttle or a dietary question in their first week, in under a minute, with your published sentence on screen to read out loud, and anything your published rules don't cover is routed to a named person instead of guessed at.",
+  "goals": [
+   "A first-season agent gives the correct answer on the four highest-cost questions, refund clocks and change fees, accessibility by vessel, shuttle eligibility and dietary windows, in their first week on the phone, with the published sentence and its page in front of them.",
+   "Every answer the tool gives carries its own source, and any input combination with no published rule behind it escalates to a named role by design rather than being interpolated or guessed.",
+   "Major Marine ends the engagement holding three assets it keeps whether or not another line of software is ever written: one canonical dated policy source, an authoritative vessel-to-departure map, and a written record of what your desk actually gets asked.",
+   "A recorded baseline exists where none exists today, so the next decision, including a decision to spend nothing further, is made on counted evidence rather than on anybody's impression.",
+   "The question of whether a tool with a model in it is ever worth building at this desk is settled by a threshold agreed in writing in advance that is capable of returning no."
+  ],
+  "non_goals": [
+   {
+    "item": "Nothing in phase one faces a guest. No website chatbot, no widget, no automated reply, no guest-visible answer of any kind.",
+    "reason": "A guest-facing answering tool puts confident wrong answers on the guest side of a thirty year locally owned reputation before any record exists of how often it would be confidently wrong. That reputation is your defence against a NYSE-listed operator in the same harbour, and it is not something to spend on an unmeasured tool. This is deferred and gated, not dead."
+   },
+   {
+    "item": "No model, no generated wording, no paraphrase anywhere on the four high-cost branches.",
+    "reason": "Those four have a finite input space, answers you have already published, and the highest cost when they are wrong. A deterministic table can be tested against every possible input and certified rather than sampled. A model would answer a little more smoothly and a little less reliably, and on the 8:00 a.m. shuttle exclusion a little less reliably means a guest walks to the harbour for a sailing they will miss. This is enforced as a topic filter in code, not as an instruction anybody can override."
+   },
+   {
+    "item": "No integration with your booking system in phase one. The agent types in what the booking contains.",
+    "reason": "We can't identify your booking engine from the outside and we refuse to guess at it, so we can't scope that integration honestly. Saying so keeps the estimate real instead of hiding unscoped work inside it. If phase one earns a second stage, the integration gets scoped properly with your vendor in the room."
+   },
+   {
+    "item": "No voice agent on the reservations line, at any price, in any phase.",
+    "reason": "That line is a revenue channel, not a support queue. Packages are bookable by phone only, all discounts must be booked directly with you, and within 12 hours of departure your own reservation page tells the guest to call. Placing a machine in front of purchase intent risks revenue to save labour, which inverts the business case. The callers who most need a person, the ones already in trouble, are also the ones a bot meets first."
+   },
+   {
+    "item": "No change to phone-only packages and no self-serve package builder.",
+    "reason": "Phone-only sits directly next to a published direct-only discount rule and a named Director of Sales, which is at least as consistent with a deliberate margin and upsell decision as with a gap. Proposing to remove a revenue mechanism while calling it a fix would be us guessing at your sales strategy. If it is deliberate, we have scoped nothing against it, which is the right outcome."
+   },
+   {
+    "item": "No change to your check-in rule or the rail connection.",
+    "reason": "You already handle it. Your check-in page footnotes the train case explicitly, so the on-time rail arrival is a solved problem and we treat it as one. The only piece that stays a human judgement call is the late train, which your FAQ describes as a best-effort transfer to a different date or the 12:30 p.m. 4 Hour cruise. Discretion is the right design there and we are leaving it alone."
+   },
+   {
+    "item": "No self-serve cancellation for guests.",
+    "reason": "This is a field-wide gap rather than anything specific to you, so building it here would be solving a category problem on your budget while your competitors carry the same one. It is not in scope and we would not price it."
+   },
+   {
+    "item": "No model drafting disruption notices, and no seat-allocation optimiser.",
+    "reason": "On disruption notices your goal is that the message is identical every time, and a template with merge fields is identical by construction while a model is identical only under supervision, so a model is worse on the actual objective. On seat allocation there is no evidence at all that staff assigning seats before a cruise causes anybody a problem, and building on speculation is how a project ends with nothing to measure."
+   },
+   {
+    "item": "No website redesign, and website tidiness is not the product.",
+    "reason": "The reconciliation work in phase one is content operations, deciding which of two published statements is the correct one and giving it one dated home. Your site is not the deliverable and we are not pitching one. This is ordinary housekeeping that any site of this age accumulates, and it is cheap to settle."
+   },
+   {
+    "item": "No review-response tooling, and we would talk you out of buying it elsewhere.",
+    "reason": "An audit of 61,459 model calls across 12 models measured responding to reviews at +0.1 percentage points on how likely a model is to recommend a business, which is statistically indistinguishable from zero, against about +32 points for guest rating. That measures how models recommend rather than what human readers think, so it does not prove replies are worthless to people. In the channel that tooling is currently sold on, it buys nothing measurable. That finding is yours with no invoice attached."
+   }
+  ],
+  "success_metrics": [
+   {
+    "metric": "A recorded baseline for the reservations desk exists at all. Question asked, time to answer, escalated or not, and to whom, one line per question, on paper.",
+    "baseline": "ZERO. There is no baseline today and we are not inventing one. Median time to answer, escalation rate and misquote count are recorded nowhere at Major Marine that we can find, and nothing in this document assumes a starting number for any of them. The baseline is a deliverable of this engagement, not an assumption inside it.",
+    "target": "At least 30 complete operating days of tally sheets between sign-off and October 11th, 2026, including at least 10 days after September 21st when the 4 Hour is the only cruise still running, plus at least 4 full days logged by a supervisor on randomly chosen dates.",
+    "timeframe": "Starts within two weeks of sign-off, ends October 11th, 2026. Every week of delay costs a week of baseline that can't be recovered until the 2027 season.",
+    "how_measured": "Paper on the desk. Zero software and zero cost. The supervisor-logged days exist to correct the sheet's own bias, since under-logging is guaranteed at peak and peak is exactly when errors happen.",
+    "falsifiable_how": "It fails if fewer than 30 complete days come back, and we would report that plainly rather than analyse a partial sheet as though it were a season."
+   },
+   {
+    "metric": "The decision table agrees with your published policy on every possible input, and never answers without showing its source.",
+    "baseline": "No enumeration of these rules exists today and there is no single signed-off source. The four branches currently live across your refund policy page, your FAQ and your Seward check-in page.",
+    "target": "100 percent agreement across an exhaustive enumeration of the input cross product, not a sample, signed off by your named policy owner before the tool ships. Plus zero responses of any kind that lack the verbatim published sentence and its source URL, checked as an assertion on every single response.",
+    "timeframe": "Certified before March 7th, 2027, and re-run as a regression suite on every content change and before March 7th of each following season.",
+    "how_measured": "The signed cell table is itself the test. This is the one component in the whole proposal whose acceptance bar can be certified rather than sampled, which is a direct consequence of keeping a model out of it.",
+    "falsifiable_how": "One disagreeing cell fails it. There is no threshold to hide behind."
+   },
+   {
+    "metric": "Conflicting or stale statements between your own published pages, resolved into one canonical dated source.",
+    "baseline": "FOUR, found in one afternoon of outside reading and verified. Two published statements about parking price that don't agree, $10 per vehicle per day in one place and $15 for the day at the kiosk in another. A live 2026 booking page still carrying a line about a departure being new in 2021 and not available in 2020. A vessel named in the FAQ as running the 12:30 p.m. 4 Hour departure that is not on the eight-vessel fleet page, which we could not resolve from outside and are not asserting either way. A cruise with a live 2026 product page that is missing from the all-cruises index, which lists five.",
+    "target": "Zero unresolved conflicts in the canonical source. Each of the four adjudicated by your named policy owner with a date against the decision, plus a re-crawl showing zero before the season opens.",
+    "timeframe": "Canonical source dated and signed by January 31st, 2027, re-crawled before March 7th, 2027 and before each season after that.",
+    "how_measured": "A crawl and a diff over roughly thirty pages. This is ordinary for a site of this age and cheap to settle, and it is worth doing whether or not a line of software ever gets written, since it improves the website, both hotel front desks and the dock on a day nothing has been installed anywhere.",
+    "falsifiable_how": "The re-crawl either returns zero conflicts or it does not."
+   },
+   {
+    "metric": "First-season desk outcomes on the four branches, measured like for like against the recorded 2026 baseline.",
+    "baseline": "Not yet known, and knowable only after metric 1 runs. Whatever the 2026 tally records for August 10th to October 11th is the baseline, and we will publish the figure it produces before we compare anything to it.",
+    "target": "Median time to answer on the four branches down at least 40 percent. Escalations where the answer was already published on your own pages down at least half. Zero policy misquotes on the four branches across the supervisor-sampled days. All three, with no fall in whatever guest-experience measure you already keep.",
+    "timeframe": "Measured August 10th to October 11th, 2027, the same calendar weeks as the baseline, reported by November 2027.",
+    "how_measured": "The same tally sheet, run again in the same weeks. Escalations that the design intends, meaning no published rule exists or the vessel serving a departure is not known with certainty, are counted separately and are never scored as failures, because routing those to a person is the tool working correctly.",
+    "note": "One honest limitation, stated here rather than discovered later. A late-season tally gives a clean like-for-like comparison and it does NOT give a baseline for the March to May ramp, because that ramp happened in spring 2026 before anybody was counting and can't be reconstructed. So the ramp figure can only be measured forward, starting March 2027, and in 2027 it is reported as a level rather than as an improvement. Its first honest comparison year is 2028. The 40 percent and the half are targets we chose and committed to. Neither is derived from any published study, and no outside percentage is attached to your desk anywhere in this document.",
+    "falsifiable_how": "Three numbers against three recorded numbers in the same weeks. If they miss, we say they missed, in the same document that carried the target."
+   }
+  ],
+  "metrics": [
+   {
+    "metric": "A recorded baseline for the reservations desk exists at all",
+    "baseline": "ZERO, nothing is recorded today and no starting number is assumed anywhere in this proposal",
+    "target": "at least 30 complete operating days of tally sheets including 10 after September 21st, plus 4 supervisor-logged full days",
+    "timeframe": "sign-off to October 11th, 2026"
+   },
+   {
+    "metric": "Decision table agreement with published policy, and source attached to every answer",
+    "baseline": "no enumeration and no single signed source exists today, the rules live across three pages",
+    "target": "100 percent across an exhaustive enumeration signed by your policy owner, and zero answers lacking the verbatim sentence and URL",
+    "timeframe": "certified before March 7th, 2027, re-run each season"
+   },
+   {
+    "metric": "Conflicting or stale statements between published pages",
+    "baseline": "FOUR, verified from outside in one afternoon",
+    "target": "zero unresolved, each adjudicated and dated by a named owner",
+    "timeframe": "canonical source signed by January 31st, 2027, re-crawled before March 7th, 2027"
+   },
+   {
+    "metric": "First-season desk outcomes on the four branches, like for like",
+    "baseline": "whatever the 2026 tally records for August 10th to October 11th, published before any comparison is drawn",
+    "target": "median time to answer down at least 40 percent, already-published escalations down at least half, zero misquotes on supervisor-sampled days, no fall in your own guest-experience measure",
+    "timeframe": "August 10th to October 11th, 2027, reported by November 2027"
+   }
+  ],
+  "phase_1_scope": {
+   "must": [
+    "THE PAPER TALLY SHEET, STARTING NOW. One line per question at the desk: what was asked, how long the answer took, whether it was escalated, and to whom. Zero software and zero cost. It does three jobs at once, it creates the baseline that does not exist, it counts how often weather re-routes and late trains actually happen so nobody builds a disruption tool on a guess, and it starts the record of what your desk gets asked before any tool exists. Plus two randomly chosen full days a month logged by a supervisor, to correct the sheet's own under-logging at peak.",
+    "CORPUS RECONCILIATION TO ONE CANONICAL DATED SOURCE. A crawl of roughly thirty pages that finds every statement that conflicts with another, your named owner adjudicating each one because only you know which parking price is right, then one canonical versioned source with a date on it and a review trigger, at minimum before March 7th each season and after any price or schedule change. Season scoping is part of the specification rather than a refinement, because two seasons are live at once on your pages today.",
+    "THE AUTHORITATIVE VESSEL-TO-DEPARTURE MAP. Which vessel runs which departure, in one place, with a named owner and a date. Nothing public provides this, and the FAQ against fleet page disagreement is direct evidence that internally it lives in more than one place and the copies differ. Every accessibility, seating and capacity answer depends on it. If it turns out assignment moves with maintenance and charters and can't be pinned, the honest design is that the tool never answers accessibility and always routes it to a named person, and we would agree that up front rather than discover it mid-build.",
+    "THE DECISION TABLE over the four highest-cost branches, refund clocks and change fees, accessibility by vessel, shuttle eligibility, and dietary windows. The agent enters four or five structured facts and gets back a date, a fee, an eligibility, and the verbatim published sentence to read out loud with its page. Default deny: any combination with no published rule behind it returns escalate to the named role and writes a log entry. It never interpolates and it never guesses. Accessibility additionally abstains whenever the vessel serving that departure is not known with certainty. Standalone, with booking contents entered by hand.",
+    "THE MISS LOG, SPECIFIED PROPERLY. Questions captured verbatim rather than as a category tick, every entry carrying a labelled correct answer from a named internal authority with its source page, a held-out portion never looked at during development, deliberately constructed out-of-scope cases the system should refuse, the supervisor sampling arm above, re-labelling each season, and a written rule about what gets redacted at capture and who may read it, agreed before the first entry. It is your data in your format, portable. You can take it to any vendor, including one that is not us, or to nobody."
+   ],
+   "later_explicitly_not_in_phase_one": [
+    "THE SNIPPET SEARCH OPTION. Staff-facing search over the reconciled source that returns the verbatim published sentence and its page, never composed prose, with the four high-cost branches filtered to the table in code before search ever runs. This is written down and priced now, and it is NOT sold now. It is gated on a number that can fail: at least 15 percent of logged desk questions falling outside the table, AND at least 20 distinct question types recurring three or more times, AND at least 150 labelled items after de-duplication. Those figures are ours to propose and yours to set. What is not negotiable is that a number exists and that it can return no. If the log lands below it, we say so in writing, we do not invoice, and the published conclusion is that this business needed a rule set and not an AI.",
+    "The honest date for that option is the March 2028 cohort, not 2027. The questions that would justify it can only be collected while a season runs, so collection is roughly March to October 2027, labelling and building over that winter, and the desk sees it in spring 2028. Anyone showing you both against one March 2027 date is compressing two seasons into one.",
+    "Running the same tally in the first six weeks of the 2027 season, to create the ramp baseline that can't be reconstructed for 2026.",
+    "A guest-facing answering tool, gated on a full season of internal evidence, and if ever built, running on a whitelist that never answers a refund, accessibility or shuttle question, with escalate-to-a-person as the default.",
+    "Disruption handling as a batch of the same entitlement logic, gated on the event count the tally sheet produces. Your own pages say cruises go out rain or shine and are cancelled only for unsafe sea conditions, so the frequency may be too low to justify anything, and that is worth knowing before it is built.",
+    "The package configurator, gated on a conversation about whether phone-only is a deliberate sales decision.",
+    "Seat allocation, gated on any evidence at all that the current process hurts anybody."
+   ]
+  },
+  "phase1_must": [
+   "The paper tally sheet at the desk, starting within two weeks of sign-off and running to October 11th, 2026, plus two supervisor-logged full days a month.",
+   "Corpus reconciliation of roughly thirty pages into one canonical, dated, owned policy source, with season scoping built in and a review trigger before March 7th each year.",
+   "The authoritative vessel-to-departure map, with a named owner, a date, and an agreed abstain route if the assignment turns out not to be stable.",
+   "The deterministic decision table over refund clocks and change fees, accessibility by vessel, shuttle eligibility and dietary windows, returning the verbatim published sentence and its page, default deny on anything not in the table, standalone with manual entry of booking contents.",
+   "The properly specified miss log, with labelled answers from a named internal authority, a held-out split, deliberate out-of-scope cases, the supervisor sampling arm, seasonal re-labelling and a PII rule agreed before the first entry."
+  ],
+  "phase1_later": [
+   "Staff-facing snippet search over the reconciled source, priced now, not sold now, gated on 15 percent of logged questions outside the table AND 20 recurring question types AND 150 labelled items, with the figures yours to set, and a 2028 date rather than 2027.",
+   "Re-running the tally in the first six weeks of the 2027 season to build the ramp baseline that 2026 can't provide.",
+   "A guest-facing answering tool, gated on a full season of internal evidence, whitelist only, never answering refunds, accessibility or shuttle eligibility.",
+   "Disruption handling as a batch, gated on the event frequency the tally sheet counts.",
+   "The package configurator, gated on whether phone-only bookings are a deliberate sales decision.",
+   "Seat allocation, gated on any evidence that the present process causes a problem."
+  ],
+  "commercial_shape": "Phase one is a fixed price of $18,000, covering roughly one person-month to build and exhaustively test the decision table, about half a month of content operations on reconciliation and facilitating the vessel map, and the miss log tooling. The snippet search option is priced separately and is not part of this number. It is invoiced only if the gate clears on your figures, and if it fails we publish that result rather than bury it. We will say the uncomfortable part plainly: a meaningful share of what you are buying in phase one is decision data and three assets you keep, rather than hours saved. Absolute hours saved here are modest, because the desk is small and its headcount is not something we can see from outside. This is a ramp-time and error-rate case that recurs every spring, and the price is sized to match that and nothing larger.",
+  "what_we_need_from_you": [
+   "ONE PERSON TO RUN THE PAPER TALLY FOR NINE WEEKS, named, starting within two weeks of sign-off and running to October 11th, 2026. This is the single heaviest thing we are asking for and it is the one we can't substitute for. If nobody at Major Marine will run it, the outcome of this project is unmeasurable, and we would say so in writing rather than promise you a measured improvement. An unmeasurable claim is not a smaller claim, it is a different kind of claim.",
+   "A NAMED INTERNAL POLICY OWNER with the authority to decide, not just to advise. The concrete first test is which of your two published parking prices is correct, $10 per vehicle per day or $15 for the day at the kiosk. Only somebody inside Major Marine can settle that, and there will be a short queue of similar calls behind it. Budget a few hours across a few weeks, not a project role.",
+   "A NAMED OWNER FOR THE VESSEL-TO-DEPARTURE MAP, with a date. This data does not exist in verified published form and, on the evidence, may not sit in one place internally either. If it turns out that assignment moves with maintenance and charters and can't be pinned to a departure reliably, tell us that early and we will ship accessibility as always-abstain. That is a smaller tool, and we would rather scope it that way in writing than discover it in build.",
+   "SIGN-OFF ON THE ENUMERATED CELL TABLE BEFORE THE TOOL SHIPS. Every cell, carrying the published answer, signed by your policy owner. That signature is the acceptance test for the whole build. It is your signature rather than ours by design, because we should not be the ones certifying what your policy says.",
+   "AGREEMENT IN WRITING, BEFORE PHASE ONE STARTS, ON TWO THINGS. The boundaries of the decision table, meaning what counts as inside it and what counts as a miss. The numeric gate on the search option. Both belong to you rather than to us, and here is the reason we are being blunt about it: a narrower table produces a fatter miss log, and we are the party that designs the table. That conflict is structural, so it gets disclosed and neutralised up front rather than left in the room.",
+   "A PII DECISION BEFORE THE FIRST LOG ENTRY. The log captures guest questions verbatim, which means names, booking references, mobility details and dietary details. Mobility and dietary information is health adjacent. We need your rule on what gets redacted at capture, how long entries are kept, and who may read them, agreed before anybody writes line one.",
+   "SUPERVISOR TIME FOR TWO RANDOMLY CHOSEN FULL DAYS A MONTH during the tally. The sheet under-records at peak, which is exactly when errors happen, and this is the cheap correction for that bias.",
+   "A LABELLING BUDGET WITH A NAME AGAINST IT, only if the search option is ever exercised. Roughly 150 to 300 real questions, each given a correct answer and a source page by somebody internal who actually knows. It has to be your people rather than us and rather than a model. This is real hours from people who are busy, and if it is refused, the honest response is that the log is a backlog, the option is unfundable on that evidence, and we say so.",
+   "ONE DECISION-MAKER AND A SIGN-OFF DATE no later than mid-February 2027. Phase one has to be in the March cohort's hands before March 7th. If sign-off slips past that, we will tell you it slipped and re-plan for 2028 rather than push a half-tested tool into a season that has already started.",
+   "ACCESS TO ANY INTERNAL POLICY SOURCE THAT DIFFERS FROM YOUR PUBLIC PAGES. That is the whole access list. Phase one needs no system credentials, no booking system access, no guest data and no network access of any kind."
+  ],
+  "need_from_you": [
+   "A named person to run the paper tally at the desk for nine weeks, to October 11th, 2026.",
+   "A named internal policy owner with authority to adjudicate conflicts, starting with which parking price is correct.",
+   "A named owner and a date for the vessel-to-departure map, plus an early answer on whether vessel assignment is stable across a season.",
+   "Your signature on the enumerated cell table before the tool ships. That signature is the acceptance test.",
+   "The table's boundaries and the search option's numeric gate, agreed in writing before phase one starts, with the figures set by you.",
+   "A redaction, retention and access rule for the miss log, agreed before the first entry.",
+   "Supervisor time for two randomly chosen full days a month during the tally.",
+   "A labelling budget with a name against it, only if the search option is ever exercised.",
+   "One decision-maker and a sign-off date no later than mid-February 2027.",
+   "Sight of any internal policy source that differs from your public pages. No system access, no guest data, nothing else."
+  ],
+  "risks": [
+   {
+    "risk": "Nobody runs the tally sheet, or it runs for two weeks and stops. This is the most likely way this project disappoints you, and it is a dependency on your side rather than ours.",
+    "mitigation": "We designed it to be paper, one line, no software and no login, precisely because a tool nobody has time to open is not a measurement. If it runs partially, we report the partial and we don't analyse nine days as though they were a season. If it doesn't run at all, metrics 2 and 3 still stand on their own, since they don't depend on it, the outcome metric goes unproven, and we publish that it went unproven rather than replacing it with a modelled number."
+   },
+   {
+    "risk": "The desk may simply be too small for any of this to matter. Your reservations headcount and your question volume are not published anywhere we can see, so nobody outside Major Marine knows whether the prize here is worth $18,000.",
+    "mitigation": "That is exactly what nine weeks of paper answers, at zero cost, before the build starts. If the tally shows a desk that rarely escalates and rarely stalls, that is a real finding and the correct response is to stop, and we would say so. We would rather find that in September than in March. This risk is also why the ask is sized at $18,000 and not at three times that."
+   },
+   {
+    "risk": "The vessel-to-departure map may not be stable, or may not be reconstructable at all. The accessibility branch is the highest-value part of the table and it depends entirely on that map.",
+    "mitigation": "The abstain route is designed in from the start rather than added as a patch. Where the vessel serving a departure is not known with certainty, the tool refuses to answer and routes to a named person, and it says why. If that turns out to be the permanent state, you get a smaller tool for the same rigour, and we would put that in writing during week one rather than at delivery."
+   },
+   {
+    "risk": "The search option's gate might fail, and the party proposing the gate is the party that benefits from clearing it.",
+    "mitigation": "The threshold is numeric, agreed in advance, and capable of returning no, which is the only kind of gate worth having. The boundaries of the table are yours to set, so the definition of a miss is not ours to adjust after the fact. If the number lands short, we don't invoice and we publish the conclusion that this business needed a rule set rather than an AI. Phase one is deliberately built to be worth buying on its own with no obligation to a second stage."
+   },
+   {
+    "risk": "The table drifts out of date. Prices change, schedules change, a vessel moves, and a tool confidently reads out last season's sentence.",
+    "mitigation": "Two named dependencies, both checkable by inspection rather than by sampling: whether the encoded rules match the published policy on the day, and whether the vessel map is current. The regression suite re-runs on every content change and before March 7th each season, and season scoping of every dated and priced fact is enforced in code because two seasons are live at once on your site today."
+   },
+   {
+    "risk": "Adoption on a phone desk is harder than it looks. An agent has to read a screen while a guest waits, which is a different situation from the office settings where tools like this have been measured.",
+    "mitigation": "Four or five structured inputs on one screen, and the output is a date, a fee, an eligibility and the sentence to read out loud. We test it with an actual first-season agent in their first hour, not with a veteran who already knows the answer, because a veteran passing the test proves nothing about the person it was built for."
+   },
+   {
+    "risk": "The measurement will run across a handful of people over a few weeks, where individual variation is large. A small sample can show noise that reads like failure, or noise that flatters us.",
+    "mitigation": "We pre-commit to how the result will be read before we see any data, we report per-person figures and the spread alongside the pooled number rather than only a median, and we compare the same calendar weeks. If the result is inside the noise, the honest report says the result is inside the noise."
+   },
+   {
+    "risk": "We may have picked the wrong four branches. Our ranking of what costs the most came from reading your published policies from the outside, not from your desk.",
+    "mitigation": "The tally can overturn it, and it runs before a line of the table is written. If the counted questions say the expensive ones are somewhere else, we re-cut the table before build and we tell you our ranking was wrong."
+   },
+   {
+    "risk": "It underperforms. The tool ships, it is correct on every cell, and the 2027 numbers move less than the targets above.",
+    "mitigation": "Here is what happens, written down now rather than negotiated then. We report the miss against the same targets in the same document that carried them. We do not re-baseline after the fact and we do not quietly swap in a metric that did move. You keep the canonical policy source, the vessel map and the record of what your desk gets asked, which are yours regardless, and the honest recommendation in that case is to stop rather than to buy a bigger version of something that did not work."
+   }
+  ],
+  "open_questions": [
+   {
+    "q": "How many people work the reservations desk in season, and how many questions does it handle in a day? This is the biggest unknown in the whole proposal, it is unpublished, and it decides whether any of this is worth doing. Every hours-saved figure before it is answered would be an invented denominator, so we have not written one.",
+    "owner": "Major Marine, answered by the tally sheet rather than by an estimate. Colby Lawrence or the Director of Shoreside Operations to nominate the person who runs it."
+   },
+   {
+    "q": "Which parking price is correct, $10 per vehicle per day or $15 for the day at the kiosk?",
+    "owner": "The named internal policy owner. First adjudication, and the template for the rest."
+   },
+   {
+    "q": "Does vessel-to-departure assignment stay fixed across a season, or does it move with maintenance and charters? The answer decides whether accessibility ships as an answer or ships as an abstain.",
+    "owner": "Major Marine, most likely the Port Captain and the Operations Manager together."
+   },
+   {
+    "q": "The vessel named in your FAQ as running the 12:30 p.m. 4 Hour departure is not on the fleet page. Is it chartered, retired, or simply not listed? We could not resolve this from outside and we are not asserting either way.",
+    "owner": "Major Marine. It matters because the 4 Hour is the product that runs latest in the season."
+   },
+   {
+    "q": "Is packages-by-phone-only a deliberate sales decision? We are assuming it is, and we have scoped nothing against it on that assumption.",
+    "owner": "Kori Goertz, Director of Sales. One conversation, and it either closes a Later item or opens it."
+   },
+   {
+    "q": "Who may read the miss log, what gets redacted at capture, and how long are entries kept?",
+    "owner": "Major Marine, owner or Vice President, decided before the first entry is written."
+   },
+   {
+    "q": "What are the final figures on the search option's gate? We propose 15 percent outside the table, 20 recurring question types, and 150 labelled items. The numbers are yours to set. What is not negotiable is that a number exists and that it can fail.",
+    "owner": "Joint, in writing, before phase one starts."
+   },
+   {
+    "q": "How often does a weather re-route into Resurrection Bay happen, and how often does a late train force a manual transfer? Your pages say cruises go out rain or shine and are cancelled only for unsafe sea conditions, so the count may be small enough to close a Later item permanently.",
+    "owner": "The tally sheet, which counts both at zero extra cost."
+   },
+   {
+    "q": "Does an internal policy source already exist that differs from your public pages? If it does, it is the real canonical source and the reconciliation starts from it rather than from the website.",
+    "owner": "Major Marine, in the first week."
+   },
+   {
+    "q": "Who signs the enumerated cell table, and by what date? Working backwards from March 7th, 2027, sign-off on the build needs to land by mid-February at the latest.",
+    "owner": "Major Marine, one named person."
+   }
+  ],
+  "the_next_step": "Start the tally sheet. It costs nothing, it needs no decision about us, and it is the one thing on this list that expires. There are roughly nine weeks left in the 2026 season. If you want, we will send the one-page sheet and the four column headings, and you can run it whether or not you ever hire us.",
+  "constraint_compliance_note": "Every pain claim in this document rests on Major Marine's own published policies rather than on any guest saying anything. Nothing here implies a guest complained or was dissatisfied, and no guest review is cited anywhere. No outside percentage is attached to a Major Marine metric. The booking engine vendor is never named or guessed. The check-in rule is treated as handled, with only the late train left as a manual judgement call, which we recommend leaving manual. Website conflicts appear only as evidence for corpus readiness, framed as ordinary and cheap to settle, and never as a headline finding. There is no baseline number invented anywhere, the baseline is a deliverable and is labelled as one in every metric that depends on it."
+ },
+ "design": {
+  "one_liner": "Build a staff-only lookup for the Major Marine reservations desk that answers refund clocks and change fees, accessibility by vessel, shuttle eligibility and dietary windows from a dated, season scoped copy of the company's own published sentences, with no model anywhere in the funded scope, so a March 2027 hire gets the right answer and the exact sentence to read out loud in their first hour on the desk.",
+  "outcome_it_moves": "A first-season agent answers the four highest cost of error questions correctly and unaided, and every answer they give is traceable to a published sentence with its URL. Measured against the paper tally baseline started in the final nine weeks of the 2026 season and re-measured in the same calendar weeks of 2027.",
+  "components": [
+   {
+    "id": "tally",
+    "name": "Desk Tally Sheet",
+    "kind": "paper artefact, zero software",
+    "tech": "A printed one page grid on a clipboard at the reservations desk. One row per question. Columns are time, topic code, minutes to answer, escalated yes or no, to whom, and a free box for the question as asked.",
+    "responsibility": "Create the baseline that does not exist today. Median time to answer, escalation rate and misquote count are recorded nowhere (feasibility.data_readiness.baseline_data). It also counts weather re-route and cancellation events for the whole season, which is the denominator the disruption console would need, and it starts the miss log before any tool exists.",
+    "starts": "The week of August 10th 2026. Nine weeks of the 2026 season remain, the season ends October 11th 2026 (c27).",
+    "writes": "Paper. Transcribed weekly into misslog_db by a named supervisor.",
+    "reads": "Nobody until transcription.",
+    "owner": "A named Major Marine supervisor. We propose the Operations Manager or the Director of Shoreside Operations, both named on their published team page, and they choose.",
+    "pii_rule": "No guest names, no booking references and no phone numbers on paper, topic codes and tally marks only. Sheets are shredded after transcription.",
+    "build_or_buy": "build, and it costs nothing"
+   },
+   {
+    "id": "canon_workbook",
+    "name": "Policy Canon Workbook",
+    "kind": "authoring surface",
+    "tech": "One spreadsheet workbook in whatever office suite Major Marine already runs, exported to CSV and committed to the repo. No live spreadsheet API in phase one, deliberately, so there is no OAuth dependency and no vendor to name.",
+    "responsibility": "The adjudication surface where a named internal policy owner decides which of two conflicting published statements is the true one. Four conflicts are already found from one afternoon of external reading, two different parking prices on their own pages (c36), 2020 and 2021 copy on a live 2026 booking page (c37), a vessel named in the FAQ running the 12:30 pm departure that the eight vessel fleet page does not list (c21), and a live 2026 product page for the Orca Quest Cruise that the five product all-cruises index omits.",
+    "required_columns": "rule_id, branch, input_key, verbatim_sentence, source_url, season, effective_from, effective_to, adjudicated_by, adjudicated_on, status. A row with an empty verbatim_sentence or an empty source_url fails the build.",
+    "writes": "The named internal policy owner writes. Nobody else.",
+    "reads": "canon_build reads the exported CSV.",
+    "build_or_buy": "buy the spreadsheet, build the schema"
+   },
+   {
+    "id": "vessel_map",
+    "name": "Vessel to Departure Map",
+    "kind": "data file, versioned",
+    "tech": "vessel_map.csv in the same repo. Keyed by season, product, departure_time, effective_from, effective_to. Value is a fleet vessel name or the literal UNKNOWN.",
+    "responsibility": "The single authoritative answer to which boat runs which departure. Every accessibility answer depends on it, because accessibility differs vessel by vessel and no vessel takes a motorized wheelchair (c20). This data does not exist in verified published form and the FAQ versus fleet page disagreement is direct evidence that internally it lives in more than one place and the copies disagree (c21).",
+    "unknown_is_first_class": "UNKNOWN is a value, not a missing row. An UNKNOWN or an expired effective_to forces the accessibility branch to abstain and route to a named human. Abstention is the correct answer here, not a failure.",
+    "writes": "A named Major Marine operations owner, by a named date agreed at kickoff. The accessibility branch does not ship without both.",
+    "reads": "decision_engine, read only.",
+    "build_or_buy": "build, because it does not exist anywhere to be bought or copied"
+   },
+   {
+    "id": "canon_build",
+    "name": "canon-build",
+    "kind": "CLI, batch job",
+    "tech": "Python 3.12, pydantic for the schema, click for the CLI. Runs locally and in GitHub Actions.",
+    "responsibility": "Compile canon_workbook plus vessel_map into canon.json, a signed, versioned, dated bundle. Hard fails on a missing verbatim sentence, a missing source URL, a missing season on any dated or priced fact, an overlapping effective range inside one input key, or a vessel map row whose effective_to has passed.",
+    "enforces": "Two of the three conscience requirements at build time. No fact enters the canon without its verbatim sentence and URL. No dated or priced fact enters without a season.",
+    "writes": "canon.json, plus canon_version and certified_on stamps.",
+    "reads": "canon_workbook CSV, vessel_map.csv.",
+    "build_or_buy": "build"
+   },
+   {
+    "id": "decision_engine",
+    "name": "deskanswer-core, the decision table",
+    "kind": "library, pure functions",
+    "tech": "TypeScript, compiled to the browser bundle and also runnable in Node for the certification suite. Pure and side effect free. Signature is answer(branch, inputs, canon) which returns Answer or Abstain and nothing else.",
+    "responsibility": "The four branches. Refund clocks and change fees, accessibility by vessel, shuttle eligibility, dietary windows. It resolves a cell in a finite enumerated table and returns the published sentence for the agent to read aloud.",
+    "branches": [
+     {
+      "branch": "refund_and_change",
+      "inputs": "booking contents (cruise only, cruise plus hotel package, motorcoach or train added), days before departure, count of prior date changes, no-show flag, weather re-route flag",
+      "grounded_in": "72 hours cruise only (c4), 7 days hotel package (c6), 21 days transportation (c7), 3 percent card fee retained (c5), one free change up to 24 hours then a fee per person (c8, two sentences, never spliced), no-show completely non-refundable (c9, never spliced next to the clocks), Resurrection Bay partial refund at the Captain's discretion (c10)"
+     },
+     {
+      "branch": "accessibility",
+      "inputs": "departure date, product, departure time, mobility type from a fixed vocabulary",
+      "grounded_in": "c20, accessible on first deck inside the main cabin only, outside decks not accessible, no vessel takes a motorized wheelchair",
+      "special_rule": "Resolves the vessel through vessel_map first. UNKNOWN or expired means abstain, always, with no fallback and no interpolation."
+     },
+     {
+      "branch": "shuttle",
+      "inputs": "product and departure time, hours of notice, advance reservation made yes or no, pickup point",
+      "grounded_in": "call at least 24 hours before (c13, full sentence), advance reservations required and not available for the 8:00 am 6 Hour cruise (c14), terminal loop 7:00 am to 9:45 am every 15 minutes (c15), 0.6 miles from Harbor 360 and 0.8 miles from the South Harbor office (c16), all cruises board at the Harbor 360 Hotel office (c17)"
+     },
+     {
+      "branch": "dietary",
+      "inputs": "product, request timing relative to the reservation",
+      "grounded_in": "vegetarian sandwich requestable in advance at the time of reservation on the 6 Hour, 7.5 Hour and 8.5 Hour cruises (c19), the 4 Hour has no meal and a snack bar onboard"
+     }
+    ],
+    "default_deny": "Any input combination not in the table returns 'no published rule for this case, escalate to <named role>' and writes a miss log row. It never interpolates and never guesses.",
+    "season_rule": "Season is never inferred. The form requires a departure DATE and the engine resolves the season from that date against effective_from and effective_to. Where one question has two correct answers in two live seasons the engine returns BOTH, each labelled with its season, rather than choosing. The 4 Hour Kenai Fjords Wildlife Cruise is 149 dollars for 2026 while the 4 Hour Spring Wildlife Cruise is already published at 109 dollars for March 20th to May 16th 2027, so 'what does the 4 Hour cost' has two correct answers today. With no date supplied the engine abstains.",
+    "assertion": "assert(answer.verbatim_sentence && answer.source_url && answer.season) runs on every returned Answer, in the library, not in a prompt. A response that fails the assertion throws rather than degrading to a partial answer.",
+    "writes": "Nothing. Pure.",
+    "reads": "canon.json.",
+    "build_or_buy": "build, this is the differentiator"
+   },
+   {
+    "id": "redlist_router",
+    "name": "redlist-router",
+    "kind": "module, the safety gate",
+    "tech": "TypeScript, sits in front of decision_engine and in front of a RetrieverPort interface that has exactly one implementation in phase one, NullRetriever, which throws if it is ever called.",
+    "responsibility": "Route refunds and change fees, accessibility, shuttle eligibility and dietary questions to the decision table BEFORE any retriever runs. In phase one there is no retriever, so this component exists to make it structurally impossible to wire one in later without going through the filter.",
+    "why_it_ships_in_phase_one_with_nothing_behind_it": "The conscience gate requires the filter in code and not in a prompt. Adding it after a retriever exists means adding it to a system that already works without it, which is the moment it gets skipped. It ships first and empty, with a contract test.",
+    "contract_test": "test_redlist_never_reaches_retriever.ts registers a spy retriever, replays every red list branch across the full enumerated input set, and asserts the spy call count is exactly zero. The test runs on every commit and is a required check on the repo.",
+    "writes": "Nothing.",
+    "reads": "The branch selection.",
+    "build_or_buy": "build"
+   },
+   {
+    "id": "desk_app",
+    "name": "Desk Answer, the agent lookup",
+    "kind": "static single page app, offline capable",
+    "tech": "TypeScript and Preact, no backend on the answer path. canon.json is inlined into the bundle at build time. Served from Cloudflare Pages, installed as a PWA with a service worker so the desk keeps answering with no network.",
+    "responsibility": "One form per branch, four or five structured fields, no free text on the answer path at all. The answer card renders the verbatim published sentence as the largest element on the screen with the words 'read this to the guest', the source URL under it, the season label, the canon version and the certified date. The inputs are echoed back on the card so a wrong entry is visible before it is spoken.",
+    "no_paraphrase_by_construction": "There is no free text field in the render path and no string concatenation of policy language. A contract test asserts the answer card component receives only canon-sourced strings.",
+    "manual_booking_entry": "The booking engine vendor is unidentified and is never named or guessed, so phase one is a STANDALONE tool. The agent reads the booking contents off their existing screen and enters the three discriminating facts by hand, does the booking include motorcoach or train, does it include a hotel night, how many prior date changes. Each field carries the published sentence that makes it matter, next to the field. This is a real limitation, stated rather than hidden, and it is the price of refusing to scope an integration against a vendor nobody has verified.",
+    "writes": "misslog_api, async, fire and forget with a local queue.",
+    "reads": "Its own inlined canon.json.",
+    "build_or_buy": "build the app, buy the hosting"
+   },
+   {
+    "id": "misslog_api",
+    "name": "misslog-api",
+    "kind": "edge API",
+    "tech": "Cloudflare Worker, TypeScript, behind Cloudflare Access. Three routes, POST /miss, POST /telemetry, GET /supervisor-data.",
+    "responsibility": "Accept miss log rows and telemetry, run the server side redaction second pass, reject anything that still matches an identifier pattern, and write to misslog_db.",
+    "writes": "misslog_db.",
+    "reads": "misslog_db for the supervisor page.",
+    "build_or_buy": "build the Worker, buy the runtime"
+   },
+   {
+    "id": "misslog_db",
+    "name": "Miss Log",
+    "kind": "datastore",
+    "tech": "Neon Postgres, US region pinned, TLS only, credentials held as Worker secrets.",
+    "schema": "id, created_at, branch, structured_inputs jsonb, outcome (answered, abstained, no_rule), question_text_redacted, agent_pseudonym (a hash of the Cloudflare Access subject, never a name), sampling_day boolean, label_correct_answer, label_source_url, label_author_role, label_added_on, holdout boolean, out_of_corpus boolean. There is NO name column, NO booking reference column and NO free text column other than question_text_redacted.",
+    "responsibility": "The eval set that decides whether retrieval is ever discussed, and the record of what the desk actually gets asked. It is THEIR data in THEIR format, exportable to CSV on demand, portable to any vendor including one that is not us.",
+    "writes": "misslog_api only.",
+    "reads": "supervisor_page, and the export CLI.",
+    "build_or_buy": "build the schema, buy the database"
+   },
+   {
+    "id": "certify",
+    "name": "canon-certify",
+    "kind": "test harness, CI gate",
+    "tech": "Vitest in GitHub Actions. Enumerates the FULL input cross product of all four branches, estimated at 300 to 900 cells once branch boundaries are agreed, and asserts 100 percent agreement with the signed off cell table.",
+    "responsibility": "The acceptance bar, and it is a specification rather than a sampled eval set. This is the one component in the whole proposal whose bar can be certified rather than estimated. It runs on every canon commit, before ship, and on a scheduled workflow every February so it is green before March 7th, the season opening date (c27).",
+    "also_asserts": "Every returned Answer carries a verbatim sentence, a source URL and a season. Every red list branch reaches the table with zero retriever calls. Two live seasons return two answers rather than one.",
+    "writes": "A pass or fail, a certified_on stamp, and a signed cell table artefact.",
+    "reads": "canon.json, the signed off cell table.",
+    "build_or_buy": "build"
+   },
+   {
+    "id": "drift",
+    "name": "canon-drift",
+    "kind": "scheduled crawler",
+    "tech": "Python, httpx and selectolax, GitHub Actions on a weekly cron. Roughly thirty pages on majormarine.com, plain HTML, owned outright, no PII.",
+    "responsibility": "Fetch every source URL in the canon and diff the live page against the stored verbatim sentence. Any mismatch opens a GitHub issue naming the rule, the branch and the two strings.",
+    "teeth": "A drift hit on a red list branch sets branch_status to ABSTAIN for that branch automatically until a human adjudicates it. The tool degrades to 'ask a person' rather than to a stale answer.",
+    "writes": "GitHub issues, and branch_status in the canon.",
+    "reads": "majormarine.com, canon.json.",
+    "build_or_buy": "build, and it is plumbing, never sold as an AI website checker"
+   },
+   {
+    "id": "supervisor_page",
+    "name": "Supervisor view",
+    "kind": "page inside desk_app",
+    "tech": "Same SPA, a route locked to two named roles by a Cloudflare Access policy.",
+    "responsibility": "Show the gate counters live, computed from their own log rather than by us at the end. Percent of logged questions falling outside the table, count of distinct question types recurring three or more times, count of labelled items after de-duplication, abstain rate by branch, and the two supervisor sampling days scheduled for the month.",
+    "why_it_matters": "The party who benefits from clearing the retrieval gate is the party who designs the table that determines what counts as a miss. Putting the counters on a page the client watches all season, computed from their data, is the structural fix for that conflict of interest.",
+    "writes": "Nothing.",
+    "reads": "misslog_api GET /supervisor-data.",
+    "build_or_buy": "build"
+   },
+   {
+    "id": "fallback_card",
+    "name": "Printed fallback card",
+    "kind": "paper artefact",
+    "tech": "One laminated double sided sheet, regenerated by canon-build on every certification.",
+    "responsibility": "The four branches at their most common inputs, with the verbatim sentences, for the case where the login provider is down or the desk has no network and no cached app. It carries the same canon version stamp as the app so a stale card is visible.",
+    "build_or_buy": "build"
+   }
+  ],
+  "data_flow": [
+   {
+    "from": "Reservations agent",
+    "to": "desk_app",
+    "payload": "Branch selection plus four or five structured fields, including a departure date, entered by hand",
+    "mode": "sync",
+    "who_writes": "agent",
+    "who_reads": "desk_app"
+   },
+   {
+    "from": "desk_app",
+    "to": "redlist_router",
+    "payload": "The branch and the inputs",
+    "mode": "sync, in browser, sub 10ms",
+    "who_writes": "desk_app",
+    "who_reads": "redlist_router"
+   },
+   {
+    "from": "redlist_router",
+    "to": "decision_engine",
+    "payload": "All four red list branches, always, before any retriever exists or could exist",
+    "mode": "sync",
+    "who_writes": "redlist_router",
+    "who_reads": "decision_engine"
+   },
+   {
+    "from": "decision_engine",
+    "to": "canon.json",
+    "payload": "Cell lookup by branch, input key and date resolved season",
+    "mode": "sync, read only, in memory, no network",
+    "who_writes": "nobody at runtime",
+    "who_reads": "decision_engine"
+   },
+   {
+    "from": "decision_engine",
+    "to": "vessel_map rows inside canon.json",
+    "payload": "season plus product plus departure_time resolved to a vessel name or UNKNOWN",
+    "mode": "sync, read only",
+    "who_writes": "the named operations owner, offline, through the workbook",
+    "who_reads": "decision_engine, accessibility branch only"
+   },
+   {
+    "from": "decision_engine",
+    "to": "desk_app",
+    "payload": "Answer with verbatim_sentence, source_url, season, effective range, canon_version and certified_on, or Abstain with a reason and the named role to escalate to",
+    "mode": "sync",
+    "who_writes": "decision_engine",
+    "who_reads": "desk_app, then the agent reads the sentence to the guest"
+   },
+   {
+    "from": "desk_app",
+    "to": "misslog_api",
+    "payload": "Every abstain, every no_rule, and a supervisor-logged row on sampling days. Redacted client side before it leaves the browser.",
+    "mode": "ASYNC, fire and forget, queued in IndexedDB and retried on reconnect. A miss log failure never blocks an answer.",
+    "who_writes": "desk_app",
+    "who_reads": "misslog_api"
+   },
+   {
+    "from": "misslog_api",
+    "to": "misslog_db",
+    "payload": "The row, after a server side redaction second pass that rejects anything still matching an identifier pattern",
+    "mode": "sync within the Worker",
+    "who_writes": "misslog_api",
+    "who_reads": "misslog_db"
+   },
+   {
+    "from": "desk_app",
+    "to": "misslog_api /telemetry",
+    "payload": "branch, answered or abstained, canon_version, client side lookup latency. No free text, no guest data.",
+    "mode": "async, batched",
+    "who_writes": "desk_app",
+    "who_reads": "misslog_api"
+   },
+   {
+    "from": "Named supervisor",
+    "to": "misslog_db",
+    "payload": "Weekly transcription of the paper tally, and the labelled correct answer with its source page for each entry, authored by a named internal authority and not by us and not by a model",
+    "mode": "async, human, weekly",
+    "who_writes": "the supervisor, through a locked route in desk_app",
+    "who_reads": "supervisor_page"
+   },
+   {
+    "from": "misslog_db",
+    "to": "supervisor_page",
+    "payload": "The four gate counters and the abstain rate by branch",
+    "mode": "sync on load",
+    "who_writes": "nobody",
+    "who_reads": "two named roles only"
+   },
+   {
+    "from": "Named policy owner",
+    "to": "canon_workbook",
+    "payload": "Adjudication of every conflicting published statement, one row at a time, with the verbatim winner, its URL, its season and a signature",
+    "mode": "async, human, over the winter",
+    "who_writes": "the named policy owner",
+    "who_reads": "canon_build"
+   },
+   {
+    "from": "canon_workbook and vessel_map",
+    "to": "canon_build",
+    "payload": "Exported CSV committed to the repo",
+    "mode": "async, batch, on commit",
+    "who_writes": "the owners",
+    "who_reads": "canon_build"
+   },
+   {
+    "from": "canon_build",
+    "to": "canon.json and the printed fallback card",
+    "payload": "The compiled, dated, versioned bundle",
+    "mode": "async, CI",
+    "who_writes": "canon_build",
+    "who_reads": "certify, then the desk_app bundle"
+   },
+   {
+    "from": "certify",
+    "to": "the release",
+    "payload": "Pass or fail across the exhaustive cross product. A fail blocks the deploy.",
+    "mode": "sync gate in CI",
+    "who_writes": "certify",
+    "who_reads": "the deploy step"
+   },
+   {
+    "from": "majormarine.com",
+    "to": "drift",
+    "payload": "Weekly fetch of every source URL in the canon",
+    "mode": "async, cron",
+    "who_writes": "Major Marine, on their own site",
+    "who_reads": "drift"
+   },
+   {
+    "from": "drift",
+    "to": "canon branch_status and GitHub issues",
+    "payload": "A mismatch between the live page and the stored sentence. On a red list branch it flips that branch to ABSTAIN until adjudicated.",
+    "mode": "async",
+    "who_writes": "drift",
+    "who_reads": "decision_engine at the next build, and the named policy owner"
+   }
+  ],
+  "integrations": [
+   {
+    "name": "Cloudflare Access, Zero Trust",
+    "purpose": "Identity and authorisation for the app, the supervisor route and the Worker. Free at this seat count.",
+    "auth": "Email allow-list on the majormarine.com domain, one time PIN by default. If they run Google Workspace or Microsoft 365 we point Access at it instead, which is a configuration change and not a build.",
+    "third_party_dependency": "Cloudflare. Outage blocks login, mitigated by the cached PWA and the printed fallback card.",
+    "why_buy": "Writing a user store for a workforce that turns over every spring is the wrong build. Onboarding is adding an email to a group in the January 15th to April 15th hiring window (c24), offboarding is removing it."
+   },
+   {
+    "name": "Cloudflare Pages",
+    "purpose": "Static hosting and CDN for desk_app.",
+    "auth": "Deploy token in GitHub Actions, private and behind Access.",
+    "third_party_dependency": "Cloudflare."
+   },
+   {
+    "name": "Cloudflare Workers",
+    "purpose": "misslog-api runtime.",
+    "auth": "Access service JWT on every request, Worker secrets for the database credential.",
+    "third_party_dependency": "Cloudflare."
+   },
+   {
+    "name": "Neon Postgres",
+    "purpose": "misslog_db.",
+    "auth": "Connection string in a Worker secret, TLS only, US region pinned, no public IP.",
+    "third_party_dependency": "Neon. Outage costs miss log writes, which queue client side and retry. It never costs an answer."
+   },
+   {
+    "name": "GitHub, private repository plus Actions",
+    "purpose": "Version control for the canon and the vessel map, CI for canon-build, canon-certify, canon-drift and the redlist contract test, and the handover vehicle.",
+    "auth": "GitHub org SSO. The repository is transferred to a Major Marine owned account at the end of phase one.",
+    "third_party_dependency": "GitHub."
+   },
+   {
+    "name": "majormarine.com, roughly thirty public pages",
+    "purpose": "The source of every verbatim sentence and the target of the weekly drift crawl.",
+    "auth": "None needed, public, plain HTML, owned by them, no PII.",
+    "third_party_dependency": "Their web host. A read only, polite crawl on a weekly cron."
+   },
+   {
+    "name": "Their office spreadsheet suite",
+    "purpose": "The canon authoring surface.",
+    "auth": "None from our side. Phase one takes a committed CSV export, deliberately, so there is no OAuth grant and no vendor API to depend on.",
+    "third_party_dependency": "None taken on."
+   },
+   {
+    "name": "THE BOOKING ENGINE",
+    "purpose": "None. There is no integration.",
+    "auth": "Not applicable.",
+    "third_party_dependency": "NAMED OPEN DEPENDENCY. The vendor is unidentified and is never named or guessed. All that is publicly verified is that a booking page warns the engine takes several seconds to load (c38). No integration is scopeable from public facts, so any effort number for one would be invented. Phase one is a standalone tool with manual entry of booking contents, and the study says so plainly rather than hiding an unscoped integration."
+   },
+   {
+    "name": "Their phone system",
+    "purpose": "None. No integration, no recording, no transcripts.",
+    "auth": "Not applicable.",
+    "third_party_dependency": "None. Call recording adds consent law and buys phase one nothing."
+   },
+   {
+    "name": "Their website CMS",
+    "purpose": "None. We do not edit their site.",
+    "auth": "Not applicable.",
+    "third_party_dependency": "NAMED OPEN DEPENDENCY. The canon is a separate owned source. Pushing corrections back onto the live site is a different conversation with a different scope."
+   }
+  ],
+  "cross_cutting": {
+   "auth": "Cloudflare Access in front of everything, staff only, no public route to any surface, no guest facing surface at all. Two Access groups, desk_agent and desk_supervisor. The supervisor route and the miss log read are locked to desk_supervisor, which is two named people. Access logs give a per person record of who opened what, which is the audit trail the miss log needs and which we would otherwise have had to build. Seasonal provisioning matches their published hiring window, adds in January and February, removals at contract end. There is no password to leak, no session store of ours, and no account that survives a season by accident.",
+   "data_security": "The miss log is the only place personal data lands, and it will otherwise capture guest names, booking references, mobility information and dietary information, which is health adjacent. Four structural controls, agreed in writing BEFORE the first entry. ONE, there is no name column, no booking reference column, and the only free text column is question_text_redacted. TWO, redaction happens at capture in the browser, before the payload leaves the desk. scrub.ts strips digit runs of four or more, email patterns, and anything matching their booking reference shape, and the Worker runs a second pass and rejects a row that still matches rather than storing it. THREE, mobility and dietary facts are captured as coded values from a fixed vocabulary, never as free prose attached to a person, and the agent identifier is a hash of the Access subject rather than a name. FOUR, retention is 400 days on a scheduled delete job, which is one season plus the labelling winter and then gone, and read access is two named roles. The paper tally has its own rule, topic codes and tally marks only, no guest names, shredded after transcription. One property is worth stating plainly. No model runs anywhere in the funded scope, so no guest question, no mobility fact and no dietary fact is ever sent to a model vendor, because there is no model vendor. Data residency is US on both Cloudflare and Neon. The whole log exports to CSV on one command and it is theirs.",
+   "observability": "Certification is the primary signal and it is binary. canon-certify runs on every canon commit and on a February cron, and the app footer shows canon_version and certified_on on every single answer card, so a stale canon is visible to the agent rather than to a dashboard nobody opens. If the bundle in the browser is older than the last certified canon the app shows a banner. Runtime telemetry is branch, answered or abstained, canon_version and client side lookup latency, with no free text and no guest data. Abstain rate by branch is the health metric that matters most, because a rising abstain rate on accessibility means the vessel map has gone stale. canon-drift reports weekly against the live site. The four retrieval gate counters render on the supervisor page all season, computed from their log, so the number that decides a future spend is watched by the client continuously rather than presented by us at the end. Business outcome measurement is the paper tally, nine weeks in 2026 and the same calendar weeks in 2027. If they will not run the tally, the outcome is unmeasurable and the study says so rather than promising a measured result.",
+   "failure_modes": [
+    {
+     "mode": "The canon disagrees with the live website after a price or schedule change",
+     "detection": "canon-drift, weekly, plus the February re-certification before the season opens on March 7th",
+     "behaviour": "The affected red list branch flips to ABSTAIN automatically until a human adjudicates. The tool degrades to 'ask a person', never to a stale answer.",
+     "why_this_matters": "A wrong number carrying a genuine citation reads as MORE verified than a wrong number with none."
+    },
+    {
+     "mode": "The vessel serving a departure is unknown or the map row has expired",
+     "detection": "UNKNOWN is a stored value and effective_to is checked on every lookup",
+     "behaviour": "The accessibility branch abstains and routes to a named human. This is a correct answer, not a failure, and the agent sees the reason.",
+     "why_this_matters": "Accessibility is the one branch with no catcher upstream of the dock, and it has a dignity cost rather than only a dollar one."
+    },
+    {
+     "mode": "Two seasons are live and the agent asks a price question with no date",
+     "detection": "The engine refuses to infer a season",
+     "behaviour": "With no date it abstains. With a date that lands in two live products it returns BOTH answers, each labelled with its season and its effective range. A certification case asserts this returns two answers rather than one.",
+     "why_this_matters": "The 4 Hour Kenai Fjords Wildlife Cruise is 149 dollars for 2026 and the 4 Hour Spring Wildlife Cruise is 109 dollars for March 20th to May 16th 2027, so the question has two correct answers today."
+    },
+    {
+     "mode": "The network is down at the desk, or Neon is down",
+     "detection": "Service worker and a failed POST",
+     "behaviour": "Answers keep working, because canon.json is inlined and the app is a cached PWA. Misses queue in IndexedDB and sync on reconnect. Nothing on the answer path depends on a server being up.",
+     "why_this_matters": "A lookup that stops working on a bad connection at the harbour is a lookup nobody trusts twice."
+    },
+    {
+     "mode": "Cloudflare Access is down and nobody can log in",
+     "detection": "Immediate",
+     "behaviour": "The already installed PWA keeps serving from cache for the session, and the printed fallback card carries the four branches at their common inputs with the same canon version stamp.",
+     "why_this_matters": "The desk runs 8:00 a.m. to 6:00 p.m. seven days a week year round (c2), so there is no window where being down is free."
+    },
+    {
+     "mode": "The agent enters the booking contents wrongly, since there is no booking integration",
+     "detection": "The answer card echoes the inputs back above the sentence",
+     "behaviour": "The wrong input is visible before the sentence is spoken. Each input field carries the published sentence that makes it matter.",
+     "why_this_matters": "This is the honest residual risk of refusing to scope an integration against a vendor nobody has verified, and it belongs in the open, not in a footnote."
+    },
+    {
+     "mode": "Somebody later wants a model wired in behind the four red list branches",
+     "detection": "test_redlist_never_reaches_retriever fails, and it is a required check",
+     "behaviour": "The build does not merge. The filter is code with a contract test, not a prompt instruction and not a policy document.",
+     "why_this_matters": "A safety property that exists only in a prompt is a safety property that gets edited out on a Friday."
+    },
+    {
+     "mode": "Nobody at Major Marine runs the paper tally sheet",
+     "detection": "Week two, from an empty clipboard",
+     "behaviour": "We say so in writing at that point. The outcome becomes unmeasurable and the study never promises a measured result on an unrun baseline.",
+     "why_this_matters": "An unmeasurable claim is a different kind of claim, not a smaller one."
+    },
+    {
+     "mode": "The miss log lands below the retrieval gate",
+     "detection": "The gate counters on the supervisor page, all season",
+     "behaviour": "We say so in writing, we do not invoice, and the published conclusion is that this business needed a rule set and not an AI.",
+     "why_this_matters": "A gate that can only pass is decoration on a decision already taken."
+    }
+   ]
+  },
+  "build_vs_buy": [
+   {
+    "component": "Identity and access",
+    "decision": "buy",
+    "why": "Cloudflare Access. Free at this seat count, group based, and it matches a workforce that is rebuilt inside a three month hiring window every year. Writing our own user store would be the single most pointless line in this budget."
+   },
+   {
+    "component": "Static hosting and CDN",
+    "decision": "buy",
+    "why": "Cloudflare Pages. The answer path is a static bundle, so the commodity is the whole delivery mechanism."
+   },
+   {
+    "component": "Edge API runtime",
+    "decision": "buy",
+    "why": "Cloudflare Workers. One vendor for hosting, identity and the API keeps the operating surface at one login for a company with no IT department."
+   },
+   {
+    "component": "Database",
+    "decision": "buy",
+    "why": "Neon Postgres. The miss log is a few thousand rows a season. Managed Postgres with a US region pin and a scheduled delete job is the boring correct answer."
+   },
+   {
+    "component": "Version control, CI and the handover vehicle",
+    "decision": "buy",
+    "why": "GitHub and Actions. It also gives the canon a dated, diffable, reviewable history for free, which is exactly what 'one canonical dated source' needs, and the repo transfers to them at the end."
+   },
+   {
+    "component": "The canon authoring surface",
+    "decision": "buy",
+    "why": "Their existing spreadsheet. The policy owner already knows how to use it, and a bespoke admin UI would be a week of build to replace a tool they open every day."
+   },
+   {
+    "component": "Crawler for canon-drift",
+    "decision": "buy",
+    "why": "httpx and selectolax, open source. Thirty plain HTML pages needs a library, not a product, and it is plumbing rather than an AI website checker."
+   },
+   {
+    "component": "The decision table engine and its cell schema",
+    "decision": "build",
+    "why": "THE DIFFERENTIATOR. It encodes Major Marine's own published policy across four branches with a finite input space, and nobody sells that. It is also the only component in the proposal whose acceptance bar can be certified at 100 percent on an exhaustive enumeration rather than sampled, which is the entire reason this build survives."
+   },
+   {
+    "component": "The red list router and its contract test",
+    "decision": "build",
+    "why": "The safety property is bespoke to these four branches, and it has to be a required CI check on our own code to be worth anything. No product enforces 'never let a retriever near a refund clock at this company'."
+   },
+   {
+    "component": "The canon schema with mandatory verbatim sentence, URL and season",
+    "decision": "build",
+    "why": "Season scoping of every dated and priced fact is a hard requirement here because two seasons are live at once, and no off the shelf knowledge base makes season a required field or fails a build without it. A knowledge base returns a page. This has to return a decided answer over four inputs, with the sentence."
+   },
+   {
+    "component": "canon-certify, the exhaustive enumeration harness",
+    "decision": "build",
+    "why": "The acceptance bar IS the product. A generic test runner does not know what the cross product of their four branches is, and the enumerated, signed off cell table is the artefact the client is really buying."
+   },
+   {
+    "component": "The vessel to departure map",
+    "decision": "build",
+    "why": "It does not exist anywhere to buy or to copy. Nothing public provides it and the evidence says the internal copies disagree. It is the highest value asset in the engagement and they keep it whatever happens next."
+   },
+   {
+    "component": "The miss log schema and the client side redactor",
+    "decision": "build",
+    "why": "The PII rule is specific to their data, guest names, booking references, mobility and dietary facts. A generic form product would happily store all four in one row, which is the thing we are designing against."
+   },
+   {
+    "component": "The answer card UI",
+    "decision": "build",
+    "why": "Small, and its whole job is a constraint. The verbatim sentence is the largest element and there is no free text field anywhere in the render path, which is a design decision no component library ships with."
+   },
+   {
+    "component": "Any model, vector store or embedding pipeline",
+    "decision": "buy",
+    "why": "Neither built nor bought in phase one, because none is used. Stated here so the line is unambiguous. If the option is ever exercised, the base model and the index are commodities to rent, never to build."
+   },
+   {
+    "component": "A guest facing tourism chatbot of the kind vendors sell into this category",
+    "decision": "buy",
+    "why": "If it is ever earned it should be bought rather than built, and it is not in this scope. It sits first in the Later lane gated on a full season of internal evidence. The honest reason it is not first is that it puts confident wrong answers on the guest side of a thirty year locally owned reputation before any eval set exists."
+   }
+  ],
+  "goals": [
+   "A first week hire in the March 2027 cohort answers a refund clock, an accessibility question, a shuttle eligibility question and a dietary window correctly in their first hour on the desk, without waiting on a veteran.",
+   "100 percent agreement with published policy across an EXHAUSTIVE enumeration of the four branches, certified before ship and re-certified every February before the season opens on March 7th. Not a threshold on a sample.",
+   "No answer is ever returned without the verbatim published sentence and its source URL, asserted in the library on every response rather than requested in a prompt.",
+   "Every dated or priced fact carries a season, and a question with two correct answers in two live seasons returns both rather than choosing one.",
+   "Abstain rather than guess. Every unknown input combination and every unknown vessel returns 'no published rule for this case, escalate to <named role>' and writes a miss log row.",
+   "Three assets Major Marine keeps regardless of what is ever built next. One canonical dated policy source, one authoritative vessel to departure map, and a written record of what their own desk actually gets asked.",
+   "A baseline that exists. The paper tally starts this week, in the final nine weeks of the 2026 season, so the 2027 measurement has something to compare against.",
+   "The retrieval gate is computed from their own log, shown on a page they watch all season, and it can fail. If it fails we say so in writing and do not invoice."
+  ],
+  "non_goals": [
+   {
+    "item": "Any integration with the booking engine",
+    "reason": "The vendor is unidentified and is never named or guessed, so the integration surface is unscopeable from public facts and any effort number would be invented. Phase one is a standalone tool with manual entry of booking contents, said plainly."
+   },
+   {
+    "item": "Any model, vector store, embedding or generated prose in phase one",
+    "reason": "The four funded branches have the highest cost of error in the business, a finite input space, and answers already published by the company itself. Determinism wins outright and there is nothing for a model to add except fluency."
+   },
+   {
+    "item": "Snippet retrieval as a funded phase",
+    "reason": "It is an OPTION with a number on its gate, not a phase. Its eval set does not exist and it can only exist after a season of real questions is logged and labelled, which makes it a 2028 tool at the earliest."
+   },
+   {
+    "item": "Any guest facing surface, chat widget, web bot or public search box",
+    "reason": "Staff facing only. A wrong answer in front of a guest has no human filter, and the human reading the returned sentence is the entire safety argument."
+   },
+   {
+    "item": "Anything on the phone line, voice agent, IVR or call recording",
+    "reason": "The line is a revenue channel, packages are bookable by phone only (c1), all discounts must be booked direct (c3), and a verified reservation page routes bookings inside twelve hours to a call (c29). Recording also adds consent law and buys phase one nothing."
+   },
+   {
+    "item": "Self-serve cancellation or online change",
+    "reason": "It needs the booking vendor we refuse to guess at, and no operator in this market offers it, so it is a field-wide gap and not a Major Marine defect."
+   },
+   {
+    "item": "A self-serve package configurator",
+    "reason": "No published volume denominator, an unscopeable integration, and phone-only sitting next to a direct-only discount rule and a named Director of Sales is at least as consistent with a deliberate margin decision as with a defect. Removing a revenue mechanism while calling it a fix is not something to do on a guess."
+   },
+   {
+    "item": "A seat allocation optimiser",
+    "reason": "It is constraint solving rather than AI, and there is zero evidence the current staff assigned process (c18) causes anyone pain. Building on speculation ends with nothing to measure."
+   },
+   {
+    "item": "A disruption console as a product, and any generated disruption notice",
+    "reason": "Its entitlement math is this same decision table applied to a list, and its event frequency is unpublished. Cruises go out rain or shine and are only cancelled for unsafe sea conditions (c11). Count the events on the tally sheet first. For the notice itself the stated goal is consistency, and a template with merge fields is consistent by construction while a model is consistent only under supervision."
+   },
+   {
+    "item": "Editing their live website",
+    "reason": "The parking contradiction and the stale 2021 copy get adjudicated INTO the canon, which is a content operations output. Pushing corrections back onto the live site needs their CMS, which is not scoped, and it is a separate conversation. These defects are evidence for corpus readiness, never a headline."
+   },
+   {
+    "item": "Rollout to the veteran shoreside team",
+    "reason": "The measured effect this design rests on is concentrated in novices and near zero in experienced staff. A Vice President at 22 years and a Maintenance Director at 15 do not need it, and measuring adoption on them would dilute a working tool into an average that looks like failure."
+   },
+   {
+    "item": "An hours saved dashboard or an hours saved business case",
+    "reason": "The reservations desk headcount is unpublished, so any hours figure before the tally sheet runs is an invented denominator."
+   },
+   {
+    "item": "A review response tool",
+    "reason": "A 61,459 call audit across 12 models measured responding to reviews at +0.1 percentage points on how models recommend, statistically equivalent to zero. In that channel the tooling buys nothing, and we hand the finding over with no invoice attached."
+   }
+  ],
+  "riskiest_assumption": "THAT THE VESSEL TO DEPARTURE MAP IS STABLE ENOUGH TO ENCODE AT ALL. The whole accessibility branch assumes there is one internal source that says which boat runs which departure, and that the answer is known far enough ahead to be worth telling a guest. Two things say it may not be. Nothing public provides the map, and the FAQ names a vessel running the 12:30 pm 4 Hour departure that the eight vessel fleet page does not list, which is direct evidence that internally the answer lives in more than one place and the copies disagree. Whether that vessel is chartered, retired or simply omitted is UNRESOLVED. Vessel assignment also plausibly moves with maintenance and charters. If it moves day to day, the accessibility branch abstains permanently, and that is the branch with the highest cost of error in the business and the only one with no catcher upstream of the dock. Losing it does not shrink the build, it removes the strongest single reason to buy it. Everything else on the risk list threatens the measurement. This one threatens the design.",
+  "spike_to_retire_it": "FIVE WORKING DAYS, unbilled, before any contract is signed and before a line of the accessibility branch is written. Zero build. Day one, a 90 minute session with the named operations owner asking one question, where does vessel assignment live today, and photographing it in whatever form it turns out to be, a whiteboard, a spreadsheet, a printed sheet or somebody's memory. Days two and three, reconstruct the last 14 operating days of the 2026 season from that source. For each of the seven departure slots on each day, name the vessel, and count how many of those cells the source can fill with certainty. Day four, run the same exercise forward across the first 14 operating days of the 2027 season from March 7th, and count how many can be committed now. Day five, the written result and the decision. THE PASS BAR IS PRE-COMMITTED IN WRITING BEFORE DAY ONE. At least 80 percent of the historical cells resolvable from one source, the vessel identity known at least 24 hours ahead for at least 90 percent of the forward departures, and the 12:30 pm departure discrepancy resolved to a stated answer by a named person. IF IT FAILS, the accessibility branch ships as ABSTAIN ALWAYS with a routing script to a named human, the funded scope drops to three branches, and the ask drops with it. We say that before invoicing rather than after. Two cheap things ride in the same window at no extra cost. The canon-drift crawl runs once across the roughly thirty pages and COUNTS the conflicts, because four were found in one afternoon by an outsider and the content operations estimate depends on whether the real number is nearer eight or nearer sixty. And the four branch boundaries get agreed with the client on paper, which fixes the cell count and, just as importantly, fixes the scope of what counts as a miss before we are the ones who benefit from a fatter miss log.",
+  "estimates": {
+   "basis": "The Cone of Uncertainty is wide at concept and narrows only when decisions are made. These ranges are stated at concept, after the conscience gate cut the scope, and they narrow at the spike.",
+   "phases": [
+    {
+     "phase": "Phase 0, the paper tally sheet",
+     "our_effort_person_days": "0.5 to 1",
+     "their_effort": "A few minutes a shift for nine weeks, plus about 2 hours a week of supervisor transcription",
+     "elapsed": "Starts the week of August 10th 2026, runs to the season close on October 11th 2026",
+     "confidence": "HIGH, 0.9. It is one printed sheet and a clipboard.",
+     "cost": "Zero. It is not part of the ask."
+    },
+    {
+     "phase": "Phase 0.5, the spike",
+     "our_effort_person_days": "5",
+     "their_effort": "About 4 hours from the named operations owner",
+     "elapsed": "1 to 2 weeks, best run in October 2026 right after the season closes when the owners have their winter back",
+     "confidence": "HIGH, 0.85 on the time box. The OUTCOME is genuinely uncertain, which is the point of running it.",
+     "cost": "Unbilled."
+    },
+    {
+     "phase": "Phase 1a, the walking skeleton",
+     "our_effort_person_days": "6 to 10, most likely 8",
+     "their_effort": "About 2 hours from the policy owner to sign off the shuttle cell table",
+     "elapsed": "2 to 3 weeks after the spike passes",
+     "confidence": "MODERATE TO HIGH, 0.75. Every fact in the shuttle branch is already verified and the input space is the smallest of the four."
+    },
+    {
+     "phase": "Phase 1b, flesh out the remaining branches",
+     "our_effort_person_days": "9 to 14, most likely 11",
+     "their_effort": "8 to 14 hours of policy owner adjudication across the whole canon, 4 to 8 hours of operations owner time on the vessel map",
+     "elapsed": "4 to 7 weeks, and the elapsed time is driven by THEIR owners' availability rather than by our build",
+     "confidence": "MODERATE, 0.6, and it rises to about 0.8 once the spike returns a counted conflict list and a fixed cell count."
+    },
+    {
+     "phase": "Phase 1c, certified and in the desk's hands",
+     "our_effort_person_days": "3 to 5",
+     "their_effort": "A 40 minute training session with the March cohort, plus sign off on the PII rule and the retention period",
+     "elapsed": "1 to 2 weeks. Working backwards from March 7th 2027 this wants to be finished by mid February with a 3 to 4 week buffer.",
+     "confidence": "MODERATE TO HIGH, 0.75."
+    }
+   ],
+   "totals": {
+    "our_billable_effort": "18 to 26 person-days across phase one, most likely 21. That is the build, the certification harness, the content operations tooling and the facilitation, and it excludes the unbilled spike.",
+    "their_committed_effort": "20 to 34 hours across the policy owner, the operations owner and a supervisor, over the winter, plus the nine weeks of tally. If the retrieval gate is ever approached, add 20 to 40 hours of labelling by a named internal authority, which belongs in a budget with a name against it and is not phase one work.",
+    "elapsed_end_to_end": "9 to 14 weeks from the spike passing to a certified tool on the desk, at 0.7 confidence, with the wide end driven by owner availability and not by engineering.",
+    "calendar_anchor": "Start the spike no later than early December 2026 to make the March 7th 2027 season opening comfortably. Starting in October 2026, straight after the season closes, is the version with real slack in it."
+   },
+   "does_it_fit_the_18000_ask": "YES, on one condition stated up front. At 18 to 26 of our person-days, 18,000 dollars fixed is roughly 690 to 1,000 dollars a day, which is a real rate for a scope this tightly bounded. It fits BECAUSE the content operations half is largely THEIR owner's time and not ours. Only they know which parking price is the right one, so adjudication is theirs by nature and we build the tooling and run the process. If Major Marine will not commit the 20 to 34 named owner hours, the scope does not fit the ask, and we would say that rather than absorb it, because absorbing it is how a fixed price turns into a bad delivery. Two other things would break the fit and both are checked at the spike. A conflict count far above the four already found, and a vessel map that needs building from scratch rather than reconciling.",
+   "what_narrows_the_range": [
+    "The spike result on the vessel map. It is the difference between four branches and three, and it moves the effort estimate more than anything else on this list.",
+    "The counted conflict list from one canon-drift crawl. Four conflicts were found in one afternoon by an outsider. Eight and sixty are very different content operations jobs.",
+    "The agreed branch boundaries, which fix the cell count. It is estimated at 300 to 900 cells and it becomes a known number in a day once the four branches are drawn on paper.",
+    "A named policy owner and a named operations owner, with committed hours on a calendar rather than a promise. This is the single largest driver of elapsed time.",
+    "Whether they run an identity provider or need the one time PIN fallback, which is a day either way and worth knowing early.",
+    "Nine weeks of tally data, which turns the escalation rate and the misquote count from an assumption into a measurement."
+   ]
+  },
+  "delivery_shape": {
+   "walking_skeleton": "ONE branch, shuttle eligibility, end to end and actually running, with everything else on crutches. The agent logs in through Cloudflare Access, opens Desk Answer, picks Shuttle, enters the departure date, the product and time, the hours of notice and whether an advance reservation exists, and gets back either the verbatim published sentence with its URL, its season and the canon version, or an abstain naming the human to escalate to. The abstain writes a redacted row through the Worker into Neon. canon-build compiles the shuttle rules from the workbook, canon-certify enumerates the full shuttle cross product in GitHub Actions and blocks the deploy on a single disagreement, and the red list router ships in the FIRST commit with its contract test and a NullRetriever that throws if anything ever calls it. Why shuttle first, the input space is the smallest of the four, every fact in it is already verified, it has the sharpest guest cost of the set because a missed sailing is a no-show and a no-show is completely non-refundable, and it exercises abstain, verbatim, season scoping and the miss log in one slice. DELIBERATELY STUBBED at this stage, the other three branches, the vessel map which returns UNKNOWN for every lookup so accessibility abstains 100 percent of the time and the abstain path is proven before it matters, the supervisor page, the drift crawler, and the redactor which is a first pass only.",
+   "then_flesh_out": "Dietary next, because it is the smallest remaining table and it proves the two-season rule cleanly, the 4 Hour has no meal while the three long cruises take a vegetarian request at the time of reservation. Then refunds and change fees, which is the largest cell count and the most cash exposure and where the two sentence change fee rule and the no-show rule must stay structurally separate so the table can never splice them into one answer. Accessibility LAST, deliberately, because it is gated on the spike outcome and on the vessel map delivery date, and it is the one branch we are willing to ship as a permanent abstain if the map is not there.",
+   "then_mvp": "Certified phase one in the desk's hands before March 7th 2027. All four branches, or three plus a declared and visible accessibility abstain. canon-certify green across the exhaustive cross product with the cell table signed by a named internal policy owner. canon-drift on a weekly cron with the auto-abstain teeth wired. The supervisor page live with the four gate counters and the sampling day scheduler. Client side redaction plus the server side second pass, the 400 day retention job running, and the PII rule signed before the first real entry. The PWA installed on the desk machines and tested with the network pulled. The printed fallback card laminated and stamped with the canon version. A 40 minute training session with the March cohort, recorded, so the next cohort gets it without us. Then the handover, the repository transferred to a Major Marine account, the canon and the vessel map theirs, the miss log exported to CSV on one command and portable to any vendor including one that is not us.",
+   "what_ships_that_is_not_software": "The tally sheet, the reconciled canon, the vessel map and the printed card. Three of those four have standalone value on a day when no software has been installed anywhere, which is the honest way to describe a large part of what the 18,000 buys."
+  },
+  "architecture": {
+   "nodes": [
+    {
+     "id": "agent",
+     "label": "Reservations agent",
+     "kind": "user"
+    },
+    {
+     "id": "site",
+     "label": "majormarine.com published pages",
+     "kind": "external"
+    },
+    {
+     "id": "router",
+     "label": "Red list router, runs first",
+     "kind": "build"
+    },
+    {
+     "id": "table",
+     "label": "Decision table, four branches, default deny",
+     "kind": "build"
+    },
+    {
+     "id": "canon",
+     "label": "Policy canon and vessel map, dated and season scoped",
+     "kind": "data"
+    },
+    {
+     "id": "misslog",
+     "label": "Miss log, redacted at capture",
+     "kind": "data"
+    },
+    {
+     "id": "option",
+     "label": "GATED OPTION, not funded, snippet retrieval",
+     "kind": "ai"
+    }
+   ],
+   "edges": [
+    {
+     "from": "agent",
+     "to": "router"
+    },
+    {
+     "from": "site",
+     "to": "canon"
+    },
+    {
+     "from": "router",
+     "to": "table"
+    },
+    {
+     "from": "router",
+     "to": "option"
+    },
+    {
+     "from": "table",
+     "to": "canon"
+    },
+    {
+     "from": "table",
+     "to": "misslog"
+    }
+   ],
+   "caption": "The funded path has no model in it. A question from the desk hits the red list router first, so refunds and change fees, accessibility, shuttle eligibility and dietary windows go straight to the decision table and never reach a retriever, enforced by a contract test rather than by a prompt. The table reads the policy canon, which is built from Major Marine's own published pages, carries a date and a season on every priced fact, and returns the verbatim sentence with its URL for the agent to read out loud. It writes only to the miss log. Where an input combination has no published rule, or where the vessel serving a departure is not known, the table abstains and routes to a named person, which is the correct answer rather than a failure. The one AI node on this diagram is the option, and it is not funded, not built, and only ever discussed if the miss log clears a number agreed in writing beforehand."
+  },
+  "open_dependencies": [
+   {
+    "dependency": "The booking engine vendor",
+    "status": "UNIDENTIFIED and never named or guessed",
+    "consequence": "There is no integration in phase one. Desk Answer is a standalone tool and the agent types the booking contents by hand. Any integration estimate would be invented, so none is given.",
+    "who_can_close_it": "Major Marine, by telling us the vendor. Even then it is a separately scoped piece of work and not part of this ask."
+   },
+   {
+    "dependency": "The vessel to departure map",
+    "status": "DOES NOT EXIST in verified form and may not exist internally in one place",
+    "consequence": "The accessibility branch does not ship without a named internal owner and a named date. Where the vessel is not known the table abstains, permanently if the spike says it must.",
+    "who_can_close_it": "A named Major Marine operations owner, tested by the five day spike before anything is committed."
+   },
+   {
+    "dependency": "The named internal policy owner",
+    "status": "Not yet identified",
+    "consequence": "Corpus reconciliation is adjudication and only they can do it, because only they know whether the parking price is 10 dollars or 15. Without the name and committed hours the elapsed estimate has no floor.",
+    "who_can_close_it": "Major Marine, at kickoff."
+   },
+   {
+    "dependency": "Their identity provider",
+    "status": "Unknown",
+    "consequence": "Not a blocker. Cloudflare Access falls back to a one time PIN to a majormarine.com address, and pointing it at Google Workspace or Microsoft 365 instead is configuration rather than build.",
+    "who_can_close_it": "One question at kickoff."
+   },
+   {
+    "dependency": "Their office spreadsheet suite",
+    "status": "Unknown",
+    "consequence": "Deliberately avoided. Phase one takes a committed CSV export rather than a live API, so no OAuth grant and no vendor dependency is taken on.",
+    "who_can_close_it": "Not required to close."
+   },
+   {
+    "dependency": "Their website CMS",
+    "status": "Unknown",
+    "consequence": "We do not edit their site. The canon is a separate owned source and pushing corrections back to the live pages is a different conversation.",
+    "who_can_close_it": "Not required for phase one."
+   },
+   {
+    "dependency": "The reservations desk headcount",
+    "status": "Unpublished",
+    "consequence": "No hours saved model is built and none is quoted. The case is ramp time and error rate, and the error rate side has no baseline until the tally runs.",
+    "who_can_close_it": "The tally sheet, and only for their own internal use."
+   },
+   {
+    "dependency": "Whether the parking charge is 10 dollars or 15 dollars",
+    "status": "Their own two pages disagree and we have no way to know",
+    "consequence": "One adjudication row in the canon workbook. It is used only as evidence of corpus readiness, never as a headline.",
+    "who_can_close_it": "The named policy owner, in one minute."
+   },
+   {
+    "dependency": "Whether the vessel named in the FAQ on the 12:30 pm 4 Hour departure is chartered, retired or simply omitted from the fleet page",
+    "status": "UNRESOLVED, and stated as unresolved",
+    "consequence": "It is the live evidence that the vessel map has no single authoritative home. The spike resolves it or the accessibility branch abstains.",
+    "who_can_close_it": "A named person at Major Marine."
+   },
+   {
+    "dependency": "The PII rule, the retention period and who may read the miss log",
+    "status": "Not agreed",
+    "consequence": "The first miss log entry is not written until all three are signed. Our recommendation is 400 days and two named roles, and it is their call.",
+    "who_can_close_it": "Major Marine, before the walking skeleton goes live."
+   },
+   {
+    "dependency": "Willingness to run the paper tally for nine weeks",
+    "status": "Unknown, and it is the adoption dependency that sits with them rather than with us",
+    "consequence": "If nobody runs it, the outcome is unmeasurable and the study says so rather than promising a measured result.",
+    "who_can_close_it": "One named supervisor, this week, at zero cost."
+   }
+  ]
+ },
+ "roadmap": {
+  "now": [
+   {
+    "item": "A paper tally sheet on the reservations desk for the final nine weeks of the 2026 season. Question asked, time to answer, escalated or not, to whom, and the verbatim wording where the agent has time to write it. Zero software, zero cost, starts this week.",
+    "metric": "A sheet returned for 100 percent of staffed days from the start date to October 11th, plus two supervisor-logged full days a month where every question is written down rather than only the ones a busy agent remembered. Outputs are the three numbers that do not exist anywhere today, median time to answer a policy or eligibility question, escalation rate for a first-season agent, and count of policy misquotes that reached a guest. It also produces the first count of re-routes into Resurrection Bay and late-train transfers, and the first miss log entries.",
+    "why_first": "It is free and the window shuts. Products fall away on a ladder, the 8.5 Hour ended September 7th, the 7.5 Hour ends September 13th, the 6 Hour September 21st, and only the 4 Hour runs to October 11th, so every week of delay costs a week of the only observation window that exists before March. There is no baseline today, so without this the outcome can be modelled and never measured. It also carries its own off-ramp, if the sheets come back showing the desk barely escalates and misquotes are not happening, that finding saves the whole project and we would rather find it in September than in March. Honest caveat stated up front, these nine weeks are shoulder season with three departure slots already ended on August 23rd, so this count is a floor and never a peak."
+   },
+   {
+    "item": "Corpus reconciliation. One canonical, dated, owned policy source, built from a crawl that finds every conflicting statement, with a named internal owner adjudicating each one. Includes season scoping of every dated and priced fact, because two seasons are live at once, and a review cadence with a real trigger before each season opens and after any price or schedule change.",
+    "metric": "Every conflict the crawl finds is adjudicated, dated and signed by a named owner, with zero unresolved contradictions remaining on the four branches the table answers. Known starting set includes the two pages giving different parking prices, a live 2026 booking page still carrying copy about a cruise being new in 2021 and unavailable in 2020, a product with a live 2026 page that is missing from the five-product index, and the 4 Hour priced at 149 dollars for 2026 alongside the 4 Hour Spring Wildlife Cruise already published at 109 dollars for March 20th to May 16th, 2027.",
+    "why_first": "This is the largest item of hidden scope in the whole proposal and it was not costed anywhere before now. It is content operations rather than modelling, and only someone inside the company knows which parking price is the right one. It has to land before anything else reads from it, and it is a win on its own terms, since one canonical dated source improves the website, the two hotel front desks and the dock on a day when no software has been installed anywhere."
+   },
+   {
+    "item": "The authoritative vessel-to-departure map, with a named internal owner and a date, plus a written ruling on whether vessel assignment is stable across maintenance and charters. If it is not stable, the honest design is that the tool never answers accessibility and routes it to a named person.",
+    "metric": "Either a signed, dated map covering every scheduled departure, or a written decision that assignment is not stable enough to publish, in which case the accessibility branch ships as abstain-to-a-named-human. Both outcomes are a pass. What is not a pass is an unowned map. Includes a ruling on the unresolved case where the FAQ describes Rachel Marie running the 12:30 pm 4 Hour departure while the eight-vessel fleet page does not list it, which we state as unresolved and never as a claim about what the vessel is or is not.",
+    "why_first": "It is the longest client-side lead time in the engagement and the only dependency that may turn out not to exist at all, so it starts on day one and runs in parallel with our build. Every accessibility, seating and capacity answer joins to it. Accessibility carries the highest cost of error in the business and it is the only branch with no intermediate catcher, since a guest who is told a departure is accessible when the vessel running it is not discovers it at the gangway, where nothing recovers it. Five vessels are published as accessible on the first deck inside the main cabin only, the outside decks are not, and no vessel takes a motorized wheelchair, so the answer is worthless without knowing which hull is on which sailing."
+   },
+   {
+    "item": "WALKING SKELETON. One branch, refund clocks and change fees, running end to end on a real desk question. The agent enters what the booking contains, the tool returns the clock, the fee and the verbatim published sentence with its source URL for the agent to read out loud. Anything outside the table returns no published rule for this case, escalate to the named role, and writes a miss log entry.",
+    "metric": "100 percent agreement with published policy across an exhaustive enumeration of that branch's input cross product, not a sample, covering the 72 hour cruise-only clock, the 7 day cruise and hotel clock, the 21 day clock once motorcoach or train is added, the 3 percent card fee retained on cancellation, one free date change to 24 hours out then 15 dollars per person, and the no-show rule. Second hard metric, zero responses returned without a verbatim published sentence and its URL attached, checked as an assertion on every single response.",
+    "why_first": "It is the thinnest slice that touches every component and actually runs, the canonical source, the table, the verbatim-source assertion, the default-deny abstain route and the miss log. It was chosen over the other three branches for one specific reason, it needs no vessel map, so the single dependency that may not exist can't block first light. It also carries the clearest hard-dollar benefit in the build. Quoting the 72 hour cruise-only clock to a guest holding a 21 day transportation package means refunding money the company did not owe on a booking whose third-party transportation it may already be committed to, and that is the one error direction that costs the company cash rather than the guest."
+   },
+   {
+    "item": "The remaining three branches, completing the four-branch decision table. Accessibility by vessel, shuttle eligibility, and dietary windows by product. No model anywhere in it.",
+    "metric": "100 percent agreement across an exhaustive enumeration of the full input cross product, signed off cell by cell by a named internal policy owner before the tool ships, kept as a regression suite that is re-run on every content change. Default deny on everything else. The accessibility branch additionally abstains whenever the vessel serving a departure is not known with certainty. Worked examples the table has to get right every time, the shuttle is excluded from the 8:00 a.m. 6 Hour cruise, needs advance reservation and 24 hours notice, the terminal loop only runs 7:00 to 9:45 a.m. so it is a partial fallback for a cruise ship guest and none at all for a guest who parked, and the walk is 0.6 miles from Harbor 360 and 0.8 from the South Harbor office with luggage before an 8:00 a.m. boarding. Vegetarian requests are at the time of reservation on the 6, 7.5 and 8.5 Hour cruises and the 4 Hour has no meal at all.",
+    "why_first": "These three plus refunds are the four highest-cost-of-error questions in the business, they are finite, and their answers are already published by the company itself. This is the only component in the entire proposal whose acceptance bar can be certified rather than sampled, which is why it is funded and why no model touches it. A wrong shuttle answer converts into a missed sailing, and a missed sailing is a no-show, which the published policy makes completely non-refundable, so the cost there is a guest's whole day and the company's reputation."
+   },
+   {
+    "item": "The miss log as a real governance object rather than a backlog. Verbatim capture of the question as asked, a labelled correct answer from a named internal authority with its source page, a held-out split never looked at during development, deliberate out-of-corpus cases the system should refuse, the supervisor sampling arm that corrects its own selection bias, re-labelling each season, and a PII rule agreed before the first entry is written.",
+    "metric": "PII rule and read-access decision agreed and written down before entry one, since the log will capture names, booking references, mobility information and dietary information, and the last two are health adjacent. Labelling kept current rather than accruing as an unlabelled pile, measured as labelled share of entries. Supervisor sample days actually run, two per month. Volume written down in advance at roughly 150 to 300 labelled items across a full season.",
+    "why_first": "This is the single most valuable thing in the whole engagement and it is one paragraph of specification away from being theatre. Without labelled answers, a held-out split and deliberate refusable cases, there is no eval set, and with no eval set nothing above the rules rung is ever fundable on evidence. It is also their data in their format, portable, and they can take it to any vendor including one that is not us, or to nobody."
+   },
+   {
+    "item": "A stop-doing finding handed over free, with no invoice attached. In the channel where AI assistants recommend operators, tooling bought to respond to reviews buys nothing measurable.",
+    "metric": "Dollars not spent on review-response tooling sold on the promise of moving AI recommendation. A 61,459-call audit across 12 models measured responding to reviews at plus 0.1 percentage points on recommendation probability, statistically equivalent to zero, against about plus 32 points for guest rating and minus 30 for price. Stated precisely, that audit measures how models recommend, so it does not prove review responses are worthless to human readers.",
+    "why_first": "It costs nothing, it ships with the study, and it is worth more to them than several things on this page that carry a price. It also sets the tone for every gate below, we would rather tell them what not to buy than sell them the next thing."
+   }
+  ],
+  "next": [
+   {
+    "item": "Certification and re-certification before the 2027 cohort touches it. The full regression suite re-run against the reconciled source, every cell re-signed, season scoping re-checked with two seasons live at once, and the abstain route tested rather than assumed.",
+    "metric": "Regression suite green at 100 percent, and every dated or priced cell unambiguous about which season it belongs to, both completed before the first published 2027 sailing. Zero cells where the 2026 price and the 2027 price could both be returned for the same question."
+   },
+   {
+    "item": "Rollout aimed at the March cohort only. First-season Customer Service and Sales Staff, deliberately not the veterans.",
+    "metric": "The three tally numbers re-measured in the same calendar weeks as the 2026 baseline, weeks one through six after the cohort starts, looking for a fall in median time to answer, a fall in escalation rate for first-season agents, and a fall in misquotes reaching a guest, with no fall in guest experience. Adoption measured as share of first-season desk hires using it in weeks one to six. The rollout deliberately does not target staff at 22, 15, 11 and 8 years, because the mechanism this build rests on concentrates in novices and is near zero in experienced workers, so a rollout to everyone would dilute into an average that looks like failure while the tool worked exactly as measured."
+   },
+   {
+    "item": "A full season of miss log accrual and labelling across the 2027 season, roughly March to October, with the supervisor sampling arm running throughout.",
+    "metric": "The three numbers that decide the retrieval gate, share of logged desk questions falling outside the table, count of distinct question types recurring three or more times, and count of labelled items after de-duplication. The 2026 nine-week tally is a shoulder-season floor and is explicitly not used to read this gate."
+   },
+   {
+    "item": "Counted disruption frequency across a full season, as a measurement and not a build.",
+    "metric": "A real count of re-routes limited to Resurrection Bay that triggered a partial refund at the Captain's discretion, and of late-train transfers, over one full season. Cruises go out rain or shine and are only cancelled for unsafe sea conditions, so this number may well come back small, and small is a finding that keeps the batch mode unbuilt."
+   },
+   {
+    "item": "Read the retrieval option gate at the close of the 2027 season and publish the result either way, invoiced or not invoiced.",
+    "metric": "A written result against the three pre-agreed numbers. If it clears, retrieval is scoped for the March 2028 cohort. If it does not clear, the published conclusion is that this business needed a rule set and not an AI, and nothing is invoiced."
+   }
+  ],
+  "later": [
+   {
+    "item": "A guest-facing chatbot on the website and messaging channels, gated on a full season of internal evidence. If it is ever built it runs on a whitelist with abstain-to-human as the default and never answers a refund, accessibility, shuttle or dietary question.",
+    "metric": "Before any guest sees it, abstention recall on a deliberately constructed out-of-corpus set, and zero outputs of any kind on the four high-cost branches, enforced by a topic filter in code rather than by an instruction. The value metric is guest questions answered outside the published 8:00 a.m. to 6:00 p.m. window, which nothing else on this roadmap touches. The named comparable is a day-cruise operator reporting 10 staff hours saved a month and 60 percent of questions answered, and the same vendor's homepage claims 95 percent where its own customer measured 60, so the comparable is read at its measured number and never at its marketing one."
+   },
+   {
+    "item": "Disruption batch mode, folded into the table rather than built as a standalone console. The entitlement math is the same decision table applied to a list, showing who is affected, which remaining departures have room and what each booking is owed, with a template carrying merge fields for the notification. Gated on a counted event frequency. Covers the late-train transfer case as well as a Captain's re-route.",
+    "metric": "Counted events per season from the 2027 measurement, against a threshold agreed in advance. The notification is a template and never a model, because the stated goal is consistency and a template is consistent by construction while a model is consistent only under supervision. Value metric is time from the Captain's decision to every affected guest notified, and consistency of what each guest was told."
+   },
+   {
+    "item": "A self-serve package configurator taking packages off the phone. Gated first on a conversation, not on a build.",
+    "metric": "The gate is a question for the Director of Sales, whether packages being bookable by phone only, alongside a rule that all discounts must be booked direct and are not valid through third parties, is a deliberate margin and upsell decision rather than a defect. If it is deliberate, this item dies here and that is the right outcome. If it is not, it still needs the booking vendor identified before any effort number is honest, and a published package volume before any revenue ceiling is anything but a guess. Value metric would be packages assembled and paid for outside the 8 to 6 window with the direct-only discount rule preserved."
+   },
+   {
+    "item": "Seat allocation support, gated on any evidence at all that the current process hurts.",
+    "metric": "A counted number from the tally or the miss log, staff time spent on seating or special requests that could not be honoured. Seats are assigned by staff before the cruise and special requests are not guaranteed, and there is no evidence at all today that this causes anyone pain. If the count comes back at zero, this stays unbuilt, which is the point of it being on this lane rather than in the build."
+   },
+   {
+    "item": "Staff-facing snippet retrieval over the reconciled corpus for the March 2028 cohort, verbatim source mandatory, no composed prose, staff facing only. Priced now as an option, built only if the gate clears.",
+    "metric": "Three acceptance numbers pre-committed in writing before any build, grounded correctness on the held-out labelled set at 90 percent or better, abstention recall on a deliberately constructed out-of-corpus set at 95 percent or better, and zero tolerance on a red list, no output of any kind on refund amounts and clocks, accessibility by vessel, shuttle eligibility or dietary windows, enforced by a topic filter in code before the retriever is ever called. A kill switch reverting to the decision table alone, tested before launch rather than assumed."
+   },
+   {
+    "item": "One canonical source serving three counters, the reservations desk, the dock, and the two hotel front desks that already answer some version of the same cruise questions.",
+    "metric": "Same answer at every counter, measured by spot checks against the canonical source. Near zero build cost once reconciliation is done, since the asset already exists at that point and only the reach changes."
+   }
+  ],
+  "gates": "Five gates, each earned by measured results from the one before it, and every one of them capable of stopping the money. GATE 0, THE TALLY GATE, before any build spend. If nobody at the company will run the paper sheet for nine weeks, the honest position is that the outcome can't be measured, and the study says so rather than promising a measured result. An unmeasurable claim is not a smaller claim, it is a different kind of claim. If the sheets do come back and show a desk that barely escalates and rarely misquotes, that is grounds for them to stop before a line of code is written, and we would say so. GATE 1, CERTIFICATION, before the tool goes anywhere near a live desk. 100 percent agreement with published policy across an exhaustive enumeration of the input cross product rather than a threshold on a sample, every cell signed by a named internal policy owner, an assertion on every response that no answer returns without its verbatim published sentence and URL, default deny writing a miss log entry on anything outside the table, and the vessel map either signed or the accessibility branch shipping as abstain. GATE 2, SEASON READINESS, before the March cohort touches it. Regression suite green after re-running against the reconciled source, season scoping verified with two seasons live at once, abstain route and escalation path tested rather than assumed. GATE 3, THE RETRIEVAL OPTION GATE, read at the close of the 2027 season, numeric and capable of failing. All three of the following, at least 15 percent of logged desk questions falling outside the table, AND at least 20 distinct question types recurring three or more times, AND at least 150 labelled items after de-duplication. The client sets the final figures. What is not negotiable is that a number exists and that it can fail. THE SYMMETRIC OUTCOME IS WRITTEN INTO THE SAME DOCUMENT. If the log lands below any one of the three, we say so in writing, we do not invoice, nothing is built, and the published conclusion is that this business needed a rule set and not an AI. Three things neutralise the obvious conflict of interest, that the party who benefits from clearing the gate is the party who designs the table that decides what counts as a miss. The table's boundaries are agreed with them up front so the scope of a miss is not ours to set after the fact. The log is their data in their format, portable to any vendor including one that is not us. Phase one also has to be worth buying standalone with no obligation, which at 18,000 dollars fixed it is, since they keep three assets either way, one canonical dated policy source, one authoritative vessel map, and a written record of what their own desk actually gets asked. GATE 4, THE LATER LANE GATES, each named on its own item. The chatbot needs a full season of internal evidence and a measured abstention rate before a guest ever sees it. The batch mode needs a counted event frequency. The configurator needs a conversation about whether phone-only is deliberate, and a deliberate answer kills it. Seat allocation needs any evidence at all that it currently hurts. Nothing on the kill list comes back through any of these gates.",
+  "need_from_you": [
+   "SOMEONE TO RUN THE TALLY. One named person on the desk who fills the paper sheet on every staffed day from this week to October 11th, plus a supervisor who logs every question on two randomly chosen full days a month. That second part is not bureaucracy, it corrects the log's own selection bias, since under-logging is guaranteed at peak and peak is exactly when the errors happen. This is the dependency that decides whether anything downstream is measurable, and it is on your side of the line, not ours.",
+   "A NAMED OWNER TO ADJUDICATE CONFLICTING PUBLISHED FACTS. Someone with the authority to rule which parking price is right, to retire the 2020 and 2021 copy still sitting on a live 2026 booking page, to decide whether the product with a live page belongs on the five-product index, and to keep the 2026 and 2027 prices from colliding while both seasons are selling. Only somebody inside the company knows which one is correct, and this owner also signs off every cell of the decision table before it ships.",
+   "A NAMED OWNER FOR THE VESSEL-TO-DEPARTURE MAP, WITH A DATE. This data does not exist in verified published form and, on the evidence, may not exist internally in one place either. It needs a ruling on whether assignment is stable across maintenance and charters, and a ruling on the case where the FAQ describes a vessel running the 12:30 pm 4 Hour departure that the fleet page does not list. If it turns out not to be stable, say so and the tool never answers accessibility, it routes to a named person. That is a good outcome, not a failure.",
+   "LABELLING HOURS FROM A NAMED INTERNAL AUTHORITY. Every miss log entry needs a correct answer with its source page, produced by someone at the company rather than by us and never by a model. This is real hours from people who are busy, it belongs in the plan with a name against it, and if it is refused then the miss log is a backlog, retrieval is unscoped, and the honest response is to say so and not build it.",
+   "A PII RULE AGREED BEFORE THE FIRST ENTRY. The log captures questions verbatim, which means names, booking references, mobility information and dietary information. Field-level discipline or redaction at capture, a retention rule, and a decision about who may read it, all settled before entry one rather than after.",
+   "AGREEMENT ON THE TABLE'S BOUNDARIES UP FRONT. What counts as inside the table and what counts as a miss is agreed with you before phase one starts, so the number the retrieval gate is read against is not one we can move afterwards.",
+   "ONE DECISION-MAKER FOR THE GATES. Every gate above is your off-ramp, and off-ramps only work when one named person can call them."
+  ],
+  "sequencing_rationale": "Sequenced on cost of delay divided by size, with one correction that RICE and WSJF both handle badly. COST OF DELAY HERE IS A STEP FUNCTION, NOT A SLOPE. Peak seasonal hiring runs January 15th to April 15th and about 60 seasonal staff arrive inside that window every year, so the desk this build serves is rebuilt from novices every spring. Either the tool is in the 2027 cohort's hands before their season opens or it is worth nothing at all until 2028. There is no partial credit for landing in May. So the ordering question is not what is most valuable, it is what fits before the cliff. FIRST, THE FREE THING WITH THE CLOSING WINDOW. The paper tally is size zero and its window shuts on October 11th when the last product stops running. It creates the baseline that does not exist, counts the disruption events that decide whether a batch mode is ever worth building, and starts the miss log before any tool exists. Nothing else on the roadmap is free, and nothing else expires in nine weeks. SECOND, THE THING EVERYTHING READS FROM. Corpus reconciliation is the largest piece of uncosted scope in the original proposal and every other item depends on it. It is also the item with standalone value on a day when no software has been installed anywhere. THIRD, THE LONGEST CLIENT-SIDE LEAD TIME, STARTED IN PARALLEL. The vessel map is the one dependency that may not exist at all, and what eats a calendar is almost never the engineering, it is waiting on a decision only the client can make. It starts on day one and it is allowed to end in an abstain. FOURTH, THE WALKING SKELETON, AND IT WAS CHOSEN TO DODGE THE RISKY DEPENDENCY. Refunds and change fees run end to end first because that branch needs no vessel map, so first light can't be blocked by the one input that might turn out to be unstable, and because it carries the clearest hard-dollar benefit, the refund issued in the generous direction on money the company did not owe. Accessibility carries the higher cost of error and comes second precisely because it depends on the map. THE TWO-SEASON CORRECTION IS THE OTHER SEQUENCING DECISION AND IT COST THE ORIGINAL PLAN A WHOLE YEAR. The retrieval option can't reach the March 2027 cohort, because the questions that would justify it only accrue while a season runs. Collection runs roughly March to October 2027, labelling and build over that winter, and retrieval reaches the desk for the March 2028 cohort. Presenting both against one March 2027 clock would compress a two-season programme into one and would make this company look more ready than the evidence supports, which is the exact direction of drift this analysis had to correct twice. The nine-week 2026 tally is shoulder season with three departure slots already ended on August 23rd, so it is read as a floor and never used to settle the retrieval gate. LAST, WHAT IS DELIBERATELY NOT SEQUENCED. Everything on the Later lane carries a gate that can leave it unbuilt forever, and two of those gates are designed to kill their own item, the configurator dies if phone-only turns out to be a deliberate sales decision, and seat allocation stays unbuilt if the count comes back at zero.",
+  "walking_skeleton": "One branch, refund clocks and change fees, running end to end on a real question at the desk before the other three branches exist. The agent enters what the booking contains, cruise only, cruise and hotel, or transportation added, plus whether a date change has already been used and whether the guest sailed. The tool returns the clock, the fee and the verbatim published sentence with its source URL for the agent to read out loud. Anything outside the table returns no published rule for this case, escalate to the named role, and writes a miss log entry. It touches every component in the design, the canonical reconciled source, the decision table, the assertion that no answer leaves without its verbatim sentence and URL, the default-deny abstain route, and the miss log, so the whole shape is proven end to end while only one branch is encoded. It runs on crutches, the booking contents are typed in by hand, because the booking engine vendor is unidentified and no integration can honestly be scoped from what is public, and saying that keeps the estimate honest instead of hiding an integration nobody has scoped. Refunds were chosen over the other three branches for two reasons, it needs no vessel map so the one dependency that might not exist can't block first light, and it carries the clearest cash benefit, since quoting the 72 hour cruise-only clock to a guest holding a 21 day transportation package refunds money the company did not owe on a booking whose third-party transportation it may already be committed to.",
+  "not_on_any_lane": [
+   "An AI voice agent on the reservations line. Killed on durable grounds rather than on latency. The line is a revenue channel where packages are sold and where bookings inside 12 hours are explicitly routed to a person, and the caller mix skews toward guests already in trouble. Nothing on this roadmap brings it back.",
+   "Free-text generation on refunds, accessibility, shuttle eligibility and dietary windows. Highest cost of error, finite input space, published answers, so determinism wins outright and the topic filter that enforces it lives in code rather than in an instruction.",
+   "Generation layered on retrieval inside the funded scope. It skips a rung, it roughly quadruples the modelled rate at which a wrong answer reaches a guest, and what it buys is fluency. Held as a separate third rung with its own gate, not folded into anything above.",
+   "A model drafting the disruption notification. The goal is consistency and a template with merge fields is consistent by construction.",
+   "A disruption console as a standalone product. Folded into the table as a batch mode on the Later lane, gated on a counted frequency.",
+   "A seat allocation optimiser as a funded build. It is constraint solving rather than AI, and there is no evidence today that the current process hurts anyone.",
+   "An AI website consistency checker sold as an AI build. It is a crawl, a diff and a link check, and it lives inside corpus reconciliation as plumbing on the Now lane."
+  ],
+  "high_integrity_dates": [
+   "COMMITMENT. The reconciled source, the four-branch decision table and the miss log are certified and in the March cohort's hands before the first published 2027 sailing on March 20th, 2027. If the 2027 season opens earlier than that spring cruise, as the 2026 season did on March 7th, we hold to the earlier date. This is the one date on the roadmap that is a promise, and it is here because missing it costs the entire year, not a few weeks.",
+   "THEIR PUBLISHED CALENDAR, NOT OUR PROMISE. The 2026 season ends October 11th, which closes the tally window. The 8.5 Hour ended September 7th, the 7.5 Hour ends September 13th, the 6 Hour September 21st, and three departure slots ended August 23rd, so the observable operation shrinks every week between now and then.",
+   "THEIR PUBLISHED CALENDAR, NOT OUR PROMISE. Peak seasonal hiring runs January 15th to April 15th, which is the window that decides who is at the desk and the reason the delivery commitment above sits where it does.",
+   "NO OTHER DATES ARE COMMITTED. The retrieval option is not dated at all, because it is an option and not a phase. If its gate ever clears it is a March 2028 tool, and saying otherwise would compress two seasons into one."
+  ]
+ },
+ "roi": {
+  "headline_verdict": "AT THE 18,000 DOLLAR ASK THE CONSERVATIVE CASE DOES NOT CLEAR. It clears under most-likely and aggressive assumptions only. The recommended ask is therefore smaller, and it is priced as decision data that gates the bigger spend.",
+  "cost_note": "Five-year total cost of ownership, not sticker price, per Gartner TCO and the Forrester TEI four-part frame. Implementation is the 18,000 dollar fixed-price phase one ask exactly as sized in the economics pre-check, and it is not adjusted upward anywhere in this model. Training and change management is stated in HOURS and is entirely their people's time, about 84 hours in year one at the conservative population: 24 hours for an internal policy owner adjudicating the corpus contradictions and signing off one dated canonical source, 16 hours for operations to assemble and sign the vessel-to-departure map, about 11 hours to run the paper tally sheet for the final nine weeks of the 2026 season at roughly 10 minutes a shift, about 9 hours of cohort onboarding at 1.5 hours per first-season desk agent, and 24 hours of miss-log labelling by a named internal authority. Those hours are priced at assumed loaded rates and carried as a cost, never netted against the benefit. Ongoing run cost is real even though the funded build has no model in it and therefore has ZERO inference and ZERO token cost: it is the pre-season regression re-run and content refresh before March 7 each season, hosting and tooling, and the policy owner's review cadence, which the season-scoping problem makes annual and non-optional because two seasons are live at once on their own site today. Run cost accrues for 4.5 of the 5 years on a mid-year go-live convention. Contingency is 20 percent in the conservative case, 18 percent most-likely, 15 percent aggressive, at the top of the 15 to 20 band where the risk is organizational rather than technical, which is what it is here: the tally sheet, the corpus owner and the vessel map are all their work, not ours.",
+  "benefits": [
+   {
+    "benefit": "First-season desk agent hours lost finding a policy answer in weeks one through six",
+    "kind": "capacity",
+    "basis": "Assumed 12 to 30 hours per first-season desk agent over weeks one to six, at an assumed loaded seasonal rate of 26 to 34 dollars an hour, times an assumed 6 to 15 first-season desk agents a year, times an assumed 25 to 55 percent of those hours removed. NO measured baseline exists. Median time to answer is recorded nowhere at this company today.",
+    "note": "CAPACITY, not cash, and the redeploy / defer-hire / avoid-backfill test FAILS on two of three routes. Nobody gets un-hired: the cohort is hired in a fixed January 15th to April 15th window for a fixed March 7th to October 11th season, so there is no hire to defer and no backfill to avoid. Redeploy is the only honest route and it is partial, the freed hours go back into a shift the agent is already being paid for. A CFO should read this line as capacity created inside an already-committed payroll, never as a payroll reduction."
+   },
+   {
+    "benefit": "Veteran and supervisor hours consumed answering a first-season agent in weeks one through six",
+    "kind": "capacity",
+    "basis": "Assumed 4 to 11 veteran hours consumed per first-season agent over weeks one to six, at an assumed loaded rate of 42 to 58 dollars an hour, times the same assumed 6 to 15 first-season agents, times an assumed 30 to 60 percent removed. Escalation rate is recorded nowhere today.",
+    "note": "CAPACITY. Same failed test as the line above. This is the stronger of the two ramp lines on mechanism, because the interrupted person is a scarce one, and the strongest available evidence (i1, 5,179 agents) concentrates its effect on novices with near zero effect on experienced workers, which is exactly this shape. The second-order cost, a shoreside supervisor pulled off a boarding of up to 192 passengers to answer a refund clock question at 11:20 a.m., is REAL and is deliberately QUARANTINED as qualitative because it has no defensible denominator."
+   },
+   {
+    "benefit": "Refund paid on the wrong clock in the generous direction",
+    "kind": "cash",
+    "basis": "Assumed 6 to 26 events a season at an assumed 298 to 618 dollars an event, times an assumed 50 to 85 percent reduction. Cost per event is built ONLY from verified adult fares, two adults at 149 dollars conservative, two at 239 most-likely, two at 309 aggressive. Event frequency is a pure assumption with LOW confidence and it is the single driver that moves this whole analysis.",
+    "note": "CASH, and the only line in the stack that needs no redeploy test, because it is money that leaves the bank account and does not come back. The mechanism is verified from their own published policy: three different refund clocks live on one page, 72 hours cruise-only, 7 days hotel package, 21 days transportation package. A first-season agent who quotes the headline 72-hour clock to a guest holding a 21-day transportation package refunds money the company did not owe, on a booking whose third-party transportation it may already be committed to. The transportation component of that refund is UNPUBLISHED and is excluded entirely from cost per event, which understates this line in all three scenarios."
+   },
+   {
+    "benefit": "Retrieval option never invoiced because the measured gate failed",
+    "kind": "cash",
+    "basis": "Assumed 22,000 to 38,000 dollars of gated build spend, times an assumed 35 to 60 percent probability that the three-part gate FAILS on measured evidence, entered as 0.22 to 0.23 events a year so that the one-time decision annualizes to almost exactly one occurrence across the five-year horizon.",
+    "note": "CASH, avoided outflow. This is the pilot-as-decision-data line the run contract explicitly permits, and it is stated in those terms rather than dressed as an operational saving. The gate is numeric and can fail: at least 15 percent of logged questions falling outside the table, AND at least 20 distinct question types recurring three or more times, AND at least 150 labelled items after de-duplication. On a desk this small that is a demanding bar, and if the log lands under it the written outcome is that this business needed a rule set and not an AI, we say so, we do not invoice. The avoided RUN cost of the option that never gets built is deliberately excluded, which understates this line. Conservative here means a LOW probability of the gate failing, because a failing gate is what produces the benefit."
+   },
+   {
+    "benefit": "Pre-season policy reconciliation across the website, two hotel front desks and the dock",
+    "kind": "capacity",
+    "basis": "Assumed 900 to 2,600 dollars a year of current ad-hoc reconciliation effort, times an assumed 40 to 65 percent removed by one dated canonical source. The reduction is stated NET of the maintenance hours already carried in run cost, so it is not double counted.",
+    "note": "CAPACITY, a retained asset with recurring value rather than a cash saving. The defect rate behind it is verified rather than assumed: two of their own pages give different parking prices, a live 2026 booking page still carries 2020 and 2021 copy, the FAQ names a vessel running a scheduled 12:30 pm departure that the eight-vessel fleet page does not list, and a product with a live 2026 page is missing from the five-product index. It recurs annually by construction because two seasons are live at once on their site right now, the 4 Hour at 149 dollars for 2026 and the Spring Wildlife at 109 dollars for 2027."
+   }
+  ],
+  "benefit_lines_labelled": [
+   {
+    "line": "First-season desk agent ramp hours",
+    "label": "CAPACITY",
+    "defer_hire": "FAILS, the cohort is hired in a fixed window for a fixed season",
+    "avoid_backfill": "FAILS, there is no backfill in a seasonal rebuild",
+    "redeploy": "PARTIAL, hours return to a shift already paid for",
+    "verdict": "Capacity created inside committed payroll. Not a payroll reduction and the study must not imply one."
+   },
+   {
+    "line": "Veteran and supervisor interruption hours",
+    "label": "CAPACITY",
+    "defer_hire": "FAILS",
+    "avoid_backfill": "FAILS",
+    "redeploy": "YES, into peak-season shoreside operations, which is where the scarcity actually is",
+    "verdict": "Capacity created, with the clearest redeploy route of the two ramp lines. Still not cash."
+   },
+   {
+    "line": "Refund paid on the wrong clock in the generous direction",
+    "label": "CASH",
+    "defer_hire": "N/A",
+    "avoid_backfill": "N/A",
+    "redeploy": "N/A",
+    "verdict": "Avoided cash outflow. Money that leaves the account and does not return. The only unambiguous cash line built on operations rather than on a purchasing decision."
+   },
+   {
+    "line": "Retrieval option never invoiced because the gate failed",
+    "label": "CASH",
+    "defer_hire": "N/A",
+    "avoid_backfill": "N/A",
+    "redeploy": "N/A",
+    "verdict": "Avoided capital outflow on a build that the evidence says should not happen. Honest only because the gate is numeric, is written before the work starts, and can fail against us."
+   },
+   {
+    "line": "Pre-season policy reconciliation effort",
+    "label": "CAPACITY",
+    "defer_hire": "FAILS",
+    "avoid_backfill": "FAILS",
+    "redeploy": "YES, partial",
+    "verdict": "Capacity plus a retained asset. Counted at a haircut and net of the maintenance hours already sitting in run cost."
+   }
+  ],
+  "quarantined_qualitative_benefits": [
+   "A shoreside supervisor not pulled off a boarding to answer a policy question at the moment a cruise is loading. Real, and it has no denominator, so it stays out of the formula.",
+   "The strict-direction refund error, where a guest is refused a refund they were entitled to under the published policy. This is NOT a cash benefit, the company keeps that money. It is a reputation cost on a thirty-year locally owned family brand whose competitive position against a NYSE-listed operator in the same harbour is exactly that. It stays out of the formula.",
+   "The accessibility branch. Telling a wheelchair user a departure is accessible when the vessel running it is not has the highest cost of error in the business and the only dignity dimension, and it is the one error with no catcher upstream of the dock. It is excluded from the formula because it depends on a vessel-to-departure map that does not exist yet, and because assuming the company writes a discretionary refund is an assumption about behaviour we can't verify.",
+   "A wrong shuttle answer that causes a missed sailing. EXPLICITLY EXCLUDED AND IT MUST STAY EXCLUDED. Their published policy makes a no-show completely non-refundable, so the company KEEPS that fare. The cost is goodwill and reputation, not revenue, and counting it as revenue would be dishonest.",
+   "The change-fee line, a 15 dollar per person re-booking fee forgone when a novice quotes a free date change to a guest already on their second change. Verified, real, and immaterial. Dropped on purpose rather than stacked, because a weak line makes the whole case weaker."
+  ],
+  "benefit_phasing": "No day-one benefit anywhere in this model. The funded build lands in the March 2027 cohort's hands, so YEAR ONE IS ONE SEASON AND NOT TWELVE MONTHS OF STEADY STATE, and the season itself is March 7th to October 11th rather than a calendar year. Year one is discounted to 30 percent of run rate conservative, 45 percent most-likely, 60 percent aggressive, and that discount is ADOPTION, not calendar: a brand-new lookup in the hands of a cohort that is itself brand new, with the corpus owner still settling contradictions mid-season and the table covering four branches out of everything the desk gets asked. Years two through five run at full rate, which is the right shape here rather than an optimistic one, because the population resets every spring by the company's own published hiring pattern, so the tool meets a fresh novice cohort every March instead of decaying into a habit nobody uses. Compounding is real on the retained assets and is NOT modelled, the canonical policy source and the vessel map get better each season they are maintained and we take no credit for that. The recommended smaller ask ramps faster, 70 percent in year one, because the paper tally sheet starts in the final nine weeks of the 2026 season and the canonical source is usable the day it is signed off.",
+  "scenarios": {
+   "conservative": "6 first-season desk agents, 12 novice hours and 4 veteran hours each over weeks one to six, 25 and 30 percent of those hours removed, 6 wrong-clock refunds a season at two adults on the lowest verified fare, 50 percent of them prevented, a 22,000 dollar gated option with a 35 percent chance the gate fails, 20 percent contingency, 30 percent year-one ramp. THIS CASE DOES NOT CLEAR AT 18,000. It recovers roughly a third of five-year TCO and we expect roi_math.py to return no payback inside the horizon.",
+   "most_likely": "10 first-season desk agents, 20 novice hours and 7 veteran hours each, 40 and 45 percent removed, 14 wrong-clock refunds a season at two adults on the 6 Hour fare, 70 percent prevented, a 30,000 dollar gated option at a 50 percent chance of failing, 18 percent contingency, 45 percent year-one ramp. This case clears, and it clears thinly, with payback deep in year four. A thin most-likely case is not a strong buy signal and we are not going to call it one.",
+   "aggressive": "15 first-season desk agents, 30 novice hours and 11 veteran hours each, 55 and 60 percent removed, 26 wrong-clock refunds a season at two adults on the highest verified fare, 85 percent prevented, a 38,000 dollar gated option at a 60 percent chance of failing, 15 percent contingency, 60 percent year-one ramp. This case clears comfortably and it rests almost entirely on an error frequency nobody has ever counted. The spread between conservative and aggressive is more than tenfold, which is the honest signature of a case with no baseline.",
+   "recommended_ask_conservative": "The SAME conservative benefit assumptions applied to a 4,500 dollar Phase Zero with no software in it. This case clears, at the margin, and it is the only version of this engagement whose conservative case clears."
+  },
+  "conservative_clears": false,
+  "conservative_clears_reasoning": "At the 18,000 dollar ask, no. We are saying that in the heading rather than in a footnote, as the economics pre-check required. The quantifiable annual benefit under conservative assumptions lands in the low thousands, the five-year TCO at 18,000 lands near 50,000 once training hours, five years of run cost and 20 percent contingency are in it, and roughly a third of that gets recovered. The verdict is robust: we re-tested it against higher agent counts, a larger cost per refund error and a doubled event frequency, and conservative still fails. It fails for a reason that is a fact about the business rather than a fact about the build, the desk is small and its headcount is unpublished, which is exactly what the conscience gate said before this analysis started. The RECOMMENDED ASK is therefore not 18,000 today. It is about 4,500 dollars for a Phase Zero with no software in it, and the conservative case for that one clears. We want to be blunt about how that 4,500 was arrived at, because a CFO is entitled to suspect it: it is not a bottom-up scope estimate that happened to clear, it is the CEILING the conservative benefit supports, solved for, and the scope was then cut to fit under it. Saying that out loud is the point. Phase Zero is the corpus crawl and the conflict list, facilitated adjudication with a named internal owner producing one dated canonical policy source, the vessel-map workshop with a written abstain rule, the paper tally sheet installed for the final nine weeks of the 2026 season, and the miss-log specification including the PII rule, the held-out split and the supervisor sampling arm. The 18,000 dollar decision table is not withdrawn, it is RE-PRICED against a measured baseline in autumn 2027, when the tally sheet has produced the denominator this analysis did not have. If the counted error frequency lands anywhere near the most-likely assumption, the 18,000 dollar build clears conservatively at that point and we will show the arithmetic again with real numbers in it.",
+  "payback_range": "Reported as a range and never as a point, and every month figure is computed by scripts/roi_math.py rather than narrated here. At the 18,000 dollar ask we expect the range to run from NO PAYBACK INSIDE FIVE YEARS in the conservative case, through payback deep in year four most-likely, to somewhere in year two aggressive. At the recommended 4,500 dollar Phase Zero ask we expect conservative payback near the end of the five-year horizon, which is honest rather than attractive, and which is why the case for Phase Zero rests on the decision it buys rather than on its payback speed. Two calendar adjustments the reader must apply and which the script does not model. First, month zero is GO-LIVE, so the four-month build and reconciliation period that precedes March 2027 sits before month one and pushes every calendar date out by about four months. Second, benefit only accrues while a season runs, March 7th to October 11th, so a payback month is a position on a benefit curve that is flat for roughly five months of every year. Where this section and the script disagree, THE SCRIPT WINS and this sentence is the defect.",
+  "base_rate_note": "The outside view first, stated at full strength rather than as a hedge. MIT's finding is that about 95 percent of generative AI pilots produce no measurable P&L impact. RAND puts AI project failure at about 80 percent, roughly double the rate for non-AI IT projects. Reference-class forecasting says the right prior for this build is that it does nothing, and an inside-view estimate written by the people who would be paid to do the work is exactly the estimate that prior exists to correct. Six specific things put this build in the small share that pays, and the first one is the strongest. ONE, THE FUNDED SCOPE CONTAINS NO MODEL. It is a deterministic decision table over a finite, already-published input space, so the dominant failure mode in that 95 percent, a probabilistic system whose real-world error rate nobody measured, is absent by construction rather than managed. TWO, the acceptance bar is 100 percent agreement across an EXHAUSTIVE ENUMERATION of the input cross product, certified rather than sampled. Almost nothing in AI can be certified, and this can. THREE, it FAILS CLOSED. Any input combination not in the table returns no published rule for this case, escalate to the named role, and writes a miss-log entry. It never interpolates and never guesses, and the accessibility branch abstains outright whenever the vessel serving a departure is not known with certainty. FOUR, it is aimed at the population where the strongest available evidence concentrates its effect, novices, with near zero effect on experienced workers, and it deliberately does not target the 22-year vice president or the 15-year maintenance director. A rollout to everyone would dilute into an average that looks like failure while the tool worked exactly as measured. FIVE, the baseline is a NAMED DELIVERABLE rather than an assumption, so the variance check can actually run, and a case that plans to be checked is the marker the failure literature keeps identifying. SIX, the next spend is gated on a number that can fail against us and we have written down that we do not invoice if it fails. Now the counterweight, which belongs in the same paragraph rather than in a softer one further down. Design does not beat a base rate on its own, execution does, and the single largest risk here is not technical at all. It is that nobody at Major Marine runs a paper tally for nine weeks. If that happens the outcome is unmeasurable, and unmeasurable is not a smaller claim, it is a different kind of claim, and the study says so rather than promising a measured result.",
+  "value_owner": "PROPOSED, and they assign it, we do not. The number should sit with ONE named person on their side and we propose the Director of Shoreside Operations, Kirsten McNeil, at 11 years, because the check-in office and the reservations desk are inside that remit and because a value owner who does not control the workflow cannot move the number. Two supporting owners, each named because the analysis fails without them. The Operations Manager, Tayja Wright, at 8 years, runs the paper tally sheet for the final nine weeks of the 2026 season and re-runs it in the same calendar weeks of 2027, which is the entire measurement apparatus. A named internal POLICY owner adjudicates every corpus contradiction and signs the one dated canonical source, and we propose the Director of Sales, Kori Goertz, because pricing and package rules sit in that role, and because only somebody inside the company knows which parking price is the right one. That last role is not optional and it is not ours to fill. Alaska AI owns the build and the arithmetic. Alaska AI does not own the adoption, and pretending otherwise is how the 95 percent gets made.",
+  "variance_check": "Baseline first, because there isn't one today. The paper tally sheet runs from now to October 11th, 2026, the final nine weeks of the season, recording question asked, time to answer, escalated or not, and to whom. Zero software and zero cost. It is re-run in the SAME CALENDAR WEEKS of 2027 so the comparison is season-matched rather than calendar-matched, which matters on an operation whose volume is shaped entirely by the season. Four checks at that point. ONE, the three operational metrics, median time to answer, escalation rate for first-season agents, and count of policy misquotes reaching a guest, all three of which must fall with no fall in guest experience. TWO, the cash check, counted generous-direction refund errors in 2027 against the 2026 tally, reported whether it moved or not, and this is the check that decides whether the 18,000 dollar build is ever worth buying. THREE, the miss log counted against all three parts of the gate, 15 percent outside the table, 20 distinct types recurring three or more times, 150 labelled items after de-duplication, published as a result either way. FOUR, a re-run of this exact ROI model with the counted numbers substituted for the assumed ones, with every driver that moved named and the direction it moved in. One guard against ourselves, written down now rather than later. The party that designs the table is the party that determines what counts as a miss, and a narrower table produces a fatter miss log. The table's boundaries are therefore agreed with the client UP FRONT, and the supervisor logs every question on two randomly chosen full days a month so the log has an arm that is not selected by us or by a busy agent.",
+  "what_would_make_this_wrong": [
+   "THE TALLY SHEET NEVER RUNS. This is the largest risk in the whole case and it is not a technical one. Every driver in this model is an assumption, the tally sheet is the only thing that converts any of them into a measurement, and it is their work rather than ours. If it does not run, the honest position is that the outcome can't be measured, and we say so instead of promising a measured result.",
+   "THE REFUND ERROR FREQUENCY IS LOWER THAN 6 A SEASON. That single driver moves this analysis more than any other. If the desk almost never quotes the wrong clock, the cash strand collapses, the whole case rests on capacity hours that are not payroll reductions, and the correct answer is that they should not buy the decision table at any price. We would rather find that in September 2026 than in March 2027.",
+   "THE DESK SHARE OF THE 60 SEASONAL HIRES IS SMALLER THAN ASSUMED. About 60 seasonal employees is verified from their own employment page. The share who work the reservations desk is UNPUBLISHED, and we assumed 10 to 25 percent. Deckhands, cooks, engineering and dock support are the bulk of a boat operation. If the desk is three people and two of them return every year, both ramp lines shrink toward nothing.",
+   "THE VESSEL-TO-DEPARTURE MAP TURNS OUT NOT TO BE STABLE. If vessel assignment moves with maintenance and charters, the accessibility branch never ships, the table covers three branches rather than four, and every cut percentage in the ramp lines is too high.",
+   "THE LOADED HOURLY RATES ARE WRONG. Nothing about their pay is published. We assumed 26 to 34 dollars loaded for a seasonal agent and 42 to 58 for a veteran or supervisor, built up from an assumed wage plus payroll burden plus the real employer-side cost implied by their own published housing and travel support. If the true loaded rate is lower, both capacity lines shrink proportionally.",
+   "THE CAPACITY LINES GET READ AS CASH. They are not cash and we have labelled them capacity in every place they appear. If a reader mentally converts freed hours into a smaller payroll, the case looks roughly twice as good as it is. On a fixed seasonal cohort hired inside a fixed window, that conversion is simply not available.",
+   "THE GATED OPTION IS PRICED WRONG. The 22,000 to 38,000 dollar range for the retrieval option is our own assumed scope rather than a quote, and we chose to use our own number precisely because a vendor average would be worthless as this company's baseline. If that option would really cost far less, the decision-data line shrinks and the recommended Phase Zero ask stops clearing.",
+   "WE PRICED PHASE ZERO BY SOLVING FOR THE CEILING. The 4,500 dollar figure is the largest ask the conservative benefit supports, solved for, with the scope then cut to fit under it. That is a legitimate way to size an ask and it is also exactly the move Flyvbjerg warns about, so it is disclosed here rather than presented as a coincidence. If the scope cannot honestly be delivered for 4,500, the ask does not go up, the recommendation becomes the free tally sheet alone."
+  ],
+  "assumptions": [
+   "NO BASELINE EXISTS. Median time to answer, escalation rate and policy-misquote count are recorded nowhere at this company today. Reservations desk headcount, annual passenger volume and call volume are all unpublished. Every driver below is a STATED ASSUMPTION and not a measurement, and no hours-saved case is built on an unpublished headcount denominator anywhere in this model.",
+   "pursuits_per_year, meaning first-season desk agents a year, assumed at 6 conservative, 10 most-likely, 15 aggressive. Chosen as roughly 10, 17 and 25 percent of the verified about 60 seasonal employees, on the assumption that Customer Service and Sales Staff, which their own employment page lists first among six role categories, covers the phone desk plus the check-in office plus the dock ticket window, and on the further assumption that most of that group is new each spring given a hiring window of January 15th to April 15th. Confidence LOW on the split, MODERATE on the annual rebuild.",
+   "hours_per_pursuit on the novice line, assumed 12 conservative, 20 most-likely, 30 aggressive, over weeks one to six. Built from an assumed 20 questions per agent per day across roughly 30 shifts, with an assumed extra 2 to 4 minutes per lookup on the share of questions that need a policy page. Confidence LOW.",
+   "hours_per_pursuit on the veteran line, assumed 4 conservative, 7 most-likely, 11 aggressive, of veteran time consumed per first-season agent over the same six weeks. Chosen at roughly a third of the novice figure on the assumption that most lookups are self-served and only the harder ones escalate. Confidence LOW.",
+   "rate on the novice line, assumed 26, 30 and 34 dollars an hour fully loaded. Built from an assumed base wage plus assumed payroll burden plus the real employer-side cost implied by their own published employee housing from 15 dollars a night and a 400 dollar out-of-state travel reimbursement, whose magnitude is unpublished. Confidence LOW. This is an assumption, never a fact, and it is not an industry average.",
+   "rate on the veteran line, assumed 42, 50 and 58 dollars an hour fully loaded for a returning senior agent, supervisor or manager. Confidence LOW, chosen deliberately below what a director-level interruption is actually worth so the line cannot be accused of inflation.",
+   "cut on the novice line, assumed 0.25, 0.40 and 0.55, and on the veteran line 0.30, 0.45 and 0.60. Bounded well under 1.0 because the funded table covers only four branches out of everything the desk is asked, and because the veteran line has the cleaner mechanism, a lookup removes the go-ask-somebody step more completely than it removes reading time. Confidence LOW.",
+   "events_per_year on the refund line, assumed 6 conservative, 14 most-likely, 26 aggressive. THIS IS THE DRIVER THAT MOVES THE ANSWER and it has no denominator, because booking volume is unpublished. 6 a season is roughly one every five weeks of a 31-week season, chosen as a floor rather than a middle. Confidence VERY LOW and stated as such wherever this number appears.",
+   "cost_per_event on the refund line, assumed 298, 478 and 618 dollars, constructed identically across all three scenarios as TWO ADULTS at a verified adult fare, 149 dollars on the 4 Hour conservative, 239 on the 6 Hour most-likely, 309 on the 8.5 Hour aggressive. Party size of two is assumed. The transportation component of a transportation package is UNPUBLISHED and is excluded entirely, which understates all three figures. Confidence MODERATE on the fares because they are verified, LOW on party size.",
+   "reduction on the refund line, assumed 0.50, 0.70 and 0.85. Bounded by ADOPTION rather than by tool accuracy, because the table itself is certified at 100 percent agreement across an exhaustive enumeration and the refund branch has no abstain path, its inputs are booking contents the agent enters by hand. Confidence MODERATE.",
+   "cost_per_event on the decision-data line, assumed 22,000, 30,000 and 38,000 dollars for the gated snippet-retrieval option. This is OUR OWN assumed scope, used deliberately in place of any vendor or industry figure. It excludes the multi-year run cost of the option that never gets built, which understates the line. Confidence LOW.",
+   "reduction on the decision-data line, meaning the probability the three-part gate FAILS on measured evidence, assumed 0.35, 0.50 and 0.60. Conservative here means a LOW probability, because a failing gate is what creates the benefit. There is a real argument that 0.35 is too low, since 150 labelled items after de-duplication is a demanding bar on a small desk and under-logging at peak is guaranteed, and we left it low on purpose. Confidence LOW.",
+   "events_per_year on the decision-data line, set at 0.23 conservative and 0.22 in the other cases. This is a MODELLING CONVENTION, not a frequency. The decision is a one-time event at the end of the 2027 season, and 0.22 to 0.23 a year annualizes to almost exactly one occurrence across the five-year horizon under each scenario's ramp multiplier. It is disclosed here because a reader who took it literally would be misled.",
+   "The reconciliation line, assumed 900, 1,600 and 2,600 dollars a year of current ad-hoc effort at an assumed 45 dollar loaded rate, times an assumed 0.40, 0.55 and 0.65 removed. The reduction is stated NET of the maintenance hours already carried inside run cost, so the same work is not counted on both sides of the ledger. The underlying defect rate is verified rather than assumed, four independent freshness and consistency defects found in one afternoon of external reading of a corpus of roughly thirty pages. Confidence MODERATE on the defects, LOW on the effort figure.",
+   "implementation set at 18,000 dollars in all three scenarios, exactly the fixed-price phase one ask from the economics pre-check, never adjusted upward anywhere in this model. The fourth scenario sets it at 4,500 for the recommended Phase Zero.",
+   "training set at 3,500, 4,600 and 6,200 dollars, which is entirely THEIR hours and not an invoice. About 84 hours in year one at the conservative population, itemised in cost_note. It rises in the aggressive case because a larger desk means more onboarding and more labelling, which keeps the scenarios internally consistent rather than letting the aggressive case get cheaper as it gets bigger.",
+   "run_cost_per_year set at 4,800, 3,600 and 2,800 dollars, and 1,000 for the recommended Phase Zero. There is ZERO inference cost and ZERO token cost because the funded build has no model in it. What remains is the pre-season regression re-run and content refresh before March 7th each season, hosting and tooling, and the policy owner's review cadence. Season scoping makes the refresh annual and non-optional, because two seasons are live at once. Confidence MODERATE.",
+   "run_cost_years set at 4.5 of the 5-year horizon in every scenario, the mid-year go-live convention used by scripts/roi_math.py.",
+   "contingency set at 0.20 conservative, 0.18 most-likely, 0.15 aggressive, inside the 15 to 20 percent band. Top of the band conservative because the failure risk here is organizational rather than technical, the tally sheet and the corpus owner and the vessel map are all their work.",
+   "year1_ramp set at 0.30, 0.45 and 0.60, and 0.70 for the recommended Phase Zero. This is ADOPTION and not calendar. The build lands with the March 2027 cohort so year one contains one full season, and the discount reflects a new tool in the hands of a new cohort with the corpus owner still settling contradictions mid-season. Phase Zero ramps faster because the paper tally sheet starts in the final nine weeks of the 2026 season and the canonical source is usable on sign-off.",
+   "years set at 5 in every scenario, per the Gartner five-year TCO horizon.",
+   "The change-fee benefit, a 15 dollar per person re-booking fee forgone, is EXCLUDED on purpose despite being verified, because it is immaterial and a weak fifth line makes the whole stack weaker.",
+   "The staff-engineer design and product-manager metrics files were not on disk at the time this analysis was written. It is built on claims.json, the locked pick with its economics pre-check, and the conscience gate's feasibility file, and every driver above should be re-checked against the design and the PRD before the study ships."
+  ],
+  "tco_notes": "Four notes for whoever runs the arithmetic. ONE, the drivers object below carries FOUR scenarios, not three. The first three all sit at the 18,000 dollar ask so the reader sees that ask evaluated honestly under every assumption set. The fourth, recommended_ask_conservative, applies the SAME conservative benefit assumptions to the smaller Phase Zero ask, and it exists because the role requires the recommended ask to be one whose conservative case clears, and because saying what ask size it clears at is only auditable if the drivers are on the table. scripts/roi_math.py iterates over whatever keys are in scenarios, so all four compute. TWO, every derived figure comes from that script and none of it is narrated here. Where a sentence in this file and the script output disagree, the script wins and the sentence is the defect. THREE, the payback month the script returns is measured from GO-LIVE, so the four-month build and reconciliation period before March 2027 sits before month one and every calendar date moves out by about four months. The script also spreads benefit evenly across twelve months, which is wrong on an operation whose season runs March 7th to October 11th, so the curve is really flat for about five months of every year. Both adjustments are stated rather than modelled. FOUR, no single hero number appears anywhere in this file and none should appear in the study. The conservative case at 18,000 does not clear, and that sentence belongs in the ROI section's heading per FIELD_STUDY_SPEC, not in a footnote.",
+  "drivers": {
+   "scenarios": {
+    "conservative": {
+     "pursuits_per_year": 6,
+     "benefit_lines": [
+      {
+       "label": "First-season desk agent hours lost finding a policy answer, weeks 1 to 6 (CAPACITY)",
+       "hours_per_pursuit": 12,
+       "rate": 26,
+       "cut": 0.25
+      },
+      {
+       "label": "Veteran and supervisor hours consumed answering a first-season agent, weeks 1 to 6 (CAPACITY)",
+       "hours_per_pursuit": 4,
+       "rate": 42,
+       "cut": 0.3
+      }
+     ],
+     "avoided_cost_lines": [
+      {
+       "label": "Refund paid on the wrong clock in the generous direction (CASH)",
+       "events_per_year": 6,
+       "cost_per_event": 298,
+       "reduction": 0.5
+      },
+      {
+       "label": "Retrieval option never invoiced because the measured gate failed (CASH, one-time, annualized)",
+       "events_per_year": 0.23,
+       "cost_per_event": 22000,
+       "reduction": 0.35
+      },
+      {
+       "label": "Pre-season policy reconciliation across the website, two hotel front desks and the dock (CAPACITY)",
+       "events_per_year": 1,
+       "cost_per_event": 900,
+       "reduction": 0.4
+      }
+     ],
+     "implementation": 18000,
+     "training": 3500,
+     "run_cost_per_year": 4800,
+     "run_cost_years": 4.5,
+     "contingency": 0.2,
+     "year1_ramp": 0.3,
+     "years": 5
+    },
+    "most_likely": {
+     "pursuits_per_year": 10,
+     "benefit_lines": [
+      {
+       "label": "First-season desk agent hours lost finding a policy answer, weeks 1 to 6 (CAPACITY)",
+       "hours_per_pursuit": 20,
+       "rate": 30,
+       "cut": 0.4
+      },
+      {
+       "label": "Veteran and supervisor hours consumed answering a first-season agent, weeks 1 to 6 (CAPACITY)",
+       "hours_per_pursuit": 7,
+       "rate": 50,
+       "cut": 0.45
+      }
+     ],
+     "avoided_cost_lines": [
+      {
+       "label": "Refund paid on the wrong clock in the generous direction (CASH)",
+       "events_per_year": 14,
+       "cost_per_event": 478,
+       "reduction": 0.7
+      },
+      {
+       "label": "Retrieval option never invoiced because the measured gate failed (CASH, one-time, annualized)",
+       "events_per_year": 0.22,
+       "cost_per_event": 30000,
+       "reduction": 0.5
+      },
+      {
+       "label": "Pre-season policy reconciliation across the website, two hotel front desks and the dock (CAPACITY)",
+       "events_per_year": 1,
+       "cost_per_event": 1600,
+       "reduction": 0.55
+      }
+     ],
+     "implementation": 18000,
+     "training": 4600,
+     "run_cost_per_year": 3600,
+     "run_cost_years": 4.5,
+     "contingency": 0.18,
+     "year1_ramp": 0.45,
+     "years": 5
+    },
+    "aggressive": {
+     "pursuits_per_year": 15,
+     "benefit_lines": [
+      {
+       "label": "First-season desk agent hours lost finding a policy answer, weeks 1 to 6 (CAPACITY)",
+       "hours_per_pursuit": 30,
+       "rate": 34,
+       "cut": 0.55
+      },
+      {
+       "label": "Veteran and supervisor hours consumed answering a first-season agent, weeks 1 to 6 (CAPACITY)",
+       "hours_per_pursuit": 11,
+       "rate": 58,
+       "cut": 0.6
+      }
+     ],
+     "avoided_cost_lines": [
+      {
+       "label": "Refund paid on the wrong clock in the generous direction (CASH)",
+       "events_per_year": 26,
+       "cost_per_event": 618,
+       "reduction": 0.85
+      },
+      {
+       "label": "Retrieval option never invoiced because the measured gate failed (CASH, one-time, annualized)",
+       "events_per_year": 0.22,
+       "cost_per_event": 38000,
+       "reduction": 0.6
+      },
+      {
+       "label": "Pre-season policy reconciliation across the website, two hotel front desks and the dock (CAPACITY)",
+       "events_per_year": 1,
+       "cost_per_event": 2600,
+       "reduction": 0.65
+      }
+     ],
+     "implementation": 18000,
+     "training": 6200,
+     "run_cost_per_year": 2800,
+     "run_cost_years": 4.5,
+     "contingency": 0.15,
+     "year1_ramp": 0.6,
+     "years": 5
+    },
+    "recommended_ask_conservative": {
+     "pursuits_per_year": 6,
+     "benefit_lines": [
+      {
+       "label": "First-season desk agent hours lost finding a policy answer, weeks 1 to 6 (CAPACITY, reduced, no lookup tool exists in this scope)",
+       "hours_per_pursuit": 12,
+       "rate": 26,
+       "cut": 0.1
+      },
+      {
+       "label": "Veteran and supervisor hours consumed answering a first-season agent, weeks 1 to 6 (CAPACITY, reduced)",
+       "hours_per_pursuit": 4,
+       "rate": 42,
+       "cut": 0.12
+      }
+     ],
+     "avoided_cost_lines": [
+      {
+       "label": "Refund paid on the wrong clock in the generous direction (CASH, reduced, one dated source instead of a decision table)",
+       "events_per_year": 6,
+       "cost_per_event": 298,
+       "reduction": 0.2
+      },
+      {
+       "label": "Retrieval option never invoiced because the measured gate failed (CASH, retained in full, this scope is what produces the evidence)",
+       "events_per_year": 0.23,
+       "cost_per_event": 22000,
+       "reduction": 0.35
+      },
+      {
+       "label": "Pre-season policy reconciliation across the website, two hotel front desks and the dock (CAPACITY, retained in full, this scope is the canonical source)",
+       "events_per_year": 1,
+       "cost_per_event": 900,
+       "reduction": 0.6
+      }
+     ],
+     "implementation": 4500,
+     "training": 2100,
+     "run_cost_per_year": 1000,
+     "run_cost_years": 4.5,
+     "contingency": 0.2,
+     "year1_ramp": 0.7,
+     "years": 5
+    }
+   }
+  }
+ }
+}

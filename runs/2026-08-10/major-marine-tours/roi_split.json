@@ -1,0 +1,38 @@
+{
+  "conservative": {
+    "cash_yr": 894,
+    "cap_yr": 1130,
+    "cash_5": 3844,
+    "cap_5": 4861,
+    "tco": 51720,
+    "pct_cash": 7,
+    "pct_all": 17
+  },
+  "most_likely": {
+    "cash_yr": 4684,
+    "cap_yr": 4855,
+    "cash_5": 20846,
+    "cap_5": 21605,
+    "tco": 45784,
+    "pct_cash": 46,
+    "pct_all": 93
+  },
+  "aggressive": {
+    "cash_yr": 13658,
+    "cap_yr": 15847,
+    "cash_5": 62826,
+    "cap_5": 72896,
+    "tco": 42320,
+    "pct_cash": 148,
+    "pct_all": 321
+  },
+  "recommended_ask_conservative": {
+    "cash_yr": 358,
+    "cap_yr": 848,
+    "cash_5": 1681,
+    "cap_5": 3986,
+    "tco": 13320,
+    "pct_cash": 13,
+    "pct_all": 43
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "segment": "Tourism and visitor industry",
+  "candidates": [
+    {
+      "company": "Major Marine Tours",
+      "domain": "majormarine.com",
+      "location": "Seward and Whittier, Alaska (Kenai Fjords National Park and Prince William Sound)",
+      "what_they_do": "Locally owned glacier and wildlife day-cruise operator running multiple vessels out of two ports, plus packaged cruise-plus-hotel-plus-transportation itineraries sold direct and through wholesalers.",
+      "why_fit": "Sixty seasonal hires compressed into a three-month window, a tiered manual refund and reschedule policy, and a named owner with a published business email.",
+      "scores": {"ai_solvable_pain": 5, "ability_to_pay": 4, "reachability": 5, "offer_fit": 5, "alaska_signal": 5},
+      "fit_total": 24,
+      "structural_pain": {
+        "quote": "During our cruise season we employ about 60 seasonal employees in Seward. Our peak hiring time for seasonal positions is January 15th - April 15th.",
+        "url": "https://majormarine.com/employment/",
+        "second_quote": "Cruise-only reservations are refundable up to 72 hours prior to your cruise departure. Tickets not used at the time of sailing (no-show) are completely non-refundable and may not be used on any other sailings.",
+        "second_url": "https://majormarine.com/refund-policy/",
+        "note": "Three different refund clocks run at once, 72 hours for cruise only, 7 days for cruise-and-hotel packages, 21 days for packages carrying motorcoach or rail, with a one-free-reschedule rule and a $15 per person fee after that, plus captain-initiated re-routes that trigger partial refunds. That is a policy-exception desk staffed by a crew that turns over every year."
+      },
+      "decision_maker_evidence": {
+        "named_people": "Tom Tougas, Owner. Colby Lawrence, Vice President. Kori Goertz, Director of Sales. Kirsten McNeil, Director of Shoreside Operations. Tayja Wright, Operations Manager.",
+        "published_email": "info@majormarine.com",
+        "url": "https://majormarine.com/meet-the-team/",
+        "note": "Same address also published on https://majormarine.com/employment/. Full leadership roster with titles and tenure is public. No personal address for Tougas was seen and none was invented."
+      },
+      "source_urls": [
+        "https://majormarine.com/employment/",
+        "https://majormarine.com/meet-the-team/",
+        "https://majormarine.com/our-company/",
+        "https://majormarine.com/refund-policy/",
+        "https://www.adventuregreenalaska.org/aga-businesses/major-marine-tours/"
+      ],
+      "reputation_screen": "Clean. No fraud, litigation, immigration enforcement contracting, or labor complaints surfaced. Certified by Adventure Green Alaska since 2017 and a Whale SENSE participant.",
+      "confidence": "high"
+    },
+    {
+      "company": "Chena Hot Springs Resort",
+      "domain": "chenahotsprings.com",
+      "location": "17600 Chena Hot Springs Rd, Fairbanks, Alaska (60 miles northeast of Fairbanks)",
+      "what_they_do": "Year-round geothermal hot springs resort, 80 lodge rooms plus 8 dry cabins and 30 RV spaces, full-service restaurant and bar, Aurora Ice Museum, aurora snow-coach tours August through April, dog mushing, ATV and snowmobile tours.",
+      "why_fit": "The owner has said on the record that hiring is impossible, the resort runs 365 days with about 100 year-round employees, and job applications still come in by fax or email to the GM.",
+      "scores": {"ai_solvable_pain": 5, "ability_to_pay": 4, "reachability": 4, "offer_fit": 5, "alaska_signal": 5},
+      "fit_total": 23,
+      "structural_pain": {
+        "quote": "Getting employees right now is not difficult. It's impossible. We just have a culture nowadays where people really don't want to work.",
+        "url": "https://www.alaskasnewssource.com/2025/11/11/chena-hot-springs-owner-seeks-federal-help-ukrainian-workers-facing-deportation/",
+        "second_quote": "Download the application ... faxing to (907) 451-8151 or emailing gm@chenahotsprings.com",
+        "second_url": "https://www.chenahotsprings.com/employment/",
+        "note": "Owner Bernie Karl said this in a broadcast interview about 17 of his workers facing the end of humanitarian parole. The same article states the resort has 100 year-round employees and operates 365 days a year. Their own employment page routes every applicant through a downloadable form sent to a fax machine or to the general manager's inbox, which is the intake bottleneck stated in their own words."
+      },
+      "decision_maker_evidence": {
+        "named_people": "Bernie Karl, owner (named in the Alaska's News Source article). Their employment page addresses mail to Attn: General Manager.",
+        "published_email": "gm@chenahotsprings.com",
+        "url": "https://www.chenahotsprings.com/employment/",
+        "note": "Two further published addresses seen on fetched pages, info@ChenaHotSprings.com on https://chenahotsprings.com/ and frontdesk@chenahotsprings.com on the Explore Fairbanks listing. No email tied to Karl personally was seen and none was invented."
+      },
+      "source_urls": [
+        "https://chenahotsprings.com/",
+        "https://www.chenahotsprings.com/employment/",
+        "https://www.explorefairbanks.com/listing/chena-hot-springs-resort/10094/",
+        "https://www.alaskasnewssource.com/2025/11/11/chena-hot-springs-owner-seeks-federal-help-ukrainian-workers-facing-deportation/"
+      ],
+      "reputation_screen": "Flag, then judge. No fraud, litigation about worker treatment, or enforcement contracting found. The one immigration story runs the good direction, the owner is publicly lobbying to KEEP 17 Ukrainian employees in the country rather than contracting with enforcement. Two softer flags to be aware of before any outreach, Indeed and Glassdoor reviews cite minimum wage and heavy overtime, and a 2018 death in the resort pool was locally reported. Neither is a values conflict but both mean the study should not build its case on how well staff are treated.",
+      "confidence": "high"
+    },
+    {
+      "company": "Gastineau Guiding Company",
+      "domain": "stepintoalaska.com",
+      "location": "1330 Eastaugh Way, Juneau, Alaska",
+      "what_they_do": "Small-group whale watching, Mendenhall Glacier and rainforest hiking tours and cruise shore excursions, 32 years operating, three vessels (Endeavor, Observer, Explorer), groups capped at 12 to 20 guests.",
+      "why_fit": "Every inquiry funnels into a phone and text line staffed 7 AM to 7 PM six days a week, email is answered inside a business day, and 80-plus seasonal guides and crew need certification training every spring.",
+      "scores": {"ai_solvable_pain": 5, "ability_to_pay": 4, "reachability": 4, "offer_fit": 5, "alaska_signal": 5},
+      "fit_total": 23,
+      "structural_pain": {
+        "quote": "Call or text Mon-Sat, 7 AM to 7 PM AKST ... We try to answer emails within 1 business day",
+        "url": "https://stepintoalaska.com/resources/contact-us/",
+        "second_quote": "Every guide completes wilderness first aid and advanced interpretation training",
+        "second_url": "https://stepintoalaska.com/our-story/meet-our-staff-guides/",
+        "note": "The contact page also publishes 'best times to reach us' windows, morning 8 to 10 and afternoon 2 to 4, and names SMS as the quickest route. A business that has to tell guests when its humans are available, in the middle of cruise season, is describing a front-desk capacity ceiling. The staff page lists roughly 80 guides and crew, all of whom carry that certification load."
+      },
+      "decision_maker_evidence": {
+        "named_people": "Robie Janes, General Manager. Ashlynn Antoni, Director of Marketing. Olivia Kraft, Lead Daily Coordinator.",
+        "published_email": "tour@gguiding.com",
+        "url": "https://stepintoalaska.com/resources/contact-us/",
+        "note": "Same address independently confirmed on the Travel Juneau listing at https://www.traveljuneau.com/listing/gastineau-guiding-company/43637/. Search results name Robert Janes and Dawn Wolfe as owners but no page confirming that was fetched, so treat owner identity as unverified."
+      },
+      "source_urls": [
+        "https://stepintoalaska.com/",
+        "https://stepintoalaska.com/our-story/meet-our-staff-guides/",
+        "https://stepintoalaska.com/resources/contact-us/",
+        "https://www.stepintoalaska.com/about-us/our-fleet/",
+        "https://www.traveljuneau.com/listing/gastineau-guiding-company/43637/"
+      ],
+      "reputation_screen": "Clean. No litigation, fraud, or enforcement contracting surfaced. No Coast Guard action found.",
+      "confidence": "high"
+    },
+    {
+      "company": "Aspen Hotels of Alaska (operated by JL Hospitality Management)",
+      "domain": "aspenhotelsak.com",
+      "location": "16 properties across roughly a dozen Alaska communities including Anchorage, Fairbanks, Juneau, Sitka, Haines, Homer, Kenai, Soldotna, Seward and the Denali area",
+      "what_they_do": "Regional extended-stay and suite hotel brand, all properties cashless, centrally managed with a shared sales, revenue management and HR function.",
+      "why_fit": "Sixteen properties in a dozen towns running off one central revenue and sales desk, with the deepest budget of anything in this segment and a fully published leadership roster.",
+      "scores": {"ai_solvable_pain": 4, "ability_to_pay": 5, "reachability": 5, "offer_fit": 4, "alaska_signal": 3},
+      "fit_total": 21,
+      "structural_pain": {
+        "quote": "All Aspen Hotels locations are cashless properties.",
+        "url": "https://aspenhotelsak.com/about",
+        "second_quote": "Aspen Hotels has long been part of Alaska's lodging landscape, but this expansion marks a significant new chapter.",
+        "second_url": "https://www.akbizmag.com/industry/real-estate-industry/aspen-hotels-announces-major-expansion-across-alaska/",
+        "note": "The structural fact is the shape of the org, 16 properties across nearly a dozen Alaska communities, described on the same about page as professionally managed from a central team, with one Sr. Director of Revenue Management and one Director of Human Resources covering the whole Alaska region. That is a small central back office carrying a dozen towns of front-desk, rate and hiring load."
+      },
+      "decision_maker_evidence": {
+        "named_people": "Stuart R. Newmark, CHA, Operating Partner. Chris Scheffer, Executive Vice President of Operations/Alaska. Rachael Hodgson, VP of Operations Alaska Region 1. Brian Huling, Sr. Director of Revenue Management Alaska. Amber Stringer, Director of Human Resources.",
+        "published_email": "info@jlhotelgroup.com",
+        "url": "https://www.jlhotelgroup.com/team",
+        "note": "sales@jlhotelgroup.com is also published on https://aspenhotelsak.com/about. Newmark is quoted by name in Alaska Business Magazine, so the decision-maker is public and attributable."
+      },
+      "source_urls": [
+        "https://aspenhotelsak.com/about",
+        "https://www.jlhotelgroup.com/team",
+        "https://www.akbizmag.com/industry/real-estate-industry/aspen-hotels-announces-major-expansion-across-alaska/"
+      ],
+      "reputation_screen": "Clean on conduct, one honesty caveat. No litigation, fraud, or enforcement contracting found. The caveat is positioning, the brand and the trade press both call it Alaska-owned and operated, while the fetched JL Hospitality team page gives the company address as 1355 South International Parkway, Suite 2461, Lake Mary, FL 32746. A study for a shop that sells honesty must not repeat the Alaska-owned line as our own claim, and the buyer sits Outside, which is why alaska_signal is a 3.",
+      "confidence": "medium-high"
+    },
+    {
+      "company": "Rust's Flying Service (operating K2 Aviation)",
+      "domain": "flyrusts.com",
+      "location": "Lake Hood, 4525 Enstrom Circle, Anchorage, Alaska, with a second base in Talkeetna",
+      "what_they_do": "Family-owned floatplane and wheel-ski air taxi, flightseeing over Denali and Columbia Glacier, day bear-viewing to Katmai, Lake Clark, Chinitna Bay and Redoubt Bay, plus charters to lodges and wilderness cabins.",
+      "why_fit": "Twenty-three aircraft and forty pilots across two bases, running several departures a day against a weather window, with a seasonal front counter that has historically been the entry job.",
+      "scores": {"ai_solvable_pain": 4, "ability_to_pay": 4, "reachability": 3, "offer_fit": 4, "alaska_signal": 5},
+      "fit_total": 20,
+      "structural_pain": {
+        "quote": "23 airplanes and 40 pilots",
+        "url": "https://flyrusts.com/our-crew/",
+        "second_quote": "nine seaplanes, including Cessna 206's, deHavilland Beavers and deHavilland Turbine Otters",
+        "second_url": "https://flyrusts.com/about/",
+        "note": "Their own crew page also records that the General Manager, Willis Thayer, started at Rust's Flying Service in the summer of 1993 as a seasonal customer service agent, and that another manager began as a seasonal worker. The counter is seasonal by design at a company scheduling 23 aircraft across two bases against daily weather."
+      },
+      "decision_maker_evidence": {
+        "named_people": "Todd Rust, Owner and Director of Operations. Suzanne Rust, Owner. Colin Rust, Owner and Director of Maintenance. Willis Thayer, General Manager and Operations Manager. Dan Baldwin, Chief Pilot.",
+        "published_email": "none",
+        "url": "https://flyrusts.com/our-crew/",
+        "note": "No email address is published anywhere on the pages fetched, only 1-800-544-2299 and 907-243-1595 and a contact form. None was guessed. This is why reachability is a 3."
+      },
+      "source_urls": [
+        "https://flyrusts.com/about/",
+        "https://flyrusts.com/our-crew/",
+        "https://www.alaska.org/detail/rusts-bear-viewing"
+      ],
+      "reputation_screen": "Flag, real and serious. On August 4th, 2018 a de Havilland DHC-2 Beaver operated by Rust's Flying Service doing business as K2 Aviation hit terrain in Denali National Park and the pilot and four passengers died. NTSB investigated and the probable cause was undetermined, and the investigation examined the company's controlled-flight-into-terrain training. No fraud, no enforcement contracting, no labor litigation found. Not a values conflict, but a brand built on honesty should go into this one knowing that any talk of operational reliability lands next to five deaths, and should not touch flight safety as a use case.",
+      "confidence": "medium"
+    },
+    {
+      "company": "Salmon Berry Travel & Tours",
+      "domain": "salmonberrytours.com",
+      "location": "515 W 4th Avenue, Anchorage, Alaska",
+      "what_they_do": "Alaskan-owned year-round small-group day tour operator, van-based rather than motorcoach, running glacier, wildlife, dog sledding and Independence Mine trips from 2.5 to 8-plus hours, multi-day packages up to seven days, and Seward and Whittier cruise transfers.",
+      "why_fit": "A roughly 25-person year-round team hand-coordinating hotel pickups, all-inclusive pricing and cruise transfers across a summer and a winter product line, with named local owners.",
+      "scores": {"ai_solvable_pain": 4, "ability_to_pay": 3, "reachability": 3, "offer_fit": 4, "alaska_signal": 5},
+      "fit_total": 19,
+      "structural_pain": {
+        "quote": "In a world of big box tours and commercialized Alaska experiences, we continue to deliver genuine and authentic Alaska hospitality.",
+        "url": "https://www.salmonberrytours.com/about-us",
+        "second_quote": "your guide will be with you the whole time, from pickup at your hotel to the glacier cruise and back to your hotel",
+        "second_url": "https://www.alaska.org/detail/alaska-salmon-berry-tours",
+        "note": "HONEST CAVEAT, this is the weakest structural quote of the six. Their own about page profiles roughly 25 staff and states a year-round operation, and the alaska.org listing documents hotel-pickup logistics across seven distinct products with different seasonal windows, but neither page states a staffing, call-volume or booking-load fact in the company's own words the way the other five do. The operating pain here is inferred from the product shape, not published, and it should be verified before a study is built on it."
+      },
+      "decision_maker_evidence": {
+        "named_people": "Candice McDonald, founder (named on the alaska.org listing). The about page names co-owners as Candice and Mandy, first names only.",
+        "published_email": "none seen in plain text",
+        "url": "https://www.salmonberrytours.com/contact",
+        "note": "The contact page does carry an email address but it is served behind Cloudflare email obfuscation and did not render as readable text in the fetch, so it is not asserted. Published phone is 907-278-3572. No address was guessed or pattern-invented."
+      },
+      "source_urls": [
+        "https://www.salmonberrytours.com/about-us",
+        "https://www.salmonberrytours.com/contact",
+        "https://www.alaska.org/detail/alaska-salmon-berry-tours"
+      ],
+      "reputation_screen": "Clean. No litigation, fraud, labor complaints, or enforcement contracting surfaced.",
+      "confidence": "medium-low, thin on published structural pain and no plain-text email verified"
+    }
+  ]
+}

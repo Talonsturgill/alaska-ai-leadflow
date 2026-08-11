@@ -1,0 +1,156 @@
+{
+  "scenarios": {
+    "conservative": {
+      "pursuits_per_year": 6,
+      "benefit_lines": [
+        {
+          "label": "First-season desk agent hours lost finding a policy answer, weeks 1 to 6 (CAPACITY)",
+          "hours_per_pursuit": 12,
+          "rate": 26,
+          "cut": 0.25
+        },
+        {
+          "label": "Veteran and supervisor hours consumed answering a first-season agent, weeks 1 to 6 (CAPACITY)",
+          "hours_per_pursuit": 4,
+          "rate": 42,
+          "cut": 0.3
+        }
+      ],
+      "avoided_cost_lines": [
+        {
+          "label": "Refund paid on the wrong clock in the generous direction (CASH)",
+          "events_per_year": 6,
+          "cost_per_event": 298,
+          "reduction": 0.5
+        },
+        {
+          "label": "Pre-season policy reconciliation across the website, two hotel front desks and the dock (CAPACITY)",
+          "events_per_year": 1,
+          "cost_per_event": 900,
+          "reduction": 0.4
+        }
+      ],
+      "implementation": 18000,
+      "training": 3500,
+      "run_cost_per_year": 4800,
+      "run_cost_years": 4.5,
+      "contingency": 0.2,
+      "year1_ramp": 0.3,
+      "years": 5
+    },
+    "most_likely": {
+      "pursuits_per_year": 10,
+      "benefit_lines": [
+        {
+          "label": "First-season desk agent hours lost finding a policy answer, weeks 1 to 6 (CAPACITY)",
+          "hours_per_pursuit": 20,
+          "rate": 30,
+          "cut": 0.4
+        },
+        {
+          "label": "Veteran and supervisor hours consumed answering a first-season agent, weeks 1 to 6 (CAPACITY)",
+          "hours_per_pursuit": 7,
+          "rate": 50,
+          "cut": 0.45
+        }
+      ],
+      "avoided_cost_lines": [
+        {
+          "label": "Refund paid on the wrong clock in the generous direction (CASH)",
+          "events_per_year": 14,
+          "cost_per_event": 478,
+          "reduction": 0.7
+        },
+        {
+          "label": "Pre-season policy reconciliation across the website, two hotel front desks and the dock (CAPACITY)",
+          "events_per_year": 1,
+          "cost_per_event": 1600,
+          "reduction": 0.55
+        }
+      ],
+      "implementation": 18000,
+      "training": 4600,
+      "run_cost_per_year": 3600,
+      "run_cost_years": 4.5,
+      "contingency": 0.18,
+      "year1_ramp": 0.45,
+      "years": 5
+    },
+    "aggressive": {
+      "pursuits_per_year": 15,
+      "benefit_lines": [
+        {
+          "label": "First-season desk agent hours lost finding a policy answer, weeks 1 to 6 (CAPACITY)",
+          "hours_per_pursuit": 30,
+          "rate": 34,
+          "cut": 0.55
+        },
+        {
+          "label": "Veteran and supervisor hours consumed answering a first-season agent, weeks 1 to 6 (CAPACITY)",
+          "hours_per_pursuit": 11,
+          "rate": 58,
+          "cut": 0.6
+        }
+      ],
+      "avoided_cost_lines": [
+        {
+          "label": "Refund paid on the wrong clock in the generous direction (CASH)",
+          "events_per_year": 26,
+          "cost_per_event": 618,
+          "reduction": 0.85
+        },
+        {
+          "label": "Pre-season policy reconciliation across the website, two hotel front desks and the dock (CAPACITY)",
+          "events_per_year": 1,
+          "cost_per_event": 2600,
+          "reduction": 0.65
+        }
+      ],
+      "implementation": 18000,
+      "training": 6200,
+      "run_cost_per_year": 2800,
+      "run_cost_years": 4.5,
+      "contingency": 0.15,
+      "year1_ramp": 0.6,
+      "years": 5
+    },
+    "recommended_ask_conservative": {
+      "pursuits_per_year": 6,
+      "benefit_lines": [
+        {
+          "label": "First-season desk agent hours lost finding a policy answer, weeks 1 to 6 (CAPACITY, reduced, no lookup tool exists in this scope)",
+          "hours_per_pursuit": 12,
+          "rate": 26,
+          "cut": 0.1
+        },
+        {
+          "label": "Veteran and supervisor hours consumed answering a first-season agent, weeks 1 to 6 (CAPACITY, reduced)",
+          "hours_per_pursuit": 4,
+          "rate": 42,
+          "cut": 0.12
+        }
+      ],
+      "avoided_cost_lines": [
+        {
+          "label": "Refund paid on the wrong clock in the generous direction (CASH, reduced, one dated source instead of a decision table)",
+          "events_per_year": 6,
+          "cost_per_event": 298,
+          "reduction": 0.2
+        },
+        {
+          "label": "Pre-season policy reconciliation across the website, two hotel front desks and the dock (CAPACITY, retained in full, this scope is the canonical source)",
+          "events_per_year": 1,
+          "cost_per_event": 900,
+          "reduction": 0.6
+        }
+      ],
+      "implementation": 4500,
+      "training": 2100,
+      "run_cost_per_year": 1000,
+      "run_cost_years": 4.5,
+      "contingency": 0.2,
+      "year1_ramp": 0.7,
+      "years": 5
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "segment": "Other labor-scarce or paperwork-heavy Alaska SMBs",
+  "candidates": [
+    {
+      "company": "Alaska Logistics LLC",
+      "domain": "alaskalogistics.net",
+      "location": "Anchorage HQ (12050 Industry Way, Ste O-1, Anchorage, AK 99515), with offices in Seward, Juneau, and Tacoma WA. Serves Western/Central/Southeast Alaska, Bristol Bay, Kuskokwim, Norton Sound, Kotzebue Sound, Arctic.",
+      "what_they_do": "Scheduled marine barge freight from Seattle/Tacoma/Seward to Alaska ports and villages, plus charter and project cargo. Owns its own tugs, barges, landing craft, cranes, forklifts and container fleet. Running a published six-voyage 2026 program (26-01 through 26-06) serving Juneau, Seward, Naknek, Dillingham, Bethel, Nome, Kotzebue and numerous village stops.",
+      "scores": {"ai_solvable_pain": 5, "ability_to_pay": 4, "reachability": 3, "offer_fit": 5, "alaska_signal": 5},
+      "fit_total": 22,
+      "structural_pain": {
+        "primary_quote": "All shipments are personally quoted by a project manager, who will answer all questions and walk you through all the steps needed from booking to delivery, to receiving.",
+        "primary_quote_url": "https://alaska-logistics.com/about.html",
+        "why_structural": "Every single shipment is quoted and shepherded by a human project manager end to end. That is a published, self-described manual intake and quoting process running against a fixed six-voyage window and cargo cutoffs, not a website defect.",
+        "supporting_quote_1": "Departure from Seattle, Tacoma, and Seward typically occurs 3-5 days after cargo cutoff",
+        "supporting_quote_1_url": "https://www.alaskalogistics.net/",
+        "supporting_quote_2": "Operating from April through October.",
+        "supporting_quote_2_url": "https://alaska-logistics.com/about.html",
+        "supporting_quote_3": "It got very cold the day we got there. It got down to, like, single digits and ice came out of the mountains, and rivers, and sloughs everywhere.",
+        "supporting_quote_3_url": "https://www.kyuk.org/economy/2021-11-11/alaska-logistics-is-leaving-two-barges-to-freeze-in-the-kuskokwim-river",
+        "supporting_quote_3_note": "Attributed by KYUK to General Manager Allyn Long. KYUK also reports Long saying the company should consider ending its barge season earlier. That second line is the reporter's rendering, treat it as reported speech, not a verbatim company statement.",
+        "seasonal_relevance": "Freeze-up scheduling on the Kuskokwim and Norton Sound is decided in late August. Their own published season and their GM's own on-record freeze-up experience sit exactly on the 2026-08-10 seasonal angle."
+      },
+      "decision_maker_evidence": {
+        "named_person": "Allyn Long, owner and General Manager",
+        "quote": "Alaska Logistics is owned and managed by General Manager Allyn Long... After ten years as the Logistics Manager at Osborne Construction Co., which is a major general contractor for many Alaska Projects; Allyn had the experience and knowledge to start up Alaska Logistics.",
+        "url": "https://alaska-logistics.com/about.html",
+        "corroboration_url": "https://www.kyuk.org/economy/2021-11-11/alaska-logistics-is-leaving-two-barges-to-freeze-in-the-kuskokwim-river",
+        "published_email": "none. No email address appears on any fetched page. Published phones only: (907) 416-2435 office, (866) 585-3281 toll free, plus after-hours (206) 799-1840 and (907) 545-6907. Contact form on alaskalogistics.net. Do not pattern-invent an address."
+      },
+      "source_urls_fetched": [
+        "https://www.alaskalogistics.net/",
+        "https://www.alaskalogistics.net/contact",
+        "https://alaska-logistics.com/about.html",
+        "https://www.kyuk.org/economy/2021-11-11/alaska-logistics-is-leaving-two-barges-to-freeze-in-the-kuskokwim-river"
+      ],
+      "reputation_screen": "FLAG, not disqualifying, but the room must know it. KYUK (public radio, Bethel) reported in November 2021 that Alaska Logistics left two barges frozen in the Kuskokwim River after an early freeze-up, that the US Coast Guard was investigating both incidents and the company could face fines for obstructing waterways, and that Lower Yukon School District teacher housing construction in Scammon Bay was delayed. A separate KYUK piece from May 2020 covers an unattended Alaska Logistics barge floating down the Kuskokwim. No fraud, False Claims Act, immigration enforcement contracting, or labor litigation found in a light screen. Any outreach must not lecture them about this and must not pretend it did not happen.",
+      "confidence": "High that the company is real, Alaska-operating, and currently running a 2026 voyage program (verified on the live .net site). MEDIUM on the employee count of about fifty and the April-through-October season, both of which come from the legacy alaska-logistics.com about page that survives while contact.html now 301s to alaskalogistics.net. KYUK's 2021 reporting says deliveries typically ran into mid-November, so the season line and the reporting disagree. Re-verify season and headcount before any of it goes in a study."
+    },
+    {
+      "company": "Altman, Rogers & Co.",
+      "domain": "altrogco.com",
+      "location": "Anchorage (3000 C St, Suite 201, Anchorage, AK 99503), plus Juneau and Soldotna offices",
+      "what_they_do": "Alaska's largest locally owned CPA firm. Audit and assurance, tax preparation and planning, client accounting and advisory services, and business consulting. Heavy governmental and school district audit practice.",
+      "scores": {"ai_solvable_pain": 4, "ability_to_pay": 5, "reachability": 2, "offer_fit": 4, "alaska_signal": 5},
+      "fit_total": 20,
+      "structural_pain": {
+        "primary_quote": "serve more than 60 government entities statewide and deliver timely, accurate results with minimal disruption",
+        "primary_quote_url": "https://altrogco.com/",
+        "why_structural": "Sixty-plus governmental audit clients is a published, recurring statutory filing obligation with hard deadlines, Yellow Book and single-audit requirements, and a prepared-by-client document chase per engagement. That is the shape of the work, not a site defect.",
+        "supporting_quote_1": "81% of Alaska School Districts choose ARC for Audits",
+        "supporting_quote_1_url": "https://altrogco.com/",
+        "supporting_quote_2": "Full Service Alaskan-Owned and Operated CPA firm",
+        "supporting_quote_2_url": "https://business.anchoragechamber.org/list/category/accounting-consultants-133737",
+        "seasonal_relevance": "Alaska municipal and school district fiscal years end June 30 and their audits and single audits are in the field right now, which lands in the same window as the September 30 federal fiscal year end."
+      },
+      "decision_maker_evidence": {
+        "named_person": "none verified. The firm publishes Partners and Shareholders and Managers and Department Leads pages, but every altrogco.com subpage fetched returned an empty body to a plain fetcher (JavaScript-rendered), so no named partner from a page actually read.",
+        "url": "https://altrogco.com/our-firm/shareholders/ (exists per search index, rendered empty on fetch)",
+        "published_email": "none. Anchorage main line (907) 274-2992 from the Anchorage Chamber directory page fetched. Do not pattern-invent an address."
+      },
+      "source_urls_fetched": [
+        "https://altrogco.com/",
+        "https://business.anchoragechamber.org/list/category/accounting-consultants-133737"
+      ],
+      "reputation_screen": "Clean on a light screen. No fraud, False Claims Act, enforcement contracting, or labor litigation found. Independent reporting shows the firm currently auditing Fairbanks North Star Borough, its school district, and Interior Alaska Natural Gas Utility with unmodified opinions and a renewed contract, which reads as ordinary good standing. Note: an audit firm has independence rules, so any offer must not touch the audit judgment itself.",
+      "confidence": "MEDIUM. The company is real and currently operating, confirmed by their live homepage plus an independent Anchorage Chamber directory page with matching address and phone. Weak point is reachability, no named human could be read off a page. If picked, budget a people-finder pass before writing, and treat the Fairbanks North Star Borough audit contract detail as unverified until someone fetches a source that renders."
+    },
+    {
+      "company": "LCG Lantech, Inc.",
+      "domain": "lcgak.com",
+      "location": "250 H Street, Anchorage, AK 99501. Surveying performed statewide.",
+      "what_they_do": "Combined architecture, engineering and surveying firm. Land surveying services include as-builts and mortgage surveys, boundary surveys, plot plans, topographic surveys, building stakes, and platting and subdividing, coordinated across Municipality of Anchorage, Mat-Su Borough, State of Alaska and Federal platting authorities.",
+      "scores": {"ai_solvable_pain": 4, "ability_to_pay": 3, "reachability": 4, "offer_fit": 4, "alaska_signal": 5},
+      "fit_total": 20,
+      "structural_pain": {
+        "primary_quote": "extensive experience performing subdivisions throughout the state",
+        "primary_quote_url": "https://www.lcgak.com/land-surveying/",
+        "why_structural": "Their published platting workflow runs the same submittal through four different classes of authority, municipal (Anchorage), borough (Mat-Su), State and Federal, each with its own code and its own preliminary-plat review cycle, then final recording with State of Alaska Recording Districts. A multi-jurisdiction submittal treadmill is a structural operating load, and it is exactly what stacks up now as the construction season closes.",
+        "supporting_quote_1": "works closely with the client and the platting authority to ensure the preliminary plat meets the needs of the client",
+        "supporting_quote_1_url": "https://www.lcgak.com/land-surveying/",
+        "seasonal_relevance": "Field season closes in roughly six weeks, so as-builts, elevation work and plat submittals for this season's projects are queueing now."
+      },
+      "decision_maker_evidence": {
+        "named_person": "none. No individual is named on either fetched page. Their about-us path 404'd.",
+        "published_email": "info@lcgak.com, seen on BOTH fetched pages (the land-surveying page and the contact page). This is a real published general business address, not a guess. Phone (907) 243-8985.",
+        "url": "https://www.lcgak.com/contact/"
+      },
+      "source_urls_fetched": [
+        "https://www.lcgak.com/land-surveying/",
+        "https://www.lcgak.com/contact/"
+      ],
+      "reputation_screen": "Clean on a light screen. Nothing adverse found. No fraud, enforcement contracting, safety or labor findings surfaced.",
+      "confidence": "MEDIUM-HIGH on existence and fit, two pages of their own site rendered with consistent address, phone and email. LOW on size, no headcount, revenue or leadership name, so ability_to_pay is scored conservatively at 3 and could move either way. A people-finder pass is required before outreach."
+    },
+    {
+      "company": "NORTECH, Inc.",
+      "domain": "nortechengr.com",
+      "location": "Fairbanks (2400 College Road), Anchorage (3105 Lakeshore Dr Suite A106), Juneau (5438 Shaune Dr)",
+      "what_they_do": "Environmental engineering and industrial hygiene consultancy, founded 1979. Five published disciplines: hazardous materials, environmental engineering, environmental consulting, tanks and spill prevention, and industrial hygiene and safety. Work includes Phase I and Phase II ESAs, contaminated site remediation, asbestos inspection, and tank inspection.",
+      "scores": {"ai_solvable_pain": 4, "ability_to_pay": 3, "reachability": 3, "offer_fit": 4, "alaska_signal": 5},
+      "fit_total": 19,
+      "structural_pain": {
+        "primary_quote": "Number of jobs found: 2",
+        "primary_quote_url": "https://www.nortechengr.com/jobs",
+        "why_structural": "A three-office firm carrying two standing open technical roles, Environmental Engineer-in-Training (Fairbanks) and Certified Industrial Hygienist (Fairbanks or Anchorage), is publishing that it cannot staff to its workload. A Certified Industrial Hygienist is one of the hardest credentials to hire in Alaska. That is labor scarcity as published fact, not a website defect. The underlying business is entirely deliverable-and-report driven, five disciplines every one of which ends in a regulatory report.",
+        "supporting_quote_1": "His role encompasses hazardous materials assessments, environmental investigations, contaminated site remediation, Phase I and Phase II ESAs, indoor air quality assessments, and design work for demolition and decommissioning projects.",
+        "supporting_quote_1_url": "https://www.nortechengr.com/team/peter-beardsley,-pe",
+        "supporting_quote_1_note": "This is the President and CEO's own published scope, meaning the top of the house is still carrying billable technical work. That is a real capacity signal in a firm of this size.",
+        "seasonal_relevance": "Field-season closeout means the Phase I/Phase II and site characterization reports written from this summer's fieldwork all come due in the same weeks."
+      },
+      "decision_maker_evidence": {
+        "named_person": "Peter Beardsley, PE, President and CEO. Also named on the about page: John Hargesheimer, PE, CIH (founder) and Jason Ginter, PMP (Principal, Juneau Office Manager).",
+        "url": "https://www.nortechengr.com/team/peter-beardsley,-pe",
+        "published_email": "none. No email address on any fetched page. Office phones only: Fairbanks 907-452-5688, Anchorage 907-222-2445, Juneau 907-586-6813. A third-party data broker asserts an FLast@ pattern, that is a guess and must never be used."
+      },
+      "source_urls_fetched": [
+        "https://www.nortechengr.com/",
+        "https://www.nortechengr.com/jobs",
+        "https://www.nortechengr.com/about-nortech",
+        "https://www.nortechengr.com/team/peter-beardsley,-pe"
+      ],
+      "reputation_screen": "Clean on a light screen. Nothing adverse found. No fraud, enforcement contracting, safety or labor findings surfaced.",
+      "confidence": "HIGH that the company is real, currently operating in three Alaska cities, and that the named President and CEO is current (own bio page). MEDIUM-LOW on size, the roughly 24-employee figure comes from a third-party data broker in a search snippet and was NOT verified on a fetched page, so do not cite it. Ability to pay scored 3 on that uncertainty."
+    },
+    {
+      "company": "PND Engineers, Inc.",
+      "domain": "pndengineers.com",
+      "location": "Anchorage HQ (1506 West 36th Avenue), plus Juneau and Palmer in Alaska, and Seattle, Federal Way, Kennewick, Portland, Houston and Vancouver BC",
+      "what_they_do": "Multidisciplinary engineering firm founded in Anchorage in 1979. Civil, structural, geotechnical, hydrology and hydraulics, land surveying, environmental consulting, construction engineering, and contract administration. Specializes in waterfront, coastal and arctic engineering, with proprietary OPEN CELL sheet-pile and SPIN FIN pile technologies.",
+      "scores": {"ai_solvable_pain": 3, "ability_to_pay": 5, "reachability": 3, "offer_fit": 3, "alaska_signal": 4},
+      "fit_total": 18,
+      "structural_pain": {
+        "primary_quote": "New Positions Added",
+        "primary_quote_url": "https://www.pndengineers.com/careers/",
+        "why_structural": "WEAK, flagged rather than dressed up. The careers page advertises new positions but the listings themselves did not render for a plain fetcher, so no specific long-open role can be quoted. The strongest verified structural fact is organizational shape rather than pain: nine offices across four states and British Columbia, each with its own named VP acting as office coordinator, which implies a real cross-office coordination and proposal load. No published statement of operating pain in their own words was found.",
+        "supporting_quote_1": "Anchorage, Alaska (Headquarters) ... Contact: Doug Kenley, PE (Vice President | Office Coordinator)",
+        "supporting_quote_1_url": "https://www.pndengineers.com/contact/",
+        "seasonal_relevance": "Waterfront and arctic construction closeout plus permitting deadlines land in the next six weeks, but this is inference from the calendar, not from anything they published."
+      },
+      "decision_maker_evidence": {
+        "named_person": "Doug Kenley, PE, Vice President and Anchorage Office Coordinator. Also named: Sean Sjostedt PE (VP, Juneau), David Bentti PE SE (Principal Engineer, Palmer).",
+        "url": "https://www.pndengineers.com/contact/",
+        "published_email": "none. Anchorage phone +1 907.561.1011. No email address appears on the contact page, only per-office contact forms. Do not pattern-invent an address."
+      },
+      "source_urls_fetched": [
+        "https://www.pndengineers.com/service/land-surveying/",
+        "https://www.pndengineers.com/contact/",
+        "https://www.pndengineers.com/careers/"
+      ],
+      "reputation_screen": "Clean on a light screen. Nothing adverse found. No fraud, enforcement contracting, safety or labor findings surfaced.",
+      "confidence": "HIGH on existence, scale and named leadership, three of their own pages rendered with consistent detail. LOW on pain evidence, which is why ai_solvable_pain and offer_fit are scored 3 and not higher. Best ability-to-pay candidate in the set and the thinnest on a real published pain, so it should not be picked over Alaska Logistics unless the room can find that pain first. Six of nine offices are Outside, which is why alaska_signal is 4."
+    },
+    {
+      "company": "Conrad-Houston Insurance",
+      "domain": "conradhouston-insurance.com",
+      "location": "507 W Northern Lights Blvd, Anchorage, AK 99503",
+      "what_they_do": "Independent insurance agency founded 1979, Alaskan owned and operated, representing multiple carriers. Commercial lines including business owner policies, general liability, commercial auto, workers compensation, inland marine, professional and management liability, and financial institutions, plus personal lines.",
+      "scores": {"ai_solvable_pain": 3, "ability_to_pay": 3, "reachability": 3, "offer_fit": 4, "alaska_signal": 5},
+      "fit_total": 18,
+      "structural_pain": {
+        "primary_quote": "Mon - Fri : 8:30AM to 5PM",
+        "primary_quote_url": "https://www.conradhouston-insurance.com/contact_us.html",
+        "why_structural": "A published service-hour window of 8.5 hours a day, five days a week, is a structural coverage gap for an agency whose commercial clients are contractors and marine operators working long summer days and weekends. Certificate-of-insurance requests and after-hours claim intake arrive outside that window by definition. This is a published operating commitment, not a site defect.",
+        "supporting_quote_1": "An independent agency established in 1979 that represents multiple insurance carriers",
+        "supporting_quote_1_url": "https://www.conradhouston-insurance.com/about_us.html",
+        "supporting_quote_1_note": "Multi-carrier independent agency means every quote and every renewal is re-keyed across several carrier portals. That is the classic paperwork load in this business, but it is INFERENCE, they did not publish it.",
+        "seasonal_relevance": "Contractor certificate-of-insurance churn peaks at season close and at the September 30 federal fiscal year end, though nothing they published says so."
+      },
+      "decision_maker_evidence": {
+        "named_person": "Paul Houston, President",
+        "url": "https://www.conradhouston-insurance.com/about_us.html",
+        "published_email": "none. No email on either fetched page. Phone 907-276-7667. Do not pattern-invent an address."
+      },
+      "source_urls_fetched": [
+        "https://www.conradhouston-insurance.com/about_us.html",
+        "https://www.conradhouston-insurance.com/contact_us.html"
+      ],
+      "reputation_screen": "Clean on a light screen. Nothing adverse found. No fraud, enforcement contracting, safety or labor findings surfaced.",
+      "confidence": "MEDIUM on existence and leadership, two of their own pages rendered consistently and corroborated by carrier agent-locator listings. LOW on pain, the only structural evidence is a service-hours window, and the certificate and renewal load is inference. They also operate a SECOND domain, chialaska.com, which returned 403 to the fetcher. Confirm which domain is canonical before any dedupe write or any outreach, because a mismatch would break the ledger's dedupe key. Weakest of the six, included for segment diversity."
+    }
+  ]
+}
