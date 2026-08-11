@@ -1,0 +1,203 @@
+{
+  "segment": "Alaska Native corporations and tribal enterprises",
+  "candidates": [
+    {
+      "company": "Huna Totem Corporation",
+      "domain": "hunatotem.com",
+      "location": "Juneau and Hoonah, Alaska (Icy Strait Point, Hoonah; corporate offices Juneau)",
+      "what_they_do": "ANCSA village corporation for Hoonah (Xunaa Kaawu). Three business lines: Tourism and Destinations (Icy Strait Point cruise destination, plus Klawock and the Juneau waterfront development), Government Contracting through HunaTek, and strategic investments and real estate.",
+      "corporate_family": "Parent: none, Huna Totem Corporation is the top entity, incorporated November 1973 with 876 enrolled shareholders, now more than 1,850 shareholders. Notable subsidiaries: Huna Totem Tourism Group (Howard Sherman, President), Icy Strait Point (acquired 2009), HunaTek / HunaTek-DCSSP (first 8(a) subsidiary, formed 2018), HunaTek Federal Services LLC, HunaTek Operations Services. Affiliated nonprofit: Huna Heritage Foundation.",
+      "why_fit": "A shareholder-preference hiring pool of about 1,850 people is running both a four-month cruise season and a growing 8(a) federal services arm whose current open roles are technical writers, contracts administrators, compliance specialists and cost analysts.",
+      "structural_pain": {
+        "quote": "We prioritize qualified Huna Totem Corporation shareholders, their spouses, descendants, and other Alaska Native applicants.",
+        "url": "https://hunatotem.com/careers/",
+        "why_structural": "Their hiring policy structurally caps the labor pool for both the seasonal tourism operation in a village of roughly 920 people and the federal services arm. The same careers page shows the paperwork side of the business hiring for Technical Writer, Contracts Administrator, 508 Compliance Specialist, Project Analyst and multiple Cost Analyst roles, which is the document-production load AI carries, not headcount."
+      },
+      "decision_maker_evidence": {
+        "named_leaders": "Howard Sherman, President, Huna Totem Tourism Group (hunatotem.com/business-focused/). Michael/Mike Torres, President and CEO of HunaTek; Tim Fitzgerald, COO; Anna Jullien, CFO; Lance Rebels, VP Business Development (hunatek.com/about/).",
+        "published_email_seen": "contactus@hunatotem.com on hunatotem.com and hunatotem.com/careers/; info@hunatek.com on hunatek.com/about/",
+        "url": "https://hunatek.com/about/",
+        "note": "Both addresses were read off fetched pages. No personal executive address was published anywhere fetched, so none is claimed."
+      },
+      "scores": {"ai_solvable_pain": 5, "ability_to_pay": 5, "reachability": 4, "offer_fit": 5, "alaska_signal": 5},
+      "fit_total": 24,
+      "source_url": "https://hunatotem.com/careers/",
+      "sources_fetched": [
+        "https://hunatotem.com/",
+        "https://hunatotem.com/business-focused/",
+        "https://hunatotem.com/careers/",
+        "https://hunatek.com/about/"
+      ],
+      "reputation_screen": {
+        "ground_1_immigration_enforcement_or_detention": "SEARCHED, NOTHING FOUND. Searches run: HunaTek Huna Totem government services ICE detention contract; 'Huna Totem' OR 'HunaTek' immigration ICE CBP Guantanamo contract controversy; 'HunaTek' security guard services DHS Department Homeland Security contract award. The Guantanamo migrant operations centre contract traces to Akima, a NANA subsidiary, already suppressed by this desk, and no result connected it to Huna Totem. HunaTek does hold some DHS work, the only specific item surfaced was construction type work such as a hazardous waste storage locker installation, no guard services, no detention, no removal operations. HunaTek lists a National Security service line, which is a residual risk worth one more pass by the research room before a draft goes out.",
+        "ground_2_federal_contracting_fraud_or_compliance_misconduct": "SEARCHED, NOTHING FOUND. No False Claims Act settlement, kickback case, sham 8(a) allegation or SBA debarment action surfaced for Huna Totem or HunaTek."
+      },
+      "confidence": "high"
+    },
+    {
+      "company": "Gana-A'Yoo, Limited",
+      "domain": "ganaayoo.com",
+      "location": "Anchorage, Alaska (headquarters), villages of Galena, Koyukuk, Nulato and Kaltag on the Yukon River",
+      "what_they_do": "ANCSA village corporation owned by Koyukon Athabascan shareholders of four Yukon River villages. Construction, facility services, logistics and camp services, manufacturing and IT and technical services to federal and commercial customers, under ANC 8(a), HUBZone and small business certifications.",
+      "corporate_family": "Parent: none, top entity, about 2,000 shareholders, formed 1978. Subsidiaries and joint ventures named on their own operations page: Gana-A'Yoo Services Corporation, Gana-A'Yoo Construction Services JV, Gana-A'Yoo Support Services JV, Kaiyuh Information Technologies, Kaiyuh Services, Khotol Services Corporation, Six Mile, SMN JV, Yukon Management.",
+      "why_fit": "Nine operating companies with field offices across the US and overseas are all run off one shared back office in Anchorage, which is precisely the place a paperwork and proposal engine pays, and their 8(a) subsidiaries are inside the September 30 obligation surge right now.",
+      "structural_pain": {
+        "quote": "Through our unique shared services business model, our Family of Companies can support any client need.",
+        "url": "https://www.ganaayoo.com/operations/",
+        "why_structural": "They state on the same page that all companies are headquartered in Anchorage with field offices throughout the US and overseas. One shared Anchorage back office carries the contracts, proposals, HR and compliance paperwork for nine separate operating entities across multiple time zones. That is a structural throughput constraint, not a website defect."
+      },
+      "decision_maker_evidence": {
+        "named_leaders": "Melissa McGinty, Interim Chief Executive Officer (also Board President); Kimberly Bower, Board Chair; Joel Hoff, CFO; Dena Sommer-Pedebone, Senior Management Officer; Libby McClung, Director of Human Resources; Chris McKown, Director of Operations, all listed at ganaayoo.com/leadership/.",
+        "published_email_seen": "info@ganaayoo.com and records@ganaayoo.com",
+        "url": "https://www.ganaayoo.com/contact/",
+        "note": "Both addresses read off the fetched contact page, which also publishes (907) 569-9599 and 3035 C Street, Anchorage, AK 99503. No individual executive address is published, so none is claimed."
+      },
+      "scores": {"ai_solvable_pain": 4, "ability_to_pay": 4, "reachability": 4, "offer_fit": 5, "alaska_signal": 4},
+      "fit_total": 21,
+      "source_url": "https://www.ganaayoo.com/operations/",
+      "sources_fetched": [
+        "https://www.ganaayoo.com/",
+        "https://www.ganaayoo.com/operations/",
+        "https://www.ganaayoo.com/leadership/",
+        "https://www.ganaayoo.com/contact/"
+      ],
+      "reputation_screen": {
+        "ground_1_immigration_enforcement_or_detention": "SEARCHED, NOTHING FOUND. Their published work is custodial, food service, camp services, construction and IT. No ICE, CBP guard, detention, removal or Guantanamo work surfaced. Residual risk noted honestly, custodial and food service contractors can end up servicing detention facilities as a subcontractor and that would not necessarily show in a web search, so the research room should pull their federal award history before a draft.",
+        "ground_2_federal_contracting_fraud_or_compliance_misconduct": "SEARCHED, NOTHING FOUND. No settlement, kickback case, sham 8(a) allegation or SBA debarment surfaced."
+      },
+      "confidence": "high on the company being real and operating, medium on federal award detail, which was not fetched"
+    },
+    {
+      "company": "Choggiung Limited",
+      "domain": "choggiung.com",
+      "location": "Dillingham, Alaska (104 Main St, Suite 201), representing Dillingham, Ekuk and Portage Creek",
+      "what_they_do": "The largest village corporation in the Bristol Bay region. Commercial and residential leasing, land and gravel, the Bristol Inn hotel and the Bayside Diner in Dillingham, fire protection services, and 8(a) federal contracting.",
+      "corporate_family": "Parent: none, incorporated 1973, nine member board. Subsidiaries: Bristol Alliance of Companies, Choggiung Investment Company LLC, Inland Empire Fire Protection (Spokane, WA), Wood River Federal, and Umyuaq Technology LLC for 8(a) contracting. Ownership note from their own subsidiary page, the Bristol companies are wholly owned by Bristol Industries LLC, co-owned by Choggiung (majority) and Bristol Bay Native Corporation (minority).",
+      "why_fit": "A corporate staff of 15 runs a roughly hundred million dollar group spanning a hotel, a diner, leasing, land permits, fire protection and 8(a) contracting, plus full shareholder services into an annual fall election.",
+      "structural_pain": {
+        "quote": "Choggiung and its subsidiaries are involved in commercial and residential leasing, lodging operations (Bristol Inn), restaurant operations (Bayside Diner), fire protection services (Inland Empire Fire Protection), gravel and rock sales, and land leasing and 8(a) government contracting (Umyuaq Technology, LLC).",
+        "url": "https://www.choggiung.com/",
+        "why_structural": "The same fetched page reports 15 employees and a nine member board at the corporate level. Fifteen people administering leasing, land permits, hospitality, food service, fire protection, 8(a) contracting and shareholder services including proxy voting, descendant enrollment, scholarships and apprenticeships is a structural back office bottleneck."
+      },
+      "decision_maker_evidence": {
+        "named_leaders": "Cameron Poindexter, President and CEO, named in Alaska Business Magazine, joined July 2017. FLAGGED as potentially stale, the source is a 2019 article and no current executive was named on any fetched Choggiung page, only a nine member board.",
+        "published_email_seen": "contact@choggiung.com",
+        "url": "https://www.choggiung.com/about/leadership",
+        "note": "Address read off the fetched leadership page, which also publishes (907) 842-5218 and toll free (888) 377-2464. No executive personal address is published, so none is claimed."
+      },
+      "scores": {"ai_solvable_pain": 4, "ability_to_pay": 4, "reachability": 4, "offer_fit": 4, "alaska_signal": 5},
+      "fit_total": 21,
+      "source_url": "https://www.choggiung.com/",
+      "sources_fetched": [
+        "https://www.choggiung.com/",
+        "https://www.choggiung.com/about/leadership",
+        "https://www.choggiung.com/careers",
+        "https://choggiung.com/subsidiaries/bristol-alliance-of-companies",
+        "https://digital.akbizmag.com/issue/october-2019/choggiung-makes-a-striking-49er-debut/"
+      ],
+      "reputation_screen": {
+        "ground_1_immigration_enforcement_or_detention": "SEARCHED, NOTHING FOUND. Published Bristol work is engineering, construction, environmental remediation, fuel systems, munitions response, GIS and demolition. No ICE, CBP guard, detention or removal work surfaced.",
+        "ground_2_federal_contracting_fraud_or_compliance_misconduct": "SEARCHED, NOTHING FOUND. Note in their favour, Bristol publishes an ethics hotline page, which is a compliance program signal rather than a red flag.",
+        "separate_entanglement_flag_not_a_reputation_hit": "Bristol Bay Native Corporation holds a MINORITY interest in Bristol Industries LLC alongside Choggiung's majority, per Choggiung's own subsidiary page. bbnc.net is on the EXCLUDE set. Choggiung is neither a parent nor a subsidiary of BBNC, so it is not excluded by the rule as written, but the showrunner should know that a study touching the Bristol companies brushes an already-contacted entity."
+      },
+      "confidence": "high on the company, medium on the CEO name, which comes from a 2019 article and was not confirmed on a current page"
+    },
+    {
+      "company": "The Kuskokwim Corporation (TKC)",
+      "domain": "kuskokwim.com",
+      "location": "Anchorage, Alaska (corporate), representing ten villages on the middle Kuskokwim River including Aniak, Sleetmute, Crooked Creek and Stony River",
+      "what_they_do": "ANCSA corporation formed in 1977 by the merger of ten village corporations. Roughly one hundred million dollars in annual revenue, about 250 employees and 17 subsidiaries working in aviation maintenance, construction, environmental restoration, medical facility outfitting, government agency staffing, plus six apartment complexes in Alaska.",
+      "corporate_family": "Parent: none, more than 4,300 shareholders. Holding company: TKC Development (TKCD), created 2005, operating a dozen or more subsidiaries mostly in the Lower 48. Named subsidiaries found: Tumeq LLC (South Carolina), Holitna.",
+      "why_fit": "A hundred million dollar federal services group run for 4,300 shareholders who live in roadless villages, so the same small corporate team carries both multi-subsidiary contract compliance and a heavy shareholder services load.",
+      "structural_pain": {
+        "quote": "Many of our shareholders live below the poverty line. We have communities with no roads, no running water, no flushing toilets.",
+        "url": "https://www.truist.com/resources/commercial-corporate-institutional/strategic-advice/articles/an-alaska-native-corporation-builds-profit-for-a-higher-purpose",
+        "why_structural": "President and CEO Andrea Gusty describing the service obligation the corporation runs against. The same source records $100 million annual revenue, 250 employees and 4,300 shareholders. A 250 person company operating a dozen plus Lower 48 subsidiaries while administering shareholder services into roadless communities is a structural split in how the business runs."
+      },
+      "decision_maker_evidence": {
+        "named_leaders": "Andrea Gusty, President and Chief Executive Officer since February 2020, a TKC Class B shareholder and tribal member of Aniak. Verified on two fetched pages.",
+        "published_email_seen": "NONE. No email address was seen on any fetched page.",
+        "url": "https://deltadiscovery.com/the-kuskokwim-corporation-names-new-president-and-ceo/",
+        "note": "kuskokwim.com and tumeq.com both returned empty bodies to the fetcher, they appear to be client rendered, so no address from their own site could be read. Nothing is guessed. Reachability scored down accordingly."
+      },
+      "scores": {"ai_solvable_pain": 4, "ability_to_pay": 5, "reachability": 2, "offer_fit": 4, "alaska_signal": 5},
+      "fit_total": 20,
+      "source_url": "https://www.truist.com/resources/commercial-corporate-institutional/strategic-advice/articles/an-alaska-native-corporation-builds-profit-for-a-higher-purpose",
+      "sources_fetched": [
+        "https://deltadiscovery.com/the-kuskokwim-corporation-names-new-president-and-ceo/",
+        "https://www.truist.com/resources/commercial-corporate-institutional/strategic-advice/articles/an-alaska-native-corporation-builds-profit-for-a-higher-purpose"
+      ],
+      "reputation_screen": {
+        "ground_1_immigration_enforcement_or_detention": "SEARCHED, NOTHING FOUND for TKC, TKCD or Tumeq. That same search did surface the Kikiktagruk False Claims Act matter at Fort Bliss, already on this desk's suppression list, so the query was reaching the right kind of record.",
+        "ground_2_federal_contracting_fraud_or_compliance_misconduct": "SEARCHED, NOTHING FOUND. No settlement, kickback case, sham 8(a) allegation or SBA debarment surfaced for TKC or its subsidiaries."
+      },
+      "confidence": "medium. The company and its scale are well verified from two independent fetched pages, but no page on their own domain would render for the fetcher and no contact address was verifiable, so reachability is the open question"
+    },
+    {
+      "company": "Ounalashka Corporation",
+      "domain": "ounalashka.com",
+      "location": "Unalaska / Dutch Harbor, Alaska (P.O. Box 149, Unalaska, AK 99685), with office property in downtown Anchorage",
+      "what_they_do": "ANCSA village corporation for Unalaska, formed 1973. The major private landowner in Unalaska with 115,200 ANCSA acres, running land leasing, development and commercial real estate management at the nation's largest commercial fishing port by volume, plus premium office property in Anchorage.",
+      "corporate_family": "Parent: none, roughly 500 original shareholders and descendants, nine member board chaired by Wendy A. Svarny-Hawthorne. Subsidiary named on their own site: OCE, Ounalashka Commercial Enterprises. No federal services subsidiary group, which is unusual for this segment and is part of why it is clean.",
+      "why_fit": "They are the landlord of Dutch Harbor, so the business is a continuous stream of lease administration, land use and recreation permits and tenant intake across fishing, shipping, gravel and retail tenants, run by a small in-town office.",
+      "structural_pain": {
+        "quote": "Commercial tenants include clients in the fishing and fishing support industries, international shipping and logistics companies, sand and gravel extraction, retail and others.",
+        "url": "https://ounalashka.com/our-corporation/",
+        "why_structural": "A four-sector commercial tenant base plus 115,200 acres of permitted land means lease and permit administration is the operating engine of the company, which is repeating document work."
+      },
+      "decision_maker_evidence": {
+        "named_leaders": "Board chair Wendy A. Svarny-Hawthorne and directors Nicholai E. Lekanoff, Mary (Marii) M. Swetzof and Shayla R. Shaishnikof appeared in search results. FLAGGED, these names were NOT confirmed on a fetched page, and no executive was named on either fetched page. Treat as unverified until the research room confirms.",
+        "published_email_seen": "info@ounalashka.com",
+        "url": "https://ounalashka.com/contact/",
+        "note": "Address read off the fetched contact page, which also publishes 907.581.1276. Nothing is guessed."
+      },
+      "scores": {"ai_solvable_pain": 3, "ability_to_pay": 3, "reachability": 4, "offer_fit": 3, "alaska_signal": 5},
+      "fit_total": 18,
+      "source_url": "https://ounalashka.com/our-corporation/",
+      "sources_fetched": [
+        "https://ounalashka.com/our-corporation/",
+        "https://ounalashka.com/contact/",
+        "https://www.unalaska.gov/business-directory/ounalashka-corporation"
+      ],
+      "reputation_screen": {
+        "ground_1_immigration_enforcement_or_detention": "SEARCHED, NOTHING FOUND. They hold no federal services subsidiary group in the 8(a) guard or detention space, their business is land leasing and real estate, and nothing connected them to ICE, CBP, detention or removal work.",
+        "ground_2_federal_contracting_fraud_or_compliance_misconduct": "SEARCHED, NOTHING FOUND. Note, they have had civil litigation with the City of Unalaska over land matters in the past, which is landlord litigation and not federal contracting misconduct.",
+        "note": "The cleanest reputation profile of the six, because there is almost no federal contracting surface area to be tainted."
+      },
+      "confidence": "medium. Two independent pages confirm a real, operating corporation and a published email, but the operating pain is smaller and less documented in their own words than the others, and no executive name was page-confirmed"
+    },
+    {
+      "company": "Old Harbor Native Corporation",
+      "domain": "oldharbornativecorp.com",
+      "location": "Old Harbor and Kodiak, Alaska, with corporate office at 2702 Denali Street, Suite 100, Anchorage, AK 99503",
+      "what_they_do": "ANCSA village corporation for Old Harbor on Kodiak Island, incorporated 1973, approximately 403 shareholders. Industrial services in Alaska (Delta Leasing in the oilfield, Alaska 4x4 Rentals, Pozzsource), rural telecom (Kodiak Microwave Systems), and a fifteen company federal government services group.",
+      "corporate_family": "Parent: none. Wholly owned holding company Three Saints Bay LLC (Manassas, Virginia) with fifteen companies including Amee Bay, Barling Bay, Bennett Aerospace, Eagle Harbor, Ocean Bay, Shearwater Systems. Also Delta Leasing (51 percent), Geofortis (80 percent), Kodiak Microwave Systems (90 percent).",
+      "why_fit": "403 shareholders own a fifteen company federal services group plus Alaska industrial businesses, so proposal, capture and compliance volume per shareholder is extreme, and it peaks right now against the September 30 fiscal year end.",
+      "structural_pain": {
+        "quote": "approximately 403 shareholders residing primarily in Anchorage, Kodiak and Old Harbor, but some as far away as Iceland and Switzerland",
+        "url": "https://www.oldharbornativecorp.com/company/",
+        "why_structural": "A 403 shareholder village corporation carrying a fifteen entity 8(a) portfolio is a structural governance and administrative load, the shareholder base cannot supply the back office, so the paperwork has to be bought or automated."
+      },
+      "decision_maker_evidence": {
+        "named_leaders": "Matthew Hales, CEO of Three Saints Bay; Don Gurley, President of Amee Bay and Ghostrock; Heidi Landgraf, President of Kiliuda Consulting and Old Harbor Solutions; Jennifer Graziani, President of Ocean Bay and Emerald Isle, all listed at threesaintsbay.com/about-us/. No OHNC executive was named on the parent company page.",
+        "published_email_seen": "NONE. Three Saints Bay lists careers, HR, business development and contracts addresses but they are obfuscated in the page source and no readable address was captured. OHNC publishes phone numbers only.",
+        "url": "https://www.oldharbornativecorp.com/company/",
+        "note": "No address is guessed. Reachability is scored down for this."
+      },
+      "scores": {"ai_solvable_pain": 4, "ability_to_pay": 4, "reachability": 2, "offer_fit": 4, "alaska_signal": 4},
+      "fit_total": 18,
+      "source_url": "https://www.oldharbornativecorp.com/company/",
+      "sources_fetched": [
+        "https://www.oldharbornativecorp.com/company/",
+        "https://www.oldharbornativecorp.com/company/operating-companies/",
+        "https://threesaintsbay.com/about-us/",
+        "https://threesaintsbay.com/eagle-harbor/"
+      ],
+      "reputation_screen": {
+        "ground_1_immigration_enforcement_or_detention": "FLAGGED, NOT CLEAN. Two findings. First, search results report that subsidiary Eagle Harbor LLC holds a contract with DHS Customs and Border Protection providing professional technical and operational support to CBP's Office of Facilities and Asset Management, this was a search result and was NOT confirmed on a fetched page. Second, the fetched Eagle Harbor page lists Federal Protective Service, a DHS component, among featured customers, and lists law enforcement support among its service lines, while making no mention of CBP, border or detention. Assessment, this is CBP facilities and asset management support, not guard services, detention operations, removal operations or migrant operations, so it does not squarely match the suppressed pattern. It is close enough to it that the showrunner should treat this as an open reputation question and clear it before any outreach, not after.",
+        "ground_2_federal_contracting_fraud_or_compliance_misconduct": "SEARCHED, NOTHING FOUND for OHNC or any Three Saints Bay company."
+      },
+      "confidence": "low. The company is real and well verified across four fetched pages and it fits the ICP on paper, but it carries an unresolved DHS proximity flag on ground one and no verifiable email contact, so it should be the last of these six the desk picks"
+    }
+  ]
+}

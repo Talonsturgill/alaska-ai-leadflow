@@ -1,0 +1,103 @@
+{
+  "date": "2026-08-10",
+  "timezone": "America/Anchorage",
+  "phases": {
+    "phase0_orient": {
+      "status": "done",
+      "notes": "exclude-set 38 domains, inbound queue clear (inbound-ok), ran-today exit 1, voice_diff recorded 2 edits from the 2026-08-09 White Pass send, lengthened now READY TO PROMOTE at 9 sends"
+    },
+    "phase1_discover": {
+      "status": "done",
+      "artifacts": [
+        "out/2026-08-10/selection.md",
+        "out/2026-08-10/shortlist.json",
+        "out/2026-08-10/scouts/*.json"
+      ],
+      "notes": "23 page-verified candidates across 4 segments, all dedupe-checked clear in code. Pick Major Marine Tours (majormarine.com) at 24/25, tie with Huna Totem broken on reachability 5 v 4."
+    },
+    "phase2_research": {
+      "status": "done",
+      "artifacts": [
+        "out/2026-08-10/research.json",
+        "out/2026-08-10/claims.json"
+      ],
+      "notes": "4 researchers + fact-checker. Verdict FIX with 13 rejections, all applied. KILLED the rail/check-in finding on an unread footnote. Cut a manufactured quote appearing in 3 places. Drift pattern named: a sharpening reflex on reconstructed quotes. Corrected Seward-only. claims.json is now the only citable source."
+    },
+    "phase3_discovery_room": {
+      "status": "done",
+      "artifacts": [
+        "out/2026-08-10/discovery.json",
+        "out/2026-08-10/feasibility.json",
+        "out/2026-08-10/pick.md"
+      ],
+      "notes": "Strategist mapped 21 business areas, scored 10 jobs, generated 6 candidates. RICE put the NO-AI decision table first (8.55) and the voice agent last (0.15). Conscience gate confirmed the voice kill on rebuilt reasoning, cut two funded phases to ONE funded build plus a numerically gated option, and made corpus reconciliation a funded deliverable. Pick locked, ask sized at $18,000."
+    },
+    "phase4_engineering_room": {
+      "status": "running",
+      "notes": "staff-engineer, product-manager, roi-analyst, delivery-lead spawned in parallel, writing to out/2026-08-10/room/"
+    },
+    "phase5_assemble_render": {
+      "status": "pending"
+    },
+    "phase6_verify_audit": {
+      "status": "pending"
+    },
+    "phase7_carrier_email": {
+      "status": "pending"
+    },
+    "phase8_draft_record": {
+      "status": "pending"
+    },
+    "phase9_deliver_selfcheck": {
+      "status": "pending"
+    },
+    "phase10_retro": {
+      "status": "pending"
+    },
+    "phase6_critique": {
+      "status": "in_progress",
+      "rounds": [
+        "r3 fix 15",
+        "r4 fix 12",
+        "r5 fix 8",
+        "r6 fix 2",
+        "r7 fix 6",
+        "r8 fix 4",
+        "r9 fix 5",
+        "r10 running"
+      ],
+      "notes": "R8 and R9 chased one defect class to the end of the chain: a funding gate resting on a number nothing in the plan collects. R8 found the search gate's numerator incomplete (the miss log had one writer, the table, so a question with no branch was never logged). R9 found the same gate still had no DENOMINATOR, because nothing counted answered questions either. The sorter now counts every question and logs the ones it has no branch for. R8 also caught an unverifiable claim about their internal refund approvals carried as a section heading; now hedged to what is published, with the assumption stated in our own voice and answered by the sheet. R9 promoted its own soft note to a failure after re-deriving it: the five-year cost row falls as the scenario improves and its training and upkeep drivers were unstated, so the row could not be checked. Now disclosed and verified against roi_drivers.json rather than copied from the critic's sentence. R9 also conceded it was wrong in R8 to nominate the no-show sentence as a donor after ringfencing it in R7."
+    }
+  },
+  "inbound": {
+    "queue": "clear",
+    "counter": "ok"
+  },
+  "seasonal_context": [
+    "Mid-August. Alaska visitor season is in its last full month, cruise calls run into late September but seasonal staff start leaving from mid-August as college terms resume.",
+    "Federal fiscal year ends September 30, so federal contractors and 8(a) subsidiaries are in the Q4 obligation surge and their proposal load is at its annual peak.",
+    "Coho and silver salmon runs are on in Southcentral and Southeast; Bristol Bay sockeye is finished.",
+    "Alaska State Fair in Palmer runs late August into Labor Day.",
+    "Construction and field season closes in roughly six weeks, so permitting and closeout paperwork stacks up now.",
+    "Back-to-school mid-August drives a physicals and immunization surge through independent clinics.",
+    "Legislature is out of session."
+  ],
+  "pick": {
+    "company": "Major Marine Tours",
+    "domain": "majormarine.com",
+    "segment": "Tourism and visitor industry",
+    "fit_score": 24
+  },
+  "locked_pick": {
+    "name": "The Reservations Desk Answer Layer",
+    "ai_in_funded_scope": false,
+    "ask_usd": 18000,
+    "option": "snippet retrieval, numerically gated, 2028 season"
+  },
+  "date_note": "Run started 2026-08-10 Anchorage and crossed midnight during the critic loop; it is 12:11 on 2026-08-11 AK as this was written. Decision: artifacts, dateline and the dated departure-count observation all stay 2026-08-10, which is when the research was done and verified, and ledger.py add-run is called with --date 2026-08-10 so runs.json keeps one row per date and matches the artifacts. No dedupe hole results, because re-contact is prevented by normalized DOMAIN in leads/suppressions, not by the run date. ran-today for 2026-08-11 correctly reports no run, so a trigger firing later today starts a fresh run against a different company, which is intended.",
+  "machine_changes": [
+    "scripts/dup_clause.py (new)",
+    "scripts/quote_fidelity.py (new)",
+    "scripts/build_study_page.py (demo caption tightened)"
+  ]
+}

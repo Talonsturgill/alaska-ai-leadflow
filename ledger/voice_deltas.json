@@ -534,6 +534,55 @@
           ]
         }
       ]
+    },
+    {
+      "run_date": "2026-08-09",
+      "company": "White Pass and Yukon Route",
+      "deltas": [
+        {
+          "kinds": [
+            "lengthened"
+          ],
+          "before": "We just wrapped up our study on those unstaffed hours at White Pass.",
+          "after": "We just wrapped up our study on a solution for those unstaffed hours and did a deep dive on White Pass.",
+          "dropped": [
+            "at"
+          ],
+          "added": [
+            "a",
+            "and",
+            "deep",
+            "did",
+            "dive",
+            "for",
+            "solution"
+          ]
+        },
+        {
+          "kinds": [
+            "lengthened"
+          ],
+          "before": "Worth a reply either way.",
+          "after": "Just something we'd be excited to build for you.",
+          "dropped": [
+            "a",
+            "either",
+            "reply",
+            "way",
+            "worth"
+          ],
+          "added": [
+            "be",
+            "build",
+            "excited",
+            "for",
+            "just",
+            "something",
+            "to",
+            "we'd"
+          ]
+        }
+      ]
     }
   ]
 }

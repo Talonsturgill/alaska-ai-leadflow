@@ -1,0 +1,904 @@
+{
+  "subject": "Major Marine Tours, majormarine.com, Seward, Alaska",
+  "run_date": "2026-08-10",
+  "gate": "fact-checker returned FIX. Every claim below was re-fetched and verified verbatim. Everything the fact-checker rejected or could not verify has been CUT, not softened. Downstream may cite ONLY this file.",
+  "contact": {
+    "email": "info@majormarine.com",
+    "contact_ok": true,
+    "contact_source": "https://majormarine.com/contact-us/",
+    "also_on": [
+      "https://majormarine.com/employment/",
+      "https://majormarine.com/book-now/"
+    ],
+    "rendered_plain_text": true,
+    "type": "general business inbox, not attributable to a named person",
+    "note": "Re-verified independently by both people-finder and fact-checker. No personal address exists for anyone at this company in verified form, and broker-published patterns were deliberately refused.",
+    "reverified": "2026-08-11, re-fetched majormarine.com/contact-us/ by the showrunner before drafting. Published verbatim as info@majormarine.com. Not constructed, not inferred."
+  },
+  "KILLED_FINDINGS": [
+    {
+      "finding": "The check-in rule is impossible to obey for rail arrivals. They require check-in one hour before departure while selling the 11:30 am cruise as the connection off a train arriving 11:15 am.",
+      "why_killed": "THE ASTERISK RESOLVES IT AND THE COMPANY ALREADY HANDLES THIS. The fact-checker flagged the unresolved asterisk on the check-in sentence as load-bearing, and it was right to. The footnote reads verbatim: '*Passengers arriving by train and cruising on the 6 Hour Kenai Fjords National Park Cruise will have enough time to board the cruise if they proceed directly to the Major Marine Tours check-in office from the Railroad Depot.' The rule is explicitly carved out for exactly the case the finding claimed it broke. Had this shipped, the prospect could have opened their own page and disproved us in one line of small print.",
+      "url": "https://majormarine.com/seward-check-in/",
+      "status": "CUT ENTIRELY. Must not appear in the study, the demo or the email in any form."
+    },
+    {
+      "finding": "A quoted FAQ sentence listing which boats are not wheelchair accessible.",
+      "why_killed": "The quoted sentence does not exist. It was a reconstruction placed inside quotation marks. The real page presents it as a labelled list across separate sentences.",
+      "status": "CUT. The underlying Rachel Marie discrepancy survives and is recorded below with correct wording."
+    },
+    {
+      "finding": "Anything describing Major Marine as a two-port operator, or referencing Whittier or Prince William Sound.",
+      "why_killed": "Seward only, confirmed independently three times. The Phase 1 brief was wrong.",
+      "status": "CUT."
+    },
+    {
+      "finding": "A careers-page sentence about employment across crew, reservations office and hotel locations.",
+      "why_killed": "NOT FOUND on /employment/ or /jobs-available/ across three fetches.",
+      "status": "CUT. The group shape is proven by other verified sources below."
+    }
+  ],
+  "verified_company_facts": [
+    {
+      "id": "c1",
+      "claim": "Packages can only be booked by phone.",
+      "quote": "Packages are available to book by phone only unless noted in the package description.",
+      "url": "https://majormarine.com/specials-packages/",
+      "note": "Quote this sentence ALONE. The fact-checker could not confirm adjacency of the two sentences that follow it."
+    },
+    {
+      "id": "c2",
+      "claim": "Customer service hours are 8:00 a.m. to 6:00 p.m., seven days a week, year round.",
+      "quote": "Customer Service Hours: 8:00 a.m. \u2013 6:00 p.m. 7 days a week",
+      "url": "https://majormarine.com/contact-us/"
+    },
+    {
+      "id": "c3",
+      "claim": "Discounts must be booked direct and are not valid through third parties.",
+      "quote": "All discounts must be booked directly with Major Marine Tours, and are not valid through third-party reservations or travel agencies.",
+      "url": "https://majormarine.com/specials-packages/"
+    },
+    {
+      "id": "c4",
+      "claim": "Cruise-only refund clock is 72 hours.",
+      "quote": "Cruise-only reservations are refundable up to 72 hours prior to your cruise departure.",
+      "url": "https://majormarine.com/refund-policy/"
+    },
+    {
+      "id": "c5",
+      "claim": "A 3 percent credit card processing fee is retained on cancellations.",
+      "quote": "A 3% credit card processing fee will be retained for cancellations.",
+      "url": "https://majormarine.com/refund-policy/"
+    },
+    {
+      "id": "c6",
+      "claim": "Hotel package refund clock is 7 days.",
+      "quote": "Cruise and hotel packages are refundable until 7 days prior to the first day of your package reservation",
+      "url": "https://majormarine.com/refund-policy/"
+    },
+    {
+      "id": "c7",
+      "claim": "Transportation package refund clock is 21 days.",
+      "quote": "Reservations with transportation added (motorcoach or train) are refundable until 21 days prior",
+      "url": "https://majormarine.com/refund-policy/"
+    },
+    {
+      "id": "c8",
+      "claim": "One free date change up to 24 hours prior, then a fee per person.",
+      "quote": "Reservation date may be changed once, free of charge, up to 24 hours prior to departure. ... Any subsequent change is subject to a $15 per person re-booking fee.",
+      "url": "https://majormarine.com/refund-policy/",
+      "note": "Two sentences, elision marked. Do NOT render as one continuous sentence."
+    },
+    {
+      "id": "c9",
+      "claim": "No-shows are completely non-refundable.",
+      "quote": "Tickets not used at the time of sailing (no-show) are completely non-refundable and may not be used on any other sailings.",
+      "url": "https://majormarine.com/refund-policy/",
+      "note": "This clause belongs to the NO-SHOW rule. Never splice it adjacent to the refund clocks, the adjacency would misrepresent it."
+    },
+    {
+      "id": "c10",
+      "claim": "A weather re-route into Resurrection Bay triggers a partial refund at the Captain's discretion.",
+      "quote": "If the route of a full-day Kenai Fjords National Park tour is limited to the confines of Resurrection Bay, Major Marine Tours will offer partial refunds. ... At the discretion of the Coast Guard-certified Captain, Major Marine Tours reserves the right to cancel or re-route cruises based on weather or other conditions.",
+      "url": "https://majormarine.com/refund-policy/"
+    },
+    {
+      "id": "c11",
+      "claim": "Cruises run rain or shine and are only cancelled for unsafe sea conditions.",
+      "quote": "Our cruises go out rain or shine. We only cancel cruises due to unsafe sea conditions, in which case we will notify you as soon as possible.",
+      "url": "https://majormarine.com/faq/"
+    },
+    {
+      "id": "c12",
+      "claim": "The late-train contingency is discretionary and handled case by case.",
+      "quote": "If the train arrives late, we will do our best to transfer passengers to a different date or to the 4 Hour Cruise that departs at 12:30pm.",
+      "url": "https://majormarine.com/faq/",
+      "note": "SURVIVES the asterisk kill. The footnote covers an ON-TIME train. A LATE train is still a manual discretionary decision. Keep these two facts distinct and never imply the on-time case is a problem."
+    },
+    {
+      "id": "c13",
+      "claim": "The shuttle must be added by phone with 24 hours notice.",
+      "quote": "Parking lots can fill up quickly, so please call us to add the shuttle to your reservation at least 24 hours before your cruise for your convenience.",
+      "url": "https://majormarine.com/seward-check-in/",
+      "note": "FULL sentence. The package's shortened version re-capitalised a mid-sentence fragment."
+    },
+    {
+      "id": "c14",
+      "claim": "Advance reservations are required for the shuttle and it is excluded from the 8:00 am cruise.",
+      "quote": "Advance reservations are required for shuttle pick-up. ... Shuttle is not available for the 8:00 am 6 Hour Kenai Fjords National Park Cruise.",
+      "url": "https://majormarine.com/seward-check-in/"
+    },
+    {
+      "id": "c15",
+      "claim": "The cruise-terminal shuttle runs a 165-minute window on a 15-minute headway.",
+      "quote": "A complimentary Major Marine Tours shuttle will make continuous loops between Harbor 360 Hotel, the South Harbor office, and the Cruise Ship Terminal from 7:00 am. \u2013 9:45 a.m., departing every 15 minutes.",
+      "url": "https://majormarine.com/seward-check-in/"
+    },
+    {
+      "id": "c16",
+      "claim": "Terminal distances are 0.6 and 0.8 miles.",
+      "quote": "The Seward Cruise Ship Terminal is located 0.6 miles from Harbor 360 Hotel and 0.8 miles from our South Harbor office.",
+      "url": "https://majormarine.com/seward-check-in/"
+    },
+    {
+      "id": "c17",
+      "claim": "All cruises board at the Harbor 360 Hotel office.",
+      "quote": "All Cruises Depart from Harbor 360 Hotel Office",
+      "url": "https://majormarine.com/seward-check-in/"
+    },
+    {
+      "id": "c18",
+      "claim": "Seats are assigned by staff before the cruise and special requests are not guaranteed.",
+      "quote": "Seating arrangements are assigned by Major Marine Tours staff prior to the cruise.",
+      "url": "https://majormarine.com/faq/"
+    },
+    {
+      "id": "c19",
+      "claim": "Vegetarian meals must be requested at the time of reservation on the three long cruises.",
+      "quote": "Vegetarian guests on the 6 Hour Cruise, 7.5 Hour Cruise and 8.5 Hour Cruise can request a vegetarian sandwich in advance, at the time of reservation.",
+      "url": "https://majormarine.com/faq/"
+    },
+    {
+      "id": "c20",
+      "claim": "Wheelchair accessibility differs vessel by vessel, and no vessel takes a motorized wheelchair.",
+      "quote": "The following boats ARE wheelchair accessible on their first deck, inside the main cabin only. The outside decks are not wheelchair accessible. ... The following boats are NOT wheelchair accessible and not recommended for guests with limited mobility. ... None of our vessels can accommodate motorized wheelchairs.",
+      "url": "https://majormarine.com/faq/",
+      "note": "CORRECTED WORDING, re-fetched. The accessible list is Glacier Express, Skana, Spirit of Adventure, Spirit of Matushka and Kenai Fjords 360."
+    },
+    {
+      "id": "c21",
+      "claim": "Rachel Marie runs a scheduled departure per the FAQ but is absent from the eight-vessel fleet page.",
+      "quote": "Rachel Marie, which runs the 12:30pm departure 4 Hour Kenai Fjords Wildlife Cruise",
+      "url": "https://majormarine.com/faq/",
+      "note": "The discrepancy is REAL and re-verified from both sides. Whether chartered, retired or omitted is UNRESOLVED and must be stated as unresolved if used at all."
+    },
+    {
+      "id": "c22",
+      "claim": "Guests stay aboard for the whole cruise.",
+      "quote": "Our guests stay on the boat for the entire cruise to maximize glacier and wildlife-viewing opportunities.",
+      "url": "https://majormarine.com/faq/"
+    },
+    {
+      "id": "c23",
+      "claim": "Full payment is required at booking.",
+      "quote": "In order to secure your place on cruise you must pay in full upon booking your reservation.",
+      "url": "https://majormarine.com/faq/"
+    },
+    {
+      "id": "c24",
+      "claim": "About 60 seasonal employees in Seward, hired in a window closing in April.",
+      "quote": "During our cruise season we employ about 60 seasonal employees in Seward. Our peak hiring time for seasonal positions is January 15th \u2013 April 15th.",
+      "url": "https://majormarine.com/employment/"
+    },
+    {
+      "id": "c25",
+      "claim": "Employee housing starts at $15 per night and out-of-state staff receive a $400 travel reimbursement on contract completion.",
+      "quote": "Fees for employee housing start at $15 per night, depending on location and based on double occupancy. ... Anyone traveling from out of state will receive a $400 travel reimbursement upon the completion of their contract.",
+      "url": "https://majormarine.com/employment/"
+    },
+    {
+      "id": "c26",
+      "claim": "The seasonal roles they hire.",
+      "quote": "We hire for the following seasonal positions: Customer Service/Sales Staff, Deckhand and Senior Deckhand Crew, Engineering, Inventory/Dock Support, Cooks, and occasionally licensed Captains.",
+      "url": "https://majormarine.com/employment/"
+    },
+    {
+      "id": "c27",
+      "claim": "2026 cruise season runs March 7th to October 11th.",
+      "quote": "2026 Cruise Season: March 7th - October 11th",
+      "url": "https://majormarine.com/"
+    },
+    {
+      "id": "c28",
+      "claim": "Locally owned family company, over 30 years.",
+      "quote": "We are a locally-owned, family company with over 30 years of sharing authentic Alaska adventures",
+      "url": "https://majormarine.com/"
+    },
+    {
+      "id": "c29",
+      "claim": "Online booking closes 12 hours before departure on the 4 Hour cruise reservation page.",
+      "quote": "Online bookings not available within 12 hours of cruise departure \u2013 please call us at (907) 224-8030 to book within 12 hours.",
+      "url": "https://majormarine.com/book-now/3-5-hour-kenai-fjords-wildlife-cruise-reservation/",
+      "note": "VERIFIED ON THIS ONE PAGE ONLY. NOT verified sitewide. Do not write 'reservation pages' plural."
+    },
+    {
+      "id": "c30",
+      "claim": "Seward only. No Whittier or Prince William Sound product exists.",
+      "quote": "We offer multiple cruise options departing from the beautiful harbor town of Seward, Alaska.",
+      "url": "https://majormarine.com/all-cruises/"
+    },
+    {
+      "id": "c31",
+      "claim": "Major Marine states it owns Harbor 360 Hotel.",
+      "quote": "We also own Harbor 360 Hotel, Seward's premier waterfront hotel.",
+      "url": "https://majormarine.com/seward-harbor-360-hotel/",
+      "note": "CITATION CORRECTED. This is NOT on /our-company/."
+    },
+    {
+      "id": "c32",
+      "claim": "Seward Gateway Hotel states it commonly owns Major Marine Tours.",
+      "quote": "We also own and operate Major Marine Tours, offering world-class wildlife and glacier tours in Resurrection Bay and Kenai Fjords National Park.",
+      "url": "https://www.sewardgatewayhotel.com/major-marine-tours/",
+      "note": "CONTRADICTION RESOLVED IN FAVOUR OF COMMON OWNERSHIP. The people-finder's 'do not assert ownership' was stale. The reciprocal statement from the hotel's own site settles it."
+    },
+    {
+      "id": "c33",
+      "claim": "Tom Tougas owns Major Marine Tours, Harbor 360 Hotel and a Seward Hertz franchise, and chairs First National Bank Alaska's Strategic Planning and Opportunities Committee.",
+      "quote": "Major Marine Tours, Harbor 360 Hotel and Hertz Rent-a-Car ... Tougas chairs the board's Strategic Planning & Opportunities Committee.",
+      "url": "https://www.fnbalaska.com/team/tom-tougas/"
+    },
+    {
+      "id": "c34",
+      "claim": "Kenai Fjords Tours is a Pursuit property with no connection to Major Marine or Tom Tougas.",
+      "quote": "\u00a92025 Kenai Fjords Tours & Pursuit",
+      "url": "https://www.alaskacollection.com/day-tours/kenai-fjords-tours/",
+      "note": "Neither 'Major Marine Tours' nor 'Tom Tougas' appears anywhere on that page. They are DIRECT SEWARD COMPETITORS."
+    },
+    {
+      "id": "c35",
+      "claim": "Owner awards: 2019 Alaska Business Champion of the Year from the SBA Alaska District and 2016 Visitor Industry Hall of Fame from the Alaska Tourism Industry Association.",
+      "quote": "2019 Alaska Business Champion of the Year Award ... 2016 Visitor Industry Hall of Fame Award",
+      "url": "https://majormarine.com/our-company/"
+    },
+    {
+      "id": "c36",
+      "claim": "Parking cost contradicts itself across two of their own pages.",
+      "quote": "There is a $10 charge per vehicle per day. // Public parking in Seward is $15 for the day to be paid at the parking kiosk",
+      "url": "https://majormarine.com/faq/",
+      "note": "WEBSITE DEFECT. Per OUTREACH_CRAFT this may NEVER open the email and may never be a headline finding. Usable inside the study only as minor evidence, framed as ordinary and cheap to settle. SECOND URL ADDED 2026-08-10 by the showrunner, re-fetched and quoted verbatim from the check-in page after the study-critic found the $15 half of the contradiction had no citable home. The $10 half is on the FAQ.",
+      "url_2": "https://majormarine.com/seward-check-in/",
+      "quote_2": "Public parking in Seward is $15 for the day to be paid at the parking kiosk at the time of arrival."
+    },
+    {
+      "id": "c37",
+      "claim": "A live 2026 booking page still carries 2020 and 2021 copy.",
+      "quote": "The morning departure of the 6 Hour Cruise is a new cruise option starting in 2021. This cruise departure is not available in 2020.",
+      "url": "https://majormarine.com/book-now/6-hour-kenai-fjords-national-park-morning-cruise-reservation/",
+      "note": "WEBSITE DEFECT. Same restriction as c36."
+    },
+    {
+      "id": "c38",
+      "claim": "The booking engine is slow enough that the page warns about it.",
+      "quote": "Please allow several seconds for the booking engine to load below.",
+      "url": "https://majormarine.com/book-now/6-hour-kenai-fjords-national-park-morning-cruise-reservation/",
+      "note": "The VENDOR is unidentified and must NEVER be named or guessed."
+    },
+    {
+      "id": "c39",
+      "claim": "Adult fare used to build the error cost, verified per product: 4 Hour $149.00, 6 Hour $239.00, 8.5 Hour Northwestern Fjord $309.00.",
+      "quote": "Adult (age 12+): $149.00 ... Adult (age 12+): $239.00 ... Adult (age 12+): $309.00",
+      "url": "https://majormarine.com/all-cruises/",
+      "note": "Verified verbatim by the fact-checker on the individual tour pages. The DERIVED cost per refund error assumes a party of two, and that party size is an ASSUMPTION, which is why only the fare row carries a verified mark and the cost rows do not."
+    }
+  ],
+  "verified_numbers": {
+    "season_2026": "March 7 to October 11, 2026",
+    "season_end_ladder": "8.5 Hour Northwestern Fjord ends September 7. 7.5 Hour Kenai Fjords ends September 13. 6 Hour Kenai Fjords ends September 21. 4 Hour Kenai Fjords Wildlife runs to October 11.",
+    "products": [
+      {
+        "name": "8.5 Hour Northwestern Fjord Cruise",
+        "dates": "May 29 to September 7, 2026",
+        "adult": 309.0,
+        "departs": "8:30 am",
+        "returns": "5:00 pm",
+        "capacity": "up to 60 passengers",
+        "note": "Not suitable for children under 12. Complimentary deli lunch, three sandwich choices.",
+        "url": "https://majormarine.com/tour/8-5-hour-northwestern-fjord-cruise/"
+      },
+      {
+        "name": "7.5 Hour Kenai Fjords National Park Cruise",
+        "dates": "May 22 to September 13, 2026",
+        "adult": 269.0,
+        "child": 134.5,
+        "departs": "9:30 am",
+        "returns": "5:00 pm",
+        "url": "https://majormarine.com/tour/7-5-hour-kenai-fjords-national-park-cruise/"
+      },
+      {
+        "name": "6 Hour Kenai Fjords National Park Cruise",
+        "dates": "May 2 to September 21, 2026",
+        "adult": 239.0,
+        "child": 119.5,
+        "departs": "11:30 am afternoon, 8:00 am morning June 5 to August 23",
+        "returns": "5:30 pm afternoon, 2:00 pm morning",
+        "url": "https://majormarine.com/tour/6-hour-kenai-fjords-national-park-cruise/"
+      },
+      {
+        "name": "4 Hour Kenai Fjords Wildlife Cruise",
+        "dates": "June 12 to October 11, 2026",
+        "adult": 149.0,
+        "child": 74.5,
+        "departs": "12:30 pm from June 21, plus 10:00 am and 3:00 pm June 12 to August 23",
+        "returns": "4:30 pm, plus 2:00 pm and 7:00 pm",
+        "note": "No meal, snack bar onboard.",
+        "url": "https://majormarine.com/tour/4-hour-kenai-fjords-wildlife-cruise/"
+      },
+      {
+        "name": "4 Hour Spring Wildlife Cruise",
+        "dates": "March 20 to May 16, 2027",
+        "adult": 109.0,
+        "child": 54.5,
+        "url": "https://majormarine.com/all-cruises/"
+      },
+      {
+        "name": "Orca Quest Cruise",
+        "dates": "May 18 to June 20, 2026",
+        "adult": 149.0,
+        "departs": "12:30 pm",
+        "note": "Has a live 2026 product page but is NOT listed on the all-cruises index, which shows five products.",
+        "url": "https://majormarine.com/tour/orca-quest-cruise/"
+      }
+    ],
+    "departure_slots_on_run_date": {
+      "value": 7,
+      "times": [
+        "8:00 am",
+        "8:30 am",
+        "9:30 am",
+        "10:00 am",
+        "11:30 am",
+        "12:30 pm",
+        "3:00 pm"
+      ],
+      "note": "Verified by arithmetic across four re-fetched tour pages. All seven are inside their published date ranges on 2026-08-10. The 8:00 am 6 Hour and the 10:00 am and 3:00 pm 4 Hour departures all END August 23, 2026."
+    },
+    "fleet": [
+      {
+        "name": "SKANA",
+        "pax": 150,
+        "length_ft": 86,
+        "type": "catamaran",
+        "year": 2022
+      },
+      {
+        "name": "SPIRIT OF MATUSHKA",
+        "pax": 150,
+        "length_ft": 86,
+        "type": "catamaran",
+        "year": 2021
+      },
+      {
+        "name": "KENAI FJORDS 360",
+        "pax": 150,
+        "length_ft": 98,
+        "type": "catamaran",
+        "year": 2017
+      },
+      {
+        "name": "GLACIER EXPRESS",
+        "pax": 192,
+        "length_ft": 87,
+        "type": "catamaran"
+      },
+      {
+        "name": "SPIRIT OF ADVENTURE",
+        "pax": 190,
+        "length_ft": 86,
+        "type": "catamaran"
+      },
+      {
+        "name": "FAIRWEATHER EXPRESS II",
+        "pax": 146,
+        "length_ft": 78,
+        "type": "catamaran"
+      },
+      {
+        "name": "ORCA SONG",
+        "pax": 60,
+        "length_ft": 65,
+        "type": "monohull"
+      },
+      {
+        "name": "VIEWFINDER",
+        "pax": 36,
+        "length_ft": 58,
+        "type": "monohull"
+      }
+    ],
+    "fleet_seat_sum": {
+      "value": 1074,
+      "note": "Arithmetic on published capacities ONLY. NEVER present as passengers carried. Annual passenger volume is unpublished."
+    },
+    "seasonal_employees": {
+      "value": "about 60",
+      "location": "Seward",
+      "hiring_window": "January 15th to April 15th"
+    },
+    "shoreside_leaders": [
+      {
+        "name": "Tom Tougas",
+        "role": "Owner",
+        "tenure": null,
+        "note": "Carries NO years-of-service figure while every other person on the page does. Do not write a tenure number for him."
+      },
+      {
+        "name": "Colby Lawrence",
+        "role": "Vice President",
+        "tenure_years": 22
+      },
+      {
+        "name": "Kori Goertz",
+        "role": "Director of Sales",
+        "tenure_years": 4
+      },
+      {
+        "name": "Kirsten McNeil",
+        "role": "Director of Shoreside Operations",
+        "tenure_years": 11
+      },
+      {
+        "name": "Tayja Wright",
+        "role": "Operations Manager",
+        "tenure_years": 8
+      },
+      {
+        "name": "Rodney Roemmich",
+        "role": "Maintenance Director",
+        "tenure_years": 15
+      }
+    ],
+    "captains": {
+      "count": 13,
+      "tenures_years": [
+        26,
+        19,
+        17,
+        16,
+        14,
+        12,
+        11,
+        10,
+        10,
+        9,
+        6,
+        5,
+        4
+      ],
+      "note": "Joshua Jackson is listed as Port Captain at 17 years. Nicole Lawrence is the longest at 26.",
+      "url": "https://majormarine.com/meet-the-team/"
+    }
+  },
+  "verified_industry_claims": [
+    {
+      "id": "i1",
+      "claim": "A generative AI assistant raised customer-support productivity 14 percent on average and 34 percent for novice and low-skilled workers, with minimal impact on experienced workers.",
+      "quote": "Access to the tool increases productivity, as measured by issues resolved per hour, by 14% on average, including a 34% improvement for novice and low-skilled workers but with minimal impact on experienced and highly skilled workers.",
+      "who": "Brynjolfsson, Li and Raymond, NBER Working Paper 31161, Generative AI at Work. Field data from 5,179 customer support agents.",
+      "tier": "tier_1_independent_measurement",
+      "url": "https://www.nber.org/papers/w31161",
+      "note": "THE STRONGEST CITATION AVAILABLE TO THIS STUDY. The retention and satisfaction clause was NOT verified and has been cut."
+    },
+    {
+      "id": "i2",
+      "claim": "In a 61,459-call audit across 12 models, responding to reviews moved LLM recommendation probability by +0.1 percentage points, statistically equivalent to zero.",
+      "quote": "a cue the optimization industry actively promotes",
+      "who": "Baig, Gillani and Ali, arXiv:2606.16344v1. 3,024 trials in the main arm across 27 persona-by-template strata, 112 trials per stratum, 12 models, 61,459 model calls in total.",
+      "tier": "tier_1_independent_measurement",
+      "url": "https://arxiv.org/html/2606.16344v1",
+      "note": "CORRECTED. The 3,024 figure is the main arm total, NOT per model."
+    },
+    {
+      "id": "i3",
+      "claim": "In the same audit, guest rating moved recommendation probability +31.65 pp and review volume +8.31 pp, while price moved it -30.03 pp.",
+      "quote": "+8.31 pp [7.55, 9.07] ... \u221230.03 pp [\u221230.75, \u221229.32] ... +11.61 pp [11.04, 12.18]",
+      "who": "Baig, Gillani and Ali, arXiv:2606.16344v1",
+      "tier": "tier_1_independent_measurement",
+      "url": "https://arxiv.org/html/2606.16344v1",
+      "note": "CORRECTED from +31.6 to +31.65. Say about +32 pp if rounding."
+    },
+    {
+      "id": "i4",
+      "claim": "Externally measured voice agent end-to-end latency across five platforms ran 1,296ms to 1,740ms median and 1,768ms to 2,259ms at p95. No platform achieved a sub-800ms median.",
+      "quote": "1,296 ms / 1,856 ms ... 1,424 ms / 1,768 ms ... 1,520 ms / 2,248 ms ... 1,558 ms / 2,008 ms ... 1,740 ms / 2,259 ms",
+      "who": "Openbenchmarks. Measured with Silero VAD on recorded call audio rather than platform self-reporting. Up to 432 calls per platform, usable counts 419, 429, 429, 382 and 419.",
+      "tier": "tier_1_independent_measurement",
+      "url": "https://openbenchmarks.com/voice-agent-latency/voice-agent-end-to-end-latency",
+      "note": "CORRECTED. The 2,078-turn figure was unsupported and is cut."
+    },
+    {
+      "id": "i5",
+      "claim": "A named day-cruise operator running a chatbot wired to its booking system reports 10 staff hours saved per month, 60 percent of customer questions answered, and 15 clickthroughs per month.",
+      "quote": "10 hours of time per month ... 60% of customer questions ... 15 people per month",
+      "who": "Black Cat Cruises, Akaroa New Zealand, via vendor Yonder. Roughly 100-passenger vessel, 4 to 5 daily departures.",
+      "tier": "tier_3_vendor_case_study_named_customer",
+      "url": "https://www.yonderhq.com/case-study/black-cat-cruises-chatbot-answers-immediately-24-7",
+      "note": "The page says 500+ conversations per month. The $3,750 monthly figure is labelled POTENTIAL bookings by the vendor and must never be called referred or realised revenue."
+    },
+    {
+      "id": "i6",
+      "claim": "At that same operator the chatbot became a staff training tool as a side effect.",
+      "quote": "I had a staff member ask me how we handled entertainment vouchers. When I went back to her later that day, I discovered she'd asked Kiri and got the answer she needed!",
+      "who": "Paul Milligan, Chief Executive, Black Cat Cruises",
+      "tier": "tier_3_vendor_case_study_named_customer",
+      "url": "https://www.yonderhq.com/case-study/black-cat-cruises-chatbot-answers-immediately-24-7"
+    },
+    {
+      "id": "i7",
+      "claim": "The vendor's marketing headline is 95 percent while its own named day-cruise case study on the same page reports 60 percent.",
+      "quote": "Answer 95% questions immediately on your website and Messenger, 24-7 with our GPT based bot designed for tourism. // 60% of customer questions",
+      "who": "Yonder",
+      "tier": "tier_3_and_tier_4_contrast",
+      "url": "https://www.yonderhq.com/case-study/black-cat-cruises-chatbot-answers-immediately-24-7",
+      "note": "THE DISCREPANCY IS REAL AND VERIFIED. The homepage carries '95% of guest questions answered instantly'. Use the exact wording above, not a paraphrase."
+    }
+  ],
+  "verified_competitive_facts": [
+    {
+      "id": "k1",
+      "claim": "Kenai Fjords Tours, the other large-vessel operator in Seward, is owned by Pursuit, a NYSE-listed company. Major Marine is the only locally owned large-vessel operator in that harbour.",
+      "url": "https://www.alaskacollection.com/day-tours/kenai-fjords-tours/",
+      "verified_by": "fact-checker"
+    },
+    {
+      "id": "k2",
+      "claim": "Major Marine owns its boats and two Seward hotels and boards passengers from its own hotel lobby.",
+      "url": "https://majormarine.com/seward-harbor-360-hotel/ and https://www.sewardgatewayhotel.com/major-marine-tours/ and https://majormarine.com/seward-check-in/",
+      "verified_by": "fact-checker"
+    }
+  ],
+  "UNCOVERED_BY_THE_GATE": {
+    "warning": "The fact-checker re-fetched only the four load-bearing industry sources, the Yonder pages, and the Major Marine and ownership pages. EVERYTHING ELSE in the competitor and industry sections is NOT verified and MUST NOT be cited as fact in the study.",
+    "specifically_not_verified": [
+      "All competitor booking-platform findings except the Kenai Fjords Tours / Pursuit ownership disambiguation. That includes the Starboard Suite, FareHarbor and Phillips in-house findings, and the field-wide no-self-serve-cancellation observation.",
+      "All voice-of-customer material including the Google 4.9 aggregate and the Indeed rating.",
+      "The Seward cruise terminal opening, the $137 million figure and the 140,000-guest Royal Caribbean commitment.",
+      "All industry claims other than i1 through i7 above, including the Airbnb, Expedia, Booking Holdings, Arival, GetYourGuide, Ramp and commission-leakage figures."
+    ],
+    "consequence": "If the study needs any of these, they must go back through a fact-check first. Otherwise the study is built only on the verified block above, which is substantial and sufficient."
+  },
+  "DRIFT_PATTERN_NAMED_BY_THE_FACT_CHECKER": {
+    "pattern": "A SHARPENING REFLEX. Every quotation the research package RECONSTRUCTED rather than copied was reconstructed in the direction of the point it was being used to make.",
+    "instances": [
+      "The FAQ accessibility answer is three tidy sentences in a labelled list on the page. The package rewrote it into one cluttered parenthetical sentence that reads like the site is a mess, which is exactly the finding it was supporting.",
+      "The 12-hour online booking cutoff, found on ONE reservation page, was generalised to 'reservation pages' plural, making the restriction look broader than proven, in a section arguing they are behind a competitor.",
+      "Yonder's 'potential' bookings became 'referred' bookings, and Yonder's marketing line was rewritten into a crisper overclaim. Both sharpened arguments the package wanted to make."
+    ],
+    "counter_evidence": "Two errors leaned the OTHER way, Gateway ownership under-asserted and '500+' reported as '500'. So this is a sharpening reflex rather than a systematic case against the prospect.",
+    "the_rule_for_this_run": "The sharpening happens at exactly the moment a quote is retyped from memory instead of copied. Every quote in the study must be copied from this file, never retyped. And the asterisk kill above is the same failure in its most dangerous form: a finding built from a rule while the exception printed on the same page went unread."
+  },
+  "BINDING_CONSTRAINTS_ON_THE_STUDY": [
+    "SEWARD ONLY. Never Whittier, never Prince William Sound, never 'two-port'.",
+    "NOTHING MAY IMPLY GUESTS COMPLAIN. Google is 4.9 from 2,555 reviews with about 2.4 percent at three stars or below, and not one verbatim negative guest review could be fetched. Every pain claim rests on their own published policies, which are hard fact.",
+    "NO SELF-SERVE CANCELLATION IS A FIELD-WIDE GAP, NOT A MAJOR MARINE DEFECT. No operator in Seward, Whittier or Valdez has it, including the NYSE-listed one. Writing it as their deficiency would be false and unfair.",
+    "WEBSITE DEFECTS MAY NEVER OPEN THE EMAIL and may never be a headline finding. The parking contradiction and the stale 2020/2021 copy are evidence at most.",
+    "NEVER NAME OR GUESS THEIR BOOKING ENGINE VENDOR.",
+    "NEVER WRITE A TENURE NUMBER FOR TOM TOUGAS. His is the one name on the page without one.",
+    "THE TOUGAS / KENAI FJORDS TOURS FOUNDING STORY IS UNVERIFIABLE AND BANNED.",
+    "THE CHECK-IN RULE IS NOT A PROBLEM. They footnote the rail case explicitly. Only the LATE train remains a manual decision."
+  ],
+  "verified_claims": [
+    {
+      "id": "c1",
+      "claim": "Packages can only be booked by phone.",
+      "quote": "Packages are available to book by phone only unless noted in the package description.",
+      "url": "https://majormarine.com/specials-packages/",
+      "note": "Quote this sentence ALONE. The fact-checker could not confirm adjacency of the two sentences that follow it."
+    },
+    {
+      "id": "c2",
+      "claim": "Customer service hours are 8:00 a.m. to 6:00 p.m., seven days a week, year round.",
+      "quote": "Customer Service Hours: 8:00 a.m. \u2013 6:00 p.m. 7 days a week",
+      "url": "https://majormarine.com/contact-us/"
+    },
+    {
+      "id": "c3",
+      "claim": "Discounts must be booked direct and are not valid through third parties.",
+      "quote": "All discounts must be booked directly with Major Marine Tours, and are not valid through third-party reservations or travel agencies.",
+      "url": "https://majormarine.com/specials-packages/"
+    },
+    {
+      "id": "c4",
+      "claim": "Cruise-only refund clock is 72 hours.",
+      "quote": "Cruise-only reservations are refundable up to 72 hours prior to your cruise departure.",
+      "url": "https://majormarine.com/refund-policy/"
+    },
+    {
+      "id": "c5",
+      "claim": "A 3 percent credit card processing fee is retained on cancellations.",
+      "quote": "A 3% credit card processing fee will be retained for cancellations.",
+      "url": "https://majormarine.com/refund-policy/"
+    },
+    {
+      "id": "c6",
+      "claim": "Hotel package refund clock is 7 days.",
+      "quote": "Cruise and hotel packages are refundable until 7 days prior to the first day of your package reservation",
+      "url": "https://majormarine.com/refund-policy/"
+    },
+    {
+      "id": "c7",
+      "claim": "Transportation package refund clock is 21 days.",
+      "quote": "Reservations with transportation added (motorcoach or train) are refundable until 21 days prior",
+      "url": "https://majormarine.com/refund-policy/"
+    },
+    {
+      "id": "c8",
+      "claim": "One free date change up to 24 hours prior, then a fee per person.",
+      "quote": "Reservation date may be changed once, free of charge, up to 24 hours prior to departure. ... Any subsequent change is subject to a $15 per person re-booking fee.",
+      "url": "https://majormarine.com/refund-policy/",
+      "note": "Two sentences, elision marked. Do NOT render as one continuous sentence."
+    },
+    {
+      "id": "c9",
+      "claim": "No-shows are completely non-refundable.",
+      "quote": "Tickets not used at the time of sailing (no-show) are completely non-refundable and may not be used on any other sailings.",
+      "url": "https://majormarine.com/refund-policy/",
+      "note": "This clause belongs to the NO-SHOW rule. Never splice it adjacent to the refund clocks, the adjacency would misrepresent it."
+    },
+    {
+      "id": "c10",
+      "claim": "A weather re-route into Resurrection Bay triggers a partial refund at the Captain's discretion.",
+      "quote": "If the route of a full-day Kenai Fjords National Park tour is limited to the confines of Resurrection Bay, Major Marine Tours will offer partial refunds. ... At the discretion of the Coast Guard-certified Captain, Major Marine Tours reserves the right to cancel or re-route cruises based on weather or other conditions.",
+      "url": "https://majormarine.com/refund-policy/"
+    },
+    {
+      "id": "c11",
+      "claim": "Cruises run rain or shine and are only cancelled for unsafe sea conditions.",
+      "quote": "Our cruises go out rain or shine. We only cancel cruises due to unsafe sea conditions, in which case we will notify you as soon as possible.",
+      "url": "https://majormarine.com/faq/"
+    },
+    {
+      "id": "c12",
+      "claim": "The late-train contingency is discretionary and handled case by case.",
+      "quote": "If the train arrives late, we will do our best to transfer passengers to a different date or to the 4 Hour Cruise that departs at 12:30pm.",
+      "url": "https://majormarine.com/faq/",
+      "note": "SURVIVES the asterisk kill. The footnote covers an ON-TIME train. A LATE train is still a manual discretionary decision. Keep these two facts distinct and never imply the on-time case is a problem."
+    },
+    {
+      "id": "c13",
+      "claim": "The shuttle must be added by phone with 24 hours notice.",
+      "quote": "Parking lots can fill up quickly, so please call us to add the shuttle to your reservation at least 24 hours before your cruise for your convenience.",
+      "url": "https://majormarine.com/seward-check-in/",
+      "note": "FULL sentence. The package's shortened version re-capitalised a mid-sentence fragment."
+    },
+    {
+      "id": "c14",
+      "claim": "Advance reservations are required for the shuttle and it is excluded from the 8:00 am cruise.",
+      "quote": "Advance reservations are required for shuttle pick-up. ... Shuttle is not available for the 8:00 am 6 Hour Kenai Fjords National Park Cruise.",
+      "url": "https://majormarine.com/seward-check-in/"
+    },
+    {
+      "id": "c15",
+      "claim": "The cruise-terminal shuttle runs a 165-minute window on a 15-minute headway.",
+      "quote": "A complimentary Major Marine Tours shuttle will make continuous loops between Harbor 360 Hotel, the South Harbor office, and the Cruise Ship Terminal from 7:00 am. \u2013 9:45 a.m., departing every 15 minutes.",
+      "url": "https://majormarine.com/seward-check-in/"
+    },
+    {
+      "id": "c16",
+      "claim": "Terminal distances are 0.6 and 0.8 miles.",
+      "quote": "The Seward Cruise Ship Terminal is located 0.6 miles from Harbor 360 Hotel and 0.8 miles from our South Harbor office.",
+      "url": "https://majormarine.com/seward-check-in/"
+    },
+    {
+      "id": "c17",
+      "claim": "All cruises board at the Harbor 360 Hotel office.",
+      "quote": "All Cruises Depart from Harbor 360 Hotel Office",
+      "url": "https://majormarine.com/seward-check-in/"
+    },
+    {
+      "id": "c18",
+      "claim": "Seats are assigned by staff before the cruise and special requests are not guaranteed.",
+      "quote": "Seating arrangements are assigned by Major Marine Tours staff prior to the cruise.",
+      "url": "https://majormarine.com/faq/"
+    },
+    {
+      "id": "c19",
+      "claim": "Vegetarian meals must be requested at the time of reservation on the three long cruises.",
+      "quote": "Vegetarian guests on the 6 Hour Cruise, 7.5 Hour Cruise and 8.5 Hour Cruise can request a vegetarian sandwich in advance, at the time of reservation.",
+      "url": "https://majormarine.com/faq/"
+    },
+    {
+      "id": "c20",
+      "claim": "Wheelchair accessibility differs vessel by vessel, and no vessel takes a motorized wheelchair.",
+      "quote": "The following boats ARE wheelchair accessible on their first deck, inside the main cabin only. The outside decks are not wheelchair accessible. ... The following boats are NOT wheelchair accessible and not recommended for guests with limited mobility. ... None of our vessels can accommodate motorized wheelchairs.",
+      "url": "https://majormarine.com/faq/",
+      "note": "CORRECTED WORDING, re-fetched. The accessible list is Glacier Express, Skana, Spirit of Adventure, Spirit of Matushka and Kenai Fjords 360."
+    },
+    {
+      "id": "c21",
+      "claim": "Rachel Marie runs a scheduled departure per the FAQ but is absent from the eight-vessel fleet page.",
+      "quote": "Rachel Marie, which runs the 12:30pm departure 4 Hour Kenai Fjords Wildlife Cruise",
+      "url": "https://majormarine.com/faq/",
+      "note": "The discrepancy is REAL and re-verified from both sides. Whether chartered, retired or omitted is UNRESOLVED and must be stated as unresolved if used at all."
+    },
+    {
+      "id": "c22",
+      "claim": "Guests stay aboard for the whole cruise.",
+      "quote": "Our guests stay on the boat for the entire cruise to maximize glacier and wildlife-viewing opportunities.",
+      "url": "https://majormarine.com/faq/"
+    },
+    {
+      "id": "c23",
+      "claim": "Full payment is required at booking.",
+      "quote": "In order to secure your place on cruise you must pay in full upon booking your reservation.",
+      "url": "https://majormarine.com/faq/"
+    },
+    {
+      "id": "c24",
+      "claim": "About 60 seasonal employees in Seward, hired in a window closing in April.",
+      "quote": "During our cruise season we employ about 60 seasonal employees in Seward. Our peak hiring time for seasonal positions is January 15th \u2013 April 15th.",
+      "url": "https://majormarine.com/employment/"
+    },
+    {
+      "id": "c25",
+      "claim": "Employee housing starts at $15 per night and out-of-state staff receive a $400 travel reimbursement on contract completion.",
+      "quote": "Fees for employee housing start at $15 per night, depending on location and based on double occupancy. ... Anyone traveling from out of state will receive a $400 travel reimbursement upon the completion of their contract.",
+      "url": "https://majormarine.com/employment/"
+    },
+    {
+      "id": "c26",
+      "claim": "The seasonal roles they hire.",
+      "quote": "We hire for the following seasonal positions: Customer Service/Sales Staff, Deckhand and Senior Deckhand Crew, Engineering, Inventory/Dock Support, Cooks, and occasionally licensed Captains.",
+      "url": "https://majormarine.com/employment/"
+    },
+    {
+      "id": "c27",
+      "claim": "2026 cruise season runs March 7th to October 11th.",
+      "quote": "2026 Cruise Season: March 7th - October 11th",
+      "url": "https://majormarine.com/"
+    },
+    {
+      "id": "c28",
+      "claim": "Locally owned family company, over 30 years.",
+      "quote": "We are a locally-owned, family company with over 30 years of sharing authentic Alaska adventures",
+      "url": "https://majormarine.com/"
+    },
+    {
+      "id": "c29",
+      "claim": "Online booking closes 12 hours before departure on the 4 Hour cruise reservation page.",
+      "quote": "Online bookings not available within 12 hours of cruise departure \u2013 please call us at (907) 224-8030 to book within 12 hours.",
+      "url": "https://majormarine.com/book-now/3-5-hour-kenai-fjords-wildlife-cruise-reservation/",
+      "note": "VERIFIED ON THIS ONE PAGE ONLY. NOT verified sitewide. Do not write 'reservation pages' plural."
+    },
+    {
+      "id": "c30",
+      "claim": "Seward only. No Whittier or Prince William Sound product exists.",
+      "quote": "We offer multiple cruise options departing from the beautiful harbor town of Seward, Alaska.",
+      "url": "https://majormarine.com/all-cruises/"
+    },
+    {
+      "id": "c31",
+      "claim": "Major Marine states it owns Harbor 360 Hotel.",
+      "quote": "We also own Harbor 360 Hotel, Seward's premier waterfront hotel.",
+      "url": "https://majormarine.com/seward-harbor-360-hotel/",
+      "note": "CITATION CORRECTED. This is NOT on /our-company/."
+    },
+    {
+      "id": "c32",
+      "claim": "Seward Gateway Hotel states it commonly owns Major Marine Tours.",
+      "quote": "We also own and operate Major Marine Tours, offering world-class wildlife and glacier tours in Resurrection Bay and Kenai Fjords National Park.",
+      "url": "https://www.sewardgatewayhotel.com/major-marine-tours/",
+      "note": "CONTRADICTION RESOLVED IN FAVOUR OF COMMON OWNERSHIP. The people-finder's 'do not assert ownership' was stale. The reciprocal statement from the hotel's own site settles it."
+    },
+    {
+      "id": "c33",
+      "claim": "Tom Tougas owns Major Marine Tours, Harbor 360 Hotel and a Seward Hertz franchise, and chairs First National Bank Alaska's Strategic Planning and Opportunities Committee.",
+      "quote": "Major Marine Tours, Harbor 360 Hotel and Hertz Rent-a-Car ... Tougas chairs the board's Strategic Planning & Opportunities Committee.",
+      "url": "https://www.fnbalaska.com/team/tom-tougas/"
+    },
+    {
+      "id": "c34",
+      "claim": "Kenai Fjords Tours is a Pursuit property with no connection to Major Marine or Tom Tougas.",
+      "quote": "\u00a92025 Kenai Fjords Tours & Pursuit",
+      "url": "https://www.alaskacollection.com/day-tours/kenai-fjords-tours/",
+      "note": "Neither 'Major Marine Tours' nor 'Tom Tougas' appears anywhere on that page. They are DIRECT SEWARD COMPETITORS."
+    },
+    {
+      "id": "c35",
+      "claim": "Owner awards: 2019 Alaska Business Champion of the Year from the SBA Alaska District and 2016 Visitor Industry Hall of Fame from the Alaska Tourism Industry Association.",
+      "quote": "2019 Alaska Business Champion of the Year Award ... 2016 Visitor Industry Hall of Fame Award",
+      "url": "https://majormarine.com/our-company/"
+    },
+    {
+      "id": "c36",
+      "claim": "Parking cost contradicts itself across two of their own pages.",
+      "quote": "There is a $10 charge per vehicle per day. // Public parking in Seward is $15 for the day to be paid at the parking kiosk",
+      "url": "https://majormarine.com/faq/",
+      "note": "WEBSITE DEFECT. Per OUTREACH_CRAFT this may NEVER open the email and may never be a headline finding. Usable inside the study only as minor evidence, framed as ordinary and cheap to settle. SECOND URL ADDED 2026-08-10 by the showrunner, re-fetched and quoted verbatim from the check-in page after the study-critic found the $15 half of the contradiction had no citable home. The $10 half is on the FAQ.",
+      "url_2": "https://majormarine.com/seward-check-in/",
+      "quote_2": "Public parking in Seward is $15 for the day to be paid at the parking kiosk at the time of arrival."
+    },
+    {
+      "id": "c37",
+      "claim": "A live 2026 booking page still carries 2020 and 2021 copy.",
+      "quote": "The morning departure of the 6 Hour Cruise is a new cruise option starting in 2021. This cruise departure is not available in 2020.",
+      "url": "https://majormarine.com/book-now/6-hour-kenai-fjords-national-park-morning-cruise-reservation/",
+      "note": "WEBSITE DEFECT. Same restriction as c36."
+    },
+    {
+      "id": "c38",
+      "claim": "The booking engine is slow enough that the page warns about it.",
+      "quote": "Please allow several seconds for the booking engine to load below.",
+      "url": "https://majormarine.com/book-now/6-hour-kenai-fjords-national-park-morning-cruise-reservation/",
+      "note": "The VENDOR is unidentified and must NEVER be named or guessed."
+    },
+    {
+      "id": "c39",
+      "claim": "Adult fare used to build the error cost, verified per product: 4 Hour $149.00, 6 Hour $239.00, 8.5 Hour Northwestern Fjord $309.00.",
+      "quote": "Adult (age 12+): $149.00 ... Adult (age 12+): $239.00 ... Adult (age 12+): $309.00",
+      "url": "https://majormarine.com/all-cruises/",
+      "note": "Verified verbatim by the fact-checker on the individual tour pages. The DERIVED cost per refund error assumes a party of two, and that party size is an ASSUMPTION, which is why only the fare row carries a verified mark and the cost rows do not."
+    },
+    {
+      "id": "i1",
+      "claim": "A generative AI assistant raised customer-support productivity 14 percent on average and 34 percent for novice and low-skilled workers, with minimal impact on experienced workers.",
+      "quote": "Access to the tool increases productivity, as measured by issues resolved per hour, by 14% on average, including a 34% improvement for novice and low-skilled workers but with minimal impact on experienced and highly skilled workers.",
+      "who": "Brynjolfsson, Li and Raymond, NBER Working Paper 31161, Generative AI at Work. Field data from 5,179 customer support agents.",
+      "tier": "tier_1_independent_measurement",
+      "url": "https://www.nber.org/papers/w31161",
+      "note": "THE STRONGEST CITATION AVAILABLE TO THIS STUDY. The retention and satisfaction clause was NOT verified and has been cut."
+    },
+    {
+      "id": "i2",
+      "claim": "In a 61,459-call audit across 12 models, responding to reviews moved LLM recommendation probability by +0.1 percentage points, statistically equivalent to zero.",
+      "quote": "a cue the optimization industry actively promotes",
+      "who": "Baig, Gillani and Ali, arXiv:2606.16344v1. 3,024 trials in the main arm across 27 persona-by-template strata, 112 trials per stratum, 12 models, 61,459 model calls in total.",
+      "tier": "tier_1_independent_measurement",
+      "url": "https://arxiv.org/html/2606.16344v1",
+      "note": "CORRECTED. The 3,024 figure is the main arm total, NOT per model."
+    },
+    {
+      "id": "i3",
+      "claim": "In the same audit, guest rating moved recommendation probability +31.65 pp and review volume +8.31 pp, while price moved it -30.03 pp.",
+      "quote": "+8.31 pp [7.55, 9.07] ... \u221230.03 pp [\u221230.75, \u221229.32] ... +11.61 pp [11.04, 12.18]",
+      "who": "Baig, Gillani and Ali, arXiv:2606.16344v1",
+      "tier": "tier_1_independent_measurement",
+      "url": "https://arxiv.org/html/2606.16344v1",
+      "note": "CORRECTED from +31.6 to +31.65. Say about +32 pp if rounding."
+    },
+    {
+      "id": "i4",
+      "claim": "Externally measured voice agent end-to-end latency across five platforms ran 1,296ms to 1,740ms median and 1,768ms to 2,259ms at p95. No platform achieved a sub-800ms median.",
+      "quote": "1,296 ms / 1,856 ms ... 1,424 ms / 1,768 ms ... 1,520 ms / 2,248 ms ... 1,558 ms / 2,008 ms ... 1,740 ms / 2,259 ms",
+      "who": "Openbenchmarks. Measured with Silero VAD on recorded call audio rather than platform self-reporting. Up to 432 calls per platform, usable counts 419, 429, 429, 382 and 419.",
+      "tier": "tier_1_independent_measurement",
+      "url": "https://openbenchmarks.com/voice-agent-latency/voice-agent-end-to-end-latency",
+      "note": "CORRECTED. The 2,078-turn figure was unsupported and is cut."
+    },
+    {
+      "id": "i5",
+      "claim": "A named day-cruise operator running a chatbot wired to its booking system reports 10 staff hours saved per month, 60 percent of customer questions answered, and 15 clickthroughs per month.",
+      "quote": "10 hours of time per month ... 60% of customer questions ... 15 people per month",
+      "who": "Black Cat Cruises, Akaroa New Zealand, via vendor Yonder. Roughly 100-passenger vessel, 4 to 5 daily departures.",
+      "tier": "tier_3_vendor_case_study_named_customer",
+      "url": "https://www.yonderhq.com/case-study/black-cat-cruises-chatbot-answers-immediately-24-7",
+      "note": "The page says 500+ conversations per month. The $3,750 monthly figure is labelled POTENTIAL bookings by the vendor and must never be called referred or realised revenue."
+    },
+    {
+      "id": "i6",
+      "claim": "At that same operator the chatbot became a staff training tool as a side effect.",
+      "quote": "I had a staff member ask me how we handled entertainment vouchers. When I went back to her later that day, I discovered she'd asked Kiri and got the answer she needed!",
+      "who": "Paul Milligan, Chief Executive, Black Cat Cruises",
+      "tier": "tier_3_vendor_case_study_named_customer",
+      "url": "https://www.yonderhq.com/case-study/black-cat-cruises-chatbot-answers-immediately-24-7"
+    },
+    {
+      "id": "i7",
+      "claim": "The vendor's marketing headline is 95 percent while its own named day-cruise case study on the same page reports 60 percent.",
+      "quote": "Answer 95% questions immediately on your website and Messenger, 24-7 with our GPT based bot designed for tourism. // 60% of customer questions",
+      "who": "Yonder",
+      "tier": "tier_3_and_tier_4_contrast",
+      "url": "https://www.yonderhq.com/case-study/black-cat-cruises-chatbot-answers-immediately-24-7",
+      "note": "THE DISCREPANCY IS REAL AND VERIFIED. The homepage carries '95% of guest questions answered instantly'. Use the exact wording above, not a paraphrase."
+    }
+  ]
+}

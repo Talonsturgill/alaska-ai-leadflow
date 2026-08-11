@@ -1,7 +1,7 @@
 {
   "version": 2,
   "note": "The record of authority for every lead. Structured fields live here. Large documents (the study object, the dossier, the rendered page, the demo) live as files under runs/<date>/<slug>/ and are referenced by study_path, because git stores documents better than a jsonb column does.",
-  "updated": "2026-08-09",
+  "updated": "2026-08-11",
   "leads": [
     {
       "company": "Goldbelt, Incorporated",
@@ -392,7 +392,7 @@
       "domain": "talkeetnaair.com",
       "segment": "Tourism and visitor industry",
       "location": "Talkeetna, Alaska",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 24,
       "why_picked": "Top of 23 page-verified candidates across four segments, after a 24-24 tie with The Kuskokwim Corporation broken on reachability-as-evidenced. talkeetnaair.com renders and names its decision-makers, kuskokwim.com serves an empty body to a fetcher and so does its subsidiary tumeq.com, so every Kuskokwim fact traced to a third party page. One of only four NPS Denali glacier landing concessionaires for 2020 to 2029, ten aircraft, 21 named staff, a May 1 to September 15 season.",
       "contact_name": "Talkeetna Air Taxi general inbox",
@@ -406,7 +406,8 @@
       "roi_summary": "Break-even at roughly one retained seat every other staffed day, computed in roi_math.py. Conservative 44 percent of five-year cost recovered with NO payback, most likely 133 percent with payback in month 45, aggressive 362 percent in month 19. Counter minutes recovered cover only 2 to 47 percent and are printed precisely because they argue against us, rebutting the vendor hours-saved formula this industry is sold. No verified call volume exists anywhere, so every volume driver is labelled assumed and the case is a break-even rather than a projection.",
       "gmail_draft_id": "r9090092739872712372",
       "subject": "Field study on the day-of weather calls and one published number",
-      "run_date": "2026-08-08"
+      "run_date": "2026-08-08",
+      "sent_at": "2026-08-08T11:41:33Z"
     },
     {
       "company": "White Pass & Yukon Route Railway",
@@ -414,7 +415,7 @@
       "segment": "Tourism and visitor industry",
       "location": "Skagway, Alaska",
       "run_date": "2026-08-09",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 23,
       "why_picked": "Highest of 24 page-verified candidates across four ICP segments. Only candidate scoring 5 on both ability to pay and reachability. 180 employees, almost 2,000 train starts a season, a named President with a published address on the company's own directory. Ownership checked before locking, majority partner Survey Point Holdings, minority Carnival plc, so not a chain outpost, though the study never claims Alaska ownership because the sources conflict.",
       "contact_name": "Bob Berto",
@@ -428,7 +429,31 @@
       "live_url": "https://alaskaaihq.com/awesomeproposal/white-pass-yukon-route/",
       "draft_subject": "White Pass cancellations outside office hours",
       "gmail_draft_id": "r-4423649038122694677",
-      "notes": "Feasibility gate killed ten capabilities including the voice agent and runtime translation of refund policy. Fact-checker returned FIX with eleven rejections and named a one-direction drift pattern. Study-critic took two rounds, 17 findings then 6, including an arithmetic error in the brief that disproved the study's own thesis. Lead-critic shipped on round 5 after a BRIEF change at round 4. WITHHELD: an unauthenticated customer booking record was found on their hosted ticketing system and deliberately excluded from everything published, surfaced to Talon privately instead."
+      "notes": "Feasibility gate killed ten capabilities including the voice agent and runtime translation of refund policy. Fact-checker returned FIX with eleven rejections and named a one-direction drift pattern. Study-critic took two rounds, 17 findings then 6, including an arithmetic error in the brief that disproved the study's own thesis. Lead-critic shipped on round 5 after a BRIEF change at round 4. WITHHELD: an unauthenticated customer booking record was found on their hosted ticketing system and deliberately excluded from everything published, surfaced to Talon privately instead.",
+      "sent_at": "2026-08-09T11:07:00Z"
+    },
+    {
+      "company": "Major Marine Tours",
+      "domain": "majormarine.com",
+      "segment": "Tourism and visitor industry",
+      "location": "Seward, Alaska",
+      "run_date": "2026-08-10",
+      "status": "drafted",
+      "fit_score": 24,
+      "why_picked": "Highest of 23 page-verified candidates across four ICP segments, tie with Huna Totem broken on reachability 5 v 4. Locally owned family company over 30 years, about 60 seasonal staff, eight vessels, a published general inbox and a desk whose rules are exact and spread across three pages.",
+      "contact_name": null,
+      "contact_role": "general business inbox, not attributable to a named person",
+      "contact_email": "info@majormarine.com",
+      "contact_source": "https://majormarine.com/contact-us/",
+      "outcome": "Four rule sets carry a high cost when answered wrong, refunds and change fees, accessibility by vessel, shuttle eligibility and dietary windows, and nothing they publish catches a wrong answer before it reaches a guest or the bank. The desk that applies them is rebuilt every spring, peak hiring January 15th to April 15th with Customer Service/Sales Staff first on their own list of seasonal roles.",
+      "recommended_build": "PHASE ZERO HAS NO SOFTWARE IN IT. One dated policy source with every contradiction settled, an authoritative vessel-to-departure map with a written abstain rule, a miss-log specification including the PII rule, and a five-column paper tally sheet on the desk for the rest of the 2026 season. The decision table over the four branches is SCOPED AND NOT RECOMMENDED FOR FUNDING YET, because the thing it would improve has never been counted.",
+      "roi_summary": "The ask is $4,500 and its conservative case does NOT clear, returning 43 percent of a $13,320 five-year cost and 13 percent on hard cash alone. The study says so in the ROI section heading rather than a footnote. The $18,000 decision table returns 17 / 93 / 321 percent across three scenarios and pays back only in the aggressive one, month 18. Three of four benefit lines are capacity rather than cash, and the redeploy test fails in the prospect's favour because their crew is hired in a fixed seasonal window.",
+      "study_path": "runs/2026-08-10/major-marine-tours/",
+      "live_url": "https://alaskaaihq.com/awesomeproposal/major-marine-tours/",
+      "draft_subject": "Your refund clocks and the phone desk",
+      "gmail_draft_id": "r-3732836341653093197",
+      "notes": "ELEVEN STUDY-CRITIC ROUNDS. The two findings worth remembering are both the same class, a gate resting on a number nothing collects. First, the paper tally sheet, the entire funded ask, had four columns and none recorded the ANSWER the agent gave, so it would have reported zero misquotes forever while the ROI leaned on that count. Now five columns, with the supervisor days named as where answers are read back, and worded as a sampled rate rather than a census. Second, the March 2029 search gate is a SHARE of questions and the miss log had one writer, the decision table, so neither numerator nor denominator existed; the question sorter now counts every question. Also caught: a section heading asserting an unverifiable claim about their internal refund approvals, now hedged to what is published; and 'four' denoting a different set in seven sections. FACT-CHECKER killed a headline finding, the rail check-in, on a footnote of their own page. THE ASK WAS CUT from $18,000 to $4,500 at Phase 4 because the conservative case did not clear, and the study discloses that the figure was reverse-engineered from the ceiling the benefit supports, which is the move Flyvbjerg warns about. Lead-critic shipped at round 3. Machine changes this run: scripts/dup_clause.py and scripts/quote_fidelity.py added.",
+      "sent_at": null
     }
   ]
 }

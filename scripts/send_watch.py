@@ -197,7 +197,17 @@ def apply_updates(data, leads, updates, path):
     for u in updates:
         leads[u["index"]].update(u["fields"])
     with open(path, "w") as fh:
-        json.dump(data, fh, indent=1)
+        # indent=2, sort_keys=False, matching ledger.py's writer EXACTLY.
+        #
+        # WHY THIS IS PINNED. On 2026-08-10 this function wrote indent=1 while
+        # ledger.py wrote indent=2, so reconciling two status fields reindented
+        # all 866 lines of leads.json. THE DATABASE IS GIT rests on every change
+        # arriving as a reviewable diff, and an 866-line diff carrying two real
+        # edits is not reviewable. Worse, the churn alternated: the next
+        # ledger.py write reindented the whole file back again, so consecutive
+        # runs each buried their real ledger change inside a whole-file rewrite.
+        # Any new writer of a ledger/ file matches these arguments.
+        json.dump(data, fh, indent=2, sort_keys=False)
         fh.write("\n")
 
 
@@ -261,8 +271,14 @@ def self_test():
          "contact_email": "becky@epsilon-group.com"},
     ]
     fails = []
+    ran = []
 
     def check(name, cond, detail=""):
+        # `ran` is counted rather than hardcoded. The count was frozen at 14
+        # while two checks were added on 2026-08-10, so the banner would have
+        # under-reported its own coverage, which is the same class of defect
+        # as a gate that passes everything.
+        ran.append(name)
         print("  {:<4} {}{}".format("ok" if cond else "FAIL", name,
                                     "" if cond else "  <- " + detail))
         if not cond:
@@ -354,11 +370,46 @@ def self_test():
     check("the exact address beats a competing domain match",
           len(up) == 1 and leads_conflict[up[0]["index"]]["company"] == "Two", repr(up))
 
+    # THE WRITER MUST NOT REFORMAT THE LEDGER. Added 2026-08-10 after this
+    # function wrote indent=1 against ledger.py's indent=2 and turned a
+    # two-field reconcile into an 866-line whole-file rewrite. THE DATABASE IS
+    # GIT depends on a change being reviewable as a diff, so a writer that
+    # reindents the file destroys the property the ledger exists to provide.
+    import tempfile
+    fixture = {"version": 2, "leads": [
+        {"company": "Alpha", "domain": "alpha.com", "status": "drafted"}]}
+    tmpdir = tempfile.mkdtemp()
+    ledger_style = os.path.join(tmpdir, "ledger_style.json")
+    with open(ledger_style, "w") as fh:          # exactly ledger.py's writer
+        json.dump(fixture, fh, indent=2, sort_keys=False)
+        fh.write("\n")
+    before = open(ledger_style).read()
+
+    written = os.path.join(tmpdir, "written.json")
+    import copy
+    data = copy.deepcopy(fixture)
+    apply_updates(data, data["leads"], [], written)
+    after = open(written).read()
+
+    # POSITIVE: a no-op apply reproduces ledger.py's bytes exactly.
+    check("the writer reproduces ledger.py's formatting byte for byte",
+          after == before,
+          "wrote {!r}, ledger.py writes {!r}".format(after[:60], before[:60]))
+
+    # NEGATIVE: prove the check can FAIL. A writer at any other indent must be
+    # caught by it, or the assertion above is decoration.
+    rogue = os.path.join(tmpdir, "rogue.json")
+    with open(rogue, "w") as fh:
+        json.dump(fixture, fh, indent=1)
+        fh.write("\n")
+    check("an indent=1 writer is caught by that same comparison",
+          open(rogue).read() != before, "the byte comparison cannot detect a reindent")
+
     print()
     if fails:
         print("  {} FAILED: {}".format(len(fails), ", ".join(fails)))
         return 1
-    print("  all 14 checks passed")
+    print("  all {} checks passed".format(len(ran)))
     return 0
 
 
