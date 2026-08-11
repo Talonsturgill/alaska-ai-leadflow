@@ -26,6 +26,16 @@ So run scripts/claim_sweep.py as well and read the artifact. A green exit here
 means one specific failure mode is absent, the one where a fix is applied by
 insertion and the original is left standing. It means nothing else.
 
+THE SAME BLIND SPOT HAS A SECOND, MORE DANGEROUS FACE, AND IT IS A REASON TO
+LEAVE SOMETHING ALONE RATHER THAN TO FIX IT. Text that only reaches the DOM at
+runtime is invisible to study_qa too, so the house typography rules are not
+enforced on it. demo.html carries an en dash inside SRC.c15, which is a
+character-for-character quotation of the prospect's own check-in page. DO NOT
+"FIX" IT. A verbatim quotation outranks a typography rule, the dash rule exists
+to kill AI tells and quote fidelity exists to kill fabrication, and silently
+repunctuating a prospect's sentence is the sharpening reflex the fact-checker
+named on this run. Ruled by the study-critic on 2026-08-10 and closed.
+
 SCOPE. Run this on the artifacts a human or an agent EDITS by hand, which today
 means demo.html and study.json. Do not run it on a generated render such as
 field-study.html: build_study_page.py emits the whole body on one line with
