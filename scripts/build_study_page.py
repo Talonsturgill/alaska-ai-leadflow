@@ -658,9 +658,7 @@ def render(study, demo_embed=None):
             b += (f'<div class="demoembed"><iframe src="{esc(demo_embed)}" '
                   f'title="Interactive demonstration of the recommended build" '
                   f'loading="lazy"></iframe></div>'
-                  f'<p class="figcap">A working demonstration, honest about being one, '
-                  f'built from your own published facts. It does nothing this study did '
-                  f'not scope. '
+                  f'<p class="figcap">A working demonstration, honest about being one. '
                   f'<a href="{esc(demo_embed)}" target="_blank" rel="noopener">'
                   f'Open it full screen</a>.</p>')
         if has(build.get("feasibility")):
