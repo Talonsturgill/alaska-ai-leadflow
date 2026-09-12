@@ -583,6 +583,76 @@
           ]
         }
       ]
+    },
+    {
+      "run_date": "2026-08-10",
+      "company": "Major Marine Tours",
+      "deltas": [
+        {
+          "kinds": [
+            "lengthened"
+          ],
+          "before": "We already did the study on that.",
+          "after": "We just wrapped up our study on you, and a fix for that.",
+          "dropped": [
+            "already",
+            "did",
+            "the"
+          ],
+          "added": [
+            "a",
+            "and",
+            "fix",
+            "for",
+            "just",
+            "our",
+            "up",
+            "wrapped"
+          ]
+        },
+        {
+          "kinds": [
+            "deleted"
+          ],
+          "before": "The first thing in it doesn't cost anything.",
+          "after": null,
+          "dropped": [],
+          "added": []
+        },
+        {
+          "kinds": [
+            "lengthened"
+          ],
+          "before": "Worth a reply either way.",
+          "after": "No strings, we just like seeking out projects we'd enjoy building and this is one.",
+          "dropped": [
+            "a",
+            "either",
+            "reply",
+            "way",
+            "worth"
+          ],
+          "added": [
+            "and",
+            "building",
+            "enjoy",
+            "is",
+            "just",
+            "like",
+            "no",
+            "one"
+          ]
+        },
+        {
+          "kinds": [
+            "added"
+          ],
+          "before": null,
+          "after": "Happy to help.",
+          "dropped": [],
+          "added": []
+        }
+      ]
     }
   ]
 }
