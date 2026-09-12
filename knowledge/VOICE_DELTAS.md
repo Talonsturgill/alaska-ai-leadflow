@@ -12,20 +12,31 @@ That promotion is a human decision, never automatic.
 
 ## Recurring patterns
 
-- **lengthened**, in 9 send(s), 12 time(s) total  <- READY TO PROMOTE
-- **added**, in 6 send(s), 8 time(s) total
+- **lengthened**, in 10 send(s), 14 time(s) total  <- READY TO PROMOTE
+- **added**, in 7 send(s), 9 time(s) total
 - **reworded**, in 4 send(s), 4 time(s) total
-- **deleted**, in 2 send(s), 2 time(s) total
+- **deleted**, in 3 send(s), 3 time(s) total
 - **shortened**, in 2 send(s), 2 time(s) total
-- **presumption cut**, in 1 send(s), 1 time(s) total
-- **cta softened**, in 1 send(s), 1 time(s) total
 - **agent-team framing cut**, in 1 send(s), 2 time(s) total
+- **cta softened**, in 1 send(s), 1 time(s) total
 - **contraction**, in 1 send(s), 4 time(s) total
+- **presumption cut**, in 1 send(s), 1 time(s) total
 
 The writer keeps making these and Talon keeps undoing them. Fix the brief,
 not the individual email.
 
 ## Log
+
+### 2026-08-10, Major Marine Tours
+
+- `lengthened`
+  - drafted: We already did the study on that.
+  - sent:    We just wrapped up our study on you, and a fix for that.
+- `deleted` drafted, cut before sending: The first thing in it doesn't cost anything.
+- `lengthened`
+  - drafted: Worth a reply either way.
+  - sent:    No strings, we just like seeking out projects we'd enjoy building and this is one.
+- `added` not drafted, added by hand: Happy to help.
 
 ### 2026-08-09, White Pass and Yukon Route
 
