@@ -132,8 +132,55 @@ routine is judged against, so no run may edit it. Talon applies it or does not.
 | Delivered | `delivery_check.py` exit 0 against the read-back. Live URL 200 with the demo embedded, demo 200, PDF 200. No attachment attempted, nothing to download |
 | Recorded | leads 22 to 23, run row written, `ledger.py stats` reflects both |
 | Voice signal | Surfaced above as a drafted diff, never applied |
-| Retro shipped a fix | 5 entries in `ledger/upgrades.json`, every named file actually changed in this run's commits, each verified with a negative case |
+| Retro shipped a fix | 5 entries in `ledger/upgrades.json`, THREE of them retro picks and exactly at the ceiling, two ship-blocking critic fixes logged for honesty. Every named file actually changed in this run's commits, each verified with a negative case |
 | Draft only | **Nothing was sent.** |
+
+## THE CEILING WAS EXCEEDED AND THEN PUT BACK, which is worth writing down
+
+The run wrote a SIXTH machine change and had to take it out. The finding that
+caught it came from Codex, on this run's own archive PR, and it was right.
+
+**What happened.** The Tatitlek demo took FIVE Codex rounds and eleven findings,
+counted off the review threads, every one the same defect: an artifact written
+out by hand while its siblings derived from the walkthrough's state. The log
+named a hard-coded owner while the cutoff note followed the viewer's pick. The
+recipient counts claimed seven approved while the board correctly showed one
+held. The chase tile said two rounds when the log had honestly emitted none. The
+contributor's mail showed a message to somebody the board said was never written
+to. The outstanding rows said both chases were delivered four lines above the
+paragraph saying that owner's address had rejected one. The same mail told a
+contributor a rule sent them an item the row above called a hand assignment. A
+twelfth came from sweeping rather than waiting, the stored record asserting a
+send to a recipient the viewer had held.
+
+Every round after the first existed because each fix corrected the artifact that
+was caught and left the others hard coded beside it. That is FIX THE CLAIM, NOT
+THE SENTENCE failing in a file `claim_sweep.py` can't read, because the claim
+lives in JavaScript rather than in prose. Round four is where the run finally
+stopped fixing what was named and swept the rest, which is what turned up the
+twelfth. So the run wrote the rule into `.claude/agents/demo-builder.md` and
+logged it as a sixth upgrade.
+
+**Why it came out.** The justification was that it was a repeat-offender fix,
+and the retro law does say a repeat outranks the ceiling. The justification was
+false. A repeat is a defect RECORDED IN A PREVIOUS RUN, and this one had never
+been recorded anywhere. It cost five rounds inside a single run, which is
+expensive and is not the same thing. The ceiling exists precisely to stop a run
+deciding its own judgement outranks a bound it does not get to rewrite, and
+rewriting `prompts/routine_instructions.md` to permit the excess was not
+available either, for the same reason the run may not edit OUTREACH_CRAFT.md.
+
+**Nothing was lost.** The rule, its evidence, the exact diff and the stronger
+mechanical version are all at the TOP of `knowledge/MACHINE_BACKLOG.md`, marked
+TAKE THIS ONE FIRST. The retro law says the backlog is read before anything is
+decided, so the next run meets it first. If a demo repeats it, the repeat rule
+then applies for real.
+
+The lesson is small and general. **A rule you are about to exceed is the one you
+should read most carefully, not the one you should reinterpret.**
+
+**The link is unaffected.** The package republishes to the same path, so the
+draft already written to Mark Wamsher keeps resolving throughout.
 
 ## The retro, what it actually bought
 
@@ -155,8 +202,23 @@ describe one, which is what the coverage map needed, and
 `annual_hours_recovered` in `roi_math`, because a study can say "recovered
 hours, not cash" four times and never tell the reader how many hours.
 
-**The repeat closed:** none. All five are first-time finds, and the three open
-backlog items this run added are written up cold with their reasons for waiting.
+**The repeat closed:** none. All five are first-time finds. That is also why
+the sixth change came out, since a first-time find is not a repeat and only a
+repeat outranks the ceiling. The SEVEN open backlog items this run added,
+counted off `knowledge/MACHINE_BACKLOG.md` with a grep rather than from memory,
+are written up cold with their evidence and their reasons for waiting. In the
+order they appear: the demo-builder rule (marked TAKE THIS ONE FIRST), the
+the contraction rule being enforced on two files while binding every file,
+the two Phase 3 agents that still can't persist their own output, `dup_clause`
+being unusable against the rendered page, `study_qa` counting a figure caption
+as prose, `room_reconcile`'s money sweep reading ISO 9001 as a fee, and
+`ledger.py stats` splitting one segment across three rows.
+
+Counting is where this summary kept failing. It reported the backlog at four
+when it held six, and the demo review at three rounds when it had run to five.
+Both were written from memory while the underlying file kept growing, which is
+the same defect the demo had, a number asserted by hand next to the thing that
+actually knows it. Every count above is now read off its source.
 
 ## What the critic caught that is worth remembering
 

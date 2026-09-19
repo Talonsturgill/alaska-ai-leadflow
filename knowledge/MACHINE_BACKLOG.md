@@ -12,6 +12,112 @@ from it.
 
 ## OPEN
 
+- **2026-09-19, TAKE THIS ONE FIRST. The demo-builder brief says nothing about
+  deriving its artifacts, and that cost five review rounds and eleven findings
+  in one run, plus a twelfth the run found by sweeping.** Written, verified, and then DEFERRED rather than shipped,
+  because shipping it would have been a fourth machine change against a ceiling
+  of three. The diff is below, ready to apply.
+
+  EVIDENCE. The Tatitlek demo took five Codex rounds. Round one, the log named
+  a hard-coded owner while the cutoff note followed the viewer's pick, and the
+  board clipped on phones. Round two, the recipient counts claimed seven
+  approved while the board correctly showed one held, and the log listed four
+  of twelve submissions under a caption reading "Every state change carries a
+  name and a time". Round three, the chase tile said two rounds when the log
+  had honestly emitted none, the log consumed draft state and recorded it as
+  approved, the morning note named two bounced items when there could be three,
+  and the contributor's mail showed a message to somebody the board said was
+  never written to. Round four, the outstanding rows said both chases were
+  delivered four lines above the paragraph saying that owner's address had
+  rejected one, and the cutoff note said everything came in before the first
+  chase was due when nothing had been sent at all. Round five, that same
+  contributor mail told the reader a rule sent them an item the row directly
+  above called a hand assignment. Eleven findings, one defect: an artifact
+  written out by hand while its siblings derive from state.
+
+  Every round after the first existed because each fix corrected the artifact
+  that was caught and left the hard-coded ones beside it. That is FIX THE
+  CLAIM, NOT THE SENTENCE failing in a file claim_sweep.py can't read, because
+  the claim lives in JavaScript rather than in prose. Round four is where the
+  run stopped fixing only what was named and swept the rest, which immediately
+  turned up a twelfth nobody had reported: the stored-record card asserting a
+  request sent to a recipient the viewer had held.
+
+  WHY IT IS NOT FIXED HERE, and this is the honest part. The run DID write it,
+  logged it as a sixth upgrade, and justified the excess by calling it a
+  repeat-offender fix, which the retro law says outranks the ceiling. Codex
+  caught that the justification was false. A repeat is a defect RECORDED IN A
+  PREVIOUS RUN, and this one had never been recorded anywhere. It cost five
+  rounds inside a single run, which is expensive and is not the same thing. So
+  the run was over the ceiling with a bad reason, and the ceiling exists
+  precisely to stop a run deciding its own judgement outranks a bound it does
+  not get to rewrite. It came out.
+
+  It is now recorded. If the next demo repeats it, the repeat rule applies for
+  real and it becomes the work rather than a note.
+
+  THE DIFF, verified against the real file before it was reverted. Append to
+  `.claude/agents/demo-builder.md`, before `# THE BAR`:
+
+  > **ONE STATE MODEL, AND EVERY ARTIFACT DERIVES FROM IT.** If the demo is
+  > interactive, this is the rule that decides whether it survives a reader who
+  > pokes at it. Nothing a viewer can see may be written out by hand when the
+  > viewer can change what it describes. One state object, one set of derived
+  > readers, and every tile, note, log, message and count computed from them.
+  > No constant holding a name, a count, a date or a list that the viewer's own
+  > choices can contradict.
+  >
+  > Two traps, both paid for on 2026-09-19. **Derive the whole set, not the one
+  > that was caught**, because a finding on one artifact is a finding on every
+  > sibling that shares its data. **A draft is not a send**, so if the demo has
+  > an approval step, freeze what was approved and let the artifacts read that;
+  > an artifact rendered from state the viewer is still editing depicts a send
+  > that never happened, which breaks the exact guarantee the demo exists to
+  > make.
+  >
+  > This is an honesty rule, not a polish rule. A demo whose own screens
+  > disagree with each other reads as a mock-up dressed as a system, and the
+  > study it rides with is selling the opposite of that.
+
+  To `# THE BAR`, after the existing closing line, add: "Then they poke at it,
+  change something, and every screen still agrees."
+
+  THE STRONGER VERSION, if a later run has ceiling room for it. A brief line
+  binds only as well as the agent reads it. The mechanical check is a linter
+  that loads the demo's script, sweeps a state space (each recipient held, each
+  hand assignment, approved and not), renders every artifact at each point and
+  fails on any disagreement between them. The 2026-09-19 run drove exactly that
+  by hand in node on every round from three onward, and it reproduced every
+  reported finding and turned up one nobody had reported, so the approach is
+  proven and only the harness is missing. Five rounds of a bot finding what a
+  swept state space finds in one pass is the argument for building it.
+
+- **2026-09-19, the contraction rule is enforced on two files and binds every
+  file.** Three violations have accumulated in `knowledge/` where nothing checks.
+
+  EVIDENCE. CLAUDE.md's VOICE section says the rule binds EVERY ARTIFACT THIS
+  ROUTINE PRODUCES, "no exceptions anywhere, ever", and names `study_qa.py` as
+  what enforces it. That script reads the rendered study page. Nothing reads
+  `knowledge/`. Grepping this file today finds three uses of the long form the
+  rule forbids, at the ROI_METHOD base-rate item, the agent-frontmatter item and
+  the Phase 3 persistence item, introduced by the 2026-08-06, 2026-08-09 and
+  2026-08-08 runs respectively. This entry deliberately does not spell the word,
+  because a note about a banned term that contains the banned term both breaks
+  the rule and corrupts its own count, which is how the first draft of it read. Each one was written by a run, into a file a run
+  maintains, and no gate saw any of them.
+
+  This is the same shape as the sibling repo's own note on this rule, where ten
+  sentences accumulated across the public site before the owner found one and
+  the fix was a build gate rather than a proofread.
+
+  WHY IT IS NOT FIXED HERE. Two separable things. The three existing lines are
+  a three-word edit, but they are the shipped records of past runs and this
+  repo does not rewrite those casually, so whether to correct them is the
+  maintainer's call rather than a passing edit made during a delivery gate. The
+  gate that would stop the next one is the real fix and it is a machine change,
+  which this run has no ceiling room for. Cheap either way, and better done
+  deliberately.
+
 - **2026-08-06, item 8, the 54 against 12 measurement figure has no primary
   source we could reach.** BLOCKED ON A HUMAN DECISION, not on effort.
 
@@ -104,8 +210,8 @@ from it.
   shipped three verified gate fixes plus two ship-blocking renderer and
   arithmetic changes. It is also the lowest-value of the candidates, because
   room_collect.py already exists as the pattern and the hand transcription was
-  checked against the agents' returned JSON both times. And the in-flight
-  discovery recorded in the 2026-08-09 SHIPPED entry applies: agent definitions
+  checked against the agents' returned JSON both times. The in-flight
+  discovery recorded in the 2026-08-09 SHIPPED entry also applies: agent definitions
   resolve from the registry loaded at SESSION START, so adding Write could not
   have taken effect in the run that made the change anyway.
 
