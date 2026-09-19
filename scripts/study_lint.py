@@ -111,12 +111,33 @@ def check_forbidden(study, claims, fail, warn):
     # perfectly correct for the restaurant, and a fragment match cannot tell those
     # apart. So it warns, a human reads it, and precision lives in
     # forbidden_strings instead.
+    # Accept both shapes this list is written in. The fact-checker's own `# OUTPUT`
+    # block contracts rejected_claims as OBJECTS, {claim, why, also_appears_at},
+    # and a showrunner carrying that shape through to claims.json is obeying the
+    # contract. On 2026-09-19 this line crashed the whole gate with a TypeError on
+    # exactly that, which is the same failure room_reconcile hit on 2026-08-08 and
+    # for the same reason. A gate that dies on a legitimate output is worse than a
+    # gate that fails, because the run in front of it is under pressure and will
+    # skip it. Take the claim text, and match the reason too when there is one.
     for r in (claims.get("rejected_do_not_use") or []):
-        spans = [a or b for a, b in re.findall(r"'([^']{25,})'|\"([^\"]{25,})\"", r)]
+        if isinstance(r, dict):
+            text = r.get("claim") or r.get("span") or ""
+            why = r.get("why") or ""
+        else:
+            text, why = str(r), str(r)
+        if not isinstance(text, str):
+            continue
+        spans = [a or b for a, b in
+                 re.findall(r"'([^']{25,})'|\"([^\"]{25,})\"", text)]
+        # A dict-shaped rejection usually states the claim plainly rather than in
+        # quotation marks, so fall back to the whole claim string. It stays a
+        # warning, so a long benign overlap costs a read and never the build.
+        if not spans and len(text.strip()) >= 25:
+            spans = [text.strip()]
         for span in spans:
             if norm(span).strip() and norm(span).strip() in nbody:
                 warn(f"a rejected claim's wording appears in the study: {span[:70]!r}\n"
-                     f"        check the context, the rejection was: {r[:110]}")
+                     f"        check the context, the rejection was: {(why or text)[:110]}")
 
 
 def check_sources(study, fail, warn):
