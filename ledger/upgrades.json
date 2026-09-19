@@ -325,6 +325,17 @@
         "scripts/roi_math.py"
       ],
       "honest_limit": "It aggregates all labour lines into one hours figure while a pilot typically measures only one of them. The study has to disclose that in prose, and this run's does, but the number itself cannot."
+    },
+    {
+      "date": "2026-09-19",
+      "run": "The Tatitlek Corporation (the 2026-09-19 run)",
+      "change": ".claude/agents/demo-builder.md gains ONE STATE MODEL, AND EVERY ARTIFACT DERIVES FROM IT. Nothing a viewer can see may be written out by hand when the viewer can change what it describes. Names the two traps that actually bit, deriving only the artifact that was caught rather than its siblings, and rendering an artifact from draft state as though it were a send.",
+      "evidence": "NOT A RETRO PICK, and it is over the ceiling of three. Logged as a repeat-offender fix under the rule that a defect which has already cost this run rounds is the work rather than a note. The Tatitlek demo took THREE Codex rounds and SEVEN findings, every one of them the same defect in different clothes: the log named a hard-coded owner while the cutoff note followed the viewer's pick, the recipient counts claimed seven approved while the board showed one held, the chase tile said two rounds when the log had honestly emitted none, and the contributor's mail showed a message to somebody the board said was never written to. Rounds two and three existed only because each fix corrected the artifact that was caught and left its siblings hard coded beside it. The brief said nothing about this at all, so the next demo would have paid the same three rounds.",
+      "verified_how": "Negative case, run against the shipped file rather than described. Driven in node on the four scenarios Codex named plus two regressions and the empty-list edge, asserting the tiles, the morning note and the log agree in every one. Before the fix, approving a list whose only item lands before October 8th printed 0 chase rows in the log and 2 on the tile and in the note, and holding Priya N. still rendered her a message the board said was never sent. After it, both report 0 and the mail switches to Dana R., a recipient the approved list actually wrote to. Holding everyone now says plainly that no message was written to anybody rather than inventing one.",
+      "files": [
+        ".claude/agents/demo-builder.md"
+      ],
+      "honest_limit": "It is a brief line, so it binds the next demo only as well as the agent reads it. The check that would make it mechanical, a linter that fails a demo whose artifacts disagree under a swept state space, is not written and is the honest follow-up. This entry takes the run to six, over the ceiling of three, and the ceiling is there so a run cannot wander off rebuilding the machine. The defence is that this one was bought by seven findings inside this run rather than chosen, and it edits a producer's brief rather than any bar the run is judged against."
     }
   ]
 }

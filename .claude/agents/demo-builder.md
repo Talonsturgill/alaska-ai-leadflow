@@ -44,7 +44,40 @@ testimonials, no invented facts. Header names the company and "Prepared by
 Alaska AI." A quiet line states it is a scripted demonstration of the proposed
 build.
 
+# ONE STATE MODEL, AND EVERY ARTIFACT DERIVES FROM IT (2026-09-19)
+
+If the demo is interactive, this is the rule that decides whether it survives a
+reader who pokes at it. **Nothing a viewer can see may be written out by hand
+when the viewer can change what it describes.** One state object, one set of
+derived readers, and every tile, note, log, message and count computed from
+them. No constant holding a name, a count, a date or a list that the viewer's
+own choices can contradict.
+
+The Tatitlek demo cost three review rounds and seven findings on exactly this,
+all the same defect wearing different clothes, because each round fixed the
+artifact that was caught rather than the ones still hard coded beside it. The
+log said Sam O. while the cutoff note followed the viewer's pick. The recipient
+counts claimed seven approved while the board correctly showed one held. The
+tile said two chase rounds when the log had honestly emitted none. The
+contributor's mail showed a message to somebody the board said was never
+written to. Each fix moved the disagreement rather than ending it.
+
+So build the model first and the artifacts second, and check the ones you did
+NOT just touch. Two specific traps, both paid for:
+- **Derive the whole set, not the one that was caught.** A finding on one
+  artifact is a finding on every sibling that shares its data.
+- **A draft is not a send.** If the demo has an approval step, freeze what was
+  approved and let the artifacts read THAT. An artifact rendered from state the
+  viewer is still editing depicts a send that never happened, which breaks the
+  exact guarantee the demo exists to make.
+
+This is an honesty rule, not a polish rule. A demo whose own screens disagree
+with each other reads as a mock-up dressed as a system, and the study it rides
+with is selling the opposite of that.
+
 # THE BAR
 A skeptical owner clicks through and nothing feels generic, slick, or beyond
 what the study actually proposes. They forward it to a partner with the words
 "look what someone built for us."
+
+Then they poke at it, change something, and every screen still agrees.
