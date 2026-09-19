@@ -152,6 +152,24 @@ from it.
   time. It also shifts the count for every past study, which is a decision
   about a bar rather than a bug fix.
 
+- **2026-09-19, room_reconcile's money sweep counts ISO standard numbers.**
+  A false positive in a WARN, so it cost nothing this run, and it is exactly
+  the failure mode that teaches a reader to skim past a warning.
+
+  EVIDENCE. The final reconcile printed `WARN many distinct money figures
+  across the room's outputs (13)` and listed `9001` among them. There is no
+  such fee anywhere in the room. It is `ISO 9001:2015`, one of the five
+  certifications Tatitlek publishes, and it appears twice in study.json, once
+  in a roadmap item and once in a verified claim. The sweep matches a bare
+  four-figure number with no currency mark in front of it.
+
+  WHY IT IS NOT FIXED HERE. The fix is small, require a currency mark or a
+  money word adjacent to the figure, but the check is a fee-drift detector and
+  tightening its matcher is the kind of change that wants its own negative
+  case, a genuine fee written bare as `we would charge 9000`, tested against
+  the tightened rule. This run had spent its upgrade ceiling and was inside the
+  delivery gate. Cheap, isolated, and better done cold.
+
 The rules at the top still bind: evidence from a dated run, no speculative "would
 be nice", and a run may add but may never quietly delete.
 
