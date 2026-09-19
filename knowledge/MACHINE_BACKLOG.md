@@ -12,6 +12,76 @@ from it.
 
 ## OPEN
 
+- **2026-09-19, TAKE THIS ONE FIRST. The demo-builder brief says nothing about
+  deriving its artifacts, and that cost three review rounds and seven findings
+  in one run.** Written, verified, and then DEFERRED rather than shipped,
+  because shipping it would have been a fourth machine change against a ceiling
+  of three. The diff is below, ready to apply.
+
+  EVIDENCE. The Tatitlek demo took three Codex rounds. Round one, the log named
+  a hard-coded owner while the cutoff note followed the viewer's pick, and the
+  board clipped on phones. Round two, the recipient counts claimed seven
+  approved while the board correctly showed one held, and the log listed four
+  of twelve submissions under a caption reading "Every state change carries a
+  name and a time". Round three, the chase tile said two rounds when the log
+  had honestly emitted none, the log consumed draft state and recorded it as
+  approved, the morning note named two bounced items when there could be three,
+  and the contributor's mail showed a message to somebody the board said was
+  never written to. Seven findings, one defect: an artifact written out by hand
+  while its siblings derive from state.
+
+  Rounds two and three existed only because each fix corrected the artifact
+  that was caught and left the hard-coded ones beside it. That is FIX THE
+  CLAIM, NOT THE SENTENCE failing in a file claim_sweep.py can't read, because
+  the claim lives in JavaScript rather than in prose.
+
+  WHY IT IS NOT FIXED HERE, and this is the honest part. The run DID write it,
+  logged it as a sixth upgrade, and justified the excess by calling it a
+  repeat-offender fix, which the retro law says outranks the ceiling. Codex
+  caught that the justification was false. A repeat is a defect RECORDED IN A
+  PREVIOUS RUN, and this one had never been recorded anywhere. It cost three
+  rounds inside a single run, which is expensive and is not the same thing. So
+  the run was over the ceiling with a bad reason, and the ceiling exists
+  precisely to stop a run deciding its own judgement outranks a bound it does
+  not get to rewrite. It came out.
+
+  It is now recorded. If the next demo repeats it, the repeat rule applies for
+  real and it becomes the work rather than a note.
+
+  THE DIFF, verified against the real file before it was reverted. Append to
+  `.claude/agents/demo-builder.md`, before `# THE BAR`:
+
+  > **ONE STATE MODEL, AND EVERY ARTIFACT DERIVES FROM IT.** If the demo is
+  > interactive, this is the rule that decides whether it survives a reader who
+  > pokes at it. Nothing a viewer can see may be written out by hand when the
+  > viewer can change what it describes. One state object, one set of derived
+  > readers, and every tile, note, log, message and count computed from them.
+  > No constant holding a name, a count, a date or a list that the viewer's own
+  > choices can contradict.
+  >
+  > Two traps, both paid for on 2026-09-19. **Derive the whole set, not the one
+  > that was caught**, because a finding on one artifact is a finding on every
+  > sibling that shares its data. **A draft is not a send**, so if the demo has
+  > an approval step, freeze what was approved and let the artifacts read that;
+  > an artifact rendered from state the viewer is still editing depicts a send
+  > that never happened, which breaks the exact guarantee the demo exists to
+  > make.
+  >
+  > This is an honesty rule, not a polish rule. A demo whose own screens
+  > disagree with each other reads as a mock-up dressed as a system, and the
+  > study it rides with is selling the opposite of that.
+
+  And to `# THE BAR`, after the existing closing line: "Then they poke at it,
+  change something, and every screen still agrees."
+
+  THE STRONGER VERSION, if a later run has ceiling room for it. A brief line
+  binds only as well as the agent reads it. The mechanical check is a linter
+  that loads the demo's script, sweeps a state space (each recipient held, each
+  hand assignment, approved and not), renders every artifact at each point and
+  fails on any disagreement between them. The 2026-09-19 run drove exactly that
+  by hand in node and it found all four of round three's findings, so the
+  approach is proven and only the harness is missing.
+
 - **2026-08-06, item 8, the 54 against 12 measurement figure has no primary
   source we could reach.** BLOCKED ON A HUMAN DECISION, not on effort.
 
