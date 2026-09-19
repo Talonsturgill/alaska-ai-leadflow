@@ -572,6 +572,44 @@ def callout(big, note=None):
     return f'<div class="callout"><span class="big">{esc(big)}</span>{n}</div>'
 
 
+def plain_table(t):
+    """A general left-aligned table for a section that has to SHOW a mapping
+    rather than describe one.
+
+    Added 2026-09-19. The study-critic failed a study that told the prospect
+    three times that a coverage map was "in this study" and "the most valuable
+    thing here", and then carried only two prose sentences. Its ruling was that
+    the free deliverable being a promise while the paid deliverable is real is
+    the shape of the exact con the study was disowning, and that the map had to
+    be a structured block rather than prose. There was no renderer for one.
+
+    Cells are plain strings, so this stays a table and never becomes a second
+    ROI block. The text lands in the STRUCTURE word bucket rather than the prose
+    bucket, which is correct, a mapping is scanned and not read linearly.
+    """
+    rows = t.get("rows") or []
+    if not rows:
+        return ""
+    heads = t.get("head") or []
+    out = ['<div class="tw"><table>']
+    if has(t.get("caption")):
+        out.append(f'<caption>{esc(t["caption"])}</caption>')
+    if heads:
+        out.append("<thead><tr>" + "".join(f"<th>{esc(h)}</th>" for h in heads)
+                   + "</tr></thead>")
+    out.append("<tbody>")
+    for r in rows:
+        cls = ' class="total"' if r.get("emphasis") else ""
+        out.append(f"<tr{cls}>" + "".join(
+            f"<td>{esc(c)}</td>" for c in r.get("cells", [])) + "</tr>")
+    out.append("</tbody>")
+    if has(t.get("note")):
+        span = len(heads) or len(rows[0].get("cells", [])) or 1
+        out.append(f'<tfoot><tr><td colspan="{span}">{esc(t["note"])}</td></tr></tfoot>')
+    out.append("</table></div>")
+    return "".join(out)
+
+
 def render(study, demo_embed=None):
     m = study.get("meta", {})
     company = esc(m.get("company") or "your company")
@@ -613,6 +651,8 @@ def render(study, demo_embed=None):
             body += callout(found["callout_big"], found.get("callout_note"))
         if has(found.get("body_2")):
             body += para(found["body_2"], "prose")
+        if has(found.get("coverage")):
+            body += plain_table(found["coverage"])
         out.append(section(nxt(), found.get("title") or "What we found",
                            found.get("lede"), body))
 
