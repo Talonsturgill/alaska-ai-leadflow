@@ -111,12 +111,33 @@ def check_forbidden(study, claims, fail, warn):
     # perfectly correct for the restaurant, and a fragment match cannot tell those
     # apart. So it warns, a human reads it, and precision lives in
     # forbidden_strings instead.
+    # Accept both shapes this list is written in. The fact-checker's own `# OUTPUT`
+    # block contracts rejected_claims as OBJECTS, {claim, why, also_appears_at},
+    # and a showrunner carrying that shape through to claims.json is obeying the
+    # contract. On 2026-09-19 this line crashed the whole gate with a TypeError on
+    # exactly that, which is the same failure room_reconcile hit on 2026-08-08 and
+    # for the same reason. A gate that dies on a legitimate output is worse than a
+    # gate that fails, because the run in front of it is under pressure and will
+    # skip it. Take the claim text, and match the reason too when there is one.
     for r in (claims.get("rejected_do_not_use") or []):
-        spans = [a or b for a, b in re.findall(r"'([^']{25,})'|\"([^\"]{25,})\"", r)]
+        if isinstance(r, dict):
+            text = r.get("claim") or r.get("span") or ""
+            why = r.get("why") or ""
+        else:
+            text, why = str(r), str(r)
+        if not isinstance(text, str):
+            continue
+        spans = [a or b for a, b in
+                 re.findall(r"'([^']{25,})'|\"([^\"]{25,})\"", text)]
+        # A dict-shaped rejection usually states the claim plainly rather than in
+        # quotation marks, so fall back to the whole claim string. It stays a
+        # warning, so a long benign overlap costs a read and never the build.
+        if not spans and len(text.strip()) >= 25:
+            spans = [text.strip()]
         for span in spans:
             if norm(span).strip() and norm(span).strip() in nbody:
                 warn(f"a rejected claim's wording appears in the study: {span[:70]!r}\n"
-                     f"        check the context, the rejection was: {r[:110]}")
+                     f"        check the context, the rejection was: {(why or text)[:110]}")
 
 
 def check_sources(study, fail, warn):
@@ -198,6 +219,10 @@ def check_roi(study, drivers, fail, warn, drivers_path=None):
     # differently, and the point of tracking them is that a NO-MATCH is loud
     # rather than silent, which is what went wrong here before.
     WANT = {
+        # Hours first, because its fragments have to be specific enough not to
+        # collide with the recovery row, which also carries the word "recovered".
+        # Most-specific-match wins, so "cost recovered" still beats "hours a year".
+        "hours":     ("hours a year", "hours per year", "hours recovered"),
         "annual":    ("annual value", "annual benefit", "annual "),
         "tco":       ("total cost", "five-year total", "5-year total", " tco"),
         "recovered": ("cost recovered", "of five year cost", "recovered", "recovery", "share of"),
@@ -279,11 +304,27 @@ def check_roi(study, drivers, fail, warn, drivers_path=None):
             continue
         checked += 1
 
+        hours = got.get("annual_hours_recovered")
         annual = got["annual_run_rate_benefit"]
         tco = next(v for k, v in got.items() if k.startswith("tco_"))
         recovered = got["percent_of_tco_recovered"]
 
         hits = 0
+
+        # The hours row. Added 2026-09-19 after Codex pointed out that
+        # roi_math had just started returning annual_hours_recovered and nothing
+        # compared it, so replacing all three printed hours cells with 999 still
+        # produced a clean reconciliation. A computed figure nobody checks is a
+        # transcription error waiting to happen, which is the whole reason these
+        # numbers are computed rather than narrated.
+        if hours is not None:
+            printed_hours, lab = cell(WANT["hours"], i)
+            printed_hours = num(printed_hours)
+            if printed_hours is not None:
+                hits += 1
+                if abs(printed_hours - hours) > max(1.0, hours * 0.01):
+                    fail(f"ROI {name}: hours a year prints {printed_hours:,.0f}, "
+                         f"drivers give {hours:,.0f}  (row {lab!r})")
 
         printed_annual, lab = cell(WANT["annual"], i)
         printed_annual = num(printed_annual)

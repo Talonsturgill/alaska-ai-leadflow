@@ -388,11 +388,32 @@ def main():
 
         Accept both shapes. Take the capability text and drop the reason, since
         only the subject is matched against.
+
+        On 2026-09-19 this check was found to have been examining NOTHING. It
+        reads `kill_list`, and the ai-feasibility-engineer's own `# OUTPUT`
+        block does not contract that key at all. It contracts `verdicts`, a
+        list of {candidate, verdict, change_or_reason, ...} where a kill is
+        verdict == "kill". So the conscience killed two candidates that run and
+        the killed-capability check still reported success on an empty list,
+        which is precisely the silent-pass failure this script exists to stop.
+        The NO KILL LIST note below is what surfaced it, so the note earned its
+        keep and stays.
+
+        Read the contracted shape FIRST, and keep `kill_list` as a fallback so
+        an older artefact still binds.
         """
         out = []
-        raw = (feas or {}).get("kill_list") or []
-        if isinstance(raw, dict):          # a mapping of capability -> why
-            raw = list(raw.keys())
+        raw = []
+        for v in ((feas or {}).get("verdicts") or []):
+            if isinstance(v, dict) and str(v.get("verdict", "")).strip().lower() == "kill":
+                # `candidate` is the subject; the reason lives in change_or_reason
+                # and is not matched against, same rule as the kill_list shape.
+                if v.get("candidate"):
+                    raw.append(v["candidate"])
+        legacy = (feas or {}).get("kill_list") or []
+        if isinstance(legacy, dict):       # a mapping of capability -> why
+            legacy = list(legacy.keys())
+        raw += legacy
         for k in raw:
             if isinstance(k, str):
                 out.append(k)

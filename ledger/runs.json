@@ -1,7 +1,7 @@
 {
   "version": 2,
   "note": "The per-run audit, and the record of authority for whether a run already shipped. Migrated off Supabase on 2026-08-05, this file is now the only copy.",
-  "updated": "2026-08-11",
+  "updated": "2026-09-19",
   "runs": [
     {
       "run_date": "2026-07-16",
@@ -122,6 +122,12 @@
       "status": "success",
       "shortlist_count": 23,
       "notes": "Major Marine Tours, Seward. Phase Zero has no software in it and the decision table is scoped but NOT recommended for funding yet. Eleven study-critic rounds, three lead-critic rounds. The ask was cut from 18,000 to 4,500 at Phase 4 because the conservative case did not clear, and the study says so in its ROI heading. Two machine upgrades, dup_clause.py and quote_fidelity.py. Run started 2026-08-10 Anchorage and finished on the 11th; dated to the 10th, which is when the research was fetched and verified."
+    },
+    {
+      "run_date": "2026-09-19",
+      "status": "success",
+      "shortlist_count": 23,
+      "notes": null
     }
   ]
 }

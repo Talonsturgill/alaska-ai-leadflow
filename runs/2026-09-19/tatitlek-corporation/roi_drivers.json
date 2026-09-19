@@ -1,0 +1,118 @@
+{
+  "scenarios": {
+    "conservative": {
+      "pursuits_per_year": 10,
+      "benefit_lines": [
+        {
+          "label": "Coordinator time assembling and chasing data call answers",
+          "hours_per_pursuit": 8,
+          "rate": 62,
+          "cut": 0.25
+        },
+        {
+          "label": "Finding who owns an answer across the subsidiaries",
+          "hours_per_pursuit": 3,
+          "rate": 62,
+          "cut": 0.35
+        },
+        {
+          "label": "Contributor time on unclear or repeated requests",
+          "hours_per_pursuit": 8,
+          "rate": 55,
+          "cut": 0.15
+        }
+      ],
+      "avoided_cost_lines": [
+        {
+          "label": "Rebuild of a tracker specified without a measured baseline",
+          "events_per_year": 0.2,
+          "cost_per_event": 20000,
+          "reduction": 0.4
+        }
+      ],
+      "implementation": 70000,
+      "training": 8680,
+      "run_cost_per_year": 6000,
+      "run_cost_years": 4.5,
+      "contingency": 0.2,
+      "year1_ramp": 0.25,
+      "years": 5
+    },
+    "most_likely": {
+      "pursuits_per_year": 20,
+      "benefit_lines": [
+        {
+          "label": "Coordinator time assembling and chasing data call answers",
+          "hours_per_pursuit": 12,
+          "rate": 78,
+          "cut": 0.35
+        },
+        {
+          "label": "Finding who owns an answer across the subsidiaries",
+          "hours_per_pursuit": 5,
+          "rate": 78,
+          "cut": 0.5
+        },
+        {
+          "label": "Contributor time on unclear or repeated requests",
+          "hours_per_pursuit": 14,
+          "rate": 62,
+          "cut": 0.25
+        }
+      ],
+      "avoided_cost_lines": [
+        {
+          "label": "Rebuild of a tracker specified without a measured baseline",
+          "events_per_year": 0.2,
+          "cost_per_event": 25000,
+          "reduction": 0.5
+        }
+      ],
+      "implementation": 62000,
+      "training": 8580,
+      "run_cost_per_year": 5000,
+      "run_cost_years": 4.5,
+      "contingency": 0.2,
+      "year1_ramp": 0.3,
+      "years": 5
+    },
+    "aggressive": {
+      "pursuits_per_year": 32,
+      "benefit_lines": [
+        {
+          "label": "Coordinator time assembling and chasing data call answers",
+          "hours_per_pursuit": 16,
+          "rate": 88,
+          "cut": 0.45
+        },
+        {
+          "label": "Finding who owns an answer across the subsidiaries",
+          "hours_per_pursuit": 6,
+          "rate": 88,
+          "cut": 0.6
+        },
+        {
+          "label": "Contributor time on unclear or repeated requests",
+          "hours_per_pursuit": 20,
+          "rate": 68,
+          "cut": 0.3
+        }
+      ],
+      "avoided_cost_lines": [
+        {
+          "label": "Rebuild of a tracker specified without a measured baseline",
+          "events_per_year": 0.2,
+          "cost_per_event": 30000,
+          "reduction": 0.6
+        }
+      ],
+      "implementation": 52000,
+      "training": 7920,
+      "run_cost_per_year": 4200,
+      "run_cost_years": 4.5,
+      "contingency": 0.15,
+      "year1_ramp": 0.4,
+      "years": 5
+    }
+  }
+}

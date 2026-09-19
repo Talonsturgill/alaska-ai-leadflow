@@ -1,0 +1,66 @@
+{
+  "pass": 2,
+  "note": "Pass 1 recommended a Key Personnel and Past Performance Evidence Engine, conditional on an unretired assumption about GovEagle's feature set. The showrunner fetched GovEagle's own pages (C48-C51), the condition fired, and the engineer re-decided. See feasibility_v1_note.md.",
+  "verdicts": [
+    {
+      "candidate": "Key Personnel and Past Performance Evidence Engine",
+      "lowest_tier": "retrieval",
+      "verdict": "kill",
+      "cost_of_error": "A wrong resume or past-performance mapping is a scored weakness caught late by a Color Team review, survivable with a human approving every draft. The cost of error that actually kills this one is OURS. Proposing it now means proposing a duplicate of a tool they already bought, to the VP of Business Development who runs it, and the study never recovers from that.",
+      "data_readiness": "Untested and now moot for the past-performance half. GovEagle's drafting layer already pulls from past-performance write-ups (C50). For the resume half we have never seen the corpus, and resumes are personal data with their own permissioning problem.",
+      "step_math": "Not reached. The build dies on duplication before reliability matters.",
+      "change_or_reason": "PASS-ONE VERDICT DOES NOT SURVIVE. C49 says GovEagle maps task areas to past performance and shows where you are strong and where you have gaps, and matches PWS requirements to your strongest projects. C50 says its AI drafting layer pulls from past proposals, past-performance write-ups and boilerplate. C51 says requirements are extracted, organised by section and mapped to the response outline. That is the past-performance half, shipping and bought. The resume half is UNVERIFIED in both directions, so it can't be sold either. It becomes a QUESTION in the study, not a build."
+    },
+    {
+      "candidate": "Data Call Runner",
+      "lowest_tier": "rules",
+      "verdict": "downscope",
+      "cost_of_error": "A missed answer slips a submission the Bid and Proposal team is holding to a deadline (C12). An auto-sent chase to the wrong person across seven subsidiaries is cheap once and corrosive at volume. Guardrail, the proposal manager approves the recipient list, the system sends on a schedule a human set, and it never writes an answer into a volume. Under the self-performance climate C25 describes, the attestation behind a fact needs a name on it, so a model may normalise a returned answer's FORMAT and may never vouch for its TRUTH.",
+      "data_readiness": "THIS GAP IS THE PROJECT and the study must say so. The compliance matrix exists, GovEagle produces it (C48, C51), so an export surface is required and its existence is unverified. The owner map across 1,300 employees, 46 locations and seven subsidiaries (C03, C04, C05) has never been seen, is HR-adjacent, and may not exist as a structured artefact. Building and keeping it fresh is the real work and staleness is the top failure mode. Historical data calls are almost certainly email and spreadsheets, so NO BASELINE EXISTS and the first deliverable is a measurement, not a tool.",
+      "step_math": "The digital-employee version chains derive, identify owner, send, chase, normalise, map, report. Four model steps. At 90 percent per step that is about 0.66 end to end, at 95 percent about 0.81, across roughly thirty items per pursuit, which guarantees several silently wrong items every time with nobody assigned to catch them. THE DETERMINISTIC TRACKER HAS ZERO REQUIRED MODEL STEPS, so there is no chain to compound and every step can be tested exhaustively.",
+      "change_or_reason": "Downscope survives and tightens. Rename to Data Call Tracker and drop the digital-employee costume, which is agent washing by Gartner's own definition, a scheduler with email templates called an employee. Spine is rules: owner map, due dates, reminders, escalation, and a completeness board read against the compliance matrix. Rules of ML Rule 1 applies cleanly. The ONE node that could later earn a single LLM call is mapping a free-text requirement to an owner when no rule matches, and it must be earned by measuring how often the rules miss."
+    },
+    {
+      "candidate": "LLM Disclosure and Incident Register",
+      "lowest_tier": "rules",
+      "verdict": "keep",
+      "cost_of_error": "A missed disclosure under a rule that has not landed. Asymmetric and cheap to prevent, which is the argument for a form and a table rather than a model. A model has no business near a regulatory attestation, where full transparency is required, a stated wrong-fit condition in Google PAIR.",
+      "data_readiness": "The data is a list they can write down in an afternoon, starting with GovEagle (C08). No corpus, no labels, no freshness problem beyond an owner keeping it current.",
+      "step_math": "Not applicable. Deterministic throughout, no model in the path.",
+      "change_or_reason": "Survives untouched and is the only candidate GovEagle makes MORE relevant, since GovEagle is the first row in the register. ONE CORRECTION TO ITS JUSTIFICATION: the strategist wrote they are already in scope for the proposed disclosure because they run an AI tool. C46 covers LLMs used in the PERFORMANCE of a contract or task order, and capture and bidding are PRE-AWARD, so whether GovEagle use falls inside is UNESTABLISHED. Asserting it leans the same way as every other error this run caught. Strike the assertion, keep the register, present it as cheap insurance on a conditional clock."
+    },
+    {
+      "candidate": "Bid/No-Bid Capacity Check",
+      "lowest_tier": "rules",
+      "verdict": "kill",
+      "cost_of_error": "The most expensive routine decision in this business, and under C37 and C38 a model influencing a source-selection-adjacent judgement is the exact anxiety this market carries.",
+      "data_readiness": "Worst on the board. Needs staffing, pricing and contracts systems inside their perimeter that we have never seen.",
+      "step_math": "Irrelevant. Dead twice over.",
+      "change_or_reason": "Kill survives and gains a second, stronger reason. GovEagle already ships Bid/no-bid analysis, Opportunity fit score, pWin calculator and Early go or no go guidance (C48, C49). The GeoNorth reason stands alongside it (C05)."
+    },
+    {
+      "candidate": "Shareholder Preference Talent Matcher",
+      "lowest_tier": "rules",
+      "verdict": "kill",
+      "cost_of_error": "An error touches a shareholder's employment prospects and the corporation's obligation to its own people, the least forgiving surface this company has.",
+      "data_readiness": "Shareholder records and ATS data, both private, both consent-bound, neither seen.",
+      "step_math": "Not reached.",
+      "change_or_reason": "Untouched by the fetch and still dead for the original and better reason. Its motivating argument is on the rejected list (C17). A pitch built on a rejected inference is the precise failure the claims file exists to stop."
+    }
+  ],
+  "recommended_pick": {
+    "name": "Data Call Tracker, a deterministic completeness board for proposal data calls, preceded by a free GovEagle coverage map",
+    "why_it_survives": "IT IS SMALL AND I AM SAYING SO. A thin true build beats a rich invented one, and after the fetch this is what is honestly left. It survives the GovEagle test because data calls appear on NO GovEagle page fetched, the only lane on the whole map where that is true, while the Evidence Engine, the capacity check and bid/no-bid all collided with C48 to C51 head on. It survives cost of error because it tracks status and never authors a fact. It survives the compounding math trivially, the shipped version has no model in the path. IT DOES NOT SURVIVE THE GEONORTH QUESTION AS AN EXCLUSIVE BUILD, and pretending otherwise to a company that owns a NAICS 518210 subsidiary (C05) would insult them. GeoNorth can build this, should host it, and should own it. What we sell is the specification, the owner-map extraction, the acceptance bar, and landing it in weeks alongside the Dahlgren hire (C09) before that seat invents a personal manual method any tool then has to displace. If they hand the spec to GeoNorth and build it themselves, the study did its job and we say so in writing. PHASE ZERO IS NOT A BUILD AND IS FREE: the coverage map handed over at no charge, the two questions only their GovEagle rep can answer, and one real data call measured end to end. If that measurement says the process is fine, the honest recommendation is that they buy nothing from us this quarter."
+  },
+  "where_not_to_use_ai": "Start with the part worth more than anything we could sell. DO NOT BUILD, AND DO NOT LET ANYONE SELL YOU, a second copy of what GovEagle already ships. Its own pages name RFP shredding, the compliance matrix, outline generation, Color Team reviews, the capability matrix, pWin, bid/no-bid analysis, opportunity fit score, task area matching and pipeline analytics (C48, C49), and its drafting layer already pulls from past proposals, past-performance write-ups and boilerplate (C50). Past-performance and task-area matching is a solved line item on an invoice you are already paying. Beyond that, the data-call spine is rules and not a model, owner routing where a rule matches, due dates, reminders, escalation and counting what is outstanding, all testable exhaustively and none of it degrading silently. The price-to-win number stays human (C14), the cost of error there is an award decision. The LLM disclosure register is a form, a table and a workflow, because a regulatory attestation needs full transparency and that is a stated wrong-fit condition for AI. Deciding whether a returned data-call answer is TRUE stays with the person who owns it, a model may normalise its format and may never vouch for the fact. Nothing we build generates prose into a submitted technical volume, which is where the TRAX allegation lives (C37, C38). And the front desk, the phones and any voice agent, which a 1,300-person federal services contractor across 46 locations does not win or lose on.",
+  "honest_flags": [
+    "MY PASS-ONE PICK IS DEAD AND THE FETCH KILLED IT. The Evidence Engine's past-performance half is a duplicate of a tool they already own, by the vendor's own words (C49, C50). That is the conscience cutting both ways, and the study should carry it as the finding it is rather than bury it.",
+    "GovEagle's handling of key-personnel RESUMES is UNVERIFIED in both directions and must stay that way in the study. Say what we looked at and what we did not find, and put the question to them.",
+    "The whole pick rests on data calls not appearing on FOUR fetched GovEagle pages. That is a bounded fetch and not proof of absence, the third time this run that absence of evidence has been tempting to read as evidence of absence. Write it as what we searched and did not find, never as a finding.",
+    "C48's Team assignments and C51's requirement-to-outline mapping are the nearest adjacency to the tracker. The reading that those sit inside the pursuit rather than reaching contributors across 46 locations is the ENGINEER'S INFERENCE, not a fetched fact, and it is the single thing most likely to make this pick wrong too.",
+    "NOTHING FETCHED SAYS THEIR DATA CALLS ARE SLOW. The evidence is one clause in one posting (C11). No baseline exists, so the first deliverable is a measurement and the build is conditional on it. If the measurement says the process holds, the right answer is that they need nothing from us.",
+    "The strategist's claim that they are already in scope for the proposed GSA disclosure rule is UNESTABLISHED. C46 covers LLMs used in the PERFORMANCE of a contract, and capture is pre-award. Strike it from the study.",
+    "The 30-pursuits-per-quarter reach figure is invented. No ROI may rest on it until they supply their real number.",
+    "We are recommending something their own subsidiary could build, and the study says so unprompted. If both open questions come back covered by GovEagle, what honestly remains is the coverage map and a deterministic register, and the study should be willing to print that."
+  ]
+}

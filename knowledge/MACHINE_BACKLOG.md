@@ -86,6 +86,113 @@ from it.
   that has already drafted is how a working pipeline breaks. It wants its own
   session with the four agents exercised end to end.
 
+- **2026-09-19, the two Phase 3 agents still can't persist their own output.**
+  NOT BLOCKED, and deliberately deferred ONCE under the retro's ceiling of three.
+  It is eligible to be fixed on the next run and should be the first thing that
+  run picks up.
+
+  EVIDENCE. product-strategist and ai-feasibility-engineer both carry
+  `tools: Read`. Both said so out loud this run, the strategist opening its
+  handback with "Write is disabled in this session, so I can't save to
+  out/2026-09-19/discovery.json", and the showrunner transcribed roughly 40KB of
+  JSON by hand across the two of them, twice for the engineer because its pick
+  was re-run on corrected GovEagle facts. That transcription is the exact
+  mechanism the 2026-08-05 summary defect came through, which is why the four
+  Phase 4 agents got Write and a PERSIST block on 2026-08-09.
+
+  WHY IT WAS NOT FIXED THIS RUN. The retro ceiling is three and this run already
+  shipped three verified gate fixes plus two ship-blocking renderer and
+  arithmetic changes. It is also the lowest-value of the candidates, because
+  room_collect.py already exists as the pattern and the hand transcription was
+  checked against the agents' returned JSON both times. And the in-flight
+  discovery recorded in the 2026-08-09 SHIPPED entry applies: agent definitions
+  resolve from the registry loaded at SESSION START, so adding Write could not
+  have taken effect in the run that made the change anyway.
+
+  WHAT WOULD FIX IT. `tools: Read, Write` on both agent definitions, a PERSIST
+  block naming the output path, and a showrunner fallback for a file that does
+  not appear, copying exactly what the four Phase 4 agents already do.
+
+- **2026-09-19, dup_clause is unusable against the rendered study page.**
+  SMALLER THAN A RUN, and arguably not a defect at all.
+
+  EVIDENCE. Run against out/<date>/field-study.html it returned 77 duplicate
+  clauses, every one of them on "line 231", because build_study_page emits the
+  entire document body as a single 38,573-character line. The tool's own rule is
+  that one line is one edit unit and that cross-unit repetition is normal in a
+  document and is not flagged, so the renderer collapses that rule and every
+  legitimate cross-section repeat gets reported. The brief is REQUIRED by
+  FIELD_STUDY_SPEC to restate the body so it survives being forwarded alone, so
+  those repeats are the contract working as designed. Pointed at the demo, which
+  is what the tool was built for on 2026-08-10, it is clean.
+
+  WHY IT IS NOT SHIPPED. The contract does not list dup_clause as a Phase 6
+  gate, and pointing it at the rendered page was the showrunner's choice rather
+  than a required step, so this is a usability trap rather than a broken check.
+  The fix if it ever earns one is to run it over study.json's strings, where the
+  edit units are real.
+
+- **2026-09-19, study_qa counts a figure caption as PROSE.**
+  A QUESTION ABOUT A BAR, so it is not a run's to change.
+
+  EVIDENCE. The prose-versus-structure split says in its own comment that
+  "table cells, source lines and figure labels are scanned, not read", and its
+  structural regex matches `<td>`, `<th>`, `<ol class="srcs">`, `<text>` and
+  `<caption>`. It does NOT match `<p class="figcap">`, which is what the
+  architecture diagram and the embedded demo both use. So every figure caption
+  this renderer emits is charged against a reading-time budget the comment says
+  it should be outside of. On this run it cost 25 words, which was the whole
+  difference between the embedded page passing at 2,986 and failing at 3,011.
+
+  WHY IT IS NOT FIXED HERE. It was found while the embedded page was failing
+  the gate, and changing a budget gate to make the current artifact pass is the
+  exact move THE ITERATION LAW forbids: the standard never bends to make a loop
+  converge, the artifact bends. So the artifact was trimmed instead and the
+  question is written down cold, for a run that is not under the gate at the
+  time. It also shifts the count for every past study, which is a decision
+  about a bar rather than a bug fix.
+
+- **2026-09-19, room_reconcile's money sweep counts ISO standard numbers.**
+  A false positive in a WARN, so it cost nothing this run, and it is exactly
+  the failure mode that teaches a reader to skim past a warning.
+
+  EVIDENCE. The final reconcile printed `WARN many distinct money figures
+  across the room's outputs (13)` and listed `9001` among them. There is no
+  such fee anywhere in the room. It is `ISO 9001:2015`, one of the five
+  certifications Tatitlek publishes, and it appears twice in study.json, once
+  in a roadmap item and once in a verified claim. The sweep matches a bare
+  four-figure number with no currency mark in front of it.
+
+  WHY IT IS NOT FIXED HERE. The fix is small, require a currency mark or a
+  money word adjacent to the figure, but the check is a fee-drift detector and
+  tightening its matcher is the kind of change that wants its own negative
+  case, a genuine fee written bare as `we would charge 9000`, tested against
+  the tightened rule. This run had spent its upgrade ceiling and was inside the
+  delivery gate. Cheap, isolated, and better done cold.
+
+- **2026-09-19, `ledger.py stats` splits one segment across three rows.**
+  The by-segment cut is the one number the stats command exists to give, and
+  right now it can't be read.
+
+  EVIDENCE. `stats` after this run's add-lead prints nine segment rows for
+  four real segments. Tourism is `tourism` 5 and `Tourism and visitor
+  industry` 4. ANCs are `anc` 4 and `Alaska Native corporations and tri` 3.
+  The catch-all is `other` 2, `other labor-scarce or paperwork-he` 2 and
+  `Other labor-scarce or paperwork-he` 1, which is three spellings of one
+  thing including a case difference. Healthcare is split two ways. Some rows
+  predate config/icp.yaml's current segment names and some differ only in
+  case. `add-lead` validates the segment against icp.yaml, which is why this
+  run's first attempt was rejected and corrected, so new rows are clean and
+  only the history is not.
+
+  WHY IT IS NOT FIXED HERE. It is a data migration over ledger/leads.json,
+  which is the record of authority for every company ever touched, and it
+  wants its own run and its own before-and-after count rather than a
+  dictionary bolted onto the stats printer. Do it as a one-off normalizer
+  that maps each historical spelling to the icp.yaml name, asserts the lead
+  count is unchanged, and leaves the diff reviewable. Nothing depends on the
+  segment for dedupe, so nothing is at risk while it waits.
+
 The rules at the top still bind: evidence from a dated run, no speculative "would
 be nice", and a run may add but may never quietly delete.
 

@@ -33,7 +33,17 @@ import re
 import sys
 
 SRC_BLOCK = re.compile(r"var SRC\s*=\s*\{.*?\n\};", re.S)
-ENTRY = re.compile(r"(c\d+)\s*:\s*\{\s*parts\s*:\s*\[(.*?)\]\s*,", re.S)
+# Claim ids are lowercase `c4` in some runs and uppercase `C08` in others, and
+# the id is quoted in a JS object key as often as it is bare. Matching only
+# lowercase bare keys meant a demo could register real quotations and be walked
+# straight past. Accept either case and an optionally quoted key; the lookup
+# below is case-insensitive to match. The optional trailing letter matches the
+# secondary-quotation key this file itself creates, `c11b` for a claim's
+# second_verbatim. Codex caught that on the 2026-09-19 review: without it the
+# entry is skipped entirely and the command reports 0 spans with exit 0 even
+# after that quotation has been altered, which is the hole this gate exists to
+# close, reopened by the fix that added the key.
+ENTRY = re.compile(r"[\"']?([cC]\d+[a-z]?)[\"']?\s*:\s*\{\s*parts\s*:\s*\[(.*?)\]\s*,", re.S)
 STRING = re.compile(r'"((?:[^"\\]|\\.)*)"')
 
 
@@ -50,11 +60,29 @@ def main():
 
     claims = json.load(open(args.claims, encoding="utf-8"))
     quotes = {}
+    # The quoted text lives under `quote` in some claims files and `verbatim` in
+    # others, because the fact-checker's own `# OUTPUT` block names neither and
+    # both spellings are in use across runs. On 2026-09-19 this read `quote`
+    # only, the run's claims.json used `verbatim`, and the quotes dict built
+    # EMPTY. A demo carrying real quotations would then have every span reported
+    # as unsourced and fail for the wrong reason, and the demo-builder worked
+    # around it by carrying no quotations at all, so the gate passed on nothing.
+    # That is the third gate in this repo found reading a key its data does not
+    # use, after room_reconcile's kill_list and study_lint's rejection shape.
+    # Accept both spellings, and prefer whichever is present.
     for key in ("verified_company_facts", "verified_industry_claims",
                 "verified_claims"):
         for entry in claims.get(key, []):
-            if isinstance(entry, dict) and entry.get("quote"):
-                quotes.setdefault(entry["id"], entry["quote"])
+            if not isinstance(entry, dict):
+                continue
+            text = entry.get("quote") or entry.get("verbatim")
+            if text and entry.get("id"):
+                quotes.setdefault(str(entry["id"]).lower(), text)
+            # A second contracted quotation on the same claim, used where one
+            # claim carries two distinct verbatim spans.
+            second = entry.get("second_verbatim")
+            if second and entry.get("id"):
+                quotes.setdefault(str(entry["id"]).lower() + "b", second)
 
     demo = open(args.demo, encoding="utf-8").read()
     block = SRC_BLOCK.search(demo)
@@ -64,7 +92,7 @@ def main():
 
     checked = drifted = unsourced = 0
     for match in ENTRY.finditer(block.group(0)):
-        cid, raw = match.group(1), match.group(2)
+        cid, raw = match.group(1).lower(), match.group(2)
         spans = STRING.findall(raw)
         if cid not in quotes:
             unsourced += 1

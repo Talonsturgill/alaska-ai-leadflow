@@ -1,0 +1,39 @@
+{
+  "subject": "GovEagle covers four of eight lines on your req",
+  "body": "Requisition 2026-2731 names GovEagle as your AI tool and runs your pursuit pipeline through it. Four of the eight duty lines on that posting come back covered by software you already pay for. We just wrapped up our study on Tatitlek and the gap we'd work on is data calls.\n\nhttps://alaskaaihq.com/awesomeproposal/tatitlek-corporation/\n\nNo strings, worth a reply either way.",
+  "to": "mwamsher@tatitlek.com",
+  "to_name": "Mark Wamsher",
+  "to_role": "Vice President of Business Development, named on the company's leadership page and on every subsidiary page",
+  "link": "https://alaskaaihq.com/awesomeproposal/tatitlek-corporation/",
+  "opens_on": "their own live requisition 2026-2731, which names GovEagle as their Artificial Intelligence tool and puts the pursuit pipeline in it",
+  "word_count_prose": 57,
+  "comma_count": 1,
+  "subject_chars": 46,
+  "kill_list_hits": 0,
+  "lead_critic": "ship at round 1",
+  "critic_rounds": [
+    "r1 ship. The critic was asked to rule on two things rather than look up rules, and ruled on both.",
+    "post-ship correction, not a critic round. Codex review of the archive caught that the email claimed data calls is THE one line GovEagle does not cover, while the study's own map shows key-personnel resumes uncovered too, marked unverified. A recipient opening the link sees both rows immediately. Reworded so the email names the gap WE would work on rather than claiming it is the only one."
+  ],
+  "two_rulings_the_critic_was_asked_for": {
+    "the_subject": "The writer's subject was 'Field study for Tatitlek, GovEagle and what it already covers'. A previous run killed a subject for the merge-field shape 'Field study for <Company>'. The critic ruled it was NOT the same defect, because the tail names GovEagle and what it already covers, a clause false of every other company in Alaska, so the line can't be re-pointed. It still ruled the first four words were template and offered a sharper version leading with the tool, as optional rather than a condition of shipping. THE SHOWRUNNER TOOK THE SHARPER VERSION. A subject that survives on its second half is a subject with a weak first half, and the inbox row is read left to right.",
+    "we_just_wrapped_up_our_study": "OUTREACH_CRAFT bans self-reference and process talk. VOICE_DELTAS shows Talon hand-editing almost this exact clause INTO the last two sends. The critic ruled there is no real conflict: the law bans naming WHO OR WHAT produced the study, an agent team, AI, our process, a human reviewer. It does not ban saying a study exists, step 3 of the law's own skeleton requires pointing at it as work already done for them, and the law's worked example reads 'We already did the study on fixing that'. So the law wins on its own terms and the deltas agree with it."
+  },
+  "three_things_refused": [
+    "did NOT say the study argued against our own sale, which is the strongest thing in it. That is self-reference and a victory lap, the same move Talon cut from the Allen Marine send. The email states the finding, four of eight already covered, and lets him draw it.",
+    "did NOT quote the ROI. 67 percent and 14 percent both read as bad news stripped of their assumptions, and a number that needs a paragraph to be honest has no business in a forty to sixty word email. They live in the study with the assumptions attached.",
+    "did NOT use the $130,000 Dahlgren salary figure. Verified and specific, and attaching a salary to a stranger's open requisition reads as surveillance rather than homework. It is evidence in the study, not a hook."
+  ],
+  "what_the_email_refused_to_carry": [
+    "1,300 employees, 46 locations and seven subsidiaries, which is scale as decoration. The requisition fact is sharper because it is about how they operate rather than how big they are.",
+    "the industry proof line. OUTREACH_CRAFT asks for one, and there was no room under sixty words without cutting the coverage map finding, which is the better claim because he can check it himself against a tool he owns. Deltek's 45 percent unclear on return is in the study.",
+    "the killed build, the two refused builds, GeoNorth, and every word about what we would charge",
+    "anything about the values screen, the reputation check or how the company was chosen"
+  ],
+  "numbers_verified_against_claims": {
+    "requisition 2026-2731": "C08, C09, C10 verbatim",
+    "GovEagle as their AI tool": "C08 verbatim, 'our Artificial Intelligence (AI) Tool, GovEagle'",
+    "four of the eight duty lines": "the study's own coverage map, built from C10 to C14 against C48 to C51"
+  },
+  "voice_delta_note": "The writer pre-applied the two edits Talon predictably makes by hand, 'No strings' on the front of the ask and the company named in the study line. The critic read that as the `lengthened` pattern being MET rather than fed. Whether that is enough is a human call, and the READY TO PROMOTE proposal is in the delivery summary with the wording already drafted."
+}
