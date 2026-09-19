@@ -1,0 +1,611 @@
+{
+ "prd": {
+  "problem": "Requisition 2026-2731 asks one person at Dahlgren, posted at $130,000.00+ DOE, to handle \"participation in any and all data call activities as needed\" and to \"Support the development and scrubbing of key personnel resumes, so they align with solicitation requirements\" (C09, C11). That seat sits beside a standing Bid and Proposal team that already owns proposal process, scheduling and compliance (C12), and the answers a data call collects have to come back from people spread across 1,300 employees, 46 locations worldwide and seven subsidiaries (C03, C04, C05). The pipeline itself is already held in GovEagle, named in Tatitlek's own posting as its Artificial Intelligence tool (C08, C10). So the question is not whether Tatitlek has tooling here. It is narrower and more awkward than that. Nobody has measured what one data call actually takes to run end to end, so nobody can say whether it needs anything at all. We could not find it measured, and we can't measure it from outside. The Dahlgren seat will answer that question by inventing a personal method, one pursuit at a time, and that method becomes the thing any future tool has to displace.",
+  "after_state": "A proposal manager opens one board the morning after a data call goes out, sees every requirement with a named owner, a due date and a status, and knows in under a minute what is still outstanding and who is holding it, without a single message asking who owns what.",
+  "goals": [
+   "Hand over, free and before any engagement, a written map of which parts of the capture and proposal job GovEagle's own pages already say it covers, so nobody sells Tatitlek a second copy of a tool it is already paying for (C48, C49, C50, C51).",
+   "Establish a real measured baseline for one live data call, end to end, because no baseline exists today and every number after this one depends on it.",
+   "Produce the owner-map extraction method and a specification for a deterministic Data Call Tracker, with its acceptance bar written down before anyone builds anything.",
+   "Leave Tatitlek holding an artefact they can hand straight to GeoNorth, their own NAICS 518210 subsidiary (C05), and build themselves without us.",
+   "Land the method alongside the Dahlgren hire rather than after it, so the new seat starts on a shared method instead of a private one (C09).",
+   "Leave them able to say no. If the measurement shows the process holds, the recommendation we write is that they build nothing this quarter, and we would rather write that than sell past it."
+  ],
+  "non_goals": [
+   {
+    "item": "Building, or letting anyone sell them, anything GovEagle's own pages already name. That covers RFP shredding, the compliance matrix, outline generation, Color Team reviews, the capability matrix, pWin, bid/no-bid analysis, opportunity fit score, task area matching, pipeline analytics, and the drafting layer that pulls from past proposals and past-performance write-ups.",
+    "reason": "It is on an invoice Tatitlek already pays (C48, C49, C50, C51). This restraint is the most valuable thing in the engagement and it is the part we charge nothing for. Our own first candidate build, a past-performance evidence engine, died on exactly this test once we read GovEagle's pages, and we would rather report that than ship it."
+   },
+   {
+    "item": "No model writes, judges or vouches for any answer. Nothing we specify generates prose into a submitted volume, and nothing decides whether a returned answer is true.",
+    "reason": "A contractor has alleged in the Court of Federal Claims that the Army used AI that hallucinated during a source selection, and the Army conceded one identified weakness was not supported by the record (C37, C38). Under the self-performance climate the Pentagon described in January, the attestation behind a fact needs a person's name on it (C25). A tracker tracks status. A human owns the fact."
+   },
+   {
+    "item": "We do not ask for an exclusive build, and we do not want to host this.",
+    "reason": "GeoNorth Information Systems is Tatitlek's own information systems subsidiary (C05) and can build and host this. A company that owns one would be right to be insulted by any other position. We sell the specification, the extraction method, the acceptance bar and the speed."
+   },
+   {
+    "item": "Nothing resume-related in Phase 1, despite resume scrubbing sitting in the same requisition clause (C11).",
+    "reason": "Whether GovEagle handles key-personnel resumes is unverified in both directions. It is named on no GovEagle page we fetched, and the search summaries that claim it are not evidence. Specifying a build against an unanswered question is how a prospect ends up buying a duplicate. It is open question 1 and it stays one."
+   },
+   {
+    "item": "No touching price to win, bid/no-bid, or any gate decision.",
+    "reason": "The posting keeps price to win analysis with the human presenting to the Director and senior leadership (C14), the cost of an error there is an award, and GovEagle already ships bid/no-bid analysis, an opportunity fit score and early go or no go guidance (C48, C49)."
+   },
+   {
+    "item": "No shareholder records, no applicant tracking data, no HR systems.",
+    "reason": "The hiring preference for shareholders, shareholder descendants and shareholder spouses (C18) touches the corporation's obligation to its own people. Those records are private and consent-bound, we have never seen them, and it is the least forgiving surface this company has."
+   },
+   {
+    "item": "No voice agent, no front desk automation, no chat layer.",
+    "reason": "A 1,300-person federal services contractor across 46 locations does not win or lose on any of it (C03, C04). We mention it only because it is what most shops would have proposed."
+   },
+   {
+    "item": "No integration work in Phase 1, including any GovEagle API build.",
+    "reason": "Whether the compliance matrix can be exported in a machine-readable form is unverified, and the tracker reads against it. Phase 1 answers that question rather than assuming an answer and blowing the estimate on it."
+   }
+  ],
+  "metrics": [
+   {
+    "metric": "Cycle time for one complete data call, from issue to the last answer in hand, plus the spread across individual requirements.",
+    "baseline": "NONE EXISTS, and we will not invent one. Nothing we fetched says how long a Tatitlek data call takes. The entire evidence base is one clause in requisition 2026-2731 (C11). Measurement method: a timestamped log kept alongside one real, live data call, recording issue time, every requirement, its named owner, every chase and every answer returned, with the proposal manager confirming the log is complete before we close it.",
+    "target": "A defensible number with the per-requirement spread beside it, every requirement in the log accounted for with none dropped, signed off by the Bid and Proposal team as the baseline of record (C12). The target here is that the number exists and is trusted, not that it lands anywhere in particular, because setting a target before the baseline exists would be inventing the baseline.",
+    "timeframe": "Within one pursuit cycle of Phase 1 starting, and in their hands within five working days of that data call closing."
+   },
+   {
+    "metric": "Share of that data call's requirements whose owner is resolved by rule alone, with no human lookup.",
+    "baseline": "UNKNOWN and assumed absent. No owner map across the seven subsidiaries and 46 locations has ever been seen and it may not exist as a structured artefact at all (C04, C05). Measurement method: run the owner-map extraction on the same measured data call and count resolved against total, writing down every miss verbatim.",
+    "target": "At least 80 percent resolved by rule, every miss listed. That 80 is a bar we set, not a figure about their business. Below it, the honest report is that rules alone are the wrong spine, we say so at the gate, and the miss list becomes the evidence for whether one narrow model call is ever earned later.",
+    "timeframe": "Same measurement window, reported in the same document as the baseline."
+   },
+   {
+    "metric": "Count of items in the Phase 1 specification that duplicate a capability GovEagle already provides.",
+    "baseline": "Our starting list is the coverage map itself, checked against GovEagle's platform, solutioning, proposals and automation pages (C48, C49, C50, C51). That is a bounded fetch and not proof of absence, so their GovEagle administrator marks each line confirmed, corrected or unknown.",
+    "target": "Zero. Checked line by line at the funding gate, with their administrator's markup on the record. Any line that comes back corrected is struck from the specification before a build is quoted, not after.",
+    "timeframe": "Before any build money is committed, which is the end of Phase 1."
+   },
+   {
+    "metric": "Requirements still outstanding 48 hours before the internal submission cutoff, on the first two data calls run against the built tracker. This one is conditional and only exists if Phase 1 clears its gate.",
+    "baseline": "Set by metric 1, not by us. It does not exist yet and no number belongs here until that measurement lands.",
+    "target": "At or below half the measured baseline count, with every remaining item showing a named owner and a last-chased timestamp. Falsified if either of the two calls misses it, and a miss means the recommendation is to stop rather than to extend.",
+    "timeframe": "Within two pursuit cycles after the tracker goes live."
+   }
+  ],
+  "phase1_must": [
+   "The GovEagle coverage map, free and first. Line by line against the capabilities GovEagle's own pages name, plus a plain statement of which pages we read and what we looked for and did not find on them.",
+   "The two questions only their GovEagle account rep can answer, written so they can be forwarded to the rep as they stand.",
+   "One real live data call instrumented end to end, with the timestamped log, the completed baseline number and the per-requirement spread.",
+   "The owner-map extraction method, run on that same data call, producing the requirement-to-owner rules and a verbatim list of every requirement the rules missed.",
+   "The Data Call Tracker specification: the data model, the rules spine of owner routing, due dates, reminders and escalation, the completeness board read against the compliance matrix GovEagle already produces (C48, C51), the human approval points, and the acceptance bar written before anyone builds.",
+   "A written answer on whether the compliance matrix can be exported machine-readably, with a manual paste-in fallback specified so the tracker never depends on an integration nobody has confirmed exists.",
+   "A written gate recommendation with a real no-build option, including the sentence that if the measurement says the process holds, they should buy nothing further from us."
+  ],
+  "phase1_later": [
+   "The tracker itself, built and hosted against the specification, ideally by GeoNorth (C05).",
+   "A second and third measured data call, the cheapest way to narrow a sample of one.",
+   "An LLM disclosure and incident register, which is a form, a table and an owner, with GovEagle as row one (C08). Worth noting that GSA posted an AI-specific acquisition rule to the Federal Register on June 17th, 2026 (C45), and that its 120 day disclosure and 72 hour incident clauses are PROPOSED and not in force (C46, C47). Whether Tatitlek falls in scope is unestablished, since those clauses address models used in the performance of a contract and capture is pre-award. This is cheap insurance on a conditional clock, nothing more.",
+   "One narrow model call at the single node that could earn it, mapping a free-text requirement to an owner when no rule matches, earned only if metric 2's miss list shows the rules need it.",
+   "Rolling the tracker past the first pursuit to the other subsidiaries and locations.",
+   "Anything resume-related, and only after open question 1 comes back from their GovEagle rep."
+  ],
+  "need_from_you": [
+   "One live data call we can instrument, in flight, with the proposal manager's agreement. Without a live one there is no baseline and Phase 1 has nothing to measure. This is the single dependency that can move the whole timeline.",
+   "Thirty to forty five minutes with whoever administers GovEagle at Tatitlek, to mark our coverage map confirmed, corrected or unknown line by line.",
+   "An answer from your GovEagle account rep on the two open questions below. We can't get it, only the account holder can.",
+   "A named proposal manager as decision owner. The tracker never picks who gets chased, a human approves the recipient list, and the system only sends on a schedule that human set.",
+   "One real compliance matrix export, or a screenshot of what it looks like today, so the specification is written against your actual artefact rather than our guess at it.",
+   "A named contact at GeoNorth if GeoNorth is to build it, so the specification is written to their stack and not to ours.",
+   "Written sign-off from the Bid and Proposal team that the measured number is the baseline of record (C12). A baseline nobody signs is a number nobody defends at the next gate.",
+   "A decision on what the log may record. Our default is requirement, owner, timestamps and status, and never the content of an answer, because data call answers can be business-sensitive. Say the word and we narrow it further."
+  ],
+  "risks": [
+   {
+    "risk": "GovEagle may already cover data calls. Team assignments is named on its platform page (C48) and requirement-to-outline mapping on its proposals page (C51). Our reading that those sit inside a pursuit rather than reaching contributors across seven subsidiaries and 46 locations is our inference, not a fetched fact, and it is the single thing most likely to make this whole recommendation wrong.",
+    "mitigation": "The coverage map is the first deliverable and it costs nothing. If their administrator or rep says Team assignments already does this, we stop, write that down, and Tatitlek has spent zero dollars finding out. We would rather be wrong for free than right for a fee."
+   },
+   {
+    "risk": "The measurement may show the process is fine. Nothing we fetched says their data calls are slow, and we are not going to pretend otherwise. One clause in one posting is the entire evidence base (C11).",
+    "mitigation": "That outcome is a deliverable, not a failure. Phase 1 buys the right to stop, which is worth the price of not building the wrong thing. The gate is written with a real no-build branch and we are saying so before they pay, not after."
+   },
+   {
+    "risk": "The owner map may not exist as a structured artefact, and staleness is the top failure mode of any version that does. People move across 46 locations and seven subsidiaries (C04, C05).",
+    "mitigation": "The extraction method is Phase 1 work, not an assumption. The specification carries a named freshness owner and a re-verification cadence as an acceptance criterion, so a stale map fails the bar rather than quietly producing wrong chases. If the rules resolve under 80 percent, we report that rules are the wrong spine instead of papering over the gap with a model."
+   },
+   {
+    "risk": "GeoNorth can build this, so we are recommending something a subsidiary could do in-house.",
+    "mitigation": "Said here first, unprompted. We do not ask for an exclusive build and we do not want to host it. If Tatitlek takes the specification, the extraction method and the acceptance bar and hands the lot to GeoNorth, the engagement did its job and we will say so in writing."
+   },
+   {
+    "risk": "One measured data call is a sample of one, and a single pursuit can be unrepresentative.",
+    "mitigation": "We report it as a sample of one, with the per-requirement spread beside the headline figure, and the acceptance bar is set against the range rather than the single number. A second measured call sits in the Next lane as the cheapest way to narrow it."
+   },
+   {
+    "risk": "The Dahlgren seat may be filled and running a private method before any of this lands (C09).",
+    "mitigation": "Timing is the reason Phase 1 is weeks and not months. If the seat is already filled and a method is in place, the measurement still stands and the specification bends to their method rather than the other way round. Displacing a working habit is not something we would ask them to do."
+   },
+   {
+    "risk": "If the tracker gets built and underperforms, Tatitlek has paid for a board nobody opens.",
+    "mitigation": "Funding is staged. The build is Phase 2 and is released only if Phase 1's numbers clear the gate. If the built tracker misses the outstanding-count target across two pursuits, our written recommendation is to stop, and we will write what we got wrong. The measured baseline and the specification stay theirs either way, which is the part that holds value even in the bad case."
+   },
+   {
+    "risk": "Deltek's 2026 study reports 45 percent of contractors unclear on the return on AI investment, with only 5 percent fully developed in AI maturity (C31), in a field where 90 percent report using AI in some capacity (C28). The base rate for proving payback here is poor.",
+    "mitigation": "We are not asking them to beat that base rate on faith. Phase 1 produces a measurement rather than a tool, which is the one thing that turns an unclear return into a checkable one. It is also why the shipped tracker has no model in its path at all."
+   }
+  ],
+  "open_questions": [
+   {
+    "q": "Does GovEagle handle key-personnel resumes? Resume scrubbing sits in the same requisition clause as data call participation (C11), so it matters. We read GovEagle's platform, solutioning, proposals and automation pages and found resumes named on none of them (C48, C49, C50, C51). Search-engine summaries assert that it does, which is not evidence we will stand behind. It is unverified in both directions and we are not going to resolve it for you in either.",
+    "owner": "Tatitlek's GovEagle account rep, asked by Mark Wamsher. We can't settle it from outside and will not guess."
+   },
+   {
+    "q": "Does GovEagle's Team assignments (C48) reach contributors outside the proposal team, across the seven subsidiaries and 46 locations (C04, C05)? Our reading that it sits inside a pursuit is an inference, not a fetched fact.",
+    "owner": "Tatitlek's GovEagle account rep plus whoever administers the tool internally. If the answer is yes, this build should not happen and we will say so."
+   },
+   {
+    "q": "Can the compliance matrix be exported from GovEagle in a machine-readable form? The completeness board reads against it (C48, C51), so the answer changes the specification.",
+    "owner": "Tatitlek's GovEagle administrator, answered inside Phase 1."
+   },
+   {
+    "q": "How many pursuits actually run a data call in a quarter? We have no figure, we will not invent one, and any return estimate stays a range with visible assumptions until Tatitlek supplies the real number.",
+    "owner": "Mark Wamsher and the BD Director."
+   },
+   {
+    "q": "Who owns the owner map once it exists, and who is accountable for keeping it current? A map with no owner goes stale, and a stale map chases the wrong people.",
+    "owner": "Tatitlek BD leadership, with GeoNorth if GeoNorth hosts it."
+   },
+   {
+    "q": "Does the Dahlgren seat run data calls, or does the Bid and Proposal team? The posting has the seat participating while the Bid and Proposal team owns process, scheduling and compliance (C11, C12), which reads as shared rather than assigned.",
+    "owner": "Mark Wamsher."
+   }
+  ]
+ },
+ "design": {
+  "one_liner": "Build Tatitlek a deterministic Data Call Tracker that takes the compliance matrix GovEagle already produces (C48, C51), routes each required answer to a named owner across the seven subsidiaries and 46 locations (C04, C05), chases on a schedule a human set, and shows the Bid and Proposal team (C12) one honest completeness readout, so the outcome moved is the hours a proposal manager spends finding out what is still outstanding, measured against a baseline we take first.",
+  "architecture": {
+   "nodes": [
+    {
+     "id": "pm",
+     "label": "Proposal manager and capture lead, Bid and Proposal team (C12)",
+     "kind": "user"
+    },
+    {
+     "id": "goveagle",
+     "label": "GovEagle, compliance matrix export (C08, C48, C51)",
+     "kind": "external"
+    },
+    {
+     "id": "intake",
+     "label": "Requirement intake and rules-based owner routing",
+     "kind": "build"
+    },
+    {
+     "id": "ownermap",
+     "label": "Owner map, seven subsidiaries and 46 locations (C04, C05)",
+     "kind": "data"
+    },
+    {
+     "id": "scheduler",
+     "label": "Due dates, reminders and escalation ladder",
+     "kind": "build"
+    },
+    {
+     "id": "mail",
+     "label": "Tatitlek corporate mail tenant and SSO",
+     "kind": "external"
+    },
+    {
+     "id": "contributors",
+     "label": "Subsidiary contributors who own an answer",
+     "kind": "user"
+    },
+    {
+     "id": "board",
+     "label": "Completeness board and append-only audit log",
+     "kind": "build"
+    }
+   ],
+   "edges": [
+    {
+     "from": "goveagle",
+     "to": "intake",
+     "label": ""
+    },
+    {
+     "from": "pm",
+     "to": "intake",
+     "label": ""
+    },
+    {
+     "from": "pm",
+     "to": "ownermap",
+     "label": ""
+    },
+    {
+     "from": "ownermap",
+     "to": "intake",
+     "label": ""
+    },
+    {
+     "from": "intake",
+     "to": "scheduler",
+     "label": ""
+    },
+    {
+     "from": "scheduler",
+     "to": "mail",
+     "label": ""
+    },
+    {
+     "from": "mail",
+     "to": "contributors",
+     "label": ""
+    },
+    {
+     "from": "contributors",
+     "to": "board",
+     "label": ""
+    },
+    {
+     "from": "scheduler",
+     "to": "board",
+     "label": ""
+    },
+    {
+     "from": "board",
+     "to": "pm",
+     "label": ""
+    }
+   ],
+   "caption": "Three build nodes, one data store, no model anywhere in the shipped path, and that is the honest answer rather than a gap. GovEagle stays the source of the requirement set, the tracker only tracks status against it. Requirements arrive as an export or a pasted CSV, rules match each one to a named owner from the owner map, the proposal manager approves the recipient list before anything sends, the scheduler chases on a cadence a human set through Tatitlek's own mail tenant so a request arrives from a tatitlek.com address, contributors mark status and attach a pointer to their own file, and the board counts what is outstanding. Every build node ships as one deployable that GeoNorth Information Systems, their own NAICS 518210 subsidiary (C05), hosts and owns."
+  },
+  "build_vs_buy": [
+   {
+    "component": "Identity and single sign-on",
+    "decision": "buy",
+    "why": "Their corporate tenant already authenticates 1,300 employees (C03). The tracker speaks OIDC to whatever identity provider GeoNorth names and keeps no password store and no second user directory, because a tracker that invents its own logins across 46 locations (C04) will be abandoned by month two."
+   },
+   {
+    "component": "Notification transport",
+    "decision": "buy",
+    "why": "Chases go through Tatitlek's own mail tenant, not through a sending domain we stand up. A data call request from an unfamiliar domain lands in quarantine, and deliverability is a solved commodity that nobody should pay us to reinvent."
+   },
+   {
+    "component": "Datastore, scheduler and queue",
+    "decision": "buy",
+    "why": "Managed Postgres plus a job table and a managed cron in whichever cloud GeoNorth already operates. There is nothing differentiated about storing thirty rows per pursuit and waking up daily."
+   },
+   {
+    "component": "A generic work tracker, Smartsheet or SharePoint list or Jira, instead of software",
+    "decision": "buy",
+    "why": "This row is deliberately here and it is the cheapest honest outcome. If the measured data call shows a low item count and few chases, the right answer is a bought list plus the owner map plus a written cadence, and we say so rather than build. The specification is worth more than the code, and the code should only exist if the measurement earns it."
+   },
+   {
+    "component": "GovEagle compliance matrix ingest adapter",
+    "decision": "build",
+    "why": "Nobody sells a bridge from GovEagle's compliance matrix (C48, C51) into a tracker, and whether an export or API surface exists at all is unverified, so the adapter is built with a manual CSV upload path as the first-class fallback rather than as a degraded mode. Thin, deterministic, and testable against a real past matrix file."
+   },
+   {
+    "component": "Owner map across seven subsidiaries and 46 locations",
+    "decision": "build",
+    "why": "This is the differentiator and the only part of the design that could not be bought. No product knows that a given contract-data question belongs to a named person at a named subsidiary (C05) at a named location (C04). The extraction method, the review cadence and the staleness report are the actual intellectual property in this engagement, and they outlive any tool it is loaded into."
+   },
+   {
+    "component": "Rules-based routing, escalation ladder and completeness board",
+    "decision": "build",
+    "why": "Small enough that buying it means buying a large product to use one screen, and the logic is Tatitlek-shaped, one pursuit, one compliance matrix, one due date per item, one escalation path into the Bid and Proposal team that owns scheduling and compliance (C12). Rules across the whole spine means zero required model steps, no compounding error chain, and exhaustive tests."
+   },
+   {
+    "component": "Hosting, operation and long-term ownership",
+    "decision": "build",
+    "why": "Built and run by GeoNorth, not by us, and we are writing that down unprompted. GeoNorth Information Systems is their own NAICS 518210 subsidiary (C05), it can build this, and a company that owns an information-systems house would be right to be insulted by a dependency pitch. We sell the specification, the owner-map extraction, the acceptance bar and the speed of getting there alongside the Dahlgren capture seat (C09). Repo, runbook, tests and data model transfer at the end of the MVP phase, and there is no licence and no hosting invoice from us."
+   }
+  ],
+  "cross_cutting": {
+   "auth": "OIDC against Tatitlek's existing identity provider through GeoNorth, with three roles. Proposal manager is the only role that can create a pursuit, approve the recipient list and edit the owner map. Contributor sees only the items assigned to them on one pursuit. Leadership gets read-only counts with no requirement text. Contributors who have no seat in the tenant, which is likely somewhere across 46 locations (C04), get a single-purpose expiring link scoped to their own items on one pursuit, never a standing account. No account is ever created by the system, because the identity provider is the system of record for who works here and the tracker isn't.",
+   "data_security": "The tracker holds status, not substance. An item stores a requirement identifier, a section reference, a short title, an owner, a due date and a state. Full requirement text stays in GovEagle and answer files stay in whatever system the contributor already uses, with the tracker holding only a pointer, which is what keeps controlled and export-restricted material out of it by construction rather than by policy. BD-releasable material only, nothing pulled from a DoD site, and no personal data. The owner map stores a work email, a role, a subsidiary and a location, never an employee record, never a resume, never anything shareholder related (C18). Retention is item-level rows purged a set number of days after award decision, with only de-identified cycle-time aggregates kept, so the historical value survives and the exposure does not. Hosted in GeoNorth's environment under their existing controls, which is also why the security review is theirs to run and not ours to assert.",
+   "observability": "Every state change appends to an immutable audit log with who, what, when and by which route, because the question a proposal manager actually asks under deadline is when this was last chased and by whom. Beyond that, four instruments. Per-item cycle time from first request to accepted, compared against the baseline taken in the spike. Reminder delivery receipts, so a silent chase is visible as a failure rather than as a non-response. A weekly owner-map staleness report listing every entry past its review date, since staleness is the top failure mode of the whole design. A rules-miss counter recording every item no rule could route, which is the only measurement that could ever earn a single model call later, and it has to be earned rather than assumed.",
+   "failure_modes": "Six, mapped onto the nodes. Owner map goes stale after a reorganisation or a departure, so entries carry review dates, the staleness report is weekly, and a bounced or out-of-office reply flags the entry rather than silently retrying. No GovEagle export surface exists, so CSV upload is a first-class path and the walking skeleton runs on it. Chases go to the wrong person, so the proposal manager approves the recipient list before the first send, re-routing is one click, and every re-route increments a counter that tells us the rules are wrong. Notification fatigue, so the cadence and the escalation ladder are set by a human per pursuit and capped, never tuned by the system. A contributor never logs in, so status can also be captured from a structured email reply and, failing that, entered by the proposal manager on their behalf with the audit log recording that it was entered on behalf. The worst one is social rather than technical, somebody reading a green board as proof an answer is correct, so the board states submitted by a named person at a time and never states correct, and nothing in the product vouches for the truth of a fact."
+  },
+  "goals": [
+   "Give the Bid and Proposal team (C12) one readout of what is outstanding on a live data call, read against the compliance matrix GovEagle already produces (C48, C51), so nobody assembles that answer by hand from an inbox.",
+   "Route each required answer to a named owner at a named subsidiary and location (C04, C05) by deterministic rule, with the proposal manager approving the recipient list before anything sends.",
+   "Chase and escalate on a cadence a human set, from Tatitlek's own mail domain, with delivery receipts so silence is distinguishable from failure.",
+   "Produce a measured baseline for one real data call first, so any further spend is gated on their own numbers rather than on an industry survey figure (C29 is a self-report about other firms and says nothing about Tatitlek).",
+   "Keep zero required model steps in the shipped path, so every rule can be tested exhaustively and nothing degrades silently.",
+   "Build the owner map as a durable asset with review dates and a staleness report, because the map is worth more than the software around it.",
+   "Hand the whole thing to GeoNorth (C05) as a repo, a runbook, a test suite and a data model, with no licence and no hosting dependency on us."
+  ],
+  "non_goals": [
+   {
+    "item": "RFP shredding, compliance matrix generation, outline generation, Color Team reviews, capability matrix, pWin, bid and no-bid analysis, opportunity fit score, task area matching, pipeline analytics, and drafting from past-performance write-ups",
+    "reason": "GovEagle's own pages name every one of these (C48, C49, C50, C51) and Tatitlek already runs GovEagle in capture (C08, C10). Building a second copy of a tool that is already on an invoice they pay is waste, and proposing it to the Vice President of Business Development whose own requisition names that tool would be worse than waste."
+   },
+   {
+    "item": "Generating any prose that lands in a submitted technical volume",
+    "reason": "That is exactly the surface the TRAX allegation concerns, an allegation in live litigation about the government's own use of AI in source selection (C37, C38). The tracker tracks status and never authors a fact."
+   },
+   {
+    "item": "Judging whether a returned answer is true, complete or compliant",
+    "reason": "Under the self-performance climate the Pentagon described (C25), the attestation behind a fact needs a person's name on it. A model may normalise a returned answer's format and may never vouch for its truth, and the board shows who submitted what and when, never that it is correct."
+   },
+   {
+    "item": "Anything touching key-personnel resumes",
+    "reason": "Two independent reasons. Resumes are personal data and personal data stays out of this system entirely. Separately, whether GovEagle already handles key-personnel resumes is unverified in both directions, named on no page we fetched and asserted only by search summaries, so it stays a question for their GovEagle rep rather than a build."
+   },
+   {
+    "item": "Any price-to-win number or bid recommendation",
+    "reason": "Price to win is a named responsibility of the capture role and goes to the Director and senior leadership (C14). The cost of error is an award decision, so it stays human."
+   },
+   {
+    "item": "An LLM anywhere in the shipped path",
+    "reason": "It has not been earned. The one node that could ever justify a single call is mapping a free-text requirement to an owner when no rule matches, and the rules-miss counter has to show a real miss rate first. Adding a model before that is the agent-washing this design exists to avoid."
+   },
+   {
+    "item": "Becoming a system of record for employees, org structure or HR data",
+    "reason": "The identity provider and their HR system already are. The owner map is a routing table of roles and work addresses that points at them, and it holds nothing that would make it an HR record."
+   },
+   {
+    "item": "Any integration with the iCIMS careers board",
+    "reason": "That is hiring data about individuals, not proposal data, and pulling it in would import personal data for no benefit to a data call."
+   },
+   {
+    "item": "An exclusive build, a licence, or a hosted service we run for them",
+    "reason": "GeoNorth is a NAICS 518210 subsidiary of this same corporation (C05) and can build and host this. Designing for dependency would be designing against their own interests, so the design targets handover from day one."
+   },
+   {
+    "item": "Any claim about the proposed GSA AI acquisition rule applying to this system",
+    "reason": "C45, C46 and C47 are proposed and not in force, and C46 covers models used in the performance of a contract while capture and bidding are pre-award. There is no model in this system anyway, so the question doesn't arise here."
+   }
+  ],
+  "riskiest_assumption": "That a Tatitlek data call loses real, measurable time to status chasing that GovEagle is not already handling. Two things have to be true and neither is verified. First, that data calls cost them time at all, where the entire evidence base is one clause in one job posting saying the new hire participates in data call activities (C11). Nothing fetched says their data calls are slow, and we will not say it. Second, that GovEagle's Team assignments (C48) sit inside the pursuit team rather than reaching contributors across seven subsidiaries and 46 locations (C04, C05). That second one is an engineer's inference from a bounded fetch of four GovEagle pages, it is not a fetched fact, and it is the single thing most likely to make this design wrong. If either half fails, the correct outcome is that Tatitlek builds nothing and the free coverage map was the whole deliverable. The technology is not the risk. Rules, a scheduler and a board are the lowest-risk thing on the board, and a well-built solution to a problem that isn't there is still worthless.",
+  "spike_to_retire_it": "One measured data call, run before any code is written, in three steps. STEP ONE, three questions in writing to their GovEagle account rep, which cost nothing and which only that rep can answer. Does GovEagle handle key-personnel resumes. Do Team assignments reach contributors outside the proposal team, across subsidiaries and locations. Does the compliance matrix have an export or API surface. A yes to the second question ends the engagement honestly and we will say so in the same email. STEP TWO, agree the go and no-go thresholds BEFORE the measurement starts, with Tatitlek setting the final numbers, so the result can't be argued into a purchase afterwards. Our proposed starting point is build nothing if fewer than a quarter of items need more than one chase, and if the proposal manager's own chase time comes in under four hours for the pursuit. STEP THREE, instrument exactly one live data call and change nothing about how it runs. A shared sheet we supply, one row per required item, capturing first request sent, every chase, answer received, answer accepted, the recipient's subsidiary and location, and any item that had to be re-routed because the first recipient was wrong. The readout is eight numbers. Item count, distinct owners, distinct subsidiaries and locations touched, median and 90th-percentile hours from request to accepted, chases per item, re-route rate, and proposal manager hours spent chasing. A ninth number decides the architecture rather than the go decision, the share of items a simple section-to-function rule would have routed correctly, which is the rules-miss rate the whole deterministic design rests on. Time box, two days to instrument, the length of one real pursuit's data call for the measurement itself, two days to read out. If the numbers clear the thresholds Tatitlek set, the walking skeleton starts. If they don't, we write that down and nobody buys anything.",
+  "delivery": {
+   "walking_skeleton": "One pursuit, twenty requirement items, one reminder, end to end on crutches, running against a real past compliance matrix rather than synthetic data. Import that matrix as a CSV upload, since the export surface is unverified and the fallback path is the one that must work first. Rules route the twenty items against a hand-seeded owner map of about ten named owners the proposal manager approved. One reminder sends through Tatitlek's mail tenant. One contributor opens a scoped expiring link, marks an item submitted and attaches a pointer to their own file. The board reads one of twenty complete and the audit log carries the row. Stubbed on purpose, no escalation ladder, no digest, no multi-pursuit, no owner-map editor, no API ingest, and it runs on a GeoNorth sandbox from the first day so the handover target is never a later migration. It touches every node in the diagram and it actually runs.",
+   "then_mvp": "Flesh out in this order. Full escalation ladder with a per-pursuit cadence a human sets and a cap. Bulk import plus the GovEagle export adapter if the rep confirms a surface exists. Owner-map editor with review dates, the weekly staleness report and bounce flagging. Structured email-reply status capture for contributors who never log in, plus enter-on-behalf with audit. Read-only leadership counts. Per-item cycle-time metrics reported against the spike baseline, which is the only way anyone can tell whether this worked. MVP is one live pursuit run entirely on the tracker by the Bid and Proposal team alongside the Dahlgren capture seat (C09), followed by the handover package to GeoNorth, repo, runbook, test suite, data model, owner-map extraction method and the written acceptance bar.",
+   "estimate_range": "Ranges at concept, wide on purpose, each tied to a phase and a confidence. PHASE 0, the GovEagle coverage map and the three questions for their rep, already done and free, zero cost to them, high confidence because it is finished. PHASE 1, the spike, two to four weeks calendar and twenty to forty hours of our time, about 80 percent confidence, the variance being their pursuit cadence rather than our scope. PHASE 2, the walking skeleton, two to four weeks after the spike clears, about 65 percent confidence, assuming a CSV path and a GeoNorth sandbox available in week one. PHASE 3, flesh out to MVP, a further six to twelve weeks, about 50 percent confidence, which is the Cone of Uncertainty being honest at concept stage. The upper end doubles if no export surface exists and the owner map has to be extracted by interview across seven subsidiaries, because that is people-availability work and not engineering work. PHASE 4, handover to GeoNorth, one to two weeks, about 70 percent confidence. These numbers describe effort we can estimate. Nothing here estimates their benefit, because no baseline exists yet and that is what Phase 1 is for.",
+   "what_narrows_it": "Six things, in the order they would move the range most. The measured data call itself, which replaces every assumption about item count, owner count and chase volume with their own numbers. A yes or no from their GovEagle rep on whether Team assignments reach contributors outside the proposal team, which is the answer that could end the project rather than narrow it. A yes or no on a compliance matrix export or API, which is worth roughly a fortnight of the Phase 3 band. Seeing one real compliance matrix export file, because the adapter is only as predictable as the format it reads. Their actual pursuit count per quarter, which we do not have and will not guess, since the figure floated earlier in this analysis was invented and is not used in any number here. GeoNorth naming its hosting stack and identity provider, which converts three integration unknowns into configuration."
+  }
+ },
+ "roadmap": {
+  "now": [
+   {
+    "item": "Hand over the GovEagle coverage map, free, before anything is bought. Every duty named in your own requisition 2026-2731 gets marked covered, not covered, or unverified, against a GovEagle page we actually fetched. Bid/no-bid analysis, opportunity fit score, task area matching, capability matrix, RFP shredding, compliance matrix, pWin, outline generation and the drafting layer that already pulls from past proposals and past-performance write-ups all come back covered (C48, C49, C50, C51). Data calls appear on no GovEagle page we fetched, which is what we searched for and did not find, never a finding. Two questions ride along with it and only your GovEagle rep can answer them. Does GovEagle handle key-personnel resumes, which is unverified in both directions and which we refuse to settle for you. Does Team assignments reach contributors outside the proposal team, across the seven subsidiaries (C05) and the 46 locations (C04).",
+    "metric": "Count of the duties in requisition 2026-2731 resolved to covered, not covered, or unverified, each carrying the page it came from. Success is that the map takes scope out of our own proposal rather than adding it. Second metric, both rep questions answered in writing within two weeks of you asking them.",
+    "why_first": "It costs you nothing and it can end this engagement before a dollar moves. It has already proved itself once. The same fetch killed the build we were going to recommend, a Key Personnel and Past Performance Evidence Engine that topped our own scoring, because GovEagle's own pages say it maps task areas to past performance, matches PWS requirements to your strongest projects, and drafts from past-performance write-ups (C49, C50). We would have sold you a second copy of a tool you already pay for, to the Vice President of Business Development whose own requisition names it."
+   },
+   {
+    "item": "Measure one real data call end to end, on one live pursuit, after September 30th. Request issued through to last answer received. Nothing gets built and nothing gets changed, we instrument what already happens and write the numbers down.",
+    "metric": "Six numbers that do not exist anywhere today. Elapsed hours from the request going out to the last answer arriving. Count of distinct people asked across subsidiaries and locations. Count of chase rounds. Count of items where the first person asked was not the person holding the answer. Count of compliance-matrix items still outstanding at your own internal cut-off. Hours the proposal manager spent routing and chasing, counted separately from hours spent reviewing.",
+    "why_first": "This is the walking skeleton, and it sits on the weakest leg of our own case, which we would rather state than hide. Nothing we fetched tells us how your data calls run today. The entire evidence base is one clause in requisition 2026-2731 saying the new hire participates in any and all data call activities (C11). No baseline exists, so a tool bought before a measurement is a guess with an invoice attached. It is the smallest job on this board and it is the only one that produces a hard result the rest of the roadmap can be funded from. The clock is the Dahlgren seat, requisition 2026-2731, live now at $130,000 and up (C09). Whoever fills it will invent a personal manual method for the data-call work inside a quarter, and that method becomes the habit any tool then has to displace. Landing the measurement alongside that hire costs a fraction of landing it afterwards, and that is the only genuine cost of delay on the board."
+   },
+   {
+    "item": "Extract the owner map for that same pursuit and write down the method that produced it, so your team can run it again without us. Who, across the seven subsidiaries and 46 locations, owns which kind of answer, tied line by line to the compliance matrix GovEagle already produces (C48, C51).",
+    "metric": "Share of that pursuit's compliance-matrix items with a named owner resolved by a written rule rather than by asking somebody. Recorded as a number, not as a judgement. Second metric, the method is written clearly enough that your own team repeats the extraction on a second pursuit with nobody from us in the room.",
+    "why_first": "It falls out of the measurement at almost no extra cost, and it is the artefact you keep if you stop at the first gate. It is also the actual work behind any tracker. The honest top failure mode of a system like this is not accuracy, it is the owner map going stale, and that gets measured at Gate 4 rather than promised here."
+   }
+  ],
+  "next": [
+   {
+    "item": "The Data Call Tracker specification with its acceptance bar, written for you to own and to hand to GeoNorth. Owner-routing rules, due dates, a scheduler, reminders, escalation, and a completeness board read against the compliance matrix. Zero model steps in the shipped path, so there is no chain of probabilities to compound and every step can be tested exhaustively. It tracks status and never authors a fact, never vouches for the truth of an answer, and never writes into a submitted volume.",
+    "metric": "The acceptance bar is written in the six numbers the Now measurement produced, not in adjectives, so a finished tracker either clears it or does not. Second metric, GeoNorth can price and schedule the build from the specification without a single question back to us."
+   },
+   {
+    "item": "Run the tracker alongside your current method on one real data call, in the shadow, before it becomes anyone's method. Built by GeoNorth if they want it, which is the outcome we expect and the one we are writing the specification for.",
+    "metric": "Items outstanding at your internal cut-off, and re-routes to a different owner, both measured against the Now baseline on a pursuit of comparable size. Our proposed bar is that both at least halve. Below that it stays in the shadow and the spend stops."
+   },
+   {
+    "item": "Measure how often the owner-routing rules fail to resolve an owner from a free-text requirement. This is the one node in the whole system that could ever earn a single model call, and we are not proposing one now.",
+    "metric": "Rules-miss rate per pursuit. A model call gets considered only if the miss rate stays above a level you agree is worth paying to close, and it would be one call at one node with a human confirming the routing, never a chain of steps handing errors to each other."
+   },
+   {
+    "item": "Check the owner map for decay at 90 days against a live pursuit, because staleness is what kills this class of system, not accuracy.",
+    "metric": "Share of owner-map entries still correct 90 days after extraction. Below a bar you set, the honest answer is that the map needs a named owner inside Tatitlek or that it should not exist at all."
+   }
+  ],
+  "later": [
+   {
+    "item": "An LLM disclosure and incident register. Deterministic, a form and a table and a workflow, and we will say out loud that it is mostly not an AI build, because a regulatory attestation needs full transparency and that is a stated wrong-fit condition for a model. GovEagle is its first row (C08). The GSA acquisition rule posted to the Federal Register on June 17th is PROPOSED and not in force (C45, C46, C47), and whether your capture use falls inside it is unestablished, since C46 covers models used in the performance of a contract or task order and capture sits before award. We are not going to tell you that you are in scope for something nobody has ruled on. It is worth having on its own merits and it should ride along cheaply with other work rather than compete for a slot.",
+    "metric": "Time from a question arriving to a complete, current answer about which AI tools are in use, who operates each one, and which contract or task order it touches. Today that answer lives in people's heads, and a register turns it into a lookup."
+   },
+   {
+    "item": "Retrieval over the ordering terms of the vehicles and certifications you publish, ISO 9001:2015, ANC 8(a) sole source contracting, SEAPORT NXG, GSA STARS III, OASIS+ 8(a) and SB (C06). Each carries its own ordering process and its own reporting. Low risk, high frequency, and deliberately left fuzzy rather than broken down before there is a reason to.",
+    "metric": "Time for a capture manager to get the correct ordering path and its constraints for a named vehicle, measured against how long that takes today."
+   },
+   {
+    "item": "Retrieval over your own documents so the institutional memory is queryable. Your CEO has held the seat since 2006, your President since 2018, your COO since 2015 (C19, C20, C21). An organisation with tenures like that keeps a great deal of its memory in people and in files rather than in systems, and retrieval over material you already own is the only honest way to make that memory answerable. A Later bet, not a first build.",
+    "metric": "Share of the questions a new capture hire asks in their first 90 days that are answerable from documents rather than from somebody's recall."
+   },
+   {
+    "item": "REFUSED, and written here so nobody circles back later thinking we overlooked it. A Bid/No-Bid Capacity Check is not on any lane and is not something we will sell you. GovEagle already ships bid/no-bid analysis, opportunity fit score, pWin and early go or no go guidance (C48, C49). The part GovEagle does not cover lives inside your staffing, pricing and contracts systems, which is GeoNorth's home ground and not ours.",
+    "metric": "None. A refusal carries no metric and is not work we will do."
+   },
+   {
+    "item": "REFUSED. A Shareholder Preference Talent Matcher is not on any lane. The argument that would have sold it, that your job board contradicts your published hiring preference for shareholders, shareholder descendants and shareholder spouses, is on our own rejected list. Your Prince William Sound and Valdez work routes through a separate TCC hiring channel, so that board was never the whole hiring surface, and a pitch built on an inference we had already refused is the exact failure our fact-checking exists to stop.",
+    "metric": "None. A refusal carries no metric and is not work we will do."
+   },
+   {
+    "item": "REFUSED. The Key Personnel and Past Performance Evidence Engine is not on any lane, and it was our own highest-scoring candidate before the fetch. Its past-performance half duplicates what GovEagle already does, in the vendor's own words (C49, C50). Its resume half is unverified in both directions, so it is a question for your GovEagle rep and never a roadmap item, and we refuse to answer it for you in either direction.",
+    "metric": "None. A refusal carries no metric and is not work we will do."
+   }
+  ],
+  "gates": "Five gates, each one a real off-ramp, and the money is released only as the results prove out. GATE 0, zero cost, before anything is bought. The coverage map plus the two answers from your GovEagle rep. If the rep confirms that Team assignments already reaches contributors outside the proposal team across your subsidiaries and locations, the tracker is a duplicate and it dies here, unbought. We wrote that possibility down before you asked the question, because it is the single inference most likely to make this whole recommendation wrong. What you keep if you stop, the map, in writing, free. GATE 1, the honest one, and it is built so it can say stop. Before the measurement runs, your proposal manager and your BD lead write down what a process that holds looks like, on the six numbers in the Now lane. Then we measure one real data call and compare it against your written bar, not ours. If it clears, the right outcome is that you buy nothing further from us. We will say so in writing, the specification half of the scope does not get written and does not get billed, and the engagement ends there having cost you a few hours and a small fee. If you would rather we propose the bar, ours is that fewer than one item in five needed a re-route to a different owner, and nothing was outstanding at your internal cut-off. What you keep if you stop, the baseline numbers, the owner map for that pursuit, and the extraction method. GATE 2, build versus buy, and you should expect us to lose it. The specification goes to GeoNorth. If GeoNorth can price and schedule the build from it without a question back to us, GeoNorth builds it, hosts it and owns it, and that is a success for this engagement rather than a loss. We are selling a specification, a measurement and a method, never an exclusive build and never a dependency, and pretending otherwise to a company that owns a NAICS 518210 subsidiary would be an insult. GATE 3, the pilot gate. The tracker shadows the current method on one real data call before it becomes anyone's method. The bar is the Gate 1 baseline, and our proposal is that outstanding-at-cutoff and re-route counts both at least halve on a pursuit of comparable size. Below that it stays in the shadow and the spend stops. GATE 4, the maintenance gate at 90 days. The owner map gets checked for decay against a live pursuit. If it has gone stale past a bar you set, the honest answer is that it needs a named owner inside Tatitlek or that it should not exist, because a tracker sitting on a stale owner map is worse than email. WHAT WE NEED FROM YOU, named here because this is where the real schedule risk lives and it is never in our engineering. One live pursuit we can instrument after September 30th, with your proposal manager's permission. The compliance matrix for that pursuit exported out of GovEagle, and whether that export surface exists is unverified, so it is the first thing we check rather than the first thing we assume. Your proposal manager for about an hour at the start and an hour at the end. The two questions put to your GovEagle rep, which only you can ask. One named decision-maker for the gates, and we assume that is you unless you tell us otherwise.",
+  "high_integrity_dates": [
+   "September 19th, a commitment already met. The GovEagle coverage map is in this study today, free. There is no start date to wait for and nothing to sign to get it.",
+   "September 30th, a deliberate promise to stay out of your way. The federal fiscal year ends in eleven days and it is the heaviest solicitation and award window of your year. We will not instrument anything before it. The measured data call runs on the first suitable live pursuit after September 30th, because measuring your team inside that window would get in the way and would also produce a baseline you could fairly dismiss as atypical.",
+   "No other date here is a commitment, including any date tied to the Dahlgren seat, which has no published start date and which we will not invent one for. Everything else is anchored to your action rather than to a calendar, for example within a set number of days of receiving the compliance matrix export, because a date we do not control is a promise we can't keep."
+  ]
+ },
+ "roi": {
+  "cost_note": "Five year total cost of ownership, not a sticker price, and the largest line is not ours. The stack is our Phase 1 fee (a fixed band of $16,000 to $22,000 for one data call measured end to end, the owner map extraction method, and the Data Call Tracker specification with its acceptance bar), plus the internal build and integration if the measurement says build, plus training and change management stated in hours, plus five years of run cost, plus contingency. The build line is assumed to be internal work by GeoNorth Information Systems, their own NAICS 518210 subsidiary (C05), because a company that owns an information systems subsidiary should own this tool, and we are not asking for an exclusive build. Two things about the run line are worth saying out loud. There is NO inference or token cost, because the shipped tracker has no model in its path, it is rules, a scheduler and a completeness board. The real recurring cost is keeping the owner map fresh across seven subsidiaries and 46 locations (C04, C05), assumed at 70, 45 and 32 hours a year across the three columns, and staleness is the failure mode most likely to kill this tool. Training and change management is 140, 110 and 90 hours, priced at each column's own hourly rate, never described as included. Contingency is 20 percent in the conservative and most likely columns and 15 percent in the aggressive one. Our Phase 1 fee is roughly a quarter to a third of the assumed build cost it gates, which is the whole argument for buying the measurement before the tool.",
+  "benefits": [
+   {
+    "benefit": "Proposal coordinator time spent assembling and chasing outstanding data call answers",
+    "kind": "capacity",
+    "basis": "Assumed 8, 12 and 16 hours of coordination per data call across the three columns, at an assumed loaded rate of $62, $78 and $88 an hour, with an assumed cut of 25, 35 and 45 percent, against an assumed 10, 20 and 32 data calls a year. Not one of those numbers is measured at Tatitlek. The only verified salary anchor in the whole model is the $130,000.00+ posted floor on requisition 2026-2731 (C09), which is a floor on one Dahlgren seat and not a fully loaded cost.",
+    "note": "CAPACITY, and it converts to cash only by REDEPLOY, the coordinator's recovered hours going back into capture plans, price to win work and gate review material that the same posting already assigns (C13, C14). No hire is deferred and no backfill is avoided by this line, so we do not claim either. Nothing fetched says their data calls are slow, so this line assumes a coordination load exists, never that it is failing."
+   },
+   {
+    "benefit": "Time spent working out who across the subsidiaries owns a given answer",
+    "kind": "capacity",
+    "basis": "Assumed 3, 5 and 6 hours per data call at the same column rates, with an assumed cut of 35, 50 and 60 percent, against the same assumed volumes. The cut is higher here than anywhere else in the model because a written owner map is the part of the work a list genuinely removes.",
+    "note": "CAPACITY, converting by REDEPLOY. This is the one benefit that lands from Phase 1 ALONE, with or without a tracker, because the owner map is a Phase 1 deliverable and it is theirs to keep. It decays without upkeep, which is why the run cost carries owner map refresh hours in every column."
+   },
+   {
+    "benefit": "Contributor time lost to unclear, duplicated or re-sent requests across 46 locations",
+    "kind": "capacity",
+    "basis": "Assumed 8, 14 and 20 aggregate contributor hours per data call, spread across everyone a single data call touches, at an assumed $55, $62 and $68 an hour, with a deliberately low assumed cut of 15, 25 and 30 percent.",
+    "note": "CAPACITY, and the WEAKEST line in the stack, which is why its cut is the lowest. It arrives as fragmented minutes across many people in many places, and fragmented minutes are the hardest kind of capacity to redeploy into anything a CFO can see. Treat it as the line to delete first if the case has to stand on less."
+   },
+   {
+    "benefit": "Avoided rebuild of a tracker specified without a measured baseline",
+    "kind": "cash",
+    "basis": "Assumed one such rebuild every five years (0.2 events a year), at an assumed rebuild cost of $20,000, $25,000 and $30,000, with an assumed 40, 50 and 60 percent of that avoided by holding a measured baseline and a written acceptance bar before anyone writes code.",
+    "note": "CASH, by AVOID-SPEND, and it is the decision data line. It is the only benefit that exists because Phase 1 is a measurement rather than a tool. It is deliberately small, since a counterfactual about a build they have never said they would commission is the softest thing in this model and should not be asked to carry the case."
+   }
+  ],
+  "benefit_phasing": "No day one benefits in any column. Phase 1 is a few weeks and produces a number, not a saving. If the gate opens, the tracker goes live around the middle of year one, then takes about ninety days to stabilise while the owner map is corrected against what actually happens on a live data call. Year one is therefore modelled at 25, 30 and 40 percent of run rate across the three columns. Year two is the first full run rate year. Years three to five hold that run rate and do not compound, because a completeness board has no mechanism by which it gets better on its own, and a model that assumed compounding here would be inventing one. Run cost accrues over 4.5 of the five years, matching the mid year one go live.",
+  "scenarios": {
+   "conservative": "Low volume, low hours, thin cut, top of our fee band, highest build and run cost, slowest ramp. Ten data calls a year, 8 coordination hours each, a 25 percent cut, $62 an hour with no employer burden added on top of the verified posted floor (C09), a $48,000 internal build, $6,000 a year to run and 20 percent contingency. THIS COLUMN DOES NOT CLEAR, and it is not close. At the low end of our assumed volume the tracker recovers a small fraction of its five year cost, which is the honest answer to a question nobody has measured yet. That result is the argument, not an embarrassment. It is why the recommended ask is NOT the tracker. The ask is Phase 1 at $16,000 to $22,000, priced openly as decision data, and its worst honest outcome is that the measurement says their process holds and they buy nothing further from us this quarter. That outcome still leaves them the owner map, the specification and a documented reason not to spend the build money, which is what the fee is for.",
+   "most_likely": "Twenty data calls a year, 12 coordination hours each, a 35 percent cut, $78 an hour, a $44,000 internal build, $5,000 a year to run, 20 percent contingency and a 30 percent year one ramp. THIS COLUMN DOES NOT CLEAR EITHER, and it is the most important number in the section. At our genuine central assumptions the tracker returns roughly two thirds of its five year cost, which says the build is a real decision rather than an obvious one, and that it turns on two quantities nobody in this document has measured, how many data calls a year they run and how many hours each one actually consumes. Measure those two numbers for the price of Phase 1 and the decision stops being a guess.",
+   "aggressive": "Thirty two data calls a year, 16 coordination hours each, a 45 percent cut, $88 an hour, a leaner $36,000 internal build, $4,200 a year to run, 15 percent contingency and a 40 percent year one ramp. THIS IS THE ONLY COLUMN THAT CLEARS, and it pays back inside the five year horizon rather than quickly. It requires their real volume to sit near the top of our assumed range and the coordination load to be genuinely heavy. We have no evidence that it does, so we are not pricing as though it does. A build that only clears under aggressive assumptions is a build you fund after a measurement, never before one."
+  },
+  "conservative_clears": false,
+  "payback_range": "There is no payback inside five years in the conservative or most likely columns. The aggressive column pays back somewhere in year three, and that figure moves by many months on small changes to volume and hours, so read it as a band and not a date. The Phase 1 ask is not a payback instrument at all and we will not dress it as one. It is decision data, priced at $16,000 to $22,000 against an assumed build of $36,000 to $48,000 and a five year path costing roughly $90,000 to $130,000, and what it buys is the right to spend or not spend that money on a measured number instead of an assumption.",
+  "base_rate_note": "The outside view first. MIT's finding is that about 95 percent of enterprise AI pilots show no measurable P&L impact, and RAND puts the failure rate of AI projects at around 80 percent. In this company's own market Deltek reports 90 percent of government contractors now using AI in some capacity, up from 45 percent (C28), while 45 percent of the same respondents say they are unclear on the return (C31). Nearly everyone is adopting, and nearly half can't prove payback. Four things are designed into this ask to put it in the small share that pays. First, the shipped tracker has NO MODEL IN ITS PATH. It is rules, a scheduler and a completeness board, so it is not in the reference class those failure figures measure, and its nearest published peer is the kind of narrow non generative automation AWS credits Koniag with, where a one hour vendor responsibility task became two minutes (C44), rather than the generative drafting tools the surveys are counting. Second, the first paid deliverable is a MEASUREMENT and not a tool, so the most common failure, building something nobody needed, is gated out before the build money moves. Third, adoption has a named owner rather than a committee, the Dahlgren capture seat posted at $130,000 and up (C09), and landing alongside that hire beats landing after it invents a personal manual method. Fourth, we are willing to conclude that they should buy nothing, and the conservative and most likely columns above are what that willingness looks like in numbers.",
+  "value_owner": "Mark Wamsher, Vice President of Business Development (C01), owns the number at the executive level, because the tool sits in the pipeline his own requisition describes (C08, C10). Day to day ownership belongs to the incoming Strategic Proposal Support and Capture Manager on requisition 2026-2731 (C09), whose posting already assigns participation in data call activities (C11), with the standing Bid and Proposal team owning the completeness data since it already owns proposal process, scheduling and compliance (C12). The variance check is concrete and cheap. Phase 1 produces the baseline, measured hours and elapsed days on one real data call, broken out by coordinator time, owner identification time and contributor time. After go live, the same three measurements are taken on the next three data calls and compared against that baseline, and the gate to any further spend is whether the measured delta is at least 60 percent of what the most likely column assumes. If it is not, the honest call is to stop, and we will say so in writing.",
+  "assumptions": [
+   "VOLUME IS ASSUMED, NOT MEASURED. Ten, 20 and 32 formal proposal data calls a year across the three columns. Nothing fetched states their pursuit count or their data call count, and confidence in this driver is LOW. It is the single driver that moves the answer most. Phase 1 replaces it with their own number. The 30 pursuits per quarter figure that appeared in our internal scoring earlier in this run was invented, it is forbidden here, and it is used nowhere in this model.",
+   "HOURLY RATES ARE ASSUMED. $62, $78 and $88 an hour for proposal and capture time, $55, $62 and $68 for contributor time. The single verified salary anchor available is the $130,000.00+ posted floor on requisition 2026-2731 (C09), which is a posted FLOOR on one Dahlgren seat and not a fully loaded cost. The conservative column deliberately adds no employer burden on top of that floor, the other two columns add assumed burden.",
+   "HOURS PER DATA CALL ARE ASSUMED. Coordination 8, 12 and 16 hours. Owner identification 3, 5 and 6 hours. Aggregate contributor time 8, 14 and 20 hours. Deltek's reported average of 84 hours to develop a single proposal (C29) is a SELF REPORT by respondents to Deltek's survey of 917 contractors (C27), not a measurement of Tatitlek, so it is used here only as an outer envelope that makes a coordination slice of this size plausible. It is not a driver in this model.",
+   "CUT PERCENTAGES ARE ASSUMED. 25, 35 and 45 percent on coordination. 35, 50 and 60 percent on owner identification. 15, 25 and 30 percent on contributor friction. The published peer results (C39 to C44) are vendor published and unaudited, with no baseline method disclosed, and C42 caps the strongest of them at a Red Team ready draft rather than a submission ready proposal, so none of them sets a driver here.",
+   "THE PROBLEM ITSELF IS ASSUMED. Nothing fetched says their data calls are slow, late or expensive. The entire evidence base is one clause in one live posting saying the hire participates in any and all data call activities as needed (C11). This model assumes a coordination load exists, which a proposal across seven subsidiaries and 46 locations (C04, C05) must have in some size, and it assumes nothing about whether that load is currently failing.",
+   "BUILD COST IS ASSUMED at $48,000, $44,000 and $36,000 of internal effort, on the assumption that GeoNorth Information Systems (C05) builds and hosts the tracker. We are not selling an exclusive build, and if they hand the specification to GeoNorth and build it themselves, the engagement did its job.",
+   "OUR PHASE 1 FEE is a fixed band of $16,000 to $22,000, and the conservative column prices the top of the band. The scope driver behind the band is how many of the seven subsidiaries (C05) the owner map has to reach.",
+   "TRAINING AND CHANGE MANAGEMENT is 140, 110 and 90 hours, priced at each column's own coordinator rate. It covers participation in the measured data call, the owner map interviews, and rollout to the people a data call actually touches. It is never described as included.",
+   "RUN COST is 70, 45 and 32 hours a year of owner map upkeep plus hosting and monitoring inside GeoNorth, accruing over 4.5 of the five years. There is NO inference or token line, because the shipped tracker has no model in its path. Staleness of the owner map is the top failure mode and this line is what pays to prevent it.",
+   "CONTINGENCY is 20 percent in the conservative and most likely columns and 15 percent in the aggressive one, sized against organisational risk rather than software risk.",
+   "RAMP is 25, 30 and 40 percent of run rate in year one, reflecting a mid year one go live and about ninety days of stabilisation. Years three to five are modelled flat, with no compounding, because a completeness board has no mechanism that makes it better on its own.",
+   "CAPACITY TO CASH CONVERSION IS REDEPLOY in all three labour lines, and it is not automatic. If the recovered hours do not visibly go into capture plans, price to win analysis or gate review material (C13, C14), those lines stay capacity and never become dollars. Only the avoided rebuild line is cash.",
+   "QUARANTINED, AND DELIBERATELY OUTSIDE THE FORMULA. The free Phase 0 coverage map, the answer to the open question about whether GovEagle handles key personnel resumes, reduced dependence on the one person who knows who to call, and a cleaner first ninety days for the incoming Dahlgren hire. All real, none of them quantified here, none of them propping up a column.",
+   "NO ROW IN THIS TABLE IS A VERIFIED FACT ABOUT THEIR BUSINESS. The only verified figure anywhere in the model is the posted salary floor (C09), and it is an anchor for an assumed rate rather than a measured cost. Expect the provenance rail to read assumed and modelled throughout. That is what a pilot is for.",
+   "THE MISSILE DEFENSE AGENCY AWARD (C22, C23) IS USED NOWHERE IN THIS MODEL. No line here rests on it, and nothing in this section implies it is under review, flagged or at risk."
+  ],
+  "drivers": {
+   "scenarios": {
+    "conservative": {
+     "pursuits_per_year": 10,
+     "benefit_lines": [
+      {
+       "label": "Coordinator time assembling and chasing data call answers",
+       "hours_per_pursuit": 8,
+       "rate": 62,
+       "cut": 0.25
+      },
+      {
+       "label": "Finding who owns an answer across the subsidiaries",
+       "hours_per_pursuit": 3,
+       "rate": 62,
+       "cut": 0.35
+      },
+      {
+       "label": "Contributor time on unclear or repeated requests",
+       "hours_per_pursuit": 8,
+       "rate": 55,
+       "cut": 0.15
+      }
+     ],
+     "avoided_cost_lines": [
+      {
+       "label": "Rebuild of a tracker specified without a measured baseline",
+       "events_per_year": 0.2,
+       "cost_per_event": 20000,
+       "reduction": 0.4
+      }
+     ],
+     "implementation": 70000,
+     "training": 8680,
+     "run_cost_per_year": 6000,
+     "run_cost_years": 4.5,
+     "contingency": 0.2,
+     "year1_ramp": 0.25,
+     "years": 5
+    },
+    "most_likely": {
+     "pursuits_per_year": 20,
+     "benefit_lines": [
+      {
+       "label": "Coordinator time assembling and chasing data call answers",
+       "hours_per_pursuit": 12,
+       "rate": 78,
+       "cut": 0.35
+      },
+      {
+       "label": "Finding who owns an answer across the subsidiaries",
+       "hours_per_pursuit": 5,
+       "rate": 78,
+       "cut": 0.5
+      },
+      {
+       "label": "Contributor time on unclear or repeated requests",
+       "hours_per_pursuit": 14,
+       "rate": 62,
+       "cut": 0.25
+      }
+     ],
+     "avoided_cost_lines": [
+      {
+       "label": "Rebuild of a tracker specified without a measured baseline",
+       "events_per_year": 0.2,
+       "cost_per_event": 25000,
+       "reduction": 0.5
+      }
+     ],
+     "implementation": 62000,
+     "training": 8580,
+     "run_cost_per_year": 5000,
+     "run_cost_years": 4.5,
+     "contingency": 0.2,
+     "year1_ramp": 0.3,
+     "years": 5
+    },
+    "aggressive": {
+     "pursuits_per_year": 32,
+     "benefit_lines": [
+      {
+       "label": "Coordinator time assembling and chasing data call answers",
+       "hours_per_pursuit": 16,
+       "rate": 88,
+       "cut": 0.45
+      },
+      {
+       "label": "Finding who owns an answer across the subsidiaries",
+       "hours_per_pursuit": 6,
+       "rate": 88,
+       "cut": 0.6
+      },
+      {
+       "label": "Contributor time on unclear or repeated requests",
+       "hours_per_pursuit": 20,
+       "rate": 68,
+       "cut": 0.3
+      }
+     ],
+     "avoided_cost_lines": [
+      {
+       "label": "Rebuild of a tracker specified without a measured baseline",
+       "events_per_year": 0.2,
+       "cost_per_event": 30000,
+       "reduction": 0.6
+      }
+     ],
+     "implementation": 52000,
+     "training": 7920,
+     "run_cost_per_year": 4200,
+     "run_cost_years": 4.5,
+     "contingency": 0.15,
+     "year1_ramp": 0.4,
+     "years": 5
+    }
+   }
+  }
+ }
+}

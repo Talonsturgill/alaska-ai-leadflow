@@ -1,7 +1,7 @@
 {
   "version": 2,
   "note": "The record of authority for every lead. Structured fields live here. Large documents (the study object, the dossier, the rendered page, the demo) live as files under runs/<date>/<slug>/ and are referenced by study_path, because git stores documents better than a jsonb column does.",
-  "updated": "2026-08-11",
+  "updated": "2026-09-19",
   "leads": [
     {
       "company": "Goldbelt, Incorporated",
@@ -438,7 +438,7 @@
       "segment": "Tourism and visitor industry",
       "location": "Seward, Alaska",
       "run_date": "2026-08-10",
-      "status": "drafted",
+      "status": "sent",
       "fit_score": 24,
       "why_picked": "Highest of 23 page-verified candidates across four ICP segments, tie with Huna Totem broken on reachability 5 v 4. Locally owned family company over 30 years, about 60 seasonal staff, eight vessels, a published general inbox and a desk whose rules are exact and spread across three pages.",
       "contact_name": null,
@@ -452,8 +452,8 @@
       "live_url": "https://alaskaaihq.com/awesomeproposal/major-marine-tours/",
       "draft_subject": "Your refund clocks and the phone desk",
       "gmail_draft_id": "r-3732836341653093197",
-      "notes": "ELEVEN STUDY-CRITIC ROUNDS. The two findings worth remembering are both the same class, a gate resting on a number nothing collects. First, the paper tally sheet, the entire funded ask, had four columns and none recorded the ANSWER the agent gave, so it would have reported zero misquotes forever while the ROI leaned on that count. Now five columns, with the supervisor days named as where answers are read back, and worded as a sampled rate rather than a census. Second, the March 2029 search gate is a SHARE of questions and the miss log had one writer, the decision table, so neither numerator nor denominator existed; the question sorter now counts every question. Also caught: a section heading asserting an unverifiable claim about their internal refund approvals, now hedged to what is published; and 'four' denoting a different set in seven sections. FACT-CHECKER killed a headline finding, the rail check-in, on a footnote of their own page. THE ASK WAS CUT from $18,000 to $4,500 at Phase 4 because the conservative case did not clear, and the study discloses that the figure was reverse-engineered from the ceiling the benefit supports, which is the move Flyvbjerg warns about. Lead-critic shipped at round 3. Machine changes this run: scripts/dup_clause.py and scripts/quote_fidelity.py added.",
-      "sent_at": null
+      "notes": "ELEVEN STUDY-CRITIC ROUNDS. The two findings worth remembering are both the same class, a gate resting on a number nothing collects. First, the paper tally sheet, the entire funded ask, had four columns and none recorded the ANSWER the agent gave, so it would have reported zero misquotes forever while the ROI leaned on that count. Now five columns, with the supervisor days named as where answers are read back, and worded as a sampled rate rather than a census. Second, the March 2029 search gate is a SHARE of questions and the miss log had one writer, the decision table, so neither numerator nor denominator existed; the question sorter now counts every question. Also caught: a section heading asserting an unverifiable claim about their internal refund approvals, now hedged to what is published; and 'four' denoting a different set in seven sections. FACT-CHECKER killed a headline finding, the rail check-in, on a footnote of their own page. THE ASK WAS CUT from $18,000 to $4,500 at Phase 4 because the conservative case did not clear, and the study discloses that the figure was reverse-engineered from the ceiling the benefit supports, which is the move Flyvbjerg warns about. Lead-critic shipped at round 3. Machine changes this run: scripts/dup_clause.py and scripts/quote_fidelity.py added. | Confirmed SENT 2026-08-11T21:15:31Z, observed in Gmail SENT mail during the 2026-09-19 run's voice-diff step, message id 19ff2ae38171a928. Talon made six hand edits before sending, recorded in ledger/voice_deltas.json.",
+      "sent_at": "2026-08-11T21:15:31Z"
     }
   ]
 }

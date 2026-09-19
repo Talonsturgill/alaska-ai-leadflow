@@ -37,8 +37,13 @@ SRC_BLOCK = re.compile(r"var SRC\s*=\s*\{.*?\n\};", re.S)
 # the id is quoted in a JS object key as often as it is bare. Matching only
 # lowercase bare keys meant a demo could register real quotations and be walked
 # straight past. Accept either case and an optionally quoted key; the lookup
-# below is case-insensitive to match.
-ENTRY = re.compile(r"[\"']?([cC]\d+)[\"']?\s*:\s*\{\s*parts\s*:\s*\[(.*?)\]\s*,", re.S)
+# below is case-insensitive to match. The optional trailing letter matches the
+# secondary-quotation key this file itself creates, `c11b` for a claim's
+# second_verbatim. Codex caught that on the 2026-09-19 review: without it the
+# entry is skipped entirely and the command reports 0 spans with exit 0 even
+# after that quotation has been altered, which is the hole this gate exists to
+# close, reopened by the fix that added the key.
+ENTRY = re.compile(r"[\"']?([cC]\d+[a-z]?)[\"']?\s*:\s*\{\s*parts\s*:\s*\[(.*?)\]\s*,", re.S)
 STRING = re.compile(r'"((?:[^"\\]|\\.)*)"')
 
 

@@ -1,0 +1,483 @@
+{
+  "company": {
+    "what_they_do": "The Tatitlek Corporation (TTC) is the ANCSA village corporation for the Native Village of Tatitlek, an Alutiiq community on the eastern shore of Prince William Sound. Founded 1973 under the Alaska Native Claims Settlement Act, headquartered in Anchorage. Despite Alaska ownership the operating business is almost entirely a Lower 48 federal services contractor: 'The Tatitlek Corporation delivers mission-critical solutions to government agencies, defense contractors, and high-profile private sector customers at locations throughout the United States and around the world' (https://tatitlek.com/operations/). Seven subsidiaries are named on its own site, each with its own UEI, CAGE and primary NAICS: (1) GeoNorth Information Systems LLC, satellite/geospatial, collection, processing and delivery of remotely-sensed information, operates a U.S.-owned satellite downlink for electro-optical and SAR data, NAICS 518210; (2) Tatitlek Federal Services LLC, professional/admin support, engineering, information assurance and cyber security services, NAICS 541611, GSA 8(a) STARS III 47QTCB22D0425, GM Don Muse; (3) Tatitlek Government Services LLC, facilities, security, logistics, IT, NAICS 561210, STARS III 47QTCB22D0658, OASIS+ 8(a) 47QRCA26DA026 and OASIS+ SB 47QRCA25DSB06, GM Russ Todd; (4) Tatitlek Management Services LLC, facilities operations and maintenance plus professional services, NAICS 541990, GSA MAS 47QRAA25D00AN, SeaPort-NxG N0017825D7880, GM Robert Ruggiero PMP CFM CPE; (5) Tatitlek Professional Services LLC, NAICS 541512, GM Robert Dulin; (6) Tatitlek Technologies LLC, NAICS 518210, OASIS+ Unrestricted (Technical and Engineering), GM Paul Fondren; (7) Tatitlek Universal Services Inc., construction, commercial and industrial facilities construction, jet engine test cell construction, NAICS 236220, bonding single projects up to $30 million and an aggregate bonded surety program of $100 million, GM Jared Hayes. Historic/legacy entity names in the public record: Tatitlek Support Services Inc., Tatitlek Training Services Inc. (military role players), Tatitlek Construction Services Inc., Tatitlek Contractors Inc. Separately TTC is a third owner of TCC (Tatitlek Chenega Chugach), the Alaska oil spill prevention and response joint venture serving Alyeska's Ship Escort Response Vessel System out of Valdez. It also runs the Copper Mountain Foundation (scholarships), shareholder services, land management, and Valdez real estate.",
+    "size": "FACT from their own site: Shareholders 300+, Global employees 1,300, Operations over five decades, and '1,300 employees geographically dispersed through project and business offices located throughout Alaska and 46 locations worldwide' (https://tatitlek.com/ and https://tatitlek.com/our-company/). Lands: 108,166 acres in Prince William Sound (https://tatitlek.com/lands/); BLM records the full ANCSA entitlement as 137,245.79 acres through Sections 12(a) and 12(b), with final patents signed April 11, 2024, making Tatitlek the first village in the Chugach Region to obtain its full land entitlements (https://www.blm.gov/blog/2024-04-18/tatitlek-entitlement-complete). Open hiring on September 19, 2026: 150 live requisitions across three pages of their iCIMS board. HigherGov lists TTC as parent of 18 subsidiary organizations, UEI JUR8UL7JVLG7, CAGE 63FM0, founded October 25, 1973, most recent federal award dated September 1, 2026. THIN SPOT, FLAGGED: no revenue figure is published anywhere fetchable. TTC does NOT appear in Alaska Business Magazine's 2025 Top 49ers ranking (that list is self-reported). USAspending's parent-level rollup returns $47,952,806.33 over 208 transactions on one parent hash and $0 on another, which does not reconcile with the subsidiary-level awards, so NEITHER is treated as a revenue or obligations figure.",
+    "locations": [
+      "HQ: 561 E 36th Ave, Ste 400, Anchorage, AK 99503, (907) 278-4000 (https://tatitlek.com/contact-us/)",
+      "Arlington, VA: 2121 Crystal Drive Suite 510, Arlington, VA 22202",
+      "Dahlgren, VA: 4485 Danube Drive, King George, VA 22485",
+      "Huntsville, AL: 641 Wynn Drive NW Suite 201, Huntsville, AL 35816",
+      "Oklahoma City, OK: 10701 West Garnett, Oklahoma City, OK 73114",
+      "Native Village of Tatitlek, Prince William Sound, AK, plus 108,166 acres of TTC land",
+      "Valdez, AK: Chugach Naswik Suites, 23,000 sq ft, 36 units, opened September 5, 2024, jointly owned with Chenega Corporation and Chugach Alaska Corporation",
+      "Work sites in current job listings: NSWC Dahlgren VA (~33 of 150 listings), Arlington VA, Portsmouth VA, Blackstone VA, Fort Belvoir VA, Quantico VA, Sterling VA, Washington DC incl. the Harry S. Truman Building, Fort Meade MD, Aberdeen Proving Ground MD, Bethesda MD, Hanover MD, USCG Yard Baltimore MD, USCG Base Elizabeth City NC, Atlantic Beach NC, Moorestown NJ, USCG TRACEN Cape May NJ, Charleston SC, Philadelphia PA, Fort Worth TX, El Paso TX, San Diego CA, Mountain View CA, Redstone Arsenal AL, Birmingham AL, Tinker AFB OK, Fort Sill OK, Lawton OK, Joint Base Lewis-McChord WA",
+      "Alaska-performed federal work does exist: a US Coast Guard C5I Division 3 Portsmouth communications-systems support contract to Tatitlek Federal Services LLC, place of performance Anchorage AK 99503, $3,411,236.94, August 30 2024 to August 29 2027, NAICS 541330"
+    ],
+    "revenue_model": "Four streams. (1) The dominant one is federal services contracting through the subsidiaries, sold on set-aside and GWAC vehicles rather than open competition. Their own capability list is 'ISO 9001:2015, ANC 8(a) Sole Source Contracting, SEAPORT NXG, GSA STARS III, OASIS+ 8(a) and SB' (https://tatitlek.com/our-company/). They market the 8(a) sole-source path directly to contracting officers: 'Reduce procurement cycle time with a direct 8(a) sole-source award, ideal when schedule sensitivity is paramount' (https://tatitlek.com/anc-8a-sole-source-contracting/). A live example of scale and of the model: Tatitlek Management Services LLC holds MDA award HQ085826CE001, set-aside type 8(A) SOLE SOURCE, Number of Offers Received: 1, potential value $99,981,096.40, obligated to date $11,707,278.07, period of performance October 8 2025 through October 7 2027 with options to April 7 2033, place of performance Huntsville AL. Work sold spans three declared lines: Professional and Administrative Support Services, Technical Services, Installation Support Services. (2) The TCC joint venture with Chenega and Chugach Alaska, holding Alyeska SERVS oil spill response work in Prince William Sound since 1994, a union employer with Laborers 341, Teamsters 959 and Operating Engineers 302. (3) Land and real estate, 108,166 acres plus the 36-unit Chugach Naswik Suites in Valdez, workforce housing for shareholder employees involved in oil spill response under Trans-Alaska Pipeline System contracts. (4) Distribution to 300+ shareholders as dividends and special distributions. GeoNorth also sells commercially and to intelligence customers, e.g. a five-year $15 million NGA contract for Arctic persistent surveillance with Lockheed Martin and UAF as partners.",
+    "pains": [
+      {
+        "pain": "Business development and capture is under-resourced relative to the vehicle count. They are hiring a $130,000+ Strategic Proposal Support and Capture Manager expected to carry the whole front half of the pipeline alone, while a separate team owns the back half. The posting also reveals capture strategy has to be reconciled against delivery capacity, the classic ANC squeeze.",
+        "evidence_quote": "support the full opportunity lifecycle, from early identification and qualification through capture strategy execution ... Maintain an individual pipeline of assigned opportunities in GovEagle, logging, staging, and updating each pursuit ... Coordinate with operations, contracts, pricing, and program staff to align capture strategy with business goals and execution capacity ... the Bid and Proposal team owns the proposal process, scheduling, and compliance",
+        "source_url": "https://careers-tatitlek.icims.com/jobs/2731/strategic-proposal-support-%26-capture-manager/job?in_iframe=1",
+        "kind": "fact"
+      },
+      {
+        "pain": "Proposal work itself is described as data calls and resume scrubbing, the two most manual, lowest-leverage tasks in federal capture, and they are being assigned to a single senior hire.",
+        "evidence_quote": "participation in any and all data call activities as needed ... Support the development and scrubbing of key personnel resumes ... Develop capture plans, price to win analysis, and gate review materials for assigned pursuits",
+        "source_url": "https://careers-tatitlek.icims.com/jobs/2731/strategic-proposal-support-%26-capture-manager/job?in_iframe=1",
+        "kind": "fact"
+      },
+      {
+        "pain": "Requisitions sit unfilled for a long time. Of the 150 open listings on September 19, 2026, 22 still carry 2025-series requisition numbers, the oldest visible being 2025-2195. iCIMS requisition IDs are year-prefixed, so these were opened in the prior calendar year and are still live.",
+        "evidence_quote": "Still open with 2025 requisition numbers: Human Resources Specialist | US-MD-Fort Meade | 2025-2195, Service Desk Analyst Tier 1 | US-DC | 2025-2206, Armed Security Officer | US-NJ-USCG TRACEN Cape May | 2025-2225, Armed Security Officer | US-NC-USCG Base Elizabeth City | 2025-2229, Journeyman HVAC Technician | US-VA-Arlington | 2025-2312, Human Resources Specialist | US-VA-Fort Belvoir | 2025-2383, Quality Control Manager | US-OK-Lawton | 2025-2452",
+        "source_url": "https://careers-tatitlek.icims.com/jobs/search?ss=1&in_iframe=1&pr=2",
+        "kind": "fact"
+      },
+      {
+        "pain": "Hiring is almost entirely Outside, which sits awkwardly against a written shareholder hiring preference and an Anchorage headquarters. Zero of the 150 current openings list an Alaska location.",
+        "evidence_quote": "The Tatitlek Corporation gives hiring, promotion, training and retention preference to shareholders, shareholder descendants and shareholder spouses who meet job qualifications.",
+        "source_url": "https://tatitlek.com/careers-page/",
+        "kind": "fact"
+      },
+      {
+        "pain": "Single-site concentration risk at NSWC Dahlgren. Roughly 33 of the 150 open listings are Dahlgren, VA, spanning sysadmins, engineering technicians, cost analysts, technical writers, schedulers and program analysts. They have also already litigated a lost bid there.",
+        "evidence_quote": "GAO decision B-416711 et al., November 28, 2018: Tatitlek Technologies, Inc. protested award of a task order valued over $25 million for Administrative and clerical support services for Naval Surface Warfare Center Dahlgren Division under RFP No. N0017817R3058. Outcome: Protest denied.",
+        "source_url": "https://www.gao.gov/products/b-416711,b-416711.2,b-416711.3,b-416711.4",
+        "kind": "fact"
+      },
+      {
+        "pain": "Their largest new award is an 8(a) sole-source over $20 million, awarded with one bidder, at exactly the moment the Pentagon announced a review of every sole-source 8(a) contract over $20 million. This is a dated, direct threat to the revenue model they advertise on their own site.",
+        "evidence_quote": "Secretary Hegseth, reported January 22, 2026: We're actually taking a sledgehammer to the oldest DEI program in the federal government ... Second, we're doing away with these pass-through schemes. ... We'll make sure that every small business getting a contract is the one actually doing the work. The Pentagon would review all sole-source 8(a) contracts worth more than $20 million. Tatitlek Management Services' MDA award HQ085826CE001 is 8(A) SOLE SOURCE, Number of Offers Received: 1, potential value $99,981,096.40.",
+        "source_url": "https://www.adn.com/business-economy/2026/01/22/pentagon-to-take-sledgehammer-to-contracting-program-central-to-many-alaska-native-corporations/",
+        "kind": "fact"
+      },
+      {
+        "pain": "Shareholder records are manual, deadline-driven and incomplete. They are publicly asking people to help locate shareholders they have lost contact with, and address changes are gated on a hard pre-dividend cutoff, which is where dividend replacement requests come from.",
+        "evidence_quote": "Thank you for taking the time to help us find our missing shareholders! ... all address changes must be received no less than two-weeks prior to the dividend distribution date ... In order to change your direct deposit information, you will need complete the Direct Deposit form ... E-mail it to Shareholderservices@tatitlek.com. The services list itself includes Dividend Replacement Requests.",
+        "source_url": "https://tatitlek.com/resources/",
+        "kind": "fact"
+      },
+      {
+        "pain": "The delivered work itself is high-volume manual records and compliance processing under contractual clocks, the exact shape of work that burns billable hours. Two live postings spell out the throughput obligations in their own contract language.",
+        "evidence_quote": "HR Specialist, Fort Meade (req 2025-2195): Shall review and process award recommendations NLT (2) working days upon receipt for accuracy ... Must process awards within 5 working days upon receipt of approval ... Shall maintain award files IAW the Army Records Information Management Systems (ARIMS) and statistical data ... Shall execute award distribution runs three times a week or as necessary.",
+        "source_url": "https://careers-tatitlek.icims.com/jobs/2195/human--resources-specialist/job?in_iframe=1",
+        "kind": "fact"
+      },
+      {
+        "pain": "Same shape on the security side. Clearance adjudication support is caseload management across multiple federal databases with paperwork accuracy checks done by hand.",
+        "evidence_quote": "Clearance Coordinator, DC (req 2026-2758, $49.09/hourly): Utilizes various federal databases and resources to research candidates' investigative history ... Manages an assigned caseload to direct the timely initiation of investigations ... Evaluates submitted paperwork for accuracy in compliance with prescribed Federal Investigative Standards and criteria ... Conducts and analyzes results of a variety of National Agency Checks including NCIC, TECS, CCD, and NSC",
+        "source_url": "https://careers-tatitlek.icims.com/jobs/2758/clearance-coordinator-%28dc%29/job?in_iframe=1",
+        "kind": "fact"
+      },
+      {
+        "pain": "They are on the buying side of procurement too, running their own open solicitation for the village with a live deadline six days out. That means an evaluation burden, not just a bidding burden.",
+        "evidence_quote": "THE TATITLEK CORPORATION REQUEST FOR PROPOSALS Infrastructure Improvement Opportunity Study - RFP No. 26-01, issued on behalf of TTC and the Native Village of Tatitlek, amended August 26, 2026, proposals due September 25, 2026, 5:00 p.m. Alaska Time. No named point of contact or inquiry email is published on the notice page.",
+        "source_url": "https://tatitlek.com/uncategorized/student-spotlight-lincoln-shanks-2/",
+        "kind": "fact"
+      },
+      {
+        "pain": "Shareholder base is small and the descendant pipeline is the growth mechanism, so shareholder services, scholarships, apprenticeships and the portal carry disproportionate weight relative to a 1,300-person operating company.",
+        "evidence_quote": "Homepage: Shareholders 300+ against Global employees 1,300. Careers page programs: an Apprenticeship Program for original shareholders and registered descendants 18+ with HS diploma, and an Internship Program. Marci Cornell is listed as Shareholder Services Manager (2026-Present).",
+        "source_url": "https://tatitlek.com/leadership/",
+        "kind": "inference"
+      },
+      {
+        "pain": "Employee-sentiment evidence could not be verified. Both Glassdoor and Indeed returned HTTP 403 to a direct fetch, so there is no quotable review text. Search snippets referenced roughly 3.6/5 on Glassdoor across about 98 reviews and about 140 Indeed reviews, but neither page was fetched and those numbers are NOT treated as established.",
+        "evidence_quote": "Glassdoor: The server returned HTTP 403 Forbidden. Indeed: The server returned HTTP 403 Forbidden.",
+        "source_url": "https://www.glassdoor.com/Reviews/Tatitlek-Corporation-Reviews-E386536.htm",
+        "kind": "fact"
+      }
+    ],
+    "reputation_screen": {
+      "showrunner_verdict": "CLEARED at the Phase 2 RESEARCH GATE, on primary federal contract data, with the residual uncertainty recorded rather than hidden.",
+      "the_flag_the_analyst_raised": {
+        "finding": "Anchorage Daily News, July 24, 2018, names a Tatitlek subsidiary in a list of Alaska Native corporations that have held ICE contracts.",
+        "exact_quote": "Companies that have had contracts over the last 15 years include NANA and subsidiaries, K'oyitl'ots'ina Ltd., Tatitlek Native Corp. subsidiary GeoNorth, Old Harbor and Barling Bay, and Doyon.",
+        "source_url": "https://www.adn.com/business-economy/2018/07/24/alaska-native-corporations-are-a-billion-dollars-deep-in-border-control-contracts/",
+        "what_the_article_does_NOT_say": "No contract type, no agency office, no dollar amount, no start or end date, and no detention-facility role for Tatitlek or GeoNorth specifically. They appear only in a list. The legal name is The Tatitlek Corporation, not Tatitlek Native Corp., so even the corporate name is inexact.",
+        "analyst_corroboration_failed": "Three other ICE/ANC investigations were fetched and NONE names Tatitlek or GeoNorth: Alaska Public Media July 19 2018, El Paso Matters January 26 2021, Alaska Public Media October 23 2025."
+      },
+      "showrunner_primary_data_check": {
+        "method": "Queried the USAspending prime-award API directly, four recipient searches, award types A/B/C/D: the Tatitlek parent family FY2015 to present (top 100 rows by value), GeoNorth FY2008 to present (100 rows), Tatitlek Support Services (33 rows), Tatitlek Training Services (39 rows). Roughly 270 award rows across 19 years.",
+        "result": "ZERO immigration, customs, border or detention awards at any Tatitlek entity or at GeoNorth. Every Department of Homeland Security dollar in the data is U.S. Coast Guard, and the descriptions are explicit: Rescue 21 Alaska sustainment including the Alaska VHF communication system, Digital Selective Calling and Vessel Traffic Service, plus national security guard services at Coast Guard locations. Rescue 21 is the Coast Guard's maritime search-and-rescue distress calling system. GeoNorth's single largest customer by row count is the Indian Health Service (52 of 100 rows); its DoD work is imagery libraries and web content management.",
+        "false_positives_noted": "An initial keyword screen flagged five GeoNorth rows and two Tatitlek Training rows. All seven are artifacts of the matcher finding the substring ICE inside SERVICE and PRICE. None is an immigration contract."
+      },
+      "reasoning": "The bar this routine has actually applied to the seventeen suppressed Alaska Native corporations is CURRENT, SUBSTANTIAL and DETENTION-SPECIFIC work: Bering Straits with shareholders publicly asking it to divest, NANA and Aleut through Akima at Krome and Guantanamo, Ahtna with a reported $35M guard contract at Port Isabel, Doyon operating the 800-bed El Paso Service Processing Center, Koniag with a GSA ICE ERO award six days before its run, Chenega providing detention operation services, ASRC with an $11M DHS CBP award. Tatitlek meets none of that. The single adverse item is one undetailed sentence in a list, eight years old, using the wrong corporate name, uncorroborated by three parallel investigations, and unsupported by any award record across nineteen years of primary data. Suppressing on that evidence would apply a standard to Tatitlek that none of the shipped leads was held to.",
+      "b_federal_contracting_fraud_fca_8a_misconduct_self_dealing": {
+        "finding": "NOTHING FOUND. No False Claims Act settlement, no DOJ, GSA OIG or SBA OIG action, no debarment or suspension, and no 8(a) size-protest or self-dealing finding against The Tatitlek Corporation or any subsidiary name identified.",
+        "what_was_searched": "DOJ and oversight.gov False Claims Act coverage; GSA OIG small-business-fraud releases; the specific subsidiary names Tatitlek Federal Services, Tatitlek Government Services, Tatitlek Management Services, Tatitlek Technologies, Tatitlek Professional Services, Tatitlek Universal Services, Tatitlek Support Services, Tatitlek Training Services, and GeoNorth, each paired with fraud, settlement, debarment, suspension, investigation and inspector general; and GAO's bid-protest docket.",
+        "what_was_found_instead_and_it_is_not_fraud": [
+          "A 2012 WAGE AND HOUR class action settlement against Tatitlek Support Services Inc. in the US District Court for the Central District of California, covering role players and similar positions at USMC Twentynine Palms and other sites between November 6 2004 and January 24 2011, described by plaintiffs' counsel as a $2.4 Million Class Action Settlement regarding Unpaid Overtime, Mis-classification and Other Wage and Hour Violations. Settlement checks issued January 27 2012. This is a labor misclassification matter, not federal-contracting fraud, and it is fourteen years old. Source is a plaintiffs' firm page, so partisan, and no court docket could be fetched.",
+          "GAO bid protest B-416711 et al., decided November 28 2018. Tatitlek Technologies was the PROTESTER, not the accused, and the protest was denied.",
+          "GAO's programmatic criticism of ANC 8(a) sole-source authority generally (GAO-06-399, GAO-16-113) does NOT name Tatitlek. It is a critique of the program and of SBA oversight, not of this company."
+        ],
+        "limits": "SAM.gov exclusions, PACER and SBA size-determination records could not be queried directly. Glassdoor and Indeed both returned HTTP 403, so there are no employee-reported allegations either way."
+      },
+      "residual_uncertainty_recorded": "What GeoNorth's 2018-era border-control work actually was remains unestablished. It does not appear in prime-award data for the period, which leaves a subcontract or an expired pre-2008 award as possibilities neither confirmed nor excluded. This does not reach the suppression bar and it is written down rather than dropped."
+    },
+    "notable_context": "Leadership is stable and named publicly (https://tatitlek.com/leadership/). Roy Totemoff has been CEO since 2006 and on the board since 1992. Dick Hobbs became President in July 2026 after joining the executive team in 2018, previously President and CEO of Afognak Native Corporation and Alutiiq LLC 2006-2014, a Naval Academy graduate with eight years in the Navy (Alaska Business Magazine, July 7 2026). Dean Clowers moved from President to COO in spring 2026. Mark Wamsher is VP of Business Development and is listed as the BD contact on every single subsidiary page, a real single-point-of-contact signal for the pipeline. Sheri Buretta, board Treasurer since 2005, is simultaneously a longtime Chugach Alaska Corporation figure, the connective tissue behind TCC and the Naswik hotel. Board Vice President Nanci Lee Robart is concurrently President of the Tatitlek Village IRA Council and is the liaison between TTC and the village. VERIFIED PUBLIC EMAIL ADDRESSES, all seen on fetched pages, none guessed: Shareholderservices@tatitlek.com, tatitlekland@tatitlek.com, mwamsher@tatitlek.com for Mark Wamsher VP Business Development with phone (256) 759-9349 on every subsidiary page, rtodd@tatitlek.com, rruggiero@tatitlek.com, rdulin@tatitlek.com, jhayes@tatitlek.com. NO published email exists for Hobbs, Totemoff, Clowers or any other executive on any page fetched. Cultural and timing notes: the Exxon Valdez ran aground on Bligh Reef just two miles away from the village in 1989, cutting subsistence activity by roughly 89 percent, and the 1994 formation of TCC with Chugach and Chenega was the direct response. The annual shareholders meeting runs in August in Anchorage. Their in-house software work is real but small, one remote Junior Software Developer at $95,000 building web-based environmental data management modules on ASP.NET and React for Navy environmental clients under Tatitlek Federal Services. They also carry an internal TTC Help Desk (888) 216-7228 and a shareholder portal at portal.tatitlek.com.",
+    "confidence": "HIGH on what they do, the subsidiary map, contract vehicles, locations, leadership, the live job board and the contract awards pulled from the USAspending API. Every one of those was fetched, not snippet-read. MEDIUM on scale, because 1,300 employees and 46 locations are self-reported on their own site and no revenue figure is published anywhere reachable, including the Alaska Business Top 49ers list they are absent from. LOW on customer and employee sentiment, because Glassdoor and Indeed both blocked the fetch with HTTP 403 and no review text was quoted. The ICE flag was raised at MEDIUM-LOW by the analyst and has since been checked by the showrunner against roughly 270 primary award rows over 19 years, which found nothing; the residual uncertainty is recorded above."
+  },
+  "people": {
+    "leaders": [
+      {
+        "name": "Roy Totemoff",
+        "role": "CEO (listed under Board of Directors)",
+        "source_url": "https://tatitlek.com/leadership/"
+      },
+      {
+        "name": "Dick Hobbs",
+        "role": "President (Executive Leadership, 2018 - Present)",
+        "source_url": "https://tatitlek.com/leadership/"
+      },
+      {
+        "name": "Dean Clowers",
+        "role": "Chief Operating Officer (2015 - Present)",
+        "source_url": "https://tatitlek.com/leadership/"
+      },
+      {
+        "name": "Mark Wamsher",
+        "role": "Vice President of Business Development (2016 - Present)",
+        "source_url": "https://tatitlek.com/leadership/"
+      },
+      {
+        "name": "Kristel Komakhuk",
+        "role": "Chairman of the Board (2018 - Present)",
+        "source_url": "https://tatitlek.com/leadership/"
+      },
+      {
+        "name": "Patty Miller",
+        "role": "Senior Vice President of Administration (2021 - Present)",
+        "source_url": "https://tatitlek.com/leadership/"
+      },
+      {
+        "name": "Nicole Christopherson",
+        "role": "Senior Vice President of Finance (2009 - Present)",
+        "source_url": "https://tatitlek.com/leadership/"
+      },
+      {
+        "name": "Robert C. (Chris) Viramontes, P.E.",
+        "role": "Vice President of Operations (2016 - Present)",
+        "source_url": "https://tatitlek.com/leadership/"
+      },
+      {
+        "name": "Paul Fondren",
+        "role": "Vice President of Operations; General Manager, Tatitlek Technologies",
+        "source_url": "https://tatitlek.com/tatitlek-technologies-llc/"
+      }
+    ],
+    "best_contact": {
+      "type": "email",
+      "value": "mwamsher@tatitlek.com",
+      "name": "Mark Wamsher",
+      "role": "Vice President of Business Development",
+      "source_url": "https://tatitlek.com/geonorth-information-systems-llc/",
+      "corroborating_url": "https://tatitlek.com/tatitlek-technologies-llc/"
+    },
+    "rejected_contacts": [
+      {
+        "value": "info@tatitlek.com",
+        "why": "asserted by a search engine summary, appears on NONE of the live pages fetched, traces to a stale legacy netsolhost.com site. Unverified, must not ship."
+      },
+      {
+        "value": "support@tatitlek.com",
+        "why": "real, on the privacy policy page, but it is a CCPA and privacy-inquiry inbox and outreach there is a misuse of a legal channel"
+      },
+      {
+        "value": "Shareholderservices@tatitlek.com",
+        "why": "real, on the resources page, but shareholders only and an ANC would rightly take a sales approach there badly"
+      },
+      {
+        "value": "pfondren@tatitlek.com",
+        "why": "real, but a subsidiary operating contact rather than the parent"
+      }
+    ],
+    "decision_maker_note": "The leadership page splits Board from Executive Leadership. Roy Totemoff (CEO) sits under BOARD OF DIRECTORS with Chairman Kristel Komakhuk, while Dick Hobbs (President) heads EXECUTIVE LEADERSHIP. Hobbs and COO Dean Clowers run the operating business day to day. Neither has a published email anywhere on the site and none was constructed.",
+    "constraint_flagged": "GeoNorth Information Systems is an in-house information-systems subsidiary, so the parent already holds IT capability. The engineering room must treat this as a real build-versus-buy constraint.",
+    "fallback": "https://tatitlek.com/contact-us/ routes a categorised contact form including Business Development",
+    "confidence": "high"
+  },
+  "competitors": {
+    "competitors": [
+      {
+        "name": "Chugach Government Solutions (Chugach Alaska Corporation)",
+        "note": "Anchorage. The ANCSA REGIONAL corporation for Prince William Sound, the same region Tatitlek village sits in, so this is the closest geographic and cultural peer in the field. Overlaps Tatitlek on five lines at once: Base Operations and Facilities, Training and Education, Supply Chain and Logistics, Construction, Professional Services, across Defense, Civilian, Intelligence, Space and International markets.",
+        "ai_usage": "None found. Homepage and service-area content name C5ISR, Cybersecurity, Enterprise IT and Sustainment and System Integration as offerings, with no mention of artificial intelligence, machine learning, automation or digital transformation anywhere fetched. Treat as none found rather than proven absent, only the top-level site was checked.",
+        "evidence_tier": "none found, bounded fetch",
+        "source_url": "https://www.chugachgov.com/"
+      },
+      {
+        "name": "Koniag Government Services (Koniag, Inc.)",
+        "note": "Alaska Native regional corporation, Kodiak. About 750 employees, about $800M annual revenue, 280+ active contracts across 80+ federal organizations. Overlaps Tatitlek on professional and administrative support, IT and management services. The most AI-forward ANC found in this field by a wide margin.",
+        "ai_usage": "SUBSTANTIATED, and independently corroborated by AWS. Built for the Office of the Deputy Assistant Secretary of the Army for Procurement: DORA (Determination of Responsibility Assistant), an automation bot on EC2 pulling SAM.gov compliance data that cuts vendor responsibility assessment from about one hour to 2 minutes; Jumpstarter document generators powered by Amazon Bedrock and LLMs that draft J and A justifications in minutes instead of hours and Performance Work Statements in minutes instead of days; contracting-regulation chatbots, compliance monitoring bots and more than 150 automated workflows. AWS states 687,000 hours saved annually and $37 million in annual cost avoidance, with a 2026 ACT-IAC Innovation Impact Award. Separately, their own May 27th, 2025 release names CASPER, an enterprise LLM platform in a secure AWS environment, org-wide prompt-engineering training, a new subsidiary Koniag AI Solutions, and claims a 75 percent reduction in contract requirements analysis time, a 50 percent reduction in human time for language determination over 10,000+ documents, and $29.3M in savings. The self-published metrics are unnamed-customer marketing; the AWS case study is the substantiated half.",
+        "evidence_tier": "vendor case study with a NAMED customer (AWS + US Army), plus self-published marketing clearly separated",
+        "source_url": "https://aws.amazon.com/solutions/case-studies/us-army-koniag-gov-services/",
+        "corroborating_url": "https://www.koniag-gs.com/ai-investments-deliver-powerful-results-for-koniag-government-services-and-federal-customers/"
+      },
+      {
+        "name": "ASRC Federal (Arctic Slope Regional Corporation)",
+        "note": "ANC-owned, 9,000 employees. Overlaps Tatitlek on Professional Services, Supply Chain and Logistics, Infrastructure Operations and IT modernization, in Space, Civilian, Defense and Intelligence, National Security and Health.",
+        "ai_usage": "SUBSTANTIATED, with three named federal deployments on a dedicated AI page. NOAA: their Advanced Analytics Platform (A2P) is the framework for NOAA's Financial Management Data System, using a commercially developed custom AI module and AI/ML to examine data from prior spending cycles to predict future spending needs, rolled out across the whole NOAA budget community (press release dated April 22nd, 2026). NOAA GOES-R: an AI/ML tool that identifies calibration issues in near real time flagging spacecraft health anomalies. USGS EROS: AI/ML solutions provide evapotranspiration predictions showing increased risk areas for famine. Also claims synthetic data generation for model training and a stated complementary human-machine approach. Named customers and named systems put this well past capability marketing.",
+        "evidence_tier": "operator-reported with named federal customers and dated release",
+        "source_url": "https://www.asrcfederal.com/ai/",
+        "corroborating_url": "https://www.asrcfederal.com/asrc-federal-selected-by-noaa-to-provide-ai-enabled-financial-management/"
+      },
+      {
+        "name": "Bering Straits Native Corporation (Bering Straits Professional Services, LLC)",
+        "note": "ANC, Nome region, with Anchorage operations. SBA 8(a) certified, competes in the same small-business federal services lanes as Tatitlek across logistics, professional services and base support.",
+        "ai_usage": "SUBSTANTIATED as active build, evidenced by hiring rather than by a case study. An open AI Software Engineer requisition in ANCHORAGE, Alaska, for Bering Straits Professional Services, names Azure OpenAI, OpenAI and Google Gemini, and describes designing, developing, and implementing AI-powered capabilities using Large Language Models (LLMs) across LogIT applications, developing and integrating conversational interfaces, copilots, and intelligent assistants into logistics and operational systems, building and maintaining retrieval-augmented generation (RAG) pipelines leveraging enterprise data sources, plus LLM observability and evaluation. A separate BSNC AI Automation Analyst listing names Microsoft Copilot Studio and Power Platform inside a secure GCC High environment. This is an Alaska-based competitor staffing production LLM work into a delivered contract system, not a brochure claim.",
+        "evidence_tier": "operator-reported via its own job requisition",
+        "source_url": "https://freehire.me/jobs/ai-software-engineer-bering-straits-native-corporation-a3gfljel"
+      },
+      {
+        "name": "Akima, LLC (NANA Regional Corporation)",
+        "note": "ANC-owned, Anchorage parent. Overlaps Tatitlek on installation logistics, facilities, IT, cybersecurity, construction and training. Holds the Missile Defense Agency SHIELD IDIQ.",
+        "ai_usage": "CLAIMED, THINLY SUBSTANTIATED. Akima Emerging Technologies states it harnesses the power of artificial intelligence, machine learning, and robotic process automation to drive efficiency, and lists AI/ML, Intelligent Automation/RPA, Data Processing and Management, Business Intelligence and Modeling and Simulation as offerings. No named customer, contract or deployed system appears on that page. Subsidiaries Cloud Lake Technology and Compass Point Federal are named as the delivery arms, and the MDA SHIELD announcement says Akima companies will apply artificial intelligence and machine learning alongside digital engineering and MBSE, which is forward-looking scope language rather than evidence of a fielded system. Read this as capability marketing with a real contract vehicle behind it.",
+        "evidence_tier": "vendor marketing with NO named customer",
+        "source_url": "https://www.akima.com/opcos/aet/"
+      },
+      {
+        "name": "Chenega Corporation",
+        "note": "The closest structural analogue in the whole field. An Alaska Native VILLAGE corporation, Anchorage, from a Prince William Sound village, roughly 5,000 employees, four strategic business units. Overlaps Tatitlek directly: MIOS carries Training and eLearning, Language Analysis, Facilities Operation and Management and IT; EHF carries Base Operations and Maintenance and professional staffing; Professional Services carries Training Development. Same 8(a)/ANC sole-source lane, same customers. NOTE FOR THE SHOWRUNNER: chenega.com is already on this routine's suppression list, it appears here only as a competitor datapoint and is never a candidate.",
+        "ai_usage": "MIXED. Substantiated as an internal operational tool, thin as a delivered capability. A hireEZ vendor case study quotes Matthew Keller, Senior Director of Talent Acquisition, using an AI sourcing platform, with claimed results of 10 percent reduction in time to hire, 50 percent less time spent sourcing, 30 percent higher response rate and 40 percent more qualified candidates sourced. Keller's quote is explicit about what the AI does: hireEZ's artificial intelligence piece is the most appealing because we can put in our search parameters and then walk away, while it aggregates profiles. That is a customer testimonial published by the vendor, not third-party audited. Separately, Chenega Professional and Technical Services supports FDA work on measuring data representation and diversity in AI-enabled devices and on mitigating algorithmic bias, which is AI-adjacent consulting rather than AI in their own delivery. Chenega's own strategic-business-unit pages mention no AI, ML or automation at all.",
+        "evidence_tier": "vendor case study with a named customer; percentages NOT independently audited",
+        "source_url": "https://hireez.com/resources/case-studies/chenega-case-study/"
+      },
+      {
+        "name": "SOS International LLC (SOSi)",
+        "note": "Conventional federal services contractor, not Alaskan, included because it is the direct competitor in Tatitlek's language-and-culture lane rather than a national giant in general. SOSi has led the federal language services market for 30+ years, has deployed thousands of cleared and uncleared linguists in 20+ countries with 200+ languages, and holds DoD, DOJ and DEA language contracts. That is the same buying center Tatitlek's 6,000-person role-player and foreign-language-speaker database serves.",
+        "ai_usage": "SUBSTANTIATED by a capital commitment, which is stronger evidence than a webpage. SOSi's owners acquired a non-controlling equity interest in AppTek, LLC, an AI/ML firm in automatic speech recognition, machine translation and natural language understanding, and SOSi became the EXCLUSIVE RESELLER of AppTek products to U.S. federal, state and local government, with the two companies to jointly develop solutions for a variety of classified and unclassified use cases. CEO Julian Setian framed it as customer-driven: As our customers' appetites for A.I. driven solutions have increased, this is the latest of a series of investments we're making in market-leading commercial technologies. SOSi markets AI, neural machine translation, ASR and NLU across hundreds of language pairs in real time. Note the date, June 2020, so this is a six-year-old position that is now mature, not a new announcement.",
+        "evidence_tier": "capital transaction, publicly announced",
+        "source_url": "https://www.apptek.ai/news/sosi-invests-in-apptek-to-advance-artificial-intelligence-and-machine-learning-for-its-speech-recognition-and-translation-offerings"
+      },
+      {
+        "name": "Valiant Integrated Services",
+        "note": "Conventional contractor, about 5,000 employees, and the single most direct competitor for Tatitlek's core live-training and role-player work. Training, Simulation and Readiness portfolio covers joint and multinational exercises, wargaming, range operations and support, training analysis and exercise support, aviation and simulator instruction, and digital/managed learning. Holds the U.S. Army Korea Battle Simulation Center support work and a $118.5M PACAF simulator and academic instructor pilot contract.",
+        "ai_usage": "None found. The training and readiness page lists Live Virtual Constructive (LVC) Training and Synthetic Training Integration as capabilities, which are simulation categories and not AI claims, and offers no elaboration. No mention of artificial intelligence, machine learning, adaptive learning or automated training anywhere on that page. The 60 years of immersive and simulation-based solutions framing is experience language. Marked none found on the page fetched, not proven absent company-wide.",
+        "evidence_tier": "none found, bounded fetch",
+        "source_url": "https://www.onevaliant.com/training-readiness"
+      },
+      {
+        "name": "Alutiiq, LLC (Afognak Native Corporation)",
+        "note": "ANC, Kodiak, 20+ subsidiaries. Overlaps Tatitlek closely on Facility Maintenance and Improvements, Industrial Health/Safety/Security, Professional and Business Management, Training and Program Support, and Engineering and Technical Services. Same 8(a) federal lane. NOTE FOR THE SHOWRUNNER: alutiiq.com and afognak.com are already on this routine's suppression list, they appear here only as a competitor datapoint.",
+        "ai_usage": "AUTOMATION, NOT AI, and honest about it. A published Salesforce customer story documents a deployed bid-and-capture application on Salesforce Government Cloud using Sales Cloud to track opportunities, develop proposals and manage contract bids, with a 360-degree view of opportunities and real-time dashboards. Measured outcomes: deployed in two months, 100 percent user adoption within one year, user seats up 44 percent in the first six months. The case study names no Einstein or Agentforce and makes no AI claim; it lists automated status updates and automated internal and external communications as ROADMAP items, not shipped. So the correct read is a modern capture CRM in production with automation queued, and no AI.",
+        "evidence_tier": "vendor case study with a named customer",
+        "source_url": "https://www.salesforce.com/customer-success-stories/alutiiq/"
+      }
+    ],
+    "target_markets_as_fetched": "Fetched from tatitlek.com, Tatitlek competes in four markets: (1) live and pre-deployment training support, role players, OPFOR, civilians-on-the-battlefield and language/culture instruction, run out of Tatitlek Training Services and Tatitlek Support Services, whose PRIMARY NAICS is 561320 Temporary Help Services and whose stated asset is a vetted database of over 6,000 role players and foreign-language speakers across Arabic, Pashto, Dari, Urdu, Kurdish, Farsi and more, delivered to the Marines at Twentynine Palms and the Army at Fort Bliss; (2) base operations support, facility O and M, engineering and construction, and environmental management; (3) professional and administrative support; (4) IT, information assurance and cyber, plus remote-sensing and geospatial production through GeoNorth Information Systems. Vehicles are OASIS+ 8(a) and Small Business, GSA STARS III, SeaPort NxG, ANC 8(a) sole source, ISO 9001:2015, 1,300 employees across Alaska and 46 worldwide locations.",
+    "where_target_is_behind": "EXPOSURE ONE, A ZERO PUBLIC POSTURE WHILE NAMED PEERS PUBLISH MEASURED RESULTS. Five Tatitlek pages were fetched, the homepage, Our Company, Operations, Tatitlek Federal Services and GeoNorth, and not one contains the words artificial intelligence, machine learning, AI, data analytics or digital modernization. The strongest technology language in the entire group is GeoNorth's expertise in highly automated, global-scale, 2D/3D geospatial production for DoD and civilian applications, which is pipeline automation and reads as such. Against that, Koniag publishes an AWS-corroborated 687,000 hours and $37M annual cost avoidance for the Army with named tools, and ASRC Federal publishes three named federal AI deployments at NOAA, GOES-R and USGS EROS. Both are Alaska Native corporations selling into the same agencies on the same vehicles. A source-selection board or a partner comparing ANC capability statements today sees measured AI from two peers and silence from Tatitlek.\n\nEXPOSURE TWO, THE CAPTURE AND PROPOSAL MACHINE, WHERE TWO ANCs HAVE ALREADY MOVED IN DIFFERENT DIRECTIONS. Koniag's Bedrock-powered Jumpstarters draft Performance Work Statements in minutes rather than days and J and A justifications in minutes rather than hours, and DORA cuts a vendor responsibility determination from an hour to two minutes. Alutiiq, a much closer size and profile match to Tatitlek, put a bid-and-capture application on Salesforce Government Cloud live in two months and hit 100 percent adoption in a year. Both of those are the same back-office work Tatitlek must do to win and hold OASIS+ and STARS III task orders. Nothing public shows Tatitlek with either. Note the asymmetry that matters: Koniag SELLS its procurement AI to a federal customer, Alutiiq RUNS its CRM internally. Those are two distinct competitive threats and only one of them is visible in a capability statement.\n\nEXPOSURE THREE, THE LANGUAGE LANE IS BEING ATTACKED WITH CAPITAL, NOT WITH BROCHURES. SOSi took an equity position in AppTek and became the exclusive federal reseller of its ASR and machine translation, explicitly because customers' appetites for A.I. driven solutions have increased. SOSi sells cleared linguists and interpretation to DoD, DOJ and DEA, which is adjacent to and partly overlapping with Tatitlek's language-and-culture instruction and foreign-language role players. That position has been maturing since June 2020. Tatitlek's language offering, as published, rests entirely on the human database.\n\nEXPOSURE FOUR, THE OPERATING CONSTRAINT IS RECRUITING AND ONE COMPETITOR HAS PUBLICLY AUTOMATED IT. Tatitlek's primary NAICS is temporary help and the business is the ability to screen, security-vet, culturally vet and field bodies on a rotation calendar. Chenega, the nearest structural twin, an Alaska Native village corporation of about 5,000 people, has a published account of AI sourcing producing 10 percent faster time to hire, 50 percent less sourcing time and 40 percent more qualified candidates. Those numbers are vendor-published and not audited, so weight them accordingly, and the direction still matters because it is exactly Tatitlek's bottleneck.\n\nEXPOSURE FIVE, THE ALASKA TECHNICAL LABOR POOL. Bering Straits is recruiting an AI Software Engineer IN ANCHORAGE to build LLM copilots and RAG pipelines into LogIT logistics applications. That is the same small hiring pool Tatitlek draws from, and the competitor is bidding for it first.",
+    "where_target_could_lead": "Stated strictly as observed white space in the field, with no build implied.\n\nONE, THE LIVE HUMAN TRAINING LANE IS UNCONTESTED BY AI AMONG THE PEOPLE WHO ACTUALLY COMPETE FOR IT, while the surrounding defense market moves publicly. Valiant, the most direct role-player and live-training competitor found, lists Live Virtual Constructive (LVC) Training and Synthetic Training Integration on its training page and makes no AI, ML or adaptive-learning claim anywhere on it. Chenega's MIOS lists Training and eLearning and Language Analysis with no AI language on its business-unit pages. Chugach lists Training and Education with no AI language. SOSi's AI is pointed at translation, transcription and localization, not at running live human role-player operations. Meanwhile the wider market is visibly moving, AI OpFor as an AI-controlled simulated adversary, EDF 2026 calls for AI-generated synthetic terrain and operation orders with automated after-action analysis, and generative platforms for tactical training of junior officers, all published, none of it owned by anyone in Tatitlek's actual competitive set. Nobody in this field has planted a flag between the human role-player business and that wave.\n\nTWO, NOBODY IN THE ANC SET PUBLISHES AI APPLIED TO A LARGE CONTINGENT LABOR POOL. Chenega's documented use is sourcing only, at the front of the funnel. Across all nine competitors fetched, no one claims AI applied to vetting, clearance tracking, language-proficiency assessment, rotation scheduling or surge fill for a standing pool of thousands. Tatitlek's 6,000-person screened and culturally vetted database is the largest such published asset in this field and it is proprietary data, which is the one thing competitors cannot copy off a website.\n\nTHREE, GEOSPATIAL AI IS OPEN GROUND INSIDE THIS SPECIFIC FIELD. GeoNorth already runs high-performance and cloud geospatial production for DoD and intelligence customers in agriculture, defense, energy, maritime and natural resources, which is precisely the domain where ML is now mainstream across the broader defense market. Among the competitors fetched, ASRC Federal's AI sits in space operations and financial forecasting, Koniag's sits in procurement, Akima's is unnamed, and no one in the set claims ANC-owned geospatial AI. Tatitlek is the only one of the nine holding that particular asset.\n\nFOUR, THERE IS NO VEHICLE BARRIER. Tatitlek already holds OASIS+ 8(a) and Small Business, GSA STARS III, SeaPort NxG and ANC 8(a) sole-source authority, which are the same instruments Koniag and Akima route AI-flavoured work through. Whatever the gap is, it isn't contractual access.\n\nFIVE, THE HONEST COUNTERWEIGHT. Two of the nine, Chugach and Valiant, show nothing, and Alutiiq is explicit that its automation is roadmap rather than shipped. So the field is not uniformly ahead. The split is clean and worth saying plainly: the IT-and-professional-services ANCs (Koniag, ASRC Federal, Bering Straits, Akima) have moved, and the facilities-and-live-training houses (Chugach, Valiant, Alutiiq, Chenega's delivery side) have not. Tatitlek straddles both halves, so it is simultaneously behind in one of its markets and standing in open ground in another.",
+    "confidence": "HIGH on market definition and on competitor identity. Tatitlek's four markets, subsidiaries, vehicles, headcount and primary NAICS 561320 were read off tatitlek.com and a HigherGov awardee profile. All nine competitors were verified from their own or a partner's live pages, and each was selected for a named overlap with a specific Tatitlek line rather than for size.\n\nHIGH on the POSITIVE AI findings. Koniag is corroborated by AWS with named tools and figures, which is the strongest evidence in the set; ASRC Federal names three federal customers and systems on its own AI page plus a dated April 22nd, 2026 NOAA release; SOSi's AppTek equity stake and exclusive federal reseller arrangement is a capital fact; Bering Straits' Anchorage LLM/RAG requisition quotes the responsibilities verbatim; Alutiiq's Salesforce deployment is a vendor-published customer story with metrics. Chenega's recruiting metrics are HIGH that the tool is in use and LOW that the percentages are audited, since hireEZ published them from its own customer's quotes. Akima's AI is explicitly graded as capability marketing, its own page names no deployment.\n\nMEDIUM, AND DELIBERATELY SO, ON EVERY NONE FOUND. Chugach, Valiant, Olgoonik and Doyon were checked at homepage, capability-page and search level only, not across every subsidiary site, careers board, capability statement PDF, SAM.gov entry or trade-press archive. Absence of evidence in a bounded fetch is not evidence of absence, and any of them could hold an unpublished internal tool. The same caveat applies to Tatitlek's own zero posture, five pages showed nothing, which establishes that nothing is PUBLIC, not that nothing exists.\n\nLOW on Tatitlek's revenue split across its four markets. HigherGov's contract tables rendered as No Results and Calculating on the fetch, so the relative dollar weight of training support versus base operations versus IT is NOT established from a primary contract database, and the ordering above is inferred from capability pages and known role-player placements at Twentynine Palms and Fort Bliss. A USAspending or SAM.gov pull would firm that up and is the obvious next verification step.\n\nNot checked, and worth naming as a known hole: Doyon Government Group and Olgoonik got only a single search pass each, no primary page was fetched for either, so neither is reported as a competitor above. Tatitlek Technologies, Tatitlek Government Services, Tatitlek Management Services, Tatitlek Professional Services and Tatitlek Universal Services were not individually fetched, so a stray AI mention on one of those pages would soften Exposure One."
+  },
+  "industry": {
+    "industry": "Federal government services contracting at the small-to-mid prime and subcontractor scale (professional/technical services, IT, security and facilities, military training and range support), plus the back office that carries it: capture and proposal production, past-performance and capability documentation, contract compliance, recruiting for contract ramps, and timekeeping/invoicing against federal contracts.",
+    "in_production": [
+      {
+        "who": "K Corp, described in the case study as a 100 percent Native-owned, Alaska-based government contractor with a lean BD team",
+        "what_ai": "GovDash, an AI proposal and capture platform purpose-built for GovCon. Used for RFP analysis and first-draft generation from a company content library, with the writer editing rather than starting blank.",
+        "outcome": "TIER: vendor_case_study (named customer, vendor-published). 60 percent reduction in proposal preparation time, monthly proposal submissions up from 2 to 6 (3x), zero new hires to absorb the increase. Named operator quoted: Cheyanne Richard, Technical Writer for Business Development, 'Without GovDash, there's no way we could put out the number of proposals we do.' Published March 25th, 2025. NOTE: this is the closest structural match in the entire evidence base to an Alaska Native corporation's federal services subsidiary, and it is still a vendor-published number with no independent audit of the baseline.",
+        "source_url": "https://www.govdash.com/blog/how-k-corp-3x-d-proposal-output-using-govdash",
+        "reliability": "vendor_claim"
+      },
+      {
+        "who": "SPATHE Systems, an 8(a) and SDVOSB federal contractor in Tampa FL, founded 2014, IT/cyber/software/infrastructure support services, with ONE proposal manager",
+        "what_ai": "GovDash, adopted September 2024, across RFP analysis, key-personnel qualification matching, and proposal generation. Human review retained (the claim is a Red Team-ready draft in 24 hours, not a submission-ready one).",
+        "outcome": "TIER: vendor_case_study (named customer and named executive). Draft turnaround from 2.5-3 weeks to 24 hours (about 90 percent). Monthly RFP submissions from 2 to 7-8 (4x) without new proposal staff. Quoted: Darren Williams, VP Solution Development, 'GovDash has become a force multiplier for SPATHE Systems.' Published July 30th, 2025. The case study itself notes results depended on team adoption and AI-literacy training, not on the tool alone.",
+        "source_url": "https://www.govdash.com/blog/from-3-weeks-to-24-hours-how-spathe-systems-4x-d-rfp-output-with-govdash",
+        "reliability": "vendor_claim"
+      },
+      {
+        "who": "Sumaria Systems, defense engineering services contractor founded 1982, nationwide, DoD and national security customers",
+        "what_ai": "GovDash, piloted December 2024 then expanded across the growth team. Two distinct jobs: (1) technical RFI response drafting with SMEs validating, (2) bulk resume reformatting into a standard proposal format.",
+        "outcome": "TIER: vendor_case_study (named customer, two named executives). A 13-page technical RFI that historically took up to 2.5 weeks was submitted in 3 days, with the first draft in roughly 90 minutes and SME review inside 24 hours. Nearly 400 resumes standardized, conversion time down from hours to about 10 minutes each. Quoted: Donna Kerstis, Senior Proposal Manager, and Michelle Nixon, Chief Growth Officer ('It has unified company documents and processes, and that was an unforeseen benefit'). Published January 3rd, 2026. The resume-standardization result is the most transferable item here for a multi-subsidiary staffing-heavy contractor.",
+        "source_url": "https://www.govdash.com/blog/how-sumaria-systems-reduced-rfi-response-time-by-80-percent-with-govdash",
+        "reliability": "vendor_claim"
+      },
+      {
+        "who": "The Brite Group, federal IT and data solutions firm in Washington DC serving DoD, DHS and law enforcement, with a TWO-PERSON BD team",
+        "what_ai": "GovDash Word Assistant, drafting RFI and RFP responses off a past-performance corpus.",
+        "outcome": "TIER: vendor_case_study (named customer and principal). 50 percent of initial proposal drafts produced automatically; a 2-person team absorbing a larger RFI/RFP load; a stated target of 30 percent less manual rework by year end (a TARGET, not a measured result, and it is presented as one). Quoted: Suraj Sharma, Principal. Published May 16th, 2025.",
+        "source_url": "https://www.govdash.com/blog/how-the-brite-group-cut-proposal-drafting-time-by-50-with-govdash",
+        "reliability": "vendor_claim"
+      },
+      {
+        "who": "Additional named GovDash customers listed on the vendor's customer-stories index (Total Systems Technologies, PowerTrain, OneZero Solutions, AQE Solutions, Schatz Strategy Group, Cape Fox FCG, Endurion, Aurex, JANUS)",
+        "what_ai": "Same platform, spread across capture/pipeline, proposal drafting, and color-team review.",
+        "outcome": "TIER: vendor_case_study headlines (customers named, numbers un-detailed on the index page). Total Systems Technologies doubles RFI volume; PowerTrain increased proposal efficiency by 3x; OneZero Solutions cut time to Pink Team drafts by 50 percent; Schatz Strategy Group saved $75K per year; Cape Fox FCG listed under increase BD output (AI agents). Cape Fox FCG is an Alaska Native corporation subsidiary, which makes it the second ANC-shaped name in this dataset, BUT the underlying case study page could not be retrieved, so treat it as a listing and nothing more. NOTE FOR THE SHOWRUNNER: capefoxcorp.com is on this routine's suppression list, it appears here only as an industry datapoint. The cluster matters more than any single entry: this is roughly a dozen named small-to-mid GovCons reporting the same direction of result on the same job.",
+        "source_url": "https://www.govdash.com/customer-stories",
+        "reliability": "vendor_claim"
+      },
+      {
+        "who": "An unnamed SDVOSB cybersecurity firm in Washington DC (GovDash customer)",
+        "what_ai": "GovDash for full proposal development, displacing outside proposal consultants.",
+        "outcome": "TIER: vendor_marketing (no named customer). Estimated $50,000 saved per proposal cycle, 50 percent shorter proposal timelines, 2x annual proposal output. The vendor does not publish the calculation behind the $50K. The mechanism named is reduced reliance on external consultants, which is a real and checkable line item for any GovCon, so the mechanism is more useful than the number. Published March 26th, 2025.",
+        "source_url": "https://www.govdash.com/blog/how-a-cybersecurity-company-saved-50k-per-proposal-cycle-with-govdash",
+        "reliability": "vendor_claim"
+      },
+      {
+        "who": "An unnamed mid-sized government contractor (Procurement Sciences 'Awarded' customer)",
+        "what_ai": "Awarded AI for RFP analysis, resume evaluation and proposal drafting.",
+        "outcome": "TIER: vendor_marketing (customer not named, quote anonymous). Two contract wins under tight deadlines; the only quote is an anonymous team member on resumes: 'I will never go back to reviewing resumes by hand.' Published February 3rd, 2025. Included deliberately as the contrast case: same claimed capability as the GovDash set, one tier weaker in evidence because nobody is named.",
+        "source_url": "https://www.procurementsciences.com/case-studies/case-study-mid-sized-govcon-secures-two-wins-with-awarded-ai",
+        "reliability": "vendor_claim"
+      },
+      {
+        "who": "US Army PEO Enterprise and Army Contracting Command (Aberdeen Proving Ground, Detroit Arsenal, Rock Island)",
+        "what_ai": "SBIR-funded AI prototypes that assemble Acquisition Requirement Packages, the requirements documents that precede a solicitation. Three prototypes funded September 2024; testing at the three contracting centers began January 2026 under the Smart Contracting Initiative.",
+        "outcome": "TIER: operator_reported, government-published. ARP development time reduced from weeks to hours, or, in some cases, minutes. PEO Enterprise used one prototype in FY2025 to produce TWO ACTUAL SUPPLY-TYPE CONTRACT AWARDS, which is a production outcome rather than a pilot metric. Two more AI source-selection tools anticipated in FY2026. This is the buyer moving, and it changes the tempo a bidder has to match.",
+        "source_url": "https://www.army.mil/article/290573/army_ai_prototypes_speed_up_acquisition_enable_faster_capability_delivery",
+        "reliability": "proven"
+      },
+      {
+        "who": "Army Contracting Command, Rock Island Arsenal and ACC G6 Huntsville (Army MAX)",
+        "what_ai": "Army MAX (Marketplace, Automation and eXecution), an AI-assisted services acquisition platform that validates requirements, flags missing documentation, builds solicitation packages and posts notices to SAM.gov.",
+        "outcome": "TIER: operator_reported (Army announcement, trade-press write-up). Pilot announced August 6th, 2026; officials named (Ben Graw, contract specialist, Strategic Competitions and Innovations Branch). IMPORTANT CAVEAT: the Army has stated a design intent of shorter services-contracting timelines but has published NO quantified time saving for Army MAX. The widely repeated months to days figure is an aspiration in the coverage, not a measurement. Relevant to Tatitlek because services acquisition is exactly the lane its subsidiaries bid in.",
+        "source_url": "https://www.executivegov.com/articles/army-max-ai-assisted-service-acquisition",
+        "reliability": "proven"
+      },
+      {
+        "who": "Federal agencies generally (11 agencies with published AI inventories, DoD exempt)",
+        "what_ai": "Generative AI across mission support, including written communications and information access.",
+        "outcome": "TIER: independent_measurement (GAO, report GAO-25-107653, July 29th, 2025). Total reported AI use cases nearly doubled from 571 in 2023 to 1,110 in 2024. Generative AI use cases rose about ninefold, 32 to 282. GAO also records the drag: officials at 10 of 12 agencies cited existing federal policy as a potential obstacle, alongside data-privacy compliance and insufficient technical budget. This is the only genuinely independent measurement found anywhere in this industry's AI story, and it measures the CUSTOMER, not the contractor.",
+        "source_url": "https://www.gao.gov/products/gao-25-107653",
+        "reliability": "proven"
+      },
+      {
+        "who": "US Army source selection at White Sands Missile Range, and TRAX International (the protester) versus Southwest Range Services (the awardee)",
+        "what_ai": "AI tooling used inside the Army's proposal evaluation for a roughly $450 million mission support services contract.",
+        "outcome": "TIER: independent (litigation record reported by Nextgov/FCW, August 2026). TRAX alleges the AI hallucinated multiple times, producing a weakness against TRAX with made-up references to TRAX's proposal, that no one on the Source Selection Evaluation Board checked. The Army conceded one identified weakness is not supported by the record. The Army's records to GAO did not explain whether assigned strengths for the Southwest Range Services bid came from a human or an AI tool. GAO denied the initial protest in May 2026; TRAX filed in the Court of Federal Claims in late July 2026; price delta $29.4 million. THIS IS RANGE SUPPORT SERVICES, the exact segment Tatitlek works in. It is the single most segment-specific AI fact available and it is about the buyer's AI, not the bidder's.",
+        "source_url": "https://www.nextgov.com/acquisition/2026/08/contractor-alleges-army-inappropriately-used-ai-make-450m-contract-award/415225/",
+        "reliability": "proven"
+      },
+      {
+        "who": "Booz Allen Hamilton (large prime, used here only as a directional operator report)",
+        "what_ai": "AI applied internally to recruiting, specifically matching job descriptions against technical requirements and security clearance levels.",
+        "outcome": "TIER: operator_reported, NO MEASUREMENT. Leadership described a lot of work last fiscal year in automating a lot of those processes and getting much better at matching algorithms. CFO Matt Calderone framed revenue-per-employee gains as a future expectation. No metric, no date, no named tool was given to investors. Reported July 2025. Included precisely because it is the honest state of the cleared-recruiting category: the biggest firm in the space is doing it and has published nothing measurable.",
+        "source_url": "https://www.washingtontechnology.com/companies/2025/07/booz-allens-ai-blueprint-customers-and-company-itself/406992/",
+        "reliability": "vendor_claim"
+      },
+      {
+        "who": "Unanet (ERP used by GovCons for DCAA-compliant timekeeping, billing and project accounting), 4,200+ clients",
+        "what_ai": "ChampAI, OpportuneAI (opportunity identification), ProposalAI (proposal generation), Wyatt agentic framework, AP/AR automation, vendor invoice automation. Announced December 9th, 2025.",
+        "outcome": "TIER: vendor_marketing (NO named customers, NO quantified outcomes in the release). Fetched specifically to test the back-office pocket and it came back empty of measurement. Claims are directional only (accelerating cash flow, saving business development teams hours each week). The 20 percent cash-flow / 66 percent DSO figures circulating in search results do not appear in this release and could not be sourced to a fetched page, so they should not be repeated.",
+        "source_url": "https://www.prnewswire.com/news-releases/unanets-product-innovations-advance-intelligence-and-automation-for-govcon-and-aec-firms-302635959.html",
+        "reliability": "vendor_claim"
+      },
+      {
+        "who": "Deltek (the dominant GovCon software vendor), on its own AI opportunity-and-proposal tooling",
+        "what_ai": "AI-generated proposal outlines, RFP requirement extraction, Shipley color-team workflow support.",
+        "outcome": "TIER: vendor_marketing with nothing in it. Fetched expecting customer numbers and found NONE: no named customers, no measured outcomes, no Clarity statistics, only feature description and 30,000 organizations trust Deltek. Worth knowing before a sales call: the largest vendor in this market publishes weaker customer evidence on its AI than a Series B startup does.",
+        "source_url": "https://www.deltek.com/en/blog/govcon-ai-opportunity-proposal-tools",
+        "reliability": "vendor_claim"
+      }
+    ],
+    "state_of_play": "CATEGORIES WORKED (so the reader knows what was and was not searched): capture and opportunity discovery; proposal production and RFP shredding; past-performance, resume and knowledge reuse; contract compliance (FAR overhaul, CMMC/CUI, the new GSA AI clause); cleared recruiting and staffing for contract ramps; timekeeping, invoicing, AP/AR and DCAA accounting; service delivery on contract (IT service desk, facilities and O and M predictive maintenance, security guard operations, military training and range support); the government buyer's own AI; and the legal/protest risk layer. Nine categories, and they are not equally populated.\n\nADOPTION IS NOT THE QUESTION ANYMORE. The 17th annual Deltek GovCon Clarity study surveyed 917 government contractors in January 2026 and found 90 percent using AI in some capacity, up from 45 percent the prior year, with 92 percent using generative AI specifically. Whatever a contractor decides, it is not deciding early. The same study found only 5 percent describe their AI capability as fully developed, only about 25 percent report mature governance, and 45 percent say they are unclear on the ROI. That is a vendor-published survey and should be read as one, but its sample is large and its findings cut against the vendor's interest, which is the tell that it is worth citing.\n\nWHERE THE GROUND IS ACTUALLY SOLID: ONE POCKET, AND IT IS NARROW AND DEEP. Every measured win found in a business shaped like a Tatitlek subsidiary sits in PRE-AWARD DOCUMENT PRODUCTION, and specifically in getting a compliant FIRST DRAFT out of an existing corpus of past performance, resumes and boilerplate. Four named companies with named executives on the record report the same shape of result within about eighteen months of each other. SPATHE Systems (8(a)/SDVOSB, one proposal manager) went from 2.5-3 weeks to 24 hours on draft turnaround and from 2 to 7-8 monthly RFP submissions. K Corp (Native-owned, Alaska-based) reports 60 percent less proposal prep time and 2 to 6 submissions a month with no new hires. Sumaria Systems took a 13-page technical RFI from 2.5 weeks to 3 days and reformatted nearly 400 resumes from hours each to about ten minutes each. The Brite Group's two-person BD team gets 50 percent of first drafts automatically. Add the index-page entries and this is roughly a dozen named small-to-mid GovCons pointing the same direction on the same job. Every one of these is a vendor_case_study, published by GovDash. Not one is independently audited, none discloses the baseline measurement method, and the selection is obviously favourable. That is the honest ceiling on this evidence. It is also the strongest evidence base in the industry, and a dozen named customers with named executives is real information.\n\nNOTE THE SHAPE OF THE CLAIM, because it is unusually consistent and unusually modest. Not one of these operators claims a higher win RATE. They claim THROUGHPUT: more bids submitted, from the same people, in less elapsed time, with a human still doing review and SME validation. SPATHE's is explicitly a Red Team-ready draft, not a submission. Sumaria's SMEs still validate before submission. That is a claim about a bottleneck being moved, and it is far more credible than a win-rate claim would be. Deltek's survey supplies the matching baseline: an average of 84 hours per proposal, and 83 percent of contractors missed opportunities in 2025 because they found them late.\n\nTHE BUYER IS MOVING TOO, AND FASTER THAN MOST CONTRACTORS REALIZE. GAO (independent) recorded federal generative-AI use cases rising about ninefold from 32 to 282 across eleven agencies between 2023 and 2024. The Army has AI prototypes assembling Acquisition Requirement Packages in hours instead of weeks, tested at Aberdeen, Detroit Arsenal and Rock Island since January 2026, and PEO Enterprise already used one to produce two real contract awards in FY2025. Army MAX, announced August 6th, 2026, drafts services solicitations and posts them to SAM.gov. For a services contractor this is the point: solicitation cadence on the buyer's side is accelerating while proposal capacity on the bidder's side is still the same humans.\n\nWHAT YOU CAN BUY TODAY, WITH REAL PRICING SIGNAL. GovCon-native proposal AI is almost entirely demo-gated. Sweetspot's pricing page publishes no price at all, only a demo booking; a fetched market comparison lists GovDash, Inventive AI, Arphie, Ombud, QorusDocs, SteerLab and Tribble as contact sales with no published starting price, against generic RFP tools that do publish ($49 to $899 a month, with AutogenAI estimated at $30K+ a year). Adjacent GovCon data tools DO publish: Deltek GovWin IQ averages around $29,000 a year (enterprise to $119,000), HigherGov starts at $500 a year for one seat with tiers at $2,500 and $5,000, GovTribe federal-only runs roughly $100 to $300 a month. Practical read: budget a five-figure annual commitment for a GovCon-native proposal platform, expect to negotiate blind, and know that the opportunity-discovery layer is cheap and transparently priced while the drafting layer is not.\n\nTWO PROCUREMENT FACTS THAT DECIDE WHICH TOOLS ARE EVEN ELIGIBLE. GovSignals announced FedRAMP High authorization for a proposal AI on November 24th, 2025, and Procurement Sciences achieved FedRAMP Moderate on March 13th, 2026. If any part of the corpus a tool touches is CUI, the authorization boundary is the first filter, not the feature list, and it eliminates most of the market before a demo.",
+    "the_gap": "WHERE IT IS WORKING VERSUS WHERE A CONTRACTOR THIS SIZE WOULD EXPECT IT TO, in four gaps.\n\nGAP 1, THE BIG ONE. The measured wins are ALL in PRE-AWARD BACK OFFICE, not in delivery on contract. Tatitlek's revenue comes from delivering IT, security, facilities and range support. Nothing in the delivery categories produced a named operator with a measured outcome. Federal IT service desk AI returned generic ITSM deflection benchmarks with no federal contractor named; facilities and O and M predictive maintenance figures trace to a single vendor content operation with no named customer at all, and should not be repeated as fact; security guard workforce AI returned vendor blogs and one anecdote with no fetchable source page; military training and range support has real and large 2026 awards (Booz Allen's $696.7M Army MCTP award among them) but those are contracts to DELIVER training, not evidence of AI making an incumbent's range support cheaper. If someone pitches AI into the delivery line of a federal services contract, there is currently no measured public precedent to lean on, and the CDRL, CUI and government-furnished-environment constraints are why. That is a genuine gap, not a thin search.\n\nGAP 2. THE CLEARED RECRUITING POCKET LOOKS RIPE AND IS EVIDENCE-EMPTY. For a 1,300-person, many-location contractor that ramps staff against contract awards, recruiting feels like the obvious AI target. Booz Allen, the largest firm in the market, told investors it is doing exactly this (matching job descriptions to technical requirements and clearance levels) and published NO metric, NO date and NO tool name. The circulating numbers in this category (35-45 percent faster hires, a named-but-obscure contractor screening 2,000 resumes in 48 hours) trace to staffing-agency marketing pages that could not be verified by fetching, and they should be treated as vendor_marketing. Notably, the one adjacent result that IS documented by a named customer is Sumaria's RESUME STANDARDIZATION, which is a proposal-production job, not a recruiting job. The evidence points at formatting resumes for bids, not at sourcing people.\n\nGAP 3. THE COMPLIANCE AND ACCOUNTING BACK OFFICE IS THE OPPOSITE OF WHAT THE MARKETING SAYS. Deltek's Clarity study finds contractors averaging dozens of audits a year and 96 percent expecting compliance costs to stay elevated or rise, and the Revolutionary FAR Overhaul (first proposed rules June 23rd, 2026, over 1,100 pages) is rewriting the rulebook underneath everyone. That is a screaming demand signal. The supply side has no measured deliveries against it. Unanet's own December 2025 AI product release names no customer and quantifies nothing. Deltek's AI proposal page names no customer and quantifies nothing. The CMMC-AI tools publish prices (FutureFeed at $99/month plus $168/month for Level 2 add-ons for firms under 25 employees, Vanta-class platforms at $12,000-$25,000 a year) but not outcomes. Highest demand, thinnest evidence, in the category where a wrong answer is most expensive.\n\nGAP 4, AND THE ONE TO READ TWICE. THE MOST CONSEQUENTIAL AI IN THIS INDUSTRY RIGHT NOW IS THE GOVERNMENT'S, NOT THE CONTRACTOR'S, AND IT HAS ALREADY MISFIRED IN TATITLEK'S OWN SEGMENT. In the White Sands Missile Range mission support competition, TRAX alleges the Army's AI hallucinated a weakness into its proposal with made-up references that nobody on the source selection board checked, on a roughly $450 million award with a $29.4 million price delta. The Army conceded one weakness is unsupported by the record and could not tell GAO whether the awardee's strengths came from a human or a tool. GAO denied the protest in May 2026; it is now in the Court of Federal Claims. The practical implication for a bidder is unglamorous and actionable: proposals are increasingly being READ by machines, so traceability, explicit requirement mapping and unambiguous cross-referencing are now a scoring variable, and debrief records are worth scrutinizing for AI provenance.\n\nAND THE COMPLIANCE TRAP ON THE OTHER SIDE. GSA posted an AI-specific acquisition rule to the Federal Register on June 17th, 2026 (comments closed August 3rd, 2026), applying to government-wide vehicles including the Federal Supply Schedule and OASIS+. It splits contractors into four roles (LLM developer, service provider, systems integrator, system operator), and would require disclosure of every LLM used in contract performance within 120 days of commencing work, identification of every entity filling each role, and 72-hour incident notification for LLM-related events touching government data. An earlier GSA proposal drew contractor alarm over irrevocable government use rights, data segregation, and a bar on AI components controlled by non-US entities. Read together with the CUI rule (do not put CUI in a tool that is not FedRAMP authorized at the right level; a CUI incident can reach contract termination or debarment), the honest conclusion is that a GovCon's AI decision is a COMPLIANCE decision wearing a productivity decision's clothes, and the disclosure obligation means the tool choice has to be defensible on paper before it ever has to be defensible on ROI.",
+    "grounding_facts": [
+      {
+        "fact": "17th annual Deltek GovCon Clarity study, 917 government contractors surveyed in January 2026, published May 13th, 2026: 90 percent of government contractors now use AI in some capacity, up from 45 percent the year prior, and 92 percent report using generative AI tools.",
+        "source_url": "https://www.govconwire.com/articles/clarity-report-2026-deltek-govcon-kevin-plexico",
+        "reliability": "vendor"
+      },
+      {
+        "fact": "Same Deltek Clarity study: only 5 percent describe AI capability as fully developed, most are still piloting (37 percent) or scaling (38 percent), just 25 percent report mature governance structures, and 45 percent say they are unclear on the ROI of leveraging AI.",
+        "source_url": "https://www.deltek.com/company/news/latest-deltek-clarity-industry-studies-highlight-ai-challenges/",
+        "reliability": "vendor"
+      },
+      {
+        "fact": "Same study, the operational baseline a proposal-AI business case would be measured against: average proposal development runs 84 hours per proposal, and 83 percent of contractors missed opportunities in 2025 because they discovered them late.",
+        "source_url": "https://www.govconwire.com/articles/clarity-report-2026-deltek-govcon-kevin-plexico",
+        "reliability": "vendor"
+      },
+      {
+        "fact": "Same study, the financial pressure behind the AI push: contractors averaged 15 percent revenue growth in 2025 and expect 16 percent in 2026, while profit margins fell from 20 percent to 17 percent, and nearly nine in ten firms saw at least one financial metric decline. Top AI concerns were data privacy and security risk (37 percent) and inaccurate AI-generated forecasts (34 percent).",
+        "source_url": "https://www.govconwire.com/articles/clarity-report-2026-deltek-govcon-kevin-plexico",
+        "reliability": "vendor"
+      },
+      {
+        "fact": "Same study: 96 percent of contractors expect compliance costs to remain elevated or increase in the coming year, and firms average dozens of audits annually across financial, cybersecurity and contract domains.",
+        "source_url": "https://www.deltek.com/resources/articles/deltek-clarity-govcon-five-contracting-trends/",
+        "reliability": "vendor"
+      },
+      {
+        "fact": "GAO-25-107653, published July 29th, 2025: across 11 federal agencies with published AI inventories (DoD exempt), total reported AI use cases nearly doubled from 571 in 2023 to 1,110 in 2024, while generative AI use cases rose roughly ninefold from 32 to 282. Officials at 10 of 12 agencies cited existing federal policy as a potential obstacle to adoption.",
+        "source_url": "https://www.gao.gov/products/gao-25-107653",
+        "reliability": "authoritative"
+      },
+      {
+        "fact": "US Army: three SBIR-funded AI prototypes for Acquisition Requirement Packages, funded September 2024, reduce ARP development from weeks to hours, or, in some cases, minutes. PEO Enterprise used one in FY2025 to produce two supply-type contract awards. Testing at Army Contracting Command Aberdeen Proving Ground, Detroit Arsenal and Rock Island began January 2026 under the Smart Contracting Initiative; two more AI source-selection tools anticipated in FY2026.",
+        "source_url": "https://www.army.mil/article/290573/army_ai_prototypes_speed_up_acquisition_enable_faster_capability_delivery",
+        "reliability": "authoritative"
+      },
+      {
+        "fact": "Army MAX (Marketplace, Automation and eXecution), announced August 6th, 2026, is an AI-assisted services acquisition platform built by ACC-Rock Island Arsenal and ACC G6 Huntsville that validates requirements, identifies missing documentation, supports solicitation package development and posts notices to SAM.gov. No quantified time saving has been published by the Army; the widely repeated months to days figure is stated intent, not measurement.",
+        "source_url": "https://www.executivegov.com/articles/army-max-ai-assisted-service-acquisition",
+        "reliability": "authoritative"
+      },
+      {
+        "fact": "TRAX International alleges in the US Court of Federal Claims (filed late July 2026) that the Army's AI evaluation tooling hallucinated multiple times during source selection for roughly $450 million in mission support services at White Sands Missile Range, producing a classic AI hallucination, with made-up references to TRAX's proposal, that no one on the Source Selection Evaluation Board checked. The Army conceded one assigned weakness is not supported by the record; its records to GAO did not explain whether the awardee's strengths came from a human or an AI tool. GAO denied the initial protest in May 2026. Price delta between bids: $29.4 million.",
+        "source_url": "https://www.nextgov.com/acquisition/2026/08/contractor-alleges-army-inappropriately-used-ai-make-450m-contract-award/415225/",
+        "reliability": "authoritative"
+      },
+      {
+        "fact": "GSA posted an AI-specific acquisition rule to the Federal Register on June 17th, 2026 (listening session July 14th, comments closed August 3rd, 2026), applying to GSA government-wide vehicles including the Federal Supply Schedule and OASIS+. It defines four contractor roles (LLM developer, LLM service provider, LLM systems integrator, LLM system operator) and would require disclosure of all LLMs used within 120 days of commencing work, identification of every entity filling each role, and notification within 72 hours of discovering an LLM-related incident involving government data.",
+        "source_url": "https://www.washingtontechnology.com/contracts/2026/06/gsa-unveils-new-ai-specific-acquisition-rule/414351/",
+        "reliability": "authoritative"
+      },
+      {
+        "fact": "An earlier GSA AI procurement proposal (comments due March 20th, 2026) would have applied to MAS contractors and broadly defined Service Providers including subcontractors, requiring an irrevocable government license to use AI systems for any lawful purpose, disclosure within 30 days of award of all AI systems used in performance, logical segregation of government data from other customers' data with no use for training models for others, and a bar on AI components manufactured, developed or controlled by non-US entities.",
+        "source_url": "https://www.gibsondunn.com/gsa-ai-procurement-rules-would-introduce-new-disclosure-and-use-rights-requirements-for-federal-contractors/",
+        "reliability": "authoritative"
+      },
+      {
+        "fact": "FedRAMP status is the eligibility filter for any AI tool touching CUI in this market. GovSignals announced FedRAMP High authorization for a defense-contractor proposal AI on November 24th, 2025 (its only named customer reference, Loft Federal, carries a testimonial and no metric). Procurement Sciences achieved FedRAMP Moderate on March 13th, 2026 and is listed on the FedRAMP Marketplace.",
+        "source_url": "https://www.prnewswire.com/news-releases/procurement-sciences-achieves-fedramp-moderate-authorization-302713703.html",
+        "reliability": "vendor"
+      },
+      {
+        "fact": "Pricing signal, GovCon-native proposal AI is demo-gated. Sweetspot's own pricing page publishes no price and routes to a 30-minute demo; its customer logos (Oshkosh Defense, Strider Technologies, OWT Global, Crayon, Vantiq, The Saratoga Group) carry no quantified outcome, and its only outcome testimonial is from an unnamed Senior Executive at a $2B+ Federal IT Contractor.",
+        "source_url": "https://www.sweetspot.so/pricing/",
+        "reliability": "vendor"
+      },
+      {
+        "fact": "Pricing signal, comparative. GovDash, Inventive AI, ContraVault AI, Arphie, SiftHub, SteerLab, Ombud, QorusDocs and Tribble all publish no starting price. Generic (non-GovCon) RFP tools do: Proposify $49/month, PandaDoc $65/month, DeepRFP $89/user/month, Bidara $299/month, RFP360 $500/month, AutoRFP.ai $899/month, with Loopio about $1,200/month, Responsive about $1,160/month, Qvidian about $2,000/month and AutogenAI about $30K+/year as estimates.",
+        "source_url": "https://www.bidara.ai/comparison/ai-proposal-software",
+        "reliability": "vendor"
+      },
+      {
+        "fact": "Pricing signal, the opportunity-discovery layer, which IS transparently priced. Deltek GovWin IQ averages around $29,000 annually with enterprise packages to $119,000; HigherGov starts at $500/year for a single user with Standard at $2,500 and Leader at $5,000; GovTribe federal-only plans run roughly $100 to $300 per month, federal plus SLED from about $1,800/year.",
+        "source_url": "https://www.sweetspot.so/blog/govcon-ai-tools-small-business-federal-contractors/",
+        "reliability": "vendor"
+      },
+      {
+        "fact": "Proposal-profession adoption benchmark, cited secondhand: the Loopio/APMP RFP Trends and Benchmarks report (seventh annual, 2026) found 79 percent of proposal teams used generative AI in 2025, up from 34 percent in 2023. Loopio's own page returned empty and its Businesswire release returned 403, so this is a SECONDARY citation from a fetched industry-report page and should be attributed that way, not repeated as a direct Loopio/APMP citation.",
+        "source_url": "https://proposalconnect.io/annual-govcon-industry-report-2026",
+        "reliability": "vendor"
+      },
+      {
+        "fact": "GSA's own chief AI officer, Zach Whitman, on federal AI ROI in May 2026: The big issue that we're facing is how do we calculate ROI, with questions about AI's effectiveness, utility, efficiency gains and service-delivery impact remaining very open, though we know something is there. The same report notes only 6 percent of executives in a Deloitte survey of 1,850 global leaders could measure an AI use case's ROI within one year of deployment.",
+        "source_url": "https://fedscoop.com/gsa-ai-roi-usai-platform-adoption/",
+        "reliability": "authoritative"
+      },
+      {
+        "fact": "Negative finding, recorded because it qualifies the vendor tier. Deltek's own AI opportunity-and-proposal page, fetched in full, contains no named customers, no measured outcomes and no Clarity statistics about AI results, only feature description and the claim that 30,000 organizations trust Deltek. Unanet's December 9th, 2025 AI product release likewise names no customer and quantifies no outcome. The two largest GovCon software vendors publish weaker AI customer evidence than the venture-backed newcomers do.",
+        "source_url": "https://www.deltek.com/en/blog/govcon-ai-opportunity-proposal-tools",
+        "reliability": "vendor"
+      },
+      {
+        "fact": "Negative finding, the opportunity-discovery claims are unattributed. GovDash's own AI-agent pipeline page presents 250 to 500 recovered analyst hours annually per BD FTE and $36,000 to $92,000 in recovered labor annually per BD analyst as industry figures with NO named customer behind them, in contrast to its proposal-drafting case studies which do name customers. Treat the pipeline-discovery numbers as vendor_marketing and the drafting numbers as vendor_case_study; they are not the same tier even from the same vendor.",
+        "source_url": "https://www.govdash.com/blog/ai-agents-government-contract-opportunity-discovery",
+        "reliability": "vendor"
+      }
+    ],
+    "confidence": "MEDIUM-HIGH on where the ground is solid, MEDIUM on how solid it is, HIGH on where it is empty.\n\nHigh confidence that pre-award document production (RFP shred to compliant first draft, resume and past-performance reformatting, RFI turnaround) is the one pocket in this industry with repeated, named, dated, same-direction results in companies of Tatitlek's shape, including two Alaska Native-owned names (K Corp, and Cape Fox FCG as a customer listing only). High confidence that the claim being made is THROUGHPUT and not win rate, and that human review is retained in every named case.\n\nMedium confidence on the magnitude. The entire named-customer cluster comes from ONE vendor's published case studies, and the strongest single corroborating survey (917 contractors) is also published by a vendor. No independent audit of any contractor-side number exists that could be found. The 60 percent, 90 percent and 3x figures should be quoted as what named operators reported to their vendor, never as established fact, and the honest planning assumption is materially below the case-study headline.\n\nHigh confidence, and the most valuable half, on the empty categories. Nine categories were worked. Delivery-side AI (federal IT service desk, facilities and O and M, security guard operations, training and range support) produced NO named operator with a measured outcome, only vendor content marketing, reported as a real gap rather than a thin search. Cleared recruiting produced one unmeasured operator statement from Booz Allen and nothing else verifiable. Compliance and DCAA accounting produced the loudest demand signal and the thinnest evidence in the whole study.\n\nHigh confidence on the buyer-side and regulatory facts, which are the best-sourced items here (GAO, army.mil, the Court of Federal Claims record via Nextgov, the Federal Register posting). The TRAX/Southwest Range Services matter is the single most segment-specific AI fact available for a range-support contractor and it is authoritative.\n\nTwo verification failures to be transparent about: Federal News Network and Businesswire both returned 403 and their content is NOT relied on here, and the Integrity Management Consulting 60-percent-win-rate claim and the AGS Pro underbilling-recovery anecdote both appeared in search results but are excluded entirely because no source page could be fetched for either."
+  },
+  "_meta": {
+    "company": "The Tatitlek Corporation",
+    "domain": "tatitlek.com",
+    "date": "2026-09-19",
+    "segment": "Alaska Native corporations and tribal enterprises",
+    "place": "Anchorage, Alaska"
+  }
+}

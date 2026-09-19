@@ -132,6 +132,26 @@ from it.
   The fix if it ever earns one is to run it over study.json's strings, where the
   edit units are real.
 
+- **2026-09-19, study_qa counts a figure caption as PROSE.**
+  A QUESTION ABOUT A BAR, so it is not a run's to change.
+
+  EVIDENCE. The prose-versus-structure split says in its own comment that
+  "table cells, source lines and figure labels are scanned, not read", and its
+  structural regex matches `<td>`, `<th>`, `<ol class="srcs">`, `<text>` and
+  `<caption>`. It does NOT match `<p class="figcap">`, which is what the
+  architecture diagram and the embedded demo both use. So every figure caption
+  this renderer emits is charged against a reading-time budget the comment says
+  it should be outside of. On this run it cost 25 words, which was the whole
+  difference between the embedded page passing at 2,986 and failing at 3,011.
+
+  WHY IT IS NOT FIXED HERE. It was found while the embedded page was failing
+  the gate, and changing a budget gate to make the current artifact pass is the
+  exact move THE ITERATION LAW forbids: the standard never bends to make a loop
+  converge, the artifact bends. So the artifact was trimmed instead and the
+  question is written down cold, for a run that is not under the gate at the
+  time. It also shifts the count for every past study, which is a decision
+  about a bar rather than a bug fix.
+
 The rules at the top still bind: evidence from a dated run, no speculative "would
 be nice", and a run may add but may never quietly delete.
 
