@@ -53,8 +53,16 @@ def _hu(x):
 
 def compute(name, s):
     run_rate = 0.0
+    # Hours are the unit the benefit is actually IN, and dollars are a rate applied
+    # to them. The study-critic's third audit pointed out that a study can say
+    # "recovered hours and not cash" four times and never tell the reader how many
+    # hours, which leaves the whole conservative argument resting on a figure
+    # nobody can feel. So the hours are computed here rather than narrated, for
+    # the same reason every other derived number is.
+    hours_per_year = 0.0
     for b in s.get("benefit_lines", []):
         run_rate += b["hours_per_pursuit"] * b["rate"] * b["cut"] * s["pursuits_per_year"]
+        hours_per_year += b["hours_per_pursuit"] * b["cut"] * s["pursuits_per_year"]
     for a in s.get("avoided_cost_lines", []):
         run_rate += a["events_per_year"] * a["cost_per_event"] * a["reduction"]
 
@@ -84,6 +92,7 @@ def compute(name, s):
 
     return {
         "scenario": name,
+        "annual_hours_recovered": _hu(hours_per_year),
         "annual_run_rate_benefit": _hu(run_rate),
         "cumulative_benefit_%dyr" % years: _hu(cumulative_benefit),
         "tco_%dyr" % years: _hu(tco),
