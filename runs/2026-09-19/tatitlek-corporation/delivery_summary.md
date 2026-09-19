@@ -132,8 +132,31 @@ routine is judged against, so no run may edit it. Talon applies it or does not.
 | Delivered | `delivery_check.py` exit 0 against the read-back. Live URL 200 with the demo embedded, demo 200, PDF 200. No attachment attempted, nothing to download |
 | Recorded | leads 22 to 23, run row written, `ledger.py stats` reflects both |
 | Voice signal | Surfaced above as a drafted diff, never applied |
-| Retro shipped a fix | 5 entries in `ledger/upgrades.json`, every named file actually changed in this run's commits, each verified with a negative case |
+| Retro shipped a fix | 6 entries in `ledger/upgrades.json`, every named file actually changed in this run's commits, each verified with a negative case. Over the ceiling of three and labelled so, see below |
 | Draft only | **Nothing was sent.** |
+
+## The ceiling was exceeded, and here is the honest accounting
+
+Six entries carry today's date against a ceiling of three. Three are retro
+picks. Two were ship-blocking critic fixes. The sixth was bought by the review.
+
+**The demo cost three Codex rounds and seven findings, every one the same
+defect.** An artifact written out by hand while its siblings derived from the
+walkthrough's state. The log named a hard-coded owner while the cutoff note
+followed the viewer's pick. The recipient counts claimed seven approved while
+the board correctly showed one held. The chase tile said two rounds when the
+log had honestly emitted none. The contributor's mail showed a message to
+somebody the board said was never written to.
+
+Rounds two and three existed only because each fix corrected the artifact that
+was caught and left the others hard coded beside it. That is the FIX THE CLAIM,
+NOT THE SENTENCE law failing in a file the law's own sweep tool can't read.
+`.claude/agents/demo-builder.md` now carries the rule and names both traps, so
+the next demo does not pay the same three rounds. It edits a producer's brief
+and no bar the run is judged against.
+
+**The link is unaffected.** The package republishes to the same path, so the
+draft already written to Mark Wamsher keeps resolving throughout.
 
 ## The retro, what it actually bought
 
