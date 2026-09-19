@@ -1,0 +1,508 @@
+{
+  "company": "The Tatitlek Corporation",
+  "domain": "tatitlek.com",
+  "place": "Anchorage, Alaska",
+  "run_date": "2026-09-19",
+  "contact": {
+    "verdict": "VERIFIED, SAFE TO SEND",
+    "value": "mwamsher@tatitlek.com",
+    "name": "Mark Wamsher",
+    "title": "Vice President of Business Development",
+    "verbatim_on_page": "Mark Wamsher | Vice President of Business Development | mwamsher@tatitlek.com | (256) 759-9349",
+    "source_url": "https://tatitlek.com/geonorth-information-systems-llc/",
+    "corroborating_url": "https://tatitlek.com/tatitlek-technologies-llc/",
+    "title_confirmed_at": "https://tatitlek.com/leadership/",
+    "contact_ok": true,
+    "info_at_tatitlek_rejected": "info@tatitlek.com appears on NONE of the seven tatitlek.com pages fetched. Never send there."
+  },
+  "READ_THIS_FIRST": "Tatitlek ALREADY USES an AI tool in its capture pipeline. Its own live requisition 2026-2731 says 'our Artificial Intelligence (AI) Tool, GovEagle'. Any statement that this company has no AI, a zero AI posture, or nothing in capture is FALSE and is forbidden. The honest question is what GovEagle does not reach, never whether they have started.",
+  "verified_claims": [
+    {
+      "id": "C01",
+      "claim": "Mark Wamsher is Vice President of Business Development at The Tatitlek Corporation and his email is published on the company's own subsidiary pages.",
+      "verbatim": "Mark Wamsher Vice President of Business Development mwamsher@tatitlek.com (256) 759-9349",
+      "url": "https://tatitlek.com/geonorth-information-systems-llc/",
+      "tier": "primary"
+    },
+    {
+      "id": "C02",
+      "claim": "The Tatitlek Corporation states it has more than 300 shareholders.",
+      "verbatim": "more than 300 shareholders",
+      "url": "https://tatitlek.com/",
+      "tier": "primary",
+      "note": "The homepage phrasing is 'more than 300 shareholders'. It does NOT say 'Shareholders: 300+' and the figure is not on the Our Company page."
+    },
+    {
+      "id": "C03",
+      "claim": "The company says it has 1,300 global employees.",
+      "verbatim": "1,300 global employees",
+      "url": "https://tatitlek.com/",
+      "tier": "primary",
+      "hedge": "self-reported, attribute it as their own statement"
+    },
+    {
+      "id": "C04",
+      "claim": "The company says its 1,300 employees sit across offices throughout Alaska and 46 locations worldwide.",
+      "verbatim": "TTC and its subsidiaries have 1,300 employees geographically dispersed through project and business offices located throughout Alaska and 46 locations worldwide.",
+      "url": "https://tatitlek.com/our-company/",
+      "tier": "primary",
+      "hedge": "self-reported"
+    },
+    {
+      "id": "C05",
+      "claim": "Seven subsidiaries are listed on the Our Company page: GeoNorth, Tatitlek Federal Services, Tatitlek Government Services, Tatitlek Management Services, Tatitlek Professional Services, Tatitlek Technologies, Tatitlek Universal Services.",
+      "url": "https://tatitlek.com/our-company/",
+      "tier": "primary",
+      "note": "Only GeoNorth and Tatitlek Technologies had NAICS re-verified (both 518210). Do not cite the other five subsidiaries' identifiers."
+    },
+    {
+      "id": "C06",
+      "claim": "The company publishes these certifications and vehicles: ISO 9001:2015, ANC 8(a) Sole Source Contracting, SEAPORT NXG, GSA STARS III, OASIS+ 8(a) and SB.",
+      "verbatim": "ISO 9001:2015 ANC 8(a) Sole Source Contracting SEAPORT NXG GSA STARS III OASIS+ 8(a) and SB",
+      "url": "https://tatitlek.com/our-company/",
+      "tier": "primary"
+    },
+    {
+      "id": "C07",
+      "claim": "The company markets the 8(a) sole source path to contracting officers as a way to cut procurement cycle time.",
+      "verbatim": "Reduce procurement cycle time with a direct 8(a) sole-source award, ideal when schedule sensitivity is paramount.",
+      "url": "https://tatitlek.com/anc-8a-sole-source-contracting/",
+      "tier": "primary",
+      "note": "Their own sales language, fair to quote back."
+    },
+    {
+      "id": "C08",
+      "claim": "Tatitlek's own live job posting names GovEagle as its Artificial Intelligence tool, used to hold the capture pipeline.",
+      "verbatim": "This role maintains an individual pipeline of assigned opportunities in our Artificial Intelligence (AI) Tool, GovEagle, and drives capture activities on those pursuits, and contributes to RFP response efforts as needed, working in close coordination with the Bid and Proposal team.",
+      "url": "https://careers-tatitlek.icims.com/jobs/2731/strategic-proposal-support-%26-capture-manager/job?in_iframe=1",
+      "tier": "primary",
+      "note": "THE ANCHOR FACT OF THIS STUDY. They already bought and deployed a GovCon AI tool."
+    },
+    {
+      "id": "C09",
+      "claim": "Tatitlek is hiring a Strategic Proposal Support and Capture Manager at Dahlgren, Virginia, posted at $130,000 and up.",
+      "verbatim": "$130,000.00+ DOE",
+      "url": "https://careers-tatitlek.icims.com/jobs/2731/strategic-proposal-support-%26-capture-manager/job?in_iframe=1",
+      "tier": "primary",
+      "note": "Requisition 2026-2731. It is a floor, not a figure."
+    },
+    {
+      "id": "C10",
+      "claim": "The posting requires the hire to maintain an individual opportunity pipeline in GovEagle from identification through award decision.",
+      "verbatim": "Maintain an individual pipeline of assigned opportunities in GovEagle, logging, staging, and updating each pursuit consistently from identification through award decision.",
+      "url": "https://careers-tatitlek.icims.com/jobs/2731/strategic-proposal-support-%26-capture-manager/job?in_iframe=1",
+      "tier": "primary"
+    },
+    {
+      "id": "C11",
+      "claim": "The posting assigns resume scrubbing and data call participation to the same hire.",
+      "verbatim": "Conduct capture related activities leading up to and through RFP submission on assigned opportunities, including participation in any and all data call activities as needed.",
+      "url": "https://careers-tatitlek.icims.com/jobs/2731/strategic-proposal-support-%26-capture-manager/job?in_iframe=1",
+      "tier": "primary",
+      "second_verbatim": "Support the development and scrubbing of key personnel resumes, so they align with solicitation requirements.",
+      "note": "Quote the FULL second sentence. The package truncated it before 'so they align with solicitation requirements' without an ellipsis."
+    },
+    {
+      "id": "C12",
+      "claim": "The posting splits capture from proposal production, with a standing Bid and Proposal team owning process, scheduling and compliance.",
+      "verbatim": "Partner closely with the Bid and Proposal team throughout the response effort, providing capture knowledge, technical writing, customer insight, and competitive positioning, while the Bid and Proposal team owns the proposal process, scheduling, and compliance.",
+      "url": "https://careers-tatitlek.icims.com/jobs/2731/strategic-proposal-support-%26-capture-manager/job?in_iframe=1",
+      "tier": "primary",
+      "note": "THIS SAYS THE FUNCTION IS STAFFED, NOT THIN. Tatitlek has a BD Director, a BD team and a Bid and Proposal team. Never describe this company as lacking a proposal function."
+    },
+    {
+      "id": "C13",
+      "claim": "The posting requires capture strategy to be aligned against delivery execution capacity.",
+      "verbatim": "Coordinate with operations, contracts, pricing, and program staff to align capture strategy with business goals and execution capacity on assigned pursuits.",
+      "url": "https://careers-tatitlek.icims.com/jobs/2731/strategic-proposal-support-%26-capture-manager/job?in_iframe=1",
+      "tier": "primary"
+    },
+    {
+      "id": "C14",
+      "claim": "The posting requires the hire to develop capture plans, price to win analysis and gate review materials and present them to the Director and senior leadership.",
+      "verbatim": "Develop capture plans, price to win analysis, and gate review materials for assigned pursuits, and present these materials to the Director and senior leadership as required.",
+      "url": "https://careers-tatitlek.icims.com/jobs/2731/strategic-proposal-support-%26-capture-manager/job?in_iframe=1",
+      "tier": "primary"
+    },
+    {
+      "id": "C15",
+      "claim": "22 of the listings on the board on September 19th still carry 2025-series requisition numbers, the lowest being 2025-2195.",
+      "url": "https://careers-tatitlek.icims.com/jobs/search?ss=1&in_iframe=1&pr=2",
+      "tier": "primary",
+      "hedge": "observed on September 19th, 2026, not a stable figure",
+      "note": "The fact-checker enumerated all 22. The inference that iCIMS IDs are year-prefixed so these opened last year is NOT a fetched fact and must not be asserted as one."
+    },
+    {
+      "id": "C16",
+      "claim": "About 150 open requisitions across three pages of the board on September 19th.",
+      "verbatim": "Search Results Page 3 of 3",
+      "url": "https://careers-tatitlek.icims.com/jobs/search?ss=1&in_iframe=1",
+      "tier": "primary",
+      "hedge": "ALWAYS 'about 150'. A precise 150 is REJECTED, repeat fetches returned 50/50/50 then 50/50/48."
+    },
+    {
+      "id": "C17",
+      "claim": "None of the openings on the iCIMS board on September 19th listed an Alaska location, though the company routes its Prince William Sound and Valdez work through a separate TCC hiring channel.",
+      "url": "https://careers-tatitlek.icims.com/jobs/search?ss=1&in_iframe=1&pr=2",
+      "tier": "primary",
+      "hedge": "THE SECOND HALF IS MANDATORY. Three listings also carry a bare 'US' with no state. Never write 'zero Alaska hiring' and never pair this with the shareholder preference as a contradiction."
+    },
+    {
+      "id": "C18",
+      "claim": "The company publishes a hiring preference for shareholders, shareholder descendants and shareholder spouses.",
+      "verbatim": "The Tatitlek Corporation gives hiring, promotion, training and retention preference to shareholders, shareholder descendants and shareholder spouses who meet job qualifications.",
+      "url": "https://tatitlek.com/careers-page/",
+      "tier": "primary"
+    },
+    {
+      "id": "C19",
+      "claim": "Roy Totemoff is listed as CEO under Board of Directors.",
+      "verbatim": "Roy Totemoff - CEO (2006 - Present)",
+      "url": "https://tatitlek.com/leadership/",
+      "tier": "primary"
+    },
+    {
+      "id": "C20",
+      "claim": "Dick Hobbs is listed as President under Executive Leadership.",
+      "verbatim": "Dick Hobbs - President (2018 - Present)",
+      "url": "https://tatitlek.com/leadership/",
+      "tier": "primary",
+      "note": "Use the page's dates. The 'became President July 2026' claim is REJECTED."
+    },
+    {
+      "id": "C21",
+      "claim": "Dean Clowers is listed as Chief Operating Officer.",
+      "verbatim": "Dean Clowers - Chief Operating Officer (2015 - Present)",
+      "url": "https://tatitlek.com/leadership/",
+      "tier": "primary"
+    },
+    {
+      "id": "C22",
+      "claim": "Tatitlek Management Services holds a Missile Defense Agency award made as an 8(a) sole source with one offer received.",
+      "verbatim": "Set-Aside Type: 8(A) SOLE SOURCE; Number of Offers Received: 1; Recipient Name: TATITLEK MANAGEMENT SERVICES, LLC",
+      "url": "https://api.usaspending.gov/api/v2/awards/CONT_AWD_HQ085826CE001_9700_-NONE-_-NONE-/",
+      "tier": "primary"
+    },
+    {
+      "id": "C23",
+      "claim": "That Missile Defense Agency award carries a potential value of $99,981,096.40, with $11,707,278.07 obligated to date, over a base period of October 8th 2025 to October 7th 2027.",
+      "verbatim": "Potential Value: $99,981,096.40",
+      "url": "https://api.usaspending.gov/api/v2/awards/CONT_AWD_HQ085826CE001_9700_-NONE-_-NONE-/",
+      "tier": "primary",
+      "note": "The 'options to April 7, 2033' tail is REJECTED, unverified. Use obligations if the study needs money actually spent."
+    },
+    {
+      "id": "C24",
+      "claim": "Defense Secretary Pete Hegseth said the Pentagon is taking a sledgehammer to the oldest DEI program in the federal government.",
+      "verbatim": "We're actually taking a sledgehammer to the oldest DEI program in the federal government",
+      "url": "https://www.adn.com/business-economy/2026/01/22/pentagon-to-take-sledgehammer-to-contracting-program-central-to-many-alaska-native-corporations/",
+      "tier": "secondary",
+      "hedge": "attribute to the Anchorage Daily News. Quote C24 and C25 separately, never spliced."
+    },
+    {
+      "id": "C25",
+      "claim": "Hegseth said the Pentagon is ending pass-through schemes and will ensure the small business getting a contract is the one doing the work.",
+      "verbatim": "Second, we're doing away with these pass-through schemes. We'll make sure that every small business getting a contract is the one actually doing the work.",
+      "url": "https://www.adn.com/business-economy/2026/01/22/pentagon-to-take-sledgehammer-to-contracting-program-central-to-many-alaska-native-corporations/",
+      "tier": "secondary"
+    },
+    {
+      "id": "C26",
+      "claim": "The Anchorage Daily News reported that effective immediately the Pentagon would review all sole source 8(a) contracts worth more than $20 million.",
+      "verbatim": "Hegseth said that effective immediately, the Pentagon would review all sole-source 8(a) contracts worth more than $20 million.",
+      "url": "https://www.adn.com/business-economy/2026/01/22/pentagon-to-take-sledgehammer-to-contracting-program-central-to-many-alaska-native-corporations/",
+      "tier": "secondary",
+      "hedge": "MUST be attributed to ADN. It is the reporter's characterisation, single-sourced.",
+      "FORBIDDEN_USE": "NEVER write or imply that Tatitlek's MDA award is under review, flagged or in jeopardy. No source says that. Placing the $20 million threshold next to the $99,981,096.40 ceiling and letting the reader infer it is the same error in a politer form."
+    },
+    {
+      "id": "C27",
+      "claim": "Deltek's 2026 GovCon Clarity study surveyed 917 government contractors.",
+      "verbatim": "917 government contractors",
+      "url": "https://www.deltek.com/company/news/latest-deltek-clarity-industry-studies-highlight-ai-challenges/",
+      "tier": "vendor_survey",
+      "hedge": "attribute to Deltek. The 896 A and E firms are a separate population, never blend them."
+    },
+    {
+      "id": "C28",
+      "claim": "Deltek's 2026 Clarity study reported 90 percent of contractors using AI in some capacity, up from 45 percent.",
+      "verbatim": "90 percent of government contractors now use AI in some capacity, up from 45 percent in last year's report",
+      "url": "https://www.govconwire.com/articles/clarity-report-2026-deltek-govcon-kevin-plexico",
+      "tier": "vendor_survey_via_trade_press",
+      "hedge": "two steps from primary, attribute"
+    },
+    {
+      "id": "C29",
+      "claim": "Contractors in Deltek's survey reported an average of 84 hours spent developing a single proposal.",
+      "verbatim": "Average of 84 hours spent developing a single proposal",
+      "url": "https://www.govconwire.com/articles/clarity-report-2026-deltek-govcon-kevin-plexico",
+      "tier": "vendor_survey_via_trade_press",
+      "hedge": "A SURVEY SELF-REPORT, NOT A MEASUREMENT OF TATITLEK. Any ROI model using it must state that assumption explicitly."
+    },
+    {
+      "id": "C30",
+      "claim": "Deltek's 2026 Clarity study found 83 percent of contractors missed opportunities in 2025 because they discovered them too late.",
+      "verbatim": "83 percent of contractors missed opportunities in 2025 because they discovered them too late",
+      "url": "https://www.govconwire.com/articles/clarity-report-2026-deltek-govcon-kevin-plexico",
+      "tier": "vendor_survey_via_trade_press"
+    },
+    {
+      "id": "C31",
+      "claim": "Deltek's 2026 Clarity study found 45 percent of respondents unclear on the return on investment for leveraging AI, only 5 percent fully developed in AI maturity, and most still piloting at 37 percent or scaling at 38 percent.",
+      "verbatim": "45% of respondents report being unclear on the return on investment for leveraging AI",
+      "url": "https://www.deltek.com/company/news/latest-deltek-clarity-industry-studies-highlight-ai-challenges/",
+      "tier": "vendor_survey",
+      "note": "THE HONEST COUNTERWEIGHT TO C28. Carry it in the same breath: a field nearly all adopting and largely unable to prove payback."
+    },
+    {
+      "id": "C32",
+      "claim": "Across the contractors Deltek surveyed, margins reportedly fell from 20 percent to 17 percent and nine out of ten firms saw at least one financial metric decline.",
+      "verbatim": "Fell from 20 percent to 17 percent; nine out of 10 firms saw at least one financial metric decline",
+      "url": "https://www.govconwire.com/articles/clarity-report-2026-deltek-govcon-kevin-plexico",
+      "tier": "vendor_survey_via_trade_press",
+      "hedge": "An industry average. It says NOTHING about Tatitlek's margins, which are not published anywhere. Never imply it describes this company."
+    },
+    {
+      "id": "C33",
+      "claim": "GAO reported federal AI use cases nearly doubled from 571 in 2023 to 1,110 in 2024.",
+      "verbatim": "the total number of reported AI use cases nearly doubled from 571 in 2023 to 1,110 in 2024",
+      "url": "https://www.gao.gov/products/gao-25-107653",
+      "tier": "independent_authoritative",
+      "note": "Covers 11 agencies with published inventories, DoD EXEMPT. DoD is Tatitlek's customer, so say so."
+    },
+    {
+      "id": "C34",
+      "claim": "GAO reported federal generative AI use cases rose about ninefold, from 32 to 282.",
+      "verbatim": "generative AI use cases increased about nine-fold, from 32 to 282",
+      "url": "https://www.gao.gov/products/gao-25-107653",
+      "tier": "independent_authoritative"
+    },
+    {
+      "id": "C35",
+      "claim": "The Army says an AI-enabled tool can cut the time to complete Acquisition Requirement Packages from weeks to hours and in some cases minutes.",
+      "url": "https://www.army.mil/article/290573/army_ai_prototypes_speed_up_acquisition_enable_faster_capability_delivery",
+      "tier": "primary_government",
+      "hedge": "PARAPHRASE OUTSIDE QUOTATION MARKS. The printed sentence uses em dashes, which the house style bans, and altering punctuation inside quotation marks would fabricate a quote. The verb is 'can reduce', a capability claim, not a measured average."
+    },
+    {
+      "id": "C36",
+      "claim": "Army PEO Enterprise used one of the AI prototypes in fiscal year 2025 to produce two supply-type contract awards.",
+      "verbatim": "PEO Enterprise, which came up with and pitched the AI-enabled ARP concept, successfully used one of the AI prototypes in fiscal year 2025 to produce two supply-type contract awards.",
+      "url": "https://www.army.mil/article/290573/army_ai_prototypes_speed_up_acquisition_enable_faster_capability_delivery",
+      "tier": "primary_government",
+      "note": "A production outcome published by the BUYER. Two is a small number, state it as two, never as evidence of scale."
+    },
+    {
+      "id": "C37",
+      "claim": "TRAX International alleges, in a complaint filed in the Court of Federal Claims, that the Army used AI that hallucinated multiple times during source selection for a roughly $450 million White Sands Missile Range mission support contract.",
+      "verbatim": "The Army used AI that hallucinated multiple times, creating the false impression that Trax's bid was weaker than rival Southwest Range Services'",
+      "url": "https://www.nextgov.com/acquisition/2026/08/contractor-alleges-army-inappropriately-used-ai-make-450m-contract-award/415225/",
+      "tier": "secondary",
+      "hedge": "AN ALLEGATION IN LIVE LITIGATION. Label it as one EVERY time. It concerns the government's AI, not a contractor's."
+    },
+    {
+      "id": "C38",
+      "claim": "The Army conceded that one of the weaknesses it identified with the TRAX bid is not supported by the record.",
+      "verbatim": "the Army conceded that one of the weaknesses it identified with Trax's bid is not supported by the record",
+      "url": "https://www.nextgov.com/acquisition/2026/08/contractor-alleges-army-inappropriately-used-ai-make-450m-contract-award/415225/",
+      "tier": "secondary",
+      "note": "The concession, distinct from the allegation. GAO denied the protest in May 2026. Price premium $29.4 million."
+    },
+    {
+      "id": "C39",
+      "claim": "GovDash reports that its customer K Corp, described on the page as a 100 percent Native-owned business originating along the Koyukuk River in Alaska, cut proposal preparation time by 60 percent with zero new hires.",
+      "verbatim": "60% reduction in proposal preparation time",
+      "url": "https://www.govdash.com/blog/how-k-corp-3x-d-proposal-output-using-govdash",
+      "tier": "vendor_case_study_named_customer",
+      "hedge": "A vendor's published statement about its own customer. Not audited, no baseline method disclosed. Cite as what an operator reported to its vendor."
+    },
+    {
+      "id": "C40",
+      "claim": "GovDash reports K Corp went from two proposals a month to a threefold increase in monthly submissions.",
+      "verbatim": "3x increase in proposal submissions per month",
+      "url": "https://www.govdash.com/blog/how-k-corp-3x-d-proposal-output-using-govdash",
+      "tier": "vendor_case_study_named_customer",
+      "note": "The figure 6 is NOT printed on the page and is REJECTED. Write the 3x, or own the arithmetic outside quotation marks."
+    },
+    {
+      "id": "C41",
+      "claim": "GovDash reports SPATHE Systems cut proposal draft turnaround from about three weeks to 24 hours, and RFP submissions from two a month to seven or eight.",
+      "url": "https://www.govdash.com/blog/from-3-weeks-to-24-hours-how-spathe-systems-4x-d-rfp-output-with-govdash",
+      "tier": "vendor_case_study_named_customer",
+      "hedge": "The printed strings use en dashes and an arrow. Paraphrase rather than quote to stay inside house style."
+    },
+    {
+      "id": "C42",
+      "claim": "The SPATHE result is a Red Team ready draft within 24 hours, not a submission ready proposal.",
+      "verbatim_paraphrase_only": "the page says SPATHE can produce a Red Team ready draft within 24 hours of receiving an RFP",
+      "url": "https://www.govdash.com/blog/from-3-weeks-to-24-hours-how-spathe-systems-4x-d-rfp-output-with-govdash",
+      "tier": "vendor_case_study_named_customer",
+      "note": "THE ANTI-HYPE QUALIFIER, AND IT IS NOT OPTIONAL. Any use of C41 that omits this overstates the vendor's own claim."
+    },
+    {
+      "id": "C43",
+      "claim": "In a case study published by AWS, automation tools delivered by Koniag Government Services are credited with 687,000 hours saved annually and $37 million in yearly avoidance.",
+      "verbatim": "687,000 Hours / Saved annually through delivered automation tools",
+      "url": "https://aws.amazon.com/solutions/case-studies/us-army-koniag-gov-services/",
+      "tier": "vendor_case_study_named_customer",
+      "hedge": "A cloud vendor publishing a partner's result, not an audit. No calculation method shown. The page carries no visible publication date, so do not assert one."
+    },
+    {
+      "id": "C44",
+      "claim": "AWS reports a Koniag-built tool cut a one hour vendor responsibility task to two minutes.",
+      "verbatim": "By reducing a one-hour task to just 2 minutes, the Army Contracting Enterprise gained back hours of productivity.",
+      "url": "https://aws.amazon.com/solutions/case-studies/us-army-koniag-gov-services/",
+      "tier": "vendor_case_study_named_customer",
+      "note": "This is DORA, an automation bot pulling SAM.gov compliance data. A NARROW NON-GENERATIVE build delivering a large multiple."
+    },
+    {
+      "id": "C45",
+      "claim": "Washington Technology reported that GSA posted an AI-specific acquisition rule to the Federal Register on June 17th, 2026, defining four contractor roles.",
+      "verbatim": "LLM developers, LLM system operators, LLM systems integrators, LLM service providers",
+      "url": "https://www.washingtontechnology.com/contracts/2026/06/gsa-unveils-new-ai-specific-acquisition-rule/414351/",
+      "tier": "secondary",
+      "note": "Applies to GSA government-wide vehicles including OASIS+, which C06 confirms Tatitlek holds."
+    },
+    {
+      "id": "C46",
+      "claim": "The proposed GSA rule would require contractors to disclose all large language models used in contract performance within 120 days.",
+      "verbatim": "Contractors would have to disclose all LLMs used or made available in the performance of a contract or task/delivery order within 120 days",
+      "url": "https://www.washingtontechnology.com/contracts/2026/06/gsa-unveils-new-ai-specific-acquisition-rule/414351/",
+      "tier": "secondary",
+      "hedge": "PROPOSED, NOT IN FORCE. Never write it as a current obligation."
+    },
+    {
+      "id": "C47",
+      "claim": "The proposed GSA rule would require notification within 72 hours of discovering an LLM-related incident.",
+      "verbatim": "Contracting officers and all other government-provided points of contact must be notified within 72 hours of the discovery of incidents",
+      "url": "https://www.washingtontechnology.com/contracts/2026/06/gsa-unveils-new-ai-specific-acquisition-rule/414351/",
+      "tier": "secondary",
+      "hedge": "PROPOSED. 120 days and 72 hours are different obligations on different clocks, never conflate them."
+    },
+    {
+      "id": "C48",
+      "claim": "GovEagle's own platform page names these capabilities: Opportunity tracking, Pursuit qualification, Team assignments, Pipeline analytics, Capabilities Matrix, Blue Team reviews, Black Hat analysis, pWin calculator, Call planning, Technical approach, Win themes, Discriminators, Pricing and BoE, RFP shredding, Compliance matrix, Outline generation, Color Team reviews, Cost volumes.",
+      "url": "https://www.goveagle.com/platform",
+      "tier": "primary_vendor",
+      "fetched_by": "showrunner, 2026-09-19",
+      "note": "Neither resumes nor past performance nor data calls appear as named capabilities ON THIS PAGE. That is a bounded fetch, not proof of absence."
+    },
+    {
+      "id": "C49",
+      "claim": "GovEagle's solutioning page says it maps task areas to past performance and shows where the contractor is strong and where the gaps are.",
+      "verbatim": "GovEagle maps task areas to your past performance and shows where you are strong, where you have gaps",
+      "url": "https://www.goveagle.com/solutions/solutioning",
+      "tier": "primary_vendor",
+      "fetched_by": "showrunner, 2026-09-19",
+      "second_verbatim": "PWS requirements are matched to your strongest projects, so you see where you are strong or exposed",
+      "note": "Named features on that page: Bid/no-bid analysis, Capability matrix, Solution brainstorm, Capture deck, Opportunity fit score, Task area matching, Early go or no go guidance."
+    },
+    {
+      "id": "C50",
+      "claim": "GovEagle says its AI drafting layer pulls from past proposals, past-performance write-ups and boilerplate repositories to generate first drafts.",
+      "verbatim": "The AI drafting layer pulls from past proposals, past-performance write-ups, and boilerplate repositories to generate first drafts",
+      "url": "https://www.goveagle.com/blog/govcon-proposal-automation-software",
+      "tier": "primary_vendor",
+      "fetched_by": "showrunner, 2026-09-19",
+      "note": "GovEagle describing its OWN product, in the section headed Best Overall Proposal Automation Software: GovEagle. THIS KILLS THE PAST-PERFORMANCE HALF OF ANY PROPOSED EVIDENCE ENGINE."
+    },
+    {
+      "id": "C51",
+      "claim": "GovEagle's proposals page describes requirement extraction and a compliance matrix, and says past performance and win themes become easier to use when teams can see what is current.",
+      "verbatim": "Requirements are extracted, organized by section, and mapped to your response outline",
+      "url": "https://www.goveagle.com/solutions/proposals",
+      "tier": "primary_vendor",
+      "fetched_by": "showrunner, 2026-09-19"
+    }
+  ],
+  "rejected_do_not_use": [
+    {
+      "claim": "Tatitlek has a zero public AI posture, or nothing public shows Tatitlek with a capture or proposal AI.",
+      "why": "FALSIFIED by the company's own live requisition naming GovEagle as its AI tool. The most dangerous item in the package."
+    },
+    {
+      "claim": "Zero of the openings list an Alaska location, which contradicts the shareholder hiring preference.",
+      "why": "The careers page routes Alaska work through a separate TCC channel, so the board is not the whole hiring surface. Three listings carry a bare US with no state."
+    },
+    {
+      "claim": "150 live requisitions.",
+      "why": "Not stable, repeat fetches returned 148 and 150. Use about 150."
+    },
+    {
+      "claim": "Roughly 33 of the listings are Dahlgren.",
+      "why": "The actual count was 31. Use about 30."
+    },
+    {
+      "claim": "A capture manager expected to carry the whole front half of the pipeline alone.",
+      "why": "The same posting names a BD Director, a BD team, a standing Bid and Proposal team and assigned proposal support personnel. It describes a staffed function adding a seat."
+    },
+    {
+      "claim": "Without GovDash, there's no way we could put out the number of proposals we do.",
+      "why": "FABRICATED. Not on the page. The real Cheyanne Richard quote is about rough drafts letting the team spend more time on strategy and differentiation."
+    },
+    {
+      "claim": "K Corp went from 2 to 6 monthly proposal submissions.",
+      "why": "The number 6 is not printed on the page. The page says 3x."
+    },
+    {
+      "claim": "The MDA award has options to April 7, 2033.",
+      "why": "Not returned by the award endpoint, unverified. An eight-year horizon materially changes how large the award reads."
+    },
+    {
+      "claim": "Dick Hobbs became President in July 2026, and Dean Clowers moved from President to COO in spring 2026.",
+      "why": "Contradicted by the company's own leadership page, which reads President (2018 - Present) and Chief Operating Officer (2015 - Present)."
+    },
+    {
+      "claim": "Shareholders: 300+",
+      "why": "The homepage reads 'more than 300 shareholders'. A quotation has to be what is printed."
+    },
+    {
+      "claim": "from weeks to hours, or, in some cases, minutes",
+      "why": "The printed Army sentence uses em dashes and reads 'can reduce', not 'reduced'. Paraphrase outside quotation marks."
+    },
+    {
+      "claim": "Glassdoor rating of about 3.6 out of 5 across about 98 reviews, and about 140 Indeed reviews.",
+      "why": "Both pages returned HTTP 403 and neither rendered. A 403 is a rejection, not a pass. Keep out of every artifact, including as background colour."
+    },
+    {
+      "claim": "GeoNorth held ICE or border-control contracts.",
+      "why": "A single 2018 list mention using a corporate name this company does not have, with no contract, agency, amount or date, and a 270-row USAspending check found nothing. It stays out of the study entirely."
+    },
+    {
+      "claim": "Tatitlek's MDA award is under review, flagged, or at risk from the Pentagon 8(a) review.",
+      "why": "No source says that. Placing the $20 million threshold beside the $99,981,096.40 ceiling and letting the reader infer it is forbidden."
+    },
+    {
+      "claim": "GovEagle has purpose-built workflows across past performance, compliance and resumes, and uses semantic search over resumes.",
+      "why": "Asserted by SEARCH-ENGINE SUMMARIES, not found on any GovEagle page the showrunner actually fetched (platform, solutions/proposals, solutions/solutioning, the automation-software blog). Held to the same standard as the ADN sentence: a summary is not a fetched page. GovEagle's RESUME handling is UNVERIFIED either way and the study must say so rather than assert it in either direction."
+    }
+  ],
+  "forbidden_strings": [
+    "zero public AI posture",
+    "no AI in capture",
+    "Without GovDash, there's no way we could put out the number of proposals we do",
+    "Shareholders: 300+",
+    "options to April 7, 2033",
+    "from weeks to hours, or, in some cases, minutes",
+    "2 to 6 monthly",
+    "carry the whole front half of the pipeline alone"
+  ],
+  "drift_warning": {
+    "direction": "Every rejection that changes the reader's impression pushed the same way, toward making Tatitlek look further behind, thinner staffed and more exposed than the fetched evidence supports.",
+    "mechanisms_seen": [
+      "Absence of evidence became evidence of absence, twice. Five pages showing no AI became a zero AI posture. A job board showing no Alaska listings became zero Alaska hiring.",
+      "A staffed function was read as an unstaffed one.",
+      "Counts drifted upward toward roundness and severity. 31 became roughly 33. An unstable 148 to 150 became a flat 150. A 3x multiple became a hard 6.",
+      "Time horizons and tenures were extended without sources.",
+      "A quotation was invented for a named person."
+    ],
+    "the_corrected_premise": "The verified record is a company with 1,300 employees, five published vehicles, a nearly $100 million ceiling award, a staffed BD and proposal function, a capture AI tool already in use, and a live $130,000 requisition to add capacity to it. Build for that company. The honest opening is not that they have no AI, it is that they already put GovEagle in the pipeline."
+  },
+  "GOVEAGLE_FINDING": {
+    "what_changed": "The showrunner retired the riskiest assumption in the analysis by fetching GovEagle's own pages, which the run had not done.",
+    "verified": "GovEagle already covers past-performance matching, task-area matching, capability matrix, compliance matrix, RFP shredding, pWin and bid/no-bid, and its AI drafting layer already pulls from past-performance write-ups (C48, C49, C50, C51).",
+    "consequence": "The provisional pick, a Key Personnel and Past Performance Evidence Engine, is DEAD on its past-performance half. Proposing it would have offered a duplicate of a tool they already bought, to the VP of Business Development who runs it.",
+    "still_open": "Whether GovEagle handles key-personnel RESUMES is UNVERIFIED. Not named on any page fetched, asserted only by search summaries. The study must state this as what we could and could not find, never as a finding in either direction, and must recommend the question be put to them directly.",
+    "not_covered_anywhere": "DATA CALLS appear on no GovEagle page fetched. The orchestration of who across 46 locations and seven subsidiaries owns which answer is outside everything named."
+  }
+}
