@@ -170,6 +170,29 @@ from it.
   the tightened rule. This run had spent its upgrade ceiling and was inside the
   delivery gate. Cheap, isolated, and better done cold.
 
+- **2026-09-19, `ledger.py stats` splits one segment across three rows.**
+  The by-segment cut is the one number the stats command exists to give, and
+  right now it can't be read.
+
+  EVIDENCE. `stats` after this run's add-lead prints nine segment rows for
+  four real segments. Tourism is `tourism` 5 and `Tourism and visitor
+  industry` 4. ANCs are `anc` 4 and `Alaska Native corporations and tri` 3.
+  The catch-all is `other` 2, `other labor-scarce or paperwork-he` 2 and
+  `Other labor-scarce or paperwork-he` 1, which is three spellings of one
+  thing including a case difference. Healthcare is split two ways. Some rows
+  predate config/icp.yaml's current segment names and some differ only in
+  case. `add-lead` validates the segment against icp.yaml, which is why this
+  run's first attempt was rejected and corrected, so new rows are clean and
+  only the history is not.
+
+  WHY IT IS NOT FIXED HERE. It is a data migration over ledger/leads.json,
+  which is the record of authority for every company ever touched, and it
+  wants its own run and its own before-and-after count rather than a
+  dictionary bolted onto the stats printer. Do it as a one-off normalizer
+  that maps each historical spelling to the icp.yaml name, asserts the lead
+  count is unchanged, and leaves the diff reviewable. Nothing depends on the
+  segment for dedupe, so nothing is at risk while it waits.
+
 The rules at the top still bind: evidence from a dated run, no speculative "would
 be nice", and a run may add but may never quietly delete.
 
