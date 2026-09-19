@@ -2,7 +2,7 @@
   "version": 1,
   "note": "The automation-change trail. Every machine upgrade a run makes to itself lands here, with the evidence that earned it and how it was verified. Surfaced in the delivery summary so a change to the machine is never invisible. An upgrade with no evidence line is not an upgrade, it is a preference, and it does not belong here.",
   "guard": "A run may NEVER edit knowledge/OUTREACH_CRAFT.md, CLAUDE.md, or any quality bar it is judged against. Those are hand-authored on purpose, because a routine that rewrites the rules it is graded by is grading its own homework. A run PROPOSES those in the delivery summary and a human decides.",
-  "updated": "2026-08-09",
+  "updated": "2026-09-19",
   "upgrades": [
     {
       "date": "2026-08-05",
@@ -270,6 +270,61 @@
       ],
       "honest_limit": "It can only compare against quotes that claims.json actually carries. It reports ids whose spans have no quote on file rather than passing them silently, but it cannot verify a quote the fact-checker never recorded.",
       "date_note": "DATE NOTE. This is the 2026-08-10 run, which started on the 10th Anchorage and crossed midnight during an eleven-round critic loop. The entry is dated 2026-08-11 because that is when the commits were authored, and retro_check verifies an upgrade against real commits rather than against prose, which is the whole point of the gate. The run field carries the company so the two facts stay joined."
+    },
+    {
+      "date": "2026-09-19",
+      "run": "The Tatitlek Corporation (the 2026-09-19 run)",
+      "change": "scripts/room_reconcile.py now derives the killed capabilities from feasibility.json[\"verdicts\"], reading every entry whose verdict is \"kill\", and keeps the old kill_list key as a fallback so an older artefact still binds.",
+      "evidence": "The killed-capability check had been examining NOTHING and reporting success. It read feasibility.json[\"kill_list\"], and the ai-feasibility-engineer's own # OUTPUT block does not contract that key at all; it contracts `verdicts`, a list of {candidate, verdict, ...}. On this run the conscience killed three candidates (the Evidence Engine, the Bid/No-Bid Capacity Check and the Shareholder Preference Talent Matcher) and the gate still passed on an empty list. That is the exact silent-pass failure this script was written to stop, occurring inside the script itself. It was visible only because the script prints a NO KILL LIST note when the list is empty, which is the design worth copying.",
+      "verified_how": "Both directions on real run data. POSITIVE: six killed-capability checks that previously examined nothing now run and pass, correctly reading the roadmap's REFUSED entries as refusals and the PRD's non_goals as compliance. NEGATIVE: a genuine promise of a killed capability injected into the roadmap's Now lane fails the run with ROADMAP PROMISES A KILLED CAPABILITY and exit 1, where before the fix it passed.",
+      "files": [
+        "scripts/room_reconcile.py"
+      ],
+      "honest_limit": "It still matches kill subjects by string against downstream text, so a capability renamed between the conscience and the room would slip past. This fix restores the check, it does not make the matching smarter."
+    },
+    {
+      "date": "2026-09-19",
+      "run": "The Tatitlek Corporation (the 2026-09-19 run)",
+      "change": "scripts/study_lint.py accepts the fact-checker's contracted OBJECT shape for rejected_do_not_use entries, taking `claim` from a dict and falling back to the whole claim string when the rejection is stated plainly rather than in quotation marks.",
+      "evidence": "check_forbidden ran re.findall over each entry as though it were a string. The fact-checker's # OUTPUT block contracts rejected_claims as objects, {claim, why, also_appears_at}, so a claims.json carrying that shape is obeying the contract and the gate died on it with a TypeError. It took the whole Phase 6 lint out before any critic saw the study. This is the same failure room_reconcile hit on 2026-08-08, for the same reason, and the comment there already says why it matters: a gate that dies on a legitimate output is worse than a gate that fails, because the run in front of it is under pressure and will skip it.",
+      "verified_how": "Three ways against real run data. A forbidden string returned to the study still FAILS with exit 1. A dict-shaped rejection whose wording reappears now WARNS instead of crashing. A legacy string-shaped list still parses. The full-claim fallback stays a WARNING rather than a failure, so a long benign overlap costs a read and never the build.",
+      "files": [
+        "scripts/study_lint.py"
+      ],
+      "honest_limit": "The fallback matches the whole claim sentence, which will raise more warnings than the quoted-span path did. That is the correct trade for a gate that was previously dying, and the noise lands on a human judgement rather than on the build."
+    },
+    {
+      "date": "2026-09-19",
+      "run": "The Tatitlek Corporation (the 2026-09-19 run)",
+      "change": "scripts/quote_fidelity.py reads the quoted text from `quote` OR `verbatim`, picks up `second_verbatim` as a second span on the same claim, matches claim ids in either case with an optionally quoted key, and looks up case-insensitively.",
+      "evidence": "TWO independent key mismatches, either one enough to walk a fabricated quote straight past. It read entry[\"quote\"] while this run's claims.json stores the text under \"verbatim\", so the quotes dict built EMPTY across all 44 claims carrying a quotable span. Separately its ENTRY regex matched only lowercase bare c\\d+ keys while this run's ids are uppercase and quoted, C08. A demo registering real quotations would have had every span reported unsourced and failed for the wrong reason. The demo-builder hit exactly that, worked around it by carrying no verbatim quotation at all, and flagged the cause in its handback, which is the only reason it was found.",
+      "verified_how": "Three ways. POSITIVE: a demo quoting C08 exactly now reports 1 span checked and exits 0, where before the fix it checked zero. NEGATIVE: changing one word of that span from Tool to Platform reports DRIFT and exits 1. REGRESSION: the shipped demo still passes.",
+      "files": [
+        "scripts/quote_fidelity.py"
+      ],
+      "honest_limit": "The gate still only sees what a demo declares in its SRC table. A demo that quotes a source without registering it is invisible to this check, and nothing asserts that the SRC table is complete."
+    },
+    {
+      "date": "2026-09-19",
+      "run": "The Tatitlek Corporation (the 2026-09-19 run)",
+      "change": "scripts/build_study_page.py gains plain_table(), a general left-aligned table with an optional caption, head, emphasis rows and footer note, wired into the `found` section as found.coverage.",
+      "evidence": "NOT A RETRO PICK, a ship-blocking fix logged for honesty. The study-critic failed the study on one defect above all others: it told the prospect three times that a coverage map of what his existing tool already does was in this study, free, and the most valuable thing here, and then carried only two prose sentences. Its ruling was that the free deliverable being a promise while the paid deliverable is real is the shape of the exact con the study was disowning, and that the map had to be a structured block. There was no renderer for one.",
+      "verified_how": "The study renders a 9-row coverage map (later corrected to 8) and passes 19/19 budgets, with the map's text landing in the STRUCTURE bucket rather than PROSE, which is correct because a mapping is scanned and not read linearly. REGRESSION: the last shipped study, 2026-08-10 Major Marine Tours, which carries no coverage block, renders byte-identical at 115,902 and still passes 19/19, so the new block is inert when absent.",
+      "files": [
+        "scripts/build_study_page.py"
+      ],
+      "honest_limit": "It is a presentation block with no validation. Nothing checks that a coverage row's verdict agrees with its own evidence cell, which is precisely the defect the critic then found twice by hand across rounds two and three."
+    },
+    {
+      "date": "2026-09-19",
+      "run": "The Tatitlek Corporation (the 2026-09-19 run)",
+      "change": "scripts/roi_math.py returns annual_hours_recovered, summing hours_per_pursuit x cut x pursuits_per_year across the benefit lines and deliberately excluding avoided-cost lines.",
+      "evidence": "NOT A RETRO PICK, a critic fix logged for honesty. The study-critic's third audit: a study can say \"recovered hours and not cash\" four times and never tell the reader how many hours, which leaves the whole conservative argument resting on a dollar figure nobody can feel. $4,151 a year means nothing; 43 hours, a little over one work week, means something. The hours were already implicit in the drivers and were the one derived figure this script did not return, so the study would have had to narrate them, and every other number here is computed precisely so it cannot be narrated.",
+      "verified_how": "On this run's drivers: 43, 204 and 538 hours a year, which at 37.5 hours a week is 1.1, 5.4 and 14.3 work weeks, with the dollar rows unchanged at 4,151 / 17,292 / 47,069. Avoided-cost lines are excluded because an avoided rebuild is cash and not hours, which is the same capacity-versus-cash split the ROI method requires everywhere else.",
+      "files": [
+        "scripts/roi_math.py"
+      ],
+      "honest_limit": "It aggregates all labour lines into one hours figure while a pilot typically measures only one of them. The study has to disclose that in prose, and this run's does, but the number itself cannot."
     }
   ]
 }

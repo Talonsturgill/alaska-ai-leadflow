@@ -86,6 +86,52 @@ from it.
   that has already drafted is how a working pipeline breaks. It wants its own
   session with the four agents exercised end to end.
 
+- **2026-09-19, the two Phase 3 agents still can't persist their own output.**
+  NOT BLOCKED, and deliberately deferred ONCE under the retro's ceiling of three.
+  It is eligible to be fixed on the next run and should be the first thing that
+  run picks up.
+
+  EVIDENCE. product-strategist and ai-feasibility-engineer both carry
+  `tools: Read`. Both said so out loud this run, the strategist opening its
+  handback with "Write is disabled in this session, so I can't save to
+  out/2026-09-19/discovery.json", and the showrunner transcribed roughly 40KB of
+  JSON by hand across the two of them, twice for the engineer because its pick
+  was re-run on corrected GovEagle facts. That transcription is the exact
+  mechanism the 2026-08-05 summary defect came through, which is why the four
+  Phase 4 agents got Write and a PERSIST block on 2026-08-09.
+
+  WHY IT WAS NOT FIXED THIS RUN. The retro ceiling is three and this run already
+  shipped three verified gate fixes plus two ship-blocking renderer and
+  arithmetic changes. It is also the lowest-value of the candidates, because
+  room_collect.py already exists as the pattern and the hand transcription was
+  checked against the agents' returned JSON both times. And the in-flight
+  discovery recorded in the 2026-08-09 SHIPPED entry applies: agent definitions
+  resolve from the registry loaded at SESSION START, so adding Write could not
+  have taken effect in the run that made the change anyway.
+
+  WHAT WOULD FIX IT. `tools: Read, Write` on both agent definitions, a PERSIST
+  block naming the output path, and a showrunner fallback for a file that does
+  not appear, copying exactly what the four Phase 4 agents already do.
+
+- **2026-09-19, dup_clause is unusable against the rendered study page.**
+  SMALLER THAN A RUN, and arguably not a defect at all.
+
+  EVIDENCE. Run against out/<date>/field-study.html it returned 77 duplicate
+  clauses, every one of them on "line 231", because build_study_page emits the
+  entire document body as a single 38,573-character line. The tool's own rule is
+  that one line is one edit unit and that cross-unit repetition is normal in a
+  document and is not flagged, so the renderer collapses that rule and every
+  legitimate cross-section repeat gets reported. The brief is REQUIRED by
+  FIELD_STUDY_SPEC to restate the body so it survives being forwarded alone, so
+  those repeats are the contract working as designed. Pointed at the demo, which
+  is what the tool was built for on 2026-08-10, it is clean.
+
+  WHY IT IS NOT SHIPPED. The contract does not list dup_clause as a Phase 6
+  gate, and pointing it at the rendered page was the showrunner's choice rather
+  than a required step, so this is a usability trap rather than a broken check.
+  The fix if it ever earns one is to run it over study.json's strings, where the
+  edit units are real.
+
 The rules at the top still bind: evidence from a dated run, no speculative "would
 be nice", and a run may add but may never quietly delete.
 
