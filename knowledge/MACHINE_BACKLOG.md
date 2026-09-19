@@ -79,7 +79,7 @@ from it.
   > disagree with each other reads as a mock-up dressed as a system, and the
   > study it rides with is selling the opposite of that.
 
-  And to `# THE BAR`, after the existing closing line: "Then they poke at it,
+  To `# THE BAR`, after the existing closing line, add: "Then they poke at it,
   change something, and every screen still agrees."
 
   THE STRONGER VERSION, if a later run has ceiling room for it. A brief line
@@ -92,16 +92,18 @@ from it.
   proven and only the harness is missing. Five rounds of a bot finding what a
   swept state space finds in one pass is the argument for building it.
 
-- **2026-09-19, the "cannot" rule is enforced on two files and binds every file.**
-  Three violations have accumulated in `knowledge/` where nothing checks.
+- **2026-09-19, the contraction rule is enforced on two files and binds every
+  file.** Three violations have accumulated in `knowledge/` where nothing checks.
 
   EVIDENCE. CLAUDE.md's VOICE section says the rule binds EVERY ARTIFACT THIS
   ROUTINE PRODUCES, "no exceptions anywhere, ever", and names `study_qa.py` as
   what enforces it. That script reads the rendered study page. Nothing reads
-  `knowledge/`. Grepping this file today finds three `cannot`s, at the
-  ROI_METHOD base-rate item, the agent-frontmatter item and the Phase 3
-  persistence item, introduced by the 2026-08-06, 2026-08-09 and 2026-08-08
-  runs respectively. Each one was written by a run, into a file a run
+  `knowledge/`. Grepping this file today finds three uses of the long form the
+  rule forbids, at the ROI_METHOD base-rate item, the agent-frontmatter item and
+  the Phase 3 persistence item, introduced by the 2026-08-06, 2026-08-09 and
+  2026-08-08 runs respectively. This entry deliberately does not spell the word,
+  because a note about a banned term that contains the banned term both breaks
+  the rule and corrupts its own count, which is how the first draft of it read. Each one was written by a run, into a file a run
   maintains, and no gate saw any of them.
 
   This is the same shape as the sibling repo's own note on this rule, where ten
@@ -208,8 +210,8 @@ from it.
   shipped three verified gate fixes plus two ship-blocking renderer and
   arithmetic changes. It is also the lowest-value of the candidates, because
   room_collect.py already exists as the pattern and the hand transcription was
-  checked against the agents' returned JSON both times. And the in-flight
-  discovery recorded in the 2026-08-09 SHIPPED entry applies: agent definitions
+  checked against the agents' returned JSON both times. The in-flight
+  discovery recorded in the 2026-08-09 SHIPPED entry also applies: agent definitions
   resolve from the registry loaded at SESSION START, so adding Write could not
   have taken effect in the run that made the change anyway.
 

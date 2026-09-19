@@ -208,7 +208,7 @@ repeat outranks the ceiling. The SEVEN open backlog items this run added,
 counted off `knowledge/MACHINE_BACKLOG.md` with a grep rather than from memory,
 are written up cold with their evidence and their reasons for waiting. In the
 order they appear: the demo-builder rule (marked TAKE THIS ONE FIRST), the
-"cannot" rule being enforced on two files while binding every file,
+the contraction rule being enforced on two files while binding every file,
 the two Phase 3 agents that still can't persist their own output, `dup_clause`
 being unusable against the rendered page, `study_qa` counting a figure caption
 as prose, `room_reconcile`'s money sweep reading ISO 9001 as a fee, and
