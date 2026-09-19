@@ -197,9 +197,14 @@ hours, not cash" four times and never tell the reader how many hours.
 
 **The repeat closed:** none. All five are first-time finds. That is also why
 the sixth change came out, since a first-time find is not a repeat and only a
-repeat outranks the ceiling. The FOUR open backlog items this run added are
-written up cold with their evidence and their reasons for waiting, and the
-demo-builder rule is the first of them.
+repeat outranks the ceiling. The SIX open backlog items this run added, counted
+off `knowledge/MACHINE_BACKLOG.md` rather than from memory, are written up cold
+with their evidence and their reasons for waiting. In the order they appear:
+the demo-builder rule (marked TAKE THIS ONE FIRST), the two Phase 3 agents that
+still can't persist their own output, `dup_clause` being unusable against the
+rendered page, `study_qa` counting a figure caption as prose,
+`room_reconcile`'s money sweep reading ISO 9001 as a fee, and `ledger.py stats`
+splitting one segment across three rows.
 
 ## What the critic caught that is worth remembering
 
